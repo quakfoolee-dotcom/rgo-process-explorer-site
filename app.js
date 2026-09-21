@@ -440,7 +440,7 @@ function highlightSemanticRelationship(relationship){
 semanticInspector=mountSemanticInspector({host:createSemanticHost($('equipment-temperatures')),onHighlight:highlightSemanticRelationship,onSelectAsset:entry=>{selectEquipment(entry.equipmentId,{semanticAssetId:entry.assetId});$('inspector').querySelector('.inspector-body').scrollTop=0;}});
 let inspectorControlsWereEnabled=true;
 mountResizableInspector({panel:$('inspector'),viewport,onResizeStart:()=>{inspectorControlsWereEnabled=controls.enabled;controls.enabled=false;controls.stopMotion?.();},onResize:()=>{dirty=true;},onResizeEnd:()=>{controls.enabled=inspectorControlsWereEnabled;dirty=true;}});
-{const link=document.createElement('a');link.href='./semantic/v1/index.json';link.target='_blank';link.rel='noopener';link.textContent='Semantic Plant Core V1.19 · process areas + treatment + utilities · compact A-900 pelletization foundation ↗';$('resources-dialog').querySelector('.resource-links')?.append(link);}
+{const link=document.createElement('a');link.href='./semantic-core.html';link.target='_blank';link.rel='noopener';link.textContent='Semantic Plant Core · records, review coverage and downloads ↗';$('resources-dialog').querySelector('.resource-links')?.append(link);}
 function updateExploreDrawing(){
  const plan=exploration?.plan||(selectedEquipmentId!=null?getExplorePlan(selectedEquipmentId):null);equipmentBox.visible=!!plan;
  if(plan){equipmentBox.box.makeEmpty();for(const p of plan.members)if(p.visible)equipmentBox.box.union(p.bounds.clone().translate(tmp.copy(p.offset).multiplyScalar(amount)));if(equipmentBox.box.isEmpty())equipmentBox.visible=false;}
