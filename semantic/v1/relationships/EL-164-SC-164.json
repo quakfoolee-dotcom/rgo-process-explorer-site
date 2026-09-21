@@ -1,0 +1,23 @@
+{
+  "assetId": "EL-164-SC-164",
+  "relationships": [
+    {
+      "id": "REL-EL-164-SC-164-S-160-DISTRIBUTION",
+      "type": "receivesFrom",
+      "target": "H-164",
+      "role": "H-164 to dry distribution",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-160-DISTRIBUTION",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-EL-164-SC-164-GEOM",
+      "type": "representedBy",
+      "target": "GEOMETRY-EL-164-SC-164",
+      "status": "bound to modeled equipment group",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    }
+  ]
+}

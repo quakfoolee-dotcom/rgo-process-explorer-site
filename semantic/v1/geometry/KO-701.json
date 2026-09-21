@@ -1,0 +1,7 @@
+{
+  "assetId": "KO-701",
+  "bindingId": "GEOMETRY-KO-701",
+  "modelEquipmentId": 87,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

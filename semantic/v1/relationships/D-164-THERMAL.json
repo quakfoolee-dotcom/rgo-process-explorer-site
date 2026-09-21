@@ -1,0 +1,13 @@
+{
+  "assetId": "D-164-THERMAL",
+  "relationships": [
+    {
+      "id": "REL-D-164-THERMAL-AREA",
+      "type": "locatedIn",
+      "target": "A-160",
+      "status": "model area assignment",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    }
+  ]
+}

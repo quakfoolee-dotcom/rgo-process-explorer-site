@@ -1,0 +1,32 @@
+{
+  "assetId": "IF-A500-RELIEF",
+  "name": "Closed relief disposal; destination unqualified",
+  "assetClassId": "ExternalInterface",
+  "status": "proposed",
+  "identityStatus": "model-derived; tag qualification open",
+  "recordScope": "external-interface",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-500",
+    "system": "A-500 sonication process context",
+    "parentAsset": null
+  },
+  "processFunction": "Closed relief disposal; destination unqualified",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null
+  },
+  "operatingEnvelope": null,
+  "processBasis": [],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Draft sends cooler outlet toward A-600 with an optional 507 recycle to T-501. Model returns cooled slurry to T-501 and uses proposed P-502 for accepted-product transfer. These paths are not an approved operating sequence.",
+    "Three modeled cells, energy dose, residence time, flow, backpressure, cooling duty and product quality require trials/vendor selection. Draft 1-2 wt% and 30-40 degC targets are not approved setpoints or equipment ratings.",
+    "Available sheet is Draft - Not for Use with revision XXX. Bypass is mentioned conceptually and degassing is suggested; neither is asserted as an installed or connected package. Draft says no added water or DMF for sonication.",
+    "Pressure/vacuum and relief sizing, cooling-loss response, acoustic protection, CIP isolation, sampling criteria, vent compatibility and drain receiving conditions remain unqualified.",
+    "Boundary destination requires qualification; no common process/utility or vent/relief header is implied."
+  ]
+}

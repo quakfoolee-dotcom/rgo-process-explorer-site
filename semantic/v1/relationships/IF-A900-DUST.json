@@ -1,0 +1,23 @@
+{
+  "assetId": "IF-A900-DUST",
+  "relationships": [
+    {
+      "id": "REL-IF-A900-DUST-S-900-DUST-IN",
+      "type": "connectedTo",
+      "target": "DC-901",
+      "role": "Local pellet-formation dust capture",
+      "status": "Model-derived functional topology; design and operation require approved sources",
+      "streamId": "S-900-DUST",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A900-DUST-AREA",
+      "type": "locatedIn",
+      "target": "A-900",
+      "status": "model area assignment",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "assetId": "IF-A6000-EW-SOURCE",
+  "state": {
+    "design": "proposed",
+    "operational": "unknown",
+    "maintenance": "unknown",
+    "alarm": "unknown",
+    "simulation": "notConnected"
+  },
+  "timestamp": null,
+  "source": null,
+  "note": "No commissioned, historian, CMMS or validated simulation state is connected."
+}

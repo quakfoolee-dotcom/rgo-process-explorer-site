@@ -1,0 +1,81 @@
+{
+  "assetId": "M-201B",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "M-201B",
+      "source": "MODEL-A200",
+      "revision": "V142 baseline",
+      "page": null,
+      "status": "model-derived; review open",
+      "confidence": "review required",
+      "gapId": "A200-001"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A200-001"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A200-001"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A200-001"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A200-001"
+    },
+    {
+      "property": "sourceReconciliation",
+      "value": "Draft sheet reviewed; approval, revision and allocation gaps remain open",
+      "source": "FEED-PFD-0200",
+      "revision": null,
+      "page": 3,
+      "status": "draft-pfd",
+      "confidence": "documented draft",
+      "gapId": "SRC-REV-001"
+    },
+    {
+      "valueId": "PV-A-200-0298",
+      "property": "design.materialOfConstruction",
+      "value": "PTFE/PFA-lined pipe and mixer; PFA-lined sealless pump",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 21 (M-017)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": null,
+      "note": "scope: M-201 mixer; P-205 A/B loop; alt: —; status FIRM | D-A200-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

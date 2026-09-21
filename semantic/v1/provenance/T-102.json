@@ -1,0 +1,65 @@
+{
+  "assetId": "T-102",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "T-102",
+      "source": "FEED-PE-PFD-001",
+      "revision": "V5.1",
+      "status": "draft PFD basis",
+      "confidence": "documented"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A100-001"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A100-002"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A100-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A100-004"
+    },
+    {
+      "valueId": "PV-A-100-0119",
+      "property": "design.materialOfConstruction",
+      "value": "Lined CS, or high-Si austenitic SS",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 14 (M-010)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "CF-materialOfConstruc-T-102",
+      "note": "scope: T-102 / T-201 conc. acid storage; alt: Bare CS (velocity ≤ 0.6 m/s); status HELD | D-A100-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

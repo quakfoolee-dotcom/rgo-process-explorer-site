@@ -1,0 +1,55 @@
+{
+  "assetId": "IF-A900-AR903",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "IF-A900-AR903",
+      "source": "MODEL-A900",
+      "revision": "V149 / f70f8efa89183fd5c54ac9d450bf5f4dab114a09",
+      "page": null,
+      "status": "model-derived",
+      "confidence": "review required",
+      "gapId": "A900-005"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A900-005"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A900-005"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A900-005"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A900-005"
+    }
+  ]
+}

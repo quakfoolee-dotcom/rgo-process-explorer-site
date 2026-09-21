@@ -1,0 +1,71 @@
+{
+  "assetId": "AB-3701",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "AB-3701",
+      "source": "MODEL-A3700",
+      "revision": "V153 / 798049b05688550b90813d8e16253364c8ccab5d",
+      "page": null,
+      "status": "model-derived",
+      "confidence": "review required",
+      "gapId": "A3700-005"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3700-001"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3700-001"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3700-001"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3700-001"
+    },
+    {
+      "valueId": "PV-A-3000-0129",
+      "property": "identity.designConcept",
+      "value": "S2 — PY-701 CO/CO₂/H₂O-in-argon (4–8 Nm³/h CO steady, ×3–5 in the burst; 8–10 vol %): inert combustible dry gas, thermal oxidiser / separate treatment, never into the wet header",
+      "unit": null,
+      "source": "FEED-PE-REP-041",
+      "revision": "V1.0",
+      "location": "§4",
+      "status": "approved",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": null,
+      "note": "model A-3700 branch AB-3701 | D-A3000-01: S2 — PY-701 CO/CO₂/H₂O-in-argon treated separately (model branch AB-3701).",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

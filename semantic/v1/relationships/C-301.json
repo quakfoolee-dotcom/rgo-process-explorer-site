@@ -1,0 +1,128 @@
+{
+  "assetId": "C-301",
+  "relationships": [
+    {
+      "id": "REL-C-301-AREA",
+      "type": "locatedIn",
+      "target": "A-300",
+      "status": "model area assignment",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-C-301-S-300-CENTRIFUGE-FEED-P-303",
+      "type": "connectedTo",
+      "target": "P-303",
+      "role": "centrifuge feed",
+      "status": "Draft process intent and model route; final line identities, compatibility and allocations unqualified",
+      "streamId": "S-300-CENTRIFUGE-FEED",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-0300",
+          "sheetId": "FEED-PFD-0300",
+          "title": "TLGO Fixing draft sheet",
+          "revision": null,
+          "revisionNote": "Sheet revision field is placeholder XXX; X01 document-creation row dated 15-Feb-2026. Do not equate it with the inherited V5.1/V5.1.1 bundle labels.",
+          "page": 4,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=4"
+        },
+        {
+          "documentId": "MODEL-A300",
+          "revision": "V143 baseline",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          590332458
+        ],
+        "routeLabels": [
+          "T-303 quenched slurry to P-303",
+          "P-303 to C-301 feed"
+        ]
+      }
+    },
+    {
+      "id": "REL-C-301-S-300-CONCENTRATE-T-305",
+      "type": "connectedTo",
+      "target": "T-305",
+      "role": "concentrate",
+      "status": "Draft process intent and model route; final line identities, compatibility and allocations unqualified",
+      "streamId": "S-300-CONCENTRATE",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-0300",
+          "sheetId": "FEED-PFD-0300",
+          "title": "TLGO Fixing draft sheet",
+          "revision": null,
+          "revisionNote": "Sheet revision field is placeholder XXX; X01 document-creation row dated 15-Feb-2026. Do not equate it with the inherited V5.1/V5.1.1 bundle labels.",
+          "page": 4,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=4"
+        },
+        {
+          "documentId": "MODEL-A300",
+          "revision": "V143 baseline",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          28
+        ],
+        "routeLabels": [
+          "C-301 concentrate chute to T-305"
+        ]
+      }
+    },
+    {
+      "id": "REL-C-301-S-300-CENTRATE-T-304",
+      "type": "connectedTo",
+      "target": "T-304",
+      "role": "centrate",
+      "status": "Draft process intent and model route; final line identities, compatibility and allocations unqualified",
+      "streamId": "S-300-CENTRATE",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-0300",
+          "sheetId": "FEED-PFD-0300",
+          "title": "TLGO Fixing draft sheet",
+          "revision": null,
+          "revisionNote": "Sheet revision field is placeholder XXX; X01 document-creation row dated 15-Feb-2026. Do not equate it with the inherited V5.1/V5.1.1 bundle labels.",
+          "page": 4,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=4"
+        },
+        {
+          "documentId": "MODEL-A300",
+          "revision": "V143 baseline",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          31
+        ],
+        "routeLabels": [
+          "C-301 centrate to T-304"
+        ]
+      }
+    }
+  ]
+}

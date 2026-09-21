@@ -1,0 +1,7 @@
+{
+  "assetId": "P-501",
+  "bindingId": "GEOMETRY-P-501",
+  "modelEquipmentId": 64,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

@@ -1,0 +1,83 @@
+{
+  "assetId": "R-101",
+  "relationships": [
+    {
+      "id": "REL-R-101-S-100-GRAPHITE",
+      "type": "receivesFrom",
+      "target": "H-101-SF-101",
+      "role": "Graphite charge to R-101",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-100-GRAPHITE",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-R-101-S-100-H2SO4",
+      "type": "receivesFrom",
+      "target": "T-102",
+      "role": "Sulfuric acid feed to R-101",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-100-H2SO4",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-R-101-S-100-PREMIX-A",
+      "type": "feeds",
+      "target": "R-141A",
+      "role": "R-101 premix to R-141A",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-100-PREMIX-A",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-R-101-S-100-PREMIX-B",
+      "type": "feeds",
+      "target": "R-141B",
+      "role": "R-101 premix to R-141B",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-100-PREMIX-B",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-R-101-S-100-PREMIX-C",
+      "type": "feeds",
+      "target": "R-141C",
+      "role": "R-101 premix to R-141C",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-100-PREMIX-C",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-R-101-S-100-PREMIX-D",
+      "type": "feeds",
+      "target": "R-141D",
+      "role": "R-101 premix to R-141D",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-100-PREMIX-D",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-R-101-S-100-VENT-R101",
+      "type": "feeds",
+      "target": "IF-A3000-V-R-101",
+      "role": "R-101 vent handoff",
+      "status": "Existing A-3000 collection interface; line identity, rate and composition unresolved",
+      "streamId": "S-100-VENT-R101",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-R-101-GEOM",
+      "type": "representedBy",
+      "target": "GEOMETRY-R-101",
+      "status": "bound to modeled equipment group",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    }
+  ]
+}

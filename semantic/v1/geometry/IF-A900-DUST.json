@@ -1,0 +1,7 @@
+{
+  "assetId": "IF-A900-DUST",
+  "bindingId": "GEOMETRY-IF-A900-DUST",
+  "modelEquipmentId": null,
+  "bindingScope": "modeled-interface",
+  "bindingRule": "Modeled battery-limit context; destination and acceptance remain unresolved."
+}

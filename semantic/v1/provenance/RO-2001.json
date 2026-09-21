@@ -1,0 +1,87 @@
+{
+  "assetId": "RO-2001",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "RO-2001",
+      "source": "FEED-PFD-2000",
+      "revision": null,
+      "page": 1,
+      "status": "draft-pfd",
+      "confidence": "review required",
+      "gapId": "A2000-005"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A2000-003"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A2000-003"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A2000-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A2000-003"
+    },
+    {
+      "valueId": "PV-A-2000-0251",
+      "property": "design.materialOfConstruction",
+      "value": "TFC polyamide RO; FRP pressure vessels; 316L/duplex HP pump; PVC/PP/PVDF/316L-EP distribution as service requires",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 65 (M-061)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "WV-materialOfConstruc-RO-2001",
+      "note": "scope: T-2001/P-2001/MMF-2001/GF-2001/CF-2001/UF-2001/P-2002/RO-2001/T-2002/P-2005/CF-2002/T-2003/P-2003/CIP-2001; alt: Ti Grade 2 wetted parts where chloride drives the HP-pump/tube selection; status FIRM | D-A2000-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-2000-0266",
+      "property": "operatingEnvelope.feedCondition",
+      "value": "RO feed must be oxidiser-free and within scaling limits (BaSO₄ / CaSO₄); lime-stage gypsum saturation ≈ 1,480 mg/L sulphate governs recovery; NaOH upstream makes RO unworkable (Na₂SO₄ 61 g/L)",
+      "unit": null,
+      "source": "FEED-PE-REP-038",
+      "revision": "V1.0",
+      "location": "Executive conclusion / RO recovery section",
+      "status": "approved",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": null,
+      "note": "D-A2000-02: RO feed must be oxidiser-free and within BaSO₄ / CaSO₄ scaling limits; gypsum saturation ≈ 1,480 mg/L governs recovery; no NaOH upstream (Na₂SO₄ 61 g/L makes RO unworkable) — adopted as the process constraint.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

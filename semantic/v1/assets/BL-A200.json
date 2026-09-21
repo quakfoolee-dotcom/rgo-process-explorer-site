@@ -1,0 +1,28 @@
+{
+  "assetId": "BL-A200",
+  "name": "Feed and vent boundary context",
+  "assetClassId": "ExternalInterface",
+  "status": "proposed",
+  "identityStatus": "provisional-model-tag",
+  "recordScope": "external-interface",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-200",
+    "system": "A-200 connected process context",
+    "parentAsset": null
+  },
+  "processFunction": "Feed and vent boundary context",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null
+  },
+  "operatingEnvelope": null,
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Model identity and geometry context only; capacities, ratings and exact connectivity require approved source reconciliation.",
+    "Approved source gaps tracked under A200-001."
+  ]
+}

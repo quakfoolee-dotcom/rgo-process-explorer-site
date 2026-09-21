@@ -1,0 +1,119 @@
+{
+  "assetId": "T-501",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "T-501",
+      "source": "FEED-PFD-0500",
+      "revision": null,
+      "page": 5,
+      "status": "draft-pfd",
+      "confidence": "review required",
+      "gapId": "A500-004"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A500-003"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A500-003"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A500-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A500-003"
+    },
+    {
+      "valueId": "PV-A-500-0067",
+      "property": "design.materialOfConstruction",
+      "value": "PVDF process-wetted envelope, or 316L electropolished where product-metal budget permits",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 40 (M-036)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "CF-materialOfConstruc-T-501",
+      "note": "scope: T-501 Feed Tank; P-501 Transfer Pump; HX-501 and pipework; alt: Ti Grade 2 tubes where cooling-water chloride is high; status FIRM | D-A500-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-500-0075",
+      "property": "operatingEnvelope.solidsConcentrationWtPct",
+      "value": "1–2 (T-501 agitated to maintain uniform TLGO solids concentration)",
+      "unit": "wt%",
+      "source": "FEED-PE-PFD-001",
+      "revision": "V5.1.1",
+      "location": "FEED-PFD-0500, PDF p.10 General Note 1",
+      "status": "approved",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": "CF-solidsConcentratio-T-501",
+      "note": "'no water or DMF is needed for sonication for now' (PFD position) | D-A500-02: PFD-0500 General Note 1: T-501 agitated at 1–2 wt%, no water or DMF added. REP-024 Lever 2 (run at the highest concentration the TFF delivers) is carried as the optimisation direction in the note; the Narrative DMF line is to be removed.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-500-0083",
+      "property": "operatingEnvelope.recirculation",
+      "value": "Recirculation line 507 (sonicated slurry back to T-501) shown as a process note / contingency",
+      "unit": null,
+      "source": "FEED-PE-PFD-001",
+      "revision": "V5.1.1",
+      "location": "FEED-PFD-0500, PDF p.10 Process Notes",
+      "status": "approved",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": null,
+      "note": "REP-024 §11: treat line 507 as THE process — loop with N ≥ 3 turnovers | D-A500-02: Line 507 exists on the PFD; D-A500-03 adopts REP-024's reading that the loop IS the process.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-500-0084",
+      "property": "operatingEnvelope.operatingMode",
+      "value": "Surge / hold at the batch-to-continuous boundary (T-501); A-400 onward continuous or semi-continuous at design rates",
+      "unit": null,
+      "source": "FEED-PE-DBM-001",
+      "revision": "V2.0",
+      "location": "§3.4 batch structure",
+      "status": "approved",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": null,
+      "note": "DBM V2.0 | D-A500-02: DBM V2.0 §3.4: T-501 is the surge / hold at the batch-to-continuous boundary.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

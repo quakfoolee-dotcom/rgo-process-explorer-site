@@ -1,0 +1,55 @@
+{
+  "assetId": "T-2004",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "T-2004",
+      "source": "FEED-PFD-2000",
+      "revision": null,
+      "page": 1,
+      "status": "draft-pfd",
+      "confidence": "review required",
+      "gapId": "A2000-005"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A2000-003"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A2000-003"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A2000-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A2000-003"
+    }
+  ]
+}

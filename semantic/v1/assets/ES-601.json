@@ -1,0 +1,65 @@
+{
+  "assetId": "ES-601",
+  "name": "Emergency shower and eyewash station",
+  "assetClassId": "EmergencyShowerEyewash",
+  "status": "proposed",
+  "identityStatus": "model station tag; plant tag approval open",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-600",
+    "system": "Emergency water and decontamination",
+    "parentAsset": null
+  },
+  "processFunction": "Immediate eye and body flushing near potential chemical-exposure work; actual hazard coverage requires an approved assessment.",
+  "handledMaterials": [
+    "Potable tempered emergency water",
+    "Potential task-specific contaminants in runoff"
+  ],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null
+  },
+  "operatingEnvelope": {
+    "requiredDurationMin": 15,
+    "temperature": null,
+    "flow": null,
+    "pressure": null,
+    "status": "Regulatory screening basis only; selected equipment and measured performance unavailable"
+  },
+  "processBasis": [
+    {
+      "property": "location reservation",
+      "value": {
+        "x": 55.35,
+        "z": 16.5,
+        "yawRad": -1.5707963267948966,
+        "walkPoint": [
+          53.75,
+          16.5
+        ]
+      },
+      "source": "MODEL-A6000-EMERGENCY",
+      "status": "model-derived"
+    },
+    {
+      "property": "location reason",
+      "value": "Additional local coverage for A-600 · P-601 feed / recycle service",
+      "source": "MODEL-A6000-EMERGENCY",
+      "status": "planning basis"
+    }
+  ],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Dedicated potable, tempered source, treatment, storage and distribution topology are undefined; no common header is established.",
+    "Station flow, pressure, simultaneous demand, duration, pipe sizing and residual pressure are unverified.",
+    "Tempering, delivered temperature, heat tracing, insulation, freeze protection and cold-weather availability are unresolved.",
+    "Backflow prevention, branch isolation, test connections, dead-leg control and maintenance bypass are unresolved.",
+    "Compatible runoff destinations and capacity are unresolved; no reactive-spill, wastewater or storm connection is claimed.",
+    "Locations are planning reservations; exposure points, walking time, actuator reach and elevated-work coverage remain unapproved.",
+    "Supplier selection, spray pattern, hands-free operation, signage, training, tests and commissioning are unavailable.",
+    "Battery limits, utility ownership, isolation and interfaces with A-4000/A-5000/A-6000 argon remain unresolved."
+  ]
+}

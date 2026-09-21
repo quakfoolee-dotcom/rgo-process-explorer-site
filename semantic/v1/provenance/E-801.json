@@ -1,0 +1,87 @@
+{
+  "assetId": "E-801",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "E-801",
+      "source": "FEED-PFD-0800",
+      "revision": null,
+      "page": 8,
+      "status": "draft-pfd",
+      "confidence": "review required",
+      "gapId": "A800-005"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A800-003"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A800-003"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A800-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A800-003"
+    },
+    {
+      "valueId": "PV-A-800-0187",
+      "property": "design.materialOfConstruction",
+      "value": "Alloy 601 or Ni 200/201 in hot/alkali-condensing sections; 316L minimum after controlled cooling",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 56 (M-052)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "WV-materialOfConstruc-E-801",
+      "note": "scope: E-801 Off-Gas Cooler; FN-801 ID Fan; branch to A-3000; alt: Alloy 602 CA where metal-dusting or higher-temperature exposure persists; status FIRM | D-A800-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-800-0318",
+      "property": "safeguards.offGasBasis",
+      "value": "H₂ 12–35 Nm³/h (30–55 vol % in Ar) with 10–20 kg/h potassium vapour condensing below ≈ 570 °C into a pyrophoric, water-reactive liquid — treat H₂ as a continuous process stream and K/B aerosol as fouling/materials exposure; segregate (S3) from wet vents and from PY-701 CO gas; hot-end K condenser required",
+      "unit": null,
+      "source": "FEED-PE-REP-041",
+      "revision": "V1.0",
+      "location": "Executive conclusion / §4",
+      "status": "approved",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": null,
+      "note": "PFD-3000 common header rated RED | D-A800-02: H₂/K-in-argon furnace gas: treat H₂ as a continuous process stream and K/B aerosol as fouling/materials exposure; segregate (S3); hot-end K condenser required.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

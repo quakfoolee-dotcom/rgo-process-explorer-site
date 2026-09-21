@@ -1,0 +1,16 @@
+{
+  "assetId": "ES-300-17",
+  "bindingId": "GEOMETRY-ES-300-17",
+  "modelEquipmentId": 122017,
+  "bindingScope": "station-assembly",
+  "location": {
+    "x": 15.6,
+    "z": -6.5,
+    "yawRad": -1.5707963267948966,
+    "walkPoint": [
+      14,
+      -6.5
+    ]
+  },
+  "bindingRule": "Indicative station geometry and access screening; no compliance or commissioning claim."
+}

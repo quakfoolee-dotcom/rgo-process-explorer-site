@@ -1,0 +1,62 @@
+{
+  "assetId": "T-303",
+  "name": "Quench / fixing tank",
+  "assetClassId": "Tank",
+  "status": "listed",
+  "identityStatus": "draft-pfd-tag",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-300",
+    "system": "A-300 fixing process context",
+    "parentAsset": null
+  },
+  "processFunction": "Quench / fixing tank",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": "Dual-laminate FRP (PVDF/ECTFE liner + vinyl-ester-novolac laminate)"
+  },
+  "operatingEnvelope": {
+    "operatingTemperatureC": 40,
+    "h2o2DoseRatio": "1.875 kg (1.625 L) of 50 wt% H₂O₂ per kg PRE-G treated, subject to pilot data",
+    "maximumTemperatureC": "50 (T ≤ 50 °C during HCl addition / transfer)",
+    "batchBasis": "One fixing batch per R-201 batch (550 kg Pre-G ≈ 688 kg TLGO); 2.4 batches/day nominal, 3.2 design",
+    "h2o2DosingTemperatureMaxC": "≤ 40 (H₂O₂ decomposition on Mn²⁺ accelerates with temperature; dosing at 45–50 °C wastes reagent and peaks O₂)"
+  },
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Draft process basis only; no approved ratings, capacity, control loops or protective setpoints are asserted.",
+    "Model route alignment and destination qualification remain open under A300-001."
+  ],
+  "processBasis": [],
+  "safeguards": {
+    "ventBasis": "H₂O₂ quench generates O₂ — vent to scrubber, no closed system; vent sized for O₂ evolution and acid mist",
+    "dosingInterlock": "HCl and H₂O₂ dosing interlocked with agitator operation; H₂O₂ dosing reduced or stopped on high temperature",
+    "oxygenEvolution": "310–340 Nm³ O₂ per batch, ≈ 160 Nm³/h peak over a 2 h dose; segregate from the common A-3000 header carrying H₂ (F-46 Critical) — wet scrubber only"
+  },
+  "dataLayer": {
+    "area": "A-300",
+    "source": "data/semantic/A-300",
+    "approvedRows": 9,
+    "heldRows": 0,
+    "pendingRows": 49,
+    "identityHold": null,
+    "applied": "2026-09-21",
+    "baseline": {
+      "design": {
+        "capacityM3": null,
+        "designPressure": null,
+        "designTemperature": null,
+        "materialOfConstruction": null
+      },
+      "operatingEnvelope": null,
+      "safeguards": null
+    },
+    "baselineAbsent": [
+      "safeguards"
+    ]
+  }
+}

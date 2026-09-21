@@ -1,0 +1,561 @@
+{
+  "assetId": "T-161",
+  "streams": [
+    {
+      "streamId": "S-140-PREG-A",
+      "name": "R-141A product to T-161",
+      "source": "R-141A",
+      "via": [],
+      "destination": "T-161",
+      "material": "Pre-G slurry",
+      "phase": "Liquid/solid suspension",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "R-141A",
+        "T-161"
+      ],
+      "operatingMode": "Baseline FEED arrangement",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-EARLY-PROCESS",
+          "title": "A-100/A-140/A-160 process geometry, routes and engineering register",
+          "revision": "V160",
+          "page": null,
+          "status": "model-derived planning basis; no operating or design approval",
+          "availability": "available model source reviewed",
+          "files": {
+            "preg.js": "855183afb11e18e87436773cbbd30169b05d0f33219e3afa224d36a97284a21a",
+            "model.js": "24d1faa36edef797ed98447fb3a8d8b81d7a46ad3e1b0c33264d2c73b534b5ca",
+            "engineering-register.js": "d2cea97c6fd28b0d1c287ba0ba44ced577c82e05ee75bd834c322fd00bae1639",
+            "a160-alternatives.js": "e01b0d4cd4989dce5fe4b40a42631b2da6b70a32309033de82d5ffcd815ecec9",
+            "pfd-temperature-sheets.pdf": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings; PDF as binary"
+        },
+        {
+          "documentId": "FEED-PE-PFD-001",
+          "sheetId": "FEED-PFD-0140",
+          "title": "Pre-G Synthesis Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 5,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft – Issued for Review; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=5"
+        }
+      ],
+      "routeLabels": [
+        "R-141A bottom discharge",
+        "P-PG141 to fixing header"
+      ]
+    },
+    {
+      "streamId": "S-140-PREG-B",
+      "name": "R-141B product to T-161",
+      "source": "R-141B",
+      "via": [],
+      "destination": "T-161",
+      "material": "Pre-G slurry",
+      "phase": "Liquid/solid suspension",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "R-141B",
+        "T-161"
+      ],
+      "operatingMode": "Baseline FEED arrangement",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-EARLY-PROCESS",
+          "title": "A-100/A-140/A-160 process geometry, routes and engineering register",
+          "revision": "V160",
+          "page": null,
+          "status": "model-derived planning basis; no operating or design approval",
+          "availability": "available model source reviewed",
+          "files": {
+            "preg.js": "855183afb11e18e87436773cbbd30169b05d0f33219e3afa224d36a97284a21a",
+            "model.js": "24d1faa36edef797ed98447fb3a8d8b81d7a46ad3e1b0c33264d2c73b534b5ca",
+            "engineering-register.js": "d2cea97c6fd28b0d1c287ba0ba44ced577c82e05ee75bd834c322fd00bae1639",
+            "a160-alternatives.js": "e01b0d4cd4989dce5fe4b40a42631b2da6b70a32309033de82d5ffcd815ecec9",
+            "pfd-temperature-sheets.pdf": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings; PDF as binary"
+        },
+        {
+          "documentId": "FEED-PE-PFD-001",
+          "sheetId": "FEED-PFD-0140",
+          "title": "Pre-G Synthesis Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 5,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft – Issued for Review; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=5"
+        }
+      ],
+      "routeLabels": [
+        "R-141B bottom discharge",
+        "P-PG141 to fixing header"
+      ]
+    },
+    {
+      "streamId": "S-140-PREG-C",
+      "name": "R-141C product to T-161",
+      "source": "R-141C",
+      "via": [],
+      "destination": "T-161",
+      "material": "Pre-G slurry",
+      "phase": "Liquid/solid suspension",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "R-141C",
+        "T-161"
+      ],
+      "operatingMode": "Baseline FEED arrangement",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-EARLY-PROCESS",
+          "title": "A-100/A-140/A-160 process geometry, routes and engineering register",
+          "revision": "V160",
+          "page": null,
+          "status": "model-derived planning basis; no operating or design approval",
+          "availability": "available model source reviewed",
+          "files": {
+            "preg.js": "855183afb11e18e87436773cbbd30169b05d0f33219e3afa224d36a97284a21a",
+            "model.js": "24d1faa36edef797ed98447fb3a8d8b81d7a46ad3e1b0c33264d2c73b534b5ca",
+            "engineering-register.js": "d2cea97c6fd28b0d1c287ba0ba44ced577c82e05ee75bd834c322fd00bae1639",
+            "a160-alternatives.js": "e01b0d4cd4989dce5fe4b40a42631b2da6b70a32309033de82d5ffcd815ecec9",
+            "pfd-temperature-sheets.pdf": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings; PDF as binary"
+        },
+        {
+          "documentId": "FEED-PE-PFD-001",
+          "sheetId": "FEED-PFD-0140",
+          "title": "Pre-G Synthesis Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 5,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft – Issued for Review; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=5"
+        }
+      ],
+      "routeLabels": [
+        "R-141C bottom discharge",
+        "P-PG141 to fixing header"
+      ]
+    },
+    {
+      "streamId": "S-140-PREG-D",
+      "name": "R-141D product to T-161",
+      "source": "R-141D",
+      "via": [],
+      "destination": "T-161",
+      "material": "Pre-G slurry",
+      "phase": "Liquid/solid suspension",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "R-141D",
+        "T-161"
+      ],
+      "operatingMode": "Baseline FEED arrangement",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-EARLY-PROCESS",
+          "title": "A-100/A-140/A-160 process geometry, routes and engineering register",
+          "revision": "V160",
+          "page": null,
+          "status": "model-derived planning basis; no operating or design approval",
+          "availability": "available model source reviewed",
+          "files": {
+            "preg.js": "855183afb11e18e87436773cbbd30169b05d0f33219e3afa224d36a97284a21a",
+            "model.js": "24d1faa36edef797ed98447fb3a8d8b81d7a46ad3e1b0c33264d2c73b534b5ca",
+            "engineering-register.js": "d2cea97c6fd28b0d1c287ba0ba44ced577c82e05ee75bd834c322fd00bae1639",
+            "a160-alternatives.js": "e01b0d4cd4989dce5fe4b40a42631b2da6b70a32309033de82d5ffcd815ecec9",
+            "pfd-temperature-sheets.pdf": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings; PDF as binary"
+        },
+        {
+          "documentId": "FEED-PE-PFD-001",
+          "sheetId": "FEED-PFD-0140",
+          "title": "Pre-G Synthesis Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 5,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft – Issued for Review; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=5"
+        }
+      ],
+      "routeLabels": [
+        "R-141D bottom discharge",
+        "P-PG141 to fixing header"
+      ]
+    },
+    {
+      "streamId": "S-160-RECYCLE-161",
+      "name": "T-161 fixing recycle",
+      "source": "T-161",
+      "via": [
+        "T-161"
+      ],
+      "destination": "T-161",
+      "material": "Pre-G slurry",
+      "phase": "Liquid/solid suspension",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "T-161",
+        "T-161",
+        "T-161"
+      ],
+      "operatingMode": "Baseline FEED arrangement",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-EARLY-PROCESS",
+          "title": "A-100/A-140/A-160 process geometry, routes and engineering register",
+          "revision": "V160",
+          "page": null,
+          "status": "model-derived planning basis; no operating or design approval",
+          "availability": "available model source reviewed",
+          "files": {
+            "preg.js": "855183afb11e18e87436773cbbd30169b05d0f33219e3afa224d36a97284a21a",
+            "model.js": "24d1faa36edef797ed98447fb3a8d8b81d7a46ad3e1b0c33264d2c73b534b5ca",
+            "engineering-register.js": "d2cea97c6fd28b0d1c287ba0ba44ced577c82e05ee75bd834c322fd00bae1639",
+            "a160-alternatives.js": "e01b0d4cd4989dce5fe4b40a42631b2da6b70a32309033de82d5ffcd815ecec9",
+            "pfd-temperature-sheets.pdf": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings; PDF as binary"
+        },
+        {
+          "documentId": "FEED-PE-PFD-001",
+          "sheetId": "FEED-PFD-0160",
+          "title": "Pre-G Washing and Drying Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 6,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft – Issued for Review; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=6"
+        }
+      ],
+      "routeLabels": [
+        "T-161 to P-162 suction",
+        "P-162 discharge",
+        "P-162 recycle to T-161",
+        "T-161 recycle nozzle"
+      ]
+    },
+    {
+      "streamId": "S-160-TRANSFER-162",
+      "name": "T-161 transfer to T-162",
+      "source": "T-161",
+      "via": [],
+      "destination": "T-162",
+      "material": "Fixed Pre-G slurry",
+      "phase": "Liquid/solid suspension",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "T-161",
+        "T-162"
+      ],
+      "operatingMode": "Baseline FEED arrangement",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-EARLY-PROCESS",
+          "title": "A-100/A-140/A-160 process geometry, routes and engineering register",
+          "revision": "V160",
+          "page": null,
+          "status": "model-derived planning basis; no operating or design approval",
+          "availability": "available model source reviewed",
+          "files": {
+            "preg.js": "855183afb11e18e87436773cbbd30169b05d0f33219e3afa224d36a97284a21a",
+            "model.js": "24d1faa36edef797ed98447fb3a8d8b81d7a46ad3e1b0c33264d2c73b534b5ca",
+            "engineering-register.js": "d2cea97c6fd28b0d1c287ba0ba44ced577c82e05ee75bd834c322fd00bae1639",
+            "a160-alternatives.js": "e01b0d4cd4989dce5fe4b40a42631b2da6b70a32309033de82d5ffcd815ecec9",
+            "pfd-temperature-sheets.pdf": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings; PDF as binary"
+        },
+        {
+          "documentId": "FEED-PE-PFD-001",
+          "sheetId": "FEED-PFD-0160",
+          "title": "Pre-G Washing and Drying Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 6,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft – Issued for Review; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=6"
+        }
+      ],
+      "routeLabels": [
+        "T-161 to P-162 suction",
+        "P-162 discharge",
+        "P-162 transfer to T-162"
+      ]
+    },
+    {
+      "streamId": "S-160-WW161",
+      "name": "WW161 process handoff",
+      "source": "T-161",
+      "via": [],
+      "destination": "IF-A160-WW161",
+      "material": "Acidic wastewater",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "T-161"
+      ],
+      "operatingMode": "Baseline FEED arrangement",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-EARLY-PROCESS",
+          "title": "A-100/A-140/A-160 process geometry, routes and engineering register",
+          "revision": "V160",
+          "page": null,
+          "status": "model-derived planning basis; no operating or design approval",
+          "availability": "available model source reviewed",
+          "files": {
+            "preg.js": "855183afb11e18e87436773cbbd30169b05d0f33219e3afa224d36a97284a21a",
+            "model.js": "24d1faa36edef797ed98447fb3a8d8b81d7a46ad3e1b0c33264d2c73b534b5ca",
+            "engineering-register.js": "d2cea97c6fd28b0d1c287ba0ba44ced577c82e05ee75bd834c322fd00bae1639",
+            "a160-alternatives.js": "e01b0d4cd4989dce5fe4b40a42631b2da6b70a32309033de82d5ffcd815ecec9",
+            "pfd-temperature-sheets.pdf": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings; PDF as binary"
+        },
+        {
+          "documentId": "FEED-PE-PFD-001",
+          "sheetId": "FEED-PFD-0160",
+          "title": "Pre-G Washing and Drying Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 6,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft – Issued for Review; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=6"
+        }
+      ],
+      "routeLabels": [
+        "P-163 fixing waste to wastewater"
+      ]
+    },
+    {
+      "streamId": "S-160-DEC161",
+      "name": "DEC161 process handoff",
+      "source": "T-161",
+      "via": [],
+      "destination": "IF-A160-DEC161",
+      "material": "Acidic decant",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "T-161"
+      ],
+      "operatingMode": "Baseline FEED arrangement",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-EARLY-PROCESS",
+          "title": "A-100/A-140/A-160 process geometry, routes and engineering register",
+          "revision": "V160",
+          "page": null,
+          "status": "model-derived planning basis; no operating or design approval",
+          "availability": "available model source reviewed",
+          "files": {
+            "preg.js": "855183afb11e18e87436773cbbd30169b05d0f33219e3afa224d36a97284a21a",
+            "model.js": "24d1faa36edef797ed98447fb3a8d8b81d7a46ad3e1b0c33264d2c73b534b5ca",
+            "engineering-register.js": "d2cea97c6fd28b0d1c287ba0ba44ced577c82e05ee75bd834c322fd00bae1639",
+            "a160-alternatives.js": "e01b0d4cd4989dce5fe4b40a42631b2da6b70a32309033de82d5ffcd815ecec9",
+            "pfd-temperature-sheets.pdf": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings; PDF as binary"
+        },
+        {
+          "documentId": "FEED-PE-PFD-001",
+          "sheetId": "FEED-PFD-0160",
+          "title": "Pre-G Washing and Drying Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 6,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft – Issued for Review; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=6"
+        }
+      ],
+      "routeLabels": [
+        "T-161 decant to wastewater"
+      ]
+    },
+    {
+      "streamId": "S-160-RO-T161",
+      "name": "T-161 RO-water supply",
+      "source": "IF-A2000-RO161",
+      "via": [],
+      "destination": "T-161",
+      "material": "Reclaimed RO water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "T-161"
+      ],
+      "operatingMode": "Baseline FEED arrangement",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-EARLY-PROCESS",
+          "title": "A-100/A-140/A-160 process geometry, routes and engineering register",
+          "revision": "V160",
+          "page": null,
+          "status": "model-derived planning basis; no operating or design approval",
+          "availability": "available model source reviewed",
+          "files": {
+            "preg.js": "855183afb11e18e87436773cbbd30169b05d0f33219e3afa224d36a97284a21a",
+            "model.js": "24d1faa36edef797ed98447fb3a8d8b81d7a46ad3e1b0c33264d2c73b534b5ca",
+            "engineering-register.js": "d2cea97c6fd28b0d1c287ba0ba44ced577c82e05ee75bd834c322fd00bae1639",
+            "a160-alternatives.js": "e01b0d4cd4989dce5fe4b40a42631b2da6b70a32309033de82d5ffcd815ecec9",
+            "pfd-temperature-sheets.pdf": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings; PDF as binary"
+        },
+        {
+          "documentId": "FEED-PE-PFD-001",
+          "sheetId": "FEED-PFD-0160",
+          "title": "Pre-G Washing and Drying Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 6,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft – Issued for Review; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=6"
+        }
+      ],
+      "routeLabels": [
+        "T-161 RO supply protection"
+      ]
+    },
+    {
+      "streamId": "S-160-VENT-T161",
+      "name": "T-161 vent handoff",
+      "source": "T-161",
+      "via": [],
+      "destination": "IF-A3000-V-T-161",
+      "material": "Acid process vent",
+      "phase": "Gas",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "T-161"
+      ],
+      "operatingMode": "Baseline FEED arrangement",
+      "status": "Existing A-3000 collection interface; rate, composition and relief segregation unresolved",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-EARLY-PROCESS",
+          "title": "A-100/A-140/A-160 process geometry, routes and engineering register",
+          "revision": "V160",
+          "page": null,
+          "status": "model-derived planning basis; no operating or design approval",
+          "availability": "available model source reviewed",
+          "files": {
+            "preg.js": "855183afb11e18e87436773cbbd30169b05d0f33219e3afa224d36a97284a21a",
+            "model.js": "24d1faa36edef797ed98447fb3a8d8b81d7a46ad3e1b0c33264d2c73b534b5ca",
+            "engineering-register.js": "d2cea97c6fd28b0d1c287ba0ba44ced577c82e05ee75bd834c322fd00bae1639",
+            "a160-alternatives.js": "e01b0d4cd4989dce5fe4b40a42631b2da6b70a32309033de82d5ffcd815ecec9",
+            "pfd-temperature-sheets.pdf": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings; PDF as binary"
+        },
+        {
+          "documentId": "FEED-PE-PFD-001",
+          "sheetId": "FEED-PFD-0160",
+          "title": "Pre-G Washing and Drying Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 6,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft – Issued for Review; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=6"
+        }
+      ],
+      "routeLabels": []
+    }
+  ]
+}

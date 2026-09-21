@@ -1,0 +1,28 @@
+{
+  "assetId": "N2-HEADER-201",
+  "name": "Nitrogen supply design intent",
+  "assetClassId": "ExternalInterface",
+  "status": "proposed",
+  "identityStatus": "provisional-model-tag",
+  "recordScope": "external-interface",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-200",
+    "system": "A-200 connected process context",
+    "parentAsset": null
+  },
+  "processFunction": "Nitrogen supply design intent",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null
+  },
+  "operatingEnvelope": null,
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Design narrative only; nitrogen supply is not confirmed by the indexed PFD.",
+    "Approved source gaps tracked under A200-001."
+  ]
+}

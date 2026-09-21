@@ -1,0 +1,46 @@
+{
+  "assetId": "P-205A",
+  "streams": [
+    {
+      "streamId": "S-200-RC-A",
+      "name": "R-201A recirculation loop",
+      "source": "R-201A",
+      "destination": "R-201A",
+      "via": [
+        "P-205A",
+        "SI-201A",
+        "M-201A"
+      ],
+      "material": "Oxidation slurry",
+      "phase": "Liquid/solid suspension",
+      "massFlow": null,
+      "temperature": {
+        "basis": "PFD operating range",
+        "rangeC": [
+          45,
+          50
+        ]
+      },
+      "pressure": null,
+      "status": "modeled; package allocation open",
+      "routeLabels": [
+        "P-205A to induction package",
+        "M-201A static mixing spool",
+        "M-201A return to reactor"
+      ],
+      "contextAssetIds": [
+        "R-201A"
+      ],
+      "feedRatio": null,
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "assetId": "A-5200",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "A-5200",
+      "source": "MODEL-A5000",
+      "revision": "V156",
+      "status": "model-derived",
+      "confidence": "review required"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A5000-001"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A5000-002"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A5000-002"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A5000-002"
+    },
+    {
+      "property": "operatingEnvelope",
+      "value": {
+        "supplyTemperatureRangeC": [
+          25,
+          30
+        ],
+        "returnTemperatureRangeC": [
+          35,
+          40
+        ],
+        "status": "Draft PFD range; no selected setpoint or live measurement"
+      },
+      "source": "FEED-PFD-5000",
+      "revision": "V5.1",
+      "page": 19,
+      "status": "draft — not for use",
+      "confidence": "documented draft",
+      "gapId": "A5000-003"
+    },
+    {
+      "valueId": "PV-A-5000-0169",
+      "property": "design.materialOfConstruction",
+      "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 69 (M-065)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "CF-materialOfConstruc-A-5200",
+      "note": "scope: A-5100/A-5110 A/B/V-5110/CV-5111; A-5200/A-5210 A/B/CV-5211; A-5300/A-5310 A/B/CV-5311; alt: Nonmetallic secondary piping on low-pressure branches where temperature/rating permits; status FIRM | D-A5000-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-5000-0182",
+      "property": "operatingEnvelope.supplyTemperatureC",
+      "value": "Cooling water 25–30 °C as drawn; R-1001 ≈ 2 MW (Case 0) and E-701/E-801/E-702 loads",
+      "unit": "°C",
+      "source": "FEED-PE-REP-043",
+      "revision": "V1.0",
+      "location": "basis table",
+      "status": "approved",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": null,
+      "note": "D-A5000-01: Cooling water 25–30 °C as drawn.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-5000-0185",
+      "property": "identity.designConcept",
+      "value": "Four loops, not three: ≥ 200 °C steam / thermal-oil (3–7 MW at 5 wt % dryer feed; 15–20 MW if 1 wt % is retained), hot water, cooling water, chilled water — duties from Reports 021–042",
+      "unit": null,
+      "source": "FEED-PE-REP-043",
+      "revision": "V1.0",
+      "location": "Executive conclusion",
+      "status": "approved",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": null,
+      "note": "recommended | D-A5000-01: Four utility loops, not three (REP-043): add a ≥ 200 °C steam / thermal-oil loop for HX-601, the acid concentrator and R-141 heat-up; keep hot water, cooling water, chilled water.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

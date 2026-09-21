@@ -1,0 +1,34 @@
+{
+  "assetId": "SI-201A",
+  "documents": [
+    {
+      "documentId": "REACTOR-PILOT",
+      "title": "Existing R-201 semantic pilot source index",
+      "revision": "1.1.0-pilot",
+      "page": null,
+      "status": "Inherited draft references; underlying source revision reconciliation remains open",
+      "availability": "semantic/v1/documents/R-201A.json"
+    },
+    {
+      "documentId": "MODEL-A200",
+      "title": "Existing A-200 model and engineering register",
+      "revision": "V142 baseline",
+      "page": null,
+      "status": "Model evidence only; not an approved equipment register",
+      "availability": "dist/model.js and prepared model"
+    },
+    {
+      "documentId": "FEED-PFD-0200",
+      "sheetId": "FEED-PFD-0200",
+      "title": "TLGO Synthesis draft sheet",
+      "revision": null,
+      "revisionNote": "Sheet revision field is placeholder XXX; X01 document-creation row dated 15-Feb-2026. Do not equate it with the inherited V5.1/V5.1.1 bundle labels.",
+      "page": 3,
+      "file": "pfd-temperature-sheets.pdf",
+      "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+      "status": "Draft - Not for Use; not approved",
+      "availability": "available and reviewed",
+      "href": "./pfd-temperature-sheets.pdf#page=3"
+    }
+  ]
+}

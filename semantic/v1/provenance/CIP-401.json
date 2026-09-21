@@ -1,0 +1,55 @@
+{
+  "assetId": "CIP-401",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "CIP-401",
+      "source": "MODEL-A400",
+      "revision": "V144 / f82bb71f58c4945fec3a0a1629193d9a16188926",
+      "page": null,
+      "status": "model-derived",
+      "confidence": "review required",
+      "gapId": "A400-001"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A400-002"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A400-002"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A400-002"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A400-002"
+    }
+  ]
+}

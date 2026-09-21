@@ -1,0 +1,14 @@
+{
+  "assetId": "TR-164",
+  "instruments": [
+    {
+      "functionId": "TR-164-STATE",
+      "variable": "equipment state",
+      "purpose": "Confirm permissive, operating and isolated state",
+      "tag": null,
+      "range": null,
+      "status": "function only; approved instrument tag and logic unresolved",
+      "gapId": "A160-003"
+    }
+  ]
+}

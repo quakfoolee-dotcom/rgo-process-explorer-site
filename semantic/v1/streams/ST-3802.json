@@ -1,0 +1,140 @@
+{
+  "assetId": "ST-3802",
+  "streams": [
+    {
+      "streamId": "S-3800-PACKAGE",
+      "name": "package",
+      "source": "AB-3801",
+      "via": [],
+      "destination": "ST-3802",
+      "material": "Treated reactive exhaust; performance unqualified",
+      "phase": "Gas",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "CP-3800"
+      ],
+      "operatingMode": "vendor treatment envelope only; mechanism, duty, utilities and acceptance unqualified",
+      "status": "Model route only; line identities, package internals and operating sequence require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A3800",
+          "title": "A-800 reactive-gas and dry-dust treatment satellites",
+          "revision": "V154 / 565c39858ef8c190a506d74d567b8b7a74a5c60a",
+          "page": null,
+          "status": "model-derived layout envelopes; technology and process release HOLD",
+          "availability": "available model source reviewed",
+          "files": {
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76",
+            "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+            "a800-basis.js": "0ee9741872bf91a9e4898324690cd43ec2ab246478883645300b6311900bc757",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0800",
+          "sheetId": "FEED-PFD-0800",
+          "title": "Commercial Scale rGO Doping and Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 8,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=8"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S1",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent review redraw - source segregation",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank.",
+          "page": 1,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=1"
+        }
+      ],
+      "routeLabels": [
+        "AB-3801 unqualified treatment envelope",
+        "AB-3801 to ST-3802"
+      ]
+    },
+    {
+      "streamId": "S-3800-DISCHARGE",
+      "name": "discharge",
+      "source": "ST-3802",
+      "via": [],
+      "destination": "IF-A3800-ATM",
+      "material": "Treated reactive exhaust; emission acceptance unqualified",
+      "phase": "Gas",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "CP-3800"
+      ],
+      "operatingMode": "modeled outlet only; no permitted discharge, emission performance or operating release",
+      "status": "Model route only; line identities, package internals and operating sequence require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A3800",
+          "title": "A-800 reactive-gas and dry-dust treatment satellites",
+          "revision": "V154 / 565c39858ef8c190a506d74d567b8b7a74a5c60a",
+          "page": null,
+          "status": "model-derived layout envelopes; technology and process release HOLD",
+          "availability": "available model source reviewed",
+          "files": {
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76",
+            "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+            "a800-basis.js": "0ee9741872bf91a9e4898324690cd43ec2ab246478883645300b6311900bc757",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0800",
+          "sheetId": "FEED-PFD-0800",
+          "title": "Commercial Scale rGO Doping and Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 8,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=8"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S1",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent review redraw - source segregation",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank.",
+          "page": 1,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=1"
+        }
+      ],
+      "routeLabels": [
+        "ST-3802 proposed discharge"
+      ]
+    }
+  ]
+}

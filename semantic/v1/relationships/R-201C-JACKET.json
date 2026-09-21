@@ -1,0 +1,35 @@
+{
+  "assetId": "R-201C-JACKET",
+  "relationships": [
+    {
+      "id": "REL-R-201C-JACKET-AREA",
+      "type": "locatedIn",
+      "target": "A-200",
+      "status": "model register area",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-R-201C-JACKET-S-5000-R201C-TCU-201",
+      "type": "connectedTo",
+      "target": "TCU-201",
+      "streamId": "S-5000-R201C",
+      "role": "R-201C jacket utility · connected concept; duty unresolved",
+      "status": "connected concept; duty unresolved",
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          831
+        ]
+      }
+    }
+  ]
+}

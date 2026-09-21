@@ -1,0 +1,55 @@
+{
+  "assetId": "IF-A3812-OUTLET",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "IF-A3812-OUTLET",
+      "source": "MODEL-A3800",
+      "revision": "V154 / 565c39858ef8c190a506d74d567b8b7a74a5c60a",
+      "page": null,
+      "status": "model-derived",
+      "confidence": "review required",
+      "gapId": "A3800-006"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3800-007"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3800-007"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3800-007"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3800-007"
+    }
+  ]
+}

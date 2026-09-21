@@ -1,0 +1,209 @@
+{
+  "assetId": "P-202",
+  "streams": [
+    {
+      "streamId": "S-200-H3PO4-A",
+      "name": "Phosphoric acid feed A",
+      "source": "T-202",
+      "destination": "R-201A",
+      "material": "Phosphoric acid",
+      "phase": "Liquid",
+      "massFlow": null,
+      "temperature": null,
+      "pressure": null,
+      "status": "PFD ratio; branch flow unresolved",
+      "routeLabels": [
+        "Phosphoric branch A",
+        "Phosphoric nozzle connection A"
+      ],
+      "contextAssetIds": [
+        "R-201A"
+      ],
+      "feedRatio": {
+        "value": 6.75,
+        "unit": "kg/kg Pre-G",
+        "basis": "PFD",
+        "sourceReferences": [
+          {
+            "documentId": "FEED-PE-PFD-001",
+            "sheetId": "FEED-PFD-0200",
+            "revision": "V5.1.1",
+            "page": 7,
+            "status": "Inherited draft pilot basis; not independently requalified"
+          }
+        ]
+      },
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        },
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ],
+      "via": [
+        "P-202"
+      ],
+      "topologyEvidenceStatus": "model-derived"
+    },
+    {
+      "streamId": "S-200-H3PO4-B",
+      "name": "Phosphoric acid feed B",
+      "source": "T-202",
+      "destination": "R-201B",
+      "material": "Phosphoric acid",
+      "phase": "Liquid",
+      "massFlow": null,
+      "temperature": null,
+      "pressure": null,
+      "status": "PFD ratio; branch flow unresolved",
+      "routeLabels": [
+        "Phosphoric branch B",
+        "Phosphoric nozzle connection B"
+      ],
+      "contextAssetIds": [
+        "R-201B"
+      ],
+      "feedRatio": {
+        "value": 6.75,
+        "unit": "kg/kg Pre-G",
+        "basis": "PFD",
+        "sourceReferences": [
+          {
+            "documentId": "FEED-PE-PFD-001",
+            "sheetId": "FEED-PFD-0200",
+            "revision": "V5.1.1",
+            "page": 7,
+            "status": "Inherited draft pilot basis; not independently requalified"
+          }
+        ]
+      },
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        },
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ],
+      "via": [
+        "P-202"
+      ],
+      "topologyEvidenceStatus": "model-derived"
+    },
+    {
+      "streamId": "S-200-H3PO4-C",
+      "name": "Phosphoric acid feed C",
+      "source": "T-202",
+      "destination": "R-201C",
+      "material": "Phosphoric acid",
+      "phase": "Liquid",
+      "massFlow": null,
+      "temperature": null,
+      "pressure": null,
+      "status": "PFD ratio; branch flow unresolved",
+      "routeLabels": [
+        "Phosphoric branch C",
+        "Phosphoric nozzle connection C"
+      ],
+      "contextAssetIds": [
+        "R-201C"
+      ],
+      "feedRatio": {
+        "value": 6.75,
+        "unit": "kg/kg Pre-G",
+        "basis": "PFD",
+        "sourceReferences": [
+          {
+            "documentId": "FEED-PE-PFD-001",
+            "sheetId": "FEED-PFD-0200",
+            "revision": "V5.1.1",
+            "page": 7,
+            "status": "Inherited draft pilot basis; not independently requalified"
+          }
+        ]
+      },
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        },
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ],
+      "via": [
+        "P-202"
+      ],
+      "topologyEvidenceStatus": "model-derived"
+    },
+    {
+      "streamId": "S-200-H3PO4-D",
+      "name": "Phosphoric acid feed D",
+      "source": "T-202",
+      "destination": "R-201D",
+      "material": "Phosphoric acid",
+      "phase": "Liquid",
+      "massFlow": null,
+      "temperature": null,
+      "pressure": null,
+      "status": "PFD ratio; branch flow unresolved",
+      "routeLabels": [
+        "Phosphoric branch D",
+        "Phosphoric nozzle connection D"
+      ],
+      "contextAssetIds": [
+        "R-201D"
+      ],
+      "feedRatio": {
+        "value": 6.75,
+        "unit": "kg/kg Pre-G",
+        "basis": "PFD",
+        "sourceReferences": [
+          {
+            "documentId": "FEED-PE-PFD-001",
+            "sheetId": "FEED-PFD-0200",
+            "revision": "V5.1.1",
+            "page": 7,
+            "status": "Inherited draft pilot basis; not independently requalified"
+          }
+        ]
+      },
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        },
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ],
+      "via": [
+        "P-202"
+      ],
+      "topologyEvidenceStatus": "model-derived"
+    }
+  ]
+}

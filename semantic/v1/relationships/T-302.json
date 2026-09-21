@@ -1,0 +1,82 @@
+{
+  "assetId": "T-302",
+  "relationships": [
+    {
+      "id": "REL-T-302-AREA",
+      "type": "locatedIn",
+      "target": "A-300",
+      "status": "model area assignment",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-T-302-S-300-REAGENT-HCL-P-302",
+      "type": "connectedTo",
+      "target": "P-302",
+      "role": "reagent hcl",
+      "status": "Draft process intent and model route; final line identities, compatibility and allocations unqualified",
+      "streamId": "S-300-REAGENT-HCL",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-0300",
+          "sheetId": "FEED-PFD-0300",
+          "title": "TLGO Fixing draft sheet",
+          "revision": null,
+          "revisionNote": "Sheet revision field is placeholder XXX; X01 document-creation row dated 15-Feb-2026. Do not equate it with the inherited V5.1/V5.1.1 bundle labels.",
+          "page": 4,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=4"
+        },
+        {
+          "documentId": "MODEL-A300",
+          "revision": "V143 baseline",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          607110077
+        ],
+        "routeLabels": [
+          "T-302 to P-302 HCl suction",
+          "HCl dosing to T-305"
+        ]
+      }
+    },
+    {
+      "id": "REL-T-302-S-300-ACID-VENT-IF-A300-VENT",
+      "type": "connectedTo",
+      "target": "IF-A300-VENT",
+      "role": "acid vent",
+      "status": "Draft process intent and model route; final line identities, compatibility and allocations unqualified",
+      "streamId": "S-300-ACID-VENT",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-0300",
+          "sheetId": "FEED-PFD-0300",
+          "title": "TLGO Fixing draft sheet",
+          "revision": null,
+          "revisionNote": "Sheet revision field is placeholder XXX; X01 document-creation row dated 15-Feb-2026. Do not equate it with the inherited V5.1/V5.1.1 bundle labels.",
+          "page": 4,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=4"
+        },
+        {
+          "documentId": "MODEL-A300",
+          "revision": "V143 baseline",
+          "page": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "assetId": "E-801",
+  "name": "Reactive off-gas cooler",
+  "assetClassId": "HeatExchanger",
+  "status": "listed",
+  "identityStatus": "draft-pfd-tag",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-800",
+    "system": "A-800 doping and pyrolysis process context",
+    "parentAsset": null
+  },
+  "processFunction": "Reactive off-gas cooler",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": "Alloy 601 or Ni 200/201 in hot/alkali-condensing sections; 316L minimum after controlled cooling"
+  },
+  "operatingEnvelope": null,
+  "processBasis": [
+    {
+      "label": "Draft off-gas temperature before fan",
+      "value": [
+        60,
+        90
+      ],
+      "unit": "°C",
+      "basisType": "draft-indicative",
+      "status": "draft only; not a selected operating or safety setpoint",
+      "source": {
+        "documentId": "FEED-PFD-0800",
+        "sheetId": "FEED-PFD-0800",
+        "title": "Commercial Scale rGO Doping and Pyrolysis",
+        "revision": null,
+        "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+        "page": 8,
+        "file": "pfd-temperature-sheets.pdf",
+        "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+        "status": "Draft - Not for Use; not approved",
+        "availability": "available and reviewed",
+        "href": "./pfd-temperature-sheets.pdf#page=8"
+      }
+    }
+  ],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Draft arrows 806/807 show H-803 through RV-801 to PY-801, while General Note 2 names F-801. The concept follows the arrows; document-owner confirmation remains open. Draft AR801 identifies an argon stream, not an approved alias for the model AR-801 manifold.",
+    "Draft 1 kg KBH4 per kg rGO, 750 degC, 5 degC/min ramp and 2 h residence are source references only. Draft +2 psig and maximum 10 ppm oxygen are not selected control or protective limits. Feed accuracy during refill, residence distribution, reaction/gas evolution, throughput and product acceptance remain open.",
+    "TR-801 and LK-802 are model-added contained-transfer concepts. KBH4 handling remains dry and isolated from indirect cooling water; no process-water wash or common process/utility drain is inferred. Dew point, leakage, materials, capacities and residue handling are unqualified. RV-801 is not credited as positive isolation.",
+    "PY-801 normal off-gas runs through E-801 and FN-801 to AB-3801 candidate. Inventory vents use DC-3811; F-802 has its own DC-3812 route. Emergency PSV-801 relief stays separate. The draft mentions a cyclone without an identified symbol/tag; no cyclone is invented. H2/boron composition, treatment performance, relief loads and final disposal remain unqualified.",
+    "Sheet is Draft - Not for Use with XXX revision. Oxygen, moisture and hydrogen verification are functional concepts, not qualified sensors or trip logic. PY-801 includes heating, hold and cooling zones; no separate product cooler is invented. A-900 receiving equipment is not modeled. Product temperature, residual reactivity, quality and receiving atmosphere require acceptance."
+  ],
+  "safeguards": {
+    "offGasBasis": "H₂ 12–35 Nm³/h (30–55 vol % in Ar) with 10–20 kg/h potassium vapour condensing below ≈ 570 °C into a pyrophoric, water-reactive liquid — treat H₂ as a continuous process stream and K/B aerosol as fouling/materials exposure; segregate (S3) from wet vents and from PY-701 CO gas; hot-end K condenser required"
+  },
+  "dataLayer": {
+    "area": "A-800",
+    "source": "data/semantic/A-800",
+    "approvedRows": 2,
+    "heldRows": 0,
+    "pendingRows": 17,
+    "identityHold": null,
+    "applied": "2026-09-21",
+    "baseline": {
+      "design": {
+        "capacityM3": null,
+        "designPressure": null,
+        "designTemperature": null,
+        "materialOfConstruction": null
+      },
+      "safeguards": null
+    },
+    "baselineAbsent": [
+      "safeguards"
+    ]
+  }
+}

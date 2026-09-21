@@ -1,0 +1,71 @@
+{
+  "assetId": "P-501",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "P-501",
+      "source": "FEED-PFD-0500",
+      "revision": null,
+      "page": 5,
+      "status": "draft-pfd",
+      "confidence": "review required",
+      "gapId": "A500-004"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A500-003"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A500-003"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A500-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A500-003"
+    },
+    {
+      "valueId": "PV-A-500-0069",
+      "property": "design.materialOfConstruction",
+      "value": "PVDF process-wetted envelope, or 316L electropolished where product-metal budget permits",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 40 (M-036)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "CF-materialOfConstruc-P-501",
+      "note": "scope: T-501 Feed Tank; P-501 Transfer Pump; HX-501 and pipework; alt: Ti Grade 2 tubes where cooling-water chloride is high; status FIRM | D-A500-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

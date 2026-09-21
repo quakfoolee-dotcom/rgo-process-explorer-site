@@ -1,0 +1,7 @@
+{
+  "assetId": "ME-3150",
+  "bindingId": "GEOMETRY-ME-3150",
+  "modelEquipmentId": 609,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

@@ -1,0 +1,93 @@
+{
+  "assetId": "TK-405",
+  "relationships": [
+    {
+      "id": "REL-TK-405-AREA",
+      "type": "locatedIn",
+      "target": "A-400",
+      "status": "model area assignment",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-TK-405-PACKAGE",
+      "type": "partOf",
+      "target": "CIP-401",
+      "status": "model package context",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-TK-405-S-400-CIP-SUPPLY-P-405",
+      "type": "connectedTo",
+      "target": "P-405",
+      "role": "cip supply",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-400-CIP-SUPPLY",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A400",
+          "title": "A-400 washing routes, VSEP and cleaning package model",
+          "revision": "V144 / f82bb71f58c4945fec3a0a1629193d9a16188926",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "a400.js": "a1030f59c4a82d4a7e01adce33f317865c4a87aec177aef8d45b115fe1ee9c16",
+            "vsep.js": "9bfd04db0fe2f35924cc0a348e8a4cf0952ab31bc898778b20b69d1356301b8f",
+            "a400-basis.js": "b5daadebe792c358ea3a6190ab39029382d80e1830e8073c34c67ff8b63a8ab9"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          1244383829
+        ],
+        "routeLabels": [
+          "CIP-401 tank to pump",
+          "P-405 CIP discharge",
+          "TFF CIP supply",
+          "TFF CIP feed tie"
+        ]
+      }
+    },
+    {
+      "id": "REL-TK-405-S-400-CIP-RETURN-TFF-401",
+      "type": "connectedTo",
+      "target": "TFF-401",
+      "role": "cip return",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-400-CIP-RETURN",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A400",
+          "title": "A-400 washing routes, VSEP and cleaning package model",
+          "revision": "V144 / f82bb71f58c4945fec3a0a1629193d9a16188926",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "a400.js": "a1030f59c4a82d4a7e01adce33f317865c4a87aec177aef8d45b115fe1ee9c16",
+            "vsep.js": "9bfd04db0fe2f35924cc0a348e8a4cf0952ab31bc898778b20b69d1356301b8f",
+            "a400-basis.js": "b5daadebe792c358ea3a6190ab39029382d80e1830e8073c34c67ff8b63a8ab9"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          33
+        ],
+        "routeLabels": [
+          "TFF CIP return takeoff",
+          "TFF CIP return to package"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "assetId": "H-101-SF-101",
+  "bindingId": "GEOMETRY-H-101-SF-101",
+  "modelEquipmentId": 38,
+  "bindingScope": "modeled-equipment-group",
+  "bindingRule": "All geometry owned by model equipment 38 resolves to H-101-SF-101; canonical identity remains stable across model rebuilds."
+}

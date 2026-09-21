@@ -1,0 +1,542 @@
+{
+  "version": 119,
+  "date": "2026-09-14",
+  "registerRevision": "2026-09-10 \u00b7 Physical equipment ownership and complete Explore assemblies",
+  "source": "Prepared FEED baseline: feed / baseline A-160 / bulk argon; assessment without physical modification",
+  "bankBasis": "Four reactors follow the V5.1 bank. Four dedicated recirculation / induction and solids-metering packages are a proposed configuration: the register lists P-205A/B and M-201 without assigning them to four reactors. P-206A/B are selectable transfer pumps; duty/standby and simultaneous operation are unconfirmed. No rated capacity or operating setpoint is implied.",
+  "mechanicalBasis": {
+    "revision": "R201-mechanical-62",
+    "status": "Top-entry agitator and central flush-bottom outlet \u2014 conceptual; ratings unverified",
+    "maintenanceReview": {
+      "revision": "R201-maintenance-63",
+      "status": "Coordinated concept \u2014 lifting release remains HOLD",
+      "units": "m",
+      "envelope": {
+        "localMin": [
+          -1.2,
+          4.93,
+          -1
+        ],
+        "localMax": [
+          1.2,
+          10.6,
+          1
+        ],
+        "upperScreenStart": 6.57
+      },
+      "geometry": {
+        "shaftBottom": 2.08,
+        "shaftTop": 5.68,
+        "neckClearLevel": 4.95,
+        "shaftOvertravelAllowance": 0.15,
+        "driveTop": 6.42,
+        "riggingReservation": 1,
+        "neckBoreDiameter": 1.27,
+        "impellerEnvelopeDiameter": 1.62
+      },
+      "basis": "The reserved sweep begins at the cover, includes the offset motor, and extends above the translated drive plus an illustrative rigging allowance. It is not an approved lifting envelope or hoist capacity.",
+      "layout": "SC-164C/D use horizontal powered screws routed diagonally outside the rear reactor lifting reservations. Hopper fill points and branch-isolation tags are retained; no long lateral gravity chute is introduced.",
+      "shutdownInterfaces": [
+        {
+          "interface": "SF-201 feeder, cradle and rails",
+          "action": "Withdraw the complete feeder carriage 2.25 m rearward on fixed guides. Hopper stays on its widened independent weigh frame; front cradle is set behind head services. Distribution supports and the acid supply rack are coordinated around the complete stroke. Vendor to qualify drive, locking pins, end stops, guide reactions and withdrawal actuation.",
+          "status": "Coordinated geometry; mechanism and structure qualification HOLD"
+        },
+        {
+          "interface": "Pre-G chute and reactor charging connection",
+          "action": "Removable hopper inlet neck and short reactor chute, with two split sleeve disconnects. Empty, isolate and decontaminate before disconnection; independently support and positively close all four exposed faces. Shown maintenance view includes closure plates.",
+          "status": "Modeled interfaces; containment and isolation procedure qualification HOLD"
+        },
+        {
+          "interface": "Liquid feeds, cleaning, vent and instrumentation",
+          "action": "Reconcile every head service against the lift sweep and P&ID. Define isolation, decontamination and supported spool removal. Relief protection must remain appropriate to every maintenance state.",
+          "status": "HOLD \u2014 head-service disconnect schedule required"
+        },
+        {
+          "interface": "R-201D upper sweep / rear dust trunks",
+          "action": "Pre-G trunk rerouted to X = 3.95 m; oxidizer trunk to X = 0.80 m, outside the reserved sweep. Dust systems remain segregated. Recalculate pressure loss, balance and support loads for the changed routing.",
+          "status": "Rerouted concept; hydraulic and support qualification HOLD"
+        },
+        {
+          "interface": "Drive, seal services and electrical conduit",
+          "action": "Vendor to confirm connection and removal sequence, energy isolation, independent support and reinstatement checks.",
+          "status": "HOLD \u2014 drive and seal package unselected"
+        },
+        {
+          "interface": "Impellers, shaft and cover",
+          "action": "The modeled impeller envelope exceeds the neck bore. Qualify split-impeller disassembly, tool access and retrieval before shaft withdrawal; do not assume passage through the neck.",
+          "status": "HOLD \u2014 disassembly access not demonstrated"
+        },
+        {
+          "interface": "Lifting equipment, structure and elevated access",
+          "action": "Establish lifted weights, centres of gravity, lifting points, rigging, rated hoist and supporting structure, landing space, exclusion zone and access method.",
+          "status": "HOLD \u2014 capacity and lift plan unselected"
+        }
+      ],
+      "ratings": {
+        "liftedMass_kg": null,
+        "hoistCapacity_kg": null,
+        "structureCapacity_kg": null,
+        "centreOfGravity": null
+      },
+      "regulatory": [
+        {
+          "reference": "WorkSafeBC OHSR 14.11",
+          "requirement": "Crane/hoist capacity must not exceed its supporting structure capacity; a clear model envelope does not establish load capacity."
+        },
+        {
+          "reference": "WorkSafeBC OHSR 14.12",
+          "requirement": "Applicable manufacturer manuals or engineer instructions must be accessible for crane/hoist use."
+        },
+        {
+          "reference": "WorkSafeBC OHSR 14.36",
+          "requirement": "Determine and communicate load weight. If it cannot be accurately determined, the crane/hoist requires a load-weight indicator or overload-prevention system. This model assigns no lifted weight."
+        }
+      ],
+      "sources": [
+        "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-14-cranes-and-hoists",
+        "https://www.ekato.com/products/agitators/reactor-agitators-ekato-hwl-n/"
+      ]
+    },
+    "scope": [
+      "R-201A",
+      "R-201B",
+      "R-201C",
+      "R-201D"
+    ],
+    "arrangement": "Top-entry agitator with an offset motor/gearbox clear of the Pre-G feeder, on a reinforced removable cover; separate recirculation suction; central flush-bottom outlet with separately isolated product and cleaning-waste branches.",
+    "drainage": "The central seat meets the inner head low point. A lowering poppet opens into a side-discharge chamber; the actuator remains below the chamber, outside the liquid path. Downstream drain routing falls to the existing closed-drain interface. Residual heel, valve internals and cleanability require vendor confirmation.",
+    "controls": "XV-BOT201 opens only for the selected reactor in illustrated collection or cleaning states. XV-COL and XV-DR201 select mutually exclusive destinations. This is an inspection simulation, not a commissioned interlock or safety system.",
+    "maintenance": "Removable drive/cover requires shutdown, isolation and a qualified lifting procedure. The split impellers require a qualified disassembly sequence before shaft withdrawal through the smaller cover neck. Elevated access, service disconnects and lifting remain HOLD; screening envelopes are illustrative.",
+    "holds": [
+      "Mixing duty, viscosity, solids, shaft bending/critical speed, impeller clearance, motor power and speed",
+      "Seal, valve, gasket and wetted-material compatibility with the qualified process and cleaning chemistry",
+      "Pressure-boundary reinforcement, drive torque and weight, nozzle loads and applicable BC pressure-equipment registration",
+      "Valve drainability, dead legs, pump NPSH, line sizing, cleaning of recirculation and transfer piping",
+      "Elevated maintenance access, shaft withdrawal envelope, lifting plan and head-service disconnect sequence",
+      "P&ID / cause-and-effect update, valve fail positions and independent engineering review"
+    ],
+    "sources": [
+      "https://www.ekato.com/products/agitators/reactor-agitators-ekato-hwl-n/",
+      "https://schuf.de/disc-bottom-outlet-valves/",
+      "https://www.technicalsafetybc.ca/technologies/boilers-pressure-vessels/boiler-pressure-vessel-design-registration",
+      "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-12-tools-machinery-and-equipment"
+    ]
+  },
+  "checks": {
+    "result": "PASS",
+    "samplingCases": 80,
+    "mainProductWasteRecoveryValves": "Closed in every sampling case",
+    "positiveMaintenanceClosures": 16,
+    "poseRestoration": "Four branches return exactly to operating position",
+    "qualification": "Receiver recovery, materials, lifting ratings and procedure remain HOLD"
+  },
+  "equipment": [
+    {
+      "id": 1,
+      "tag": "R-201A",
+      "name": "GO oxidation A",
+      "designStatus": "listed",
+      "reviewNote": "SF-201A has a proposed 2.25 m withdrawal carriage, independent fixed guides and two contained disconnects. Rear dust trunks and SC-164 avoid the lifting reservation. Full cover lifting remains HOLD pending head-service spool removal, split-impeller access and qualified weights, lifting points, rigging, hoist, supporting structure and landing space. See R-201 service coordination in Engineering inspection. Mixing duty, viscosity, solids, shaft bending/critical speed, impeller clearance, motor power and speed; Seal, valve, gasket and wetted-material compatibility with the qualified process and cleaning chemistry; Pressure-boundary reinforcement, drive torque and weight, nozzle loads and applicable BC pressure-equipment registration; Valve drainability, dead legs, pump NPSH, line sizing, cleaning of recirculation and transfer piping; Elevated maintenance access, shaft withdrawal envelope, lifting plan and head-service disconnect sequence; P&ID / cause-and-effect update, valve fail positions and independent engineering review"
+    },
+    {
+      "id": 2,
+      "tag": "R-201B",
+      "name": "GO oxidation B",
+      "designStatus": "listed",
+      "reviewNote": "SF-201B has a proposed 2.25 m withdrawal carriage, independent fixed guides and two contained disconnects. Rear dust trunks and SC-164 avoid the lifting reservation. Full cover lifting remains HOLD pending head-service spool removal, split-impeller access and qualified weights, lifting points, rigging, hoist, supporting structure and landing space. See R-201 service coordination in Engineering inspection. Mixing duty, viscosity, solids, shaft bending/critical speed, impeller clearance, motor power and speed; Seal, valve, gasket and wetted-material compatibility with the qualified process and cleaning chemistry; Pressure-boundary reinforcement, drive torque and weight, nozzle loads and applicable BC pressure-equipment registration; Valve drainability, dead legs, pump NPSH, line sizing, cleaning of recirculation and transfer piping; Elevated maintenance access, shaft withdrawal envelope, lifting plan and head-service disconnect sequence; P&ID / cause-and-effect update, valve fail positions and independent engineering review"
+    },
+    {
+      "id": 3,
+      "tag": "T-201",
+      "name": "Sulfuric acid day tank",
+      "designStatus": "listed",
+      "reviewNote": ""
+    },
+    {
+      "id": 19,
+      "tag": "T-202",
+      "name": "Phosphoric acid day tank",
+      "designStatus": "listed",
+      "reviewNote": ""
+    },
+    {
+      "id": 20,
+      "tag": "H-201A / SF-201A",
+      "name": "Pre-G dosing A",
+      "designStatus": "proposed",
+      "reviewNote": "Branch-specific Pre-G feeder quantities and allocation require reconciliation with the draft register."
+    },
+    {
+      "id": 21,
+      "tag": "H-201B / SF-201B",
+      "name": "Pre-G dosing B",
+      "designStatus": "proposed",
+      "reviewNote": "Branch-specific Pre-G feeder quantities and allocation require reconciliation with the draft register."
+    },
+    {
+      "id": 22,
+      "tag": "H-202A / SF-202A",
+      "name": "KMnO\u2084 dosing A",
+      "designStatus": "proposed",
+      "reviewNote": "Branch-specific oxidizer feeder quantities require reconciliation with the draft register."
+    },
+    {
+      "id": 23,
+      "tag": "H-202B / SF-202B",
+      "name": "KMnO\u2084 dosing B",
+      "designStatus": "proposed",
+      "reviewNote": "Branch-specific oxidizer feeder quantities require reconciliation with the draft register."
+    },
+    {
+      "id": 24,
+      "tag": "SI-201A / M-201A",
+      "name": "Powder induction A",
+      "designStatus": "proposed",
+      "reviewNote": "Induction and recirculation package allocation requires vendor and FEED confirmation."
+    },
+    {
+      "id": 25,
+      "tag": "SI-201B / M-201B",
+      "name": "Powder induction B",
+      "designStatus": "proposed",
+      "reviewNote": "Induction and recirculation package allocation requires vendor and FEED confirmation."
+    },
+    {
+      "id": 29,
+      "tag": "BL-A200",
+      "name": "Feed and vent interfaces",
+      "designStatus": "interface",
+      "reviewNote": ""
+    },
+    {
+      "id": 54,
+      "tag": "R-201C",
+      "name": "GO oxidation C",
+      "designStatus": "listed",
+      "reviewNote": "SF-201C has a proposed 2.25 m withdrawal carriage, independent fixed guides and two contained disconnects. Rear dust trunks and SC-164 avoid the lifting reservation. Full cover lifting remains HOLD pending head-service spool removal, split-impeller access and qualified weights, lifting points, rigging, hoist, supporting structure and landing space. See R-201 service coordination in Engineering inspection. Mixing duty, viscosity, solids, shaft bending/critical speed, impeller clearance, motor power and speed; Seal, valve, gasket and wetted-material compatibility with the qualified process and cleaning chemistry; Pressure-boundary reinforcement, drive torque and weight, nozzle loads and applicable BC pressure-equipment registration; Valve drainability, dead legs, pump NPSH, line sizing, cleaning of recirculation and transfer piping; Elevated maintenance access, shaft withdrawal envelope, lifting plan and head-service disconnect sequence; P&ID / cause-and-effect update, valve fail positions and independent engineering review"
+    },
+    {
+      "id": 55,
+      "tag": "R-201D",
+      "name": "GO oxidation D",
+      "designStatus": "listed",
+      "reviewNote": "SF-201D has a proposed 2.25 m withdrawal carriage, independent fixed guides and two contained disconnects. Rear dust trunks and SC-164 avoid the lifting reservation. Full cover lifting remains HOLD pending head-service spool removal, split-impeller access and qualified weights, lifting points, rigging, hoist, supporting structure and landing space. See R-201 service coordination in Engineering inspection. Mixing duty, viscosity, solids, shaft bending/critical speed, impeller clearance, motor power and speed; Seal, valve, gasket and wetted-material compatibility with the qualified process and cleaning chemistry; Pressure-boundary reinforcement, drive torque and weight, nozzle loads and applicable BC pressure-equipment registration; Valve drainability, dead legs, pump NPSH, line sizing, cleaning of recirculation and transfer piping; Elevated maintenance access, shaft withdrawal envelope, lifting plan and head-service disconnect sequence; P&ID / cause-and-effect update, valve fail positions and independent engineering review"
+    },
+    {
+      "id": 56,
+      "tag": "H-201C / SF-201C",
+      "name": "Pre-G dosing C",
+      "designStatus": "proposed",
+      "reviewNote": "Branch-specific Pre-G feeder quantities and allocation require reconciliation with the draft register."
+    },
+    {
+      "id": 57,
+      "tag": "H-201D / SF-201D",
+      "name": "Pre-G dosing D",
+      "designStatus": "proposed",
+      "reviewNote": "Branch-specific Pre-G feeder quantities and allocation require reconciliation with the draft register."
+    },
+    {
+      "id": 58,
+      "tag": "H-202C / SF-202C",
+      "name": "KMnO\u2084 dosing C",
+      "designStatus": "proposed",
+      "reviewNote": "Branch-specific oxidizer feeder quantities require reconciliation with the draft register."
+    },
+    {
+      "id": 59,
+      "tag": "H-202D / SF-202D",
+      "name": "KMnO\u2084 dosing D",
+      "designStatus": "proposed",
+      "reviewNote": "Branch-specific oxidizer feeder quantities require reconciliation with the draft register."
+    },
+    {
+      "id": 60,
+      "tag": "SI-201C / M-201C",
+      "name": "Powder induction C",
+      "designStatus": "proposed",
+      "reviewNote": "Induction and recirculation package allocation requires vendor and FEED confirmation."
+    },
+    {
+      "id": 61,
+      "tag": "SI-201D / M-201D",
+      "name": "Powder induction D",
+      "designStatus": "proposed",
+      "reviewNote": "Induction and recirculation package allocation requires vendor and FEED confirmation."
+    },
+    {
+      "id": 62,
+      "tag": "P-206A / P-206B",
+      "name": "Selectable transfer pump pair",
+      "designStatus": "listed",
+      "reviewNote": "Two transfer pumps are modeled. Duty / standby allocation is unresolved."
+    },
+    {
+      "id": 165,
+      "tag": "BND-201A",
+      "name": "Reactive GO oxidation \u00b7 independent A \u00b7 21.4 m\u00b3 retention",
+      "designStatus": "proposed",
+      "reviewNote": "21.4 m\u00b3 net geometric retention versus 18.6 m\u00b3 selected release case. Independent off-line collection; no normal treatment connection. Inventories, spill capture, hydraulics, chemistry, excavation and site extension require qualification."
+    },
+    {
+      "id": 166,
+      "tag": "BND-201B",
+      "name": "Reactive GO oxidation \u00b7 independent B \u00b7 21.4 m\u00b3 retention",
+      "designStatus": "proposed",
+      "reviewNote": "21.4 m\u00b3 net geometric retention versus 18.6 m\u00b3 selected release case. Independent off-line collection; no normal treatment connection. Inventories, spill capture, hydraulics, chemistry, excavation and site extension require qualification."
+    },
+    {
+      "id": 167,
+      "tag": "BND-201C",
+      "name": "Reactive GO oxidation \u00b7 independent C \u00b7 21.4 m\u00b3 retention",
+      "designStatus": "proposed",
+      "reviewNote": "21.4 m\u00b3 net geometric retention versus 18.6 m\u00b3 selected release case. Independent off-line collection; no normal treatment connection. Inventories, spill capture, hydraulics, chemistry, excavation and site extension require qualification."
+    },
+    {
+      "id": 168,
+      "tag": "BND-201D",
+      "name": "Reactive GO oxidation \u00b7 independent D \u00b7 21.4 m\u00b3 retention",
+      "designStatus": "proposed",
+      "reviewNote": "21.4 m\u00b3 net geometric retention versus 18.6 m\u00b3 selected release case. Independent off-line collection; no normal treatment connection. Inventories, spill capture, hydraulics, chemistry, excavation and site extension require qualification."
+    },
+    {
+      "id": 169,
+      "tag": "BND-202",
+      "name": "Sulfuric acid day storage \u00b7 39.9 m\u00b3 retention",
+      "designStatus": "proposed",
+      "reviewNote": "39.9 m\u00b3 net geometric retention versus 34.5 m\u00b3 selected release case. Independent off-line collection; no normal treatment connection. Inventories, spill capture, hydraulics, chemistry, excavation and site extension require qualification."
+    },
+    {
+      "id": 170,
+      "tag": "BND-203",
+      "name": "Phosphoric acid day storage \u00b7 18.9 m\u00b3 retention",
+      "designStatus": "proposed",
+      "reviewNote": "18.9 m\u00b3 net geometric retention versus 16.4 m\u00b3 selected release case. Independent off-line collection; no normal treatment connection. Inventories, spill capture, hydraulics, chemistry, excavation and site extension require qualification."
+    },
+    {
+      "id": 195,
+      "tag": "ES-201",
+      "name": "Proposed emergency shower / eyewash",
+      "designStatus": "proposed",
+      "reviewNote": "Independent potable, tempered emergency-water supply required; do not depend on future reclaimed-water RO. Verify unobstructed emergency access, flow, temperature, pressure, winter protection, activation and separate runoff collection before operation."
+    },
+    {
+      "id": 120201,
+      "tag": "FE-201",
+      "name": "Oxidation south approach \u00b7 fire point",
+      "designStatus": "proposed",
+      "reviewNote": "Select against actual SDS and process inventory. Ordinary-combustible/electrical protection requires a separately suitable listed unit. Do not credit a generic ABC, water, foam or CO\u2082 unit for a process-chemical reaction."
+    },
+    {
+      "id": 120202,
+      "tag": "FE-202",
+      "name": "Oxidation north approach \u00b7 fire point",
+      "designStatus": "proposed",
+      "reviewNote": "Select against actual SDS and process inventory. Ordinary-combustible/electrical protection requires a separately suitable listed unit. Do not credit a generic ABC, water, foam or CO\u2082 unit for a process-chemical reaction."
+    },
+    {
+      "id": 122004,
+      "tag": "ES-200-04",
+      "name": "Proposed emergency shower / eyewash",
+      "designStatus": "proposed",
+      "reviewNote": "Independent potable, tempered emergency-water supply required; do not depend on future reclaimed-water RO. Verify unobstructed emergency access, flow, temperature, pressure, winter protection, activation and separate runoff collection before operation."
+    },
+    {
+      "id": 122007,
+      "tag": "ES-200-07",
+      "name": "Proposed emergency shower / eyewash",
+      "designStatus": "proposed",
+      "reviewNote": "Independent potable, tempered emergency-water supply required; do not depend on future reclaimed-water RO. Verify unobstructed emergency access, flow, temperature, pressure, winter protection, activation and separate runoff collection before operation."
+    },
+    {
+      "id": 122008,
+      "tag": "ES-200-08",
+      "name": "Proposed emergency shower / eyewash",
+      "designStatus": "proposed",
+      "reviewNote": "Independent potable, tempered emergency-water supply required; do not depend on future reclaimed-water RO. Verify unobstructed emergency access, flow, temperature, pressure, winter protection, activation and separate runoff collection before operation."
+    },
+    {
+      "id": 122015,
+      "tag": "ES-200-15",
+      "name": "Proposed emergency shower / eyewash",
+      "designStatus": "proposed",
+      "reviewNote": "Independent potable, tempered emergency-water supply required; do not depend on future reclaimed-water RO. Verify unobstructed emergency access, flow, temperature, pressure, winter protection, activation and separate runoff collection before operation."
+    },
+    {
+      "id": 122016,
+      "tag": "ES-200-16",
+      "name": "Proposed emergency shower / eyewash",
+      "designStatus": "proposed",
+      "reviewNote": "Independent potable, tempered emergency-water supply required; do not depend on future reclaimed-water RO. Verify unobstructed emergency access, flow, temperature, pressure, winter protection, activation and separate runoff collection before operation."
+    },
+    {
+      "id": 122032,
+      "tag": "ES-202",
+      "name": "Proposed emergency shower / eyewash",
+      "designStatus": "proposed",
+      "reviewNote": "Independent potable, tempered emergency-water supply required; do not depend on future reclaimed-water RO. Verify unobstructed emergency access, flow, temperature, pressure, winter protection, activation and separate runoff collection before operation."
+    },
+    {
+      "id": 2778226066,
+      "tag": "P-202",
+      "name": "Phosphoric acid",
+      "designStatus": "proposed",
+      "reviewNote": "Existing modeled pump made individually selectable; tag and duty require source-register reconciliation."
+    },
+    {
+      "id": 2795003685,
+      "tag": "P-203",
+      "name": "Supply",
+      "designStatus": "proposed",
+      "reviewNote": "Existing modeled pump made individually selectable; tag and duty require source-register reconciliation."
+    }
+  ],
+  "reactors": [
+    {
+      "id": 1,
+      "tag": "R-201A",
+      "label": "GO oxidation A",
+      "x": -2.45,
+      "radius": 1.19,
+      "bottom": 2.02,
+      "top": 4.27,
+      "geometryStatus": "Top-entry agitator and central flush-bottom outlet \u2014 conceptual; ratings unverified",
+      "geometryBasis": "Top-entry agitator with an offset motor/gearbox clear of the Pre-G feeder, on a reinforced removable cover; separate recirculation suction; central flush-bottom outlet with separately isolated product and cleaning-waste branches.",
+      "reviewNote": "SF-201A has a proposed 2.25 m withdrawal carriage, independent fixed guides and two contained disconnects. Rear dust trunks and SC-164 avoid the lifting reservation. Full cover lifting remains HOLD pending head-service spool removal, split-impeller access and qualified weights, lifting points, rigging, hoist, supporting structure and landing space. See R-201 service coordination in Engineering inspection. Mixing duty, viscosity, solids, shaft bending/critical speed, impeller clearance, motor power and speed; Seal, valve, gasket and wetted-material compatibility with the qualified process and cleaning chemistry; Pressure-boundary reinforcement, drive torque and weight, nozzle loads and applicable BC pressure-equipment registration; Valve drainability, dead legs, pump NPSH, line sizing, cleaning of recirculation and transfer piping; Elevated maintenance access, shaft withdrawal envelope, lifting plan and head-service disconnect sequence; P&ID / cause-and-effect update, valve fail positions and independent engineering review",
+      "labelY": 6.8,
+      "areaId": "A-200",
+      "designStatus": "listed",
+      "reviewStatus": "open",
+      "provisional": false
+    },
+    {
+      "id": 2,
+      "tag": "R-201B",
+      "label": "GO oxidation B",
+      "x": 2.45,
+      "radius": 1.19,
+      "bottom": 2.02,
+      "top": 4.27,
+      "geometryStatus": "Top-entry agitator and central flush-bottom outlet \u2014 conceptual; ratings unverified",
+      "geometryBasis": "Top-entry agitator with an offset motor/gearbox clear of the Pre-G feeder, on a reinforced removable cover; separate recirculation suction; central flush-bottom outlet with separately isolated product and cleaning-waste branches.",
+      "reviewNote": "SF-201B has a proposed 2.25 m withdrawal carriage, independent fixed guides and two contained disconnects. Rear dust trunks and SC-164 avoid the lifting reservation. Full cover lifting remains HOLD pending head-service spool removal, split-impeller access and qualified weights, lifting points, rigging, hoist, supporting structure and landing space. See R-201 service coordination in Engineering inspection. Mixing duty, viscosity, solids, shaft bending/critical speed, impeller clearance, motor power and speed; Seal, valve, gasket and wetted-material compatibility with the qualified process and cleaning chemistry; Pressure-boundary reinforcement, drive torque and weight, nozzle loads and applicable BC pressure-equipment registration; Valve drainability, dead legs, pump NPSH, line sizing, cleaning of recirculation and transfer piping; Elevated maintenance access, shaft withdrawal envelope, lifting plan and head-service disconnect sequence; P&ID / cause-and-effect update, valve fail positions and independent engineering review",
+      "labelY": 6.8,
+      "areaId": "A-200",
+      "designStatus": "listed",
+      "reviewStatus": "open",
+      "provisional": false
+    },
+    {
+      "id": 54,
+      "tag": "R-201C",
+      "label": "GO oxidation C",
+      "x": -2.45,
+      "radius": 1.19,
+      "bottom": 2.02,
+      "top": 4.27,
+      "z": -16,
+      "geometryStatus": "Top-entry agitator and central flush-bottom outlet \u2014 conceptual; ratings unverified",
+      "geometryBasis": "Top-entry agitator with an offset motor/gearbox clear of the Pre-G feeder, on a reinforced removable cover; separate recirculation suction; central flush-bottom outlet with separately isolated product and cleaning-waste branches.",
+      "reviewNote": "SF-201C has a proposed 2.25 m withdrawal carriage, independent fixed guides and two contained disconnects. Rear dust trunks and SC-164 avoid the lifting reservation. Full cover lifting remains HOLD pending head-service spool removal, split-impeller access and qualified weights, lifting points, rigging, hoist, supporting structure and landing space. See R-201 service coordination in Engineering inspection. Mixing duty, viscosity, solids, shaft bending/critical speed, impeller clearance, motor power and speed; Seal, valve, gasket and wetted-material compatibility with the qualified process and cleaning chemistry; Pressure-boundary reinforcement, drive torque and weight, nozzle loads and applicable BC pressure-equipment registration; Valve drainability, dead legs, pump NPSH, line sizing, cleaning of recirculation and transfer piping; Elevated maintenance access, shaft withdrawal envelope, lifting plan and head-service disconnect sequence; P&ID / cause-and-effect update, valve fail positions and independent engineering review",
+      "labelY": 6.8,
+      "areaId": "A-200",
+      "designStatus": "listed",
+      "reviewStatus": "open",
+      "provisional": false
+    },
+    {
+      "id": 55,
+      "tag": "R-201D",
+      "label": "GO oxidation D",
+      "x": 2.45,
+      "radius": 1.19,
+      "bottom": 2.02,
+      "top": 4.27,
+      "z": -16,
+      "geometryStatus": "Top-entry agitator and central flush-bottom outlet \u2014 conceptual; ratings unverified",
+      "geometryBasis": "Top-entry agitator with an offset motor/gearbox clear of the Pre-G feeder, on a reinforced removable cover; separate recirculation suction; central flush-bottom outlet with separately isolated product and cleaning-waste branches.",
+      "reviewNote": "SF-201D has a proposed 2.25 m withdrawal carriage, independent fixed guides and two contained disconnects. Rear dust trunks and SC-164 avoid the lifting reservation. Full cover lifting remains HOLD pending head-service spool removal, split-impeller access and qualified weights, lifting points, rigging, hoist, supporting structure and landing space. See R-201 service coordination in Engineering inspection. Mixing duty, viscosity, solids, shaft bending/critical speed, impeller clearance, motor power and speed; Seal, valve, gasket and wetted-material compatibility with the qualified process and cleaning chemistry; Pressure-boundary reinforcement, drive torque and weight, nozzle loads and applicable BC pressure-equipment registration; Valve drainability, dead legs, pump NPSH, line sizing, cleaning of recirculation and transfer piping; Elevated maintenance access, shaft withdrawal envelope, lifting plan and head-service disconnect sequence; P&ID / cause-and-effect update, valve fail positions and independent engineering review",
+      "labelY": 6.8,
+      "areaId": "A-200",
+      "designStatus": "listed",
+      "reviewStatus": "open",
+      "provisional": false
+    }
+  ],
+  "representedParts": 26644,
+  "fullPlantParts": 152959,
+  "qualification": "Model checks only. No process capacity, pressure rating or operating release established.",
+  "findings": [
+    {
+      "id": "A200-01",
+      "image": "overview",
+      "topic": "Bank allocation",
+      "status": "Register reconciliation required",
+      "reason": "Each reactor needs an explicitly assigned feed, circulation and transfer arrangement.",
+      "observation": "Four reactors follow the V5.1 bank. Four dedicated recirculation / induction and solids-metering packages are a proposed configuration: the register lists P-205A/B and M-201 without assigning them to four reactors. P-206A/B are selectable transfer pumps; duty/standby and simultaneous operation are unconfirmed. No rated capacity or operating setpoint is implied.",
+      "action": "Reconcile the four-package model with the equipment register and P&ID; establish shared versus dedicated duties and simultaneous operation.",
+      "suggestedDiscipline": "Process engineer"
+    },
+    {
+      "id": "A200-02",
+      "image": "feed",
+      "topic": "Feed and dosing",
+      "status": "Operating basis open",
+      "reason": "Dosing requires a known source, destination and permissive basis.",
+      "observation": "The model includes separate solids-metering and induction assemblies. Their existence does not establish allowable addition rate or reaction control.",
+      "action": "Confirm feed properties, dosing envelope, calorimetry, mixing/recirculation requirements and the cause-and-effect matrix.",
+      "suggestedDiscipline": "Process / controls"
+    },
+    {
+      "id": "A200-03",
+      "image": "recirc",
+      "topic": "Recirculation and sampling",
+      "status": "Limited model checks passed",
+      "reason": "Sampling must not inadvertently open product, waste or recovery paths.",
+      "observation": "80 sampling scenarios passed the existing model test. Main product, cleaning-waste and recovery valves remained closed in those cases. This is simulation evidence, not commissioned protection.",
+      "action": "Verify pump duty, suction conditions, line sizing, actual sample receiver arrangements, valve fail positions and independent protection requirements.",
+      "suggestedDiscipline": "Process / mechanical / controls"
+    },
+    {
+      "id": "A200-04",
+      "image": "reactor",
+      "topic": "Jacket and thermal interfaces",
+      "status": "Thermal qualification open",
+      "reason": "The connected utility must remove the required heat across the jacket and any intermediate exchanger.",
+      "observation": "The model represents jacket connections. The A-5000 review retains unresolved secondary temperatures and exchanger performance; this review performs no new heat-duty calculation.",
+      "action": "Complete the batch heat balance and reaction calorimetry; establish secondary temperatures, circulation, exchanger duty and cooling-loss response.",
+      "suggestedDiscipline": "Process / thermal"
+    },
+    {
+      "id": "A200-05",
+      "image": "drive",
+      "topic": "Top drive and maintenance",
+      "status": "Disassembly and lifting hold",
+      "reason": "Maintenance must provide a physically achievable removal sequence with rated lifting equipment.",
+      "observation": "The mechanical basis records that the impeller envelope exceeds the cover neck bore. Split-impeller disassembly and retrieval must be qualified. Tests confirmed 16 modeled positive maintenance closures and restoration of all four feeder branches to their operating positions.",
+      "action": "Obtain the vendor disassembly procedure, task access, lifted masses, rigging, support capacity and service-disconnection sequence.",
+      "suggestedDiscipline": "Mechanical / structural"
+    },
+    {
+      "id": "A200-06",
+      "image": "drain",
+      "topic": "Drainage and containment",
+      "status": "Receiving and retention basis open",
+      "reason": "Residual process liquid needs an accessible, defined receiving path and an assessed capture arrangement.",
+      "observation": "The central seat meets the inner head low point. A lowering poppet opens into a side-discharge chamber; the actuator remains below the chamber, outside the liquid path. Downstream drain routing falls to the existing closed-drain interface. Residual heel, valve internals and cleanability require vendor confirmation. This review does not recalculate containment capacity or prove chemical compatibility.",
+      "action": "Verify residual heel, dead legs, destination, isolation, receiving capacity and the applicable containment inventory. Review surrounding containment in the full plant.",
+      "suggestedDiscipline": "Process / civil"
+    },
+    {
+      "id": "A200-07",
+      "image": "reactor",
+      "topic": "Vent, purge and relief interfaces",
+      "status": "Pressure and destination review open",
+      "reason": "Each gas and pressure interface needs an identified function, destination and design basis.",
+      "observation": "Attached service geometry can be inspected in the assembly image. This assessment has not verified relief sizing, vent capacity, purge demand or compatibility of combined sources.",
+      "action": "Reconcile nozzle and line tags to the P&ID; confirm normal vent and relief destinations, backpressure, purge basis and source compatibility.",
+      "suggestedDiscipline": "Process safety / mechanical"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "assetId": "C-701",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "C-701",
+      "source": "FEED-PFD-0700",
+      "revision": null,
+      "page": 7,
+      "status": "draft-pfd",
+      "confidence": "review required",
+      "gapId": "A700-005"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A700-003"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A700-003"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A700-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A700-003"
+    },
+    {
+      "valueId": "PV-A-700-0089",
+      "property": "design.materialOfConstruction",
+      "value": "316L/310S at the cool end; Alloy 601/602 CA at the hot transition; hardfaced wear surfaces",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 50 (M-046)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "CF-materialOfConstruc-C-701",
+      "note": "scope: C-701 Screw Feeder and inlet gas seal; alt: Inert-purged rotary airlock or double-valve feed arrangement; status FIRM | D-A700-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

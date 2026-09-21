@@ -1,0 +1,7 @@
+{
+  "assetId": "VP-164-KO-164",
+  "bindingId": "GEOMETRY-VP-164-KO-164",
+  "modelEquipmentId": 53,
+  "bindingScope": "modeled-equipment-group",
+  "bindingRule": "All geometry owned by model equipment 53 resolves to VP-164-KO-164; canonical identity remains stable across model rebuilds."
+}

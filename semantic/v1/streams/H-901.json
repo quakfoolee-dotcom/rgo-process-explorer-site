@@ -1,0 +1,100 @@
+{
+  "assetId": "H-901",
+  "streams": [
+    {
+      "streamId": "S-900-PRODUCT-IN",
+      "name": "A-800 product to adjacent A-900 surge",
+      "source": "IF-A800-PRODUCT",
+      "via": [
+        "TR-901"
+      ],
+      "destination": "H-901",
+      "material": "Doped rGO",
+      "phase": "Solid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "connectionStatus": "proposed-unqualified",
+      "operatingMode": "proposed functional route; no operating quantity or release asserted",
+      "status": "Model-derived functional topology; design and operation require approved sources",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A900-V163",
+          "title": "A-900 compact contained pelletization functional foundation",
+          "revision": "V163",
+          "page": null,
+          "status": "model-derived planning basis; not approved for construction or operation",
+          "availability": "available model source reviewed",
+          "files": {
+            "a900.js": "2176d15015509596b9c178ae062dbd822d04ed08696079b39044f72a7ee6c836",
+            "a900-basis.js": "8cb811eb278bc09bebe080a7109a02d71f64f7ff6200b23ddd40ab8d9d6dee25"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0900",
+          "title": "A-900 approved source package required",
+          "revision": null,
+          "page": null,
+          "status": "unavailable; all equipment and package decisions remain proposed",
+          "availability": "not present in available project sources",
+          "gapId": "A900-001"
+        }
+      ],
+      "routeLabels": [
+        "A-900 short contained product transfer",
+        "TR-901 to H-901 receipt"
+      ]
+    },
+    {
+      "streamId": "S-900-METER",
+      "name": "Surge hopper to metering feeder",
+      "source": "H-901",
+      "via": [],
+      "destination": "F-901",
+      "material": "Doped rGO",
+      "phase": "Solid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "connectionStatus": "proposed-unqualified",
+      "operatingMode": "proposed functional route; no operating quantity or release asserted",
+      "status": "Model-derived functional topology; design and operation require approved sources",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A900-V163",
+          "title": "A-900 compact contained pelletization functional foundation",
+          "revision": "V163",
+          "page": null,
+          "status": "model-derived planning basis; not approved for construction or operation",
+          "availability": "available model source reviewed",
+          "files": {
+            "a900.js": "2176d15015509596b9c178ae062dbd822d04ed08696079b39044f72a7ee6c836",
+            "a900-basis.js": "8cb811eb278bc09bebe080a7109a02d71f64f7ff6200b23ddd40ab8d9d6dee25"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0900",
+          "title": "A-900 approved source package required",
+          "revision": null,
+          "page": null,
+          "status": "unavailable; all equipment and package decisions remain proposed",
+          "availability": "not present in available project sources",
+          "gapId": "A900-001"
+        }
+      ],
+      "routeLabels": [
+        "H-901 to F-901 feed"
+      ]
+    }
+  ]
+}

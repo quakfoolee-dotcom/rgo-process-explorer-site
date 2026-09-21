@@ -1,0 +1,7 @@
+{
+  "assetId": "PY-801",
+  "bindingId": "GEOMETRY-PY-801",
+  "modelEquipmentId": 109,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

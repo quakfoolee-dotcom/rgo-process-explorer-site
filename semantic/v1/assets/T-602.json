@@ -1,0 +1,74 @@
+{
+  "assetId": "T-602",
+  "name": "Contained dried-GO receiver",
+  "assetClassId": "PowderReceiver",
+  "status": "listed",
+  "identityStatus": "draft-pfd-tag",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-600",
+    "system": "A-600 drying process context",
+    "parentAsset": null
+  },
+  "processFunction": "Contained dried-GO receiver",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null
+  },
+  "operatingEnvelope": null,
+  "processBasis": [
+    {
+      "label": "Draft approximate product discharge",
+      "value": [
+        60,
+        100
+      ],
+      "unit": "°C",
+      "basisType": "draft-approximate-range",
+      "status": "draft typical / TBD; not a selected operating or safety setpoint",
+      "source": {
+        "documentId": "FEED-PFD-0600",
+        "sheetId": "FEED-PFD-0600",
+        "title": "Commercial Scale TLGO Drying",
+        "revision": null,
+        "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+        "page": 6,
+        "file": "pfd-temperature-sheets.pdf",
+        "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+        "status": "Draft - Not for Use; not approved",
+        "availability": "available and reviewed",
+        "href": "./pfd-temperature-sheets.pdf#page=6"
+      }
+    }
+  ],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Draft typical inlet 140-145 degC, outlet 80-90 degC and approximate product discharge 60-100 degC coexist with temperatures TBD. No operating or safety setpoint is selected.",
+    "Draft routes dryer output through F-601 to T-602; the model also has a direct DR-601 powder chute to T-602. Draft exhaust arrow calls for off-gas treatment, while its scrubber note mentions atmospheric discharge. Model retains an independent discharge boundary; neither a common treatment header nor permitted release is established.",
+    "Atomizer technology, evaporation duty, heating medium, gas flow/pressure budget, moisture target, capacities and materials remain unqualified. The model is aqueous; the draft scrubber solvent-vapor wording requires reconciliation and does not add a solvent-recovery system.",
+    "Air is a draft/model concept. Gas selection, GO thermal stability, dust explosibility, grounding, dryer/filter protection, pressure limits and interlocks remain open. Conditional oxygen monitoring for inert drying is not an installed protective system.",
+    "Sheet is Draft - Not for Use with revision XXX. Wash compatibility, powder isolation, filter-media servicing, scrubber-liquor chemistry, drain receivers and gas-admission procedures require approval. No common process/thermal drain or cleaning sequence is authorized."
+  ],
+  "safeguards": {
+    "combustibleDust": "Combustible dust hazard assessment (HOLD-6), solvent vapour / LEL monitoring (HOLD-7) and explosion protection strategy (HOLD-8) required; MAT-002 M-040 grounded conductive PTFE media"
+  },
+  "dataLayer": {
+    "area": "A-600",
+    "source": "data/semantic/A-600",
+    "approvedRows": 1,
+    "heldRows": 0,
+    "pendingRows": 18,
+    "identityHold": null,
+    "applied": "2026-09-21",
+    "baseline": {
+      "safeguards": null
+    },
+    "baselineAbsent": [
+      "safeguards"
+    ]
+  }
+}

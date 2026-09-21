@@ -1,0 +1,49 @@
+{
+  "assetId": "H-101-SF-101",
+  "documents": [
+    {
+      "documentId": "MODEL-EARLY-PROCESS",
+      "title": "A-100/A-140/A-160 process geometry, routes and engineering register",
+      "revision": "V160",
+      "page": null,
+      "status": "model-derived planning basis; no operating or design approval",
+      "availability": "available model source reviewed",
+      "files": {
+        "preg.js": "855183afb11e18e87436773cbbd30169b05d0f33219e3afa224d36a97284a21a",
+        "model.js": "24d1faa36edef797ed98447fb3a8d8b81d7a46ad3e1b0c33264d2c73b534b5ca",
+        "engineering-register.js": "d2cea97c6fd28b0d1c287ba0ba44ced577c82e05ee75bd834c322fd00bae1639",
+        "a160-alternatives.js": "e01b0d4cd4989dce5fe4b40a42631b2da6b70a32309033de82d5ffcd815ecec9",
+        "pfd-temperature-sheets.pdf": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f"
+      },
+      "hashNormalization": "UTF-8 text with LF line endings; PDF as binary"
+    },
+    {
+      "documentId": "FEED-PE-PFD-001",
+      "sheetId": "FEED-PFD-0100",
+      "title": "Pre-Mix Graphite with Acid Process Flow Diagram",
+      "revision": "V5.1",
+      "page": 4,
+      "file": "pfd-temperature-sheets.pdf",
+      "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+      "status": "Draft – Issued for Review; not approved",
+      "availability": "available and reviewed",
+      "href": "./pfd-temperature-sheets.pdf#page=4"
+    },
+    {
+      "documentId": "DATASHEET-A-100",
+      "title": "A-100 approved equipment datasheets",
+      "revision": null,
+      "page": null,
+      "status": "required; not indexed",
+      "availability": "open source gaps"
+    },
+    {
+      "documentId": "PANDID-A-100",
+      "title": "A-100 approved P&ID, instrument index and control narrative",
+      "revision": null,
+      "page": null,
+      "status": "required; not indexed",
+      "availability": "open source gaps"
+    }
+  ]
+}

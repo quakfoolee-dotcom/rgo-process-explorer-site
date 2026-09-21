@@ -1,0 +1,132 @@
+{
+  "assetId": "R-201A",
+  "documents": [
+    {
+      "documentId": "FEED-PE-PFD-001",
+      "sheetId": "FEED-PFD-0200",
+      "title": "TLGO Synthesis Process Flow Diagram",
+      "revision": "V5.1.1",
+      "page": 7,
+      "status": "Draft – Issued for Review",
+      "availability": "indexed source",
+      "controls": [
+        "area",
+        "equipment bank",
+        "process function",
+        "operating sequence",
+        "draft operating basis"
+      ]
+    },
+    {
+      "documentId": "SEMANTIC-HANDOFF-V1.0",
+      "title": "3D Process Explorer to Semantic 3D Plant Core Handoff",
+      "revision": "V1.0",
+      "page": 7,
+      "status": "planning reference; area designation superseded by FEED-PFD-0200",
+      "availability": "indexed source"
+    },
+    {
+      "documentId": "PROCESS-NARRATIVE-R201",
+      "title": "Approved R-201 process/control narrative",
+      "revision": null,
+      "page": null,
+      "status": "required; current model narrative is not an approved document",
+      "availability": "gap SRC-003"
+    },
+    {
+      "documentId": "DATASHEET-R201",
+      "title": "R-201 equipment datasheet",
+      "revision": null,
+      "page": null,
+      "status": "required; not indexed",
+      "availability": "gaps SRC-001 and SRC-002"
+    },
+    {
+      "documentId": "PANDID-R201",
+      "title": "R-201 P&ID and instrument index",
+      "revision": null,
+      "page": null,
+      "status": "required; not indexed",
+      "availability": "gaps SRC-003, SRC-005 and SRC-006"
+    },
+    {
+      "documentId": "HAZOP-R201",
+      "title": "R-201 HAZOP / LOPA / relief basis",
+      "revision": null,
+      "page": null,
+      "status": "required; not indexed",
+      "availability": "gap SRC-004"
+    },
+    {
+      "documentId": "SOP-R201",
+      "title": "R-201 operating procedure",
+      "revision": null,
+      "page": null,
+      "status": "required; not indexed",
+      "availability": "operating sequence currently PFD-only"
+    },
+    {
+      "documentId": "FEED-PFD-0200",
+      "sheetId": "FEED-PFD-0200",
+      "title": "TLGO Synthesis draft sheet",
+      "revision": null,
+      "revisionNote": "Sheet revision field is placeholder XXX; X01 document-creation row dated 15-Feb-2026. Do not equate it with the inherited V5.1/V5.1.1 bundle labels.",
+      "page": 3,
+      "file": "pfd-temperature-sheets.pdf",
+      "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+      "status": "Draft - Not for Use; not approved",
+      "availability": "available and reviewed",
+      "href": "./pfd-temperature-sheets.pdf#page=3"
+    },
+    {
+      "documentId": "FEED-PE-MAT-002",
+      "title": "MOC Selection Matrix",
+      "revision": "V1.1",
+      "page": null,
+      "status": "controlled",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.1.xlsx"
+    },
+    {
+      "documentId": "FEED-PE-DAT-003",
+      "title": "R-201 Oxidation Reactor Datasheet",
+      "revision": "V1.1",
+      "page": null,
+      "status": "controlled (unsigned)",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-003_R-201-Oxidation-Reactor-Datasheet_V1.1.xlsx"
+    },
+    {
+      "documentId": "FEED-PE-PFD-001",
+      "title": "Process Flow Diagram",
+      "revision": "V5.1.1",
+      "page": null,
+      "status": "controlled (Draft - IFR)",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-PFD-001_Process-Flow-Diagram_V5.1.1.pdf"
+    },
+    {
+      "documentId": "FEED-PE-DBM-001",
+      "title": "Design Basis Memorandum",
+      "revision": "V2.0",
+      "page": null,
+      "status": "controlled (approved)",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "3 Design Basis Memorandum (DBM)\\FEED-PE-DBM-001_Design-Basis-Memorandum_V2.0.docx"
+    },
+    {
+      "documentId": "FEED-PE-NTE-003",
+      "title": "R-201 Oxidation Temperature Control Requirements",
+      "revision": "V1.0",
+      "page": null,
+      "status": "controlled",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "B. Technical Reports\\FEED-PE-NTE-003_R-201-Oxidation-Temperature-Control-Requirements_V1.0.docx"
+    }
+  ]
+}

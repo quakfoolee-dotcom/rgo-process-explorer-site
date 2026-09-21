@@ -1,0 +1,28 @@
+{
+  "assetId": "R-201A-JACKET",
+  "name": "Reactor A jacket interface",
+  "assetClassId": "Subassembly",
+  "status": "proposed",
+  "identityStatus": "provisional-model-tag",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-200",
+    "system": "A-200 connected process context",
+    "parentAsset": "R-201A"
+  },
+  "processFunction": "Reactor A jacket interface",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null
+  },
+  "operatingEnvelope": null,
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Model identity and geometry context only; capacities, ratings and exact connectivity require approved source reconciliation.",
+    "Approved source gaps tracked under A200-001."
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "assetId": "IF-A600-HEAT-RETURN",
+  "bindingId": "GEOMETRY-IF-A600-HEAT-RETURN",
+  "modelEquipmentId": null,
+  "bindingScope": "unmodeled-interface",
+  "bindingRule": "No specific model assembly or qualified receiving destination is assigned."
+}

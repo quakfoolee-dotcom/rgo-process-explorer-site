@@ -1,0 +1,79 @@
+{
+  "assetId": "T-161",
+  "name": "Pre-G fixing tank",
+  "assetClassId": "Tank",
+  "status": "listed",
+  "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-160",
+    "system": "Pre-G Washing and Drying",
+    "parentAsset": null
+  },
+  "processFunction": "Pre-G fixing tank",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": "Dual-laminate FRP (PVDF/ECTFE liner + VE-novolac) to ASME RTP-1",
+    "jacketProvision": "A jacket on a 110 m³ HDPE tank is impractical and unnecessary at +17 K; the hazard is local boiling at the addition point (F-08)"
+  },
+  "operatingEnvelope": {
+    "operatingTemperatureC": 40,
+    "feedTemperatureC": "10–20 °C (R-141 cooled, PFD) vs 80 °C hot transfer per REP-040 (+2.4 K in T-161); water in at ≤ 28 °C keeps T-161 < 50 °C",
+    "settleDecantBasis": "Pilot 3 cycles × 3.5 h do not transfer — Stokes settling scales with tank depth (≈ 5 m commercial); decant is dilution washing (F-12)"
+  },
+  "processBasis": [
+    {
+      "property": "area and equipment identity",
+      "value": {
+        "area": "A-160",
+        "tag": "T-161"
+      },
+      "source": "FEED-PE-PFD-001 / FEED-PFD-0160",
+      "status": "draft PFD basis"
+    },
+    {
+      "property": "modeled baseline",
+      "value": "baseline FEED arrangement only",
+      "source": "MODEL-EARLY-PROCESS",
+      "status": "model-derived"
+    }
+  ],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Approved tank, filter, dryer, transfer and vacuum-package datasheets are unavailable.",
+    "Materials, filter media, seals, trays and product-contact finishes are unapproved.",
+    "P&ID tags, sequences, alarms, trips, relief and vacuum safeguards are unresolved.",
+    "Wash endpoint, filtration cycle, cake moisture and dryer endpoint are unresolved.",
+    "Only the baseline FEED arrangement is promoted; dryer, enclosed and integrated layouts remain mutually exclusive design studies.",
+    "RO water, wastewater, vent, condensate, thermal and dry-product battery limits require approved sources."
+  ],
+  "identity": {
+    "designConcept": "Option B now, designed so that its filter and rinse become Option C's when REP-039 M4 confirms GIC filterability"
+  },
+  "dataLayer": {
+    "area": "A-160",
+    "source": "data/semantic/A-160",
+    "approvedRows": 6,
+    "heldRows": 0,
+    "pendingRows": 31,
+    "identityHold": null,
+    "applied": "2026-09-21",
+    "baseline": {
+      "design": {
+        "capacityM3": null,
+        "designPressure": null,
+        "designTemperature": null,
+        "materialOfConstruction": null
+      },
+      "operatingEnvelope": null,
+      "identity": null
+    },
+    "baselineAbsent": [
+      "identity"
+    ]
+  }
+}

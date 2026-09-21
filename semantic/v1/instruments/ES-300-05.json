@@ -1,0 +1,32 @@
+{
+  "assetId": "ES-300-05",
+  "instruments": [
+    {
+      "functionId": "ES-300-05-FLOW",
+      "variable": "flow",
+      "purpose": "Verify flow performance",
+      "tag": null,
+      "range": null,
+      "status": "verification function only; instrument unresolved",
+      "gapId": "A6000-002"
+    },
+    {
+      "functionId": "ES-300-05-TEMP",
+      "variable": "temperature",
+      "purpose": "Verify temperature performance",
+      "tag": null,
+      "range": null,
+      "status": "verification function only; instrument unresolved",
+      "gapId": "A6000-003"
+    },
+    {
+      "functionId": "ES-300-05-PRESS",
+      "variable": "pressure",
+      "purpose": "Verify pressure performance",
+      "tag": null,
+      "range": null,
+      "status": "verification function only; instrument unresolved",
+      "gapId": "A6000-002"
+    }
+  ]
+}

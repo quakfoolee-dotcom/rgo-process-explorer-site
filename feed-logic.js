@@ -1,0 +1,24 @@
+import {REACTOR_BRANCHES} from './reactor-bank.js';
+import {buildConnectionGraph} from './inspection.js';
+export const FEED_PHASES={acid:'Sulfuric acid charging',phosphoric:'Phosphoric acid charging',preg:'Pre-G charging',oxidant:'Controlled KMnO₄ addition',maintenance:'Isolated maintenance review',sample:'Contained sample fill',sampleIsolated:'Sample isolated',hold:'Oxidation hold',collection:'Oxidized slurry transfer',quench:'Quench reagent routing',wash:'Acid washing',cip:'Reactor cleaning connections'};
+export const FEED_SCENARIOS={ready:'Illustrated conditions satisfied',source:'Feed source unavailable',capacity:'Destination capacity unavailable',cooling:'Cooling unavailable',mixing:'Agitator unavailable',recirculation:'Recirculation unavailable',suction:'Induction suction not proven',vent:'Vent path unavailable',pressure:'Pressure condition not met',quench:'Quench endpoint not confirmed'};
+export function feedConfiguration(phase='acid',reactor='A',scenario='ready',pump='A'){
+ if(!FEED_PHASES[phase]||!REACTOR_BRANCHES.includes(reactor)||!['A','B'].includes(pump)||!FEED_SCENARIOS[scenario])throw Error('Invalid feed inspection configuration');
+ const valves={},reasons=[];for(const suffix of REACTOR_BRANCHES)for(const chemical of ['SA','PA','PG','OX','COL'])valves[`XV-${chemical}-${suffix}`]='closed';
+ for(const tag of ['XV-Q301','XV-W302','XV-QW','XV-QOUT'])valves[tag]='closed';
+ for(const p of ['A','B'])for(const side of ['IN','OUT'])valves[`XV-P206${p}-${side}`]='closed';for(const s of REACTOR_BRANCHES){for(const t of ['SMP','SMR','SMV'])valves['XV-'+t+'201-'+s]='closed';valves['XV-BOT201-'+s]='closed';valves['XV-CIP201-'+s]='closed';valves['XV-DR201-'+s]='closed';valves['XV-RC-'+s]='closed';valves['TCV-J-'+s]='closed';valves['XV-JR-'+s]='closed';}
+ const requires={maintenance:[],sample:['pressure','capacity','source'],sampleIsolated:[],cip:['source','capacity','pressure'],phosphoric:['cooling','vent','pressure','source','capacity'],acid:['cooling','vent','pressure','source','capacity'],preg:['cooling','mixing','vent','pressure','source','capacity'],oxidant:['cooling','mixing','recirculation','suction','vent','pressure','source','capacity'],hold:[],collection:['cooling','mixing','vent','pressure','capacity'],quench:['cooling','mixing','vent','pressure','source','capacity'],wash:['mixing','vent','pressure','quench','source','capacity']};
+ if(requires[phase].includes(scenario))reasons.push(FEED_SCENARIOS[scenario]);
+ if(!reasons.length){if(phase==='sample'){valves['XV-SMP201-'+reactor]='open';valves['XV-SMR201-'+reactor]='open';}if(['collection','cip'].includes(phase))valves['XV-BOT201-'+reactor]='open';if(phase==='cip'){valves['XV-CIP201-'+reactor]='open';valves['XV-DR201-'+reactor]='open';}if(phase==='acid'){valves[`XV-SA-${reactor}`]='open';}if(phase==='phosphoric')valves[`XV-PA-${reactor}`]='open';if(phase==='preg')valves[`XV-PG-${reactor}`]='open';if(phase==='oxidant')valves[`XV-OX-${reactor}`]='open';if(phase==='collection'){valves[`XV-COL-${reactor}`]='open';valves[`XV-P206${pump}-IN`]='open';valves[`XV-P206${pump}-OUT`]='open';}if(['oxidant','hold'].includes(phase))valves['XV-RC-'+reactor]='open';if(!['quench','wash','cip','maintenance'].includes(phase)){valves['TCV-J-'+reactor]='open';valves['XV-JR-'+reactor]='open';}if(phase==='quench'){valves['XV-Q301']='open';valves['XV-QW']='open';}if(phase==='wash'){valves['XV-W302']='open';}}
+ return {phase,reactor,scenario,pump,valves,reasons,enabled:!reasons.length,illustrative:true};
+}
+export function traceFeed(model,feedKey,configuration,graph=buildConnectionGraph(model.edges)){
+ configuration={...configuration,valves:{...Object.fromEntries((model.preg?.valveTags||[]).map(t=>[t,'closed'])),...configuration.valves}};const feed=model.upstream.feeds.find(f=>f.key===feedKey);if(!feed)throw Error('Unknown feed '+feedKey);
+ const source=feed.sourceEdges[configuration.reactor]??feed.sourceEdges.all;if(source===undefined)throw Error('Missing feed source');
+ const visited=new Set(),blocked=new Set(),queue=[source];
+ for(let q=0;q<queue.length;q++){const i=queue[q];if(visited.has(i))continue;const e=model.edges[i];if(e.barrierTag&&configuration.valves[e.barrierTag]==='closed'){blocked.add(e.barrierTag);continue;}visited.add(i);for(const j of graph[i])if(!visited.has(j))queue.push(j);}
+ const ids=new Set([...visited].map(i=>model.edges[i].part));for(const r of model.routes)if(r.edgeIndices.length&&r.edgeIndices.every(i=>visited.has(i)))for(const id of r.partIds)ids.add(id);
+ for(const v of model.valves)if(v.tag&&[...visited].some(i=>model.edges[i].barrierTag===v.tag))for(const id of v.partIds||[])ids.add(id);
+ const destinations=feed.destinations.filter(d=>[...visited].some(i=>model.edges[i].name===d.neck&&model.edges[i].reactor===d.reactor)).map(d=>d.label);
+ return {partIds:ids,edges:[...visited].map(i=>model.edges[i]),edgeIndices:visited,blocked:[...blocked],destinations,feed,configuration};
+}

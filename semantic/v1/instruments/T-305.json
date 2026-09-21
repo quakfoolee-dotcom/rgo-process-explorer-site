@@ -1,0 +1,14 @@
+{
+  "assetId": "T-305",
+  "instruments": [
+    {
+      "functionId": "T-305-PH-FUNCTION",
+      "variable": "pH",
+      "purpose": "Acid-wash pH monitoring; qualified control loop unavailable",
+      "tag": null,
+      "range": null,
+      "status": "draft functional intent; not an approved instrument or setpoint",
+      "gapId": "A300-002"
+    }
+  ]
+}

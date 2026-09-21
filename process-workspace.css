@@ -1,0 +1,10 @@
+#process-overview>.back-link{margin:0 0 12px;padding-left:0}#process-overview>.small-note{margin:0 0 14px}
+.task-list .process-destination{display:block;width:100%;text-align:left;overflow-wrap:anywhere}.process-destination strong{color:#e4edf5}.process-destination:hover strong{color:#ffd08a}
+.process-operation-menu{margin:16px 0}.process-area-reviews{margin-top:20px}.process-operation-detail{margin-top:12px}
+.process-operation-detail .back-link{margin-bottom:12px}
+.show-area-review>:not([data-area-review]){display:none!important}.process-operation-detail>div:not(.show-area-review)>[data-area-review]{display:none!important}
+.show-connections>:not(.process-connection-detail){display:none!important}.process-operation-detail>div:not(.show-connections)>.process-connection-detail{display:none!important}
+.process-io-summary{display:grid;grid-template-columns:2.5rem minmax(0,1fr);gap:6px 10px;font-size:.875rem;line-height:1.5;margin:14px 0}.process-io-summary dt{color:#8fb8c9;font-weight:700}.process-io-summary dd{margin:0;overflow-wrap:anywhere;color:#d5e6ed}
+#panel-containment>#containment-tools{border:0;padding:0;margin:0}#panel-containment>#containment-tools>summary{display:none}
+#safety-containment-view .back-link{margin-bottom:12px}
+#process-stage .stage-navigation{margin-top:20px}#process-stage #stage-note{border-left:2px solid #bb975e;padding-left:10px}

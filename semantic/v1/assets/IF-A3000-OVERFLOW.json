@@ -1,0 +1,32 @@
+{
+  "assetId": "IF-A3000-OVERFLOW",
+  "name": "Local makeup catch tray; disposal unresolved",
+  "assetClassId": "ExternalInterface",
+  "status": "proposed",
+  "identityStatus": "model-derived; tag qualification open",
+  "recordScope": "external-interface",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-3000",
+    "system": "A-3000 compatible wet-acid vent treatment context",
+    "parentAsset": null
+  },
+  "processFunction": "Local makeup catch tray; disposal unresolved",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null
+  },
+  "operatingEnvelope": null,
+  "processBasis": [],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "The original Draft - Not for Use sheet joins wet/dry and furnace gases. P01 is a proposed NOT FOR CONSTRUCTION redraw, not approval. HD-3100 accepts candidate compatible wet vents only. Thermal/reactive gas, carbon/oxidizer dust, peroxide breathing, dryer vacuum exhaust and emergency relief remain separate. A-900 furnace wording conflicts with cartridge filling; no source is inferred.",
+    "Original EX3003 operating bypass is deleted in the model/P01. Only a positively blinded stub remains, with no fan connection or operating stream. Loss of draft/liquor flow, high differential pressure or unqualified pH requires a reviewed response: inhibit new feed/heat, retain available residual-emission treatment, and do not blanket-close vessel vents. Fan stop is not vent isolation.",
+    "Model 5000 Nm3/h, 40 C, 3500 Pa drop, 2 m tower diameter and 12 m stack height are screening/layout inputs, not ratings or approved limits. KO separation is not a fine-mist guarantee or cooling duty. ME-3150 fiber-bed duty, removal efficiency, pressure budget, corrosion/materials and stack dispersion/emission acceptance remain unqualified.",
+    "Acidic KO condensate and alkaline high-salt blowdown have distinct normally isolated A-1000 returns. Neutralization does not remove dissolved salts before A-2000. Sealed liquid returns and dedicated dirty-side pressure balances require verification at minimum liquid level and maximum differential pressure. Fan/stack low drains remain separately blinded with no continuous drainage credit.",
+    "Makeup water uses a proposed physical air gap and buffer/pump; supply is blinded, overflow goes to an unqualified local catch tray. NaOH breathing stays independent. T-3180 is retained despite TK-3180 wording in the original notes. P01 uses AIT-3180 for pH while the model uses pHT-3180 for pH and AIT-3180 for conductivity: no instrument tag is selected. pH, flow, level, pressure and other trip limits remain null; no live control or SIS is validated."
+  ]
+}

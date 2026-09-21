@@ -1,0 +1,7 @@
+{
+  "assetId": "TR-901",
+  "bindingId": "GEOMETRY-TR-901",
+  "modelEquipmentId": 200,
+  "bindingScope": "modeled-equipment-group",
+  "bindingRule": "Geometry owned by equipment 200 resolves to this proposed asset."
+}

@@ -1,0 +1,57 @@
+{
+  "assetId": "SF-201D",
+  "relationships": [
+    {
+      "id": "REL-SF-201D-AREA",
+      "type": "locatedIn",
+      "target": "A-200",
+      "status": "model register area",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-SF-201D-S-200-PREG-D-R-201D",
+      "type": "connectedTo",
+      "target": "R-201D",
+      "streamId": "S-200-PREG-D",
+      "role": "Pre-G feed D · PFD function; branch allocation proposed",
+      "status": "PFD function; branch allocation proposed",
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          55
+        ]
+      }
+    },
+    {
+      "id": "REL-SF-201D-S-200-HOPPER-201-D-H-201D",
+      "type": "connectedTo",
+      "target": "H-201D",
+      "streamId": "S-200-HOPPER-201-D",
+      "role": "Hopper to feeder 201D · Modeled package function; branch allocation proposed",
+      "status": "Modeled package function; branch allocation proposed",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          57
+        ]
+      }
+    }
+  ]
+}

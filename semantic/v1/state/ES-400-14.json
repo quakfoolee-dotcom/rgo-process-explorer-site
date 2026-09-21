@@ -1,0 +1,13 @@
+{
+  "assetId": "ES-400-14",
+  "state": {
+    "design": "proposed",
+    "operational": "unknown",
+    "maintenance": "unknown",
+    "alarm": "unknown",
+    "simulation": "notConnected"
+  },
+  "timestamp": null,
+  "source": null,
+  "note": "No commissioned, historian, CMMS or validated simulation state is connected."
+}

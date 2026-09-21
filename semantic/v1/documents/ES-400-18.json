@@ -1,0 +1,46 @@
+{
+  "assetId": "ES-400-18",
+  "documents": [
+    {
+      "documentId": "MODEL-A6000-EMERGENCY",
+      "title": "Emergency-water location, geometry and coverage model",
+      "revision": "emergency-stations-91",
+      "page": null,
+      "status": "model-derived planning basis; no operating or compliance approval",
+      "availability": "available model source reviewed"
+    },
+    {
+      "documentId": "BC-OHS-5-85-5-96",
+      "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+      "revision": null,
+      "page": null,
+      "status": "regulatory screening basis; site-specific assessment required",
+      "availability": "external reference",
+      "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+    },
+    {
+      "documentId": "PANDID-A6000-EW",
+      "title": "Emergency-water P&ID and distribution drawing",
+      "revision": null,
+      "page": null,
+      "status": "required; not indexed",
+      "availability": "gaps A6000-001 through A6000-004"
+    },
+    {
+      "documentId": "CIVIL-A6000-RUNOFF",
+      "title": "Emergency runoff and drainage design",
+      "revision": null,
+      "page": null,
+      "status": "required; not indexed",
+      "availability": "gap A6000-005"
+    },
+    {
+      "documentId": "COMMISSION-A6000-EW",
+      "title": "Emergency equipment commissioning and inspection records",
+      "revision": null,
+      "page": null,
+      "status": "required; not indexed",
+      "availability": "gap A6000-007"
+    }
+  ]
+}

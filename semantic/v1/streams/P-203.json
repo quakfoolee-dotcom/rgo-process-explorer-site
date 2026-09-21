@@ -1,0 +1,193 @@
+{
+  "assetId": "P-203",
+  "streams": [
+    {
+      "streamId": "S-200-H2SO4-A",
+      "name": "Sulfuric acid feed A",
+      "source": "T-201",
+      "destination": "R-201A",
+      "material": "Sulfuric acid",
+      "phase": "Liquid",
+      "massFlow": null,
+      "temperature": null,
+      "pressure": null,
+      "status": "PFD ratio; branch flow unresolved",
+      "contextAssetIds": [
+        "R-201A"
+      ],
+      "feedRatio": {
+        "value": 66.24,
+        "unit": "kg/kg Pre-G",
+        "basis": "PFD",
+        "sourceReferences": [
+          {
+            "documentId": "FEED-PE-PFD-001",
+            "sheetId": "FEED-PFD-0200",
+            "revision": "V5.1.1",
+            "page": 7,
+            "status": "Inherited draft pilot basis; not independently requalified"
+          }
+        ]
+      },
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        },
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ],
+      "via": [
+        "P-203"
+      ],
+      "topologyEvidenceStatus": "model-derived"
+    },
+    {
+      "streamId": "S-200-H2SO4-B",
+      "name": "Sulfuric acid feed B",
+      "source": "T-201",
+      "destination": "R-201B",
+      "material": "Sulfuric acid",
+      "phase": "Liquid",
+      "massFlow": null,
+      "temperature": null,
+      "pressure": null,
+      "status": "PFD ratio; branch flow unresolved",
+      "contextAssetIds": [
+        "R-201B"
+      ],
+      "feedRatio": {
+        "value": 66.24,
+        "unit": "kg/kg Pre-G",
+        "basis": "PFD",
+        "sourceReferences": [
+          {
+            "documentId": "FEED-PE-PFD-001",
+            "sheetId": "FEED-PFD-0200",
+            "revision": "V5.1.1",
+            "page": 7,
+            "status": "Inherited draft pilot basis; not independently requalified"
+          }
+        ]
+      },
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        },
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ],
+      "via": [
+        "P-203"
+      ],
+      "topologyEvidenceStatus": "model-derived"
+    },
+    {
+      "streamId": "S-200-H2SO4-C",
+      "name": "Sulfuric acid feed C",
+      "source": "T-201",
+      "destination": "R-201C",
+      "material": "Sulfuric acid",
+      "phase": "Liquid",
+      "massFlow": null,
+      "temperature": null,
+      "pressure": null,
+      "status": "PFD ratio; branch flow unresolved",
+      "contextAssetIds": [
+        "R-201C"
+      ],
+      "feedRatio": {
+        "value": 66.24,
+        "unit": "kg/kg Pre-G",
+        "basis": "PFD",
+        "sourceReferences": [
+          {
+            "documentId": "FEED-PE-PFD-001",
+            "sheetId": "FEED-PFD-0200",
+            "revision": "V5.1.1",
+            "page": 7,
+            "status": "Inherited draft pilot basis; not independently requalified"
+          }
+        ]
+      },
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        },
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ],
+      "via": [
+        "P-203"
+      ],
+      "topologyEvidenceStatus": "model-derived"
+    },
+    {
+      "streamId": "S-200-H2SO4-D",
+      "name": "Sulfuric acid feed D",
+      "source": "T-201",
+      "destination": "R-201D",
+      "material": "Sulfuric acid",
+      "phase": "Liquid",
+      "massFlow": null,
+      "temperature": null,
+      "pressure": null,
+      "status": "PFD ratio; branch flow unresolved",
+      "contextAssetIds": [
+        "R-201D"
+      ],
+      "feedRatio": {
+        "value": 66.24,
+        "unit": "kg/kg Pre-G",
+        "basis": "PFD",
+        "sourceReferences": [
+          {
+            "documentId": "FEED-PE-PFD-001",
+            "sheetId": "FEED-PFD-0200",
+            "revision": "V5.1.1",
+            "page": 7,
+            "status": "Inherited draft pilot basis; not independently requalified"
+          }
+        ]
+      },
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        },
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ],
+      "via": [
+        "P-203"
+      ],
+      "topologyEvidenceStatus": "model-derived"
+    }
+  ]
+}

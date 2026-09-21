@@ -1,0 +1,71 @@
+{
+  "assetId": "H-801",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "H-801",
+      "source": "FEED-PFD-0800",
+      "revision": null,
+      "page": 8,
+      "status": "draft-pfd",
+      "confidence": "review required",
+      "gapId": "A800-005"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A800-003"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A800-003"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A800-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A800-003"
+    },
+    {
+      "valueId": "PV-A-800-0175",
+      "property": "design.materialOfConstruction",
+      "value": "316L electropolished, grounded and bonded; hardfaced wear locations",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 53 (M-049)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "CF-materialOfConstruc-H-801",
+      "note": "scope: H-801/F-801 rGO feed; MX-801 mixer; H-803 surge hopper; RV-801 airlock; alt: Alloy 601 at any hot transition; status FIRM | D-A800-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

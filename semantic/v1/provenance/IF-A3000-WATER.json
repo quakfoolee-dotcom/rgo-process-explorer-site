@@ -1,0 +1,55 @@
+{
+  "assetId": "IF-A3000-WATER",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "IF-A3000-WATER",
+      "source": "MODEL-A3000",
+      "revision": "V152 / 18e2f81ccfb90eec25064f50c98540aea197908b",
+      "page": null,
+      "status": "model-derived",
+      "confidence": "review required",
+      "gapId": "A3000-005"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3000-003"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3000-003"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3000-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3000-003"
+    }
+  ]
+}

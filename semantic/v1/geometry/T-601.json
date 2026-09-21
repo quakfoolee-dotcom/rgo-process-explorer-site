@@ -1,0 +1,7 @@
+{
+  "assetId": "T-601",
+  "bindingId": "GEOMETRY-T-601",
+  "modelEquipmentId": 69,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

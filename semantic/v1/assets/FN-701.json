@@ -1,0 +1,50 @@
+{
+  "assetId": "FN-701",
+  "name": "Thermal off-gas draft fan",
+  "assetClassId": "Fan",
+  "status": "listed",
+  "identityStatus": "draft-pfd-tag",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-700",
+    "system": "A-700 thermal-treatment process context",
+    "parentAsset": null
+  },
+  "processFunction": "Thermal off-gas draft fan",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": "T-702 in 316L; FN-701/PSV wetted metal in 316L or Alloy 601/602 CA where temperature/deposit duty persists"
+  },
+  "operatingEnvelope": null,
+  "processBasis": [],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Draft +2 psig conflicts with slight negative pressure. Draft oxygen <10 ppm is an unqualified source claim, not an approved alarm, trip or operating limit. No pressure sign, oxygen threshold or permissive is selected.",
+    "Draft approximately 1100 degC, 4 h hold and 5 degC/min ramp are indicative only. Gas cooling 60-90 degC and product cooling 60-80 degC require qualification. Capacities, materials, gas composition and argon demand are unknown.",
+    "Draft considers KO/dust trap upstream of E-701; model KO-701 is downstream. Draft internal cooling zone differs from model-added E-702. Draft prior-to-cyclone note has no identified drawn/model cyclone; no cyclone is invented.",
+    "Normal gas connects to AB-3701 candidate only; treatment performance and permitted discharge remain unqualified. Model RV-701 differs from draft PSV-701. Relief destination, sizing and backpressure remain open and separate from normal treatment.",
+    "Draft is Not for Use with XXX revision. AR701/AR702 are draft stream identifiers, not confirmed equipment aliases for model AR-701. Air-fill dust vent and inert purge exhaust are distinct modes; purge, equalization, sampling and solids release sequences remain unqualified."
+  ],
+  "dataLayer": {
+    "area": "A-700",
+    "source": "data/semantic/A-700",
+    "approvedRows": 1,
+    "heldRows": 0,
+    "pendingRows": 17,
+    "identityHold": null,
+    "applied": "2026-09-21",
+    "baseline": {
+      "design": {
+        "capacityM3": null,
+        "designPressure": null,
+        "designTemperature": null,
+        "materialOfConstruction": null
+      }
+    },
+    "baselineAbsent": []
+  }
+}

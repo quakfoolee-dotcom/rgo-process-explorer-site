@@ -1,0 +1,123 @@
+{
+  "assetId": "P-206B",
+  "relationships": [
+    {
+      "id": "REL-P-206B-AREA",
+      "type": "locatedIn",
+      "target": "A-200",
+      "status": "model register area",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-P-206B-S-200-TRANSFER-A-R-201A",
+      "type": "connectedTo",
+      "target": "R-201A",
+      "streamId": "S-200-TRANSFER-A",
+      "role": "R-201A transfer to fixing interface · Modeled common transfer system; pump selection and branch allocation unresolved",
+      "status": "Modeled common transfer system; pump selection and branch allocation unresolved",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "REL-P-206B-S-200-TRANSFER-A-T-303",
+      "type": "connectedTo",
+      "target": "T-303",
+      "streamId": "S-200-TRANSFER-A",
+      "role": "R-201A transfer to fixing interface · Modeled common transfer system; pump selection and branch allocation unresolved",
+      "status": "Modeled common transfer system; pump selection and branch allocation unresolved",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          4
+        ]
+      }
+    },
+    {
+      "id": "REL-P-206B-S-200-TRANSFER-B-R-201B",
+      "type": "connectedTo",
+      "target": "R-201B",
+      "streamId": "S-200-TRANSFER-B",
+      "role": "R-201B transfer to fixing interface · Modeled common transfer system; pump selection and branch allocation unresolved",
+      "status": "Modeled common transfer system; pump selection and branch allocation unresolved",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "REL-P-206B-S-200-TRANSFER-C-R-201C",
+      "type": "connectedTo",
+      "target": "R-201C",
+      "streamId": "S-200-TRANSFER-C",
+      "role": "R-201C transfer to fixing interface · Modeled common transfer system; pump selection and branch allocation unresolved",
+      "status": "Modeled common transfer system; pump selection and branch allocation unresolved",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          54
+        ]
+      }
+    },
+    {
+      "id": "REL-P-206B-S-200-TRANSFER-D-R-201D",
+      "type": "connectedTo",
+      "target": "R-201D",
+      "streamId": "S-200-TRANSFER-D",
+      "role": "R-201D transfer to fixing interface · Modeled common transfer system; pump selection and branch allocation unresolved",
+      "status": "Modeled common transfer system; pump selection and branch allocation unresolved",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          55
+        ]
+      }
+    }
+  ]
+}

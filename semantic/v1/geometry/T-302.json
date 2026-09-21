@@ -1,0 +1,7 @@
+{
+  "assetId": "T-302",
+  "bindingId": "GEOMETRY-T-302",
+  "modelEquipmentId": 27,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings are unqualified."
+}

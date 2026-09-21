@@ -1,0 +1,29 @@
+{
+  "revision": "transport-racks-71",
+  "all": {
+    "externalElements": 7298,
+    "directAttachmentElements": 1075,
+    "supports": 3589,
+    "rackFrames": 232,
+    "existingSteelAttachmentGroups": 24,
+    "columns": 570,
+    "sharedStructures": 103,
+    "placementHolds": 609,
+    "shortConnections": 5841,
+    "vendorFlexible": 132,
+    "structurallyQualified": false
+  },
+  "optimization": {
+    "memberLengthM": 13236.1792462476
+  },
+  "a5000": {
+    "racks": 29,
+    "columns": 98,
+    "localColumns": 13,
+    "bearings": 776,
+    "placementElements": 73,
+    "memberLengthM": 3313.400744277576,
+    "coordinatedRacks": 6
+  },
+  "parts": 147533
+}

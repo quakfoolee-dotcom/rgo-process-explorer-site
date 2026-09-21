@@ -1,0 +1,69 @@
+{
+  "assetId": "SF-202C",
+  "streams": [
+    {
+      "streamId": "S-200-KMNO4-C",
+      "name": "KMnO4 induction C",
+      "source": "SF-202C",
+      "destination": "SI-201C",
+      "material": "Potassium permanganate",
+      "phase": "Solid",
+      "massFlow": null,
+      "temperature": null,
+      "pressure": null,
+      "status": "PFD ratio; proposed induction arrangement",
+      "routeLabels": [
+        "KMnO4 contained induction chute C"
+      ],
+      "contextAssetIds": [
+        "R-201C"
+      ],
+      "feedRatio": {
+        "value": 4,
+        "unit": "kg/kg Pre-G",
+        "basis": "PFD",
+        "sourceReferences": [
+          {
+            "documentId": "FEED-PE-PFD-001",
+            "sheetId": "FEED-PFD-0200",
+            "revision": "V5.1.1",
+            "page": 7,
+            "status": "Inherited draft pilot basis; not independently requalified"
+          }
+        ]
+      },
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        }
+      ]
+    },
+    {
+      "streamId": "S-200-HOPPER-202-C",
+      "name": "Hopper to feeder 202C",
+      "source": "H-202C",
+      "destination": "SF-202C",
+      "via": [],
+      "material": "Potassium permanganate",
+      "phase": "Solid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "status": "Modeled package function; branch allocation proposed",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ]
+    }
+  ]
+}

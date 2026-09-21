@@ -1,0 +1,7 @@
+{
+  "assetId": "GF-RO2001A",
+  "bindingId": "GEOMETRY-GF-RO2001A",
+  "modelEquipmentId": 522,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

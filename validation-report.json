@@ -1,0 +1,87 @@
+{
+  "checkedAt": "2026-09-20T01:28:39.286Z",
+  "method": "Initial engineering baseline audit; stopped after unresolved findings",
+  "browserQA": false,
+  "complete": false,
+  "passed": false,
+  "plannedChecks": 107,
+  "completedChecks": 17,
+  "results": [
+    {
+      "name": "validate-a3000-end-alignment.mjs",
+      "passed": false,
+      "error": "node:fs:2398\r\n    return binding.writeFileUtf8(\r\n                   ^\r\n\r\nError: ENOENT: no such file or directory, open 'C:\\Dev\\rGO 3D Process Model\\plant-model\\tmp\\a3000-end-alignment.json'\r\n    at writeFileSync (node:fs:2398:20)\r\n    at file:///C:/Dev/rGO%203D%20Process%20Model/plant-model/tests/validate-a3000-end-alignment.mjs:37:1\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:639:26\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  errno: -4058,\r\n  code: 'ENOENT',\r\n  syscall: 'open',\r\n  path: 'C:\\\\Dev\\\\rGO 3D Process Model\\\\plant-model\\\\tmp\\\\a3000-end-alignment.json'\r\n}\r\n\r\nNode.js v25.9.0"
+    },
+    {
+      "name": "validate-a3000-joints.mjs",
+      "passed": true
+    },
+    {
+      "name": "validate-access-toolbar.mjs",
+      "passed": true
+    },
+    {
+      "name": "validate-a5000.mjs",
+      "passed": false,
+      "error": "file:///C:/Dev/rGO%203D%20Process%20Model/plant-model/tests/validate-a5000.mjs:69\r\n$('animate').onclick();assert(api.active);assert.equal(api.getState().choices.area,'A-200');assert(api.getState().playing);api.update(.05);const before=api.getState().elapsed;$('play').onclick();api.update(.05);assert.equal(api.getState().elapsed,before,'Pause changed animation time');\r\n            ^\r\n\r\nTypeError: Cannot read properties of undefined (reading 'onclick')\r\n    at file:///C:/Dev/rGO%203D%20Process%20Model/plant-model/tests/validate-a5000.mjs:69:13\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:639:26\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\r\n\r\nNode.js v25.9.0"
+    },
+    {
+      "name": "validate-a400.mjs",
+      "passed": false,
+      "error": "node:fs:2398\r\n    return binding.writeFileUtf8(\r\n                   ^\r\n\r\nError: ENOENT: no such file or directory, open 'C:\\workspace\\scratch\\cb6b8c3a698f\\a400-final-screen.json'\r\n    at writeFileSync (node:fs:2398:20)\r\n    at file:///C:/Dev/rGO%203D%20Process%20Model/plant-model/tests/validate-a400.mjs:17:59\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:639:26\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  errno: -4058,\r\n  code: 'ENOENT',\r\n  syscall: 'open',\r\n  path: 'C:\\\\workspace\\\\scratch\\\\cb6b8c3a698f\\\\a400-final-screen.json'\r\n}\r\n\r\nNode.js v25.9.0"
+    },
+    {
+      "name": "validate-area-drag.mjs",
+      "passed": true
+    },
+    {
+      "name": "validate-area-labels.mjs",
+      "passed": true
+    },
+    {
+      "name": "validate-area-measurement-ui.mjs",
+      "passed": true
+    },
+    {
+      "name": "validate-area-measurement.mjs",
+      "passed": true
+    },
+    {
+      "name": "validate-area-connectivity.mjs",
+      "passed": true
+    },
+    {
+      "name": "validate-access.mjs",
+      "passed": false,
+      "error": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: WALK-EXHAUST-SAT obstructed\r\n    at file:///C:/Dev/rGO%203D%20Process%20Model/plant-model/tests/validate-access.mjs:9:96\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:639:26\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  generatedMessage: false,\r\n  code: 'ERR_ASSERTION',\r\n  actual: false,\r\n  expected: true,\r\n  operator: '==',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v25.9.0"
+    },
+    {
+      "name": "validate-area-selection.mjs",
+      "passed": true
+    },
+    {
+      "name": "validate-browse-levels-model.mjs",
+      "passed": true
+    },
+    {
+      "name": "validate-browse-levels-surfaces.mjs",
+      "passed": true
+    },
+    {
+      "name": "validate-argon-architecture.mjs",
+      "passed": false,
+      "error": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\r\n\r\n  assert(view.partVisible(p,'A-6000'))\r\n\r\n    at file:///C:/Dev/rGO%203D%20Process%20Model/plant-model/tests/validate-argon-architecture.mjs:19:256\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:639:26\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  generatedMessage: true,\r\n  code: 'ERR_ASSERTION',\r\n  actual: false,\r\n  expected: true,\r\n  operator: '==',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v25.9.0"
+    },
+    {
+      "name": "validate-argon-distribution.mjs",
+      "passed": false,
+      "error": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: A-700 hides local Ar BL-AR701 interface\r\n    at file:///C:/Dev/rGO%203D%20Process%20Model/plant-model/tests/validate-argon-distribution.mjs:15:57\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:639:26\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  generatedMessage: false,\r\n  code: 'ERR_ASSERTION',\r\n  actual: false,\r\n  expected: true,\r\n  operator: '==',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v25.9.0"
+    },
+    {
+      "name": "validate-compressed-air.mjs",
+      "passed": false,
+      "error": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\r\n\r\n21 !== 20\r\n\r\n    at file:///C:/Dev/rGO%203D%20Process%20Model/plant-model/tests/validate-compressed-air.mjs:23:8\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)\r\n    at async node:internal/modules/esm/loader:639:26\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  generatedMessage: true,\r\n  code: 'ERR_ASSERTION',\r\n  actual: 21,\r\n  expected: 20,\r\n  operator: 'strictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v25.9.0"
+    }
+  ],
+  "note": "Remaining checks were not completed. Focused baseline results and infrastructure reruns are recorded separately in docs."
+}

@@ -1,0 +1,14 @@
+{
+  "assetId": "H-101-SF-101",
+  "instruments": [
+    {
+      "functionId": "H-101-SF-101-STATE",
+      "variable": "equipment state",
+      "purpose": "Confirm permissive, operating and isolated state",
+      "tag": null,
+      "range": null,
+      "status": "function only; approved instrument tag and logic unresolved",
+      "gapId": "A100-003"
+    }
+  ]
+}

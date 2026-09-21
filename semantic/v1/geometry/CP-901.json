@@ -1,0 +1,7 @@
+{
+  "assetId": "CP-901",
+  "bindingId": "GEOMETRY-CP-901",
+  "modelEquipmentId": 208,
+  "bindingScope": "modeled-equipment-group",
+  "bindingRule": "Geometry owned by equipment 208 resolves to this proposed asset."
+}

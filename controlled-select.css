@@ -1,0 +1,15 @@
+.controlled-select{display:block;position:relative;min-width:0;width:100%;max-width:100%}
+.enhanced-native-select{position:absolute!important;width:1px!important;height:1px!important;min-height:0!important;padding:0!important;margin:0!important;opacity:0!important;pointer-events:none!important;overflow:hidden!important}
+button.select-trigger{display:flex!important;align-items:center;justify-content:space-between;gap:.65rem;width:100%;max-width:100%;min-width:0;min-height:46px;padding:.65rem .8rem;text-align:left;font:inherit;background:#1c2d3b;color:#e6edf3;border:1px solid #526674;border-radius:6px}
+.select-value{min-width:0;overflow-wrap:anywhere;white-space:normal;line-height:1.35}.select-chevron{flex:none}
+.select-trigger:focus-visible{outline:3px solid #f6c577;outline-offset:2px}
+.select-trigger:disabled{opacity:.6;cursor:default}.select-trigger:disabled .select-chevron{visibility:hidden}
+.select-popup{position:fixed;margin:0;inset:auto;z-index:1000;box-sizing:border-box;overflow:auto;overscroll-behavior:contain;background:#172c3c;color:#f0f5f8;border:1px solid #8097a6;border-radius:6px;box-shadow:0 8px 24px #0008;padding:4px;font-size:.875rem;line-height:1.4;text-align:left}
+.select-option{display:flex;gap:.5rem;padding:.65rem .45rem;min-width:0;border:2px solid transparent;border-radius:4px;cursor:pointer;white-space:normal;overflow-wrap:anywhere}.select-option>span:last-child{min-width:0}.select-option strong{white-space:nowrap}
+.option-check{flex:0 0 1rem;visibility:hidden;color:#f6c577}.select-option[aria-selected=true] .option-check{visibility:visible}.select-option[aria-selected=true]{background:#233d50}
+.select-option.option-focus{border-color:#f6c577;background:#304b5e}.select-option:hover{background:#304b5e}.select-option[aria-disabled=true]{opacity:.5;cursor:default}
+.select-group{padding:.65rem .6rem .3rem;font-weight:700;color:#a7c1d1}.select-popup[hidden],.controlled-select[hidden]{display:none!important}
+@media(forced-colors:active){.select-option.option-focus{border-color:Highlight}.option-check{color:Highlight}.select-popup{border:1px solid CanvasText}}
+
+.select-popup::backdrop{background:transparent;pointer-events:none}
+.select-option{min-height:44px}

@@ -1,0 +1,7 @@
+{
+  "assetId": "IF-A400-RO",
+  "bindingId": "GEOMETRY-IF-A400-RO",
+  "modelEquipmentId": null,
+  "bindingScope": "unmodeled-interface",
+  "bindingRule": "No specific model assembly or qualified receiving destination is assigned."
+}

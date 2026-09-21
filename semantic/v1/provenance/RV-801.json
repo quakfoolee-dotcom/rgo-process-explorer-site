@@ -1,0 +1,71 @@
+{
+  "assetId": "RV-801",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "RV-801",
+      "source": "FEED-PFD-0800",
+      "revision": null,
+      "page": 8,
+      "status": "draft-pfd",
+      "confidence": "review required",
+      "gapId": "A800-005"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A800-003"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A800-003"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A800-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A800-003"
+    },
+    {
+      "valueId": "PV-A-800-0316",
+      "property": "identity.designConcept",
+      "value": "A rotary valve alone is not accepted as both primary metering device and airlock (REP-019)",
+      "unit": null,
+      "source": "FEED-PE-REP-019",
+      "revision": "V1.0",
+      "location": "Recommendations",
+      "status": "approved",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": null,
+      "note": "D-A800-02: Rotary valve not accepted as both metering device and airlock.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

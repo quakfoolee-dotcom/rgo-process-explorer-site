@@ -1,0 +1,7 @@
+{
+  "assetId": "TK-BW2001",
+  "bindingId": "GEOMETRY-TK-BW2001",
+  "modelEquipmentId": 519,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

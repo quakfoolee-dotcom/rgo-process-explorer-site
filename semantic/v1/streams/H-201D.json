@@ -1,0 +1,28 @@
+{
+  "assetId": "H-201D",
+  "streams": [
+    {
+      "streamId": "S-200-HOPPER-201-D",
+      "name": "Hopper to feeder 201D",
+      "source": "H-201D",
+      "destination": "SF-201D",
+      "via": [],
+      "material": "Dried Pre-G",
+      "phase": "Solid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "status": "Modeled package function; branch allocation proposed",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ]
+    }
+  ]
+}

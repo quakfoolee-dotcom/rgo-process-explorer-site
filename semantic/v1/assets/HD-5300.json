@@ -1,0 +1,64 @@
+{
+  "assetId": "HD-5300",
+  "name": "Chilled-water supply and return headers",
+  "assetClassId": "Header",
+  "status": "proposed",
+  "identityStatus": "model tag; equipment-register reconciliation open",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-5000",
+    "system": "Thermal Utility System",
+    "parentAsset": null
+  },
+  "processFunction": "Chilled-water supply and return headers",
+  "handledMaterials": [
+    "Closed-loop chilled water"
+  ],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null
+  },
+  "operatingEnvelope": {
+    "supplyTemperatureRangeC": [
+      5,
+      7
+    ],
+    "returnTemperatureRangeC": [
+      10,
+      15
+    ],
+    "status": "Draft PFD range; no selected setpoint or live measurement"
+  },
+  "processBasis": [
+    {
+      "property": "temperature ranges",
+      "value": {
+        "supply": [
+          5,
+          7
+        ],
+        "return": [
+          10,
+          15
+        ]
+      },
+      "source": "FEED-PFD-5000",
+      "status": "draft"
+    }
+  ],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "No approved peak/normal loads, batch simultaneity, exchanger UA or fouling basis is indexed.",
+    "Flow, pressure, pressure loss, NPSH, relief, expansion volume and equipment ratings remain unapproved.",
+    "Draft ranges are 80–95/60–80 °C HW, 25–30/35–40 °C CW and 5–7/10–15 °C CHW; illustrated values are not operating setpoints.",
+    "Four TCUs use heat-transfer barriers; media, pressure hierarchy, leak detection and contamination response are unresolved.",
+    "The 10 °C process target is only 3–5 K above draft chilled-water supply across two heat-transfer barriers.",
+    "A/B pump geometry does not establish 2 × 100% capacity; shared systems receive no emergency-cooling credit.",
+    "HX-601 remains isolated and unassigned; draft hot water cannot provide the cited 140–145 °C dryer inlet by ordinary heat exchange.",
+    "Spray-water makeup, treatment, blowdown and winterization remain separate unresolved systems.",
+    "CP-5000 is indication intent only; I/O, trips, setpoints and validated live data are absent."
+  ]
+}

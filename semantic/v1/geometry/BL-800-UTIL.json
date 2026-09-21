@@ -1,0 +1,7 @@
+{
+  "assetId": "BL-800-UTIL",
+  "bindingId": "GEOMETRY-BL-800-UTIL",
+  "modelEquipmentId": 116,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

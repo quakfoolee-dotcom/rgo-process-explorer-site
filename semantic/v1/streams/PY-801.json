@@ -1,0 +1,621 @@
+{
+  "assetId": "PY-801",
+  "streams": [
+    {
+      "streamId": "S-800-FURNACE-FEED",
+      "name": "furnace feed",
+      "source": "RV-801",
+      "via": [],
+      "destination": "PY-801",
+      "material": "rGO / KBH4 mixture",
+      "phase": "Solid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "model process context; sequence and acceptance unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A800",
+          "title": "Doping, dry charging, argon, independent exhaust and A-900 handoff",
+          "revision": "V148 / 19b52eb01578140a4d021ec6d47fd98d1b671ba5",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+            "a800-basis.js": "0ee9741872bf91a9e4898324690cd43ec2ab246478883645300b6311900bc757",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0800",
+          "sheetId": "FEED-PFD-0800",
+          "title": "Commercial Scale rGO Doping and Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 8,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=8"
+        }
+      ],
+      "routeLabels": [
+        "RV-801 to PY-801 feed"
+      ]
+    },
+    {
+      "streamId": "S-800-PRODUCT",
+      "name": "product",
+      "source": "PY-801",
+      "via": [],
+      "destination": "IF-A800-PRODUCT",
+      "material": "Doped rGO; acceptance unqualified",
+      "phase": "Solid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "contained transfer only after temperature, quality, residual reactivity and receiver atmosphere acceptance",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A800",
+          "title": "Doping, dry charging, argon, independent exhaust and A-900 handoff",
+          "revision": "V148 / 19b52eb01578140a4d021ec6d47fd98d1b671ba5",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+            "a800-basis.js": "0ee9741872bf91a9e4898324690cd43ec2ab246478883645300b6311900bc757",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0800",
+          "sheetId": "FEED-PFD-0800",
+          "title": "Commercial Scale rGO Doping and Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 8,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=8"
+        }
+      ],
+      "routeLabels": [
+        "PY-801 cooled discharge neck",
+        "A-800 qualified product to A-900"
+      ]
+    },
+    {
+      "streamId": "S-800-OFFGAS",
+      "name": "offgas",
+      "source": "PY-801",
+      "via": [],
+      "destination": "E-801",
+      "material": "Reactive thermal off-gas; composition unqualified",
+      "phase": "Gas",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "model process context; sequence and acceptance unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A800",
+          "title": "Doping, dry charging, argon, independent exhaust and A-900 handoff",
+          "revision": "V148 / 19b52eb01578140a4d021ec6d47fd98d1b671ba5",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+            "a800-basis.js": "0ee9741872bf91a9e4898324690cd43ec2ab246478883645300b6311900bc757",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0800",
+          "sheetId": "FEED-PFD-0800",
+          "title": "Commercial Scale rGO Doping and Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 8,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=8"
+        }
+      ],
+      "routeLabels": [
+        "PY-801 off-gas to E-801",
+        "E-801 gas inlet connection"
+      ]
+    },
+    {
+      "streamId": "S-800-ARGON-PY801",
+      "name": "argon py801",
+      "source": "AR-801",
+      "via": [],
+      "destination": "PY-801",
+      "material": "Dry argon; specification unqualified",
+      "phase": "Gas",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "model process context; sequence and acceptance unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A800",
+          "title": "Doping, dry charging, argon, independent exhaust and A-900 handoff",
+          "revision": "V148 / 19b52eb01578140a4d021ec6d47fd98d1b671ba5",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+            "a800-basis.js": "0ee9741872bf91a9e4898324690cd43ec2ab246478883645300b6311900bc757",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0800",
+          "sheetId": "FEED-PFD-0800",
+          "title": "Commercial Scale rGO Doping and Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 8,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=8"
+        }
+      ],
+      "routeLabels": [
+        "FCV-AR801-PY801 delivery"
+      ]
+    },
+    {
+      "streamId": "S-800-ARGON-SEAL",
+      "name": "argon seal",
+      "source": "AR-801",
+      "via": [],
+      "destination": "PY-801",
+      "material": "Dry argon end-seal gas",
+      "phase": "Gas",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "model process context; sequence and acceptance unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A800",
+          "title": "Doping, dry charging, argon, independent exhaust and A-900 handoff",
+          "revision": "V148 / 19b52eb01578140a4d021ec6d47fd98d1b671ba5",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+            "a800-basis.js": "0ee9741872bf91a9e4898324690cd43ec2ab246478883645300b6311900bc757",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0800",
+          "sheetId": "FEED-PFD-0800",
+          "title": "Commercial Scale rGO Doping and Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 8,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=8"
+        }
+      ],
+      "routeLabels": [
+        "FCV-AR801-SEAL delivery"
+      ]
+    },
+    {
+      "streamId": "S-800-PY801-SUPPLY",
+      "name": "py801 supply",
+      "source": "IF-A800-PY801-SUPPLY",
+      "via": [],
+      "destination": "PY-801",
+      "material": "Indirect cooling water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "model process context; sequence and acceptance unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A800",
+          "title": "Doping, dry charging, argon, independent exhaust and A-900 handoff",
+          "revision": "V148 / 19b52eb01578140a4d021ec6d47fd98d1b671ba5",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+            "a800-basis.js": "0ee9741872bf91a9e4898324690cd43ec2ab246478883645300b6311900bc757",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0800",
+          "sheetId": "FEED-PFD-0800",
+          "title": "Commercial Scale rGO Doping and Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 8,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=8"
+        }
+      ],
+      "routeLabels": [
+        "PY-801 cooling supply",
+        "PY-801 cooling inlet piping"
+      ]
+    },
+    {
+      "streamId": "S-800-PY801-RETURN",
+      "name": "py801 return",
+      "source": "PY-801",
+      "via": [],
+      "destination": "IF-A800-PY801-RETURN",
+      "material": "Indirect cooling water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "model process context; sequence and acceptance unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A800",
+          "title": "Doping, dry charging, argon, independent exhaust and A-900 handoff",
+          "revision": "V148 / 19b52eb01578140a4d021ec6d47fd98d1b671ba5",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+            "a800-basis.js": "0ee9741872bf91a9e4898324690cd43ec2ab246478883645300b6311900bc757",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0800",
+          "sheetId": "FEED-PFD-0800",
+          "title": "Commercial Scale rGO Doping and Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 8,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=8"
+        }
+      ],
+      "routeLabels": [
+        "PY-801 cooling outlet piping",
+        "PY-801 cooling return boundary"
+      ]
+    },
+    {
+      "streamId": "S-800-PY801-SUPPLY-DRAIN",
+      "name": "py801 supply drain",
+      "source": "PY-801",
+      "via": [],
+      "destination": "IF-A800-PY801-SUPPLY-DRAIN",
+      "material": "Isolated cooling-water drain; separate from process",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "isolated cooling-water draining; no process connection",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A800",
+          "title": "Doping, dry charging, argon, independent exhaust and A-900 handoff",
+          "revision": "V148 / 19b52eb01578140a4d021ec6d47fd98d1b671ba5",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+            "a800-basis.js": "0ee9741872bf91a9e4898324690cd43ec2ab246478883645300b6311900bc757",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0800",
+          "sheetId": "FEED-PFD-0800",
+          "title": "Commercial Scale rGO Doping and Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 8,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=8"
+        }
+      ],
+      "routeLabels": [
+        "PY-801 supply panel low-point drain"
+      ]
+    },
+    {
+      "streamId": "S-800-PY801-INLET-DRAIN",
+      "name": "py801 inlet drain",
+      "source": "PY-801",
+      "via": [],
+      "destination": "IF-A800-PY801-INLET-DRAIN",
+      "material": "Isolated cooling-water drain; separate from process",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "isolated cooling-water draining; no process connection",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A800",
+          "title": "Doping, dry charging, argon, independent exhaust and A-900 handoff",
+          "revision": "V148 / 19b52eb01578140a4d021ec6d47fd98d1b671ba5",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+            "a800-basis.js": "0ee9741872bf91a9e4898324690cd43ec2ab246478883645300b6311900bc757",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0800",
+          "sheetId": "FEED-PFD-0800",
+          "title": "Commercial Scale rGO Doping and Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 8,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=8"
+        }
+      ],
+      "routeLabels": [
+        "PY-801 utility low-point drain"
+      ]
+    },
+    {
+      "streamId": "S-800-PY801-RETURN-DRAIN",
+      "name": "py801 return drain",
+      "source": "PY-801",
+      "via": [],
+      "destination": "IF-A800-PY801-RETURN-DRAIN",
+      "material": "Isolated cooling-water drain; separate from process",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "isolated cooling-water draining; no process connection",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A800",
+          "title": "Doping, dry charging, argon, independent exhaust and A-900 handoff",
+          "revision": "V148 / 19b52eb01578140a4d021ec6d47fd98d1b671ba5",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+            "a800-basis.js": "0ee9741872bf91a9e4898324690cd43ec2ab246478883645300b6311900bc757",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0800",
+          "sheetId": "FEED-PFD-0800",
+          "title": "Commercial Scale rGO Doping and Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 8,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=8"
+        }
+      ],
+      "routeLabels": [
+        "PY-801 return low-point drain"
+      ]
+    },
+    {
+      "streamId": "S-800-RELIEF",
+      "name": "relief",
+      "source": "PY-801",
+      "via": [
+        "PSV-801"
+      ],
+      "destination": "IF-A800-RELIEF",
+      "material": "Emergency relief; load unqualified",
+      "phase": "Unqualified",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "emergency relief; no normal-treatment or isolation credit",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A800",
+          "title": "Doping, dry charging, argon, independent exhaust and A-900 handoff",
+          "revision": "V148 / 19b52eb01578140a4d021ec6d47fd98d1b671ba5",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+            "a800-basis.js": "0ee9741872bf91a9e4898324690cd43ec2ab246478883645300b6311900bc757",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0800",
+          "sheetId": "FEED-PFD-0800",
+          "title": "Commercial Scale rGO Doping and Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 8,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=8"
+        }
+      ],
+      "routeLabels": [
+        "PSV-801 protected header takeoff",
+        "PSV-801 to dedicated relief treatment"
+      ]
+    },
+    {
+      "streamId": "S-5000-PY801-CW",
+      "name": "PY-801 direct thermal service",
+      "source": "HD-5200",
+      "via": [],
+      "destination": "PY-801",
+      "material": "Closed-loop cooling water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": {
+        "supplyRangeC": [
+          25,
+          30
+        ],
+        "returnRangeC": [
+          35,
+          40
+        ],
+        "status": "draft PFD range"
+      },
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "PY-801"
+      ],
+      "operatingMode": "Direct primary circuit; consumer duty and allowable temperature unresolved",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    }
+  ]
+}

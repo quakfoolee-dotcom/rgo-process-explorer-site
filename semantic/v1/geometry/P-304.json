@@ -1,0 +1,7 @@
+{
+  "assetId": "P-304",
+  "bindingId": "GEOMETRY-P-304",
+  "modelEquipmentId": 506444363,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings are unqualified."
+}

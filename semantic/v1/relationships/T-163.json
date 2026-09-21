@@ -1,0 +1,43 @@
+{
+  "assetId": "T-163",
+  "relationships": [
+    {
+      "id": "REL-T-163-S-160-FILTRATE",
+      "type": "receivesFrom",
+      "target": "F-161",
+      "role": "F-161 filtrate to T-163",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-160-FILTRATE",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-T-163-S-160-WW163",
+      "type": "feeds",
+      "target": "IF-A160-WW163",
+      "role": "WW163 process handoff",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-160-WW163",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-T-163-S-160-VENT-T163",
+      "type": "feeds",
+      "target": "IF-A3000-V-T-163",
+      "role": "T-163 vent handoff",
+      "status": "Existing A-3000 collection interface; rate, composition and relief segregation unresolved",
+      "streamId": "S-160-VENT-T163",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-T-163-GEOM",
+      "type": "representedBy",
+      "target": "GEOMETRY-T-163",
+      "status": "bound to modeled equipment group",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    }
+  ]
+}

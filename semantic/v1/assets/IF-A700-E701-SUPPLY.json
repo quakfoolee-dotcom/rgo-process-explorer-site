@@ -1,0 +1,32 @@
+{
+  "assetId": "IF-A700-E701-SUPPLY",
+  "name": "Off-gas cooler cooling supply",
+  "assetClassId": "ExternalInterface",
+  "status": "proposed",
+  "identityStatus": "model-derived; tag qualification open",
+  "recordScope": "external-interface",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-5000",
+    "system": "A-700 thermal-treatment process context",
+    "parentAsset": null
+  },
+  "processFunction": "Off-gas cooler cooling supply",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null
+  },
+  "operatingEnvelope": null,
+  "processBasis": [],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Draft +2 psig conflicts with slight negative pressure. Draft oxygen <10 ppm is an unqualified source claim, not an approved alarm, trip or operating limit. No pressure sign, oxygen threshold or permissive is selected.",
+    "Draft approximately 1100 degC, 4 h hold and 5 degC/min ramp are indicative only. Gas cooling 60-90 degC and product cooling 60-80 degC require qualification. Capacities, materials, gas composition and argon demand are unknown.",
+    "Draft considers KO/dust trap upstream of E-701; model KO-701 is downstream. Draft internal cooling zone differs from model-added E-702. Draft prior-to-cyclone note has no identified drawn/model cyclone; no cyclone is invented.",
+    "Normal gas connects to AB-3701 candidate only; treatment performance and permitted discharge remain unqualified. Model RV-701 differs from draft PSV-701. Relief destination, sizing and backpressure remain open and separate from normal treatment.",
+    "Draft is Not for Use with XXX revision. AR701/AR702 are draft stream identifiers, not confirmed equipment aliases for model AR-701. Air-fill dust vent and inert purge exhaust are distinct modes; purge, equalization, sampling and solids release sequences remain unqualified."
+  ]
+}

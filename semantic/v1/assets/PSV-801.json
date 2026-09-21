@@ -1,0 +1,50 @@
+{
+  "assetId": "PSV-801",
+  "name": "Dedicated furnace relief device; sizing unresolved",
+  "assetClassId": "ReliefValve",
+  "status": "listed",
+  "identityStatus": "draft-pfd-tag",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-800",
+    "system": "A-800 doping and pyrolysis process context",
+    "parentAsset": "PY-801"
+  },
+  "processFunction": "Dedicated furnace relief device; sizing unresolved",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": "316/316L austenitic welded construction to ASME B31.12"
+  },
+  "operatingEnvelope": null,
+  "processBasis": [],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Draft arrows 806/807 show H-803 through RV-801 to PY-801, while General Note 2 names F-801. The concept follows the arrows; document-owner confirmation remains open. Draft AR801 identifies an argon stream, not an approved alias for the model AR-801 manifold.",
+    "Draft 1 kg KBH4 per kg rGO, 750 degC, 5 degC/min ramp and 2 h residence are source references only. Draft +2 psig and maximum 10 ppm oxygen are not selected control or protective limits. Feed accuracy during refill, residence distribution, reaction/gas evolution, throughput and product acceptance remain open.",
+    "TR-801 and LK-802 are model-added contained-transfer concepts. KBH4 handling remains dry and isolated from indirect cooling water; no process-water wash or common process/utility drain is inferred. Dew point, leakage, materials, capacities and residue handling are unqualified. RV-801 is not credited as positive isolation.",
+    "PY-801 normal off-gas runs through E-801 and FN-801 to AB-3801 candidate. Inventory vents use DC-3811; F-802 has its own DC-3812 route. Emergency PSV-801 relief stays separate. The draft mentions a cyclone without an identified symbol/tag; no cyclone is invented. H2/boron composition, treatment performance, relief loads and final disposal remain unqualified.",
+    "Sheet is Draft - Not for Use with XXX revision. Oxygen, moisture and hydrogen verification are functional concepts, not qualified sensors or trip logic. PY-801 includes heating, hold and cooling zones; no separate product cooler is invented. A-900 receiving equipment is not modeled. Product temperature, residual reactivity, quality and receiving atmosphere require acceptance."
+  ],
+  "dataLayer": {
+    "area": "A-800",
+    "source": "data/semantic/A-800",
+    "approvedRows": 1,
+    "heldRows": 0,
+    "pendingRows": 11,
+    "identityHold": null,
+    "applied": "2026-09-21",
+    "baseline": {
+      "design": {
+        "capacityM3": null,
+        "designPressure": null,
+        "designTemperature": null,
+        "materialOfConstruction": null
+      }
+    },
+    "baselineAbsent": []
+  }
+}

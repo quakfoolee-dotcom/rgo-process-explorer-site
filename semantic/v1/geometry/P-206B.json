@@ -1,0 +1,9 @@
+{
+  "bindingId": "GEOMETRY-P-206B",
+  "assetId": "P-206B",
+  "modelEquipmentId": 62,
+  "bindingScope": "assembly-context",
+  "geometryIdField": "part.code",
+  "bindingRule": "Highlights the containing model assembly, which may be shared by several asset records; this does not assert exclusive part ownership.",
+  "revisionPolicy": "Validate equipment IDs against the prepared model on every generation."
+}

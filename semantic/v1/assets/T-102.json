@@ -1,0 +1,67 @@
+{
+  "assetId": "T-102",
+  "name": "Premix sulfuric acid supply",
+  "assetClassId": "Tank",
+  "status": "listed",
+  "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-100",
+    "system": "Pre-Mix Graphite with Acid",
+    "parentAsset": null
+  },
+  "processFunction": "Premix sulfuric acid supply",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": "Lined CS, or high-Si austenitic SS"
+  },
+  "operatingEnvelope": null,
+  "processBasis": [
+    {
+      "property": "area and equipment identity",
+      "value": {
+        "area": "A-100",
+        "tag": "T-102"
+      },
+      "source": "FEED-PE-PFD-001 / FEED-PFD-0100",
+      "status": "draft PFD basis"
+    },
+    {
+      "property": "modeled baseline",
+      "value": "baseline FEED arrangement only",
+      "source": "MODEL-EARLY-PROCESS",
+      "status": "model-derived"
+    }
+  ],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Approved R-101, T-102 and H-101/SF-101 datasheets are unavailable.",
+    "Materials of construction, linings, corrosion allowance and compatibility are unapproved.",
+    "P&ID tags, alarm/trip setpoints, relief basis and permissives are unavailable.",
+    "Graphite/acid quantities, addition rates, mixing time and acceptance criteria are unresolved.",
+    "Charging, dust control, acid unloading, drainage and spill-recovery details require approval.",
+    "FEED-PFD-0100 remains a draft basis and requires reconciliation with approved project documents."
+  ],
+  "dataLayer": {
+    "area": "A-100",
+    "source": "data/semantic/A-100",
+    "approvedRows": 1,
+    "heldRows": 0,
+    "pendingRows": 19,
+    "identityHold": null,
+    "applied": "2026-09-21",
+    "baseline": {
+      "design": {
+        "capacityM3": null,
+        "designPressure": null,
+        "designTemperature": null,
+        "materialOfConstruction": null
+      }
+    },
+    "baselineAbsent": []
+  }
+}

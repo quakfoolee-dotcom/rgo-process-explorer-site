@@ -1,0 +1,32 @@
+{
+  "assetId": "IF-A900-AR902",
+  "name": "AR-902 capped argon reservation; no receiver connected",
+  "assetClassId": "ExternalInterface",
+  "status": "proposed",
+  "identityStatus": "model-derived; tag qualification open",
+  "recordScope": "external-interface",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-900",
+    "system": "A-900 cartridge-filling boundary foundation",
+    "parentAsset": null
+  },
+  "processFunction": "AR-902 capped argon reservation; no receiver connected",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null
+  },
+  "operatingEnvelope": null,
+  "processBasis": [],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "No FEED-PFD-0900 sheet or modeled filling equipment is available in the project. This foundation describes the receiving boundary only; no hopper, filler, cartridge, weighing station or equipment tag is invented.",
+    "PY-801 product release terminates at the existing unmodeled A-900 boundary. Temperature, quality, residual reactivity, receiving atmosphere and available receiver capacity require qualified acceptance criteria; no numerical limit or sequence is selected.",
+    "AR-901, AR-902 and AR-903 identify model-reserved argon branches, not filling equipment. All three terminate at positive blinds with no receiving equipment connected. No flow, purge cycle or operating supply is asserted.",
+    "The A-3000 review flags A-900 labeled Furnace Gas despite its cartridge-filling area name. No A-900 exhaust composition or compatibility is established; no connection to wet acid treatment or a thermal package is added.",
+    "Cartridge specification, fill mass/tolerance, containment, weighing, closure, quality checks, traceability, cleaning and rejects handling remain undefined. Functional receiving checks are requirements only, not installed instruments or approved interlocks."
+  ]
+}

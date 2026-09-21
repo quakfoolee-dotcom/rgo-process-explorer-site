@@ -1,0 +1,368 @@
+{
+  "assetId": "LK-701",
+  "streams": [
+    {
+      "streamId": "S-700-LIFT",
+      "name": "lift",
+      "source": "TR-701",
+      "via": [],
+      "destination": "LK-701",
+      "material": "GO / thermally treated powder; acceptance unqualified",
+      "phase": "Solid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [],
+      "operatingMode": "model process context; sequence and acceptance unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A700",
+          "title": "Thermal-treatment routes, argon supply and independent exhaust interface",
+          "revision": "V147 / 3313c00fbde0d2bdc4480201823d2012260b2e15",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "furnace.js": "47ff8d0a21ff80f9882dfad79bf1db484c1536116894503f5dfbf0e425b882b3",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0700",
+          "sheetId": "FEED-PFD-0700",
+          "title": "High Temperature Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 7,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=7"
+        }
+      ],
+      "routeLabels": [
+        "TR-701 to transfer lock"
+      ]
+    },
+    {
+      "streamId": "S-700-LOCK-TRANSFER",
+      "name": "lock transfer",
+      "source": "LK-701",
+      "via": [],
+      "destination": "H-701",
+      "material": "GO / thermally treated powder; acceptance unqualified",
+      "phase": "Solid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [],
+      "operatingMode": "model process context; sequence and acceptance unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A700",
+          "title": "Thermal-treatment routes, argon supply and independent exhaust interface",
+          "revision": "V147 / 3313c00fbde0d2bdc4480201823d2012260b2e15",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "furnace.js": "47ff8d0a21ff80f9882dfad79bf1db484c1536116894503f5dfbf0e425b882b3",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0700",
+          "sheetId": "FEED-PFD-0700",
+          "title": "High Temperature Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 7,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=7"
+        }
+      ],
+      "routeLabels": [
+        "LK-701 to H-701 buffer"
+      ]
+    },
+    {
+      "streamId": "S-700-LOCK-PURGE",
+      "name": "lock purge",
+      "source": "LK-701",
+      "via": [],
+      "destination": "AB-3701",
+      "material": "Gas mixture; composition unqualified",
+      "phase": "Gas",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [],
+      "operatingMode": "inert purge mode; isolated from air-fill dust return",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A700",
+          "title": "Thermal-treatment routes, argon supply and independent exhaust interface",
+          "revision": "V147 / 3313c00fbde0d2bdc4480201823d2012260b2e15",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "furnace.js": "47ff8d0a21ff80f9882dfad79bf1db484c1536116894503f5dfbf0e425b882b3",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0700",
+          "sheetId": "FEED-PFD-0700",
+          "title": "High Temperature Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 7,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=7"
+        }
+      ],
+      "routeLabels": [
+        "LK-701 purge exhaust to treatment"
+      ]
+    },
+    {
+      "streamId": "S-700-LOCK-AIR-VENT",
+      "name": "lock air vent",
+      "source": "LK-701",
+      "via": [],
+      "destination": "F-601",
+      "material": "Gas mixture; composition unqualified",
+      "phase": "Gas",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "T-602"
+      ],
+      "operatingMode": "air-fill dust return via receiver vent header; isolated from inert purge mode",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A700",
+          "title": "Thermal-treatment routes, argon supply and independent exhaust interface",
+          "revision": "V147 / 3313c00fbde0d2bdc4480201823d2012260b2e15",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "furnace.js": "47ff8d0a21ff80f9882dfad79bf1db484c1536116894503f5dfbf0e425b882b3",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0700",
+          "sheetId": "FEED-PFD-0700",
+          "title": "High Temperature Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 7,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=7"
+        }
+      ],
+      "routeLabels": [
+        "LK-701 air return to T-602 vent"
+      ]
+    },
+    {
+      "streamId": "S-700-LOCK-EQUALIZATION",
+      "name": "lock equalization",
+      "source": "LK-701",
+      "via": [],
+      "destination": "H-701",
+      "material": "Gas mixture; composition unqualified",
+      "phase": "Gas",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "bidirectional",
+      "contextAssetIds": [],
+      "operatingMode": "model process context; sequence and acceptance unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A700",
+          "title": "Thermal-treatment routes, argon supply and independent exhaust interface",
+          "revision": "V147 / 3313c00fbde0d2bdc4480201823d2012260b2e15",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "furnace.js": "47ff8d0a21ff80f9882dfad79bf1db484c1536116894503f5dfbf0e425b882b3",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0700",
+          "sheetId": "FEED-PFD-0700",
+          "title": "High Temperature Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 7,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=7"
+        }
+      ],
+      "routeLabels": [
+        "LK-701 equalization takeoff",
+        "LK-701 to H-701 equalization"
+      ]
+    },
+    {
+      "streamId": "S-700-ARGON-LOCK",
+      "name": "argon lock",
+      "source": "AR-701",
+      "via": [],
+      "destination": "LK-701",
+      "material": "Argon",
+      "phase": "Gas",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [],
+      "operatingMode": "model process context; sequence and acceptance unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A700",
+          "title": "Thermal-treatment routes, argon supply and independent exhaust interface",
+          "revision": "V147 / 3313c00fbde0d2bdc4480201823d2012260b2e15",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "furnace.js": "47ff8d0a21ff80f9882dfad79bf1db484c1536116894503f5dfbf0e425b882b3",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0700",
+          "sheetId": "FEED-PFD-0700",
+          "title": "High Temperature Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 7,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=7"
+        }
+      ],
+      "routeLabels": [
+        "XV-AR701-LOCK delivery"
+      ]
+    },
+    {
+      "streamId": "S-700-SAMPLE-L",
+      "name": "sample l",
+      "source": "LK-701",
+      "via": [],
+      "destination": "AB-3701",
+      "material": "Closed oxygen sample return",
+      "phase": "Gas",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "AIT-701"
+      ],
+      "operatingMode": "model process context; sequence and acceptance unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A700",
+          "title": "Thermal-treatment routes, argon supply and independent exhaust interface",
+          "revision": "V147 / 3313c00fbde0d2bdc4480201823d2012260b2e15",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "furnace.js": "47ff8d0a21ff80f9882dfad79bf1db484c1536116894503f5dfbf0e425b882b3",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0700",
+          "sheetId": "FEED-PFD-0700",
+          "title": "High Temperature Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 7,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=7"
+        }
+      ],
+      "routeLabels": [
+        "AIT-701-L sample conditioning line",
+        "AIT-701-L closed sample return"
+      ]
+    }
+  ]
+}

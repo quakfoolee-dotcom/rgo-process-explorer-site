@@ -1,0 +1,7 @@
+{
+  "assetId": "TK-5311",
+  "bindingId": "GEOMETRY-TK-5311",
+  "modelEquipmentId": 837,
+  "bindingScope": "assembly-context",
+  "bindingRule": "A-5000 model assembly; planning geometry does not establish capacity, rating or construction readiness."
+}

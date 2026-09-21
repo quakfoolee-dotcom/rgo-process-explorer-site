@@ -1,0 +1,31 @@
+{
+  "assetId": "IF-A400-T402-VENT",
+  "name": "Washing tank closed vent boundary",
+  "assetClassId": "ExternalInterface",
+  "status": "proposed",
+  "identityStatus": "model-derived; tag qualification open",
+  "recordScope": "external-interface",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-400",
+    "system": "A-400 washing process context",
+    "parentAsset": null
+  },
+  "processFunction": "Washing tank closed vent boundary",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null
+  },
+  "operatingEnvelope": null,
+  "processBasis": [],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "The local temperature-sheet PDF skips FEED-PFD-0400. The inherited register page 9 is a full-document reference, not an available excerpt. No approved source revision is established.",
+    "Cleaning chemistry, product isolation, vent compatibility, drain receiving pressure/invert, instrument tags and protective settings remain unqualified.",
+    "Dimensions, model screening inputs and package layouts do not establish approved engineering values.",
+    "Semantic boundary only; destination and compatibility remain open. Separate records do not imply a common header."
+  ]
+}

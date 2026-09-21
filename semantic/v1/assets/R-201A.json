@@ -1,0 +1,93 @@
+{
+  "assetId": "R-201A",
+  "name": "GO oxidation reactor A",
+  "assetClassId": "Reactor",
+  "status": "listed",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-200",
+    "system": "GO Oxidation System",
+    "parentAsset": null
+  },
+  "processFunction": "Batch oxidation of dried Pre-G in sulfuric/phosphoric acid with staged potassium permanganate addition, agitation, external recirculation and temperature control.",
+  "handledMaterials": [
+    "Sulfuric acid",
+    "Phosphoric acid",
+    "Pre-G",
+    "Potassium permanganate",
+    "Oxidation slurry"
+  ],
+  "design": {
+    "capacityM3": null,
+    "designPressure": "+50 mbarg internal / full vacuum external (screening)",
+    "designTemperature": 80,
+    "materialOfConstruction": "Glass-lined carbon steel; glass-lined agitator, baffles, dip pipes and thermowell",
+    "designPressureExternal": "Full vacuum"
+  },
+  "operatingEnvelope": {
+    "reactionTemperatureTargetC": 47.5,
+    "reactionTemperatureToleranceC": 2.5,
+    "allowableTemperatureRangeC": [
+      45,
+      50
+    ],
+    "pfdSafetyNoteMaximumC": 49,
+    "transferTemperatureC": 10,
+    "reactionTimeHours": 16,
+    "yieldKgTLGOPerKgPreG": 1.25,
+    "pressure": null,
+    "status": "Draft PFD basis; temperature envelope reconciled by data-layer decision D-A200-03 (50 °C = upper allowable limit and SIS trip, 49 °C = TAH; see provenance)",
+    "feedRatioBasis": "Per kg PRE-G: 66.24 kg H₂SO₄, 6.75 kg H₃PO₄, 4 kg KMnO₄ (feed-rate labels on sheet)",
+    "preGPerBatchKg": 550,
+    "batchCycleHours": 24
+  },
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Area resolved as A-200 from FEED-PFD-0200; the A-140 handoff label is superseded for this asset bank.",
+    "PFD lists P-205A/B and M-201 without confirming four dedicated recirculation/induction packages; branch A allocation remains proposed.",
+    "Capacity, metallurgy, design pressure and design temperature require an approved equipment datasheet.",
+    "Instrument identities, control loops, protective setpoints and relief basis require P&ID and HAZOP/relief-study sources."
+  ],
+  "safeguards": {
+    "pfdSafetyNoteMaximumC": 49,
+    "lowLowTemperatureAlarmC": 43,
+    "lowTemperatureAlarmC": 46,
+    "highTemperatureAlarmC": 49,
+    "highHighTemperatureTripC": 50
+  },
+  "dataLayer": {
+    "area": "A-200",
+    "source": "data/semantic/A-200",
+    "approvedRows": 15,
+    "heldRows": 0,
+    "pendingRows": 122,
+    "identityHold": null,
+    "applied": "2026-09-21",
+    "baseline": {
+      "design": {
+        "capacityM3": null,
+        "designPressure": null,
+        "designTemperature": null,
+        "materialOfConstruction": null
+      },
+      "operatingEnvelope": {
+        "reactionTemperatureTargetC": 47.5,
+        "reactionTemperatureToleranceC": 2.5,
+        "allowableTemperatureRangeC": [
+          45,
+          50
+        ],
+        "pfdSafetyNoteMaximumC": 49,
+        "transferTemperatureC": 10,
+        "reactionTimeHours": 16,
+        "yieldKgTLGOPerKgPreG": 1.25,
+        "pressure": null,
+        "status": "Draft PFD basis; temperature envelope reconciled by data-layer decision D-A200-03 (50 °C = upper allowable limit and SIS trip, 49 °C = TAH; see provenance)"
+      },
+      "safeguards": null
+    },
+    "baselineAbsent": [
+      "safeguards"
+    ]
+  }
+}

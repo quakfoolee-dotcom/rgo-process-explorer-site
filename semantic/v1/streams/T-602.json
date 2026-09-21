@@ -1,0 +1,261 @@
+{
+  "assetId": "T-602",
+  "streams": [
+    {
+      "streamId": "S-600-CHAMBER-POWDER",
+      "name": "chamber powder",
+      "source": "DR-601",
+      "via": [],
+      "destination": "T-602",
+      "material": "Dry GO; model-added direct recovery",
+      "phase": "Solid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "model process context; design and operating sequence unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A600",
+          "title": "Aqueous spray-drying routes, independent exhaust and A-700 solids handoff",
+          "revision": "V146 / 19534f4d6e3e8383ba84e72fd997460ad241d829",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "spray-drying.js": "c77c180b667bf82f9bceeee0369ca3a7ca1746d3895675e497286d4902a74080",
+            "furnace.js": "47ff8d0a21ff80f9882dfad79bf1db484c1536116894503f5dfbf0e425b882b3",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0600",
+          "sheetId": "FEED-PFD-0600",
+          "title": "Commercial Scale TLGO Drying",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 6,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=6"
+        }
+      ],
+      "routeLabels": [
+        "DR-601 gravity powder chute to T-602"
+      ]
+    },
+    {
+      "streamId": "S-600-FILTER-POWDER",
+      "name": "filter powder",
+      "source": "F-601",
+      "via": [],
+      "destination": "T-602",
+      "material": "Recovered GO fines",
+      "phase": "Solid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "model process context; design and operating sequence unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A600",
+          "title": "Aqueous spray-drying routes, independent exhaust and A-700 solids handoff",
+          "revision": "V146 / 19534f4d6e3e8383ba84e72fd997460ad241d829",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "spray-drying.js": "c77c180b667bf82f9bceeee0369ca3a7ca1746d3895675e497286d4902a74080",
+            "furnace.js": "47ff8d0a21ff80f9882dfad79bf1db484c1536116894503f5dfbf0e425b882b3",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0600",
+          "sheetId": "FEED-PFD-0600",
+          "title": "Commercial Scale TLGO Drying",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 6,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=6"
+        }
+      ],
+      "routeLabels": [
+        "F-601 gravity powder chute to T-602"
+      ]
+    },
+    {
+      "streamId": "S-600-POWDER-TRANSFER",
+      "name": "powder transfer",
+      "source": "T-602",
+      "via": [],
+      "destination": "TR-701",
+      "material": "Dried GO",
+      "phase": "Solid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "contained product transfer; acceptance unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A600",
+          "title": "Aqueous spray-drying routes, independent exhaust and A-700 solids handoff",
+          "revision": "V146 / 19534f4d6e3e8383ba84e72fd997460ad241d829",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "spray-drying.js": "c77c180b667bf82f9bceeee0369ca3a7ca1746d3895675e497286d4902a74080",
+            "furnace.js": "47ff8d0a21ff80f9882dfad79bf1db484c1536116894503f5dfbf0e425b882b3",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0600",
+          "sheetId": "FEED-PFD-0600",
+          "title": "Commercial Scale TLGO Drying",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 6,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=6"
+        }
+      ],
+      "routeLabels": [
+        "T-602 product outlet",
+        "T-602 A700 handoff",
+        "T-602 to TR-701 pickup"
+      ]
+    },
+    {
+      "streamId": "S-600-RECEIVER-VENT",
+      "name": "receiver vent",
+      "source": "T-602",
+      "via": [],
+      "destination": "F-601",
+      "material": "Displacement gas and fines",
+      "phase": "Gas/solid suspension",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "model process context; design and operating sequence unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A600",
+          "title": "Aqueous spray-drying routes, independent exhaust and A-700 solids handoff",
+          "revision": "V146 / 19534f4d6e3e8383ba84e72fd997460ad241d829",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "spray-drying.js": "c77c180b667bf82f9bceeee0369ca3a7ca1746d3895675e497286d4902a74080",
+            "furnace.js": "47ff8d0a21ff80f9882dfad79bf1db484c1536116894503f5dfbf0e425b882b3",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0600",
+          "sheetId": "FEED-PFD-0600",
+          "title": "Commercial Scale TLGO Drying",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 6,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=6"
+        }
+      ],
+      "routeLabels": [
+        "T-602 displacement vent",
+        "T-602 vent to F-601"
+      ]
+    },
+    {
+      "streamId": "S-700-LOCK-AIR-VENT",
+      "name": "lock air vent",
+      "source": "LK-701",
+      "via": [],
+      "destination": "F-601",
+      "material": "Gas mixture; composition unqualified",
+      "phase": "Gas",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "T-602"
+      ],
+      "operatingMode": "air-fill dust return via receiver vent header; isolated from inert purge mode",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A700",
+          "title": "Thermal-treatment routes, argon supply and independent exhaust interface",
+          "revision": "V147 / 3313c00fbde0d2bdc4480201823d2012260b2e15",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "furnace.js": "47ff8d0a21ff80f9882dfad79bf1db484c1536116894503f5dfbf0e425b882b3",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0700",
+          "sheetId": "FEED-PFD-0700",
+          "title": "High Temperature Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 7,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=7"
+        }
+      ],
+      "routeLabels": [
+        "LK-701 air return to T-602 vent"
+      ]
+    }
+  ]
+}

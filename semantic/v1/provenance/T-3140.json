@@ -1,0 +1,103 @@
+{
+  "assetId": "T-3140",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "T-3140",
+      "source": "FEED-PFD-3000",
+      "revision": null,
+      "page": 1,
+      "status": "draft-pfd",
+      "confidence": "review required",
+      "gapId": "A3000-005"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3000-003"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3000-003"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3000-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3000-003"
+    },
+    {
+      "valueId": "PV-A-3000-0115",
+      "property": "design.materialOfConstruction",
+      "value": "Vinyl-ester-novolac FRP after cooling/wetting; PP/PVDF packing/demister; 316L or Alloy 601/602 CA on hot/dry/H₂ upstream branches",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 66 (M-062)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "WV-materialOfConstruc-T-3140",
+      "note": "scope: V-3110/T-3140/T-3180/P-3181 A/B/FN-3160/ST-3170 integrated vent-treatment train; alt: PVDF-lined fan/pump; Ni 200/201 at controlled alkali-condensation points; status FIRM | D-A3000-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-3000-0127",
+      "property": "identity.designConcept",
+      "value": "S1 — the existing wet caustic scrubber sized on the WET vents only (a few hundred to ≈ 1,000 Nm³/h: A-300 quench O₂ ≈ 160 Nm³/h peak with acid mist, tank breathing, future acid-concentrator SO₂/CO₂); furnace gases excluded",
+      "unit": null,
+      "source": "FEED-PE-REP-041",
+      "revision": "V1.0",
+      "location": "Executive conclusion / §4",
+      "status": "approved",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": null,
+      "note": "PFD-3000 single header rated RED | D-A3000-01: REP-041 segregation adopted as design intent: S1 wet caustic scrubber on wet vents only (a few hundred to ≈ 1,000 Nm³/h); furnace gases excluded.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-3000-0131",
+      "property": "safeguards.segregation",
+      "value": "H₂ + O₂ + CO in one header and K into water are the two failure modes the as-drawn PFD-3000 creates — segregation into three systems is the safeguard intent",
+      "unit": null,
+      "source": "FEED-PE-REP-041",
+      "revision": "V1.0",
+      "location": "Executive conclusion",
+      "status": "approved",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": null,
+      "note": "D-A3000-01: H₂ + O₂ + CO in one header and K into water are the failure modes the as-drawn PFD-3000 creates — segregation is the safeguard intent.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

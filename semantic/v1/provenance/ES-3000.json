@@ -1,0 +1,49 @@
+{
+  "assetId": "ES-3000",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "ES-3000",
+      "source": "MODEL-A6000-EMERGENCY",
+      "revision": "V159",
+      "status": "model-derived",
+      "confidence": "review required"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A6000-002"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A6000-007"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A6000-007"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A6000-007"
+    }
+  ]
+}

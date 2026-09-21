@@ -1,0 +1,85 @@
+{
+  "result": "PASS",
+  "reviewedBearingMoves": [
+    {
+      "partId": 68755,
+      "from": [
+        -23,
+        1.8,
+        -26.549999999999997
+      ],
+      "to": [
+        -23,
+        1.8,
+        -26.4
+      ],
+      "reason": "P-163 waste line: 150 mm bearing adjustment to nominal station after A-1000 rack coordination; original pipe unchanged"
+    }
+  ],
+  "summary": {
+    "externalElements": 4002,
+    "directAttachmentElements": 617,
+    "supports": 1545,
+    "rackFrames": 139,
+    "existingSteelAttachmentGroups": 19,
+    "columns": 295,
+    "sharedStructures": 50,
+    "placementHolds": 0,
+    "shortConnections": 3221,
+    "vendorFlexible": 132,
+    "structurallyQualified": false
+  },
+  "optimization": {
+    "baseline": {
+      "revision": "pipe-support-31",
+      "frames": 672,
+      "columns": 1272,
+      "bearings": 1229,
+      "memberLengthM": 13367.883563560415,
+      "memberEnvelopeVolumeM3": 248.0813152417644
+    },
+    "frames": 139,
+    "columns": 295,
+    "sharedStructures": 50,
+    "singleBearingStructures": 26,
+    "singleBearingAttachmentGroups": 5,
+    "memberLengthM": 5652.384036308293,
+    "memberEnvelopeVolumeM3": 68.99956454508478,
+    "columnReductionPercent": 76.80817610062893,
+    "frameReductionPercent": 79.31547619047619,
+    "memberLengthReductionPercent": 57.71668709236699,
+    "metricBasis": "Current totals include the added A-1000 treatment area; comparison baselines predate that expansion. Geometry comparison only. Member envelope volume is not steel mass or a material take-off; sections and connections are unqualified.",
+    "previousRevision": {
+      "baseline": {
+        "revision": "pipe-support-32",
+        "frames": 226,
+        "columns": 434,
+        "bearings": 1236,
+        "singleBearingStructures": 89,
+        "memberLengthM": 6081.384688446933,
+        "memberEnvelopeVolumeM3": 92.20804656438064
+      },
+      "frameReductionPercent": 38.495575221238944,
+      "columnReductionPercent": 32.02764976958525,
+      "memberLengthReductionPercent": 7.054325192642907
+    }
+  },
+  "pipeGeometryUnchanged": true,
+  "lostDirectAttachments": [],
+  "longitudinalConnections": 50,
+  "protectedTaskSpaces": 54,
+  "newSupportAccessConflicts": 0,
+  "roOverheadRouteM": 24.105997737144694,
+  "cipRouteLengthsM": [
+    {
+      "name": "TFF CIP supply",
+      "length": 10.539593939827967
+    },
+    {
+      "name": "TFF CIP return to package",
+      "length": 18.252459594336557
+    }
+  ],
+  "placementHolds": [],
+  "qualification": "Geometry and attachment coverage only. Allowable spans, pipe stress, nozzle loads, member strength, foundations, wind/seismic and test loads require engineering calculation."
+}

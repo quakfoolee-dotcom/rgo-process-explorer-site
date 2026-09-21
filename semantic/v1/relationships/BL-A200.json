@@ -1,0 +1,13 @@
+{
+  "assetId": "BL-A200",
+  "relationships": [
+    {
+      "id": "REL-BL-A200-AREA",
+      "type": "locatedIn",
+      "target": "A-200",
+      "status": "model register area",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    }
+  ]
+}

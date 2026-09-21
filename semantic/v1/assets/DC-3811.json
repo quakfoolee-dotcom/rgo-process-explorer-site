@@ -1,0 +1,36 @@
+{
+  "assetId": "DC-3811",
+  "name": "Dry inventory vent collection package; selection HOLD",
+  "assetClassId": "Package",
+  "status": "proposed",
+  "identityStatus": "model-derived; tag qualification open",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-3000",
+    "system": "A-800 dry inventory breathing context",
+    "parentAsset": null
+  },
+  "processFunction": "Dry inventory vent collection package; selection HOLD",
+  "handledMaterials": [
+    "Dry inert purge exhaust with mixed rGO/KBH4 dust potential"
+  ],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null
+  },
+  "operatingEnvelope": null,
+  "processBasis": [],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "AB-3801 is a proposed specialist package envelope. The draft requires H2-safe handling plus particulate and trace-boron capture, but selects no combustion, catalytic, adsorption, filtration or polishing technology. No destruction, capture or emission performance is credited.",
+    "The draft identifies H2 and trace boron species and requires hydrogen monitoring. Oxygen ingress, moisture, boron chemistry, particulate loading, normal and peak gas evolution, ignition sources and residual batch reactivity remain unknown. Draft maximum 10 ppm oxygen is not an approved package setpoint.",
+    "FN-801 and AB-3801 pressure drop, draft +2 psig source statement, furnace pressure limits, fan or purge failure response, isolation and safe shutdown are not approved. PSV-801 emergency relief remains independent on IF-A800-RELIEF with no normal-treatment credit.",
+    "ST-3802 is a proposed independent outlet. Stack height, velocity, sampling access, condensate or solids management, dispersion, pollutant limits and jurisdictional authorization remain unqualified. Geometry does not establish an atmospheric discharge approval.",
+    "DC-3811 receives modeled dry vents from TR-801, H-801, H-802, F-801, MX-801, H-803 and LK-802. Each branch requires simultaneous-load, dust/reactivity, purge and pressure qualification. Collection media, cleaning method, containment, secondary treatment and final outlet are unselected.",
+    "F-802 uses the separate DC-3812 route because KBH4 dust may be water-reactive and may evolve H2. No generic water wash or air-pulse cleaning is assumed. The modeled outlet remains positively blinded until compatible downstream abatement and safe disposal are designed.",
+    "AB-3801, DC-3811 and DC-3812 remain separate from HD-3100 wet-acid treatment, AB-3701 thermal service, E-801 reactive residue and emergency relief. No dry-package operating outlet stream is created because both modeled package outlets are blinded connection holds."
+  ]
+}

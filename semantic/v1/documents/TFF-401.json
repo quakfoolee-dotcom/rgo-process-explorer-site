@@ -1,0 +1,77 @@
+{
+  "assetId": "TFF-401",
+  "documents": [
+    {
+      "documentId": "MODEL-A400",
+      "title": "A-400 washing routes, VSEP and cleaning package model",
+      "revision": "V144 / f82bb71f58c4945fec3a0a1629193d9a16188926",
+      "page": null,
+      "status": "model-derived; not an approved process design",
+      "availability": "available model source reviewed",
+      "files": {
+        "a400.js": "a1030f59c4a82d4a7e01adce33f317865c4a87aec177aef8d45b115fe1ee9c16",
+        "vsep.js": "9bfd04db0fe2f35924cc0a348e8a4cf0952ab31bc898778b20b69d1356301b8f",
+        "a400-basis.js": "b5daadebe792c358ea3a6190ab39029382d80e1830e8073c34c67ff8b63a8ab9"
+      },
+      "hashNormalization": "UTF-8 text with LF line endings"
+    },
+    {
+      "documentId": "FEED-PFD-0400",
+      "title": "A-400 washing PFD referenced by inherited engineering register",
+      "revision": null,
+      "page": null,
+      "status": "not reviewed; source sheet unavailable in local excerpt bundle",
+      "availability": "missing; register references full-document page 9, not a page in pfd-temperature-sheets.pdf"
+    },
+    {
+      "documentId": "FEED-PE-MAT-002",
+      "title": "MOC Selection Matrix",
+      "revision": "V1.1",
+      "page": null,
+      "status": "controlled",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.1.xlsx"
+    },
+    {
+      "documentId": "FEED-PE-PFD-001",
+      "title": "Process Flow Diagram",
+      "revision": "V5.1.1",
+      "page": null,
+      "status": "controlled (Draft - IFR)",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-PFD-001_Process-Flow-Diagram_V5.1.1.pdf"
+    },
+    {
+      "documentId": "FEED-PE-DBM-001",
+      "title": "Design Basis Memorandum",
+      "revision": "V2.0",
+      "page": null,
+      "status": "controlled (approved)",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "3 Design Basis Memorandum (DBM)\\FEED-PE-DBM-001_Design-Basis-Memorandum_V2.0.docx"
+    },
+    {
+      "documentId": "FEED-PE-REP-001",
+      "title": "A-400 Membrane Washing System Selection Report",
+      "revision": "V1.1",
+      "page": null,
+      "status": "controlled",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "B. Technical Reports\\FEED-PE-REP-001_A-400-Membrane-Washing-System-Selection-Report_V1.1.docx"
+    },
+    {
+      "documentId": "FEED-PE-REP-036",
+      "title": "A-400 TLGO Washing Optimization — governing chemical and transport phenomena",
+      "revision": "V1.0",
+      "page": null,
+      "status": "controlled",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "B. Technical Reports\\FEED-PE-REP-036_A-400-TLGO-Washing-Optimization_V1.0.docx"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "assetId": "T-3180",
+  "bindingId": "GEOMETRY-T-3180",
+  "modelEquipmentId": 602,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

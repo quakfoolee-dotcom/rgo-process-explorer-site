@@ -1,0 +1,119 @@
+{
+  "assetId": "T-402",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "T-402",
+      "source": "MODEL-A400",
+      "revision": "V144 / f82bb71f58c4945fec3a0a1629193d9a16188926",
+      "page": null,
+      "status": "model-derived",
+      "confidence": "review required",
+      "gapId": "A400-001"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A400-002"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A400-002"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A400-002"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A400-002"
+    },
+    {
+      "valueId": "PV-A-400-0085",
+      "property": "design.materialOfConstruction",
+      "value": "PVDF- or PFA-lined carbon-steel pressure vessel",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 35 (M-031)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "CF-materialOfConstruc-T-402",
+      "note": "scope: T-402 TLGO Diafiltration Tank (pressure-assisted to 60 psi); alt: Code-qualified dual-laminate FRP pressure vessel where the vendor demonstrates the required pressure rating; status FIRM | D-A400-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-400-0116",
+      "property": "operatingEnvelope.feedPH",
+      "value": 1,
+      "unit": null,
+      "source": "FEED-PE-MEB-007",
+      "revision": "V17.0",
+      "location": "'Design Basis & Inputs'!row 25 (pH_start)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": null,
+      "note": "from A-300 acid wash | From A-300 acid wash. | D-A400-02: pH 1 feed from the A-300 acid wash (MEB-007; REP-007; PP-NTE-001). REP-036 carries pH 0–1 as the range.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-400-0117",
+      "property": "operatingEnvelope.targetPH",
+      "value": 5,
+      "unit": null,
+      "source": "FEED-PE-MEB-007",
+      "revision": "V17.0",
+      "location": "'Design Basis & Inputs'!row 26 (pH_target)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": null,
+      "note": "AGEIAS DB §2.1 | AGEIAS DB §2.1. | D-A400-02: pH 5 washed product (MEB-007 AGEIAS DB §2.1; all documents agree).",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-400-0138",
+      "property": "operatingEnvelope.operatingMode",
+      "value": "A-400 onward continuous or semi-continuous at the design rates of Table 3.3-1, with surge/hold at the batch-to-continuous boundary (T-501)",
+      "unit": null,
+      "source": "FEED-PE-DBM-001",
+      "revision": "V2.0",
+      "location": "§3.4 batch structure",
+      "status": "approved",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": null,
+      "note": "DBM V2.0 | D-A400-02: DBM V2.0 §3.4: A-400 onward continuous / semi-continuous at design rates with surge at T-501.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

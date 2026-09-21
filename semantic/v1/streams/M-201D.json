@@ -1,0 +1,46 @@
+{
+  "assetId": "M-201D",
+  "streams": [
+    {
+      "streamId": "S-200-RC-D",
+      "name": "R-201D recirculation loop",
+      "source": "R-201D",
+      "destination": "R-201D",
+      "via": [
+        "P-205D",
+        "SI-201D",
+        "M-201D"
+      ],
+      "material": "Oxidation slurry",
+      "phase": "Liquid/solid suspension",
+      "massFlow": null,
+      "temperature": {
+        "basis": "PFD operating range",
+        "rangeC": [
+          45,
+          50
+        ]
+      },
+      "pressure": null,
+      "status": "modeled; package allocation open",
+      "routeLabels": [
+        "P-205D to induction package",
+        "M-201D static mixing spool",
+        "M-201D return to reactor"
+      ],
+      "contextAssetIds": [
+        "R-201D"
+      ],
+      "feedRatio": null,
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        }
+      ]
+    }
+  ]
+}

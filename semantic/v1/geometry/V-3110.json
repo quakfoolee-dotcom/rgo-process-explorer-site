@@ -1,0 +1,7 @@
+{
+  "assetId": "V-3110",
+  "bindingId": "GEOMETRY-V-3110",
+  "modelEquipmentId": 600,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

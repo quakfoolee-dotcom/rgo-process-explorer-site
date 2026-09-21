@@ -1,0 +1,69 @@
+{
+  "assetId": "US-501",
+  "name": "Inline sonication package; three cells proposed",
+  "assetClassId": "SonicationPackage",
+  "status": "listed",
+  "identityStatus": "draft-pfd-tag",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-500",
+    "system": "A-500 sonication process context",
+    "parentAsset": null
+  },
+  "processFunction": "Inline sonication package; three cells proposed",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null,
+    "sonotrodeMaterial": "Ti Grade 5 (Ti-6Al-4V), defined tip replacement interval",
+    "bypassProvision": "Bypass around US-501 for start-up / maintenance (conceptual; details on P&ID)"
+  },
+  "operatingEnvelope": {
+    "cavitationBackpressure": "Maintain vendor-specified backpressure and flow at US-501 for stable cavitation (value not stated)",
+    "outletTemperatureC": "30–40 (control TLGO outlet temperature prior to A-600 drying 'for stability'; temperature monitoring at US-501 outlet)",
+    "acceptanceCriterion": "NOT DEFINED — replace 'fully sonicated' with layer count / thickness (AFM), lateral-size PSD, viscosity or turbidity proxy; without it neither dose nor pass count can be set",
+    "technologyBenchmark": "Benchmark ultrasonic flow cells against high-pressure homogenisation (50–150 MPa, 1–3 passes), rotor–stator and the no-treatment case at equal kJ/kg solids before freezing the unit count"
+  },
+  "processBasis": [],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Draft sends cooler outlet toward A-600 with an optional 507 recycle to T-501. Model returns cooled slurry to T-501 and uses proposed P-502 for accepted-product transfer. These paths are not an approved operating sequence.",
+    "Three modeled cells, energy dose, residence time, flow, backpressure, cooling duty and product quality require trials/vendor selection. Draft 1-2 wt% and 30-40 degC targets are not approved setpoints or equipment ratings.",
+    "Available sheet is Draft - Not for Use with revision XXX. Bypass is mentioned conceptually and degassing is suggested; neither is asserted as an installed or connected package. Draft says no added water or DMF for sonication.",
+    "Pressure/vacuum and relief sizing, cooling-loss response, acoustic protection, CIP isolation, sampling criteria, vent compatibility and drain receiving conditions remain unqualified."
+  ],
+  "identity": {
+    "designConcept": "Dose-controlled cavitation loop, not a single flow cell: datasheet to carry acceptance criterion, cumulative dose D_total (J/mL and kJ/kg solids), dose per pass, pass count N, loop RTD, cavitation-field variables",
+    "decisionGate": "Close the A-500 decision through Management of Change with the updated PFD, dose specification, concentration basis and pilot response data before procurement"
+  },
+  "safeguards": {
+    "enclosure": "Retain acoustic shielding, vibration isolation and maintenance bypass as drawn; add enclosure interlocks"
+  },
+  "dataLayer": {
+    "area": "A-500",
+    "source": "data/semantic/A-500",
+    "approvedRows": 9,
+    "heldRows": 0,
+    "pendingRows": 26,
+    "identityHold": null,
+    "applied": "2026-09-21",
+    "baseline": {
+      "design": {
+        "capacityM3": null,
+        "designPressure": null,
+        "designTemperature": null,
+        "materialOfConstruction": null
+      },
+      "operatingEnvelope": null,
+      "identity": null,
+      "safeguards": null
+    },
+    "baselineAbsent": [
+      "identity",
+      "safeguards"
+    ]
+  }
+}

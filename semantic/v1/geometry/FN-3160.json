@@ -1,0 +1,7 @@
+{
+  "assetId": "FN-3160",
+  "bindingId": "GEOMETRY-FN-3160",
+  "modelEquipmentId": 605,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

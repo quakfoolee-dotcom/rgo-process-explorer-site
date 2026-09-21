@@ -1,0 +1,7 @@
+{
+  "assetId": "IF-A3811-OUTLET",
+  "bindingId": "GEOMETRY-IF-A3811-OUTLET",
+  "modelEquipmentId": null,
+  "bindingScope": "unmodeled-interface",
+  "bindingRule": "No operating connection is assigned; the modeled package outlet is positively blinded pending compatible treatment and disposal design."
+}

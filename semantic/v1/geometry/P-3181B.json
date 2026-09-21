@@ -1,0 +1,7 @@
+{
+  "assetId": "P-3181B",
+  "bindingId": "GEOMETRY-P-3181B",
+  "modelEquipmentId": 604,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

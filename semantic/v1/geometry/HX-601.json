@@ -1,0 +1,7 @@
+{
+  "assetId": "HX-601",
+  "bindingId": "GEOMETRY-HX-601",
+  "modelEquipmentId": 73,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

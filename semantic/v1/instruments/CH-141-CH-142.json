@@ -1,0 +1,14 @@
+{
+  "assetId": "CH-141-CH-142",
+  "instruments": [
+    {
+      "functionId": "CH-141-CH-142-STATE",
+      "variable": "equipment state",
+      "purpose": "Confirm permissive, operating and isolated state",
+      "tag": null,
+      "range": null,
+      "status": "function only; approved instrument tag and logic unresolved",
+      "gapId": "A140-003"
+    }
+  ]
+}

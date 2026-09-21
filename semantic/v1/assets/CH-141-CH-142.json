@@ -1,0 +1,49 @@
+{
+  "assetId": "CH-141-CH-142",
+  "name": "Dedicated reagent charging stations",
+  "assetClassId": "BulkSolidsFeedPackage",
+  "status": "listed",
+  "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-140",
+    "system": "Pre-G Synthesis",
+    "parentAsset": null
+  },
+  "processFunction": "Dedicated reagent charging stations",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null
+  },
+  "operatingEnvelope": null,
+  "processBasis": [
+    {
+      "property": "area and equipment identity",
+      "value": {
+        "area": "A-140",
+        "tag": "CH-141-CH-142"
+      },
+      "source": "FEED-PE-PFD-001 / FEED-PFD-0140",
+      "status": "draft PFD basis"
+    },
+    {
+      "property": "modeled baseline",
+      "value": "baseline FEED arrangement only",
+      "source": "MODEL-EARLY-PROCESS",
+      "status": "model-derived"
+    }
+  ],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Approved R-141A/B/C/D datasheets and working volumes are unavailable.",
+    "Reactor, charging and transfer materials and compatibility are unapproved.",
+    "Temperature, pressure, feed, agitation, relief and interlock details are unresolved.",
+    "Premix, K2S2O8 and P2O5 quantities, addition sequence and branch allocation are unresolved.",
+    "CH-141/CH-142 count, branch ownership, dust control and isolation require approved design.",
+    "FEED-PFD-0140 remains a draft basis and requires reconciliation with approved project documents."
+  ]
+}

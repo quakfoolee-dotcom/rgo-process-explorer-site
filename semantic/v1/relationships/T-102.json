@@ -1,0 +1,33 @@
+{
+  "assetId": "T-102",
+  "relationships": [
+    {
+      "id": "REL-T-102-S-100-H2SO4",
+      "type": "feeds",
+      "target": "R-101",
+      "role": "Sulfuric acid feed to R-101",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-100-H2SO4",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-T-102-S-100-VENT-T102",
+      "type": "feeds",
+      "target": "IF-A3000-V-T-102",
+      "role": "T-102 vent handoff",
+      "status": "Existing A-3000 collection interface; line identity, rate and composition unresolved",
+      "streamId": "S-100-VENT-T102",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-T-102-GEOM",
+      "type": "representedBy",
+      "target": "GEOMETRY-T-102",
+      "status": "bound to modeled equipment group",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    }
+  ]
+}

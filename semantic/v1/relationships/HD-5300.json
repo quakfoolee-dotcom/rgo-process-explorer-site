@@ -1,0 +1,121 @@
+{
+  "assetId": "HD-5300",
+  "relationships": [
+    {
+      "id": "REL-HD-5300-AREA",
+      "type": "locatedIn",
+      "target": "A-5000",
+      "status": "model area assignment",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-HD-5300-S-5000-CHW-PRIMARY-A-5310A",
+      "type": "connectedTo",
+      "target": "A-5310A",
+      "role": "chilled-water primary circulation",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "streamId": "S-5000-CHW-PRIMARY",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    },
+    {
+      "id": "REL-HD-5300-S-5000-TCU141-CHW-TCU-141",
+      "type": "connectedTo",
+      "target": "TCU-141",
+      "role": "TCU-141 primary utility",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "streamId": "S-5000-TCU141-CHW",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    },
+    {
+      "id": "REL-HD-5300-S-5000-TCU201-TCU-201",
+      "type": "connectedTo",
+      "target": "TCU-201",
+      "role": "TCU-201 primary utility",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "streamId": "S-5000-TCU201",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    },
+    {
+      "id": "REL-HD-5300-S-5000-TCU303-TCU-303",
+      "type": "connectedTo",
+      "target": "TCU-303",
+      "role": "TCU-303 primary utility",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "streamId": "S-5000-TCU303",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    }
+  ]
+}

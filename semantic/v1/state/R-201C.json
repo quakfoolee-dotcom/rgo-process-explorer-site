@@ -1,0 +1,13 @@
+{
+  "assetId": "R-201C",
+  "state": {
+    "design": "listed",
+    "operational": "unknown",
+    "maintenance": "unknown",
+    "alarm": "unknown",
+    "simulation": "notConnected"
+  },
+  "timestamp": null,
+  "source": null,
+  "note": "No live plant, historian, CMMS or validated simulation state is connected. Unknown is not interpreted as normal. See SRC-007."
+}

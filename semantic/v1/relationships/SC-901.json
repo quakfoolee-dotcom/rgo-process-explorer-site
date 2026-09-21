@@ -1,0 +1,43 @@
+{
+  "assetId": "SC-901",
+  "relationships": [
+    {
+      "id": "REL-SC-901-S-900-FINISH-IN",
+      "type": "connectedTo",
+      "target": "PG-901",
+      "role": "Formed product to cooling and classification",
+      "status": "Model-derived functional topology; design and operation require approved sources",
+      "streamId": "S-900-FINISH",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-SC-901-S-900-ACCEPT-OUT",
+      "type": "connectedTo",
+      "target": "PK-901",
+      "role": "Accepted pellets to collection and release",
+      "status": "Model-derived functional topology; design and operation require approved sources",
+      "streamId": "S-900-ACCEPT",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-SC-901-S-900-REJECT-OUT",
+      "type": "connectedTo",
+      "target": "RB-901",
+      "role": "Off-size product to quarantine boundary",
+      "status": "Model-derived functional topology; design and operation require approved sources",
+      "streamId": "S-900-REJECT",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-SC-901-AREA",
+      "type": "locatedIn",
+      "target": "A-900",
+      "status": "model area assignment",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    }
+  ]
+}

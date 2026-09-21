@@ -1,0 +1,13 @@
+{
+  "assetId": "BL-A400",
+  "relationships": [
+    {
+      "id": "REL-BL-A400-AREA",
+      "type": "locatedIn",
+      "target": "A-400",
+      "status": "model area assignment",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    }
+  ]
+}

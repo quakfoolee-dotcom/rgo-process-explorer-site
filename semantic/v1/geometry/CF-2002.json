@@ -1,0 +1,7 @@
+{
+  "assetId": "CF-2002",
+  "bindingId": "GEOMETRY-CF-2002",
+  "modelEquipmentId": 510,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

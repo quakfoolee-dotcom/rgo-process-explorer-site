@@ -1,0 +1,7 @@
+{
+  "assetId": "P-402",
+  "bindingId": "GEOMETRY-P-402",
+  "modelEquipmentId": 1126940496,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

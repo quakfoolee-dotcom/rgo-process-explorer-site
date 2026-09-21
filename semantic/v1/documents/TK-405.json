@@ -1,0 +1,27 @@
+{
+  "assetId": "TK-405",
+  "documents": [
+    {
+      "documentId": "MODEL-A400",
+      "title": "A-400 washing routes, VSEP and cleaning package model",
+      "revision": "V144 / f82bb71f58c4945fec3a0a1629193d9a16188926",
+      "page": null,
+      "status": "model-derived; not an approved process design",
+      "availability": "available model source reviewed",
+      "files": {
+        "a400.js": "a1030f59c4a82d4a7e01adce33f317865c4a87aec177aef8d45b115fe1ee9c16",
+        "vsep.js": "9bfd04db0fe2f35924cc0a348e8a4cf0952ab31bc898778b20b69d1356301b8f",
+        "a400-basis.js": "b5daadebe792c358ea3a6190ab39029382d80e1830e8073c34c67ff8b63a8ab9"
+      },
+      "hashNormalization": "UTF-8 text with LF line endings"
+    },
+    {
+      "documentId": "FEED-PFD-0400",
+      "title": "A-400 washing PFD referenced by inherited engineering register",
+      "revision": null,
+      "page": null,
+      "status": "not reviewed; source sheet unavailable in local excerpt bundle",
+      "availability": "missing; register references full-document page 9, not a page in pfd-temperature-sheets.pdf"
+    }
+  ]
+}

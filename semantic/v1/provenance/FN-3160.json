@@ -1,0 +1,87 @@
+{
+  "assetId": "FN-3160",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "FN-3160",
+      "source": "FEED-PFD-3000",
+      "revision": null,
+      "page": 1,
+      "status": "draft-pfd",
+      "confidence": "review required",
+      "gapId": "A3000-005"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3000-003"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3000-003"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3000-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3000-003"
+    },
+    {
+      "valueId": "PV-A-3000-0123",
+      "property": "design.materialOfConstruction",
+      "value": "Vinyl-ester-novolac FRP after cooling/wetting; PP/PVDF packing/demister; 316L or Alloy 601/602 CA on hot/dry/H₂ upstream branches",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 66 (M-062)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "WV-materialOfConstruc-FN-3160",
+      "note": "scope: V-3110/T-3140/T-3180/P-3181 A/B/FN-3160/ST-3170 integrated vent-treatment train; alt: PVDF-lined fan/pump; Ni 200/201 at controlled alkali-condensation points; status FIRM | D-A3000-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-3000-0132",
+      "property": "design.feedBasis",
+      "value": "333,000 Nm³/h if A-600 were air-swept at 1 wt % (REP-026 F-27/F-29) — DBM specifies an inert closed loop for A-600; A-600 has its own F-601 / SC-601 and is not an A-3000 load",
+      "unit": null,
+      "source": "FEED-PE-REP-041",
+      "revision": "V1.0",
+      "location": "basis table",
+      "status": "approved",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": null,
+      "note": "D-A3000-01: A-600 is not an A-3000 load (own F-601 / SC-601; DBM inert closed loop); S1 sized on wet vents only.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

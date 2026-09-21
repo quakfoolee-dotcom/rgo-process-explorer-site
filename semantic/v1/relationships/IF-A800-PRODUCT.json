@@ -1,0 +1,33 @@
+{
+  "assetId": "IF-A800-PRODUCT",
+  "relationships": [
+    {
+      "id": "REL-IF-A800-PRODUCT-S-800-PRODUCT-IN",
+      "type": "connectedTo",
+      "target": "PY-801",
+      "role": "product",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-800-PRODUCT",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A800-PRODUCT-S-900-PRODUCT-IN-OUT",
+      "type": "connectedTo",
+      "target": "TR-901",
+      "role": "A-800 product to adjacent A-900 surge",
+      "status": "Model-derived functional topology; design and operation require approved sources",
+      "streamId": "S-900-PRODUCT-IN",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A800-PRODUCT-AREA",
+      "type": "locatedIn",
+      "target": "A-900",
+      "status": "model area assignment",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    }
+  ]
+}

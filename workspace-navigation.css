@@ -1,0 +1,69 @@
+/* Compact task navigation extends the plant's navy and amber palette. */
+.inspection-mode .workspace,.workspace{grid-template-columns:360px minmax(0,1fr)}
+.inspection-mode .sidebar,.sidebar{padding:0;display:flex;flex-direction:column;min-width:0;min-height:0;overflow:hidden;background:#0b1722}
+.sidebar-head{flex:none;padding:14px 14px 12px;border-bottom:1px solid #344b60}
+.sidebar-identity{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px}
+#nav-model-status{font-size:.8125rem;line-height:1.35;color:#adc1d0;max-width:155px}
+.sidebar-identity button{font-size:.875rem;padding:7px 10px;white-space:nowrap}
+#workspace-tabs{position:static;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;padding:3px;margin:0 0 14px;border:1px solid #354e63;border-radius:7px;background:#142638}
+#workspace-tabs button{font-size:.875rem;min-width:0;min-height:44px;padding:8px 4px;border:0;border-radius:4px;letter-spacing:0;color:#c5d5e2}
+#workspace-tabs button[aria-selected=true]{background:#f1c078;color:#172633}
+.browse-context label{font-size:.875rem;font-weight:600;display:block;margin-bottom:6px;color:#bfd1de}
+.browse-context select{min-height:44px;font-size:.875rem}
+#nav-area-help{font-size:.8125rem;line-height:1.4;color:#9fb5c6;margin:7px 0 0}
+.sidebar-content{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;padding:18px 16px;scrollbar-width:thin;scrollbar-color:#667f92 transparent;scroll-padding:12px}
+.sidebar-content h2{font-size:1.125rem;line-height:1.4;margin:0 0 14px}
+.sidebar-content .field-label{font-size:.875rem;letter-spacing:.04em}
+.sidebar-content .small-note{font-size:.875rem;line-height:1.5}
+.sidebar-footer{flex:none;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 14px;border-top:1px solid #344b60}
+.sidebar-footer button{font-size:.875rem;padding:7px 9px;min-height:40px}
+.task-list{display:grid;gap:7px}
+.task-list h3{font-size:.875rem;text-transform:uppercase;letter-spacing:.07em;color:#94adc0;margin:16px 0 2px}
+.task-list h3:first-child{margin-top:0}
+.task-list button{text-align:left;min-height:44px;padding:10px 12px;border:1px solid #334c60;border-radius:6px;background:#142638;font-size:1rem;line-height:1.4;white-space:normal}
+.task-list button:hover{background:#203b50;border-color:#8aa7bc}
+.task-list button.selected-tool{border-left:3px solid #f1c078;background:#20384a}
+.task-list button[aria-pressed=true]{background:#20384a;color:#ffcf88;border-color:#c49b60}
+.task-list button strong,.task-list button span{display:block}
+.task-list button strong{font-size:1rem;font-weight:600}
+.task-list button span{font-size:.875rem;color:#abc1d2;margin-top:5px}
+.task-list button:disabled{opacity:.5;cursor:default}
+#inspection-active .back-link{margin:0 0 14px;padding-left:0;font-size:.875rem}
+#inspection-active-title{border-left:3px solid #f1c078;padding-left:11px}
+#panel-product .journey-card,#panel-thermal .journey-card{margin-top:0}
+#panel-product .journey-card>h3,#panel-thermal .journey-card>h3{display:none}
+#panel-supports>#support-note{border:0;margin:0;padding:0}
+#panel-supports>#support-note>summary{display:none}
+.workspace-dialog{width:min(520px,calc(100vw - 24px));max-height:calc(100dvh - 32px);overflow:auto;background:#122333;color:#e5edf5;border:1px solid #5a758a;padding:20px;box-shadow:0 20px 80px #0008}
+.workspace-dialog .dialog-heading{gap:12px;align-items:flex-start}
+.workspace-dialog h2{font-size:1.25rem;margin:0 0 16px}
+.workspace-dialog h3{font-size:1rem}
+.workspace-dialog p,.workspace-dialog .small-note{font-size:.875rem;line-height:1.55;color:#b6cadb}
+.workspace-dialog .field-label{font-size:.875rem;line-height:1.5;letter-spacing:.04em}
+.workspace-dialog .dialog-heading button{color:#edf3f8;min-width:40px}
+.workspace-dialog button{white-space:normal}
+.workspace-dialog select{font-size:1rem;min-height:44px;margin-bottom:10px}
+.workspace-dialog .design-settings,.workspace-dialog .view-settings{border:0;padding:0}
+.workspace-dialog .check-row{font-size:.875rem;line-height:1.5;display:flex;align-items:center;gap:10px;margin:10px 0}
+.workspace-dialog input[type=checkbox]{width:18px;height:18px;flex:none;accent-color:#f1c078}
+.workspace-dialog .primary{background:#f1c078;color:#172633;border-color:#f1c078}
+.workspace-dialog button:disabled{opacity:.45;cursor:default}
+.dialog-apply{border-top:1px solid #40596e;margin-top:18px;padding-top:8px}
+.resource-links{display:grid;gap:14px;margin:22px 0}
+.stage .panel-minimized{max-height:76px!important;overflow:hidden!important}
+.stage .panel-minimized>:not(:first-child){display:none!important}
+.stage .panel-minimize{font-size:20px;min-width:36px;min-height:36px;padding:2px 7px;margin-left:6px}
+#tree-search{margin-bottom:16px}
+.workspace-dialog a{color:#8ddbcf;line-height:1.5;font-size:.875rem}
+.workspace-dialog summary{font-size:.875rem;line-height:1.5;cursor:pointer}
+.navigation-collapsed .workspace,.inspection-mode.navigation-collapsed .workspace{grid-template-columns:minmax(0,1fr)}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #ffd084;outline-offset:3px}
+@media(max-width:1050px) and (min-width:761px){.inspection-mode .workspace,.workspace{grid-template-columns:330px minmax(0,1fr)}.sidebar-head{padding:12px 10px}.sidebar-content{padding:16px 12px}}
+@media(max-width:760px){main{height:auto;min-height:100dvh}.inspection-mode .workspace,.workspace{display:flex;flex-direction:column;min-height:0}.inspection-mode .sidebar,.sidebar{order:0;width:100%;max-height:none;border-top:0;border-bottom:1px solid #354e63}.sidebar-head{padding:10px 12px}.sidebar-identity{margin-bottom:8px}#workspace-tabs{margin-bottom:8px}.browse-context{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:6px 12px}.browse-context label{margin:0}#nav-area-help{grid-column:1/-1;margin:0}.sidebar-content{min-height:120px;max-height:40dvh;padding:14px}.sidebar-footer{padding:7px 12px}.inspection-mode .stage,.stage{order:1;height:65dvh;min-height:430px}.navigation-collapsed .stage{height:calc(100dvh - 88px)}header{height:auto;min-height:76px;padding:10px 12px;flex-wrap:wrap;gap:8px}.brand{flex:1}.header-actions{flex-wrap:wrap}.mode-switch{margin-left:auto}}
+@media(max-width:390px){#workspace-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.sidebar-identity{flex-wrap:wrap}.inspection-mode .sidebar,.sidebar{max-height:none}.sidebar-content{min-height:80px}}
+
+.stage .panel-minimize{width:44px;height:44px;min-width:44px;min-height:44px;padding:0;flex:none}
+
+/* v112: preserve native minimize-then-close order without separating controls. */
+.stage .panel-window-actions{display:inline-flex;align-items:center;gap:6px;flex:none;margin-left:auto}
+.stage .panel-window-actions>button{width:44px;height:44px;min-width:44px;min-height:44px;margin:0;padding:0;flex:none}

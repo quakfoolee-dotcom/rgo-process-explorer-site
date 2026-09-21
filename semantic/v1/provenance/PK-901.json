@@ -1,0 +1,105 @@
+{
+  "assetId": "PK-901",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "PK-901",
+      "source": "MODEL-A900-V163",
+      "revision": "V163",
+      "status": "model-derived",
+      "confidence": "review required",
+      "gapId": "A900-001"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A900-005"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A900-005"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A900-005"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A900-005"
+    },
+    {
+      "valueId": "PV-A-900-0189",
+      "property": "design.materialOfConstruction",
+      "value": "316L electropolished product-contact surfaces, grounded and bonded; hardfaced/tungsten-carbide rolls and wear parts",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 59 (M-055)",
+      "status": "held",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "CF-materialOfConstruc-PK-901",
+      "note": "scope: T-901/H-901/C-901/RC-901/M-901/SC-901/PK-901/W-901/SE-901; alt: Conductive PTFE liners at flexible interfaces; status FIRM | D-A900-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "identityHold": "Same tag, different equipment: model PK-901 is a technology-neutral collection envelope, not the register cartridge filler; register approvals (inerting basis, product specification) held until FEED-PFD-0900 identities are reconciled with the V162 pelletization line"
+    },
+    {
+      "valueId": "PV-A-900-0206",
+      "property": "operatingEnvelope.inertingBasis",
+      "value": "T-901 argon-blanketed; AR902 inert purge to compaction enclosure 'as required'; AR903 to filling; enclosed handling at slight negative pressure via DC-901 / FN-901",
+      "unit": null,
+      "source": "FEED-PE-REP-023",
+      "revision": "V1.0",
+      "location": "basis table (PFD-0900 reading)",
+      "status": "held",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": null,
+      "note": "D-A900-02: PFD-0900 inerting reading adopted: T-901 argon-blanketed, AR902 purge to compaction enclosure, AR903 to filling, enclosed handling at slight negative pressure via DC-901 / FN-901.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "identityHold": "Same tag, different equipment: model PK-901 is a technology-neutral collection envelope, not the register cartridge filler; register approvals (inerting basis, product specification) held until FEED-PFD-0900 identities are reconciled with the V162 pelletization line"
+    },
+    {
+      "valueId": "PV-A-900-0207",
+      "property": "operatingEnvelope.productSpecification",
+      "value": "Product release per FEED-QA-SPC-001 (stream 804 rGO-BCK specification, draft V0.1)",
+      "unit": null,
+      "source": "FEED-QA-SPC-001",
+      "revision": "V0.1",
+      "location": "whole document",
+      "status": "held",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": null,
+      "note": "CQAs / hold point HP-1 per Quality Engineer report | D-A900-02: Product release per FEED-QA-SPC-001 (draft V0.1) — hold point HP-1.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "identityHold": "Same tag, different equipment: model PK-901 is a technology-neutral collection envelope, not the register cartridge filler; register approvals (inerting basis, product specification) held until FEED-PFD-0900 identities are reconciled with the V162 pelletization line"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "assetId": "R-141C-JACKET",
+  "properties": [
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A5000-001"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A5000-001"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A5000-001"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A5000-001"
+    }
+  ]
+}

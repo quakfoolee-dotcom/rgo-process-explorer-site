@@ -1,0 +1,57 @@
+{
+  "assetId": "SF-201B",
+  "streams": [
+    {
+      "streamId": "S-200-PREG-B",
+      "name": "Pre-G feed B",
+      "source": "SF-201B",
+      "destination": "R-201B",
+      "material": "Dried Pre-G",
+      "phase": "Solid",
+      "massFlow": null,
+      "temperature": null,
+      "pressure": null,
+      "status": "PFD function; branch allocation proposed",
+      "routeLabels": [
+        "Pre-G chute B",
+        "Pre-G nozzle connection B"
+      ],
+      "contextAssetIds": [
+        "R-201B"
+      ],
+      "feedRatio": null,
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        }
+      ]
+    },
+    {
+      "streamId": "S-200-HOPPER-201-B",
+      "name": "Hopper to feeder 201B",
+      "source": "H-201B",
+      "destination": "SF-201B",
+      "via": [],
+      "material": "Dried Pre-G",
+      "phase": "Solid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "status": "Modeled package function; branch allocation proposed",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ]
+    }
+  ]
+}

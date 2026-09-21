@@ -1,0 +1,7 @@
+{
+  "assetId": "TCU-201",
+  "bindingId": "GEOMETRY-TCU-201",
+  "modelEquipmentId": 831,
+  "bindingScope": "assembly-context",
+  "bindingRule": "A-5000 model assembly; planning geometry does not establish capacity, rating or construction readiness."
+}

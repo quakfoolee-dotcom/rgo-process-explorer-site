@@ -1,0 +1,246 @@
+{
+  "assetId": "H-802",
+  "relationships": [
+    {
+      "id": "REL-H-802-AREA",
+      "type": "locatedIn",
+      "target": "A-800",
+      "status": "model area assignment",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-H-802-MONITOR",
+      "type": "monitoredBy",
+      "target": "AIT-801",
+      "status": "Model functional context; instruments and protective limits unqualified",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A800",
+          "title": "Doping, dry charging, argon, independent exhaust and A-900 handoff",
+          "revision": "V148 / 19b52eb01578140a4d021ec6d47fd98d1b671ba5",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+            "a800-basis.js": "0ee9741872bf91a9e4898324690cd43ec2ab246478883645300b6311900bc757",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0800",
+          "sheetId": "FEED-PFD-0800",
+          "title": "Commercial Scale rGO Doping and Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 8,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=8"
+        }
+      ]
+    },
+    {
+      "id": "REL-H-802-S-800-REAGENT-TRANSFER-LK-802",
+      "type": "connectedTo",
+      "target": "LK-802",
+      "role": "reagent transfer",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-800-REAGENT-TRANSFER",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A800",
+          "title": "Doping, dry charging, argon, independent exhaust and A-900 handoff",
+          "revision": "V148 / 19b52eb01578140a4d021ec6d47fd98d1b671ba5",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+            "a800-basis.js": "0ee9741872bf91a9e4898324690cd43ec2ab246478883645300b6311900bc757",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0800",
+          "sheetId": "FEED-PFD-0800",
+          "title": "Commercial Scale rGO Doping and Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 8,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=8"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          115
+        ],
+        "routeLabels": [
+          "LK-802 to H-802 dry transfer"
+        ]
+      }
+    },
+    {
+      "id": "REL-H-802-S-800-REAGENT-REFILL-F-802",
+      "type": "connectedTo",
+      "target": "F-802",
+      "role": "reagent refill",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-800-REAGENT-REFILL",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A800",
+          "title": "Doping, dry charging, argon, independent exhaust and A-900 handoff",
+          "revision": "V148 / 19b52eb01578140a4d021ec6d47fd98d1b671ba5",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+            "a800-basis.js": "0ee9741872bf91a9e4898324690cd43ec2ab246478883645300b6311900bc757",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0800",
+          "sheetId": "FEED-PFD-0800",
+          "title": "Commercial Scale rGO Doping and Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 8,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=8"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          105
+        ],
+        "routeLabels": [
+          "H-802 to F-802 refill",
+          "F-802 flexible inlet"
+        ]
+      }
+    },
+    {
+      "id": "REL-H-802-S-800-ARGON-H802-AR-801",
+      "type": "connectedTo",
+      "target": "AR-801",
+      "role": "argon h802",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-800-ARGON-H802",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A800",
+          "title": "Doping, dry charging, argon, independent exhaust and A-900 handoff",
+          "revision": "V148 / 19b52eb01578140a4d021ec6d47fd98d1b671ba5",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+            "a800-basis.js": "0ee9741872bf91a9e4898324690cd43ec2ab246478883645300b6311900bc757",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0800",
+          "sheetId": "FEED-PFD-0800",
+          "title": "Commercial Scale rGO Doping and Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 8,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=8"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          112
+        ],
+        "routeLabels": [
+          "FCV-AR801-H802 delivery"
+        ]
+      }
+    },
+    {
+      "id": "REL-H-802-S-800-VENT-H802-DC-3811",
+      "type": "connectedTo",
+      "target": "DC-3811",
+      "role": "vent h802",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-800-VENT-H802",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A800",
+          "title": "Doping, dry charging, argon, independent exhaust and A-900 handoff",
+          "revision": "V148 / 19b52eb01578140a4d021ec6d47fd98d1b671ba5",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+            "a800-basis.js": "0ee9741872bf91a9e4898324690cd43ec2ab246478883645300b6311900bc757",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0800",
+          "sheetId": "FEED-PFD-0800",
+          "title": "Commercial Scale rGO Doping and Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 8,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=8"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          640
+        ],
+        "routeLabels": [
+          "XV-VT801-H802 to dry vent header",
+          "A800 dry vent header",
+          "BL-VENT801 to DC-3811"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,457 @@
+{
+  "assetId": "T-303",
+  "streams": [
+    {
+      "streamId": "S-200-TRANSFER-A",
+      "name": "R-201A transfer to fixing interface",
+      "source": "R-201A",
+      "destination": "T-303",
+      "via": [],
+      "alternativeVia": [
+        "P-206A",
+        "P-206B"
+      ],
+      "material": "Oxidation slurry",
+      "phase": "Liquid/solid suspension",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "status": "Modeled common transfer system; pump selection and branch allocation unresolved",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ],
+      "routeLabels": [
+        "P-206 discharge to T-303"
+      ]
+    },
+    {
+      "streamId": "S-200-TRANSFER-B",
+      "name": "R-201B transfer to fixing interface",
+      "source": "R-201B",
+      "destination": "T-303",
+      "via": [],
+      "alternativeVia": [
+        "P-206A",
+        "P-206B"
+      ],
+      "material": "Oxidation slurry",
+      "phase": "Liquid/solid suspension",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "status": "Modeled common transfer system; pump selection and branch allocation unresolved",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ],
+      "routeLabels": [
+        "P-206 discharge to T-303"
+      ]
+    },
+    {
+      "streamId": "S-200-TRANSFER-C",
+      "name": "R-201C transfer to fixing interface",
+      "source": "R-201C",
+      "destination": "T-303",
+      "via": [],
+      "alternativeVia": [
+        "P-206A",
+        "P-206B"
+      ],
+      "material": "Oxidation slurry",
+      "phase": "Liquid/solid suspension",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "status": "Modeled common transfer system; pump selection and branch allocation unresolved",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ],
+      "routeLabels": [
+        "P-206 discharge to T-303"
+      ]
+    },
+    {
+      "streamId": "S-200-TRANSFER-D",
+      "name": "R-201D transfer to fixing interface",
+      "source": "R-201D",
+      "destination": "T-303",
+      "via": [],
+      "alternativeVia": [
+        "P-206A",
+        "P-206B"
+      ],
+      "material": "Oxidation slurry",
+      "phase": "Liquid/solid suspension",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "status": "Modeled common transfer system; pump selection and branch allocation unresolved",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ],
+      "routeLabels": [
+        "P-206 discharge to T-303"
+      ]
+    },
+    {
+      "streamId": "S-300-REAGENT-PEROXIDE",
+      "name": "reagent peroxide",
+      "source": "T-301",
+      "destination": "T-303",
+      "via": [
+        "P-301"
+      ],
+      "material": "Hydrogen peroxide",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "status": "Draft process intent and model route; final line identities, compatibility and allocations unqualified",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-0300",
+          "sheetId": "FEED-PFD-0300",
+          "title": "TLGO Fixing draft sheet",
+          "revision": null,
+          "revisionNote": "Sheet revision field is placeholder XXX; X01 document-creation row dated 15-Feb-2026. Do not equate it with the inherited V5.1/V5.1.1 bundle labels.",
+          "page": 4,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=4"
+        },
+        {
+          "documentId": "MODEL-A300",
+          "revision": "V143 baseline",
+          "page": null
+        }
+      ],
+      "routeLabels": [
+        "T-301 to P-301 peroxide suction",
+        "Peroxide dosing to T-303"
+      ]
+    },
+    {
+      "streamId": "S-300-CENTRIFUGE-FEED",
+      "name": "centrifuge feed",
+      "source": "T-303",
+      "destination": "C-301",
+      "via": [
+        "P-303"
+      ],
+      "material": "Quenched slurry",
+      "phase": "Liquid/solid suspension",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "status": "Draft process intent and model route; final line identities, compatibility and allocations unqualified",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-0300",
+          "sheetId": "FEED-PFD-0300",
+          "title": "TLGO Fixing draft sheet",
+          "revision": null,
+          "revisionNote": "Sheet revision field is placeholder XXX; X01 document-creation row dated 15-Feb-2026. Do not equate it with the inherited V5.1/V5.1.1 bundle labels.",
+          "page": 4,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=4"
+        },
+        {
+          "documentId": "MODEL-A300",
+          "revision": "V143 baseline",
+          "page": null
+        }
+      ],
+      "routeLabels": [
+        "T-303 quenched slurry to P-303",
+        "P-303 to C-301 feed"
+      ]
+    },
+    {
+      "streamId": "S-300-RO",
+      "name": "ro",
+      "source": "IF-A300-RO",
+      "destination": "T-303",
+      "via": [],
+      "material": "RO water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "status": "Draft process intent and model route; final line identities, compatibility and allocations unqualified",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-0300",
+          "sheetId": "FEED-PFD-0300",
+          "title": "TLGO Fixing draft sheet",
+          "revision": null,
+          "revisionNote": "Sheet revision field is placeholder XXX; X01 document-creation row dated 15-Feb-2026. Do not equate it with the inherited V5.1/V5.1.1 bundle labels.",
+          "page": 4,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=4"
+        },
+        {
+          "documentId": "MODEL-A300",
+          "revision": "V143 baseline",
+          "page": null
+        }
+      ],
+      "routeLabels": [
+        "RO dilution supply to T-303"
+      ]
+    },
+    {
+      "streamId": "S-300-COOLING-SUPPLY",
+      "name": "cooling supply",
+      "source": "TCU-303",
+      "destination": "T-303",
+      "via": [],
+      "material": "Unqualified cooling medium",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "status": "Draft process intent and model route; final line identities, compatibility and allocations unqualified",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-0300",
+          "sheetId": "FEED-PFD-0300",
+          "title": "TLGO Fixing draft sheet",
+          "revision": null,
+          "revisionNote": "Sheet revision field is placeholder XXX; X01 document-creation row dated 15-Feb-2026. Do not equate it with the inherited V5.1/V5.1.1 bundle labels.",
+          "page": 4,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=4"
+        },
+        {
+          "documentId": "MODEL-A300",
+          "revision": "V143 baseline",
+          "page": null
+        }
+      ],
+      "routeLabels": [
+        "Cooling supply to T-303"
+      ]
+    },
+    {
+      "streamId": "S-300-COOLING-RETURN",
+      "name": "cooling return",
+      "source": "T-303",
+      "destination": "TCU-303",
+      "via": [],
+      "material": "Unqualified cooling medium",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "status": "Draft process intent and model route; final line identities, compatibility and allocations unqualified",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-0300",
+          "sheetId": "FEED-PFD-0300",
+          "title": "TLGO Fixing draft sheet",
+          "revision": null,
+          "revisionNote": "Sheet revision field is placeholder XXX; X01 document-creation row dated 15-Feb-2026. Do not equate it with the inherited V5.1/V5.1.1 bundle labels.",
+          "page": 4,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=4"
+        },
+        {
+          "documentId": "MODEL-A300",
+          "revision": "V143 baseline",
+          "page": null
+        }
+      ],
+      "routeLabels": [
+        "T-303 cooling return"
+      ]
+    },
+    {
+      "streamId": "S-300-QUENCH-VENT",
+      "name": "quench vent",
+      "source": "T-303",
+      "destination": "IF-A3000-AV201",
+      "via": [],
+      "material": "Quench vent mixture",
+      "phase": "Gas",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "status": "Draft process intent and model route; final line identities, compatibility and allocations unqualified",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-0300",
+          "sheetId": "FEED-PFD-0300",
+          "title": "TLGO Fixing draft sheet",
+          "revision": null,
+          "revisionNote": "Sheet revision field is placeholder XXX; X01 document-creation row dated 15-Feb-2026. Do not equate it with the inherited V5.1/V5.1.1 bundle labels.",
+          "page": 4,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=4"
+        },
+        {
+          "documentId": "MODEL-A300",
+          "revision": "V143 baseline",
+          "page": null
+        },
+        {
+          "documentId": "MODEL-A3000",
+          "title": "Candidate wet-acid vent collection, treatment and segregated liquid handling",
+          "revision": "V152 / 18e2f81ccfb90eec25064f50c98540aea197908b",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3",
+            "upstream.js": "a86dace5481a8870491f02663edfa01529150b9d649830c37a8b67aad3dd4ece",
+            "separations.js": "3f54880bd0f732e86ed2838471f8e7df83a4173276e31073ade8fe0a719c3f16"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-3000",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Commercial Scale Vent Gas Treatment System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-3000.pdf",
+          "sha256": "4f735054c567eadecdbd1f00e4bc7d78751965bf856200af37b03ba504eb0a51",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S1",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 1",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 1,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S2",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 2",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 2,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=2"
+        }
+      ],
+      "routeLabels": [
+        "T-303 normal vent to treatment"
+      ]
+    },
+    {
+      "streamId": "S-5000-T303",
+      "name": "T-303 isolated cooling service",
+      "source": "TCU-303",
+      "via": [],
+      "destination": "T-303",
+      "material": "Unselected isolated secondary-loop fluid",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "T-303"
+      ],
+      "operatingMode": "Secondary temperature and duty unknown",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    }
+  ]
+}

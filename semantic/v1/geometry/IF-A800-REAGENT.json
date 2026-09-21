@@ -1,0 +1,7 @@
+{
+  "assetId": "IF-A800-REAGENT",
+  "bindingId": "GEOMETRY-IF-A800-REAGENT",
+  "modelEquipmentId": null,
+  "bindingScope": "unmodeled-interface",
+  "bindingRule": "No specific model assembly or qualified receiving destination is assigned."
+}

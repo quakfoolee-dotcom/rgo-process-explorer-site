@@ -1,0 +1,7 @@
+{
+  "assetId": "FN-701",
+  "bindingId": "GEOMETRY-FN-701",
+  "modelEquipmentId": 88,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

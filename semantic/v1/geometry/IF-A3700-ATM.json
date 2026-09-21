@@ -1,0 +1,7 @@
+{
+  "assetId": "IF-A3700-ATM",
+  "bindingId": "GEOMETRY-IF-A3700-ATM",
+  "modelEquipmentId": null,
+  "bindingScope": "unmodeled-interface",
+  "bindingRule": "No qualified discharge geometry or receiving environment is assigned."
+}

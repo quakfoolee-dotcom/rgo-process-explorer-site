@@ -1,0 +1,28 @@
+{
+  "assetId": "SF-201D",
+  "name": "Pre-G feeder D",
+  "assetClassId": "Feeder",
+  "status": "proposed",
+  "identityStatus": "provisional-model-tag",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-200",
+    "system": "A-200 connected process context",
+    "parentAsset": null
+  },
+  "processFunction": "Pre-G feeder D",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null
+  },
+  "operatingEnvelope": null,
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Model identity and geometry context only; capacities, ratings and exact connectivity require approved source reconciliation.",
+    "Approved source gaps tracked under A200-001."
+  ]
+}

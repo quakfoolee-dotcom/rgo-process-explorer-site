@@ -1,0 +1,41 @@
+{
+  "assetId": "IF-A6000-EW-RUNOFF",
+  "properties": [
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A6000-005"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A6000-005"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A6000-005"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A6000-005"
+    }
+  ]
+}

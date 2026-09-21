@@ -1,0 +1,47 @@
+{
+  "assetId": "IF-A400-TFF-DRAIN",
+  "relationships": [
+    {
+      "id": "REL-IF-A400-TFF-DRAIN-AREA",
+      "type": "locatedIn",
+      "target": "A-400",
+      "status": "model area assignment",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A400-TFF-DRAIN-S-400-MODULE-DRAIN-TFF-401",
+      "type": "connectedTo",
+      "target": "TFF-401",
+      "role": "module drain",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-400-MODULE-DRAIN",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A400",
+          "title": "A-400 washing routes, VSEP and cleaning package model",
+          "revision": "V144 / f82bb71f58c4945fec3a0a1629193d9a16188926",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "a400.js": "a1030f59c4a82d4a7e01adce33f317865c4a87aec177aef8d45b115fe1ee9c16",
+            "vsep.js": "9bfd04db0fe2f35924cc0a348e8a4cf0952ab31bc898778b20b69d1356301b8f",
+            "a400-basis.js": "b5daadebe792c358ea3a6190ab39029382d80e1830e8073c34c67ff8b63a8ab9"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          33
+        ],
+        "routeLabels": [
+          "TFF-401 closed module drain"
+        ]
+      }
+    }
+  ]
+}

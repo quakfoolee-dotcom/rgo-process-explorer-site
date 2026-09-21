@@ -1,0 +1,7 @@
+{
+  "assetId": "IF-A300-WASTE",
+  "bindingId": "GEOMETRY-IF-A300-WASTE",
+  "modelEquipmentId": null,
+  "bindingScope": "unmodeled-interface",
+  "bindingRule": "Semantic boundary only; no specific model assembly or final destination is assigned."
+}

@@ -1,0 +1,7 @@
+{
+  "assetId": "IF-A800-E801-RETURN",
+  "bindingId": "GEOMETRY-IF-A800-E801-RETURN",
+  "modelEquipmentId": null,
+  "bindingScope": "unmodeled-interface",
+  "bindingRule": "No specific model assembly or qualified receiving destination is assigned."
+}

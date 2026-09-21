@@ -1,0 +1,233 @@
+{
+  "assetId": "E-701",
+  "relationships": [
+    {
+      "id": "REL-E-701-AREA",
+      "type": "locatedIn",
+      "target": "A-700",
+      "status": "model area assignment",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-E-701-S-700-OFFGAS-PY-701",
+      "type": "connectedTo",
+      "target": "PY-701",
+      "role": "offgas",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-700-OFFGAS",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A700",
+          "title": "Thermal-treatment routes, argon supply and independent exhaust interface",
+          "revision": "V147 / 3313c00fbde0d2bdc4480201823d2012260b2e15",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "furnace.js": "47ff8d0a21ff80f9882dfad79bf1db484c1536116894503f5dfbf0e425b882b3",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0700",
+          "sheetId": "FEED-PFD-0700",
+          "title": "High Temperature Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 7,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=7"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          83
+        ],
+        "routeLabels": [
+          "PY-701 off-gas to E-701"
+        ]
+      }
+    },
+    {
+      "id": "REL-E-701-S-700-COOLED-OFFGAS-KO-701",
+      "type": "connectedTo",
+      "target": "KO-701",
+      "role": "cooled offgas",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-700-COOLED-OFFGAS",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A700",
+          "title": "Thermal-treatment routes, argon supply and independent exhaust interface",
+          "revision": "V147 / 3313c00fbde0d2bdc4480201823d2012260b2e15",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "furnace.js": "47ff8d0a21ff80f9882dfad79bf1db484c1536116894503f5dfbf0e425b882b3",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0700",
+          "sheetId": "FEED-PFD-0700",
+          "title": "High Temperature Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 7,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=7"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          87
+        ],
+        "routeLabels": [
+          "E-701 condensate slope to KO-701"
+        ]
+      }
+    },
+    {
+      "id": "REL-E-701-S-700-BUFFER-BALANCE-H-701",
+      "type": "connectedTo",
+      "target": "H-701",
+      "role": "buffer balance",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-700-BUFFER-BALANCE",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A700",
+          "title": "Thermal-treatment routes, argon supply and independent exhaust interface",
+          "revision": "V147 / 3313c00fbde0d2bdc4480201823d2012260b2e15",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "furnace.js": "47ff8d0a21ff80f9882dfad79bf1db484c1536116894503f5dfbf0e425b882b3",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0700",
+          "sheetId": "FEED-PFD-0700",
+          "title": "High Temperature Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 7,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=7"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          81
+        ],
+        "routeLabels": [
+          "H-701 gas balance takeoff",
+          "H-701 to furnace gas balance"
+        ]
+      }
+    },
+    {
+      "id": "REL-E-701-S-700-E701-SUPPLY-IF-A700-E701-SUPPLY",
+      "type": "connectedTo",
+      "target": "IF-A700-E701-SUPPLY",
+      "role": "e701 supply",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-700-E701-SUPPLY",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A700",
+          "title": "Thermal-treatment routes, argon supply and independent exhaust interface",
+          "revision": "V147 / 3313c00fbde0d2bdc4480201823d2012260b2e15",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "furnace.js": "47ff8d0a21ff80f9882dfad79bf1db484c1536116894503f5dfbf0e425b882b3",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0700",
+          "sheetId": "FEED-PFD-0700",
+          "title": "High Temperature Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 7,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "id": "REL-E-701-S-700-E701-RETURN-IF-A700-E701-RETURN",
+      "type": "connectedTo",
+      "target": "IF-A700-E701-RETURN",
+      "role": "e701 return",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-700-E701-RETURN",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A700",
+          "title": "Thermal-treatment routes, argon supply and independent exhaust interface",
+          "revision": "V147 / 3313c00fbde0d2bdc4480201823d2012260b2e15",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "furnace.js": "47ff8d0a21ff80f9882dfad79bf1db484c1536116894503f5dfbf0e425b882b3",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0700",
+          "sheetId": "FEED-PFD-0700",
+          "title": "High Temperature Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 7,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=7"
+        }
+      ]
+    }
+  ]
+}

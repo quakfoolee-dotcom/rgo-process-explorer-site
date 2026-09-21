@@ -1,0 +1,39 @@
+{
+  "assetId": "P-206B",
+  "name": "Slurry transfer pump B",
+  "assetClassId": "Pump",
+  "status": "listed",
+  "identityStatus": "inherited-register-tag",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-200",
+    "system": "A-200 connected process context",
+    "parentAsset": null
+  },
+  "processFunction": "Slurry transfer pump B",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null
+  },
+  "operatingEnvelope": null,
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Model identity and geometry context only; capacities, ratings and exact connectivity require approved source reconciliation.",
+    "Approved source gaps tracked under A200-001."
+  ],
+  "dataLayer": {
+    "area": "A-200",
+    "source": "data/semantic/A-200",
+    "approvedRows": 0,
+    "heldRows": 0,
+    "pendingRows": 17,
+    "identityHold": null,
+    "applied": "2026-09-21",
+    "baseline": {},
+    "baselineAbsent": []
+  }
+}

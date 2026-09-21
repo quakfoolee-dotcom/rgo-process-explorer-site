@@ -1,0 +1,14 @@
+{
+  "assetId": "C-301",
+  "instruments": [
+    {
+      "functionId": "C-301-VIBRATION-FUNCTION",
+      "variable": "vibration",
+      "purpose": "Vibration monitoring and shutdown intent; threshold unqualified",
+      "tag": null,
+      "range": null,
+      "status": "draft functional intent; not an approved instrument or setpoint",
+      "gapId": "A300-002"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "assetId": "ST-3702",
+  "streams": [
+    {
+      "streamId": "S-3700-PACKAGE",
+      "name": "package",
+      "source": "AB-3701",
+      "via": [],
+      "destination": "ST-3702",
+      "material": "Treated exhaust; performance unqualified",
+      "phase": "Gas",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "CP-3700"
+      ],
+      "operatingMode": "vendor treatment envelope only; mechanism, duty, utilities and acceptance unqualified",
+      "status": "Model route only; line identities, package internals and operating sequence require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A3700",
+          "title": "A-700 independent thermal-abatement satellite and dedicated outlet",
+          "revision": "V153 / 798049b05688550b90813d8e16253364c8ccab5d",
+          "page": null,
+          "status": "model-derived layout envelope; technology and process release HOLD",
+          "availability": "available model source reviewed",
+          "files": {
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76",
+            "furnace.js": "47ff8d0a21ff80f9882dfad79bf1db484c1536116894503f5dfbf0e425b882b3",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0700",
+          "sheetId": "FEED-PFD-0700",
+          "title": "High Temperature Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 7,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=7"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S1",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent review redraw - source segregation",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank.",
+          "page": 1,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=1"
+        }
+      ],
+      "routeLabels": [
+        "AB-3701 unqualified treatment envelope",
+        "AB-3701 to ST-3702"
+      ]
+    },
+    {
+      "streamId": "S-3700-DISCHARGE",
+      "name": "discharge",
+      "source": "ST-3702",
+      "via": [],
+      "destination": "IF-A3700-ATM",
+      "material": "Treated exhaust; emission acceptance unqualified",
+      "phase": "Gas",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "CP-3700"
+      ],
+      "operatingMode": "modeled outlet only; no permitted discharge, emission performance or operating release",
+      "status": "Model route only; line identities, package internals and operating sequence require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A3700",
+          "title": "A-700 independent thermal-abatement satellite and dedicated outlet",
+          "revision": "V153 / 798049b05688550b90813d8e16253364c8ccab5d",
+          "page": null,
+          "status": "model-derived layout envelope; technology and process release HOLD",
+          "availability": "available model source reviewed",
+          "files": {
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76",
+            "furnace.js": "47ff8d0a21ff80f9882dfad79bf1db484c1536116894503f5dfbf0e425b882b3",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0700",
+          "sheetId": "FEED-PFD-0700",
+          "title": "High Temperature Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 7,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=7"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S1",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent review redraw - source segregation",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank.",
+          "page": 1,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=1"
+        }
+      ],
+      "routeLabels": [
+        "ST-3702 proposed discharge"
+      ]
+    }
+  ]
+}

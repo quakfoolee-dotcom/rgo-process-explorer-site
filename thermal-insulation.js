@@ -1,0 +1,15 @@
+// Geometry allowances are explicit assumptions, not an insulation specification.
+export const THERMAL_INSULATION_BASIS={revision:'thermal-insulation-72',thicknessM:{hw:.05,cw:.025,chw:.04,secondary:.05},qualification:'Planning thickness only. Confirm conductivity, ambient dew point, vapour barrier, fire/corrosion performance and support inserts. Secondary fluid temperatures remain unselected.'};
+export function buildThermalInsulation(h){
+ const {T,parts,edges,routes,setContext,band,add}=h,V=p=>new T.Vector3(...p),pm=new Map(parts.map(p=>[p.id,p])),rm=new Map(routes.map(r=>[r.id,r])),created=[],seen=new Set();
+ for(const e of edges){const p=pm.get(e.part),key=e.thermalCircuit;if(!p||seen.has(p.id)||e.internalTo||p.system!=='pipe'||!key||!['hw','cw','chw'].includes(key)&&!key.startsWith('secondary-'))continue;
+  const t=THERMAL_INSULATION_BASIS.thicknessM[key]??.05,r=e.radius,path=e.path||[e.a,e.b];if(!r||r>.3||path.length<2)continue;seen.add(p.id);p.insulationThickness=t;e.supportRadius=r+t;
+  setContext(p.reactor,p.assembly);let cover;
+  if(path.length===2){const a=V(e.a),z=V(e.b),d=z.clone().sub(a);if(d.length()<.015)continue;cover=band(p.name+' · removable insulation jacket','pipe',r+t,r+.001,d.length(),a.add(z).multiplyScalar(.5).toArray(),'jacket',d.normalize().toArray());}
+  else{const origin=p.position.clone(),points=path.map(a=>V(a).sub(origin)),curve=new T.CatmullRomCurve3(points,false,'centripetal'),g=new T.TubeGeometry(curve,Math.max(12,points.length),r+t,8,false);cover=add(p.name+' · formed insulation jacket','pipe',g,origin.toArray(),'jacket');}
+  Object.assign(cover,{insulationFor:p.id,insulationThickness:0,thermalInsulation:true,thermalCircuit:key,thermalRole:e.thermalRole,routeId:p.routeId,componentAssembly:p.componentAssembly,exploreRole:p.exploreRole||'context',cut:true,geometryBasis:'Insulated outside envelope; pipe OD excludes insulation',insulationSpecification:THERMAL_INSULATION_BASIS.qualification});cover.offset.copy(p.offset);rm.get(p.routeId)?.partIds.push(cover.id);created.push(cover.id);
+ }
+ // Removable valve covers leave the actuator and operating interfaces exposed.
+ for(const v of h.valves.filter(v=>v.thermal&&v.role!=='inactive')){const host=v.partIds.map(id=>pm.get(id)).find(p=>p?.name.endsWith('pressure body'));if(!host)continue;const a=V(v.a),z=V(v.b),delta=z.clone().sub(a);if(delta.length()<.03)continue;setContext(host.reactor,host.assembly);const jacket=band(v.tag+' removable valve insulation cover','pipe',.145,.090,delta.length(),a.add(z).multiplyScalar(.5).toArray(),'jacket',delta.normalize().toArray());Object.assign(jacket,{insulationFor:host.id,thermalInsulation:true,insulationThickness:0,thermalCircuit:v.circuit,thermalRole:v.role,routeId:host.routeId,componentAssembly:host.componentAssembly,exploreRole:host.exploreRole||'equipment',cut:true});jacket.offset.copy(host.offset);v.partIds.push(jacket.id);rm.get(host.routeId)?.partIds.push(jacket.id);created.push(jacket.id);}
+ return {basis:THERMAL_INSULATION_BASIS,partIds:created,pipeElements:seen.size,qualified:false};
+}

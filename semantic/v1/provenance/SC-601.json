@@ -1,0 +1,87 @@
+{
+  "assetId": "SC-601",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "SC-601",
+      "source": "FEED-PFD-0600",
+      "revision": null,
+      "page": 6,
+      "status": "draft-pfd",
+      "confidence": "review required",
+      "gapId": "A600-005"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A600-003"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A600-003"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A600-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A600-003"
+    },
+    {
+      "valueId": "PV-A-600-0165",
+      "property": "design.materialOfConstruction",
+      "value": "Vinyl-ester FRP scrubber; PP/PVDF packing and mist eliminator; FRP or PVDF-lined fan",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 45 (M-041)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "WV-materialOfConstruc-SC-601",
+      "note": "scope: FN-601 ID Fan; SC-601 scrubber; explosion protection and isolation; alt: Coated 316L/2205 fan where vendor mechanical duty requires metal; status FIRM | D-A600-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-600-0189",
+      "property": "identity.readinessStatus",
+      "value": "HOLD-10: SC-601 scrubber sizing open",
+      "unit": null,
+      "source": "FEED-PE-REP-016",
+      "revision": "V1.4",
+      "location": "§10 HOLD-10",
+      "status": "approved",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": null,
+      "note": "D-A600-03: Readiness status recorded as the controlling statement for A-600 procurement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

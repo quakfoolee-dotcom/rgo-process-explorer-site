@@ -1,0 +1,33 @@
+{
+  "assetId": "DC-901",
+  "relationships": [
+    {
+      "id": "REL-DC-901-S-900-DUST-OUT",
+      "type": "connectedTo",
+      "target": "IF-A900-DUST",
+      "role": "Local pellet-formation dust capture",
+      "status": "Model-derived functional topology; design and operation require approved sources",
+      "streamId": "S-900-DUST",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-DC-901-S-900-DUST-IN",
+      "type": "connectedTo",
+      "target": "PG-901",
+      "role": "Local pellet-formation dust capture",
+      "status": "Model-derived functional topology; design and operation require approved sources",
+      "streamId": "S-900-DUST",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-DC-901-AREA",
+      "type": "locatedIn",
+      "target": "A-900",
+      "status": "model area assignment",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    }
+  ]
+}

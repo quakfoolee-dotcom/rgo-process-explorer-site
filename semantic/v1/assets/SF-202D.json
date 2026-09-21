@@ -1,0 +1,46 @@
+{
+  "assetId": "SF-202D",
+  "name": "Oxidizer feeder D",
+  "assetClassId": "Feeder",
+  "status": "proposed",
+  "identityStatus": "provisional-model-tag",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-200",
+    "system": "A-200 connected process context",
+    "parentAsset": null
+  },
+  "processFunction": "Oxidizer feeder D",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": "316L / HDPE / PP / PVDF / PTFE per DBM §3.15.1"
+  },
+  "operatingEnvelope": null,
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Model identity and geometry context only; capacities, ratings and exact connectivity require approved source reconciliation.",
+    "Approved source gaps tracked under A200-001."
+  ],
+  "dataLayer": {
+    "area": "A-200",
+    "source": "data/semantic/A-200",
+    "approvedRows": 1,
+    "heldRows": 0,
+    "pendingRows": 3,
+    "identityHold": null,
+    "applied": "2026-09-21",
+    "baseline": {
+      "design": {
+        "capacityM3": null,
+        "designPressure": null,
+        "designTemperature": null,
+        "materialOfConstruction": null
+      }
+    },
+    "baselineAbsent": []
+  }
+}

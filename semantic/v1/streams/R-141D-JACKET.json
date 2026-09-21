@@ -1,0 +1,43 @@
+{
+  "assetId": "R-141D-JACKET",
+  "streams": [
+    {
+      "streamId": "S-5000-R141D",
+      "name": "R-141D isolated jacket service",
+      "source": "TCU-141",
+      "via": [],
+      "destination": "R-141D-JACKET",
+      "material": "Unselected isolated secondary-loop fluid",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "R-141D-JACKET"
+      ],
+      "operatingMode": "Secondary temperature unknown; heating and cooldown admissions are mutually exclusive",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    }
+  ]
+}

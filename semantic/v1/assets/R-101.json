@@ -1,0 +1,72 @@
+{
+  "assetId": "R-101",
+  "name": "Graphite / acid premix",
+  "assetClassId": "Reactor",
+  "status": "listed",
+  "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-100",
+    "system": "Pre-Mix Graphite with Acid",
+    "parentAsset": null
+  },
+  "processFunction": "Graphite / acid premix",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": "Glass-lined carbon steel (ISO 28721 / DIN 28060)"
+  },
+  "operatingEnvelope": {
+    "h2so4ToGraphiteRatio": 18.4,
+    "ventLossFraction": 0.007,
+    "batchBasis": "R-141: 500 kg graphite per batch (batch sizes of PFD V5.1.1) — R-101 premix feeds the R-141 bank; graphite design feed 1,523 kg/d (63.5 kg/h)"
+  },
+  "processBasis": [
+    {
+      "property": "area and equipment identity",
+      "value": {
+        "area": "A-100",
+        "tag": "R-101"
+      },
+      "source": "FEED-PE-PFD-001 / FEED-PFD-0100",
+      "status": "draft PFD basis"
+    },
+    {
+      "property": "modeled baseline",
+      "value": "baseline FEED arrangement only",
+      "source": "MODEL-EARLY-PROCESS",
+      "status": "model-derived"
+    }
+  ],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Approved R-101, T-102 and H-101/SF-101 datasheets are unavailable.",
+    "Materials of construction, linings, corrosion allowance and compatibility are unapproved.",
+    "P&ID tags, alarm/trip setpoints, relief basis and permissives are unavailable.",
+    "Graphite/acid quantities, addition rates, mixing time and acceptance criteria are unresolved.",
+    "Charging, dust control, acid unloading, drainage and spill-recovery details require approval.",
+    "FEED-PFD-0100 remains a draft basis and requires reconciliation with approved project documents."
+  ],
+  "dataLayer": {
+    "area": "A-100",
+    "source": "data/semantic/A-100",
+    "approvedRows": 4,
+    "heldRows": 0,
+    "pendingRows": 21,
+    "identityHold": null,
+    "applied": "2026-09-21",
+    "baseline": {
+      "design": {
+        "capacityM3": null,
+        "designPressure": null,
+        "designTemperature": null,
+        "materialOfConstruction": null
+      },
+      "operatingEnvelope": null
+    },
+    "baselineAbsent": []
+  }
+}

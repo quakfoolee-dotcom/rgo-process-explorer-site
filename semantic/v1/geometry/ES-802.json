@@ -1,0 +1,16 @@
+{
+  "assetId": "ES-802",
+  "bindingId": "GEOMETRY-ES-802",
+  "modelEquipmentId": 122023,
+  "bindingScope": "station-assembly",
+  "location": {
+    "x": 106.15,
+    "z": 37.25,
+    "yawRad": 1.5707963267948966,
+    "walkPoint": [
+      107.75,
+      37.25
+    ]
+  },
+  "bindingRule": "Indicative station geometry and access screening; no compliance or commissioning claim."
+}

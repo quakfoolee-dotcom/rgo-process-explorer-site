@@ -1,0 +1,14 @@
+{
+  "assetId": "PK-901",
+  "instruments": [
+    {
+      "functionId": "PK-901-STATE",
+      "variable": "equipment or boundary state",
+      "purpose": "Confirm ready, operating, accepted or isolated state as applicable",
+      "tag": null,
+      "range": null,
+      "status": "function only; approved tag, limit and logic unresolved",
+      "gapId": "A900-005"
+    }
+  ]
+}

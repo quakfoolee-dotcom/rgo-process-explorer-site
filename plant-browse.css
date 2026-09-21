@@ -1,0 +1,32 @@
+#plant-browse-panel{position:absolute;left:14px;top:86px;z-index:45;width:min(300px,calc(100% - 28px));max-height:calc(100% - 105px);overflow:auto;padding:14px;background:rgba(15,33,47,.97);border:1px solid #669b9e;border-radius:8px;color:#d9e6ec;box-sizing:border-box;font-size:.875rem;line-height:1.45;overscroll-behavior:contain}
+#plant-browse-panel[hidden],#plant-browse-panel [hidden]{display:none!important}.browse-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}.browse-heading h3{margin:0;font-size:1rem}.browse-heading button{min-width:44px;min-height:44px}#plant-browse-panel p{margin:10px 0}.browse-help{color:#a9bdc9}#browse-status{border-left:3px solid #67dadd;padding-left:9px}#browse-placement label{display:block;margin-bottom:5px}#browse-enter,#browse-fit,#browse-return,#browse-reposition{width:100%;min-height:44px;margin-top:9px}#browse-enter{border-color:#68ccd0}.browse-move,.browse-look{display:flex;gap:6px;margin-top:9px;align-items:center}.browse-move button{flex:1;min-height:46px}.browse-look button{min-width:38px;min-height:42px;flex:1}.browse-look span{font-size:.875rem}#browse-map{display:block;width:100%;height:auto;border:1px solid #37576c;border-radius:5px}#browse-junction{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}#browse-junction button{flex:1 1 110px;min-height:44px}.browse-person-icon{width:19px;height:25px;vertical-align:middle;margin-right:6px;fill:currentColor}#browse-plant{touch-action:none}.browse-drag-person{position:fixed;left:0;top:0;width:32px;height:44px;z-index:2000;pointer-events:none;color:#ffc967;filter:drop-shadow(0 2px 3px #000)}.browse-drag-person[hidden]{display:none}.browse-drag-person svg{width:30px;height:40px;margin:0}.browse-drag-person.invalid{color:#e7848d}.plant-browse-active>canvas{touch-action:none;cursor:crosshair}.plant-browse-walking>canvas{cursor:grab}.plant-browse-active #area-floor-labels,.plant-browse-active #equipment-labels,.plant-browse-active #area-hover-card{pointer-events:none}.plant-browse-active #area-hover-card{display:none!important}
+@media(max-width:760px){#plant-browse-panel{top:75px;width:min(260px,calc(100% - 28px));max-height:calc(100% - 90px)}.plant-browse-walking #plant-browse-panel{top:auto;bottom:12px;max-height:45%;}#browse-map{max-height:85px;object-fit:contain}}
+@media(prefers-reduced-motion:reduce){#plant-browse-panel *{scroll-behavior:auto}}
+#browse-arrow-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}#browse-arrow-actions button{flex:1 1 110px;min-height:44px;font-size:.875rem}#browse-stop{width:100%;min-height:44px;margin-top:8px;border-color:#ffd078}
+
+#browse-photo-tools{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}#browse-photo-tools button{min-height:44px;flex:1}#browse-photo{background:#f5c779;color:#182a38}#browse-photo-status{flex-basis:100%}.browse-heading{flex-wrap:wrap}.browse-heading h3{flex:1}.browse-heading #browse-map-toggle{font-size:.875rem}.browse-minimized #browse-panel-content{display:none}#plant-browse-panel.browse-minimized{max-height:210px}.browse-clean-preview>:not(canvas):not(#plant-browse-panel){visibility:hidden!important}.browse-clean-preview #plant-browse-panel{background:transparent;border:0;padding:0;box-shadow:none;top:14px;left:14px;width:auto;max-width:calc(100% - 28px)}.browse-clean-preview #plant-browse-panel>:not(#browse-photo-tools){display:none!important}.browse-clean-preview #browse-photo-tools{margin:0}.browse-clean-preview #browse-photo-status{background:#10212f;padding:8px;border-radius:4px}
+
+/* v107: only navigation content scrolls; map cannot cover its controls. */
+#plant-browse-panel{display:flex;flex-direction:column;overflow:hidden}
+#plant-browse-panel>.browse-heading,#plant-browse-panel>#browse-photo-tools{flex-shrink:0}
+#browse-panel-content{min-height:0;overflow:auto;overscroll-behavior:contain}
+#plant-browse-panel #browse-map{position:static;inset:auto;width:100%;height:auto;aspect-ratio:13/6;flex:none}
+#plant-browse-panel .browse-heading{gap:6px}
+#plant-browse-panel .browse-heading h3{font-size:.95rem}
+#plant-browse-panel #browse-map-toggle{padding:8px;min-height:44px}
+
+/* v109: sibling overlays also belong to the clean-preview state. */
+.browse-clean-stage>.stage-title,.browse-clean-stage>.views,.browse-clean-stage>#focus-banner,.browse-clean-stage>#inspector,.browse-clean-stage>.view-dock{visibility:hidden!important;pointer-events:none!important}
+.browse-clean-preview #browse-photo-tools{display:flex;flex-wrap:wrap;gap:8px;max-width:100%;padding:8px;background:#10212f;border:1px solid #526674;border-radius:6px}
+.browse-clean-preview #browse-photo-tools button{flex:0 1 auto;width:auto;min-height:44px;padding:8px 14px;font-size:.875rem;white-space:normal}
+.browse-clean-preview #browse-photo-status{margin:0;padding:4px;max-width:100%;overflow-wrap:anywhere}
+
+/* v110: keep scroll controls separate from the navigation content. */
+#browse-panel-content{scrollbar-gutter:stable;padding-inline-end:10px;padding-block-end:6px;box-sizing:border-box;min-width:0}
+#browse-panel-content button{box-sizing:border-box;max-width:100%;min-width:0;white-space:normal}
+#browse-panel-content #browse-arrow-actions button,#browse-panel-content #browse-junction button{flex:1 1 145px}
+#browse-panel-content .browse-look{flex-wrap:wrap}
+#browse-panel-content .browse-look button{min-width:38px}
+
+/* v111: icon-only minimize matches close while keeping a readable restore action. */
+#plant-browse-panel #browse-map-toggle[aria-expanded=true],#plant-browse-panel #browse-exit{width:44px;height:44px;min-width:44px;padding:0;font-size:20px;flex:none}

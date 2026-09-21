@@ -1,0 +1,71 @@
+{
+  "assetId": "T-1002",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "T-1002",
+      "source": "FEED-PFD-1000",
+      "revision": null,
+      "page": 9,
+      "status": "draft-pfd",
+      "confidence": "review required",
+      "gapId": "A1000-005"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A1000-003"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A1000-003"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A1000-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A1000-003"
+    },
+    {
+      "valueId": "PV-A-1000-0263",
+      "property": "design.materialOfConstruction",
+      "value": "HDPE or rubber-lined carbon steel; rubber-lined or 28 % Cr white-iron pump wear parts",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 62 (M-058)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "CF-materialOfConstruc-T-1002",
+      "note": "scope: T-1002/P-1003 lime system; abrasive sludge transfer lines/pumps; alt: Abrasion-resistant ceramic-lined bends at severe locations; status FIRM | D-A1000-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

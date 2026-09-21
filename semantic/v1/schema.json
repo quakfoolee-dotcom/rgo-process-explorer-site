@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "rgo-semantic-plant-core/v1",
+  "version": "1.19.0-foundation",
+  "canonicalIdRule": "Approved plant tags are immutable canonical IDs. Source-local and geometry IDs map to, but never replace, the canonical ID.",
+  "entities": [
+    "Asset",
+    "AssetClass",
+    "Relationship",
+    "Stream",
+    "InstrumentFunction",
+    "DocumentReference",
+    "PropertyProvenance",
+    "GeometryBinding",
+    "AssetState",
+    "SourceGap",
+    "ExternalInterface",
+    "Area",
+    "InstrumentFunctionGroup",
+    "ControlFunction",
+    "SafeguardFunction",
+    "EmergencyShowerEyewash",
+    "BulkSolidsFeedPackage",
+    "Filter",
+    "Dryer",
+    "MaterialHandling",
+    "BulkSolidsReceiver",
+    "BulkSolidsTransfer",
+    "VacuumCondensatePackage"
+  ],
+  "relationshipVocabulary": [
+    "locatedIn",
+    "partOf",
+    "connectedTo",
+    "feeds",
+    "receivesFrom",
+    "contains",
+    "monitoredBy",
+    "controlledBy",
+    "protectedBy",
+    "requiresUtility",
+    "documentedBy",
+    "representedBy",
+    "supportedBy"
+  ],
+  "statusVocabulary": {
+    "design": [
+      "proposed",
+      "listed",
+      "approved",
+      "installed",
+      "retired"
+    ],
+    "operational": [
+      "stopped",
+      "running",
+      "standby",
+      "unavailable",
+      "unknown"
+    ],
+    "maintenance": [
+      "available",
+      "due",
+      "isolated",
+      "underMaintenance",
+      "unknown"
+    ],
+    "alarm": [
+      "normal",
+      "warning",
+      "trip",
+      "unknown"
+    ],
+    "simulation": [
+      "notConnected",
+      "simulated",
+      "synchronized"
+    ],
+    "evidence": [
+      "inherited-pilot",
+      "model-derived",
+      "draft-pfd"
+    ],
+    "review": [
+      "open",
+      "resolved"
+    ]
+  },
+  "nullPolicy": "Unknown or unapproved engineering values remain null and require a provenance or source-gap record.",
+  "sourcePriority": [
+    "Current project PFD and approved registers",
+    "Approved datasheets, P&ID, narratives, HAZOP and SOP",
+    "Model design narrative with status stated",
+    "Planning handoff documents"
+  ],
+  "areaResolution": "FEED-PFD-0200 controls the R-201 bank area as A-200. A-140 contains R-141A/B/C/D on FEED-PFD-0140.",
+  "fieldDefinitions": {
+    "massFlow": {
+      "description": "Mass per time; never a feed ratio",
+      "allowedUnits": [
+        "kg/h",
+        "kg/s"
+      ],
+      "unknown": null
+    },
+    "feedRatio": {
+      "description": "Mass of feed per mass of Pre-G",
+      "allowedUnits": [
+        "kg/kg Pre-G"
+      ],
+      "unknown": null
+    },
+    "sourceReferences": {
+      "required": [
+        "documentId",
+        "revision",
+        "page"
+      ],
+      "nullPolicy": "Unknown revision or page remains null; model references are not approved documents."
+    }
+  }
+}

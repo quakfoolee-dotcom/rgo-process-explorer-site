@@ -1,0 +1,267 @@
+{
+  "assetId": "HD-6201",
+  "streams": [
+    {
+      "streamId": "S-700-ARGON-SUPPLY",
+      "name": "argon supply",
+      "source": "HD-6201",
+      "via": [],
+      "destination": "AR-701",
+      "material": "Argon",
+      "phase": "Gas",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [],
+      "operatingMode": "model process context; sequence and acceptance unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A700",
+          "title": "Thermal-treatment routes, argon supply and independent exhaust interface",
+          "revision": "V147 / 3313c00fbde0d2bdc4480201823d2012260b2e15",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "furnace.js": "47ff8d0a21ff80f9882dfad79bf1db484c1536116894503f5dfbf0e425b882b3",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0700",
+          "sheetId": "FEED-PFD-0700",
+          "title": "High Temperature Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 7,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=7"
+        }
+      ],
+      "routeLabels": [
+        "A-700 Ar header takeoff",
+        "A-700 Ar supply from A-6200",
+        "A700 argon supply"
+      ]
+    },
+    {
+      "streamId": "S-800-ARGON-SUPPLY",
+      "name": "argon supply",
+      "source": "HD-6201",
+      "via": [],
+      "destination": "AR-801",
+      "material": "Argon",
+      "phase": "Gas",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "model process context; sequence and acceptance unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A800",
+          "title": "Doping, dry charging, argon, independent exhaust and A-900 handoff",
+          "revision": "V148 / 19b52eb01578140a4d021ec6d47fd98d1b671ba5",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+            "a800-basis.js": "0ee9741872bf91a9e4898324690cd43ec2ab246478883645300b6311900bc757",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0800",
+          "sheetId": "FEED-PFD-0800",
+          "title": "Commercial Scale rGO Doping and Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 8,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=8"
+        }
+      ],
+      "routeLabels": [
+        "A-800 Ar header takeoff",
+        "A-800 Ar supply from A-6200",
+        "A800 argon supply"
+      ]
+    },
+    {
+      "streamId": "S-900-901",
+      "name": "AR-901 reserved argon boundary",
+      "source": "HD-6201",
+      "via": [],
+      "destination": "IF-A900-AR901",
+      "material": "Argon reservation; no connected consumer",
+      "phase": "Gas",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "connectionStatus": "reserved-positively-blinded",
+      "operatingMode": "reserved branch only; positively blinded, normally closed, no receiving equipment connected and no operating flow asserted",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A900",
+          "title": "A-800 product handoff and capped future A-900 argon reservations",
+          "revision": "V149 / f70f8efa89183fd5c54ac9d450bf5f4dab114a09",
+          "page": null,
+          "status": "model-derived boundary context; receiving equipment is not modeled",
+          "availability": "available model source reviewed",
+          "files": {
+            "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0800",
+          "sheetId": "FEED-PFD-0800",
+          "title": "Commercial Scale rGO Doping and Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 8,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=8"
+        }
+      ],
+      "routeLabels": [
+        "AR-901 reserved takeoff",
+        "AR-901 blind-ended branch"
+      ]
+    },
+    {
+      "streamId": "S-900-902",
+      "name": "AR-902 reserved argon boundary",
+      "source": "HD-6201",
+      "via": [],
+      "destination": "IF-A900-AR902",
+      "material": "Argon reservation; no connected consumer",
+      "phase": "Gas",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "connectionStatus": "reserved-positively-blinded",
+      "operatingMode": "reserved branch only; positively blinded, normally closed, no receiving equipment connected and no operating flow asserted",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A900",
+          "title": "A-800 product handoff and capped future A-900 argon reservations",
+          "revision": "V149 / f70f8efa89183fd5c54ac9d450bf5f4dab114a09",
+          "page": null,
+          "status": "model-derived boundary context; receiving equipment is not modeled",
+          "availability": "available model source reviewed",
+          "files": {
+            "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0800",
+          "sheetId": "FEED-PFD-0800",
+          "title": "Commercial Scale rGO Doping and Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 8,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=8"
+        }
+      ],
+      "routeLabels": [
+        "AR-902 reserved takeoff",
+        "AR-902 blind-ended branch"
+      ]
+    },
+    {
+      "streamId": "S-900-903",
+      "name": "AR-903 reserved argon boundary",
+      "source": "HD-6201",
+      "via": [],
+      "destination": "IF-A900-AR903",
+      "material": "Argon reservation; no connected consumer",
+      "phase": "Gas",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "connectionStatus": "reserved-positively-blinded",
+      "operatingMode": "reserved branch only; positively blinded, normally closed, no receiving equipment connected and no operating flow asserted",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A900",
+          "title": "A-800 product handoff and capped future A-900 argon reservations",
+          "revision": "V149 / f70f8efa89183fd5c54ac9d450bf5f4dab114a09",
+          "page": null,
+          "status": "model-derived boundary context; receiving equipment is not modeled",
+          "availability": "available model source reviewed",
+          "files": {
+            "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0800",
+          "sheetId": "FEED-PFD-0800",
+          "title": "Commercial Scale rGO Doping and Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 8,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=8"
+        }
+      ],
+      "routeLabels": [
+        "AR-903 reserved takeoff",
+        "AR-903 blind-ended branch"
+      ]
+    }
+  ]
+}

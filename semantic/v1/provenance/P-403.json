@@ -1,0 +1,71 @@
+{
+  "assetId": "P-403",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "P-403",
+      "source": "MODEL-A400",
+      "revision": "V144 / f82bb71f58c4945fec3a0a1629193d9a16188926",
+      "page": null,
+      "status": "model-derived",
+      "confidence": "review required",
+      "gapId": "A400-001"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A400-002"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A400-002"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A400-002"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A400-002"
+    },
+    {
+      "valueId": "PV-A-400-0095",
+      "property": "design.materialOfConstruction",
+      "value": "HDPE, PP, PVDF or dual-laminate FRP tank; all-PVDF or PVDF-lined pump",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 38 (M-034)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "CF-materialOfConstruc-P-403",
+      "note": "scope: T-403 Permeate Equalization Tank and P-403 Transfer Pump; alt: CPVC where temperature and oxidiser conditions are within rating; status FIRM | D-A400-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

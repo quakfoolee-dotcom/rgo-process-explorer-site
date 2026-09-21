@@ -1,0 +1,44 @@
+{
+  "assetId": "P-1010",
+  "documents": [
+    {
+      "documentId": "MODEL-A1000",
+      "title": "Wastewater treatment, receiving sources, conditional chemistry and A-2000 handoff",
+      "revision": "V150 / 0f89c6bb63ec5c5127db6f48f8d1843733c0b83c",
+      "page": null,
+      "status": "model-derived; not an approved process design",
+      "availability": "available model source reviewed",
+      "files": {
+        "wastewater.js": "492fd40422dd1e5a13133f0073847c363d52e782aedc69dd0f638edd9e8acf7f",
+        "a1000-basis.js": "fd08d2819df8087e44992ffb72428fda7ec9856315a45200741d408cdfe93982",
+        "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+        "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+        "thermal-utilities.js": "522210c2e87434d1b2a5f6fa3a1915b9ef285ec9afc58b05409edc22041fe79c"
+      },
+      "hashNormalization": "UTF-8 text with LF line endings"
+    },
+    {
+      "documentId": "FEED-PFD-1000",
+      "sheetId": "FEED-PFD-1000",
+      "title": "Commercial Scale Wastewater Treatment",
+      "revision": null,
+      "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+      "page": 9,
+      "file": "pfd-temperature-sheets.pdf",
+      "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+      "status": "Draft - Not for Use; not approved",
+      "availability": "available and reviewed",
+      "href": "./pfd-temperature-sheets.pdf#page=9"
+    },
+    {
+      "documentId": "FEED-PE-MAT-002",
+      "title": "MOC Selection Matrix",
+      "revision": "V1.1",
+      "page": null,
+      "status": "controlled",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.1.xlsx"
+    }
+  ]
+}

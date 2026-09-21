@@ -1,0 +1,41 @@
+{
+  "assetId": "ES-1000-11",
+  "relationships": [
+    {
+      "id": "REL-ES-1000-11-AREA",
+      "type": "locatedIn",
+      "target": "A-1000",
+      "status": "model area assignment",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-ES-1000-11-SUPPLY",
+      "type": "requiresUtility",
+      "target": "IF-A6000-EW-SOURCE",
+      "role": "potable tempered emergency-water obligation",
+      "status": "source and topology unresolved",
+      "streamId": "S-6000-EW-ES100011",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-ES-1000-11-RUNOFF",
+      "type": "feeds",
+      "target": "IF-A6000-EW-RUNOFF",
+      "role": "segregated emergency runoff obligation",
+      "status": "destination unresolved",
+      "streamId": "S-6000-RUNOFF-ES100011",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-ES-1000-11-GEOM",
+      "type": "representedBy",
+      "target": "GEOMETRY-ES-1000-11",
+      "status": "bound to planning geometry",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    }
+  ]
+}

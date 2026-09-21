@@ -1,0 +1,38 @@
+{
+  "assetId": "R-141D-JACKET",
+  "name": "R-141D thermal interface",
+  "assetClassId": "Subassembly",
+  "status": "proposed",
+  "identityStatus": "provisional model subassembly",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-140",
+    "system": "A-140 thermal consumer context",
+    "parentAsset": "R-141D"
+  },
+  "processFunction": "R-141D indirect thermal service boundary",
+  "handledMaterials": [
+    "Unselected closed-loop thermal fluid"
+  ],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null
+  },
+  "operatingEnvelope": null,
+  "processBasis": [],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "No approved peak/normal loads, batch simultaneity, exchanger UA or fouling basis is indexed.",
+    "Flow, pressure, pressure loss, NPSH, relief, expansion volume and equipment ratings remain unapproved.",
+    "Draft ranges are 80–95/60–80 °C HW, 25–30/35–40 °C CW and 5–7/10–15 °C CHW; illustrated values are not operating setpoints.",
+    "Four TCUs use heat-transfer barriers; media, pressure hierarchy, leak detection and contamination response are unresolved.",
+    "The 10 °C process target is only 3–5 K above draft chilled-water supply across two heat-transfer barriers.",
+    "A/B pump geometry does not establish 2 × 100% capacity; shared systems receive no emergency-cooling credit.",
+    "HX-601 remains isolated and unassigned; draft hot water cannot provide the cited 140–145 °C dryer inlet by ordinary heat exchange.",
+    "Spray-water makeup, treatment, blowdown and winterization remain separate unresolved systems.",
+    "CP-5000 is indication intent only; I/O, trips, setpoints and validated live data are absent."
+  ]
+}

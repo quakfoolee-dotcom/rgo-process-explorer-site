@@ -1,0 +1,71 @@
+{
+  "assetId": "C-301",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "C-301",
+      "source": "FEED-PFD-0300",
+      "revision": null,
+      "page": 4,
+      "status": "draft-pfd",
+      "confidence": "review required",
+      "gapId": "A300-001"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A300-001"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A300-001"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A300-001"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A300-001"
+    },
+    {
+      "valueId": "PV-A-300-0203",
+      "property": "design.materialOfConstruction",
+      "value": "Hastelloy C-276 (N10276) + WC or ceramic hardfacing",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 30 (M-026)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "CF-materialOfConstruc-C-301",
+      "note": "scope: C-301 Decanter Centrifuge — bowl/scroll; alt: Titanium Grade 7 (0.15 % Pd); status HELD | D-A300-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

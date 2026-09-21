@@ -1,0 +1,48 @@
+{
+  "assetId": "P-402",
+  "name": "Washing circulation / product transfer pump",
+  "assetClassId": "Pump",
+  "status": "proposed",
+  "identityStatus": "model-derived; tag qualification open",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-400",
+    "system": "A-400 washing process context",
+    "parentAsset": null
+  },
+  "processFunction": "Washing circulation / product transfer pump",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": "PVDF- or ETFE-lined sealless centrifugal, or all-PVDF; SiC bearings"
+  },
+  "operatingEnvelope": null,
+  "processBasis": [],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "The local temperature-sheet PDF skips FEED-PFD-0400. The inherited register page 9 is a full-document reference, not an available excerpt. No approved source revision is established.",
+    "Cleaning chemistry, product isolation, vent compatibility, drain receiving pressure/invert, instrument tags and protective settings remain unqualified.",
+    "Dimensions, model screening inputs and package layouts do not establish approved engineering values."
+  ],
+  "dataLayer": {
+    "area": "A-400",
+    "source": "data/semantic/A-400",
+    "approvedRows": 1,
+    "heldRows": 0,
+    "pendingRows": 20,
+    "identityHold": null,
+    "applied": "2026-09-21",
+    "baseline": {
+      "design": {
+        "capacityM3": null,
+        "designPressure": null,
+        "designTemperature": null,
+        "materialOfConstruction": null
+      }
+    },
+    "baselineAbsent": []
+  }
+}

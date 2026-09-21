@@ -1,0 +1,596 @@
+{
+  "assetId": "T-1006",
+  "streams": [
+    {
+      "streamId": "S-1000-A300-INLET",
+      "name": "a300 inlet",
+      "source": "IF-A300-WASTE",
+      "via": [],
+      "destination": "T-1006",
+      "material": "Wastewater; chemistry unqualified",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "model process context; receiving acceptance and operating sequence unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A1000",
+          "title": "Wastewater treatment, receiving sources, conditional chemistry and A-2000 handoff",
+          "revision": "V150 / 0f89c6bb63ec5c5127db6f48f8d1843733c0b83c",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "wastewater.js": "492fd40422dd1e5a13133f0073847c363d52e782aedc69dd0f638edd9e8acf7f",
+            "a1000-basis.js": "fd08d2819df8087e44992ffb72428fda7ec9856315a45200741d408cdfe93982",
+            "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "thermal-utilities.js": "522210c2e87434d1b2a5f6fa3a1915b9ef285ec9afc58b05409edc22041fe79c"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-1000",
+          "sheetId": "FEED-PFD-1000",
+          "title": "Commercial Scale Wastewater Treatment",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 9,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=9"
+        }
+      ],
+      "routeLabels": [
+        "BL-WW304 connected wastewater transfer",
+        "BL-WW305 connected wastewater transfer",
+        "A-300 wastewater collection header",
+        "Combined wastewater to T-1006"
+      ]
+    },
+    {
+      "streamId": "S-1000-A400-INLET",
+      "name": "a400 inlet",
+      "source": "IF-A400-WASTE",
+      "via": [],
+      "destination": "T-1006",
+      "material": "Wastewater; chemistry unqualified",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "model process context; receiving acceptance and operating sequence unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A1000",
+          "title": "Wastewater treatment, receiving sources, conditional chemistry and A-2000 handoff",
+          "revision": "V150 / 0f89c6bb63ec5c5127db6f48f8d1843733c0b83c",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "wastewater.js": "492fd40422dd1e5a13133f0073847c363d52e782aedc69dd0f638edd9e8acf7f",
+            "a1000-basis.js": "fd08d2819df8087e44992ffb72428fda7ec9856315a45200741d408cdfe93982",
+            "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "thermal-utilities.js": "522210c2e87434d1b2a5f6fa3a1915b9ef285ec9afc58b05409edc22041fe79c"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-1000",
+          "sheetId": "FEED-PFD-1000",
+          "title": "Commercial Scale Wastewater Treatment",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 9,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=9"
+        }
+      ],
+      "routeLabels": [
+        "BL-WW403 connected wastewater transfer",
+        "Combined wastewater to T-1006"
+      ]
+    },
+    {
+      "streamId": "S-1000-WW161-INLET",
+      "name": "ww161 inlet",
+      "source": "IF-A160-WW161",
+      "via": [],
+      "destination": "T-1006",
+      "material": "Wastewater; chemistry unqualified",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "model process context; receiving acceptance and operating sequence unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A1000",
+          "title": "Wastewater treatment, receiving sources, conditional chemistry and A-2000 handoff",
+          "revision": "V150 / 0f89c6bb63ec5c5127db6f48f8d1843733c0b83c",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "wastewater.js": "492fd40422dd1e5a13133f0073847c363d52e782aedc69dd0f638edd9e8acf7f",
+            "a1000-basis.js": "fd08d2819df8087e44992ffb72428fda7ec9856315a45200741d408cdfe93982",
+            "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "thermal-utilities.js": "522210c2e87434d1b2a5f6fa3a1915b9ef285ec9afc58b05409edc22041fe79c"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-1000",
+          "sheetId": "FEED-PFD-1000",
+          "title": "Commercial Scale Wastewater Treatment",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 9,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=9"
+        }
+      ],
+      "routeLabels": [
+        "BL-WW161 connected wastewater transfer",
+        "A-160 wastewater collection header",
+        "Combined wastewater to T-1006"
+      ]
+    },
+    {
+      "streamId": "S-1000-WW163-INLET",
+      "name": "ww163 inlet",
+      "source": "IF-A160-WW163",
+      "via": [],
+      "destination": "T-1006",
+      "material": "Wastewater; chemistry unqualified",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "model process context; receiving acceptance and operating sequence unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A1000",
+          "title": "Wastewater treatment, receiving sources, conditional chemistry and A-2000 handoff",
+          "revision": "V150 / 0f89c6bb63ec5c5127db6f48f8d1843733c0b83c",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "wastewater.js": "492fd40422dd1e5a13133f0073847c363d52e782aedc69dd0f638edd9e8acf7f",
+            "a1000-basis.js": "fd08d2819df8087e44992ffb72428fda7ec9856315a45200741d408cdfe93982",
+            "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "thermal-utilities.js": "522210c2e87434d1b2a5f6fa3a1915b9ef285ec9afc58b05409edc22041fe79c"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-1000",
+          "sheetId": "FEED-PFD-1000",
+          "title": "Commercial Scale Wastewater Treatment",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 9,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=9"
+        }
+      ],
+      "routeLabels": [
+        "BL-WW163 connected wastewater transfer",
+        "A-160 wastewater collection header",
+        "Combined wastewater to T-1006"
+      ]
+    },
+    {
+      "streamId": "S-1000-DECANT-LIFT",
+      "name": "decant lift",
+      "source": "T-1007",
+      "via": [
+        "P-1011"
+      ],
+      "destination": "T-1006",
+      "material": "Wastewater; chemistry unqualified",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "model process context; receiving acceptance and operating sequence unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A1000",
+          "title": "Wastewater treatment, receiving sources, conditional chemistry and A-2000 handoff",
+          "revision": "V150 / 0f89c6bb63ec5c5127db6f48f8d1843733c0b83c",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "wastewater.js": "492fd40422dd1e5a13133f0073847c363d52e782aedc69dd0f638edd9e8acf7f",
+            "a1000-basis.js": "fd08d2819df8087e44992ffb72428fda7ec9856315a45200741d408cdfe93982",
+            "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "thermal-utilities.js": "522210c2e87434d1b2a5f6fa3a1915b9ef285ec9afc58b05409edc22041fe79c"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-1000",
+          "sheetId": "FEED-PFD-1000",
+          "title": "Commercial Scale Wastewater Treatment",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 9,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=9"
+        }
+      ],
+      "routeLabels": [
+        "T-1007 to P-1011 suction",
+        "P-1011 lifted decant to collection",
+        "A-160 wastewater collection header",
+        "Combined wastewater to T-1006"
+      ]
+    },
+    {
+      "streamId": "S-1000-TRANSFER-1005",
+      "name": "transfer 1005",
+      "source": "T-1006",
+      "via": [
+        "P-1005"
+      ],
+      "destination": "R-1001",
+      "material": "Wastewater; chemistry unqualified",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "model process context; receiving acceptance and operating sequence unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A1000",
+          "title": "Wastewater treatment, receiving sources, conditional chemistry and A-2000 handoff",
+          "revision": "V150 / 0f89c6bb63ec5c5127db6f48f8d1843733c0b83c",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "wastewater.js": "492fd40422dd1e5a13133f0073847c363d52e782aedc69dd0f638edd9e8acf7f",
+            "a1000-basis.js": "fd08d2819df8087e44992ffb72428fda7ec9856315a45200741d408cdfe93982",
+            "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "thermal-utilities.js": "522210c2e87434d1b2a5f6fa3a1915b9ef285ec9afc58b05409edc22041fe79c"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-1000",
+          "sheetId": "FEED-PFD-1000",
+          "title": "Commercial Scale Wastewater Treatment",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 9,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=9"
+        }
+      ],
+      "routeLabels": [
+        "T-1006 to P-1005 suction",
+        "P-1005 transfer overhead",
+        "R-1001 feed drop"
+      ]
+    },
+    {
+      "streamId": "S-1000-VENT-T-1006",
+      "name": "vent t 1006",
+      "source": "T-1006",
+      "via": [],
+      "destination": "HD-3100",
+      "material": "Candidate wet vent; compatibility unqualified",
+      "phase": "Gas",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "bidirectional",
+      "operatingMode": "source-specific vent/breathing context; compatibility and pressure qualification required",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A1000",
+          "title": "Wastewater treatment, receiving sources, conditional chemistry and A-2000 handoff",
+          "revision": "V150 / 0f89c6bb63ec5c5127db6f48f8d1843733c0b83c",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "wastewater.js": "492fd40422dd1e5a13133f0073847c363d52e782aedc69dd0f638edd9e8acf7f",
+            "a1000-basis.js": "fd08d2819df8087e44992ffb72428fda7ec9856315a45200741d408cdfe93982",
+            "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "thermal-utilities.js": "522210c2e87434d1b2a5f6fa3a1915b9ef285ec9afc58b05409edc22041fe79c"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-1000",
+          "sheetId": "FEED-PFD-1000",
+          "title": "Commercial Scale Wastewater Treatment",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 9,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=9"
+        }
+      ],
+      "routeLabels": [
+        "T-1006 closed vent",
+        "Wet vent BL-VENTT1006 to HD-3100"
+      ]
+    },
+    {
+      "streamId": "S-1000-DRAIN-T-1006",
+      "name": "drain t 1006",
+      "source": "T-1006",
+      "via": [],
+      "destination": "IF-A1000-DRAIN-T-1006",
+      "material": "Segregated vessel drain; chemistry unqualified",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "shutdown only; positively blinded contained drain; receiver qualification open",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A1000",
+          "title": "Wastewater treatment, receiving sources, conditional chemistry and A-2000 handoff",
+          "revision": "V150 / 0f89c6bb63ec5c5127db6f48f8d1843733c0b83c",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "wastewater.js": "492fd40422dd1e5a13133f0073847c363d52e782aedc69dd0f638edd9e8acf7f",
+            "a1000-basis.js": "fd08d2819df8087e44992ffb72428fda7ec9856315a45200741d408cdfe93982",
+            "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "thermal-utilities.js": "522210c2e87434d1b2a5f6fa3a1915b9ef285ec9afc58b05409edc22041fe79c"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-1000",
+          "sheetId": "FEED-PFD-1000",
+          "title": "Commercial Scale Wastewater Treatment",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 9,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=9"
+        }
+      ],
+      "routeLabels": [
+        "T-1006 low drain inlet",
+        "T-1006 contained low drain"
+      ]
+    },
+    {
+      "streamId": "S-1000-BACKWASH",
+      "name": "backwash",
+      "source": "P-BW2001",
+      "via": [],
+      "destination": "T-1006",
+      "material": "Segregated backwash; receiving acceptance unqualified",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "model process context; receiving acceptance and operating sequence unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A1000",
+          "title": "Wastewater treatment, receiving sources, conditional chemistry and A-2000 handoff",
+          "revision": "V150 / 0f89c6bb63ec5c5127db6f48f8d1843733c0b83c",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "wastewater.js": "492fd40422dd1e5a13133f0073847c363d52e782aedc69dd0f638edd9e8acf7f",
+            "a1000-basis.js": "fd08d2819df8087e44992ffb72428fda7ec9856315a45200741d408cdfe93982",
+            "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "thermal-utilities.js": "522210c2e87434d1b2a5f6fa3a1915b9ef285ec9afc58b05409edc22041fe79c"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-1000",
+          "sheetId": "FEED-PFD-1000",
+          "title": "Commercial Scale Wastewater Treatment",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 9,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=9"
+        }
+      ],
+      "routeLabels": [
+        "A-2000 backwash to T-1006"
+      ]
+    },
+    {
+      "streamId": "S-1000-ACID-CONDENSATE",
+      "name": "acid condensate",
+      "source": "P-3111",
+      "via": [],
+      "destination": "T-1006",
+      "material": "Segregated acid-condensate; receiving acceptance unqualified",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "conditional and normally isolated; chemistry and receiving acceptance required",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A1000",
+          "title": "Wastewater treatment, receiving sources, conditional chemistry and A-2000 handoff",
+          "revision": "V150 / 0f89c6bb63ec5c5127db6f48f8d1843733c0b83c",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "wastewater.js": "492fd40422dd1e5a13133f0073847c363d52e782aedc69dd0f638edd9e8acf7f",
+            "a1000-basis.js": "fd08d2819df8087e44992ffb72428fda7ec9856315a45200741d408cdfe93982",
+            "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "thermal-utilities.js": "522210c2e87434d1b2a5f6fa3a1915b9ef285ec9afc58b05409edc22041fe79c"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-1000",
+          "sheetId": "FEED-PFD-1000",
+          "title": "Commercial Scale Wastewater Treatment",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 9,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=9"
+        }
+      ],
+      "routeLabels": [
+        "P-3111 qualified return to T-1006"
+      ]
+    },
+    {
+      "streamId": "S-1000-SCRUBBER-BLOWDOWN",
+      "name": "scrubber blowdown",
+      "source": "P-3183",
+      "via": [],
+      "destination": "T-1006",
+      "material": "Segregated scrubber-blowdown; receiving acceptance unqualified",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "conditional and normally isolated; chemistry and receiving acceptance required",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A1000",
+          "title": "Wastewater treatment, receiving sources, conditional chemistry and A-2000 handoff",
+          "revision": "V150 / 0f89c6bb63ec5c5127db6f48f8d1843733c0b83c",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "wastewater.js": "492fd40422dd1e5a13133f0073847c363d52e782aedc69dd0f638edd9e8acf7f",
+            "a1000-basis.js": "fd08d2819df8087e44992ffb72428fda7ec9856315a45200741d408cdfe93982",
+            "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "thermal-utilities.js": "522210c2e87434d1b2a5f6fa3a1915b9ef285ec9afc58b05409edc22041fe79c"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-1000",
+          "sheetId": "FEED-PFD-1000",
+          "title": "Commercial Scale Wastewater Treatment",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 9,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=9"
+        }
+      ],
+      "routeLabels": [
+        "P-3183 qualified return to T-1006"
+      ]
+    }
+  ]
+}

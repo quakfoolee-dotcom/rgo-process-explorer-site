@@ -1,0 +1,46 @@
+{
+  "assetId": "P-205A",
+  "name": "Recirculation pump A",
+  "assetClassId": "Pump",
+  "status": "proposed",
+  "identityStatus": "provisional-model-tag",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-200",
+    "system": "A-200 connected process context",
+    "parentAsset": null
+  },
+  "processFunction": "Recirculation pump A",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": "PTFE/PFA-lined pipe and mixer; PFA-lined sealless pump"
+  },
+  "operatingEnvelope": null,
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Branch allocation remains proposed: PFD lists P-205A/B and M-201; four dedicated packages are not confirmed.",
+    "Approved source gaps tracked under A200-001."
+  ],
+  "dataLayer": {
+    "area": "A-200",
+    "source": "data/semantic/A-200",
+    "approvedRows": 1,
+    "heldRows": 0,
+    "pendingRows": 19,
+    "identityHold": null,
+    "applied": "2026-09-21",
+    "baseline": {
+      "design": {
+        "capacityM3": null,
+        "designPressure": null,
+        "designTemperature": null,
+        "materialOfConstruction": null
+      }
+    },
+    "baselineAbsent": []
+  }
+}

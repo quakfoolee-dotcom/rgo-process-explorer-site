@@ -1,0 +1,30 @@
+{
+  "assetId": "A-5310B",
+  "documents": [
+    {
+      "documentId": "FEED-PFD-5000",
+      "sheetId": "FEED-PFD-5000",
+      "title": "Thermal Utilities Process Flow Diagram",
+      "revision": "V5.1",
+      "page": 19,
+      "status": "Draft — not for use"
+    },
+    {
+      "documentId": "MODEL-A5000",
+      "title": "A-5000 thermal utility model and review",
+      "revision": "A5000-closeout-75",
+      "page": null,
+      "status": "model design basis; engineering qualification open"
+    },
+    {
+      "documentId": "FEED-PE-MAT-002",
+      "title": "MOC Selection Matrix",
+      "revision": "V1.1",
+      "page": null,
+      "status": "controlled",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.1.xlsx"
+    }
+  ]
+}

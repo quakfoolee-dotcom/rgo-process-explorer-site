@@ -1,0 +1,57 @@
+{
+  "assetId": "SF-202D",
+  "relationships": [
+    {
+      "id": "REL-SF-202D-AREA",
+      "type": "locatedIn",
+      "target": "A-200",
+      "status": "model register area",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-SF-202D-S-200-KMNO4-D-SI-201D",
+      "type": "connectedTo",
+      "target": "SI-201D",
+      "streamId": "S-200-KMNO4-D",
+      "role": "KMnO4 induction D · PFD ratio; proposed induction arrangement",
+      "status": "PFD ratio; proposed induction arrangement",
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          61
+        ]
+      }
+    },
+    {
+      "id": "REL-SF-202D-S-200-HOPPER-202-D-H-202D",
+      "type": "connectedTo",
+      "target": "H-202D",
+      "streamId": "S-200-HOPPER-202-D",
+      "role": "Hopper to feeder 202D · Modeled package function; branch allocation proposed",
+      "status": "Modeled package function; branch allocation proposed",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          59
+        ]
+      }
+    }
+  ]
+}

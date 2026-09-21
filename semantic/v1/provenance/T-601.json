@@ -1,0 +1,71 @@
+{
+  "assetId": "T-601",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "T-601",
+      "source": "FEED-PFD-0600",
+      "revision": null,
+      "page": 6,
+      "status": "draft-pfd",
+      "confidence": "review required",
+      "gapId": "A600-005"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A600-003"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A600-003"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A600-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A600-003"
+    },
+    {
+      "valueId": "PV-A-600-0155",
+      "property": "design.materialOfConstruction",
+      "value": "PVDF/PTFE-lined lines; PVDF-lined or 316L pump; tungsten-carbide or ceramic nozzle inserts",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 43 (M-039)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "CF-materialOfConstruc-T-601",
+      "note": "scope: T-601 TLGO Receiving Tank; P-601 feed pump; atomizer and feed lines; alt: 316L/Ti atomizer wheel where rotary atomization is selected; status FIRM | D-A600-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

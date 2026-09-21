@@ -1,0 +1,7 @@
+{
+  "assetId": "DC-1001",
+  "bindingId": "GEOMETRY-DC-1001",
+  "modelEquipmentId": 130,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

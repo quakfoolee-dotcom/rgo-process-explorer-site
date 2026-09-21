@@ -1,0 +1,9 @@
+{
+  "bindingId": "GEOMETRY-SF-201B",
+  "assetId": "SF-201B",
+  "modelEquipmentId": 21,
+  "bindingScope": "assembly-context",
+  "geometryIdField": "part.code",
+  "bindingRule": "Highlights the containing model assembly, which may be shared by several asset records; this does not assert exclusive part ownership.",
+  "revisionPolicy": "Validate equipment IDs against the prepared model on every generation."
+}

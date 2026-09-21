@@ -1,0 +1,55 @@
+{
+  "assetId": "IF-A500-VENT",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "IF-A500-VENT",
+      "source": "MODEL-A500",
+      "revision": "V145 / b278d4c293d2eb9f98b5f08d975215873bd755c9",
+      "page": null,
+      "status": "model-derived",
+      "confidence": "review required",
+      "gapId": "A500-004"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A500-003"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A500-003"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A500-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A500-003"
+    }
+  ]
+}

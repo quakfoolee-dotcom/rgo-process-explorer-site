@@ -1,0 +1,13 @@
+{
+  "assetId": "CP-901",
+  "state": {
+    "design": "proposed",
+    "operational": "unknown",
+    "maintenance": "unknown",
+    "alarm": "unknown",
+    "simulation": "notConnected"
+  },
+  "timestamp": null,
+  "source": null,
+  "note": "No live or validated simulation state is connected."
+}

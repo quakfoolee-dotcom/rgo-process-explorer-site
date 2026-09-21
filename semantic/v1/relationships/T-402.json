@@ -1,0 +1,235 @@
+{
+  "assetId": "T-402",
+  "relationships": [
+    {
+      "id": "REL-T-402-AREA",
+      "type": "locatedIn",
+      "target": "A-400",
+      "status": "model area assignment",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-T-402-S-300-WASH-TRANSFER-P-304",
+      "type": "connectedTo",
+      "target": "P-304",
+      "role": "wash transfer",
+      "status": "Draft process intent and model route; final line identities, compatibility and allocations unqualified",
+      "streamId": "S-300-WASH-TRANSFER",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-0300",
+          "sheetId": "FEED-PFD-0300",
+          "title": "TLGO Fixing draft sheet",
+          "revision": null,
+          "revisionNote": "Sheet revision field is placeholder XXX; X01 document-creation row dated 15-Feb-2026. Do not equate it with the inherited V5.1/V5.1.1 bundle labels.",
+          "page": 4,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=4"
+        },
+        {
+          "documentId": "MODEL-A300",
+          "revision": "V143 baseline",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          506444363
+        ],
+        "routeLabels": [
+          "T-305 to P-304",
+          "P-304 to T-402 diafiltration"
+        ]
+      }
+    },
+    {
+      "id": "REL-T-402-S-400-FEED-P-402",
+      "type": "connectedTo",
+      "target": "P-402",
+      "role": "feed",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-400-FEED",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A400",
+          "title": "A-400 washing routes, VSEP and cleaning package model",
+          "revision": "V144 / f82bb71f58c4945fec3a0a1629193d9a16188926",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "a400.js": "a1030f59c4a82d4a7e01adce33f317865c4a87aec177aef8d45b115fe1ee9c16",
+            "vsep.js": "9bfd04db0fe2f35924cc0a348e8a4cf0952ab31bc898778b20b69d1356301b8f",
+            "a400-basis.js": "b5daadebe792c358ea3a6190ab39029382d80e1830e8073c34c67ff8b63a8ab9"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          1126940496
+        ],
+        "routeLabels": [
+          "T-402 to P-402",
+          "P-402 to TFF-401"
+        ]
+      }
+    },
+    {
+      "id": "REL-T-402-S-400-RETENTATE-TFF-401",
+      "type": "connectedTo",
+      "target": "TFF-401",
+      "role": "retentate",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-400-RETENTATE",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A400",
+          "title": "A-400 washing routes, VSEP and cleaning package model",
+          "revision": "V144 / f82bb71f58c4945fec3a0a1629193d9a16188926",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "a400.js": "a1030f59c4a82d4a7e01adce33f317865c4a87aec177aef8d45b115fe1ee9c16",
+            "vsep.js": "9bfd04db0fe2f35924cc0a348e8a4cf0952ab31bc898778b20b69d1356301b8f",
+            "a400-basis.js": "b5daadebe792c358ea3a6190ab39029382d80e1830e8073c34c67ff8b63a8ab9"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          33
+        ],
+        "routeLabels": [
+          "TFF-401 retentate return",
+          "T-402 retentate nozzle connection"
+        ]
+      }
+    },
+    {
+      "id": "REL-T-402-S-400-PRODUCT-P-402",
+      "type": "connectedTo",
+      "target": "P-402",
+      "role": "product",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-400-PRODUCT",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A400",
+          "title": "A-400 washing routes, VSEP and cleaning package model",
+          "revision": "V144 / f82bb71f58c4945fec3a0a1629193d9a16188926",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "a400.js": "a1030f59c4a82d4a7e01adce33f317865c4a87aec177aef8d45b115fe1ee9c16",
+            "vsep.js": "9bfd04db0fe2f35924cc0a348e8a4cf0952ab31bc898778b20b69d1356301b8f",
+            "a400-basis.js": "b5daadebe792c358ea3a6190ab39029382d80e1830e8073c34c67ff8b63a8ab9"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          1126940496
+        ],
+        "routeLabels": [
+          "A400 product takeoff",
+          "A400 washed suspension to A500"
+        ]
+      }
+    },
+    {
+      "id": "REL-T-402-S-400-RO-IF-A400-RO",
+      "type": "connectedTo",
+      "target": "IF-A400-RO",
+      "role": "ro",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-400-RO",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A400",
+          "title": "A-400 washing routes, VSEP and cleaning package model",
+          "revision": "V144 / f82bb71f58c4945fec3a0a1629193d9a16188926",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "a400.js": "a1030f59c4a82d4a7e01adce33f317865c4a87aec177aef8d45b115fe1ee9c16",
+            "vsep.js": "9bfd04db0fe2f35924cc0a348e8a4cf0952ab31bc898778b20b69d1356301b8f",
+            "a400-basis.js": "b5daadebe792c358ea3a6190ab39029382d80e1830e8073c34c67ff8b63a8ab9"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        }
+      ]
+    },
+    {
+      "id": "REL-T-402-S-400-LOW-DRAIN-IF-A400-DRAIN",
+      "type": "connectedTo",
+      "target": "IF-A400-DRAIN",
+      "role": "low drain",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-400-LOW-DRAIN",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A400",
+          "title": "A-400 washing routes, VSEP and cleaning package model",
+          "revision": "V144 / f82bb71f58c4945fec3a0a1629193d9a16188926",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "a400.js": "a1030f59c4a82d4a7e01adce33f317865c4a87aec177aef8d45b115fe1ee9c16",
+            "vsep.js": "9bfd04db0fe2f35924cc0a348e8a4cf0952ab31bc898778b20b69d1356301b8f",
+            "a400-basis.js": "b5daadebe792c358ea3a6190ab39029382d80e1830e8073c34c67ff8b63a8ab9"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        }
+      ]
+    },
+    {
+      "id": "REL-T-402-S-400-T402-VENT-IF-A400-T402-VENT",
+      "type": "connectedTo",
+      "target": "IF-A400-T402-VENT",
+      "role": "t402 vent",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-400-T402-VENT",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A400",
+          "title": "A-400 washing routes, VSEP and cleaning package model",
+          "revision": "V144 / f82bb71f58c4945fec3a0a1629193d9a16188926",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "a400.js": "a1030f59c4a82d4a7e01adce33f317865c4a87aec177aef8d45b115fe1ee9c16",
+            "vsep.js": "9bfd04db0fe2f35924cc0a348e8a4cf0952ab31bc898778b20b69d1356301b8f",
+            "a400-basis.js": "b5daadebe792c358ea3a6190ab39029382d80e1830e8073c34c67ff8b63a8ab9"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        }
+      ]
+    }
+  ]
+}

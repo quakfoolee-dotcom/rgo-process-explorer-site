@@ -1,0 +1,7 @@
+{
+  "assetId": "R-141D-JACKET",
+  "bindingId": "GEOMETRY-R-141D-JACKET",
+  "modelEquipmentId": 42,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Highlights the containing consumer assembly; this does not assert exclusive part ownership."
+}

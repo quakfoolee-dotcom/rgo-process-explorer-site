@@ -1,0 +1,53 @@
+{
+  "assetId": "T-162",
+  "relationships": [
+    {
+      "id": "REL-T-162-S-160-TRANSFER-162",
+      "type": "receivesFrom",
+      "target": "T-161",
+      "role": "T-161 transfer to T-162",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-160-TRANSFER-162",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-T-162-S-160-FILTER-FEED",
+      "type": "feeds",
+      "target": "F-161",
+      "role": "T-162 slurry to F-161",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-160-FILTER-FEED",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-T-162-S-160-RO-T162",
+      "type": "receivesFrom",
+      "target": "IF-A2000-RO162",
+      "role": "T-162 RO-water supply",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-160-RO-T162",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-T-162-S-160-VENT-T162",
+      "type": "feeds",
+      "target": "IF-A3000-V-T-162",
+      "role": "T-162 vent handoff",
+      "status": "Existing A-3000 collection interface; rate, composition and relief segregation unresolved",
+      "streamId": "S-160-VENT-T162",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-T-162-GEOM",
+      "type": "representedBy",
+      "target": "GEOMETRY-T-162",
+      "status": "bound to modeled equipment group",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    }
+  ]
+}

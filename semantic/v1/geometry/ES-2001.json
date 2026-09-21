@@ -1,0 +1,16 @@
+{
+  "assetId": "ES-2001",
+  "bindingId": "GEOMETRY-ES-2001",
+  "modelEquipmentId": 122027,
+  "bindingScope": "station-assembly",
+  "location": {
+    "x": 93.25,
+    "z": -26.85,
+    "yawRad": 0,
+    "walkPoint": [
+      93.25,
+      -25.25
+    ]
+  },
+  "bindingRule": "Indicative station geometry and access screening; no compliance or commissioning claim."
+}

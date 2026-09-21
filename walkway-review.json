@@ -1,0 +1,1282 @@
+{
+  "summary": {
+    "revision": "bc-walkways-91",
+    "pedestrianSegments": 188,
+    "centrelineLengthM": 1278.95,
+    "clearWidthM": 1.2,
+    "headroomM": 2.3,
+    "protectionAssemblies": 68,
+    "protectionParts": 1070,
+    "firePointsConnected": 25,
+    "operatingCheckpointsConnected": 56,
+    "localEquipmentApproachesConnected": 24,
+    "gradeStairApproaches": 2,
+    "eyewashGradeApproaches": 40,
+    "unresolvedEyewashApproaches": [],
+    "crossings": 1,
+    "walkingTours": 9,
+    "vehicleRoutes": 7,
+    "vehicleProfiles": 2,
+    "unrelatedProcessPipingUnchanged": true,
+    "changedProcessRoutes": [
+      "A400 closed drain",
+      "P-163 fixing waste to wastewater",
+      "P-165 filtrate to wastewater"
+    ],
+    "exposedDrainRunM": 0.7,
+    "qualified": false,
+    "additionalEmergencyTaskApproaches": 14,
+    "unresolvedEmergencyTaskApproaches": [
+      "EXP-501-SAMPLE",
+      "EXP-501-SERVICE",
+      "EXP-602-TRANSFER",
+      "EXP-702-TRANSFER",
+      "EXP-701-OFFGAS",
+      "EXP-2001-DOSE",
+      "EXP-2001-CEB",
+      "EXP-2001-RO",
+      "EXP-1004-HCL"
+    ]
+  },
+  "review": {
+    "revision": "bc-walkways-91",
+    "segments": [
+      {
+        "id": "PW-001",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-002",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-003",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-004",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-005",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-006",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-007",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-008",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-009",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-010",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-011",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-012",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-013",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-014",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-015",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-016",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-017",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-018",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-019",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-020",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-021",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-022",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-023",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-024",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-025",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-026",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-027",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-028",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-029",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-030",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-031",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-032",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-033",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-034",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-035",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-036",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-037",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-038",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-039",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-040",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-041",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-042",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-043",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-044",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-045",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-046",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-047",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-048",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-049",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-050",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-051",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-052",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-053",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-054",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-055",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-056",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-057",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-058",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-059",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-060",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-061",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-062",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-063",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-064",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-065",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-066",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-067",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-068",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-069",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-070",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-071",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-072",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-073",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-074",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-075",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-076",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-077",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-078",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-079",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-080",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-081",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-082",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-083",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-084",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-085",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-086",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-087",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-088",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-089",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-090",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-091",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-092",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-093",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-094",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-095",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-096",
+        "clear": true,
+        "findings": [],
+        "crossings": [
+          "X-WEST"
+        ]
+      },
+      {
+        "id": "PW-097",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-098",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-099",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-100",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-101",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-102",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-103",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-104",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-105",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-106",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-107",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-108",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-109",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-110",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-111",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-112",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-113",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-114",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-115",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-116",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-117",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-118",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-119",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-120",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-121",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-122",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-123",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-124",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-125",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-126",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-127",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-128",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-129",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-130",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-101-0",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-101-1",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-141-1",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-161-1",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-201-1",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-202-0",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-202-1",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-301-0",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-301-1",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-401-0",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-401-1",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-402-1",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-501-1",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-602-0",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-701-1",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-702-1",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-801-1",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-802-0",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-901-0",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-1001-1",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-1002-1",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-1003-0",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-2002-0",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-3001-1",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-4001-1",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-5001-1",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-6001-1",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-001",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-002",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-003",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-004",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-005",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-006",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-007",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-008",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-009",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-010",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-011",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-012",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-013",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-014",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-015",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-016",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-017",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-018",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-019",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-020",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-021",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-022",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-023",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-024",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-025",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-026",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-027",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-028",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-029",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-030",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-ES-031",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      }
+    ],
+    "clear": true,
+    "widthM": 1.2,
+    "headroomM": 2.3,
+    "qualified": false
+  },
+  "holds": [
+    {
+      "id": "RATING",
+      "label": "Barrier impact ratings, deflection and slab anchorage require qualified selection."
+    },
+    {
+      "id": "EGRESS",
+      "label": "Final building exits, evacuation travel, occupancy and accessible-route widths are not approved."
+    },
+    {
+      "id": "PLATFORMS",
+      "label": "Elevated decks retain existing guards; platform fire coverage and fall protection require review."
+    },
+    {
+      "id": "SHARED-FRONTAGE",
+      "label": "A-1000 and A-700 close vehicle frontages need separation detail or an approved temporary closure plan; preview is vehicle-only there."
+    },
+    {
+      "id": "PUMPED-WASTE",
+      "label": "P-163 and P-165 discharge sections are raised to 2.8 / 2.9 m to clear local access. Their suction and collection endpoints are retained. Confirm pump duty, transient pressure, pipe stress, drainage after isolation and waste compatibility before use."
+    },
+    {
+      "id": "DRAIN-400",
+      "label": "A-400 uses a closed drain inside a covered, lined channel. Receiver invert, backpressure, materials, flushing and civil details remain unqualified. Keep pedestrian routes beside its removable covers."
+    },
+    {
+      "id": "LOCAL-REACH",
+      "label": "Local routes provide grade access beside A-140, A-160, A-200 and A-300 equipment. Valve reach, sampling, maintenance withdrawal and elevated work positions remain subject to equipment-specific review."
+    },
+    {
+      "id": "SURFACE",
+      "label": "Slip resistance, chemical resistance, drainage transitions, winter conditions and emergency-water response time remain unqualified."
+    },
+    {
+      "id": "EXP-501-SAMPLE",
+      "label": "A-500 \u00b7 T-501 sampling approach: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+    },
+    {
+      "id": "EXP-501-SERVICE",
+      "label": "A-500 \u00b7 US-501 cleaning / service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+    },
+    {
+      "id": "EXP-602-TRANSFER",
+      "label": "A-600 \u00b7 T-602 powder-transfer service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+    },
+    {
+      "id": "EXP-702-TRANSFER",
+      "label": "A-700 \u00b7 T-702 product-transfer service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+    },
+    {
+      "id": "EXP-701-OFFGAS",
+      "label": "A-700 \u00b7 Off-gas equipment service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+    },
+    {
+      "id": "EXP-2001-DOSE",
+      "label": "A-2000 \u00b7 Antiscalant dosing service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+    },
+    {
+      "id": "EXP-2001-CEB",
+      "label": "A-2000 \u00b7 UF chemical-backwash interface: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+    },
+    {
+      "id": "EXP-2001-RO",
+      "label": "A-2000 \u00b7 RO cleaning / membrane service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+    },
+    {
+      "id": "EXP-1004-HCL",
+      "label": "A-1000 \u00b7 HCl dosing service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+    },
+    {
+      "id": "EXP-201-UPPER",
+      "label": "A-200 \u00b7 Upper reactor work: Confirm actual platform work position and same-level emergency washing provision; grade route not credited."
+    },
+    {
+      "id": "EXP-166-PLATFORM",
+      "label": "A-160 \u00b7 Filter upper work: Platform and task elevation require survey; grade station provides no elevated coverage credit."
+    },
+    {
+      "id": "EXP-601-ATOMIZER",
+      "label": "A-600 \u00b7 DR-601 atomizer work: Equipment service elevation shown; standing platform and same-level washing provision require design."
+    },
+    {
+      "id": "EXP-601-FILTER",
+      "label": "A-600 \u00b7 F-601 filter opening: Equipment service elevation shown; confirm standing deck and same-level emergency access."
+    },
+    {
+      "id": "EXP-701-UPPER",
+      "label": "A-700 \u00b7 LK-701 / H-701 upper feed work: Elevated work position and local washing provision unresolved; do not project onto grade."
+    },
+    {
+      "id": "EXP-802-DOCK",
+      "label": "A-800 \u00b7 LK-802 reagent docking: Docking interface elevation shown; operator position, platform and local combination station require coordinated design."
+    },
+    {
+      "id": "EXP-802-FEEDER",
+      "label": "A-800 \u00b7 PL-801 feeder service: Same-level station space, water and runoff design required; ground station is not credited."
+    },
+    {
+      "id": "EMERGENCY-COVERAGE",
+      "label": "Emergency stations have revised concept positions. Check Emergency stations for current geometry, exposure-distance gaps, final activation and water-system qualification."
+    }
+  ]
+}

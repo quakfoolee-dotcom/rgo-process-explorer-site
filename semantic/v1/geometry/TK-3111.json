@@ -1,0 +1,7 @@
+{
+  "assetId": "TK-3111",
+  "bindingId": "GEOMETRY-TK-3111",
+  "modelEquipmentId": 610,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

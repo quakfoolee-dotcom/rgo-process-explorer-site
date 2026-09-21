@@ -1,0 +1,299 @@
+{
+  "assetId": "T-501",
+  "relationships": [
+    {
+      "id": "REL-T-501-AREA",
+      "type": "locatedIn",
+      "target": "A-500",
+      "status": "model area assignment",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-T-501-S-400-PRODUCT-P-402",
+      "type": "connectedTo",
+      "target": "P-402",
+      "role": "product",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-400-PRODUCT",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A400",
+          "title": "A-400 washing routes, VSEP and cleaning package model",
+          "revision": "V144 / f82bb71f58c4945fec3a0a1629193d9a16188926",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "a400.js": "a1030f59c4a82d4a7e01adce33f317865c4a87aec177aef8d45b115fe1ee9c16",
+            "vsep.js": "9bfd04db0fe2f35924cc0a348e8a4cf0952ab31bc898778b20b69d1356301b8f",
+            "a400-basis.js": "b5daadebe792c358ea3a6190ab39029382d80e1830e8073c34c67ff8b63a8ab9"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          1126940496
+        ],
+        "routeLabels": [
+          "A400 product takeoff",
+          "A400 washed suspension to A500"
+        ]
+      }
+    },
+    {
+      "id": "REL-T-501-S-500-FEED-P-501",
+      "type": "connectedTo",
+      "target": "P-501",
+      "role": "feed",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-500-FEED",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A500",
+          "title": "Sonication model routes and provisional three-cell arrangement",
+          "revision": "V145 / b278d4c293d2eb9f98b5f08d975215873bd755c9",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "sonication.js": "f0fffae28815c2549da659a1ddd45df6c22de89ac89d83ecf1f3d0148202c25e"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0500",
+          "sheetId": "FEED-PFD-0500",
+          "title": "Commercial Scale Sonication",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 5,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=5"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          64
+        ],
+        "routeLabels": [
+          "T-501 bottom suction",
+          "P-501 suction selection",
+          "P-501 to US-501"
+        ]
+      }
+    },
+    {
+      "id": "REL-T-501-S-500-RETURN-E-501",
+      "type": "connectedTo",
+      "target": "E-501",
+      "role": "return",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-500-RETURN",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A500",
+          "title": "Sonication model routes and provisional three-cell arrangement",
+          "revision": "V145 / b278d4c293d2eb9f98b5f08d975215873bd755c9",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "sonication.js": "f0fffae28815c2549da659a1ddd45df6c22de89ac89d83ecf1f3d0148202c25e"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0500",
+          "sheetId": "FEED-PFD-0500",
+          "title": "Commercial Scale Sonication",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 5,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=5"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          66
+        ],
+        "routeLabels": [
+          "E-501 cooled return",
+          "T-501 cooled return nozzle"
+        ]
+      }
+    },
+    {
+      "id": "REL-T-501-S-500-PRODUCT-P-502",
+      "type": "connectedTo",
+      "target": "P-502",
+      "role": "product",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-500-PRODUCT",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A500",
+          "title": "Sonication model routes and provisional three-cell arrangement",
+          "revision": "V145 / b278d4c293d2eb9f98b5f08d975215873bd755c9",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "sonication.js": "f0fffae28815c2549da659a1ddd45df6c22de89ac89d83ecf1f3d0148202c25e"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0500",
+          "sheetId": "FEED-PFD-0500",
+          "title": "Commercial Scale Sonication",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 5,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=5"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          67
+        ],
+        "routeLabels": [
+          "P-502 suction selection",
+          "A500 accepted product to A600",
+          "A600 dryer-feed buffer interface"
+        ]
+      }
+    },
+    {
+      "id": "REL-T-501-S-500-SAMPLE-IF-A500-SAMPLE",
+      "type": "connectedTo",
+      "target": "IF-A500-SAMPLE",
+      "role": "sample",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-500-SAMPLE",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A500",
+          "title": "Sonication model routes and provisional three-cell arrangement",
+          "revision": "V145 / b278d4c293d2eb9f98b5f08d975215873bd755c9",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "sonication.js": "f0fffae28815c2549da659a1ddd45df6c22de89ac89d83ecf1f3d0148202c25e"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0500",
+          "sheetId": "FEED-PFD-0500",
+          "title": "Commercial Scale Sonication",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 5,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "id": "REL-T-501-S-500-CIP-SUPPLY-IF-A500-CIP-SUPPLY",
+      "type": "connectedTo",
+      "target": "IF-A500-CIP-SUPPLY",
+      "role": "cip supply",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-500-CIP-SUPPLY",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A500",
+          "title": "Sonication model routes and provisional three-cell arrangement",
+          "revision": "V145 / b278d4c293d2eb9f98b5f08d975215873bd755c9",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "sonication.js": "f0fffae28815c2549da659a1ddd45df6c22de89ac89d83ecf1f3d0148202c25e"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0500",
+          "sheetId": "FEED-PFD-0500",
+          "title": "Commercial Scale Sonication",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 5,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "id": "REL-T-501-S-500-VENT-IF-A500-VENT",
+      "type": "connectedTo",
+      "target": "IF-A500-VENT",
+      "role": "vent",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-500-VENT",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A500",
+          "title": "Sonication model routes and provisional three-cell arrangement",
+          "revision": "V145 / b278d4c293d2eb9f98b5f08d975215873bd755c9",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "sonication.js": "f0fffae28815c2549da659a1ddd45df6c22de89ac89d83ecf1f3d0148202c25e"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0500",
+          "sheetId": "FEED-PFD-0500",
+          "title": "Commercial Scale Sonication",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 5,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=5"
+        }
+      ]
+    }
+  ]
+}

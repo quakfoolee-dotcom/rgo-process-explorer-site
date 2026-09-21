@@ -1,0 +1,32 @@
+{
+  "assetId": "IF-A2000-RO-201",
+  "name": "Reclaimed-water boundary BL-RO-201",
+  "assetClassId": "ExternalInterface",
+  "status": "proposed",
+  "identityStatus": "model-derived; tag qualification open",
+  "recordScope": "external-interface",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-2000",
+    "system": "A-2000 reclaimed-water treatment context",
+    "parentAsset": null
+  },
+  "processFunction": "Reclaimed-water boundary BL-RO-201",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null
+  },
+  "operatingEnvelope": null,
+  "processBasis": [],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "The sheet is Draft - Not for Use, revision XXX. Functional monitoring has no approved instrument tags, ranges or trip setpoints. Draft permeate quality targets are not measured performance or discharge permission. Conductivity alone does not verify all reuse criteria.",
+    "Model 100 m3/h feed, media 98%, UF 92.5%, 60% RO recovery and tank volumes are screening allowances, not ratings. Eight-hour inventory is a lower-end model selection within the draft 8-12 h recommendation. Base permeate is below the A-400 71 m3/h duty alone; supplemental water and batch balance remain unresolved.",
+    "Draft N+1 does not specify N; the model selects A/B duty and C standby with 72 elements per train and 8:4 staging in a single pass. Draft 70-75% higher recovery requires a scaling study. Residual Ba/Ca/sulfate, silica, oxidant breakthrough, greensand regeneration and antiscalant dose remain unqualified.",
+    "Normal media/UF backwash returns to A-1000. Brine and spent CIP have separate positively blinded boundaries with destinations unassigned. Sequential acid/alkaline CIP isolates one train from product and brine export. Low CIP drain needs contained pump-out; UF chemical CEB is an unmodeled hold with no active pipe.",
+    "Model off-spec permeate and stored water recycle to T-2001; no active off-spec drain is added from draft wording. Train C is modeled standby, not live state. Relief capacity/backpressure, tank vent qualification, pressure ratings and hygienic turnover remain open. Reclaimed water is not a potable emergency supply."
+  ]
+}

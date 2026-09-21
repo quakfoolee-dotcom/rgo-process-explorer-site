@@ -1,0 +1,50 @@
+{
+  "assetId": "P-1010",
+  "name": "Conditional centrifuge-bypass pump",
+  "assetClassId": "Pump",
+  "status": "listed",
+  "identityStatus": "draft-pfd-tag",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-1000",
+    "system": "A-1000 wastewater treatment context",
+    "parentAsset": null
+  },
+  "processFunction": "Conditional centrifuge-bypass pump",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": "316L or coated carbon steel; HDPE/rubber lining where abrasion is significant; hardfaced centrifuge wear zones"
+  },
+  "operatingEnvelope": null,
+  "processBasis": [],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "R-1002 draft targets conflict: 7-10.5 in stage text versus 8.5-10.5 by the reactor. R-1001 draft pH 3-4 is indicative only. BaCl2 polishing is conditional; the draft <1500 mg/L sulfate note is not a verified site discharge limit. HCl trim needs a metals-redissolution review. No dose or control target is approved.",
+    "Model 100 m3/h, 15/30/20/20 min residence times, tank inventories and equalization assumptions are layout screening inputs, not measured flows or approved capacities. The model notes 62.208 m3/h eight-module A-400 capacity against a 71 m3/h duty. Upstream batch peaks, returns and actual chemistry remain unreconciled.",
+    "The draft permits conditional centrifuge bypass with downtime wording; the model keeps it closed and positively blinded. Downtime alone is not acceptance for A-2000. Centrate recycle improves solids capture only and does not remove dissolved salts. Residual Ba/Ca/sulfate, turbidity, pH and other RO acceptance criteria remain unqualified.",
+    "Selected wet vents are candidate connections to HD-3100 only; chemical-storage vents remain separate by service. A-3000 condensate and blowdown returns are normally isolated. Low process drains are positively blinded; no common chemical drain or dry A-800 waste route is inferred. Sludge classification and receiving disposal acceptance require testing, not the draft non-hazardous wording.",
+    "Sheet is Draft - Not for Use with XXX revision. Cooling is a separate utility; duties and limits are unqualified. pH, temperature, level and mixing checks are functional concepts only. Legacy spare return connections remain capped; the modeled normal A-2000 backwash return is distinct. Aeration/oxidation remains future provision and is not invented as installed equipment."
+  ],
+  "dataLayer": {
+    "area": "A-1000",
+    "source": "data/semantic/A-1000",
+    "approvedRows": 1,
+    "heldRows": 0,
+    "pendingRows": 7,
+    "identityHold": null,
+    "applied": "2026-09-21",
+    "baseline": {
+      "design": {
+        "capacityM3": null,
+        "designPressure": null,
+        "designTemperature": null,
+        "materialOfConstruction": null
+      }
+    },
+    "baselineAbsent": []
+  }
+}

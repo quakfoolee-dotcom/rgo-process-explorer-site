@@ -1,0 +1,47 @@
+{
+  "assetId": "T-301",
+  "name": "Hydrogen peroxide supply",
+  "assetClassId": "Tank",
+  "status": "listed",
+  "identityStatus": "draft-pfd-tag",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-300",
+    "system": "A-300 fixing process context",
+    "parentAsset": null
+  },
+  "processFunction": "Hydrogen peroxide supply",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": "Passivated 316L, HDPE, PVDF, PTFE/PFA"
+  },
+  "operatingEnvelope": null,
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Draft process basis only; no approved ratings, capacity, control loops or protective setpoints are asserted.",
+    "Model route alignment and destination qualification remain open under A300-001."
+  ],
+  "processBasis": [],
+  "dataLayer": {
+    "area": "A-300",
+    "source": "data/semantic/A-300",
+    "approvedRows": 1,
+    "heldRows": 0,
+    "pendingRows": 16,
+    "identityHold": null,
+    "applied": "2026-09-21",
+    "baseline": {
+      "design": {
+        "capacityM3": null,
+        "designPressure": null,
+        "designTemperature": null,
+        "materialOfConstruction": null
+      }
+    },
+    "baselineAbsent": []
+  }
+}

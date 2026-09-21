@@ -1,0 +1,253 @@
+{
+  "assetId": "TCU-141",
+  "streams": [
+    {
+      "streamId": "S-5000-TCU141-HW",
+      "name": "TCU-141 primary utility",
+      "source": "HD-5100",
+      "via": [],
+      "destination": "TCU-141",
+      "material": "Closed-loop hot water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": {
+        "supplyRangeC": [
+          80,
+          95
+        ],
+        "returnRangeC": [
+          60,
+          80
+        ],
+        "status": "draft PFD range"
+      },
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "TCU-141"
+      ],
+      "operatingMode": "Heat transfer only across a sealed exchanger; no primary/secondary fluid connection",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    },
+    {
+      "streamId": "S-5000-TCU141-CHW",
+      "name": "TCU-141 primary utility",
+      "source": "HD-5300",
+      "via": [],
+      "destination": "TCU-141",
+      "material": "Closed-loop chilled water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": {
+        "supplyRangeC": [
+          5,
+          7
+        ],
+        "returnRangeC": [
+          10,
+          15
+        ],
+        "status": "draft PFD range"
+      },
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "TCU-141"
+      ],
+      "operatingMode": "Heat transfer only across a sealed exchanger; no primary/secondary fluid connection",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    },
+    {
+      "streamId": "S-5000-R141A",
+      "name": "R-141A isolated jacket service",
+      "source": "TCU-141",
+      "via": [],
+      "destination": "R-141A-JACKET",
+      "material": "Unselected isolated secondary-loop fluid",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "R-141A-JACKET"
+      ],
+      "operatingMode": "Secondary temperature unknown; heating and cooldown admissions are mutually exclusive",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    },
+    {
+      "streamId": "S-5000-R141B",
+      "name": "R-141B isolated jacket service",
+      "source": "TCU-141",
+      "via": [],
+      "destination": "R-141B-JACKET",
+      "material": "Unselected isolated secondary-loop fluid",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "R-141B-JACKET"
+      ],
+      "operatingMode": "Secondary temperature unknown; heating and cooldown admissions are mutually exclusive",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    },
+    {
+      "streamId": "S-5000-R141C",
+      "name": "R-141C isolated jacket service",
+      "source": "TCU-141",
+      "via": [],
+      "destination": "R-141C-JACKET",
+      "material": "Unselected isolated secondary-loop fluid",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "R-141C-JACKET"
+      ],
+      "operatingMode": "Secondary temperature unknown; heating and cooldown admissions are mutually exclusive",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    },
+    {
+      "streamId": "S-5000-R141D",
+      "name": "R-141D isolated jacket service",
+      "source": "TCU-141",
+      "via": [],
+      "destination": "R-141D-JACKET",
+      "material": "Unselected isolated secondary-loop fluid",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "R-141D-JACKET"
+      ],
+      "operatingMode": "Secondary temperature unknown; heating and cooldown admissions are mutually exclusive",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    }
+  ]
+}

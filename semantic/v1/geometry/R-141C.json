@@ -1,0 +1,7 @@
+{
+  "assetId": "R-141C",
+  "bindingId": "GEOMETRY-R-141C",
+  "modelEquipmentId": 41,
+  "bindingScope": "modeled-equipment-group",
+  "bindingRule": "All geometry owned by model equipment 41 resolves to R-141C; canonical identity remains stable across model rebuilds."
+}

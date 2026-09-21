@@ -1,0 +1,67 @@
+{
+  "assetId": "TCU-303",
+  "relationships": [
+    {
+      "id": "REL-TCU-303-AREA",
+      "type": "locatedIn",
+      "target": "A-5000",
+      "status": "model area assignment",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-TCU-303-S-5000-TCU303-HD-5300",
+      "type": "connectedTo",
+      "target": "HD-5300",
+      "role": "TCU-303 primary utility",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "streamId": "S-5000-TCU303",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    },
+    {
+      "id": "REL-TCU-303-S-5000-T303-T-303",
+      "type": "connectedTo",
+      "target": "T-303",
+      "role": "T-303 isolated cooling service",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "streamId": "S-5000-T303",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "assetId": "F-161",
+  "relationships": [
+    {
+      "id": "REL-F-161-S-160-FILTER-FEED",
+      "type": "receivesFrom",
+      "target": "T-162",
+      "role": "T-162 slurry to F-161",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-160-FILTER-FEED",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-F-161-S-160-FILTRATE",
+      "type": "feeds",
+      "target": "T-163",
+      "role": "F-161 filtrate to T-163",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-160-FILTRATE",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-F-161-S-160-WET-CAKE",
+      "type": "feeds",
+      "target": "TR-164",
+      "role": "F-161 wet cake to TR-164",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-160-WET-CAKE",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-F-161-S-160-RO-F161",
+      "type": "receivesFrom",
+      "target": "IF-A2000-RO-F161",
+      "role": "F-161 RO-water supply",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-160-RO-F161",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-F-161-GEOM",
+      "type": "representedBy",
+      "target": "GEOMETRY-F-161",
+      "status": "bound to modeled equipment group",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "assetId": "IF-A600-FEED-CASING-DRAIN",
+  "bindingId": "GEOMETRY-IF-A600-FEED-CASING-DRAIN",
+  "modelEquipmentId": null,
+  "bindingScope": "unmodeled-interface",
+  "bindingRule": "No specific model assembly or qualified receiving destination is assigned."
+}

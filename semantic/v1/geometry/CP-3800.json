@@ -1,0 +1,7 @@
+{
+  "assetId": "CP-3800",
+  "bindingId": "GEOMETRY-CP-3800",
+  "modelEquipmentId": 632,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; the package is a layout envelope and dimensions, internals, duties and ratings remain unqualified."
+}

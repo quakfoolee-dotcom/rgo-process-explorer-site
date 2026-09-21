@@ -1,0 +1,7 @@
+{
+  "assetId": "A-5310B",
+  "bindingId": "GEOMETRY-A-5310B",
+  "modelEquipmentId": 822,
+  "bindingScope": "assembly-context",
+  "bindingRule": "A-5000 model assembly; planning geometry does not establish capacity, rating or construction readiness."
+}

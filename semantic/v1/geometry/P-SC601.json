@@ -1,0 +1,7 @@
+{
+  "assetId": "P-SC601",
+  "bindingId": "GEOMETRY-P-SC601",
+  "modelEquipmentId": 126117225,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

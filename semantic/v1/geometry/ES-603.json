@@ -1,0 +1,16 @@
+{
+  "assetId": "ES-603",
+  "bindingId": "GEOMETRY-ES-603",
+  "modelEquipmentId": 122031,
+  "bindingScope": "station-assembly",
+  "location": {
+    "x": 75.25,
+    "z": 19.35,
+    "yawRad": 3.141592653589793,
+    "walkPoint": [
+      75.25,
+      17.75
+    ]
+  },
+  "bindingRule": "Indicative station geometry and access screening; no compliance or commissioning claim."
+}

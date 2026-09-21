@@ -1,0 +1,65 @@
+{
+  "assetId": "T-162",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "T-162",
+      "source": "FEED-PE-PFD-001",
+      "revision": "V5.1",
+      "status": "draft PFD basis",
+      "confidence": "documented"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A160-001"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A160-002"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A160-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A160-004"
+    },
+    {
+      "valueId": "PV-A-160-0162",
+      "property": "operatingEnvelope.operatingTemperatureC",
+      "value": 35,
+      "unit": "°C",
+      "source": "FEED-PE-MEB-004",
+      "revision": "V5.0",
+      "location": "'Design Basis & Inputs'!row 25 (T_162_op)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": null,
+      "note": "C25 | D-A160-02: 35 °C T-162 (MEB-004).",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

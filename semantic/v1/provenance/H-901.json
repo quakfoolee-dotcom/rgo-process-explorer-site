@@ -1,0 +1,71 @@
+{
+  "assetId": "H-901",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "H-901",
+      "source": "MODEL-A900-V163",
+      "revision": "V163",
+      "status": "model-derived",
+      "confidence": "review required",
+      "gapId": "A900-001"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A900-005"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A900-005"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A900-005"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A900-005"
+    },
+    {
+      "valueId": "PV-A-900-0179",
+      "property": "design.materialOfConstruction",
+      "value": "316L electropolished product-contact surfaces, grounded and bonded; hardfaced/tungsten-carbide rolls and wear parts",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 59 (M-055)",
+      "status": "held",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "CF-materialOfConstruc-H-901",
+      "note": "scope: T-901/H-901/C-901/RC-901/M-901/SC-901/PK-901/W-901/SE-901; alt: Conductive PTFE liners at flexible interfaces; status FIRM | D-A900-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "identityHold": "Function similar but the model has no T-901 upstream and no RC-901 / M-901 downstream; identity held until the PFD-0900 train is reconciled"
+    }
+  ]
+}

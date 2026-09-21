@@ -1,0 +1,33 @@
+{
+  "assetId": "PK-901",
+  "relationships": [
+    {
+      "id": "REL-PK-901-S-900-ACCEPT-OUT",
+      "type": "connectedTo",
+      "target": "IF-A900-PRODUCT",
+      "role": "Accepted pellets to collection and release",
+      "status": "Model-derived functional topology; design and operation require approved sources",
+      "streamId": "S-900-ACCEPT",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-PK-901-S-900-ACCEPT-IN",
+      "type": "connectedTo",
+      "target": "SC-901",
+      "role": "Accepted pellets to collection and release",
+      "status": "Model-derived functional topology; design and operation require approved sources",
+      "streamId": "S-900-ACCEPT",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-PK-901-AREA",
+      "type": "locatedIn",
+      "target": "A-900",
+      "status": "model area assignment",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    }
+  ]
+}

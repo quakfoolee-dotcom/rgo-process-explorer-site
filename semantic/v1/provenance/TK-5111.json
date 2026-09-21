@@ -1,0 +1,69 @@
+{
+  "assetId": "TK-5111",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "TK-5111",
+      "source": "MODEL-A5000",
+      "revision": "V156",
+      "status": "model-derived",
+      "confidence": "review required"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A5000-001"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A5000-002"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A5000-002"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A5000-002"
+    },
+    {
+      "property": "operatingEnvelope",
+      "value": {
+        "supplyTemperatureRangeC": [
+          80,
+          95
+        ],
+        "returnTemperatureRangeC": [
+          60,
+          80
+        ],
+        "status": "Draft PFD range; no selected setpoint or live measurement"
+      },
+      "source": "FEED-PFD-5000",
+      "revision": "V5.1",
+      "page": 19,
+      "status": "draft — not for use",
+      "confidence": "documented draft",
+      "gapId": "A5000-003"
+    }
+  ]
+}

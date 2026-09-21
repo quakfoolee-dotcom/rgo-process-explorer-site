@@ -1,0 +1,7 @@
+{
+  "assetId": "ST-3702",
+  "bindingId": "GEOMETRY-ST-3702",
+  "modelEquipmentId": 621,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; the package is a layout envelope and dimensions, internals, duties and ratings remain unqualified."
+}

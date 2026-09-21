@@ -1,0 +1,7 @@
+{
+  "assetId": "UF-2001",
+  "bindingId": "GEOMETRY-UF-2001",
+  "modelEquipmentId": 505,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

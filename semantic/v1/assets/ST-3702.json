@@ -1,0 +1,34 @@
+{
+  "assetId": "ST-3702",
+  "name": "Dedicated A-700 treatment outlet; permit HOLD",
+  "assetClassId": "Stack",
+  "status": "proposed",
+  "identityStatus": "model-derived; tag qualification open",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-3000",
+    "system": "Independent A-700 thermal off-gas treatment context",
+    "parentAsset": null
+  },
+  "processFunction": "Dedicated A-700 treatment outlet; permit HOLD",
+  "handledMaterials": [
+    "A-700 thermal off-gas; composition and particulate load unqualified"
+  ],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null
+  },
+  "operatingEnvelope": null,
+  "processBasis": [],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "AB-3701 is a proposed vendor-package envelope. The model describes a thermal-oxidation candidate, but the A-700 draft only sends cooled gas to off-gas treatment. No oxidation, catalytic, filtration or polishing technology is selected; no destruction or removal efficiency is credited.",
+    "The draft identifies possible CO, CO2, water vapour and trace hydrocarbons, while model screening also retains particulate. Normal, peak, upset and residual batch emissions, oxygen ingress and flammability remain unknown. Draft oxygen <10 ppm is a source-side statement, not an approved package setpoint.",
+    "The draft conflicts between +2 psig and slight negative pressure. FN-701 coordination, package pressure drop, furnace vacuum limits, fan trip response, purge continuity and safe shutdown are not approved. Emergency relief remains on IF-A700-RELIEF with no normal-treatment credit.",
+    "ST-3702 is a proposed independent outlet. Stack height, velocity, sampling plane/access, condensate management, dispersion, pollutant limits and jurisdictional air authorization remain unqualified. The geometry does not establish an atmospheric discharge approval.",
+    "AB-3701 remains separate from HD-3100 wet-acid treatment, AB-3801 reactive A-800 gas, dry-dust packages and emergency relief. Closed analyzer returns and inert lock purge enter the A-700 treatment context, while air-fill dust returns to A-600 filtration. Materials, refractory/insulation, utilities, drainage, access and vendor internals remain open."
+  ]
+}

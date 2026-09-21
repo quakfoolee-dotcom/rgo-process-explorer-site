@@ -1,0 +1,7 @@
+{
+  "assetId": "ST-3170",
+  "bindingId": "GEOMETRY-ST-3170",
+  "modelEquipmentId": 606,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

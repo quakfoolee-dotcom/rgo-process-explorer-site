@@ -1,0 +1,23 @@
+#emergency-station-panel{position:absolute;left:18px;top:84px;width:350px;max-width:calc(100% - 36px);max-height:calc(100% - var(--stage-toolbar-space) - 100px);overflow:auto;overscroll-behavior:contain;z-index:12;padding:14px;background:rgba(17,34,48,.98);border:1px solid #6baf98;border-radius:8px;color:#e1eaf1;box-shadow:0 8px 24px #0004;font-size:.875rem;line-height:1.5;scrollbar-width:thin}
+#emergency-station-panel[hidden],#emergency-markers[hidden],.emergency-marker[hidden]{display:none}
+.emergency-heading{position:sticky;top:-14px;margin:-14px -14px 0;padding:12px 14px 8px;display:flex;align-items:center;justify-content:space-between;gap:10px;background:#112230;z-index:1}
+.emergency-heading h3{font-size:1rem;margin:0}.emergency-heading button{font-size:20px;min-width:44px;min-height:44px}.emergency-basis{color:#9eebc5}
+#emergency-station-panel p{margin:8px 0}#emergency-station-panel select{width:100%;min-height:44px;background:#213749;border-color:#668895;font:inherit;color:inherit}#emergency-station-panel label{display:block;margin:8px 0 4px}
+#emergency-station-panel .tool-row{display:flex;gap:6px;margin:8px 0}#emergency-station-panel button{white-space:normal;min-height:44px}#emergency-station-panel .tool-row button{flex:1;min-width:0}
+#emergency-station-panel details{border-top:1px solid #3e5464;margin-top:12px;padding-top:10px}#emergency-station-panel summary{cursor:pointer;padding:5px 0}#emergency-station-panel a{color:#9ecaf4;overflow-wrap:anywhere}#emergency-station-panel .small-note{font-size:.875rem}
+.emergency-readiness{border-left:3px solid #81d6b1;background:#23343e;padding:8px 12px;margin:10px 0}.emergency-readiness p{color:#f5c88b}#emergency-findings p{color:#f5c88b}#emergency-holds{padding-left:20px}#emergency-holds li{margin:8px 0}
+#emergency-markers{position:absolute;inset:0;pointer-events:none;z-index:7}#emergency-markers .emergency-marker{position:absolute;left:0;top:0;min-width:28px;min-height:28px;padding:2px 6px;background:#135d49;color:white;border:1px solid #a5edcc;border-radius:4px;font-size:14px;pointer-events:auto;line-height:1.4}#emergency-markers .emergency-marker[aria-pressed=true]{background:#0d4537;border:2px solid white;font-weight:bold}.emergency-marker:focus-visible{outline:3px solid #ffd06c;outline-offset:3px}
+#emergency-station-panel .check-row{display:flex;align-items:flex-start;gap:8px}#emergency-station-panel input[type=checkbox]{flex:none;margin-top:4px;accent-color:#9eebc5}
+@media(max-width:640px){#emergency-station-panel{left:10px;top:72px;width:320px;max-width:calc(100% - 20px)}}
+
+#emergency-markers .emergency-marker{width:34px;height:34px;padding:4px;display:grid;place-items:center}
+#emergency-markers .emergency-marker[aria-pressed=true]{outline:3px solid #ffd06c;outline-offset:3px;border-width:1px;z-index:2}
+#emergency-markers .emergency-marker svg{display:block;pointer-events:none}
+
+#emergency-coverage-list{display:grid;gap:6px;max-height:240px;overflow:auto}.coverage-row{text-align:left;font-size:.875rem;line-height:1.4;padding:8px}.emergency-exposure{position:absolute;left:0;top:0;pointer-events:auto;background:#b68124;color:#fff;border:2px solid white;width:28px;height:28px;padding:0;border-radius:50%;font-weight:bold}.emergency-exposure[data-gap=true]{background:#b12d39}.emergency-exposure[hidden]{display:none}#emergency-shortest,#fire-shortest{border-left:3px solid #ffd06c;padding-left:10px}
+
+#emergency-markers .emergency-marker[hidden]{display:none}
+
+#emergency-station-panel .assessment-notice{border-left:3px solid #ffc568;padding:8px 10px;background:#48391f;color:#ffe3b4}#emergency-area-status{color:#ffd39b}#emergency-area-list{display:grid;gap:6px}#emergency-action-list p{border-left:2px solid #698294;padding-left:8px}#emergency-coverage-list .coverage-row[data-status=access-gap],#emergency-coverage-list .coverage-row[data-status=distance-gap]{border-left:3px solid #ff7d89}#emergency-coverage-list .coverage-row[data-status=elevated-gap]{border-left:3px solid #d4acff}.emergency-exposure[data-status=elevated-gap]{background:#734fa3}.emergency-exposure[data-gap=false]{color:#172332;background:#ffcc72}
+
+.assessment-notice strong,.assessment-notice span{display:block}.assessment-notice span{margin-top:2px}.review-alert{border-left:3px solid #ffb470;padding-left:9px;color:#ffdaab}#fire-safety-panel .assessment-notice{border-left:3px solid #ffc568;padding:8px 10px;background:#48391f;color:#ffe3b4}#emergency-station-panel p:empty,#fire-safety-panel p:empty{display:none}

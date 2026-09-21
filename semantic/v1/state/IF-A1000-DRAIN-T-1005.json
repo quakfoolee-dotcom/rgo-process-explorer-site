@@ -1,0 +1,13 @@
+{
+  "assetId": "IF-A1000-DRAIN-T-1005",
+  "state": {
+    "design": "proposed",
+    "operational": "unknown",
+    "maintenance": "unknown",
+    "alarm": "unknown",
+    "simulation": "notConnected"
+  },
+  "timestamp": null,
+  "source": null,
+  "note": "No live or validated simulation state is connected."
+}

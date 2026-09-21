@@ -1,0 +1,148 @@
+{
+  "assetId": "TCU-201",
+  "relationships": [
+    {
+      "id": "REL-TCU-201-AREA",
+      "type": "locatedIn",
+      "target": "A-5000",
+      "status": "model area assignment",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-TCU-201-S-5000-TCU201-HD-5300",
+      "type": "connectedTo",
+      "target": "HD-5300",
+      "role": "TCU-201 primary utility",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "streamId": "S-5000-TCU201",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    },
+    {
+      "id": "REL-TCU-201-S-5000-R201A-R-201A",
+      "type": "connectedTo",
+      "target": "R-201A",
+      "role": "R-201A isolated jacket service",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "streamId": "S-5000-R201A",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    },
+    {
+      "id": "REL-TCU-201-S-5000-R201B-R-201B",
+      "type": "connectedTo",
+      "target": "R-201B",
+      "role": "R-201B isolated jacket service",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "streamId": "S-5000-R201B",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    },
+    {
+      "id": "REL-TCU-201-S-5000-R201C-R-201C",
+      "type": "connectedTo",
+      "target": "R-201C",
+      "role": "R-201C isolated jacket service",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "streamId": "S-5000-R201C",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    },
+    {
+      "id": "REL-TCU-201-S-5000-R201D-R-201D",
+      "type": "connectedTo",
+      "target": "R-201D",
+      "role": "R-201D isolated jacket service",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "streamId": "S-5000-R201D",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    }
+  ]
+}

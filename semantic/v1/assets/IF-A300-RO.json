@@ -1,0 +1,30 @@
+{
+  "assetId": "IF-A300-RO",
+  "name": "RO-water supply boundary",
+  "assetClassId": "ExternalInterface",
+  "status": "proposed",
+  "identityStatus": "model-interface-reference",
+  "recordScope": "external-interface",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-2000",
+    "system": "A-300 fixing process context",
+    "parentAsset": null
+  },
+  "processFunction": "RO-water supply boundary",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null
+  },
+  "operatingEnvelope": null,
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Draft process basis only; no approved ratings, capacity, control loops or protective setpoints are asserted.",
+    "Model route alignment and destination qualification remain open under A300-001.",
+    "A boundary groups records for review; it does not prescribe a common header or authorize mixing."
+  ],
+  "processBasis": []
+}

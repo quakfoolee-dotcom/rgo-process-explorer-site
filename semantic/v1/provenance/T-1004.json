@@ -1,0 +1,71 @@
+{
+  "assetId": "T-1004",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "T-1004",
+      "source": "FEED-PFD-1000",
+      "revision": null,
+      "page": 9,
+      "status": "draft-pfd",
+      "confidence": "review required",
+      "gapId": "A1000-005"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A1000-003"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A1000-003"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A1000-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A1000-003"
+    },
+    {
+      "valueId": "PV-A-1000-0275",
+      "property": "design.materialOfConstruction",
+      "value": "Chemical-specific HDPE/PP/PVC/CPVC/PVDF/PTFE or vinyl-ester FRP; passivated 316L only where individually compatible",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 63 (M-059)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "WV-materialOfConstruc-T-1004",
+      "note": "scope: T-1001/P-1004 NaOH; T-1003/P-1002 BaCl₂; T-1004/P-1001 HCl; T-1005/M-1001 floc aid; alt: Rubber-lined CS on HCl service; 316L on clean dilute caustic where justified; status FIRM | D-A1000-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

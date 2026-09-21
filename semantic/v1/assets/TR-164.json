@@ -1,0 +1,49 @@
+{
+  "assetId": "TR-164",
+  "name": "Contained wet-cake tray handling",
+  "assetClassId": "MaterialHandling",
+  "status": "listed",
+  "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-160",
+    "system": "Pre-G Washing and Drying",
+    "parentAsset": null
+  },
+  "processFunction": "Contained wet-cake tray handling",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null
+  },
+  "operatingEnvelope": null,
+  "processBasis": [
+    {
+      "property": "area and equipment identity",
+      "value": {
+        "area": "A-160",
+        "tag": "TR-164"
+      },
+      "source": "FEED-PE-PFD-001 / FEED-PFD-0160",
+      "status": "draft PFD basis"
+    },
+    {
+      "property": "modeled baseline",
+      "value": "baseline FEED arrangement only",
+      "source": "MODEL-EARLY-PROCESS",
+      "status": "model-derived"
+    }
+  ],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Approved tank, filter, dryer, transfer and vacuum-package datasheets are unavailable.",
+    "Materials, filter media, seals, trays and product-contact finishes are unapproved.",
+    "P&ID tags, sequences, alarms, trips, relief and vacuum safeguards are unresolved.",
+    "Wash endpoint, filtration cycle, cake moisture and dryer endpoint are unresolved.",
+    "Only the baseline FEED arrangement is promoted; dryer, enclosed and integrated layouts remain mutually exclusive design studies.",
+    "RO water, wastewater, vent, condensate, thermal and dry-product battery limits require approved sources."
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "assetId": "T-162",
+  "bindingId": "GEOMETRY-T-162",
+  "modelEquipmentId": 45,
+  "bindingScope": "modeled-equipment-group",
+  "bindingRule": "All geometry owned by model equipment 45 resolves to T-162; canonical identity remains stable across model rebuilds."
+}

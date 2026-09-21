@@ -1,0 +1,7 @@
+{
+  "assetId": "TFF-401",
+  "bindingId": "GEOMETRY-TFF-401",
+  "modelEquipmentId": 33,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

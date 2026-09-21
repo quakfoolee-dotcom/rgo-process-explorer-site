@@ -1,0 +1,7 @@
+{
+  "assetId": "F-161",
+  "bindingId": "GEOMETRY-F-161",
+  "modelEquipmentId": 46,
+  "bindingScope": "modeled-equipment-group",
+  "bindingRule": "All geometry owned by model equipment 46 resolves to F-161; canonical identity remains stable across model rebuilds."
+}

@@ -1,0 +1,55 @@
+{
+  "assetId": "P-SC601",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "P-SC601",
+      "source": "MODEL-A600",
+      "revision": "V146 / 19534f4d6e3e8383ba84e72fd997460ad241d829",
+      "page": null,
+      "status": "model-derived",
+      "confidence": "review required",
+      "gapId": "A600-005"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A600-003"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A600-003"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A600-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A600-003"
+    }
+  ]
+}

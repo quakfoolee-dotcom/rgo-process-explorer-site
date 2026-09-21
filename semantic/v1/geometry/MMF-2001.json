@@ -1,0 +1,7 @@
+{
+  "assetId": "MMF-2001",
+  "bindingId": "GEOMETRY-MMF-2001",
+  "modelEquipmentId": 502,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

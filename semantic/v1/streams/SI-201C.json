@@ -1,0 +1,87 @@
+{
+  "assetId": "SI-201C",
+  "streams": [
+    {
+      "streamId": "S-200-RC-C",
+      "name": "R-201C recirculation loop",
+      "source": "R-201C",
+      "destination": "R-201C",
+      "via": [
+        "P-205C",
+        "SI-201C",
+        "M-201C"
+      ],
+      "material": "Oxidation slurry",
+      "phase": "Liquid/solid suspension",
+      "massFlow": null,
+      "temperature": {
+        "basis": "PFD operating range",
+        "rangeC": [
+          45,
+          50
+        ]
+      },
+      "pressure": null,
+      "status": "modeled; package allocation open",
+      "routeLabels": [
+        "P-205C to induction package",
+        "M-201C static mixing spool",
+        "M-201C return to reactor"
+      ],
+      "contextAssetIds": [
+        "R-201C"
+      ],
+      "feedRatio": null,
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        }
+      ]
+    },
+    {
+      "streamId": "S-200-KMNO4-C",
+      "name": "KMnO4 induction C",
+      "source": "SF-202C",
+      "destination": "SI-201C",
+      "material": "Potassium permanganate",
+      "phase": "Solid",
+      "massFlow": null,
+      "temperature": null,
+      "pressure": null,
+      "status": "PFD ratio; proposed induction arrangement",
+      "routeLabels": [
+        "KMnO4 contained induction chute C"
+      ],
+      "contextAssetIds": [
+        "R-201C"
+      ],
+      "feedRatio": {
+        "value": 4,
+        "unit": "kg/kg Pre-G",
+        "basis": "PFD",
+        "sourceReferences": [
+          {
+            "documentId": "FEED-PE-PFD-001",
+            "sheetId": "FEED-PFD-0200",
+            "revision": "V5.1.1",
+            "page": 7,
+            "status": "Inherited draft pilot basis; not independently requalified"
+          }
+        ]
+      },
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        }
+      ]
+    }
+  ]
+}

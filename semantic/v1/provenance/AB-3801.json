@@ -1,0 +1,71 @@
+{
+  "assetId": "AB-3801",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "AB-3801",
+      "source": "MODEL-A3800",
+      "revision": "V154 / 565c39858ef8c190a506d74d567b8b7a74a5c60a",
+      "page": null,
+      "status": "model-derived",
+      "confidence": "review required",
+      "gapId": "A3800-001"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3800-007"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3800-007"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3800-007"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3800-007"
+    },
+    {
+      "valueId": "PV-A-3000-0130",
+      "property": "identity.designConcept",
+      "value": "S3 — PY-801 H₂-in-argon (12–35 Nm³/h H₂, 30–55 vol %) with 10–20 kg/h potassium vapour: hot-end K condenser, no water contact (pyrophoric, water-reactive condensate), ASME B31.12 branch",
+      "unit": null,
+      "source": "FEED-PE-REP-041",
+      "revision": "V1.0",
+      "location": "§4",
+      "status": "approved",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": null,
+      "note": "model A-3700 branch AB-3801 | D-A3000-01: S3 — PY-801 H₂-in-argon with potassium vapour: hot-end condenser, no water contact (model branch AB-3801).",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

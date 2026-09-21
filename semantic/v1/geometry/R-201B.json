@@ -1,0 +1,30 @@
+{
+  "bindingId": "GEOMETRY-R-201B",
+  "assetId": "R-201B",
+  "modelEquipmentId": 2,
+  "geometryIdField": "part.code",
+  "bindingRule": "Every modeled part whose physical equipment owner is model equipment 2 resolves to R-201B. Service-package geometry keeps its own equipment owner and is connected through explicit relationships.",
+  "relatedEquipmentBindings": [
+    {
+      "assetIds": [
+        "P-205B"
+      ],
+      "modelEquipmentId": 2,
+      "status": "proposed pump within reactor assembly context"
+    },
+    {
+      "assetIds": [
+        "SI-201B",
+        "M-201B"
+      ],
+      "modelEquipmentId": 25,
+      "status": "proposed shared package"
+    },
+    {
+      "assetId": "TCU-201",
+      "modelEquipmentId": 831,
+      "status": "shared utility context"
+    }
+  ],
+  "revisionPolicy": "Geometry IDs may change with a model rebuild; canonical assetId remains immutable and validation must regenerate the binding register."
+}

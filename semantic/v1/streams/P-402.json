@@ -1,0 +1,119 @@
+{
+  "assetId": "P-402",
+  "streams": [
+    {
+      "streamId": "S-400-FEED",
+      "name": "feed",
+      "source": "T-402",
+      "via": [
+        "P-402"
+      ],
+      "destination": "TFF-401",
+      "material": "Washing slurry",
+      "phase": "Liquid/solid suspension",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "operatingMode": "process context; operating sequence unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A400",
+          "title": "A-400 washing routes, VSEP and cleaning package model",
+          "revision": "V144 / f82bb71f58c4945fec3a0a1629193d9a16188926",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "a400.js": "a1030f59c4a82d4a7e01adce33f317865c4a87aec177aef8d45b115fe1ee9c16",
+            "vsep.js": "9bfd04db0fe2f35924cc0a348e8a4cf0952ab31bc898778b20b69d1356301b8f",
+            "a400-basis.js": "b5daadebe792c358ea3a6190ab39029382d80e1830e8073c34c67ff8b63a8ab9"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        }
+      ],
+      "routeLabels": [
+        "T-402 to P-402",
+        "P-402 to TFF-401"
+      ]
+    },
+    {
+      "streamId": "S-400-PRODUCT",
+      "name": "product",
+      "source": "T-402",
+      "via": [
+        "P-402"
+      ],
+      "destination": "T-501",
+      "material": "Washed suspension; acceptance unqualified",
+      "phase": "Liquid/solid suspension",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "operatingMode": "product transfer; acceptance unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A400",
+          "title": "A-400 washing routes, VSEP and cleaning package model",
+          "revision": "V144 / f82bb71f58c4945fec3a0a1629193d9a16188926",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "a400.js": "a1030f59c4a82d4a7e01adce33f317865c4a87aec177aef8d45b115fe1ee9c16",
+            "vsep.js": "9bfd04db0fe2f35924cc0a348e8a4cf0952ab31bc898778b20b69d1356301b8f",
+            "a400-basis.js": "b5daadebe792c358ea3a6190ab39029382d80e1830e8073c34c67ff8b63a8ab9"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        }
+      ],
+      "routeLabels": [
+        "A400 product takeoff",
+        "A400 washed suspension to A500"
+      ]
+    },
+    {
+      "streamId": "S-400-CASING-DRAIN",
+      "name": "casing drain",
+      "source": "P-402",
+      "via": [],
+      "destination": "IF-A400-DRAIN",
+      "material": "Pump casing drain",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "operatingMode": "draining; receiving conditions unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A400",
+          "title": "A-400 washing routes, VSEP and cleaning package model",
+          "revision": "V144 / f82bb71f58c4945fec3a0a1629193d9a16188926",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "a400.js": "a1030f59c4a82d4a7e01adce33f317865c4a87aec177aef8d45b115fe1ee9c16",
+            "vsep.js": "9bfd04db0fe2f35924cc0a348e8a4cf0952ab31bc898778b20b69d1356301b8f",
+            "a400-basis.js": "b5daadebe792c358ea3a6190ab39029382d80e1830e8073c34c67ff8b63a8ab9"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        }
+      ],
+      "routeLabels": [
+        "P-402 casing drain to closed header"
+      ]
+    }
+  ]
+}

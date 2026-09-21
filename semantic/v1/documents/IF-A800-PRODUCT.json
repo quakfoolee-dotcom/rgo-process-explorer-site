@@ -1,0 +1,56 @@
+{
+  "assetId": "IF-A800-PRODUCT",
+  "documents": [
+    {
+      "documentId": "MODEL-A800",
+      "title": "Doping, dry charging, argon, independent exhaust and A-900 handoff",
+      "revision": "V148 / 19b52eb01578140a4d021ec6d47fd98d1b671ba5",
+      "page": null,
+      "status": "model-derived; not an approved process design",
+      "availability": "available model source reviewed",
+      "files": {
+        "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+        "a800-basis.js": "0ee9741872bf91a9e4898324690cd43ec2ab246478883645300b6311900bc757",
+        "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+        "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+      },
+      "hashNormalization": "UTF-8 text with LF line endings"
+    },
+    {
+      "documentId": "FEED-PFD-0800",
+      "sheetId": "FEED-PFD-0800",
+      "title": "Commercial Scale rGO Doping and Pyrolysis",
+      "revision": null,
+      "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+      "page": 8,
+      "file": "pfd-temperature-sheets.pdf",
+      "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+      "status": "Draft - Not for Use; not approved",
+      "availability": "available and reviewed",
+      "href": "./pfd-temperature-sheets.pdf#page=8"
+    },
+    {
+      "documentId": "MODEL-A900",
+      "title": "A-800 product handoff and capped future A-900 argon reservations",
+      "revision": "V149 / f70f8efa89183fd5c54ac9d450bf5f4dab114a09",
+      "page": null,
+      "status": "model-derived boundary context; receiving equipment is not modeled",
+      "availability": "available model source reviewed",
+      "files": {
+        "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+        "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+        "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3"
+      },
+      "hashNormalization": "UTF-8 text with LF line endings"
+    },
+    {
+      "documentId": "FEED-PFD-0900",
+      "title": "A-900 cartridge-filling source sheet required",
+      "revision": null,
+      "page": null,
+      "status": "unavailable; no equipment tags or process routes verified",
+      "availability": "not present in available project sources",
+      "gapId": "A900-001"
+    }
+  ]
+}

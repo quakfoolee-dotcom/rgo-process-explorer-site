@@ -1,0 +1,7 @@
+{
+  "assetId": "T-2003",
+  "bindingId": "GEOMETRY-T-2003",
+  "modelEquipmentId": 511,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

@@ -1,0 +1,7 @@
+{
+  "assetId": "RV-801",
+  "bindingId": "GEOMETRY-RV-801",
+  "modelEquipmentId": 108,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

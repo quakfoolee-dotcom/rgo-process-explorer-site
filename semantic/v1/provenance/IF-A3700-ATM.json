@@ -1,0 +1,55 @@
+{
+  "assetId": "IF-A3700-ATM",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "IF-A3700-ATM",
+      "source": "MODEL-A3700",
+      "revision": "V153 / 798049b05688550b90813d8e16253364c8ccab5d",
+      "page": null,
+      "status": "model-derived",
+      "confidence": "review required",
+      "gapId": "A3700-005"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3700-001"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3700-001"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3700-001"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A3700-001"
+    }
+  ]
+}

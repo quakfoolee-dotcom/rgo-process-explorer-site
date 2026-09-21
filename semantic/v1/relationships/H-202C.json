@@ -1,0 +1,35 @@
+{
+  "assetId": "H-202C",
+  "relationships": [
+    {
+      "id": "REL-H-202C-AREA",
+      "type": "locatedIn",
+      "target": "A-200",
+      "status": "model register area",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-H-202C-S-200-HOPPER-202-C-SF-202C",
+      "type": "connectedTo",
+      "target": "SF-202C",
+      "streamId": "S-200-HOPPER-202-C",
+      "role": "Hopper to feeder 202C · Modeled package function; branch allocation proposed",
+      "status": "Modeled package function; branch allocation proposed",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          58
+        ]
+      }
+    }
+  ]
+}

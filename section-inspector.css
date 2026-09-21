@@ -1,0 +1,31 @@
+#section-inspector{position:absolute;left:14px;bottom:calc(var(--stage-toolbar-space) + 12px);z-index:30;width:320px;max-width:calc(100% - 28px);max-height:calc(100% - var(--stage-toolbar-space) - 85px);overflow:auto;padding:12px;background:#132636f5;border:1px solid #648697;border-radius:9px;box-shadow:0 8px 28px #0005;color:#dfedf5;font-size:13px;line-height:1.4}
+#section-inspector[hidden],#section-drag-handle[hidden],#section-inspector [hidden]{display:none!important}
+.section-inspector-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px;font-size:15px}
+#section-inspector button{background:#1b3245;color:#e8f2f9;border-color:#557386;min-height:40px;padding:6px 10px;font-size:13px}
+#section-inspector button:hover{background:#2b4b61}
+#section-inspector button[aria-pressed=true]{background:#f4c57c;color:#15212c}
+#section-inspector button:disabled{opacity:.45;cursor:default}
+#section-inspector #slice-exit{min-height:32px;font-size:22px;padding:0 9px}
+.slice-fields{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+#section-inspector label{display:block;color:#c5dbe9}
+#section-inspector select{background:#203a4c;border-color:#557386;min-height:40px;padding:7px 5px;color:#f0f6fa;font-size:13px;margin-top:3px}
+#section-inspector input[type=range]{width:100%;margin:0;min-height:32px;accent-color:#79d4f0;touch-action:pan-y}
+#section-inspector output{float:right;color:#8cdcf5}
+.slice-coordinate{display:grid;grid-template-columns:40px minmax(0,1fr) 40px;gap:6px;margin:3px 0 9px}
+#section-inspector input[type=number]{width:100%;min-width:0;background:#0e1e2c;color:#eff9ff;border:1px solid #557386;border-radius:5px;padding:6px;font:inherit;text-align:center}
+.slice-actions{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+#section-inspector .slice-actions label{display:flex;align-items:center;gap:3px;min-height:40px}
+.slice-note{margin:7px 0;color:#b1cbd9;font-size:12px}
+#section-inspector #slice-selection{margin-bottom:7px}
+#section-drag-handle{position:absolute;z-index:20;width:42px;height:42px;min-height:42px;padding:0;border:2px solid #b4edff;border-radius:50%;background:#16445dec;color:#d8f7ff;font-size:27px;line-height:1;box-shadow:0 2px 10px #0008;transform:translate(-50%,-50%) rotate(var(--handle-angle,0deg));touch-action:none;cursor:grab}
+#section-drag-handle:hover{background:#287193}
+#section-drag-handle.dragging{cursor:grabbing;background:#78d8ef;color:#143244}
+@container(max-width:480px){#section-inspector{left:10px;max-width:calc(100% - 20px);max-height:calc(100% - var(--stage-toolbar-space) - 70px);padding:10px}}
+/* Capture is beside centring; the guide stays a separate display choice. */
+#section-inspector{width:360px;font-size:.875rem}
+#section-inspector button,#section-inspector select{font-size:.875rem}
+#section-inspector .slice-actions{display:flex;gap:6px;flex-wrap:wrap}
+#section-inspector .slice-actions button{flex:1 1 96px;min-width:0;padding:8px 6px;white-space:normal}
+#section-inspector .slice-guide-row{display:flex;align-items:center;gap:8px;margin-top:9px;min-height:36px}
+#section-inspector .slice-guide-row input{width:17px;height:17px;margin:0}
+#slice-photo-status{font-size:.875rem;color:#c8e3ea}

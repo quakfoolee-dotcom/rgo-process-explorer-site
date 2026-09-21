@@ -1,0 +1,57 @@
+{
+  "assetId": "V-5310",
+  "streams": [
+    {
+      "streamId": "S-5000-CHW-PRIMARY",
+      "name": "chilled-water primary circulation",
+      "source": "TK-5311",
+      "via": [
+        "A-5300",
+        "A-5310A"
+      ],
+      "destination": "HD-5300",
+      "material": "Closed-loop chilled water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": {
+        "supplyRangeC": [
+          5,
+          7
+        ],
+        "returnRangeC": [
+          10,
+          15
+        ],
+        "status": "draft PFD range"
+      },
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "A-5310B",
+        "V-5310"
+      ],
+      "operatingMode": "A-5310A illustrated duty; A-5310B isolated standby concept",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    }
+  ]
+}

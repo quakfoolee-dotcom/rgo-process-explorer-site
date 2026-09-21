@@ -1,0 +1,67 @@
+{
+  "assetId": "A-5210A",
+  "relationships": [
+    {
+      "id": "REL-A-5210A-AREA",
+      "type": "locatedIn",
+      "target": "A-5000",
+      "status": "model area assignment",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-A-5210A-S-5000-CW-PRIMARY-A-5200",
+      "type": "connectedTo",
+      "target": "A-5200",
+      "role": "cooling-water primary circulation",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "streamId": "S-5000-CW-PRIMARY",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    },
+    {
+      "id": "REL-A-5210A-S-5000-CW-PRIMARY-HD-5200",
+      "type": "connectedTo",
+      "target": "HD-5200",
+      "role": "cooling-water primary circulation",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "streamId": "S-5000-CW-PRIMARY",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    }
+  ]
+}

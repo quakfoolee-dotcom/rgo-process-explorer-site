@@ -1,0 +1,14 @@
+{
+  "assetId": "T-162",
+  "instruments": [
+    {
+      "functionId": "T-162-STATE",
+      "variable": "equipment state",
+      "purpose": "Confirm permissive, operating and isolated state",
+      "tag": null,
+      "range": null,
+      "status": "function only; approved instrument tag and logic unresolved",
+      "gapId": "A160-003"
+    }
+  ]
+}

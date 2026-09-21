@@ -1,0 +1,7 @@
+{
+  "assetId": "P-2002B",
+  "bindingId": "GEOMETRY-P-2002B",
+  "modelEquipmentId": 506,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

@@ -1,0 +1,7 @@
+{
+  "assetId": "CP-2000",
+  "bindingId": "GEOMETRY-CP-2000",
+  "modelEquipmentId": 516,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

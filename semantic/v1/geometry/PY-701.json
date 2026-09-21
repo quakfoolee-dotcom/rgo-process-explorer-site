@@ -1,0 +1,7 @@
+{
+  "assetId": "PY-701",
+  "bindingId": "GEOMETRY-PY-701",
+  "modelEquipmentId": 83,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

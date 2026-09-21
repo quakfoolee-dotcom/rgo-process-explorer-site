@@ -1,0 +1,42 @@
+{
+  "assetId": "CP-901",
+  "name": "Control and traceability panel",
+  "assetClassId": "ControlPanel",
+  "status": "proposed",
+  "identityStatus": "model-derived; tag qualification open",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-900",
+    "system": "Proposed compact contained pelletization line",
+    "parentAsset": null
+  },
+  "processFunction": "Control and traceability panel",
+  "handledMaterials": [
+    "Doped rGO"
+  ],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null
+  },
+  "operatingEnvelope": null,
+  "processBasis": [
+    {
+      "property": "functional arrangement",
+      "value": "single compact contained pelletization and finishing line adjacent to A-800",
+      "source": "MODEL-A900-V163",
+      "status": "model-derived proposal"
+    }
+  ],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "No approved PFD, P&ID, equipment list, vendor package or operating narrative is available.",
+    "Temperature, quality, residual reactivity, receiving atmosphere, transfer mechanism and receiver capacity are unresolved.",
+    "AR-901/902/903 remain positively blinded reservations; no branch is selected or operating.",
+    "DC-901 is a local functional envelope with an independent unresolved outlet; no treatment or permitted release is asserted.",
+    "Pellet formulation, formation method, size/strength, cooling, classification, package format, containment, cleaning and reject criteria are unresolved.",
+    "Combustible-dust properties, ignition protection, inerting acceptance, ergonomics, maintenance and recovery procedures are unapproved. Equipment skids and frames are provisional; vendor loads, structural member sizing, anchorage and vibration isolation remain unverified."
+  ]
+}

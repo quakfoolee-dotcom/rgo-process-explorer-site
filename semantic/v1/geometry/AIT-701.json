@@ -1,0 +1,7 @@
+{
+  "assetId": "AIT-701",
+  "bindingId": "GEOMETRY-AIT-701",
+  "modelEquipmentId": 90,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

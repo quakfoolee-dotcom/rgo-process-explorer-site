@@ -1,0 +1,7 @@
+{
+  "assetId": "CIP-401",
+  "bindingId": "GEOMETRY-CIP-401",
+  "modelEquipmentId": 124,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

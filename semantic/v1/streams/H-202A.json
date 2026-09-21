@@ -1,0 +1,28 @@
+{
+  "assetId": "H-202A",
+  "streams": [
+    {
+      "streamId": "S-200-HOPPER-202-A",
+      "name": "Hopper to feeder 202A",
+      "source": "H-202A",
+      "destination": "SF-202A",
+      "via": [],
+      "material": "Potassium permanganate",
+      "phase": "Solid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "status": "Modeled package function; branch allocation proposed",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ]
+    }
+  ]
+}

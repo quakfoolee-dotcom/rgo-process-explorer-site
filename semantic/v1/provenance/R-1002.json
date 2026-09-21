@@ -1,0 +1,87 @@
+{
+  "assetId": "R-1002",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "R-1002",
+      "source": "FEED-PFD-1000",
+      "revision": null,
+      "page": 9,
+      "status": "draft-pfd",
+      "confidence": "review required",
+      "gapId": "A1000-005"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A1000-003"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A1000-003"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A1000-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A1000-003"
+    },
+    {
+      "valueId": "PV-A-1000-0257",
+      "property": "design.materialOfConstruction",
+      "value": "Dual-laminate FRP/HDPE/rubber-lined CS on raw-acid stages; 316L or coated CS only after pH is reliably ≥6.5",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 61 (M-057)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "WV-materialOfConstruc-R-1002",
+      "note": "scope: T-1006 and R-1001/R-1002/R-1003/R-1004 treatment tanks; alt: Vinyl-ester FRP throughout where abrasion and temperature are within rating; status FIRM | D-A1000-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-1000-0289",
+      "property": "operatingEnvelope.reagentBasis",
+      "value": "Lime stage to pH 8.5–10.5: ≈ 149 t/d Ca(OH)₂; 314 t/d gypsum + 20 t/d Ca₃(PO₄)₂ + 5 t/d Mn(OH)₂ (≈ 100 kt/y sludge, 500 kg per kg product); DBM A-2 (46 kt/y lime, 98 kt/y sludge) confirmed within 10 %",
+      "unit": null,
+      "source": "FEED-PE-REP-038",
+      "revision": "V1.0",
+      "location": "basis table",
+      "status": "approved",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": null,
+      "note": "high-density-sludge lime (or limestone-then-lime) recommended | D-A1000-02: Lime stage stoichiometry (≈ 149 t/d Ca(OH)₂, 314 t/d gypsum, Case 0) adopted as the chemistry basis; quantities scale with the acid-recovery case.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

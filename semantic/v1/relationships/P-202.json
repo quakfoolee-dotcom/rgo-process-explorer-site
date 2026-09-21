@@ -1,0 +1,148 @@
+{
+  "assetId": "P-202",
+  "relationships": [
+    {
+      "id": "REL-P-202-AREA",
+      "type": "locatedIn",
+      "target": "A-200",
+      "status": "model register area",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-P-202-S-200-H3PO4-A-T-202",
+      "type": "connectedTo",
+      "target": "T-202",
+      "streamId": "S-200-H3PO4-A",
+      "role": "Phosphoric acid feed A · PFD ratio; branch flow unresolved",
+      "status": "PFD ratio; branch flow unresolved",
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        },
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          19
+        ]
+      }
+    },
+    {
+      "id": "REL-P-202-S-200-H3PO4-A-R-201A",
+      "type": "connectedTo",
+      "target": "R-201A",
+      "streamId": "S-200-H3PO4-A",
+      "role": "Phosphoric acid feed A · PFD ratio; branch flow unresolved",
+      "status": "PFD ratio; branch flow unresolved",
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        },
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "REL-P-202-S-200-H3PO4-B-R-201B",
+      "type": "connectedTo",
+      "target": "R-201B",
+      "streamId": "S-200-H3PO4-B",
+      "role": "Phosphoric acid feed B · PFD ratio; branch flow unresolved",
+      "status": "PFD ratio; branch flow unresolved",
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        },
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "REL-P-202-S-200-H3PO4-C-R-201C",
+      "type": "connectedTo",
+      "target": "R-201C",
+      "streamId": "S-200-H3PO4-C",
+      "role": "Phosphoric acid feed C · PFD ratio; branch flow unresolved",
+      "status": "PFD ratio; branch flow unresolved",
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        },
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          54
+        ]
+      }
+    },
+    {
+      "id": "REL-P-202-S-200-H3PO4-D-R-201D",
+      "type": "connectedTo",
+      "target": "R-201D",
+      "streamId": "S-200-H3PO4-D",
+      "role": "Phosphoric acid feed D · PFD ratio; branch flow unresolved",
+      "status": "PFD ratio; branch flow unresolved",
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        },
+        {
+          "documentId": "MODEL-A200",
+          "revision": "V142 baseline",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          55
+        ]
+      }
+    }
+  ]
+}

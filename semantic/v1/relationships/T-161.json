@@ -1,0 +1,113 @@
+{
+  "assetId": "T-161",
+  "relationships": [
+    {
+      "id": "REL-T-161-S-140-PREG-A",
+      "type": "receivesFrom",
+      "target": "R-141A",
+      "role": "R-141A product to T-161",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-140-PREG-A",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-T-161-S-140-PREG-B",
+      "type": "receivesFrom",
+      "target": "R-141B",
+      "role": "R-141B product to T-161",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-140-PREG-B",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-T-161-S-140-PREG-C",
+      "type": "receivesFrom",
+      "target": "R-141C",
+      "role": "R-141C product to T-161",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-140-PREG-C",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-T-161-S-140-PREG-D",
+      "type": "receivesFrom",
+      "target": "R-141D",
+      "role": "R-141D product to T-161",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-140-PREG-D",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-T-161-S-160-RECYCLE-161",
+      "type": "receivesFrom",
+      "target": "T-161",
+      "role": "T-161 fixing recycle",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-160-RECYCLE-161",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-T-161-S-160-TRANSFER-162",
+      "type": "feeds",
+      "target": "T-162",
+      "role": "T-161 transfer to T-162",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-160-TRANSFER-162",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-T-161-S-160-WW161",
+      "type": "feeds",
+      "target": "IF-A160-WW161",
+      "role": "WW161 process handoff",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-160-WW161",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-T-161-S-160-DEC161",
+      "type": "feeds",
+      "target": "IF-A160-DEC161",
+      "role": "DEC161 process handoff",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-160-DEC161",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-T-161-S-160-RO-T161",
+      "type": "receivesFrom",
+      "target": "IF-A2000-RO161",
+      "role": "T-161 RO-water supply",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-160-RO-T161",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-T-161-S-160-VENT-T161",
+      "type": "feeds",
+      "target": "IF-A3000-V-T-161",
+      "role": "T-161 vent handoff",
+      "status": "Existing A-3000 collection interface; rate, composition and relief segregation unresolved",
+      "streamId": "S-160-VENT-T161",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-T-161-GEOM",
+      "type": "representedBy",
+      "target": "GEOMETRY-T-161",
+      "status": "bound to modeled equipment group",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "assetId": "TR-164",
+  "relationships": [
+    {
+      "id": "REL-TR-164-S-160-WET-CAKE",
+      "type": "receivesFrom",
+      "target": "F-161",
+      "role": "F-161 wet cake to TR-164",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-160-WET-CAKE",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-TR-164-S-160-DRYER-LOAD",
+      "type": "feeds",
+      "target": "D-164",
+      "role": "TR-164 loading to D-164",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-160-DRYER-LOAD",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-TR-164-GEOM",
+      "type": "representedBy",
+      "target": "GEOMETRY-TR-164",
+      "status": "bound to modeled equipment group",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    }
+  ]
+}

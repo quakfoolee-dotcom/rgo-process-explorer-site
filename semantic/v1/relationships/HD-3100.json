@@ -1,0 +1,1554 @@
+{
+  "assetId": "HD-3100",
+  "relationships": [
+    {
+      "id": "REL-HD-3100-AREA",
+      "type": "locatedIn",
+      "target": "A-3000",
+      "status": "model area assignment",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-HD-3100-S-1000-VENT-T-1006-T-1006",
+      "type": "connectedTo",
+      "target": "T-1006",
+      "role": "vent t 1006",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-1000-VENT-T-1006",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A1000",
+          "title": "Wastewater treatment, receiving sources, conditional chemistry and A-2000 handoff",
+          "revision": "V150 / 0f89c6bb63ec5c5127db6f48f8d1843733c0b83c",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "wastewater.js": "492fd40422dd1e5a13133f0073847c363d52e782aedc69dd0f638edd9e8acf7f",
+            "a1000-basis.js": "fd08d2819df8087e44992ffb72428fda7ec9856315a45200741d408cdfe93982",
+            "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "thermal-utilities.js": "522210c2e87434d1b2a5f6fa3a1915b9ef285ec9afc58b05409edc22041fe79c"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-1000",
+          "sheetId": "FEED-PFD-1000",
+          "title": "Commercial Scale Wastewater Treatment",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 9,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=9"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          125
+        ],
+        "routeLabels": [
+          "T-1006 closed vent",
+          "Wet vent BL-VENTT1006 to HD-3100"
+        ]
+      }
+    },
+    {
+      "id": "REL-HD-3100-S-1000-VENT-R-1001-R-1001",
+      "type": "connectedTo",
+      "target": "R-1001",
+      "role": "vent r 1001",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-1000-VENT-R-1001",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A1000",
+          "title": "Wastewater treatment, receiving sources, conditional chemistry and A-2000 handoff",
+          "revision": "V150 / 0f89c6bb63ec5c5127db6f48f8d1843733c0b83c",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "wastewater.js": "492fd40422dd1e5a13133f0073847c363d52e782aedc69dd0f638edd9e8acf7f",
+            "a1000-basis.js": "fd08d2819df8087e44992ffb72428fda7ec9856315a45200741d408cdfe93982",
+            "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "thermal-utilities.js": "522210c2e87434d1b2a5f6fa3a1915b9ef285ec9afc58b05409edc22041fe79c"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-1000",
+          "sheetId": "FEED-PFD-1000",
+          "title": "Commercial Scale Wastewater Treatment",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 9,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=9"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          126
+        ],
+        "routeLabels": [
+          "R-1001 closed vent",
+          "Wet vent BL-VENTR1001 to HD-3100"
+        ]
+      }
+    },
+    {
+      "id": "REL-HD-3100-S-1000-VENT-R-1002-R-1002",
+      "type": "connectedTo",
+      "target": "R-1002",
+      "role": "vent r 1002",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-1000-VENT-R-1002",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A1000",
+          "title": "Wastewater treatment, receiving sources, conditional chemistry and A-2000 handoff",
+          "revision": "V150 / 0f89c6bb63ec5c5127db6f48f8d1843733c0b83c",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "wastewater.js": "492fd40422dd1e5a13133f0073847c363d52e782aedc69dd0f638edd9e8acf7f",
+            "a1000-basis.js": "fd08d2819df8087e44992ffb72428fda7ec9856315a45200741d408cdfe93982",
+            "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "thermal-utilities.js": "522210c2e87434d1b2a5f6fa3a1915b9ef285ec9afc58b05409edc22041fe79c"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-1000",
+          "sheetId": "FEED-PFD-1000",
+          "title": "Commercial Scale Wastewater Treatment",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 9,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=9"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          127
+        ],
+        "routeLabels": [
+          "R-1002 closed vent",
+          "Wet vent BL-VENTR1002 to HD-3100"
+        ]
+      }
+    },
+    {
+      "id": "REL-HD-3100-S-1000-VENT-R-1003-R-1003",
+      "type": "connectedTo",
+      "target": "R-1003",
+      "role": "vent r 1003",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-1000-VENT-R-1003",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A1000",
+          "title": "Wastewater treatment, receiving sources, conditional chemistry and A-2000 handoff",
+          "revision": "V150 / 0f89c6bb63ec5c5127db6f48f8d1843733c0b83c",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "wastewater.js": "492fd40422dd1e5a13133f0073847c363d52e782aedc69dd0f638edd9e8acf7f",
+            "a1000-basis.js": "fd08d2819df8087e44992ffb72428fda7ec9856315a45200741d408cdfe93982",
+            "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "thermal-utilities.js": "522210c2e87434d1b2a5f6fa3a1915b9ef285ec9afc58b05409edc22041fe79c"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-1000",
+          "sheetId": "FEED-PFD-1000",
+          "title": "Commercial Scale Wastewater Treatment",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 9,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=9"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          128
+        ],
+        "routeLabels": [
+          "R-1003 closed vent",
+          "Wet vent BL-VENTR1003 to HD-3100"
+        ]
+      }
+    },
+    {
+      "id": "REL-HD-3100-S-1000-VENT-R-1004-R-1004",
+      "type": "connectedTo",
+      "target": "R-1004",
+      "role": "vent r 1004",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-1000-VENT-R-1004",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A1000",
+          "title": "Wastewater treatment, receiving sources, conditional chemistry and A-2000 handoff",
+          "revision": "V150 / 0f89c6bb63ec5c5127db6f48f8d1843733c0b83c",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "wastewater.js": "492fd40422dd1e5a13133f0073847c363d52e782aedc69dd0f638edd9e8acf7f",
+            "a1000-basis.js": "fd08d2819df8087e44992ffb72428fda7ec9856315a45200741d408cdfe93982",
+            "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "thermal-utilities.js": "522210c2e87434d1b2a5f6fa3a1915b9ef285ec9afc58b05409edc22041fe79c"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-1000",
+          "sheetId": "FEED-PFD-1000",
+          "title": "Commercial Scale Wastewater Treatment",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 9,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=9"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          129
+        ],
+        "routeLabels": [
+          "R-1004 closed vent",
+          "Wet vent BL-VENTR1004 to HD-3100"
+        ]
+      }
+    },
+    {
+      "id": "REL-HD-3100-S-1000-VENT-T-1004-T-1004",
+      "type": "connectedTo",
+      "target": "T-1004",
+      "role": "vent t 1004",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-1000-VENT-T-1004",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A1000",
+          "title": "Wastewater treatment, receiving sources, conditional chemistry and A-2000 handoff",
+          "revision": "V150 / 0f89c6bb63ec5c5127db6f48f8d1843733c0b83c",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "wastewater.js": "492fd40422dd1e5a13133f0073847c363d52e782aedc69dd0f638edd9e8acf7f",
+            "a1000-basis.js": "fd08d2819df8087e44992ffb72428fda7ec9856315a45200741d408cdfe93982",
+            "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "thermal-utilities.js": "522210c2e87434d1b2a5f6fa3a1915b9ef285ec9afc58b05409edc22041fe79c"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-1000",
+          "sheetId": "FEED-PFD-1000",
+          "title": "Commercial Scale Wastewater Treatment",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 9,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=9"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          134
+        ],
+        "routeLabels": [
+          "T-1004 closed vent",
+          "Wet vent BL-VENTT1004 to HD-3100"
+        ]
+      }
+    },
+    {
+      "id": "REL-HD-3100-S-1000-VENT-T-1007-T-1007",
+      "type": "connectedTo",
+      "target": "T-1007",
+      "role": "vent t 1007",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-1000-VENT-T-1007",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A1000",
+          "title": "Wastewater treatment, receiving sources, conditional chemistry and A-2000 handoff",
+          "revision": "V150 / 0f89c6bb63ec5c5127db6f48f8d1843733c0b83c",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "wastewater.js": "492fd40422dd1e5a13133f0073847c363d52e782aedc69dd0f638edd9e8acf7f",
+            "a1000-basis.js": "fd08d2819df8087e44992ffb72428fda7ec9856315a45200741d408cdfe93982",
+            "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "thermal-utilities.js": "522210c2e87434d1b2a5f6fa3a1915b9ef285ec9afc58b05409edc22041fe79c"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-1000",
+          "sheetId": "FEED-PFD-1000",
+          "title": "Commercial Scale Wastewater Treatment",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 9,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=9"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          150
+        ],
+        "routeLabels": [
+          "T-1007 closed vent",
+          "Wet vent BL-VENTT1007 to HD-3100"
+        ]
+      }
+    },
+    {
+      "id": "REL-HD-3100-S-1000-VENT-T-1008-T-1008",
+      "type": "connectedTo",
+      "target": "T-1008",
+      "role": "vent t 1008",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-1000-VENT-T-1008",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A1000",
+          "title": "Wastewater treatment, receiving sources, conditional chemistry and A-2000 handoff",
+          "revision": "V150 / 0f89c6bb63ec5c5127db6f48f8d1843733c0b83c",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "wastewater.js": "492fd40422dd1e5a13133f0073847c363d52e782aedc69dd0f638edd9e8acf7f",
+            "a1000-basis.js": "fd08d2819df8087e44992ffb72428fda7ec9856315a45200741d408cdfe93982",
+            "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "thermal-utilities.js": "522210c2e87434d1b2a5f6fa3a1915b9ef285ec9afc58b05409edc22041fe79c"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-1000",
+          "sheetId": "FEED-PFD-1000",
+          "title": "Commercial Scale Wastewater Treatment",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 9,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=9"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          153
+        ],
+        "routeLabels": [
+          "T-1008 closed vent",
+          "Wet vent BL-VENTT1008 to HD-3100"
+        ]
+      }
+    },
+    {
+      "id": "REL-HD-3100-S-3000-COLLECTION-V-3110",
+      "type": "connectedTo",
+      "target": "V-3110",
+      "role": "collection",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-3000-COLLECTION",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A3000",
+          "title": "Candidate wet-acid vent collection, treatment and segregated liquid handling",
+          "revision": "V152 / 18e2f81ccfb90eec25064f50c98540aea197908b",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3",
+            "upstream.js": "a86dace5481a8870491f02663edfa01529150b9d649830c37a8b67aad3dd4ece",
+            "separations.js": "3f54880bd0f732e86ed2838471f8e7df83a4173276e31073ade8fe0a719c3f16"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-3000",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Commercial Scale Vent Gas Treatment System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-3000.pdf",
+          "sha256": "4f735054c567eadecdbd1f00e4bc7d78751965bf856200af37b03ba504eb0a51",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S1",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 1",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 1,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S2",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 2",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 2,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=2"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          600
+        ],
+        "routeLabels": [
+          "HD-3100 sloped wet collection trunk",
+          "Compatible wet vent inlet"
+        ]
+      }
+    },
+    {
+      "id": "REL-HD-3100-S-3000-INLET-BL-AV-201-IF-A3000-AV201",
+      "type": "connectedTo",
+      "target": "IF-A3000-AV201",
+      "role": "inlet bl av 201",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-3000-INLET-BL-AV-201",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A3000",
+          "title": "Candidate wet-acid vent collection, treatment and segregated liquid handling",
+          "revision": "V152 / 18e2f81ccfb90eec25064f50c98540aea197908b",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3",
+            "upstream.js": "a86dace5481a8870491f02663edfa01529150b9d649830c37a8b67aad3dd4ece",
+            "separations.js": "3f54880bd0f732e86ed2838471f8e7df83a4173276e31073ade8fe0a719c3f16"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-3000",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Commercial Scale Vent Gas Treatment System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-3000.pdf",
+          "sha256": "4f735054c567eadecdbd1f00e4bc7d78751965bf856200af37b03ba504eb0a51",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S1",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 1",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 1,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S2",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 2",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 2,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "id": "REL-HD-3100-S-3000-INLET-BL-HV-302-IF-A300-VENT",
+      "type": "connectedTo",
+      "target": "IF-A300-VENT",
+      "role": "inlet bl hv 302",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-3000-INLET-BL-HV-302",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A3000",
+          "title": "Candidate wet-acid vent collection, treatment and segregated liquid handling",
+          "revision": "V152 / 18e2f81ccfb90eec25064f50c98540aea197908b",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3",
+            "upstream.js": "a86dace5481a8870491f02663edfa01529150b9d649830c37a8b67aad3dd4ece",
+            "separations.js": "3f54880bd0f732e86ed2838471f8e7df83a4173276e31073ade8fe0a719c3f16"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-3000",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Commercial Scale Vent Gas Treatment System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-3000.pdf",
+          "sha256": "4f735054c567eadecdbd1f00e4bc7d78751965bf856200af37b03ba504eb0a51",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S1",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 1",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 1,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S2",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 2",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 2,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "id": "REL-HD-3100-S-3000-INLET-BL-VENT402-IF-A400-T402-VENT",
+      "type": "connectedTo",
+      "target": "IF-A400-T402-VENT",
+      "role": "inlet bl vent402",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-3000-INLET-BL-VENT402",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A3000",
+          "title": "Candidate wet-acid vent collection, treatment and segregated liquid handling",
+          "revision": "V152 / 18e2f81ccfb90eec25064f50c98540aea197908b",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3",
+            "upstream.js": "a86dace5481a8870491f02663edfa01529150b9d649830c37a8b67aad3dd4ece",
+            "separations.js": "3f54880bd0f732e86ed2838471f8e7df83a4173276e31073ade8fe0a719c3f16"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-3000",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Commercial Scale Vent Gas Treatment System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-3000.pdf",
+          "sha256": "4f735054c567eadecdbd1f00e4bc7d78751965bf856200af37b03ba504eb0a51",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S1",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 1",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 1,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S2",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 2",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 2,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "id": "REL-HD-3100-S-3000-INLET-BL-VENT403-IF-A400-T403-VENT",
+      "type": "connectedTo",
+      "target": "IF-A400-T403-VENT",
+      "role": "inlet bl vent403",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-3000-INLET-BL-VENT403",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A3000",
+          "title": "Candidate wet-acid vent collection, treatment and segregated liquid handling",
+          "revision": "V152 / 18e2f81ccfb90eec25064f50c98540aea197908b",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3",
+            "upstream.js": "a86dace5481a8870491f02663edfa01529150b9d649830c37a8b67aad3dd4ece",
+            "separations.js": "3f54880bd0f732e86ed2838471f8e7df83a4173276e31073ade8fe0a719c3f16"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-3000",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Commercial Scale Vent Gas Treatment System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-3000.pdf",
+          "sha256": "4f735054c567eadecdbd1f00e4bc7d78751965bf856200af37b03ba504eb0a51",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S1",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 1",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 1,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S2",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 2",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 2,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "id": "REL-HD-3100-S-3000-INLET-BL-VENT501-IF-A500-VENT",
+      "type": "connectedTo",
+      "target": "IF-A500-VENT",
+      "role": "inlet bl vent501",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-3000-INLET-BL-VENT501",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A3000",
+          "title": "Candidate wet-acid vent collection, treatment and segregated liquid handling",
+          "revision": "V152 / 18e2f81ccfb90eec25064f50c98540aea197908b",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3",
+            "upstream.js": "a86dace5481a8870491f02663edfa01529150b9d649830c37a8b67aad3dd4ece",
+            "separations.js": "3f54880bd0f732e86ed2838471f8e7df83a4173276e31073ade8fe0a719c3f16"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-3000",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Commercial Scale Vent Gas Treatment System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-3000.pdf",
+          "sha256": "4f735054c567eadecdbd1f00e4bc7d78751965bf856200af37b03ba504eb0a51",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S1",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 1",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 1,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S2",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 2",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 2,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "id": "REL-HD-3100-S-3000-INLET-BL-VT601-IF-A600-TANK-VENT",
+      "type": "connectedTo",
+      "target": "IF-A600-TANK-VENT",
+      "role": "inlet bl vt601",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-3000-INLET-BL-VT601",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A3000",
+          "title": "Candidate wet-acid vent collection, treatment and segregated liquid handling",
+          "revision": "V152 / 18e2f81ccfb90eec25064f50c98540aea197908b",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3",
+            "upstream.js": "a86dace5481a8870491f02663edfa01529150b9d649830c37a8b67aad3dd4ece",
+            "separations.js": "3f54880bd0f732e86ed2838471f8e7df83a4173276e31073ade8fe0a719c3f16"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-3000",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Commercial Scale Vent Gas Treatment System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-3000.pdf",
+          "sha256": "4f735054c567eadecdbd1f00e4bc7d78751965bf856200af37b03ba504eb0a51",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S1",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 1",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 1,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S2",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 2",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 2,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "id": "REL-HD-3100-S-3000-T304-VENT-T-304",
+      "type": "connectedTo",
+      "target": "T-304",
+      "role": "t304 vent",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-3000-T304-VENT",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A3000",
+          "title": "Candidate wet-acid vent collection, treatment and segregated liquid handling",
+          "revision": "V152 / 18e2f81ccfb90eec25064f50c98540aea197908b",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3",
+            "upstream.js": "a86dace5481a8870491f02663edfa01529150b9d649830c37a8b67aad3dd4ece",
+            "separations.js": "3f54880bd0f732e86ed2838471f8e7df83a4173276e31073ade8fe0a719c3f16"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-3000",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Commercial Scale Vent Gas Treatment System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-3000.pdf",
+          "sha256": "4f735054c567eadecdbd1f00e4bc7d78751965bf856200af37b03ba504eb0a51",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S1",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 1",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 1,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S2",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 2",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 2,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=2"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          31
+        ],
+        "routeLabels": [
+          "BL-VENT304 closed vent",
+          "Wet vent BL-VENT304 aligned takeoff",
+          "Wet vent BL-VENT304 to HD-3100"
+        ]
+      }
+    },
+    {
+      "id": "REL-HD-3100-S-3000-INLET-BL-V-R-101-IF-A3000-V-R-101",
+      "type": "connectedTo",
+      "target": "IF-A3000-V-R-101",
+      "role": "inlet bl v r 101",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-3000-INLET-BL-V-R-101",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A3000",
+          "title": "Candidate wet-acid vent collection, treatment and segregated liquid handling",
+          "revision": "V152 / 18e2f81ccfb90eec25064f50c98540aea197908b",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3",
+            "upstream.js": "a86dace5481a8870491f02663edfa01529150b9d649830c37a8b67aad3dd4ece",
+            "separations.js": "3f54880bd0f732e86ed2838471f8e7df83a4173276e31073ade8fe0a719c3f16"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-3000",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Commercial Scale Vent Gas Treatment System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-3000.pdf",
+          "sha256": "4f735054c567eadecdbd1f00e4bc7d78751965bf856200af37b03ba504eb0a51",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S1",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 1",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 1,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S2",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 2",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 2,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "id": "REL-HD-3100-S-3000-INLET-BL-V-T-102-IF-A3000-V-T-102",
+      "type": "connectedTo",
+      "target": "IF-A3000-V-T-102",
+      "role": "inlet bl v t 102",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-3000-INLET-BL-V-T-102",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A3000",
+          "title": "Candidate wet-acid vent collection, treatment and segregated liquid handling",
+          "revision": "V152 / 18e2f81ccfb90eec25064f50c98540aea197908b",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3",
+            "upstream.js": "a86dace5481a8870491f02663edfa01529150b9d649830c37a8b67aad3dd4ece",
+            "separations.js": "3f54880bd0f732e86ed2838471f8e7df83a4173276e31073ade8fe0a719c3f16"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-3000",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Commercial Scale Vent Gas Treatment System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-3000.pdf",
+          "sha256": "4f735054c567eadecdbd1f00e4bc7d78751965bf856200af37b03ba504eb0a51",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S1",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 1",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 1,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S2",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 2",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 2,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "id": "REL-HD-3100-S-3000-INLET-BL-V-R-141A-IF-A3000-V-R-141A",
+      "type": "connectedTo",
+      "target": "IF-A3000-V-R-141A",
+      "role": "inlet bl v r 141a",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-3000-INLET-BL-V-R-141A",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A3000",
+          "title": "Candidate wet-acid vent collection, treatment and segregated liquid handling",
+          "revision": "V152 / 18e2f81ccfb90eec25064f50c98540aea197908b",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3",
+            "upstream.js": "a86dace5481a8870491f02663edfa01529150b9d649830c37a8b67aad3dd4ece",
+            "separations.js": "3f54880bd0f732e86ed2838471f8e7df83a4173276e31073ade8fe0a719c3f16"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-3000",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Commercial Scale Vent Gas Treatment System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-3000.pdf",
+          "sha256": "4f735054c567eadecdbd1f00e4bc7d78751965bf856200af37b03ba504eb0a51",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S1",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 1",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 1,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S2",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 2",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 2,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "id": "REL-HD-3100-S-3000-INLET-BL-V-R-141B-IF-A3000-V-R-141B",
+      "type": "connectedTo",
+      "target": "IF-A3000-V-R-141B",
+      "role": "inlet bl v r 141b",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-3000-INLET-BL-V-R-141B",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A3000",
+          "title": "Candidate wet-acid vent collection, treatment and segregated liquid handling",
+          "revision": "V152 / 18e2f81ccfb90eec25064f50c98540aea197908b",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3",
+            "upstream.js": "a86dace5481a8870491f02663edfa01529150b9d649830c37a8b67aad3dd4ece",
+            "separations.js": "3f54880bd0f732e86ed2838471f8e7df83a4173276e31073ade8fe0a719c3f16"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-3000",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Commercial Scale Vent Gas Treatment System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-3000.pdf",
+          "sha256": "4f735054c567eadecdbd1f00e4bc7d78751965bf856200af37b03ba504eb0a51",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S1",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 1",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 1,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S2",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 2",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 2,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "id": "REL-HD-3100-S-3000-INLET-BL-V-R-141C-IF-A3000-V-R-141C",
+      "type": "connectedTo",
+      "target": "IF-A3000-V-R-141C",
+      "role": "inlet bl v r 141c",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-3000-INLET-BL-V-R-141C",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A3000",
+          "title": "Candidate wet-acid vent collection, treatment and segregated liquid handling",
+          "revision": "V152 / 18e2f81ccfb90eec25064f50c98540aea197908b",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3",
+            "upstream.js": "a86dace5481a8870491f02663edfa01529150b9d649830c37a8b67aad3dd4ece",
+            "separations.js": "3f54880bd0f732e86ed2838471f8e7df83a4173276e31073ade8fe0a719c3f16"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-3000",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Commercial Scale Vent Gas Treatment System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-3000.pdf",
+          "sha256": "4f735054c567eadecdbd1f00e4bc7d78751965bf856200af37b03ba504eb0a51",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S1",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 1",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 1,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S2",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 2",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 2,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "id": "REL-HD-3100-S-3000-INLET-BL-V-R-141D-IF-A3000-V-R-141D",
+      "type": "connectedTo",
+      "target": "IF-A3000-V-R-141D",
+      "role": "inlet bl v r 141d",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-3000-INLET-BL-V-R-141D",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A3000",
+          "title": "Candidate wet-acid vent collection, treatment and segregated liquid handling",
+          "revision": "V152 / 18e2f81ccfb90eec25064f50c98540aea197908b",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3",
+            "upstream.js": "a86dace5481a8870491f02663edfa01529150b9d649830c37a8b67aad3dd4ece",
+            "separations.js": "3f54880bd0f732e86ed2838471f8e7df83a4173276e31073ade8fe0a719c3f16"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-3000",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Commercial Scale Vent Gas Treatment System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-3000.pdf",
+          "sha256": "4f735054c567eadecdbd1f00e4bc7d78751965bf856200af37b03ba504eb0a51",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S1",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 1",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 1,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S2",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 2",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 2,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "id": "REL-HD-3100-S-3000-INLET-BL-V-T-161-IF-A3000-V-T-161",
+      "type": "connectedTo",
+      "target": "IF-A3000-V-T-161",
+      "role": "inlet bl v t 161",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-3000-INLET-BL-V-T-161",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A3000",
+          "title": "Candidate wet-acid vent collection, treatment and segregated liquid handling",
+          "revision": "V152 / 18e2f81ccfb90eec25064f50c98540aea197908b",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3",
+            "upstream.js": "a86dace5481a8870491f02663edfa01529150b9d649830c37a8b67aad3dd4ece",
+            "separations.js": "3f54880bd0f732e86ed2838471f8e7df83a4173276e31073ade8fe0a719c3f16"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-3000",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Commercial Scale Vent Gas Treatment System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-3000.pdf",
+          "sha256": "4f735054c567eadecdbd1f00e4bc7d78751965bf856200af37b03ba504eb0a51",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S1",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 1",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 1,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S2",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 2",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 2,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "id": "REL-HD-3100-S-3000-INLET-BL-V-T-162-IF-A3000-V-T-162",
+      "type": "connectedTo",
+      "target": "IF-A3000-V-T-162",
+      "role": "inlet bl v t 162",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-3000-INLET-BL-V-T-162",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A3000",
+          "title": "Candidate wet-acid vent collection, treatment and segregated liquid handling",
+          "revision": "V152 / 18e2f81ccfb90eec25064f50c98540aea197908b",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3",
+            "upstream.js": "a86dace5481a8870491f02663edfa01529150b9d649830c37a8b67aad3dd4ece",
+            "separations.js": "3f54880bd0f732e86ed2838471f8e7df83a4173276e31073ade8fe0a719c3f16"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-3000",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Commercial Scale Vent Gas Treatment System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-3000.pdf",
+          "sha256": "4f735054c567eadecdbd1f00e4bc7d78751965bf856200af37b03ba504eb0a51",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S1",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 1",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 1,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S2",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 2",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 2,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "id": "REL-HD-3100-S-3000-INLET-BL-V-T-163-IF-A3000-V-T-163",
+      "type": "connectedTo",
+      "target": "IF-A3000-V-T-163",
+      "role": "inlet bl v t 163",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-3000-INLET-BL-V-T-163",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A3000",
+          "title": "Candidate wet-acid vent collection, treatment and segregated liquid handling",
+          "revision": "V152 / 18e2f81ccfb90eec25064f50c98540aea197908b",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3",
+            "upstream.js": "a86dace5481a8870491f02663edfa01529150b9d649830c37a8b67aad3dd4ece",
+            "separations.js": "3f54880bd0f732e86ed2838471f8e7df83a4173276e31073ade8fe0a719c3f16"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-3000",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Commercial Scale Vent Gas Treatment System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-3000.pdf",
+          "sha256": "4f735054c567eadecdbd1f00e4bc7d78751965bf856200af37b03ba504eb0a51",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S1",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 1",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 1,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=1"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S2",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent treatment review redraw, sheet 2",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+          "page": 2,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=2"
+        }
+      ]
+    }
+  ]
+}

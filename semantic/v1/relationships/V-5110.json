@@ -1,0 +1,13 @@
+{
+  "assetId": "V-5110",
+  "relationships": [
+    {
+      "id": "REL-V-5110-AREA",
+      "type": "locatedIn",
+      "target": "A-5000",
+      "status": "model area assignment",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    }
+  ]
+}

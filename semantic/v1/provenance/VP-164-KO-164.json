@@ -1,0 +1,49 @@
+{
+  "assetId": "VP-164-KO-164",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "VP-164-KO-164",
+      "source": "FEED-PE-PFD-001",
+      "revision": "V5.1",
+      "status": "draft PFD basis",
+      "confidence": "documented"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A160-001"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A160-002"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A160-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A160-004"
+    }
+  ]
+}

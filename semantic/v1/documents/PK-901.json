@@ -1,0 +1,57 @@
+{
+  "assetId": "PK-901",
+  "documents": [
+    {
+      "documentId": "MODEL-A900-V163",
+      "title": "A-900 compact contained pelletization functional foundation",
+      "revision": "V163",
+      "page": null,
+      "status": "model-derived planning basis; not approved for construction or operation",
+      "availability": "available model source reviewed",
+      "files": {
+        "a900.js": "2176d15015509596b9c178ae062dbd822d04ed08696079b39044f72a7ee6c836",
+        "a900-basis.js": "8cb811eb278bc09bebe080a7109a02d71f64f7ff6200b23ddd40ab8d9d6dee25"
+      },
+      "hashNormalization": "UTF-8 text with LF line endings"
+    },
+    {
+      "documentId": "FEED-PFD-0900",
+      "title": "A-900 approved source package required",
+      "revision": null,
+      "page": null,
+      "status": "unavailable; all equipment and package decisions remain proposed",
+      "availability": "not present in available project sources",
+      "gapId": "A900-001"
+    },
+    {
+      "documentId": "FEED-PE-MAT-002",
+      "title": "MOC Selection Matrix",
+      "revision": "V1.1",
+      "page": null,
+      "status": "controlled",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.1.xlsx"
+    },
+    {
+      "documentId": "FEED-PE-REP-023",
+      "title": "RC-901 Roll Compactor Assessment (first principles)",
+      "revision": "V1.0",
+      "page": null,
+      "status": "controlled",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "B. Technical Reports\\FEED-PE-REP-023_RC-901-Roll-Compactor-Assessment_V1.0.docx"
+    },
+    {
+      "documentId": "FEED-QA-SPC-001",
+      "title": "rGO-BCK Product Specification (Stream 804)",
+      "revision": "V0.1",
+      "page": null,
+      "status": "controlled (draft)",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "E. Quality Assurance\\FEED-QA-SPC-001_rGO-BCK-Product-Specification-Stream-804_V0.1.docx"
+    }
+  ]
+}

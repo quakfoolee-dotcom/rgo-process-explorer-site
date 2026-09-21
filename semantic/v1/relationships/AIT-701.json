@@ -1,0 +1,13 @@
+{
+  "assetId": "AIT-701",
+  "relationships": [
+    {
+      "id": "REL-AIT-701-AREA",
+      "type": "locatedIn",
+      "target": "A-700",
+      "status": "model area assignment",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    }
+  ]
+}

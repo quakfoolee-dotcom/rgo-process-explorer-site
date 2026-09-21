@@ -1,0 +1,81 @@
+{
+  "assetId": "DR-601",
+  "instruments": [
+    {
+      "functionId": "DR-601-TEMPERATURE-FUNCTION",
+      "variable": "temperature",
+      "purpose": "Inlet/outlet temperature monitoring; limits unqualified",
+      "tag": null,
+      "range": null,
+      "status": "model functional intent; no approved instrument or setpoint",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A600",
+          "title": "Aqueous spray-drying routes, independent exhaust and A-700 solids handoff",
+          "revision": "V146 / 19534f4d6e3e8383ba84e72fd997460ad241d829",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "spray-drying.js": "c77c180b667bf82f9bceeee0369ca3a7ca1746d3895675e497286d4902a74080",
+            "furnace.js": "47ff8d0a21ff80f9882dfad79bf1db484c1536116894503f5dfbf0e425b882b3",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0600",
+          "sheetId": "FEED-PFD-0600",
+          "title": "Commercial Scale TLGO Drying",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 6,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=6"
+        }
+      ],
+      "gapId": "A600-005"
+    },
+    {
+      "functionId": "DR-601-PRESSURE-FUNCTION",
+      "variable": "pressure",
+      "purpose": "Slight negative-pressure intent; value and protection unqualified",
+      "tag": null,
+      "range": null,
+      "status": "model functional intent; no approved instrument or setpoint",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A600",
+          "title": "Aqueous spray-drying routes, independent exhaust and A-700 solids handoff",
+          "revision": "V146 / 19534f4d6e3e8383ba84e72fd997460ad241d829",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "spray-drying.js": "c77c180b667bf82f9bceeee0369ca3a7ca1746d3895675e497286d4902a74080",
+            "furnace.js": "47ff8d0a21ff80f9882dfad79bf1db484c1536116894503f5dfbf0e425b882b3",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0600",
+          "sheetId": "FEED-PFD-0600",
+          "title": "Commercial Scale TLGO Drying",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 6,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=6"
+        }
+      ],
+      "gapId": "A600-005"
+    }
+  ]
+}

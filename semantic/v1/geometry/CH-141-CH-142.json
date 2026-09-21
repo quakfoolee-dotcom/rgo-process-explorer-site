@@ -1,0 +1,7 @@
+{
+  "assetId": "CH-141-CH-142",
+  "bindingId": "GEOMETRY-CH-141-CH-142",
+  "modelEquipmentId": 43,
+  "bindingScope": "modeled-equipment-group",
+  "bindingRule": "All geometry owned by model equipment 43 resolves to CH-141-CH-142; canonical identity remains stable across model rebuilds."
+}

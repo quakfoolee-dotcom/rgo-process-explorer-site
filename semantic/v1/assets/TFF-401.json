@@ -1,0 +1,57 @@
+{
+  "assetId": "TFF-401",
+  "name": "VSEP washing membrane package",
+  "assetClassId": "MembranePackage",
+  "status": "proposed",
+  "identityStatus": "model-derived; tag qualification open",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-400",
+    "system": "A-400 washing process context",
+    "parentAsset": null
+  },
+  "processFunction": "VSEP washing membrane package",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": "PVDF- or PP-lined construction, or dual-laminate FRP",
+    "operatingPhilosophy": "Low transmembrane pressure operation to avoid compressible cake formation; CIP / flush connections; skid includes CIP capability"
+  },
+  "operatingEnvelope": {
+    "washEndpoint": "Wash until permeate conductivity < 100–200 µS/cm and pH ≈ 5 meet downstream spec; multiple diafiltration cycles may be required",
+    "operatingMode": "A-400 onward continuous or semi-continuous at the design rates of Table 3.3-1, with surge/hold at the batch-to-continuous boundary (T-501)",
+    "washLiquorTargets": "pH 5.0 ± 0.2; SO₄²⁻ ≤ 1 mg/L; Mn non-detect; conductivity < 10 µS/cm on the wash liquor",
+    "membraneTemperatureLimits": "Synder V0.2: 25 °C at pH < 2, 50 °C above pH 2"
+  },
+  "processBasis": [],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "The local temperature-sheet PDF skips FEED-PFD-0400. The inherited register page 9 is a full-document reference, not an available excerpt. No approved source revision is established.",
+    "Model screening identifies an eight-module capacity shortfall and differing solids assumptions. Layout volumes, flux and module count are not qualified ratings.",
+    "The model has two parallel trains of two feed-pump stages. Supplier drawing and utility-sheet pump counts remain unreconciled; no duty/standby allocation is asserted.",
+    "Cleaning chemistry, product isolation, vent compatibility, drain receiving pressure/invert, instrument tags and protective settings remain unqualified.",
+    "Dimensions, model screening inputs and package layouts do not establish approved engineering values."
+  ],
+  "dataLayer": {
+    "area": "A-400",
+    "source": "data/semantic/A-400",
+    "approvedRows": 6,
+    "heldRows": 0,
+    "pendingRows": 57,
+    "identityHold": null,
+    "applied": "2026-09-21",
+    "baseline": {
+      "design": {
+        "capacityM3": null,
+        "designPressure": null,
+        "designTemperature": null,
+        "materialOfConstruction": null
+      },
+      "operatingEnvelope": null
+    },
+    "baselineAbsent": []
+  }
+}

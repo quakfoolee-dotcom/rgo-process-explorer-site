@@ -1,0 +1,117 @@
+{
+  "assetId": "DC-3812",
+  "relationships": [
+    {
+      "id": "REL-DC-3812-AREA",
+      "type": "locatedIn",
+      "target": "A-3000",
+      "status": "model area assignment",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-DC-3812-S-800-VENT-F802-F-802",
+      "type": "connectedTo",
+      "target": "F-802",
+      "role": "vent f802",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-800-VENT-F802",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A800",
+          "title": "Doping, dry charging, argon, independent exhaust and A-900 handoff",
+          "revision": "V148 / 19b52eb01578140a4d021ec6d47fd98d1b671ba5",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+            "a800-basis.js": "0ee9741872bf91a9e4898324690cd43ec2ab246478883645300b6311900bc757",
+            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0800",
+          "sheetId": "FEED-PFD-0800",
+          "title": "Commercial Scale rGO Doping and Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 8,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=8"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          105
+        ],
+        "routeLabels": [
+          "F-802 separate EX802 off-gas",
+          "BL-EX802 to DC-3812"
+        ]
+      }
+    },
+    {
+      "id": "REL-DC-3812-IF-A3812-OUTLET-HOLD",
+      "type": "connectedTo",
+      "target": "IF-A3812-OUTLET",
+      "role": "blinded downstream connection hold",
+      "status": "No operating connection; modeled outlet is positively blinded until compatible downstream treatment and safe disposal are approved.",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A3800",
+          "title": "A-800 reactive-gas and dry-dust treatment satellites",
+          "revision": "V154 / 565c39858ef8c190a506d74d567b8b7a74a5c60a",
+          "page": null,
+          "status": "model-derived layout envelopes; technology and process release HOLD",
+          "availability": "available model source reviewed",
+          "files": {
+            "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76",
+            "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+            "a800-basis.js": "0ee9741872bf91a9e4898324690cd43ec2ab246478883645300b6311900bc757",
+            "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0800",
+          "sheetId": "FEED-PFD-0800",
+          "title": "Commercial Scale rGO Doping and Pyrolysis",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 8,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=8"
+        },
+        {
+          "documentId": "FEED-PFD-3000-P01-S1",
+          "sheetId": "FEED-PFD-3000",
+          "title": "Proposed wet-acid vent review redraw - source segregation",
+          "revision": "P01",
+          "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank.",
+          "page": 1,
+          "file": "feed-pfd-3000-p01.pdf",
+          "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+          "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-3000-p01.pdf#page=1"
+        }
+      ],
+      "gapIds": [
+        "A3800-006"
+      ]
+    }
+  ]
+}

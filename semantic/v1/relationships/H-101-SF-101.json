@@ -1,0 +1,23 @@
+{
+  "assetId": "H-101-SF-101",
+  "relationships": [
+    {
+      "id": "REL-H-101-SF-101-S-100-GRAPHITE",
+      "type": "feeds",
+      "target": "R-101",
+      "role": "Graphite charge to R-101",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-100-GRAPHITE",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-H-101-SF-101-GEOM",
+      "type": "representedBy",
+      "target": "GEOMETRY-H-101-SF-101",
+      "status": "bound to modeled equipment group",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "assetId": "F-802",
+  "bindingId": "GEOMETRY-F-802",
+  "modelEquipmentId": 105,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

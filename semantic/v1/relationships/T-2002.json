@@ -1,0 +1,212 @@
+{
+  "assetId": "T-2002",
+  "relationships": [
+    {
+      "id": "REL-T-2002-AREA",
+      "type": "locatedIn",
+      "target": "A-2000",
+      "status": "model area assignment",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-T-2002-S-2000-PRODUCT-A-RO-2001A",
+      "type": "connectedTo",
+      "target": "RO-2001A",
+      "role": "product a",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-2000-PRODUCT-A",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A2000",
+          "title": "Reclaimed-water pretreatment, UF, RO, reuse and segregated returns",
+          "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+            "a2000-basis.js": "45a93aac1d560a1ffac329e1605a348db574807c363ecda5fea6bf481a320638",
+            "uf-manifolds.js": "bde5bc174a8c256b05cf0b1000855ea0eafb003a551d9477db6afabc5c270854"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-2000",
+          "sheetId": "FEED-PFD-2000",
+          "title": "Commercial Scale Reclaimed Water RO System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-2000.pdf",
+          "sha256": "c7ff684a1dd010cfd5399ae997aad339c31fd1c8c4bff543347d247561c4be0c",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-2000.pdf#page=1"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          507
+        ],
+        "routeLabels": [
+          "RO-2001A permeate outlet",
+          "RO-2001A permeate collection",
+          "RO permeate quality diversion inlet",
+          "Accepted RO permeate to T-2002"
+        ]
+      }
+    },
+    {
+      "id": "REL-T-2002-S-2000-PRODUCT-B-RO-2001B",
+      "type": "connectedTo",
+      "target": "RO-2001B",
+      "role": "product b",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-2000-PRODUCT-B",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A2000",
+          "title": "Reclaimed-water pretreatment, UF, RO, reuse and segregated returns",
+          "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+            "a2000-basis.js": "45a93aac1d560a1ffac329e1605a348db574807c363ecda5fea6bf481a320638",
+            "uf-manifolds.js": "bde5bc174a8c256b05cf0b1000855ea0eafb003a551d9477db6afabc5c270854"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-2000",
+          "sheetId": "FEED-PFD-2000",
+          "title": "Commercial Scale Reclaimed Water RO System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-2000.pdf",
+          "sha256": "c7ff684a1dd010cfd5399ae997aad339c31fd1c8c4bff543347d247561c4be0c",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-2000.pdf#page=1"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          507
+        ],
+        "routeLabels": [
+          "RO-2001B permeate outlet",
+          "RO-2001B permeate collection",
+          "RO permeate quality diversion inlet",
+          "Accepted RO permeate to T-2002"
+        ]
+      }
+    },
+    {
+      "id": "REL-T-2002-S-2000-PRODUCT-C-RO-2001C",
+      "type": "connectedTo",
+      "target": "RO-2001C",
+      "role": "product c",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-2000-PRODUCT-C",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A2000",
+          "title": "Reclaimed-water pretreatment, UF, RO, reuse and segregated returns",
+          "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+            "a2000-basis.js": "45a93aac1d560a1ffac329e1605a348db574807c363ecda5fea6bf481a320638",
+            "uf-manifolds.js": "bde5bc174a8c256b05cf0b1000855ea0eafb003a551d9477db6afabc5c270854"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-2000",
+          "sheetId": "FEED-PFD-2000",
+          "title": "Commercial Scale Reclaimed Water RO System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-2000.pdf",
+          "sha256": "c7ff684a1dd010cfd5399ae997aad339c31fd1c8c4bff543347d247561c4be0c",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-2000.pdf#page=1"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          507
+        ],
+        "routeLabels": [
+          "RO-2001C permeate outlet",
+          "RO-2001C permeate collection",
+          "RO permeate quality diversion inlet",
+          "Accepted RO permeate to T-2002"
+        ]
+      }
+    },
+    {
+      "id": "REL-T-2002-S-2000-DISTRIBUTION-P-2005",
+      "type": "connectedTo",
+      "target": "P-2005",
+      "role": "distribution",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "streamId": "S-2000-DISTRIBUTION",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A2000",
+          "title": "Reclaimed-water pretreatment, UF, RO, reuse and segregated returns",
+          "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+            "a2000-basis.js": "45a93aac1d560a1ffac329e1605a348db574807c363ecda5fea6bf481a320638",
+            "uf-manifolds.js": "bde5bc174a8c256b05cf0b1000855ea0eafb003a551d9477db6afabc5c270854"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-2000",
+          "sheetId": "FEED-PFD-2000",
+          "title": "Commercial Scale Reclaimed Water RO System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-2000.pdf",
+          "sha256": "c7ff684a1dd010cfd5399ae997aad339c31fd1c8c4bff543347d247561c4be0c",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-2000.pdf#page=1"
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          509
+        ],
+        "routeLabels": [
+          "T-2002 to P-2005",
+          "P-2005 product quality station",
+          "P-2005 to CF-2002"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "assetId": "BIN-1001",
+  "bindingId": "GEOMETRY-BIN-1001",
+  "modelEquipmentId": 149,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

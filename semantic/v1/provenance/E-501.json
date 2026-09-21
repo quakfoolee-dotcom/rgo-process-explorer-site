@@ -1,0 +1,87 @@
+{
+  "assetId": "E-501",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "E-501",
+      "source": "MODEL-A500",
+      "revision": "V145 / b278d4c293d2eb9f98b5f08d975215873bd755c9",
+      "page": null,
+      "status": "model-derived",
+      "confidence": "review required",
+      "gapId": "A500-001"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A500-003"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A500-003"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A500-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A500-003"
+    },
+    {
+      "valueId": "PV-A-500-0073",
+      "property": "design.materialOfConstruction",
+      "value": "PVDF process-wetted envelope, or 316L electropolished where product-metal budget permits",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 40 (M-036)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": null,
+      "note": "scope: T-501 Feed Tank; P-501 Transfer Pump; HX-501 and pipework; alt: Ti Grade 2 tubes where cooling-water chloride is high; status FIRM | D-A500-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-500-0082",
+      "property": "operatingEnvelope.outletTemperatureC",
+      "value": "30–40 (control TLGO outlet temperature prior to A-600 drying 'for stability'; temperature monitoring at US-501 outlet)",
+      "unit": "°C",
+      "source": "FEED-PE-PFD-001",
+      "revision": "V5.1.1",
+      "location": "FEED-PFD-0500, PDF p.10 Process Design and Control Note 3",
+      "status": "approved",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": null,
+      "note": "REP-024: origin of the limit not stated — derive from measured stability | D-A500-02: PFD-0500 Control Note 3: control TLGO outlet to 30–40 °C prior to A-600. REP-024: derive the limit from a measured thermal / sonochemical stability test — carried in the D-A500-01 follow-up.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "assetId": "IF-A400-T402-VENT",
+  "bindingId": "GEOMETRY-IF-A400-T402-VENT",
+  "modelEquipmentId": null,
+  "bindingScope": "unmodeled-interface",
+  "bindingRule": "No specific model assembly or qualified receiving destination is assigned."
+}

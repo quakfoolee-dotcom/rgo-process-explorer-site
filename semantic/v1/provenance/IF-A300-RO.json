@@ -1,0 +1,55 @@
+{
+  "assetId": "IF-A300-RO",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "IF-A300-RO",
+      "source": "MODEL-A300",
+      "revision": null,
+      "page": null,
+      "status": "model-derived",
+      "confidence": "review required",
+      "gapId": "A300-001"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A300-001"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A300-001"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A300-001"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A300-001"
+    }
+  ]
+}

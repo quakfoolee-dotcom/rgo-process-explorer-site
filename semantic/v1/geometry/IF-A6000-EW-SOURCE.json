@@ -1,0 +1,7 @@
+{
+  "assetId": "IF-A6000-EW-SOURCE",
+  "bindingId": "GEOMETRY-IF-A6000-EW-SOURCE",
+  "modelEquipmentId": null,
+  "bindingScope": "unmodeled-interface",
+  "bindingRule": "Semantic portfolio boundary only; no physical header, drain, battery limit or route is assigned."
+}

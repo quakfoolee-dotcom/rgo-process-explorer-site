@@ -1,0 +1,80 @@
+{
+  "assetId": "T-305",
+  "name": "Acid wash vessel",
+  "assetClassId": "Tank",
+  "status": "listed",
+  "identityStatus": "draft-pfd-tag",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-300",
+    "system": "A-300 fixing process context",
+    "parentAsset": null
+  },
+  "processFunction": "Acid wash vessel",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": "Dual-laminate FRP (PVDF/ECTFE liner + vinyl-ester-novolac laminate)"
+  },
+  "operatingEnvelope": {
+    "operatingTemperatureC": 40,
+    "hclDoseRatio": "72.63 kg (67.63 L) of 15 wt% HCl per kg PRE-G treated",
+    "targetPH": "≈ 1 (HCl dosing controlled to target pH during acid wash / decant)",
+    "maximumTemperatureC": "50 (T ≤ 50 °C during HCl addition / transfer)"
+  },
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Draft process basis only; no approved ratings, capacity, control loops or protective setpoints are asserted.",
+    "Model route alignment and destination qualification remain open under A300-001."
+  ],
+  "processBasis": [
+    {
+      "label": "HCl addition / transfer limit",
+      "value": 50,
+      "unit": "°C",
+      "basisType": "operational-limit",
+      "status": "draft; not a normal operating setpoint",
+      "source": {
+        "documentId": "FEED-PFD-0300",
+        "sheetId": "FEED-PFD-0300",
+        "title": "TLGO Fixing draft sheet",
+        "revision": null,
+        "revisionNote": "Sheet revision field is placeholder XXX; X01 document-creation row dated 15-Feb-2026. Do not equate it with the inherited V5.1/V5.1.1 bundle labels.",
+        "page": 4,
+        "file": "pfd-temperature-sheets.pdf",
+        "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+        "status": "Draft - Not for Use; not approved",
+        "availability": "available and reviewed",
+        "href": "./pfd-temperature-sheets.pdf#page=4"
+      }
+    }
+  ],
+  "safeguards": {
+    "dosingInterlock": "HCl and H₂O₂ dosing interlocked with agitator operation; H₂O₂ dosing reduced or stopped on high temperature"
+  },
+  "dataLayer": {
+    "area": "A-300",
+    "source": "data/semantic/A-300",
+    "approvedRows": 6,
+    "heldRows": 0,
+    "pendingRows": 43,
+    "identityHold": null,
+    "applied": "2026-09-21",
+    "baseline": {
+      "design": {
+        "capacityM3": null,
+        "designPressure": null,
+        "designTemperature": null,
+        "materialOfConstruction": null
+      },
+      "operatingEnvelope": null,
+      "safeguards": null
+    },
+    "baselineAbsent": [
+      "safeguards"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "assetId": "P-UF2001",
+  "bindingId": "GEOMETRY-P-UF2001",
+  "modelEquipmentId": 518,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

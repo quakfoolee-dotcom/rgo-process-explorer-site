@@ -1,0 +1,4043 @@
+{
+  "summary": {
+    "stations": 25,
+    "clearLocations": 25,
+    "walkingConnections": 56,
+    "walkingSamples": 56,
+    "connectedStations": 25,
+    "unresolvedWalkingSamples": [],
+    "vehicleRoutes": 7,
+    "vehicleProfiles": 2,
+    "unrelatedProcessPipingUnchanged": true,
+    "codeComplianceVerified": false
+  },
+  "geometry": {
+    "revision": "bc-fire-86",
+    "stations": [
+      {
+        "tag": "FE-101",
+        "position": [
+          -42,
+          0,
+          -11.6
+        ],
+        "body": {
+          "min": [
+            -42.25,
+            0.01,
+            -12.06
+          ],
+          "max": [
+            -41.75,
+            1.97,
+            -11.139999999999999
+          ]
+        },
+        "approach": {
+          "min": [
+            -41.7,
+            0.035,
+            -12.2
+          ],
+          "max": [
+            -40.5,
+            2.135,
+            -11
+          ]
+        },
+        "retrieval": [
+          -41.1,
+          0.02,
+          -11.6
+        ],
+        "findings": [],
+        "geometryClear": true
+      },
+      {
+        "tag": "FE-141",
+        "position": [
+          -30,
+          0,
+          -27
+        ],
+        "body": {
+          "min": [
+            -30.46,
+            0.01,
+            -27.25
+          ],
+          "max": [
+            -29.54,
+            1.97,
+            -26.75
+          ]
+        },
+        "approach": {
+          "min": [
+            -30.6,
+            0.035,
+            -28.5
+          ],
+          "max": [
+            -29.4,
+            2.135,
+            -27.3
+          ]
+        },
+        "retrieval": [
+          -30,
+          0.02,
+          -27.9
+        ],
+        "findings": [],
+        "geometryClear": true
+      },
+      {
+        "tag": "FE-161",
+        "position": [
+          -20,
+          0,
+          -29
+        ],
+        "body": {
+          "min": [
+            -20.46,
+            0.01,
+            -29.25
+          ],
+          "max": [
+            -19.54,
+            1.97,
+            -28.75
+          ]
+        },
+        "approach": {
+          "min": [
+            -20.6,
+            0.035,
+            -30.5
+          ],
+          "max": [
+            -19.4,
+            2.135,
+            -29.3
+          ]
+        },
+        "retrieval": [
+          -20,
+          0.02,
+          -29.9
+        ],
+        "findings": [],
+        "geometryClear": true
+      },
+      {
+        "tag": "FE-201",
+        "position": [
+          -6,
+          0,
+          -26
+        ],
+        "body": {
+          "min": [
+            -6.46,
+            0.01,
+            -26.25
+          ],
+          "max": [
+            -5.54,
+            1.97,
+            -25.75
+          ]
+        },
+        "approach": {
+          "min": [
+            -6.6,
+            0.035,
+            -27.5
+          ],
+          "max": [
+            -5.4,
+            2.135,
+            -26.3
+          ]
+        },
+        "retrieval": [
+          -6,
+          0.02,
+          -26.9
+        ],
+        "findings": [],
+        "geometryClear": true
+      },
+      {
+        "tag": "FE-202",
+        "position": [
+          -4.8,
+          0,
+          4.2
+        ],
+        "body": {
+          "min": [
+            -5.26,
+            0.01,
+            3.95
+          ],
+          "max": [
+            -4.34,
+            1.97,
+            4.45
+          ]
+        },
+        "approach": {
+          "min": [
+            -5.3999999999999995,
+            0.035,
+            4.5
+          ],
+          "max": [
+            -4.2,
+            2.135,
+            5.7
+          ]
+        },
+        "retrieval": [
+          -4.8,
+          0.02,
+          5.1000000000000005
+        ],
+        "findings": [],
+        "geometryClear": true
+      },
+      {
+        "tag": "FE-301",
+        "position": [
+          10.4,
+          0,
+          13.4
+        ],
+        "body": {
+          "min": [
+            9.94,
+            0.01,
+            13.15
+          ],
+          "max": [
+            10.860000000000001,
+            1.97,
+            13.65
+          ]
+        },
+        "approach": {
+          "min": [
+            9.8,
+            0.035,
+            13.700000000000001
+          ],
+          "max": [
+            11,
+            2.135,
+            14.9
+          ]
+        },
+        "retrieval": [
+          10.4,
+          0.02,
+          14.3
+        ],
+        "findings": [],
+        "geometryClear": true
+      },
+      {
+        "tag": "FE-401",
+        "position": [
+          23.4,
+          0,
+          15.5
+        ],
+        "body": {
+          "min": [
+            22.939999999999998,
+            0.01,
+            15.25
+          ],
+          "max": [
+            23.86,
+            1.97,
+            15.75
+          ]
+        },
+        "approach": {
+          "min": [
+            22.799999999999997,
+            0.035,
+            15.8
+          ],
+          "max": [
+            24,
+            2.135,
+            17
+          ]
+        },
+        "retrieval": [
+          23.4,
+          0.02,
+          16.4
+        ],
+        "findings": [],
+        "geometryClear": true
+      },
+      {
+        "tag": "FE-402",
+        "position": [
+          23,
+          0,
+          30.5
+        ],
+        "body": {
+          "min": [
+            22.54,
+            0.01,
+            30.25
+          ],
+          "max": [
+            23.46,
+            1.97,
+            30.75
+          ]
+        },
+        "approach": {
+          "min": [
+            22.4,
+            0.035,
+            30.8
+          ],
+          "max": [
+            23.6,
+            2.135,
+            32
+          ]
+        },
+        "retrieval": [
+          23,
+          0.02,
+          31.4
+        ],
+        "findings": [],
+        "geometryClear": true
+      },
+      {
+        "tag": "FE-501",
+        "position": [
+          39,
+          0,
+          6.6
+        ],
+        "body": {
+          "min": [
+            38.54,
+            0.01,
+            6.35
+          ],
+          "max": [
+            39.46,
+            1.97,
+            6.85
+          ]
+        },
+        "approach": {
+          "min": [
+            38.4,
+            0.035,
+            5.1
+          ],
+          "max": [
+            39.6,
+            2.135,
+            6.3
+          ]
+        },
+        "retrieval": [
+          39,
+          0.02,
+          5.699999999999999
+        ],
+        "findings": [],
+        "geometryClear": true
+      },
+      {
+        "tag": "FE-601",
+        "position": [
+          78,
+          0,
+          5.1
+        ],
+        "body": {
+          "min": [
+            77.54,
+            0.01,
+            4.85
+          ],
+          "max": [
+            78.46,
+            1.97,
+            5.35
+          ]
+        },
+        "approach": {
+          "min": [
+            77.4,
+            0.035,
+            5.3999999999999995
+          ],
+          "max": [
+            78.6,
+            2.135,
+            6.6
+          ]
+        },
+        "retrieval": [
+          78,
+          0.02,
+          6
+        ],
+        "findings": [],
+        "geometryClear": true
+      },
+      {
+        "tag": "FE-602",
+        "position": [
+          46,
+          0,
+          18.5
+        ],
+        "body": {
+          "min": [
+            45.75,
+            0.01,
+            18.04
+          ],
+          "max": [
+            46.25,
+            1.97,
+            18.96
+          ]
+        },
+        "approach": {
+          "min": [
+            46.3,
+            0.035,
+            17.9
+          ],
+          "max": [
+            47.5,
+            2.135,
+            19.1
+          ]
+        },
+        "retrieval": [
+          46.9,
+          0.02,
+          18.5
+        ],
+        "findings": [],
+        "geometryClear": true
+      },
+      {
+        "tag": "FE-701",
+        "position": [
+          57,
+          0,
+          35.8
+        ],
+        "body": {
+          "min": [
+            56.54,
+            0.01,
+            35.55
+          ],
+          "max": [
+            57.46,
+            1.97,
+            36.05
+          ]
+        },
+        "approach": {
+          "min": [
+            56.4,
+            0.035,
+            34.3
+          ],
+          "max": [
+            57.6,
+            2.135,
+            35.5
+          ]
+        },
+        "retrieval": [
+          57,
+          0.02,
+          34.9
+        ],
+        "findings": [],
+        "geometryClear": true
+      },
+      {
+        "tag": "FE-702",
+        "position": [
+          83,
+          0,
+          35.8
+        ],
+        "body": {
+          "min": [
+            82.54,
+            0.01,
+            35.55
+          ],
+          "max": [
+            83.46,
+            1.97,
+            36.05
+          ]
+        },
+        "approach": {
+          "min": [
+            82.4,
+            0.035,
+            34.3
+          ],
+          "max": [
+            83.6,
+            2.135,
+            35.5
+          ]
+        },
+        "retrieval": [
+          83,
+          0.02,
+          34.9
+        ],
+        "findings": [],
+        "geometryClear": true
+      },
+      {
+        "tag": "FE-801",
+        "position": [
+          86,
+          0,
+          9
+        ],
+        "body": {
+          "min": [
+            85.54,
+            0.01,
+            8.75
+          ],
+          "max": [
+            86.46,
+            1.97,
+            9.25
+          ]
+        },
+        "approach": {
+          "min": [
+            85.4,
+            0.035,
+            9.3
+          ],
+          "max": [
+            86.6,
+            2.135,
+            10.5
+          ]
+        },
+        "retrieval": [
+          86,
+          0.02,
+          9.9
+        ],
+        "findings": [],
+        "geometryClear": true
+      },
+      {
+        "tag": "FE-802",
+        "position": [
+          107.4,
+          0,
+          43.4
+        ],
+        "body": {
+          "min": [
+            106.94000000000001,
+            0.01,
+            43.15
+          ],
+          "max": [
+            107.86,
+            1.97,
+            43.65
+          ]
+        },
+        "approach": {
+          "min": [
+            106.80000000000001,
+            0.035,
+            41.9
+          ],
+          "max": [
+            108,
+            2.135,
+            43.1
+          ]
+        },
+        "retrieval": [
+          107.4,
+          0.02,
+          42.5
+        ],
+        "findings": [],
+        "geometryClear": true
+      },
+      {
+        "tag": "FE-901",
+        "position": [
+          121,
+          0,
+          27
+        ],
+        "body": {
+          "min": [
+            120.75,
+            0.01,
+            26.54
+          ],
+          "max": [
+            121.25,
+            1.97,
+            27.46
+          ]
+        },
+        "approach": {
+          "min": [
+            119.5,
+            0.035,
+            26.4
+          ],
+          "max": [
+            120.7,
+            2.135,
+            27.6
+          ]
+        },
+        "retrieval": [
+          120.1,
+          0.02,
+          27
+        ],
+        "findings": [],
+        "geometryClear": true
+      },
+      {
+        "tag": "FE-1001",
+        "position": [
+          28,
+          0,
+          6.8
+        ],
+        "body": {
+          "min": [
+            27.54,
+            0.01,
+            6.55
+          ],
+          "max": [
+            28.46,
+            1.97,
+            7.05
+          ]
+        },
+        "approach": {
+          "min": [
+            27.4,
+            0.035,
+            5.3
+          ],
+          "max": [
+            28.6,
+            2.135,
+            6.5
+          ]
+        },
+        "retrieval": [
+          28,
+          0.02,
+          5.8999999999999995
+        ],
+        "findings": [],
+        "geometryClear": true
+      },
+      {
+        "tag": "FE-1002",
+        "position": [
+          35,
+          0,
+          -13
+        ],
+        "body": {
+          "min": [
+            34.54,
+            0.01,
+            -13.25
+          ],
+          "max": [
+            35.46,
+            1.97,
+            -12.75
+          ]
+        },
+        "approach": {
+          "min": [
+            34.4,
+            0.035,
+            -14.5
+          ],
+          "max": [
+            35.6,
+            2.135,
+            -13.3
+          ]
+        },
+        "retrieval": [
+          35,
+          0.02,
+          -13.9
+        ],
+        "findings": [],
+        "geometryClear": true
+      },
+      {
+        "tag": "FE-1003",
+        "position": [
+          55,
+          0,
+          -26
+        ],
+        "body": {
+          "min": [
+            54.75,
+            0.01,
+            -26.46
+          ],
+          "max": [
+            55.25,
+            1.97,
+            -25.54
+          ]
+        },
+        "approach": {
+          "min": [
+            55.3,
+            0.035,
+            -26.6
+          ],
+          "max": [
+            56.5,
+            2.135,
+            -25.4
+          ]
+        },
+        "retrieval": [
+          55.9,
+          0.02,
+          -26
+        ],
+        "findings": [],
+        "geometryClear": true
+      },
+      {
+        "tag": "FE-2001",
+        "position": [
+          77,
+          0,
+          4.9
+        ],
+        "body": {
+          "min": [
+            76.54,
+            0.01,
+            4.65
+          ],
+          "max": [
+            77.46,
+            1.97,
+            5.15
+          ]
+        },
+        "approach": {
+          "min": [
+            76.4,
+            0.035,
+            3.4000000000000004
+          ],
+          "max": [
+            77.6,
+            2.135,
+            4.6000000000000005
+          ]
+        },
+        "retrieval": [
+          77,
+          0.02,
+          4
+        ],
+        "findings": [],
+        "geometryClear": true
+      },
+      {
+        "tag": "FE-2002",
+        "position": [
+          104.8,
+          0,
+          -24
+        ],
+        "body": {
+          "min": [
+            104.55,
+            0.01,
+            -24.46
+          ],
+          "max": [
+            105.05,
+            1.97,
+            -23.54
+          ]
+        },
+        "approach": {
+          "min": [
+            103.3,
+            0.035,
+            -24.6
+          ],
+          "max": [
+            104.5,
+            2.135,
+            -23.4
+          ]
+        },
+        "retrieval": [
+          103.89999999999999,
+          0.02,
+          -24
+        ],
+        "findings": [],
+        "geometryClear": true
+      },
+      {
+        "tag": "FE-3001",
+        "position": [
+          -35,
+          0,
+          11.7
+        ],
+        "body": {
+          "min": [
+            -35.46,
+            0.01,
+            11.45
+          ],
+          "max": [
+            -34.54,
+            1.97,
+            11.95
+          ]
+        },
+        "approach": {
+          "min": [
+            -35.6,
+            0.035,
+            10.2
+          ],
+          "max": [
+            -34.4,
+            2.135,
+            11.399999999999999
+          ]
+        },
+        "retrieval": [
+          -35,
+          0.02,
+          10.799999999999999
+        ],
+        "findings": [],
+        "geometryClear": true
+      },
+      {
+        "tag": "FE-4001",
+        "position": [
+          -25,
+          0,
+          11.7
+        ],
+        "body": {
+          "min": [
+            -25.46,
+            0.01,
+            11.45
+          ],
+          "max": [
+            -24.54,
+            1.97,
+            11.95
+          ]
+        },
+        "approach": {
+          "min": [
+            -25.6,
+            0.035,
+            10.2
+          ],
+          "max": [
+            -24.4,
+            2.135,
+            11.399999999999999
+          ]
+        },
+        "retrieval": [
+          -25,
+          0.02,
+          10.799999999999999
+        ],
+        "findings": [],
+        "geometryClear": true
+      },
+      {
+        "tag": "FE-5001",
+        "position": [
+          -24,
+          0,
+          30.5
+        ],
+        "body": {
+          "min": [
+            -24.46,
+            0.01,
+            30.25
+          ],
+          "max": [
+            -23.54,
+            1.97,
+            30.75
+          ]
+        },
+        "approach": {
+          "min": [
+            -24.6,
+            0.035,
+            29
+          ],
+          "max": [
+            -23.4,
+            2.135,
+            30.2
+          ]
+        },
+        "retrieval": [
+          -24,
+          0.02,
+          29.6
+        ],
+        "findings": [],
+        "geometryClear": true
+      },
+      {
+        "tag": "FE-6001",
+        "position": [
+          40,
+          0,
+          51.7
+        ],
+        "body": {
+          "min": [
+            39.54,
+            0.01,
+            51.45
+          ],
+          "max": [
+            40.46,
+            1.97,
+            51.95
+          ]
+        },
+        "approach": {
+          "min": [
+            39.4,
+            0.035,
+            50.2
+          ],
+          "max": [
+            40.6,
+            2.135,
+            51.400000000000006
+          ]
+        },
+        "retrieval": [
+          40,
+          0.02,
+          50.800000000000004
+        ],
+        "findings": [],
+        "geometryClear": true
+      }
+    ],
+    "geometryClear": true,
+    "checkedParts": 142039,
+    "qualified": false,
+    "scope": "Distances follow screened model walking paths. This is geometric access screening only: agent suitability, extinguisher rating, floor-area allocation, fire compartments and final exits are not verified."
+  },
+  "walkingAccess": {
+    "revision": "bc-walkways-88",
+    "gridStepM": null,
+    "personRadiusM": 0.6,
+    "headroomM": 2.3,
+    "aisleNodes": 234,
+    "stationConnections": [
+      {
+        "tag": "FE-101",
+        "connected": true
+      },
+      {
+        "tag": "FE-141",
+        "connected": true
+      },
+      {
+        "tag": "FE-161",
+        "connected": true
+      },
+      {
+        "tag": "FE-201",
+        "connected": true
+      },
+      {
+        "tag": "FE-202",
+        "connected": true
+      },
+      {
+        "tag": "FE-301",
+        "connected": true
+      },
+      {
+        "tag": "FE-401",
+        "connected": true
+      },
+      {
+        "tag": "FE-402",
+        "connected": true
+      },
+      {
+        "tag": "FE-501",
+        "connected": true
+      },
+      {
+        "tag": "FE-601",
+        "connected": true
+      },
+      {
+        "tag": "FE-602",
+        "connected": true
+      },
+      {
+        "tag": "FE-701",
+        "connected": true
+      },
+      {
+        "tag": "FE-702",
+        "connected": true
+      },
+      {
+        "tag": "FE-801",
+        "connected": true
+      },
+      {
+        "tag": "FE-802",
+        "connected": true
+      },
+      {
+        "tag": "FE-901",
+        "connected": true
+      },
+      {
+        "tag": "FE-1001",
+        "connected": true
+      },
+      {
+        "tag": "FE-1002",
+        "connected": true
+      },
+      {
+        "tag": "FE-1003",
+        "connected": true
+      },
+      {
+        "tag": "FE-2001",
+        "connected": true
+      },
+      {
+        "tag": "FE-2002",
+        "connected": true
+      },
+      {
+        "tag": "FE-3001",
+        "connected": true
+      },
+      {
+        "tag": "FE-4001",
+        "connected": true
+      },
+      {
+        "tag": "FE-5001",
+        "connected": true
+      },
+      {
+        "tag": "FE-6001",
+        "connected": true
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "wastewater-0",
+        "label": "East frontage",
+        "routeId": "wastewater",
+        "point": [
+          57.75,
+          0.035,
+          2.75
+        ],
+        "station": "FE-501",
+        "distance": 21.7,
+        "path": [
+          [
+            57.75,
+            0.035,
+            2.75
+          ],
+          [
+            57.75,
+            0.035,
+            4
+          ],
+          [
+            57.75,
+            0.035,
+            5.5
+          ],
+          [
+            47.5,
+            0.035,
+            5.5
+          ],
+          [
+            39,
+            0.035,
+            5.5
+          ],
+          [
+            39,
+            0.035,
+            5.699999999999999
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "wastewater-1",
+        "label": "East service junction",
+        "routeId": "wastewater",
+        "point": [
+          57.75,
+          0.035,
+          -15.25
+        ],
+        "station": "FE-1003",
+        "distance": 12.600000000000001,
+        "path": [
+          [
+            57.75,
+            0.035,
+            -15.25
+          ],
+          [
+            57.75,
+            0.035,
+            -26
+          ],
+          [
+            56,
+            0.035,
+            -26
+          ],
+          [
+            55.9,
+            0.035,
+            -26
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "wastewater-2",
+        "label": "Treatment bays",
+        "routeId": "wastewater",
+        "point": [
+          35,
+          0.035,
+          -15.25
+        ],
+        "station": "FE-1002",
+        "distance": 1.3499999999999996,
+        "path": [
+          [
+            35,
+            0.035,
+            -15.25
+          ],
+          [
+            35,
+            0.035,
+            -14
+          ],
+          [
+            35,
+            0.035,
+            -13.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "wastewater-3",
+        "label": "West treatment bays · turn back",
+        "routeId": "wastewater",
+        "point": [
+          13.5,
+          0.035,
+          -15.25
+        ],
+        "station": "FE-1002",
+        "distance": 22.85,
+        "path": [
+          [
+            13.5,
+            0.035,
+            -15.25
+          ],
+          [
+            14,
+            0.035,
+            -15.25
+          ],
+          [
+            35,
+            0.035,
+            -15.25
+          ],
+          [
+            35,
+            0.035,
+            -14
+          ],
+          [
+            35,
+            0.035,
+            -13.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "wastewater-4",
+        "label": "Treatment bays · return",
+        "routeId": "wastewater",
+        "point": [
+          35,
+          0.035,
+          -15.25
+        ],
+        "station": "FE-1002",
+        "distance": 1.3499999999999996,
+        "path": [
+          [
+            35,
+            0.035,
+            -15.25
+          ],
+          [
+            35,
+            0.035,
+            -14
+          ],
+          [
+            35,
+            0.035,
+            -13.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "wastewater-5",
+        "label": "East service junction · return",
+        "routeId": "wastewater",
+        "point": [
+          57.75,
+          0.035,
+          -15.25
+        ],
+        "station": "FE-1003",
+        "distance": 12.600000000000001,
+        "path": [
+          [
+            57.75,
+            0.035,
+            -15.25
+          ],
+          [
+            57.75,
+            0.035,
+            -26
+          ],
+          [
+            56,
+            0.035,
+            -26
+          ],
+          [
+            55.9,
+            0.035,
+            -26
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "wastewater-6",
+        "label": "East frontage",
+        "routeId": "wastewater",
+        "point": [
+          57.75,
+          0.035,
+          2.75
+        ],
+        "station": "FE-501",
+        "distance": 21.7,
+        "path": [
+          [
+            57.75,
+            0.035,
+            2.75
+          ],
+          [
+            57.75,
+            0.035,
+            4
+          ],
+          [
+            57.75,
+            0.035,
+            5.5
+          ],
+          [
+            47.5,
+            0.035,
+            5.5
+          ],
+          [
+            39,
+            0.035,
+            5.5
+          ],
+          [
+            39,
+            0.035,
+            5.699999999999999
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "reclaimed-0",
+        "label": "Feed / media aisle",
+        "routeId": "reclaimed",
+        "point": [
+          72,
+          0.035,
+          -11.25
+        ],
+        "station": "FE-1003",
+        "distance": 30.85,
+        "path": [
+          [
+            72,
+            0.035,
+            -11.25
+          ],
+          [
+            59.25,
+            0.035,
+            -11.25
+          ],
+          [
+            57.75,
+            0.035,
+            -11.25
+          ],
+          [
+            57.75,
+            0.035,
+            -15.25
+          ],
+          [
+            57.75,
+            0.035,
+            -26
+          ],
+          [
+            56,
+            0.035,
+            -26
+          ],
+          [
+            55.9,
+            0.035,
+            -26
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "reclaimed-1",
+        "label": "West junction",
+        "routeId": "reclaimed",
+        "point": [
+          59.25,
+          0.035,
+          -11.25
+        ],
+        "station": "FE-1003",
+        "distance": 18.1,
+        "path": [
+          [
+            59.25,
+            0.035,
+            -11.25
+          ],
+          [
+            57.75,
+            0.035,
+            -11.25
+          ],
+          [
+            57.75,
+            0.035,
+            -15.25
+          ],
+          [
+            57.75,
+            0.035,
+            -26
+          ],
+          [
+            56,
+            0.035,
+            -26
+          ],
+          [
+            55.9,
+            0.035,
+            -26
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "reclaimed-2",
+        "label": "Water-area junction",
+        "routeId": "reclaimed",
+        "point": [
+          59.25,
+          0.035,
+          2.75
+        ],
+        "station": "FE-2001",
+        "distance": 19,
+        "path": [
+          [
+            59.25,
+            0.035,
+            2.75
+          ],
+          [
+            77,
+            0.035,
+            2.75
+          ],
+          [
+            77,
+            0.035,
+            4
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "reclaimed-3",
+        "label": "RO frontage",
+        "routeId": "reclaimed",
+        "point": [
+          80,
+          0.035,
+          2.75
+        ],
+        "station": "FE-2001",
+        "distance": 4.25,
+        "path": [
+          [
+            80,
+            0.035,
+            2.75
+          ],
+          [
+            77,
+            0.035,
+            2.75
+          ],
+          [
+            77,
+            0.035,
+            4
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "reclaimed-4",
+        "label": "East junction",
+        "routeId": "reclaimed",
+        "point": [
+          102.25,
+          0.035,
+          2.75
+        ],
+        "station": "FE-2001",
+        "distance": 26.5,
+        "path": [
+          [
+            102.25,
+            0.035,
+            2.75
+          ],
+          [
+            80,
+            0.035,
+            2.75
+          ],
+          [
+            77,
+            0.035,
+            2.75
+          ],
+          [
+            77,
+            0.035,
+            4
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "reclaimed-5",
+        "label": "RO service junction",
+        "routeId": "reclaimed",
+        "point": [
+          102.25,
+          0.035,
+          1
+        ],
+        "station": "FE-2002",
+        "distance": 26.64999999999999,
+        "path": [
+          [
+            102.25,
+            0.035,
+            1
+          ],
+          [
+            102.25,
+            0.035,
+            -12
+          ],
+          [
+            102.25,
+            0.035,
+            -24
+          ],
+          [
+            103.75,
+            0.035,
+            -24
+          ],
+          [
+            103.89999999999999,
+            0.035,
+            -24
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "reclaimed-6",
+        "label": "East service aisle",
+        "routeId": "reclaimed",
+        "point": [
+          102.25,
+          0.035,
+          -12
+        ],
+        "station": "FE-2002",
+        "distance": 13.649999999999991,
+        "path": [
+          [
+            102.25,
+            0.035,
+            -12
+          ],
+          [
+            102.25,
+            0.035,
+            -24
+          ],
+          [
+            103.75,
+            0.035,
+            -24
+          ],
+          [
+            103.89999999999999,
+            0.035,
+            -24
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "reclaimed-7",
+        "label": "CIP / concentrate approach",
+        "routeId": "reclaimed",
+        "point": [
+          102.25,
+          0.035,
+          -26.5
+        ],
+        "station": "FE-2002",
+        "distance": 4.1499999999999915,
+        "path": [
+          [
+            102.25,
+            0.035,
+            -26.5
+          ],
+          [
+            102.25,
+            0.035,
+            -25.25
+          ],
+          [
+            102.25,
+            0.035,
+            -24
+          ],
+          [
+            103.75,
+            0.035,
+            -24
+          ],
+          [
+            103.89999999999999,
+            0.035,
+            -24
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "washing-0",
+        "label": "Rear module aisle",
+        "routeId": "washing",
+        "point": [
+          25,
+          0.035,
+          17.25
+        ],
+        "station": "FE-401",
+        "distance": 2.450000000000003,
+        "path": [
+          [
+            25,
+            0.035,
+            17.25
+          ],
+          [
+            23.5,
+            0.035,
+            17.25
+          ],
+          [
+            23.5,
+            0.035,
+            16.5
+          ],
+          [
+            23.5,
+            0.035,
+            16.4
+          ],
+          [
+            23.4,
+            0.035,
+            16.4
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "washing-1",
+        "label": "Rear junction",
+        "routeId": "washing",
+        "point": [
+          7.5,
+          0.035,
+          17.25
+        ],
+        "station": "FE-301",
+        "distance": 6.049999999999999,
+        "path": [
+          [
+            7.5,
+            0.035,
+            17.25
+          ],
+          [
+            9.5,
+            0.035,
+            17.25
+          ],
+          [
+            9.5,
+            0.035,
+            14.5
+          ],
+          [
+            10.5,
+            0.035,
+            14.5
+          ],
+          [
+            10.5,
+            0.035,
+            14.3
+          ],
+          [
+            10.4,
+            0.035,
+            14.3
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "washing-2",
+        "label": "Cross-aisle junction",
+        "routeId": "washing",
+        "point": [
+          7.5,
+          0.035,
+          33.25
+        ],
+        "station": "FE-301",
+        "distance": 22.049999999999997,
+        "path": [
+          [
+            7.5,
+            0.035,
+            33.25
+          ],
+          [
+            7.5,
+            0.035,
+            17.25
+          ],
+          [
+            9.5,
+            0.035,
+            17.25
+          ],
+          [
+            9.5,
+            0.035,
+            14.5
+          ],
+          [
+            10.5,
+            0.035,
+            14.5
+          ],
+          [
+            10.5,
+            0.035,
+            14.3
+          ],
+          [
+            10.4,
+            0.035,
+            14.3
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "washing-3",
+        "label": "Front access junction",
+        "routeId": "washing",
+        "point": [
+          15,
+          0.035,
+          33.25
+        ],
+        "station": "FE-402",
+        "distance": 16.85,
+        "path": [
+          [
+            15,
+            0.035,
+            33.25
+          ],
+          [
+            15,
+            0.035,
+            30.75
+          ],
+          [
+            15,
+            0.035,
+            29.25
+          ],
+          [
+            24.25,
+            0.035,
+            29.25
+          ],
+          [
+            24.25,
+            0.035,
+            31.5
+          ],
+          [
+            23,
+            0.035,
+            31.5
+          ],
+          [
+            23,
+            0.035,
+            31.4
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "washing-4",
+        "label": "Front service junction · alternate clear viewpoint",
+        "routeId": "washing",
+        "point": [
+          15,
+          0.035,
+          28.75
+        ],
+        "originalPoint": [
+          15.1,
+          26.65
+        ],
+        "station": "FE-402",
+        "distance": 13.350000000000001,
+        "path": [
+          [
+            15,
+            0.035,
+            28.75
+          ],
+          [
+            15,
+            0.035,
+            29.25
+          ],
+          [
+            24.25,
+            0.035,
+            29.25
+          ],
+          [
+            24.25,
+            0.035,
+            31.5
+          ],
+          [
+            23,
+            0.035,
+            31.5
+          ],
+          [
+            23,
+            0.035,
+            31.4
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "washing-5",
+        "label": "Washing equipment frontage · alternate clear viewpoint",
+        "routeId": "washing",
+        "point": [
+          25.25,
+          0.035,
+          28.75
+        ],
+        "originalPoint": [
+          25,
+          26.65
+        ],
+        "station": "FE-402",
+        "distance": 5.100000000000001,
+        "path": [
+          [
+            25.25,
+            0.035,
+            28.75
+          ],
+          [
+            25.25,
+            0.035,
+            29.25
+          ],
+          [
+            24.25,
+            0.035,
+            29.25
+          ],
+          [
+            24.25,
+            0.035,
+            31.5
+          ],
+          [
+            23,
+            0.035,
+            31.5
+          ],
+          [
+            23,
+            0.035,
+            31.4
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "thermal-0",
+        "label": "Thermal cross aisle",
+        "routeId": "thermal",
+        "point": [
+          50,
+          0.035,
+          33.25
+        ],
+        "station": "FE-701",
+        "distance": 8.649999999999999,
+        "path": [
+          [
+            50,
+            0.035,
+            33.25
+          ],
+          [
+            57,
+            0.035,
+            33.25
+          ],
+          [
+            57,
+            0.035,
+            34.75
+          ],
+          [
+            57,
+            0.035,
+            34.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "thermal-1",
+        "label": "A-700 review stop",
+        "routeId": "thermal",
+        "point": [
+          70,
+          0.035,
+          33.25
+        ],
+        "station": "FE-701",
+        "distance": 14.649999999999999,
+        "path": [
+          [
+            70,
+            0.035,
+            33.25
+          ],
+          [
+            57,
+            0.035,
+            33.25
+          ],
+          [
+            57,
+            0.035,
+            34.75
+          ],
+          [
+            57,
+            0.035,
+            34.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "thermal-2",
+        "label": "Thermal-area junction",
+        "routeId": "thermal",
+        "point": [
+          91.25,
+          0.035,
+          33.25
+        ],
+        "station": "FE-702",
+        "distance": 9.899999999999999,
+        "path": [
+          [
+            91.25,
+            0.035,
+            33.25
+          ],
+          [
+            83,
+            0.035,
+            33.25
+          ],
+          [
+            83,
+            0.035,
+            34.75
+          ],
+          [
+            83,
+            0.035,
+            34.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "thermal-3",
+        "label": "A-800 junction",
+        "routeId": "thermal",
+        "point": [
+          91.25,
+          0.035,
+          42
+        ],
+        "station": "FE-802",
+        "distance": 16.849999999999994,
+        "path": [
+          [
+            91.25,
+            0.035,
+            42
+          ],
+          [
+            107.5,
+            0.035,
+            42
+          ],
+          [
+            107.5,
+            0.035,
+            42.5
+          ],
+          [
+            107.4,
+            0.035,
+            42.5
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "thermal-4",
+        "label": "A-800 service frontage",
+        "routeId": "thermal",
+        "point": [
+          112,
+          0.035,
+          42
+        ],
+        "station": "FE-802",
+        "distance": 5.099999999999994,
+        "path": [
+          [
+            112,
+            0.035,
+            42
+          ],
+          [
+            107.5,
+            0.035,
+            42
+          ],
+          [
+            107.5,
+            0.035,
+            42.5
+          ],
+          [
+            107.4,
+            0.035,
+            42.5
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "drying-0",
+        "label": "Dryer stair approach",
+        "routeId": "drying",
+        "point": [
+          76,
+          0.035,
+          7.5
+        ],
+        "station": "FE-601",
+        "distance": 3.5,
+        "path": [
+          [
+            76,
+            0.035,
+            7.5
+          ],
+          [
+            78,
+            0.035,
+            7.5
+          ],
+          [
+            78,
+            0.035,
+            6
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "drying-1",
+        "label": "Dryer service aisle",
+        "routeId": "drying",
+        "point": [
+          105,
+          0.035,
+          7.5
+        ],
+        "station": "FE-601",
+        "distance": 28.5,
+        "path": [
+          [
+            105,
+            0.035,
+            7.5
+          ],
+          [
+            78,
+            0.035,
+            7.5
+          ],
+          [
+            78,
+            0.035,
+            6
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "drying-2",
+        "label": "East junction",
+        "routeId": "drying",
+        "point": [
+          119,
+          0.035,
+          7.5
+        ],
+        "station": "FE-901",
+        "distance": 20.599999999999994,
+        "path": [
+          [
+            119,
+            0.035,
+            7.5
+          ],
+          [
+            119,
+            0.035,
+            11
+          ],
+          [
+            119,
+            0.035,
+            27
+          ],
+          [
+            120,
+            0.035,
+            27
+          ],
+          [
+            120.1,
+            0.035,
+            27
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "drying-3",
+        "label": "Feeder-aisle junction",
+        "routeId": "drying",
+        "point": [
+          119,
+          0.035,
+          11
+        ],
+        "station": "FE-901",
+        "distance": 17.099999999999994,
+        "path": [
+          [
+            119,
+            0.035,
+            11
+          ],
+          [
+            119,
+            0.035,
+            27
+          ],
+          [
+            120,
+            0.035,
+            27
+          ],
+          [
+            120.1,
+            0.035,
+            27
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "drying-4",
+        "label": "Feeder service aisle",
+        "routeId": "drying",
+        "point": [
+          100,
+          0.035,
+          11
+        ],
+        "station": "FE-801",
+        "distance": 15.1,
+        "path": [
+          [
+            100,
+            0.035,
+            11
+          ],
+          [
+            88,
+            0.035,
+            11
+          ],
+          [
+            88,
+            0.035,
+            10
+          ],
+          [
+            86,
+            0.035,
+            10
+          ],
+          [
+            86,
+            0.035,
+            9.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "drying-5",
+        "label": "A-800 stair approach",
+        "routeId": "drying",
+        "point": [
+          88,
+          0.035,
+          11
+        ],
+        "station": "FE-801",
+        "distance": 3.0999999999999996,
+        "path": [
+          [
+            88,
+            0.035,
+            11
+          ],
+          [
+            88,
+            0.035,
+            10
+          ],
+          [
+            86,
+            0.035,
+            10
+          ],
+          [
+            86,
+            0.035,
+            9.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "LOCAL-R141A",
+        "label": "A-140 · R-141A approach",
+        "point": [
+          -29,
+          0.035,
+          -11.25
+        ],
+        "station": "FE-201",
+        "distance": 39.85,
+        "path": [
+          [
+            -29,
+            0.035,
+            -11.25
+          ],
+          [
+            -29,
+            0.035,
+            -10.75
+          ],
+          [
+            -12.5,
+            0.035,
+            -10.75
+          ],
+          [
+            -12,
+            0.035,
+            -10.75
+          ],
+          [
+            -12,
+            0.035,
+            -12.5
+          ],
+          [
+            -7.75,
+            0.035,
+            -12.5
+          ],
+          [
+            -7.75,
+            0.035,
+            -16.75
+          ],
+          [
+            -7.75,
+            0.035,
+            -21
+          ],
+          [
+            -7.75,
+            0.035,
+            -27
+          ],
+          [
+            -6,
+            0.035,
+            -27
+          ],
+          [
+            -6,
+            0.035,
+            -26.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "LOCAL-R141B",
+        "label": "A-140 · R-141B approach",
+        "point": [
+          -25,
+          0.035,
+          -11.25
+        ],
+        "station": "FE-201",
+        "distance": 43.85,
+        "path": [
+          [
+            -25,
+            0.035,
+            -11.25
+          ],
+          [
+            -29,
+            0.035,
+            -11.25
+          ],
+          [
+            -29,
+            0.035,
+            -10.75
+          ],
+          [
+            -12.5,
+            0.035,
+            -10.75
+          ],
+          [
+            -12,
+            0.035,
+            -10.75
+          ],
+          [
+            -12,
+            0.035,
+            -12.5
+          ],
+          [
+            -7.75,
+            0.035,
+            -12.5
+          ],
+          [
+            -7.75,
+            0.035,
+            -16.75
+          ],
+          [
+            -7.75,
+            0.035,
+            -21
+          ],
+          [
+            -7.75,
+            0.035,
+            -27
+          ],
+          [
+            -6,
+            0.035,
+            -27
+          ],
+          [
+            -6,
+            0.035,
+            -26.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "LOCAL-R141C",
+        "label": "A-140 · R-141C approach",
+        "point": [
+          -29,
+          0.035,
+          -23
+        ],
+        "station": "FE-141",
+        "distance": 12.600000000000001,
+        "path": [
+          [
+            -29,
+            0.035,
+            -23
+          ],
+          [
+            -32,
+            0.035,
+            -23
+          ],
+          [
+            -33.25,
+            0.035,
+            -23
+          ],
+          [
+            -33.25,
+            0.035,
+            -25.5
+          ],
+          [
+            -33.25,
+            0.035,
+            -28
+          ],
+          [
+            -30,
+            0.035,
+            -28
+          ],
+          [
+            -30,
+            0.035,
+            -27.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "LOCAL-R141D",
+        "label": "A-140 · R-141D approach",
+        "point": [
+          -25,
+          0.035,
+          -23
+        ],
+        "station": "FE-141",
+        "distance": 16.6,
+        "path": [
+          [
+            -25,
+            0.035,
+            -23
+          ],
+          [
+            -29,
+            0.035,
+            -23
+          ],
+          [
+            -32,
+            0.035,
+            -23
+          ],
+          [
+            -33.25,
+            0.035,
+            -23
+          ],
+          [
+            -33.25,
+            0.035,
+            -25.5
+          ],
+          [
+            -33.25,
+            0.035,
+            -28
+          ],
+          [
+            -30,
+            0.035,
+            -28
+          ],
+          [
+            -30,
+            0.035,
+            -27.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "LOCAL-T161",
+        "label": "A-160 · T-161 approach",
+        "point": [
+          -22.25,
+          0.035,
+          -15
+        ],
+        "station": "FE-141",
+        "distance": 27.35,
+        "path": [
+          [
+            -22.25,
+            0.035,
+            -15
+          ],
+          [
+            -22.5,
+            0.035,
+            -15
+          ],
+          [
+            -22.5,
+            0.035,
+            -17.5
+          ],
+          [
+            -22.5,
+            0.035,
+            -20
+          ],
+          [
+            -22.5,
+            0.035,
+            -23
+          ],
+          [
+            -24.943182,
+            0.035,
+            -23
+          ],
+          [
+            -25,
+            0.035,
+            -23
+          ],
+          [
+            -29,
+            0.035,
+            -23
+          ],
+          [
+            -32,
+            0.035,
+            -23
+          ],
+          [
+            -33.25,
+            0.035,
+            -23
+          ],
+          [
+            -33.25,
+            0.035,
+            -25.5
+          ],
+          [
+            -33.25,
+            0.035,
+            -28
+          ],
+          [
+            -30,
+            0.035,
+            -28
+          ],
+          [
+            -30,
+            0.035,
+            -27.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "LOCAL-T162",
+        "label": "A-160 · T-162 approach",
+        "point": [
+          -22.25,
+          0.035,
+          -20
+        ],
+        "station": "FE-141",
+        "distance": 22.35,
+        "path": [
+          [
+            -22.25,
+            0.035,
+            -20
+          ],
+          [
+            -22.5,
+            0.035,
+            -20
+          ],
+          [
+            -22.5,
+            0.035,
+            -23
+          ],
+          [
+            -24.943182,
+            0.035,
+            -23
+          ],
+          [
+            -25,
+            0.035,
+            -23
+          ],
+          [
+            -29,
+            0.035,
+            -23
+          ],
+          [
+            -32,
+            0.035,
+            -23
+          ],
+          [
+            -33.25,
+            0.035,
+            -23
+          ],
+          [
+            -33.25,
+            0.035,
+            -25.5
+          ],
+          [
+            -33.25,
+            0.035,
+            -28
+          ],
+          [
+            -30,
+            0.035,
+            -28
+          ],
+          [
+            -30,
+            0.035,
+            -27.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "LOCAL-T163",
+        "label": "A-160 · T-163 / P-165 service bay approach",
+        "point": [
+          -23.75,
+          0.035,
+          -25
+        ],
+        "station": "FE-141",
+        "distance": 22.35,
+        "path": [
+          [
+            -23.75,
+            0.035,
+            -25
+          ],
+          [
+            -22.5,
+            0.035,
+            -25
+          ],
+          [
+            -22.5,
+            0.035,
+            -23
+          ],
+          [
+            -24.943182,
+            0.035,
+            -23
+          ],
+          [
+            -25,
+            0.035,
+            -23
+          ],
+          [
+            -29,
+            0.035,
+            -23
+          ],
+          [
+            -32,
+            0.035,
+            -23
+          ],
+          [
+            -33.25,
+            0.035,
+            -23
+          ],
+          [
+            -33.25,
+            0.035,
+            -25.5
+          ],
+          [
+            -33.25,
+            0.035,
+            -28
+          ],
+          [
+            -30,
+            0.035,
+            -28
+          ],
+          [
+            -30,
+            0.035,
+            -27.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "LOCAL-F161",
+        "label": "A-160 · F-161 approach",
+        "point": [
+          -10.75,
+          0.035,
+          -20.75
+        ],
+        "station": "FE-201",
+        "distance": 11.100000000000001,
+        "path": [
+          [
+            -10.75,
+            0.035,
+            -20.75
+          ],
+          [
+            -9.5,
+            0.035,
+            -20.75
+          ],
+          [
+            -9.5,
+            0.035,
+            -21
+          ],
+          [
+            -7.75,
+            0.035,
+            -21
+          ],
+          [
+            -7.75,
+            0.035,
+            -27
+          ],
+          [
+            -6,
+            0.035,
+            -27
+          ],
+          [
+            -6,
+            0.035,
+            -26.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "LOCAL-D164",
+        "label": "A-160 · D-164 approach",
+        "point": [
+          -12.25,
+          0.035,
+          -15.75
+        ],
+        "station": "FE-201",
+        "distance": 17.6,
+        "path": [
+          [
+            -12.25,
+            0.035,
+            -15.75
+          ],
+          [
+            -9.5,
+            0.035,
+            -15.75
+          ],
+          [
+            -9.5,
+            0.035,
+            -16.75
+          ],
+          [
+            -7.75,
+            0.035,
+            -16.75
+          ],
+          [
+            -7.75,
+            0.035,
+            -21
+          ],
+          [
+            -7.75,
+            0.035,
+            -27
+          ],
+          [
+            -6,
+            0.035,
+            -27
+          ],
+          [
+            -6,
+            0.035,
+            -26.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "LOCAL-TR164",
+        "label": "A-160 · TR-164 approach",
+        "point": [
+          -12.5,
+          0.035,
+          -17.25
+        ],
+        "station": "FE-201",
+        "distance": 19.35,
+        "path": [
+          [
+            -12.5,
+            0.035,
+            -17.25
+          ],
+          [
+            -12.5,
+            0.035,
+            -15.75
+          ],
+          [
+            -12.25,
+            0.035,
+            -15.75
+          ],
+          [
+            -9.5,
+            0.035,
+            -15.75
+          ],
+          [
+            -9.5,
+            0.035,
+            -16.75
+          ],
+          [
+            -7.75,
+            0.035,
+            -16.75
+          ],
+          [
+            -7.75,
+            0.035,
+            -21
+          ],
+          [
+            -7.75,
+            0.035,
+            -27
+          ],
+          [
+            -6,
+            0.035,
+            -27
+          ],
+          [
+            -6,
+            0.035,
+            -26.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "LOCAL-R201A",
+        "label": "A-200 · R-201A approach",
+        "point": [
+          -2.5,
+          0.035,
+          4
+        ],
+        "station": "FE-202",
+        "distance": 4.199999999999999,
+        "path": [
+          [
+            -2.5,
+            0.035,
+            4
+          ],
+          [
+            -2.5,
+            0.035,
+            5.5
+          ],
+          [
+            -4.75,
+            0.035,
+            5.5
+          ],
+          [
+            -4.75,
+            0.035,
+            5.25
+          ],
+          [
+            -4.75,
+            0.035,
+            5.1000000000000005
+          ],
+          [
+            -4.8,
+            0.035,
+            5.1000000000000005
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "LOCAL-R201B",
+        "label": "A-200 · R-201B approach",
+        "point": [
+          2.5,
+          0.035,
+          -4
+        ],
+        "station": "FE-201",
+        "distance": 36.1,
+        "path": [
+          [
+            2.5,
+            0.035,
+            -4
+          ],
+          [
+            3,
+            0.035,
+            -4
+          ],
+          [
+            3,
+            0.035,
+            -6.75
+          ],
+          [
+            -2.25,
+            0.035,
+            -6.75
+          ],
+          [
+            -2.328125,
+            0.035,
+            -6.75
+          ],
+          [
+            -4.75,
+            0.035,
+            -6.75
+          ],
+          [
+            -4.75,
+            0.035,
+            -12
+          ],
+          [
+            -4.75,
+            0.035,
+            -12.5
+          ],
+          [
+            -6.25,
+            0.035,
+            -12.5
+          ],
+          [
+            -7.75,
+            0.035,
+            -12.5
+          ],
+          [
+            -7.75,
+            0.035,
+            -16.75
+          ],
+          [
+            -7.75,
+            0.035,
+            -21
+          ],
+          [
+            -7.75,
+            0.035,
+            -27
+          ],
+          [
+            -6,
+            0.035,
+            -27
+          ],
+          [
+            -6,
+            0.035,
+            -26.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "LOCAL-R201C",
+        "label": "A-200 · R-201C approach",
+        "point": [
+          -2.5,
+          0.035,
+          -12
+        ],
+        "station": "FE-201",
+        "distance": 22.1,
+        "path": [
+          [
+            -2.5,
+            0.035,
+            -12
+          ],
+          [
+            -4.75,
+            0.035,
+            -12
+          ],
+          [
+            -4.75,
+            0.035,
+            -12.5
+          ],
+          [
+            -6.25,
+            0.035,
+            -12.5
+          ],
+          [
+            -7.75,
+            0.035,
+            -12.5
+          ],
+          [
+            -7.75,
+            0.035,
+            -16.75
+          ],
+          [
+            -7.75,
+            0.035,
+            -21
+          ],
+          [
+            -7.75,
+            0.035,
+            -27
+          ],
+          [
+            -6,
+            0.035,
+            -27
+          ],
+          [
+            -6,
+            0.035,
+            -26.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "LOCAL-R201D",
+        "label": "A-200 · R-201D approach",
+        "point": [
+          3,
+          0.035,
+          -12.5
+        ],
+        "station": "FE-201",
+        "distance": 30.1,
+        "path": [
+          [
+            3,
+            0.035,
+            -12.5
+          ],
+          [
+            3,
+            0.035,
+            -11
+          ],
+          [
+            -0.5,
+            0.035,
+            -11
+          ],
+          [
+            -2.5,
+            0.035,
+            -11
+          ],
+          [
+            -2.5,
+            0.035,
+            -12
+          ],
+          [
+            -4.75,
+            0.035,
+            -12
+          ],
+          [
+            -4.75,
+            0.035,
+            -12.5
+          ],
+          [
+            -6.25,
+            0.035,
+            -12.5
+          ],
+          [
+            -7.75,
+            0.035,
+            -12.5
+          ],
+          [
+            -7.75,
+            0.035,
+            -16.75
+          ],
+          [
+            -7.75,
+            0.035,
+            -21
+          ],
+          [
+            -7.75,
+            0.035,
+            -27
+          ],
+          [
+            -6,
+            0.035,
+            -27
+          ],
+          [
+            -6,
+            0.035,
+            -26.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "LOCAL-DOSE201AB",
+        "label": "A-200 · A/B dosing frontage approach",
+        "point": [
+          -2.25,
+          0.035,
+          -7.5
+        ],
+        "station": "FE-201",
+        "distance": 28.35,
+        "path": [
+          [
+            -2.25,
+            0.035,
+            -7.5
+          ],
+          [
+            -2.25,
+            0.035,
+            -6.75
+          ],
+          [
+            -2.328125,
+            0.035,
+            -6.75
+          ],
+          [
+            -4.75,
+            0.035,
+            -6.75
+          ],
+          [
+            -4.75,
+            0.035,
+            -12
+          ],
+          [
+            -4.75,
+            0.035,
+            -12.5
+          ],
+          [
+            -6.25,
+            0.035,
+            -12.5
+          ],
+          [
+            -7.75,
+            0.035,
+            -12.5
+          ],
+          [
+            -7.75,
+            0.035,
+            -16.75
+          ],
+          [
+            -7.75,
+            0.035,
+            -21
+          ],
+          [
+            -7.75,
+            0.035,
+            -27
+          ],
+          [
+            -6,
+            0.035,
+            -27
+          ],
+          [
+            -6,
+            0.035,
+            -26.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "LOCAL-DOSE201CD",
+        "label": "A-200 · C/D dosing frontage approach",
+        "point": [
+          -2.25,
+          0.035,
+          -23.5
+        ],
+        "station": "FE-201",
+        "distance": 35.85,
+        "path": [
+          [
+            -2.25,
+            0.035,
+            -23.5
+          ],
+          [
+            -2.25,
+            0.035,
+            -24.5
+          ],
+          [
+            -6.5,
+            0.035,
+            -24.5
+          ],
+          [
+            -6.5,
+            0.035,
+            -17.5
+          ],
+          [
+            -6,
+            0.035,
+            -17.5
+          ],
+          [
+            -6,
+            0.035,
+            -15.5
+          ],
+          [
+            -6.25,
+            0.035,
+            -15.5
+          ],
+          [
+            -6.25,
+            0.035,
+            -12.5
+          ],
+          [
+            -7.75,
+            0.035,
+            -12.5
+          ],
+          [
+            -7.75,
+            0.035,
+            -16.75
+          ],
+          [
+            -7.75,
+            0.035,
+            -21
+          ],
+          [
+            -7.75,
+            0.035,
+            -27
+          ],
+          [
+            -6,
+            0.035,
+            -27
+          ],
+          [
+            -6,
+            0.035,
+            -26.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "LOCAL-T201",
+        "label": "A-200 · T-201 approach",
+        "point": [
+          -10.75,
+          0.035,
+          0
+        ],
+        "station": "FE-201",
+        "distance": 35.35,
+        "path": [
+          [
+            -10.75,
+            0.035,
+            0
+          ],
+          [
+            -10.75,
+            0.035,
+            -4.367647
+          ],
+          [
+            -10.75,
+            0.035,
+            -6.75
+          ],
+          [
+            -10.75,
+            0.035,
+            -8.25
+          ],
+          [
+            -12.5,
+            0.035,
+            -8.25
+          ],
+          [
+            -12.5,
+            0.035,
+            -10.75
+          ],
+          [
+            -12,
+            0.035,
+            -10.75
+          ],
+          [
+            -12,
+            0.035,
+            -12.5
+          ],
+          [
+            -7.75,
+            0.035,
+            -12.5
+          ],
+          [
+            -7.75,
+            0.035,
+            -16.75
+          ],
+          [
+            -7.75,
+            0.035,
+            -21
+          ],
+          [
+            -7.75,
+            0.035,
+            -27
+          ],
+          [
+            -6,
+            0.035,
+            -27
+          ],
+          [
+            -6,
+            0.035,
+            -26.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "LOCAL-T202",
+        "label": "A-200 · T-202 approach",
+        "point": [
+          -10.5,
+          0.035,
+          -6.75
+        ],
+        "station": "FE-201",
+        "distance": 28.85,
+        "path": [
+          [
+            -10.5,
+            0.035,
+            -6.75
+          ],
+          [
+            -10.75,
+            0.035,
+            -6.75
+          ],
+          [
+            -10.75,
+            0.035,
+            -8.25
+          ],
+          [
+            -12.5,
+            0.035,
+            -8.25
+          ],
+          [
+            -12.5,
+            0.035,
+            -10.75
+          ],
+          [
+            -12,
+            0.035,
+            -10.75
+          ],
+          [
+            -12,
+            0.035,
+            -12.5
+          ],
+          [
+            -7.75,
+            0.035,
+            -12.5
+          ],
+          [
+            -7.75,
+            0.035,
+            -16.75
+          ],
+          [
+            -7.75,
+            0.035,
+            -21
+          ],
+          [
+            -7.75,
+            0.035,
+            -27
+          ],
+          [
+            -6,
+            0.035,
+            -27
+          ],
+          [
+            -6,
+            0.035,
+            -26.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "LOCAL-T301",
+        "label": "A-300 · T-301 approach",
+        "point": [
+          10.75,
+          0.035,
+          -6.75
+        ],
+        "station": "FE-1002",
+        "distance": 34.6,
+        "path": [
+          [
+            10.75,
+            0.035,
+            -6.75
+          ],
+          [
+            10.75,
+            0.035,
+            -6.5
+          ],
+          [
+            14,
+            0.035,
+            -6.5
+          ],
+          [
+            14,
+            0.035,
+            -13.791667
+          ],
+          [
+            14,
+            0.035,
+            -15.25
+          ],
+          [
+            35,
+            0.035,
+            -15.25
+          ],
+          [
+            35,
+            0.035,
+            -14
+          ],
+          [
+            35,
+            0.035,
+            -13.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "LOCAL-T303",
+        "label": "A-300 · T-303 approach",
+        "point": [
+          10.75,
+          0.035,
+          0
+        ],
+        "station": "FE-1002",
+        "distance": 44.35,
+        "path": [
+          [
+            10.75,
+            0.035,
+            0
+          ],
+          [
+            10.75,
+            0.035,
+            -2.5
+          ],
+          [
+            12.5,
+            0.035,
+            -2.5
+          ],
+          [
+            12.5,
+            0.035,
+            -5.5
+          ],
+          [
+            10.75,
+            0.035,
+            -5.5
+          ],
+          [
+            10.75,
+            0.035,
+            -6.5
+          ],
+          [
+            14,
+            0.035,
+            -6.5
+          ],
+          [
+            14,
+            0.035,
+            -13.791667
+          ],
+          [
+            14,
+            0.035,
+            -15.25
+          ],
+          [
+            35,
+            0.035,
+            -15.25
+          ],
+          [
+            35,
+            0.035,
+            -14
+          ],
+          [
+            35,
+            0.035,
+            -13.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "LOCAL-T305",
+        "label": "A-300 · T-305 approach",
+        "point": [
+          10.75,
+          0.035,
+          6
+        ],
+        "station": "FE-1002",
+        "distance": 50.85,
+        "path": [
+          [
+            10.75,
+            0.035,
+            6
+          ],
+          [
+            10.5,
+            0.035,
+            6
+          ],
+          [
+            10.5,
+            0.035,
+            4.5
+          ],
+          [
+            10.75,
+            0.035,
+            4.5
+          ],
+          [
+            10.75,
+            0.035,
+            0
+          ],
+          [
+            10.75,
+            0.035,
+            -2.5
+          ],
+          [
+            12.5,
+            0.035,
+            -2.5
+          ],
+          [
+            12.5,
+            0.035,
+            -5.5
+          ],
+          [
+            10.75,
+            0.035,
+            -5.5
+          ],
+          [
+            10.75,
+            0.035,
+            -6.5
+          ],
+          [
+            14,
+            0.035,
+            -6.5
+          ],
+          [
+            14,
+            0.035,
+            -13.791667
+          ],
+          [
+            14,
+            0.035,
+            -15.25
+          ],
+          [
+            35,
+            0.035,
+            -15.25
+          ],
+          [
+            35,
+            0.035,
+            -14
+          ],
+          [
+            35,
+            0.035,
+            -13.9
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "LOCAL-T302",
+        "label": "A-300 · T-302 approach",
+        "point": [
+          10.75,
+          0.035,
+          9.75
+        ],
+        "station": "FE-301",
+        "distance": 17.799999999999997,
+        "path": [
+          [
+            10.75,
+            0.035,
+            9.75
+          ],
+          [
+            10.75,
+            0.035,
+            9.5
+          ],
+          [
+            11.75,
+            0.035,
+            9.5
+          ],
+          [
+            13,
+            0.035,
+            9.5
+          ],
+          [
+            13,
+            0.035,
+            17.25
+          ],
+          [
+            9.5,
+            0.035,
+            17.25
+          ],
+          [
+            9.5,
+            0.035,
+            14.5
+          ],
+          [
+            10.5,
+            0.035,
+            14.5
+          ],
+          [
+            10.5,
+            0.035,
+            14.3
+          ],
+          [
+            10.4,
+            0.035,
+            14.3
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "LOCAL-C301",
+        "label": "A-300 · C-301 approach",
+        "point": [
+          -1.75,
+          0.035,
+          6.25
+        ],
+        "station": "FE-202",
+        "distance": 4.199999999999999,
+        "path": [
+          [
+            -1.75,
+            0.035,
+            6.25
+          ],
+          [
+            -1.75,
+            0.035,
+            5.5
+          ],
+          [
+            -2.5,
+            0.035,
+            5.5
+          ],
+          [
+            -4.75,
+            0.035,
+            5.5
+          ],
+          [
+            -4.75,
+            0.035,
+            5.25
+          ],
+          [
+            -4.75,
+            0.035,
+            5.1000000000000005
+          ],
+          [
+            -4.8,
+            0.035,
+            5.1000000000000005
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      },
+      {
+        "id": "LOCAL-T304",
+        "label": "A-300 · T-304 approach",
+        "point": [
+          1,
+          0.035,
+          13.5
+        ],
+        "station": "FE-301",
+        "distance": 16.299999999999997,
+        "path": [
+          [
+            1,
+            0.035,
+            13.5
+          ],
+          [
+            1,
+            0.035,
+            17.25
+          ],
+          [
+            7.5,
+            0.035,
+            17.25
+          ],
+          [
+            9.5,
+            0.035,
+            17.25
+          ],
+          [
+            9.5,
+            0.035,
+            14.5
+          ],
+          [
+            10.5,
+            0.035,
+            14.5
+          ],
+          [
+            10.5,
+            0.035,
+            14.3
+          ],
+          [
+            10.4,
+            0.035,
+            14.3
+          ]
+        ],
+        "status": "Shortest modelled route · agent / rating unverified",
+        "codeCoverageVerified": false
+      }
+    ],
+    "connected": 56,
+    "total": 56,
+    "codeCoverageVerified": false,
+    "method": "Exact connected centreline graph on proposed 1.2 m clear walkways with 2.3 m headroom. Actual component envelopes, insulation and containment are checked independently of display. Designated vehicle crossings are excluded from emergency route ranking pending an approved traffic plan. Geometric distances do not establish agent suitability, extinguisher ratings, evacuation or code coverage."
+  }
+}

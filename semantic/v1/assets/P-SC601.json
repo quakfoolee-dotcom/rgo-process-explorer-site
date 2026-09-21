@@ -1,0 +1,32 @@
+{
+  "assetId": "P-SC601",
+  "name": "Scrubber-liquor recirculation pump",
+  "assetClassId": "Pump",
+  "status": "proposed",
+  "identityStatus": "model-derived; tag qualification open",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-600",
+    "system": "A-600 drying process context",
+    "parentAsset": "SC-601"
+  },
+  "processFunction": "Scrubber-liquor recirculation pump",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null
+  },
+  "operatingEnvelope": null,
+  "processBasis": [],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Draft typical inlet 140-145 degC, outlet 80-90 degC and approximate product discharge 60-100 degC coexist with temperatures TBD. No operating or safety setpoint is selected.",
+    "Draft routes dryer output through F-601 to T-602; the model also has a direct DR-601 powder chute to T-602. Draft exhaust arrow calls for off-gas treatment, while its scrubber note mentions atmospheric discharge. Model retains an independent discharge boundary; neither a common treatment header nor permitted release is established.",
+    "Atomizer technology, evaporation duty, heating medium, gas flow/pressure budget, moisture target, capacities and materials remain unqualified. The model is aqueous; the draft scrubber solvent-vapor wording requires reconciliation and does not add a solvent-recovery system.",
+    "Air is a draft/model concept. Gas selection, GO thermal stability, dust explosibility, grounding, dryer/filter protection, pressure limits and interlocks remain open. Conditional oxygen monitoring for inert drying is not an installed protective system.",
+    "Sheet is Draft - Not for Use with revision XXX. Wash compatibility, powder isolation, filter-media servicing, scrubber-liquor chemistry, drain receivers and gas-admission procedures require approval. No common process/thermal drain or cleaning sequence is authorized."
+  ]
+}

@@ -1,0 +1,433 @@
+{
+  "assetId": "E-501",
+  "streams": [
+    {
+      "streamId": "S-500-COOLER",
+      "name": "cooler",
+      "source": "US-501",
+      "via": [],
+      "destination": "E-501",
+      "material": "Sonicated suspension",
+      "phase": "Liquid/solid suspension",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "operatingMode": "model process context; source routing conflict and sequence unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A500",
+          "title": "Sonication model routes and provisional three-cell arrangement",
+          "revision": "V145 / b278d4c293d2eb9f98b5f08d975215873bd755c9",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "sonication.js": "f0fffae28815c2549da659a1ddd45df6c22de89ac89d83ecf1f3d0148202c25e"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0500",
+          "sheetId": "FEED-PFD-0500",
+          "title": "Commercial Scale Sonication",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 5,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=5"
+        }
+      ],
+      "routeLabels": [
+        "US-501 outlet to cooler"
+      ]
+    },
+    {
+      "streamId": "S-500-RETURN",
+      "name": "return",
+      "source": "E-501",
+      "via": [],
+      "destination": "T-501",
+      "material": "Cooled suspension",
+      "phase": "Liquid/solid suspension",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "operatingMode": "model process context; source routing conflict and sequence unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A500",
+          "title": "Sonication model routes and provisional three-cell arrangement",
+          "revision": "V145 / b278d4c293d2eb9f98b5f08d975215873bd755c9",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "sonication.js": "f0fffae28815c2549da659a1ddd45df6c22de89ac89d83ecf1f3d0148202c25e"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0500",
+          "sheetId": "FEED-PFD-0500",
+          "title": "Commercial Scale Sonication",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 5,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=5"
+        }
+      ],
+      "routeLabels": [
+        "E-501 cooled return",
+        "T-501 cooled return nozzle"
+      ]
+    },
+    {
+      "streamId": "S-500-COOLING-SUPPLY",
+      "name": "cooling supply",
+      "source": "IF-A500-CWS",
+      "via": [],
+      "destination": "E-501",
+      "material": "Cooling utility; duty unqualified",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "operatingMode": "model process context; source routing conflict and sequence unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A500",
+          "title": "Sonication model routes and provisional three-cell arrangement",
+          "revision": "V145 / b278d4c293d2eb9f98b5f08d975215873bd755c9",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "sonication.js": "f0fffae28815c2549da659a1ddd45df6c22de89ac89d83ecf1f3d0148202c25e"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0500",
+          "sheetId": "FEED-PFD-0500",
+          "title": "Commercial Scale Sonication",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 5,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=5"
+        }
+      ],
+      "routeLabels": [
+        "A500 cooling supply interface",
+        "E-501 cooling supply"
+      ]
+    },
+    {
+      "streamId": "S-500-COOLING-RETURN",
+      "name": "cooling return",
+      "source": "E-501",
+      "via": [],
+      "destination": "IF-A500-CWR",
+      "material": "Cooling utility",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "operatingMode": "model process context; source routing conflict and sequence unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A500",
+          "title": "Sonication model routes and provisional three-cell arrangement",
+          "revision": "V145 / b278d4c293d2eb9f98b5f08d975215873bd755c9",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "sonication.js": "f0fffae28815c2549da659a1ddd45df6c22de89ac89d83ecf1f3d0148202c25e"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0500",
+          "sheetId": "FEED-PFD-0500",
+          "title": "Commercial Scale Sonication",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 5,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=5"
+        }
+      ],
+      "routeLabels": [
+        "E-501 cooling return",
+        "A500 cooling return interface"
+      ]
+    },
+    {
+      "streamId": "S-500-CIP-RETURN",
+      "name": "cip return",
+      "source": "E-501",
+      "via": [],
+      "destination": "IF-A500-CIP-RETURN",
+      "material": "Cleaning return; chemistry unqualified",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "operatingMode": "cleaning; product isolation unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A500",
+          "title": "Sonication model routes and provisional three-cell arrangement",
+          "revision": "V145 / b278d4c293d2eb9f98b5f08d975215873bd755c9",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "sonication.js": "f0fffae28815c2549da659a1ddd45df6c22de89ac89d83ecf1f3d0148202c25e"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0500",
+          "sheetId": "FEED-PFD-0500",
+          "title": "Commercial Scale Sonication",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 5,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=5"
+        }
+      ],
+      "routeLabels": [
+        "A500 CIP return takeoff",
+        "A500 CIP return interface"
+      ]
+    },
+    {
+      "streamId": "S-500-COOLER-DRAIN",
+      "name": "cooler drain",
+      "source": "E-501",
+      "via": [],
+      "destination": "IF-A500-DRAIN",
+      "material": "Cooler process drain",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "operatingMode": "draining; receiving conditions unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A500",
+          "title": "Sonication model routes and provisional three-cell arrangement",
+          "revision": "V145 / b278d4c293d2eb9f98b5f08d975215873bd755c9",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "sonication.js": "f0fffae28815c2549da659a1ddd45df6c22de89ac89d83ecf1f3d0148202c25e"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0500",
+          "sheetId": "FEED-PFD-0500",
+          "title": "Commercial Scale Sonication",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 5,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=5"
+        }
+      ],
+      "routeLabels": [
+        "XV-DR-E501 fall to collection"
+      ]
+    },
+    {
+      "streamId": "S-500-UTILITY-VENT",
+      "name": "utility vent",
+      "source": "E-501",
+      "via": [],
+      "destination": "IF-A500-UTILITY-VENT",
+      "material": "Cooling-utility vent / gas admission",
+      "phase": "Gas",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "operatingMode": "model process context; source routing conflict and sequence unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A500",
+          "title": "Sonication model routes and provisional three-cell arrangement",
+          "revision": "V145 / b278d4c293d2eb9f98b5f08d975215873bd755c9",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "sonication.js": "f0fffae28815c2549da659a1ddd45df6c22de89ac89d83ecf1f3d0148202c25e"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0500",
+          "sheetId": "FEED-PFD-0500",
+          "title": "Commercial Scale Sonication",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 5,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=5"
+        }
+      ],
+      "routeLabels": [
+        "E-501 utility vent outlet"
+      ]
+    },
+    {
+      "streamId": "S-500-UTILITY-DRAIN",
+      "name": "utility drain",
+      "source": "E-501",
+      "via": [],
+      "destination": "IF-A500-UTILITY-DRAIN",
+      "material": "Cooling-utility drain",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "operatingMode": "draining; receiving conditions unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A500",
+          "title": "Sonication model routes and provisional three-cell arrangement",
+          "revision": "V145 / b278d4c293d2eb9f98b5f08d975215873bd755c9",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "sonication.js": "f0fffae28815c2549da659a1ddd45df6c22de89ac89d83ecf1f3d0148202c25e"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-0500",
+          "sheetId": "FEED-PFD-0500",
+          "title": "Commercial Scale Sonication",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 5,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=5"
+        }
+      ],
+      "routeLabels": [
+        "E-501 utility drain fall"
+      ]
+    },
+    {
+      "streamId": "S-5000-E501-CW",
+      "name": "E-501 direct thermal service",
+      "source": "HD-5200",
+      "via": [],
+      "destination": "E-501",
+      "material": "Closed-loop cooling water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": {
+        "supplyRangeC": [
+          25,
+          30
+        ],
+        "returnRangeC": [
+          35,
+          40
+        ],
+        "status": "draft PFD range"
+      },
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "E-501"
+      ],
+      "operatingMode": "Direct primary circuit; consumer duty and allowable temperature unresolved",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    }
+  ]
+}

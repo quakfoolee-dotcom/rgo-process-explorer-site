@@ -1,0 +1,7 @@
+{
+  "assetId": "TK-CIP2001-W",
+  "bindingId": "GEOMETRY-TK-CIP2001-W",
+  "modelEquipmentId": 521,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

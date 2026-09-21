@@ -1,0 +1,90 @@
+{
+  "assetId": "R-141A",
+  "name": "Pre-G synthesis A",
+  "assetClassId": "Reactor",
+  "status": "listed",
+  "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-140",
+    "system": "Pre-G Synthesis",
+    "parentAsset": null
+  },
+  "processFunction": "Pre-G synthesis A",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": "Glass-lined carbon steel; glass-lined agitator and wetted internals"
+  },
+  "operatingEnvelope": {
+    "reactionTimeHours": 4.5,
+    "h2so4RatioKgPerKgGraphite": 18.4,
+    "k2s2o8RatioKgPerKgGraphite": 0.5,
+    "p2o5RatioKgPerKgGraphite": 0.5,
+    "reactionTemperatureC": 80,
+    "graphitePerBatchKg": "500 (batch sizes of PFD V5.1.1); 2.3 batches/day nominal, 3.0 design; two operating reactors plus one spare on the 9–10 h cycle of REP-040",
+    "worstCaseAdiabaticRiseK": "+54 K to ≈ 135 °C if the whole reactive inventory releases at the 80 °C hold (P₂O₅ hydration ≈ 400 MJ computable; persulfate oxidation 90–420 MJ unmeasured — calorimetry required, F-06); no vapour-pressure runaway, hazards are chemical (persulfate decomposition → O₂, Caro's acid)",
+    "p2o5DosingStrategy": "Dose P₂O₅ during heat-up so its 400 MJ supplies ≈ 45 % of the 887 MJ heat-up duty and halves heat-up time on the 95 °C loop (≈ 1 h)",
+    "transferTemperatureC": "Transfer hot (80 °C) to T-161 rather than cooling to 10–20 °C — deletes the R-141 cool-down and the chilled-water need; sensible heat 0.9 GJ is 14 % of the T-161 dilution heat",
+    "utilityBasis": "HWS 95 °C; cooling water 25–30 °C; chilled water 5–7 °C (A-5000) — CHW needed only for the cool-down leg this report removes"
+  },
+  "processBasis": [
+    {
+      "property": "area and equipment identity",
+      "value": {
+        "area": "A-140",
+        "tag": "R-141A"
+      },
+      "source": "FEED-PE-PFD-001 / FEED-PFD-0140",
+      "status": "draft PFD basis"
+    },
+    {
+      "property": "modeled baseline",
+      "value": "baseline FEED arrangement only",
+      "source": "MODEL-EARLY-PROCESS",
+      "status": "model-derived"
+    }
+  ],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Approved R-141A/B/C/D datasheets and working volumes are unavailable.",
+    "Reactor, charging and transfer materials and compatibility are unapproved.",
+    "Temperature, pressure, feed, agitation, relief and interlock details are unresolved.",
+    "Premix, K2S2O8 and P2O5 quantities, addition sequence and branch allocation are unresolved.",
+    "CH-141/CH-142 count, branch ownership, dust control and isolation require approved design.",
+    "FEED-PFD-0140 remains a draft basis and requires reconciliation with approved project documents."
+  ],
+  "identity": {
+    "quantity": "Two operating reactors plus one spare (DBM V2.0, rules C-05) vs A/B/C/D on the PFD / model vs '1 unit' in the Narrative"
+  },
+  "safeguards": {
+    "temperatureInterlockLadder": "82 / 85 / 88 / 90 °C (origin not stated)"
+  },
+  "dataLayer": {
+    "area": "A-140",
+    "source": "data/semantic/A-140",
+    "approvedRows": 13,
+    "heldRows": 0,
+    "pendingRows": 39,
+    "identityHold": null,
+    "applied": "2026-09-21",
+    "baseline": {
+      "design": {
+        "capacityM3": null,
+        "designPressure": null,
+        "designTemperature": null,
+        "materialOfConstruction": null
+      },
+      "operatingEnvelope": null,
+      "identity": null,
+      "safeguards": null
+    },
+    "baselineAbsent": [
+      "identity",
+      "safeguards"
+    ]
+  }
+}

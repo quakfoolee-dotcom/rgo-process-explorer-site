@@ -1,0 +1,7 @@
+{
+  "assetId": "R-1003",
+  "bindingId": "GEOMETRY-R-1003",
+  "modelEquipmentId": 128,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

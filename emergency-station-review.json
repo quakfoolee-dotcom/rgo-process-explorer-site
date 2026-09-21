@@ -1,0 +1,2903 @@
+{
+  "revision": "emergency-stations-91",
+  "configuration": "baseline",
+  "stations": 40,
+  "connectedApproaches": 40,
+  "clearStationReservations": 40,
+  "sampledPositions": 86,
+  "checkedRoutes": 2660,
+  "footprintsChecked": 1224,
+  "exposureCoverage": {
+    "exposures": [
+      {
+        "id": "LOCAL-R141A",
+        "label": "A-140 · R-141A approach",
+        "point": [
+          -29,
+          -11.5
+        ],
+        "area": "A-140",
+        "riskAssumption": "high",
+        "basis": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-140-03",
+          "checkedDistanceM": 0.5,
+          "originGapM": 0.25,
+          "finalGapM": 0.6999999999999993,
+          "completeDistanceM": 1.4499999999999993
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "LOCAL-R141B",
+        "label": "A-140 · R-141B approach",
+        "point": [
+          -25,
+          -11.5
+        ],
+        "area": "A-140",
+        "riskAssumption": "high",
+        "basis": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-140-03",
+          "checkedDistanceM": 4.5,
+          "originGapM": 0.25,
+          "finalGapM": 0.6999999999999993,
+          "completeDistanceM": 5.449999999999999
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "LOCAL-R141C",
+        "label": "A-140 · R-141C approach",
+        "point": [
+          -29,
+          -23
+        ],
+        "area": "A-140",
+        "riskAssumption": "high",
+        "basis": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-161",
+          "checkedDistanceM": 4.056818,
+          "originGapM": 0,
+          "finalGapM": 0.7000000000000028,
+          "completeDistanceM": 4.756818000000003
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "LOCAL-R141D",
+        "label": "A-140 · R-141D approach",
+        "point": [
+          -25,
+          -23
+        ],
+        "area": "A-140",
+        "riskAssumption": "high",
+        "basis": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-161",
+          "checkedDistanceM": 0.05681799999999981,
+          "originGapM": 0,
+          "finalGapM": 0.7000000000000028,
+          "completeDistanceM": 0.7568180000000027
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "LOCAL-T161",
+        "label": "A-160 · T-161 approach",
+        "point": [
+          -22.25,
+          -15
+        ],
+        "area": "A-160",
+        "riskAssumption": "high",
+        "basis": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-161",
+          "checkedDistanceM": 10.693182,
+          "originGapM": 0,
+          "finalGapM": 0.7000000000000028,
+          "completeDistanceM": 11.393182000000003
+        },
+        "status": "distance-gap",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "LOCAL-T162",
+        "label": "A-160 · T-162 approach",
+        "point": [
+          -22.25,
+          -20
+        ],
+        "area": "A-160",
+        "riskAssumption": "high",
+        "basis": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-161",
+          "checkedDistanceM": 5.693182,
+          "originGapM": 0,
+          "finalGapM": 0.7000000000000028,
+          "completeDistanceM": 6.393182000000003
+        },
+        "status": "distance-gap",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "LOCAL-T163",
+        "label": "A-160 · T-163 / P-165 service bay approach",
+        "point": [
+          -23.75,
+          -25
+        ],
+        "area": "A-160",
+        "riskAssumption": "high",
+        "basis": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-161",
+          "checkedDistanceM": 5.693182,
+          "originGapM": 0,
+          "finalGapM": 0.7000000000000028,
+          "completeDistanceM": 6.393182000000003
+        },
+        "status": "distance-gap",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "LOCAL-F161",
+        "label": "A-160 · F-161 approach",
+        "point": [
+          -10.75,
+          -21
+        ],
+        "area": "A-160",
+        "riskAssumption": "high",
+        "basis": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-160-12",
+          "checkedDistanceM": 1.5,
+          "originGapM": 0.25,
+          "finalGapM": 0.7000000000000028,
+          "completeDistanceM": 2.450000000000003
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "LOCAL-D164",
+        "label": "A-160 · D-164 approach",
+        "point": [
+          -12.25,
+          -15.75
+        ],
+        "area": "A-160",
+        "riskAssumption": "high",
+        "basis": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-160-01",
+          "checkedDistanceM": 1.75,
+          "originGapM": 0,
+          "finalGapM": 0.7000000000000011,
+          "completeDistanceM": 2.450000000000001
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "LOCAL-TR164",
+        "label": "A-160 · TR-164 approach",
+        "point": [
+          -12.5,
+          -17.25
+        ],
+        "area": "A-160",
+        "riskAssumption": "high",
+        "basis": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-160-01",
+          "checkedDistanceM": 0,
+          "originGapM": 0,
+          "finalGapM": 0.7000000000000011,
+          "completeDistanceM": 0.7000000000000011
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "LOCAL-R201A",
+        "label": "A-200 · R-201A approach",
+        "point": [
+          -2.5,
+          3.75
+        ],
+        "area": "A-200",
+        "riskAssumption": "high",
+        "basis": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-200-02",
+          "checkedDistanceM": 0,
+          "originGapM": 0.25,
+          "finalGapM": 0.6999999999999997,
+          "completeDistanceM": 0.9499999999999997
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "LOCAL-R201B",
+        "label": "A-200 · R-201B approach",
+        "point": [
+          2.5,
+          -4
+        ],
+        "area": "A-200",
+        "riskAssumption": "high",
+        "basis": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-200-16",
+          "checkedDistanceM": 3.25,
+          "originGapM": 0,
+          "finalGapM": 0.6999999999999993,
+          "completeDistanceM": 3.9499999999999993
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "LOCAL-R201C",
+        "label": "A-200 · R-201C approach",
+        "point": [
+          -2.5,
+          -12.5
+        ],
+        "area": "A-200",
+        "riskAssumption": "high",
+        "basis": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-200-04",
+          "checkedDistanceM": 3,
+          "originGapM": 0.5,
+          "finalGapM": 0.6999999999999993,
+          "completeDistanceM": 4.199999999999999
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "LOCAL-R201D",
+        "label": "A-200 · R-201D approach",
+        "point": [
+          2.5,
+          -12.5
+        ],
+        "area": "A-200",
+        "riskAssumption": "high",
+        "basis": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-202",
+          "checkedDistanceM": 1.3125,
+          "originGapM": 0.5,
+          "finalGapM": 0.6999999999999993,
+          "completeDistanceM": 2.5124999999999993
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "LOCAL-DOSE201AB",
+        "label": "A-200 · A/B dosing frontage approach",
+        "point": [
+          -2.5,
+          -7.5
+        ],
+        "area": "A-200",
+        "riskAssumption": "high",
+        "basis": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-200-07",
+          "checkedDistanceM": 0.828125,
+          "originGapM": 0.25,
+          "finalGapM": 0.6999999999999993,
+          "completeDistanceM": 1.7781249999999993
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "LOCAL-DOSE201CD",
+        "label": "A-200 · C/D dosing frontage approach",
+        "point": [
+          -2.5,
+          -23.5
+        ],
+        "area": "A-200",
+        "riskAssumption": "high",
+        "basis": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-200-08",
+          "checkedDistanceM": 1,
+          "originGapM": 0.25,
+          "finalGapM": 0.7000000000000028,
+          "completeDistanceM": 1.9500000000000028
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "LOCAL-T201",
+        "label": "A-200 · T-201 approach",
+        "point": [
+          -10.75,
+          0
+        ],
+        "area": "A-200",
+        "riskAssumption": "high",
+        "basis": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-201",
+          "checkedDistanceM": 0,
+          "originGapM": 0,
+          "finalGapM": 0.6999999999999993,
+          "completeDistanceM": 0.6999999999999993
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "LOCAL-T202",
+        "label": "A-200 · T-202 approach",
+        "point": [
+          -10.5,
+          -6.75
+        ],
+        "area": "A-200",
+        "riskAssumption": "high",
+        "basis": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-200-15",
+          "checkedDistanceM": 2.632353,
+          "originGapM": 0,
+          "finalGapM": 0.6999999999999993,
+          "completeDistanceM": 3.3323529999999995
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "LOCAL-T301",
+        "label": "A-300 · T-301 approach",
+        "point": [
+          10.75,
+          -6.75
+        ],
+        "area": "A-300",
+        "riskAssumption": "high",
+        "basis": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-300-17",
+          "checkedDistanceM": 3.5,
+          "originGapM": 0,
+          "finalGapM": 0.6999999999999993,
+          "completeDistanceM": 4.199999999999999
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "LOCAL-T303",
+        "label": "A-300 · T-303 approach",
+        "point": [
+          10.75,
+          0
+        ],
+        "area": "A-300",
+        "riskAssumption": "high",
+        "basis": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-301",
+          "checkedDistanceM": 4.5,
+          "originGapM": 0,
+          "finalGapM": 0.6999999999999993,
+          "completeDistanceM": 5.199999999999999
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "LOCAL-T305",
+        "label": "A-300 · T-305 approach",
+        "point": [
+          10.75,
+          6.75
+        ],
+        "area": "A-300",
+        "riskAssumption": "high",
+        "basis": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-301",
+          "checkedDistanceM": 2,
+          "originGapM": 0.75,
+          "finalGapM": 0.6999999999999993,
+          "completeDistanceM": 3.4499999999999993
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "LOCAL-T302",
+        "label": "A-300 · T-302 approach",
+        "point": [
+          10.75,
+          10.5
+        ],
+        "area": "A-300",
+        "riskAssumption": "high",
+        "basis": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-300-06",
+          "checkedDistanceM": 0.25,
+          "originGapM": 0.75,
+          "finalGapM": 0.6999999999999993,
+          "completeDistanceM": 1.6999999999999993
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "LOCAL-C301",
+        "label": "A-300 · C-301 approach",
+        "point": [
+          -1.75,
+          6.25
+        ],
+        "area": "A-300",
+        "riskAssumption": "high",
+        "basis": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-200-02",
+          "checkedDistanceM": 3,
+          "originGapM": 0,
+          "finalGapM": 0.6999999999999997,
+          "completeDistanceM": 3.6999999999999997
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "LOCAL-T304",
+        "label": "A-300 · T-304 approach",
+        "point": [
+          1,
+          13.5
+        ],
+        "area": "A-300",
+        "riskAssumption": "high",
+        "basis": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Equipment-side work approach; exposure task and SDS assessment pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-300-05",
+          "checkedDistanceM": 0,
+          "originGapM": 0,
+          "finalGapM": 0.6999999999999996,
+          "completeDistanceM": 0.6999999999999996
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "wastewater-0",
+        "label": "East frontage",
+        "point": [
+          57.75,
+          2.75
+        ],
+        "area": "A-1000",
+        "riskAssumption": "high",
+        "basis": "Sampled service approach; chemical task, exposure position and risk pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Sampled service approach; chemical task, exposure position and risk pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-1000-10",
+          "checkedDistanceM": 1.25,
+          "originGapM": 0,
+          "finalGapM": 0.7000000000000028,
+          "completeDistanceM": 1.9500000000000028
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "wastewater-2",
+        "label": "Treatment bays",
+        "point": [
+          35,
+          -15.25
+        ],
+        "area": "A-1000",
+        "riskAssumption": "high",
+        "basis": "Sampled service approach; chemical task, exposure position and risk pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Sampled service approach; chemical task, exposure position and risk pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-1000-11",
+          "checkedDistanceM": 1.25,
+          "originGapM": 0,
+          "finalGapM": 0.7000000000000028,
+          "completeDistanceM": 1.9500000000000028
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "wastewater-3",
+        "label": "West treatment bays · turn back",
+        "point": [
+          13.6,
+          -15.25
+        ],
+        "area": "A-1000",
+        "riskAssumption": "high",
+        "basis": "Sampled service approach; chemical task, exposure position and risk pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Sampled service approach; chemical task, exposure position and risk pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-1000-13",
+          "checkedDistanceM": 1.9583329999999997,
+          "originGapM": 0.09999999999999964,
+          "finalGapM": 0.6999999999999993,
+          "completeDistanceM": 2.7583329999999986
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "washing-0",
+        "label": "Rear module aisle",
+        "point": [
+          25,
+          17.3
+        ],
+        "area": "A-400",
+        "riskAssumption": "high",
+        "basis": "Sampled service approach; chemical task, exposure position and risk pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Sampled service approach; chemical task, exposure position and risk pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-400-09",
+          "checkedDistanceM": 1,
+          "originGapM": 0.05000000000000071,
+          "finalGapM": 0.7000000000000028,
+          "completeDistanceM": 1.7500000000000036
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "washing-4",
+        "label": "Front service junction · alternate clear viewpoint",
+        "point": [
+          15,
+          28.75
+        ],
+        "area": "A-400",
+        "riskAssumption": "high",
+        "basis": "Sampled service approach; chemical task, exposure position and risk pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Sampled service approach; chemical task, exposure position and risk pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-400-14",
+          "checkedDistanceM": 2,
+          "originGapM": 0,
+          "finalGapM": 0.7000000000000028,
+          "completeDistanceM": 2.700000000000003
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "washing-5",
+        "label": "Washing equipment frontage · alternate clear viewpoint",
+        "point": [
+          25.25,
+          28.75
+        ],
+        "area": "A-400",
+        "riskAssumption": "high",
+        "basis": "Sampled service approach; chemical task, exposure position and risk pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Sampled service approach; chemical task, exposure position and risk pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-400-18",
+          "checkedDistanceM": 3.75,
+          "originGapM": 0,
+          "finalGapM": 0.7000000000000028,
+          "completeDistanceM": 4.450000000000003
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "reclaimed-7",
+        "label": "CIP / concentrate approach",
+        "point": [
+          102.25,
+          -26.5
+        ],
+        "area": "A-2000",
+        "riskAssumption": "high",
+        "basis": "Sampled service approach; chemical task, exposure position and risk pending",
+        "exposureVerified": false,
+        "elevationM": 0,
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "work": "Sampled service approach; chemical task, exposure position and risk pending",
+        "material": "Confirm SDS and concentration",
+        "nearest": {
+          "tag": "ES-2000",
+          "checkedDistanceM": 3.5,
+          "originGapM": 0,
+          "finalGapM": 0.7000000000000028,
+          "completeDistanceM": 4.200000000000003
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-101-TRANSFER",
+        "area": "A-100",
+        "label": "A-100 · Acid transfer / disconnection",
+        "point": [
+          -41,
+          -11.5
+        ],
+        "elevationM": 0,
+        "material": "Sulfuric acid / premix",
+        "work": "Transfer connection, isolation and disconnection",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "nearest": {
+          "tag": "ES-102",
+          "checkedDistanceM": 0,
+          "originGapM": 0,
+          "finalGapM": 0.7000000000000028,
+          "completeDistanceM": 0.7000000000000028
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-501-SAMPLE",
+        "area": "A-500",
+        "label": "A-500 · T-501 sampling approach",
+        "point": [
+          31,
+          13.25
+        ],
+        "elevationM": 0,
+        "material": "Washed GO suspension / cleaning residue",
+        "work": "Sampling and isolated cleaning; confirm residue and cleaning agents",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "nearest": null,
+        "status": "access-gap",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-501-SERVICE",
+        "area": "A-500",
+        "label": "A-500 · US-501 cleaning / service",
+        "point": [
+          38,
+          13.25
+        ],
+        "elevationM": 0,
+        "material": "GO suspension / cleaning residue",
+        "work": "Isolated cell opening and maintenance",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "nearest": null,
+        "status": "access-gap",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-601-FEED",
+        "area": "A-600",
+        "label": "A-600 · T-601 feed-side work",
+        "point": [
+          47,
+          16.5
+        ],
+        "elevationM": 0,
+        "material": "Aqueous GO suspension",
+        "work": "Feed connection, sampling and isolated tank service",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "nearest": {
+          "tag": "ES-602",
+          "checkedDistanceM": 0.8846150000000002,
+          "originGapM": 0,
+          "finalGapM": 0.7000000000000028,
+          "completeDistanceM": 1.584615000000003
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-601-PUMP",
+        "area": "A-600",
+        "label": "A-600 · P-601 feed / recycle service",
+        "point": [
+          53.75,
+          16.5
+        ],
+        "elevationM": 0,
+        "material": "Aqueous GO suspension",
+        "work": "Isolated pump opening and feed/recycle connections",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "nearest": {
+          "tag": "ES-601",
+          "checkedDistanceM": 0,
+          "originGapM": 0,
+          "finalGapM": 0.7000000000000028,
+          "completeDistanceM": 0.7000000000000028
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-602-TRANSFER",
+        "area": "A-600",
+        "label": "A-600 · T-602 powder-transfer service",
+        "point": [
+          62,
+          13.25
+        ],
+        "elevationM": 0,
+        "material": "Dry GO / cleaning residue",
+        "work": "Isolated receiver and transfer maintenance",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "nearest": null,
+        "status": "access-gap",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-600-WASH",
+        "area": "A-600",
+        "label": "A-600 · Wash return / collection",
+        "point": [
+          74.25,
+          18.5
+        ],
+        "elevationM": 0,
+        "material": "Aqueous cleaning effluent",
+        "work": "Closed wash collection and disconnection; no solvent assumed",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "nearest": {
+          "tag": "ES-603",
+          "checkedDistanceM": 1.75,
+          "originGapM": 0,
+          "finalGapM": 0.7000000000000028,
+          "completeDistanceM": 2.450000000000003
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-701-FEED",
+        "area": "A-700",
+        "label": "A-700 · Feed equipment grade service",
+        "point": [
+          62,
+          27
+        ],
+        "elevationM": 0,
+        "material": "Dry GO / deposits",
+        "work": "Isolated feed equipment maintenance; elevated feeder work assessed separately",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "nearest": {
+          "tag": "ES-701",
+          "checkedDistanceM": 0,
+          "originGapM": 0,
+          "finalGapM": 0.7000000000000028,
+          "completeDistanceM": 0.7000000000000028
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-702-TRANSFER",
+        "area": "A-700",
+        "label": "A-700 · T-702 product-transfer service",
+        "point": [
+          86.5,
+          26.5
+        ],
+        "elevationM": 0,
+        "material": "rGO powder / deposits",
+        "work": "Isolated collection and transfer maintenance",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "nearest": null,
+        "status": "access-gap",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-701-OFFGAS",
+        "area": "A-700",
+        "label": "A-700 · Off-gas equipment service",
+        "point": [
+          83,
+          22
+        ],
+        "elevationM": 0,
+        "material": "Off-gas condensate / deposits",
+        "work": "Isolated cooler and knock-out maintenance; chemistry assessment pending",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "nearest": null,
+        "status": "access-gap",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-801-FEED",
+        "area": "A-800",
+        "label": "A-800 · RV-801 lower feed service",
+        "point": [
+          93.75,
+          32
+        ],
+        "elevationM": 0,
+        "material": "rGO / KBH4 mixture",
+        "work": "Isolated lower feed equipment maintenance",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "specialHold": "KBH4: qualify supplier-specific decontamination and prevent runoff reaching dry reagent or reactive spill retention.",
+        "nearest": {
+          "tag": "ES-801",
+          "checkedDistanceM": 0,
+          "originGapM": 0,
+          "finalGapM": 0.6999999999999886,
+          "completeDistanceM": 0.6999999999999886
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-801-PRODUCT",
+        "area": "A-800",
+        "label": "A-800 · PY-801 discharge service",
+        "point": [
+          111.5,
+          31.75
+        ],
+        "elevationM": 0,
+        "material": "Doped product / residual reagent",
+        "work": "Isolated discharge and product-transfer work",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "nearest": {
+          "tag": "ES-802",
+          "checkedDistanceM": 24.25,
+          "originGapM": 0,
+          "finalGapM": 0.6999999999999886,
+          "completeDistanceM": 24.94999999999999
+        },
+        "status": "distance-gap",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-801-OFFGAS",
+        "area": "A-800",
+        "label": "A-800 · Off-gas maintenance approach",
+        "point": [
+          107.75,
+          37.25
+        ],
+        "elevationM": 0,
+        "material": "Off-gas deposits / residual reagent",
+        "work": "Isolated cooler and fan service; assess residual reactivity",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "nearest": {
+          "tag": "ES-802",
+          "checkedDistanceM": 0,
+          "originGapM": 0,
+          "finalGapM": 0.6999999999999886,
+          "completeDistanceM": 0.6999999999999886
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-2001-CIP",
+        "area": "A-2000",
+        "label": "A-2000 · CIP-2001 chemical-service approach",
+        "point": [
+          93.75,
+          -17.5
+        ],
+        "elevationM": 0,
+        "material": "Acid / alkaline CIP chemicals",
+        "work": "Cleaning connection approach; final hose handling and connection reach require coordinated design",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "nearest": {
+          "tag": "ES-2002",
+          "checkedDistanceM": 0.5,
+          "originGapM": 0,
+          "finalGapM": 0.6999999999999886,
+          "completeDistanceM": 1.1999999999999886
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-2001-WASTE",
+        "area": "A-2000",
+        "label": "A-2000 · Spent-CIP transfer",
+        "point": [
+          93.25,
+          -25
+        ],
+        "elevationM": 0,
+        "material": "Spent acid / alkaline cleaning liquor",
+        "work": "Waste transfer and isolated connection service",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "nearest": {
+          "tag": "ES-2001",
+          "checkedDistanceM": 0.25,
+          "originGapM": 0,
+          "finalGapM": 0.7000000000000028,
+          "completeDistanceM": 0.9500000000000028
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-2001-DOSE",
+        "area": "A-2000",
+        "label": "A-2000 · Antiscalant dosing service",
+        "point": [
+          86,
+          -22
+        ],
+        "elevationM": 0,
+        "material": "Antiscalant",
+        "work": "Container/dosing service; supplier SDS and concentration pending",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "nearest": null,
+        "status": "access-gap",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-2001-CEB",
+        "area": "A-2000",
+        "label": "A-2000 · UF chemical-backwash interface",
+        "point": [
+          80.75,
+          -26
+        ],
+        "elevationM": 0,
+        "material": "Vendor-selected CEB chemical",
+        "work": "Blinded chemical-enhanced backwash connection; chemical selection pending",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "nearest": null,
+        "status": "access-gap",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-2001-RO",
+        "area": "A-2000",
+        "label": "A-2000 · RO cleaning / membrane service",
+        "point": [
+          87,
+          -12
+        ],
+        "elevationM": 0,
+        "material": "Residual CIP liquor",
+        "work": "Isolated membrane and cleaning manifold service",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "nearest": null,
+        "status": "access-gap",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-1001-NAOH",
+        "area": "A-1000",
+        "label": "A-1000 · NaOH dosing service",
+        "point": [
+          20.25,
+          -20
+        ],
+        "elevationM": 0,
+        "material": "NaOH",
+        "work": "Chemical dosing connection and isolated pump service",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "nearest": {
+          "tag": "ES-1001",
+          "checkedDistanceM": 0,
+          "originGapM": 0,
+          "finalGapM": 0.7000000000000028,
+          "completeDistanceM": 0.7000000000000028
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-1002-LIME",
+        "area": "A-1000",
+        "label": "A-1000 · Lime-slurry dosing service",
+        "point": [
+          28.75,
+          -20
+        ],
+        "elevationM": 0,
+        "material": "Lime slurry",
+        "work": "Chemical dosing and isolated pump service",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "nearest": {
+          "tag": "ES-1002",
+          "checkedDistanceM": 0,
+          "originGapM": 0,
+          "finalGapM": 0.7000000000000028,
+          "completeDistanceM": 0.7000000000000028
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-1003-BARIUM",
+        "area": "A-1000",
+        "label": "A-1000 · Conditional BaCl2 dosing",
+        "point": [
+          36.5,
+          -20
+        ],
+        "elevationM": 0,
+        "material": "BaCl2, if adopted",
+        "work": "Conditional chemical dosing connection and maintenance",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "nearest": {
+          "tag": "ES-1003",
+          "checkedDistanceM": 0,
+          "originGapM": 0,
+          "finalGapM": 0.7000000000000028,
+          "completeDistanceM": 0.7000000000000028
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-1004-HCL",
+        "area": "A-1000",
+        "label": "A-1000 · HCl dosing service",
+        "point": [
+          42.5,
+          -20
+        ],
+        "elevationM": 0,
+        "material": "HCl",
+        "work": "Chemical dosing connection and isolated pump service",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "nearest": null,
+        "status": "access-gap",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-1005-FLOC",
+        "area": "A-1000",
+        "label": "A-1000 · Flocculant preparation service",
+        "point": [
+          49.25,
+          -24
+        ],
+        "elevationM": 0,
+        "material": "Flocculant",
+        "work": "Preparation / container change; supplier SDS pending",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "nearest": {
+          "tag": "ES-1004",
+          "checkedDistanceM": 0.75,
+          "originGapM": 0,
+          "finalGapM": 0.7000000000000028,
+          "completeDistanceM": 1.4500000000000028
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-201-UPPER",
+        "area": "A-200",
+        "label": "A-200 · Upper reactor work",
+        "point": [
+          -2.5,
+          -0.5
+        ],
+        "elevationM": 5,
+        "material": "Reactive acids / oxidizer",
+        "work": "Charging, inspection or maintenance above grade",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "accessHold": "Confirm actual platform work position and same-level emergency washing provision; grade route not credited.",
+        "nearest": null,
+        "status": "elevated-gap",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-166-PLATFORM",
+        "area": "A-160",
+        "label": "A-160 · Filter upper work",
+        "point": [
+          -14.5,
+          -17
+        ],
+        "elevationM": 4,
+        "material": "Acidic slurry / cleaning residue",
+        "work": "Filter opening and maintenance above grade",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "accessHold": "Platform and task elevation require survey; grade station provides no elevated coverage credit.",
+        "nearest": null,
+        "status": "elevated-gap",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-601-ATOMIZER",
+        "area": "A-600",
+        "label": "A-600 · DR-601 atomizer work",
+        "point": [
+          58,
+          12
+        ],
+        "elevationM": 12.4,
+        "material": "GO feed / cleaning residue",
+        "work": "Isolated atomizer and chamber service",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "accessHold": "Equipment service elevation shown; standing platform and same-level washing provision require design.",
+        "nearest": null,
+        "status": "elevated-gap",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-601-FILTER",
+        "area": "A-600",
+        "label": "A-600 · F-601 filter opening",
+        "point": [
+          63.2,
+          12
+        ],
+        "elevationM": 9.4,
+        "material": "GO dust / cleaning residue",
+        "work": "Isolated filter opening and bag replacement",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "accessHold": "Equipment service elevation shown; confirm standing deck and same-level emergency access.",
+        "nearest": null,
+        "status": "elevated-gap",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-701-UPPER",
+        "area": "A-700",
+        "label": "A-700 · LK-701 / H-701 upper feed work",
+        "point": [
+          60.5,
+          25
+        ],
+        "elevationM": 7.15,
+        "material": "Dry GO / deposits",
+        "work": "Isolated lock and hopper maintenance",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "accessHold": "Elevated work position and local washing provision unresolved; do not project onto grade.",
+        "nearest": null,
+        "status": "elevated-gap",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-802-DOCK",
+        "area": "A-800",
+        "label": "A-800 · LK-802 reagent docking",
+        "point": [
+          92,
+          29.5
+        ],
+        "elevationM": 13.7,
+        "material": "KBH4",
+        "work": "Dry sealed reagent docking and connection maintenance",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "accessHold": "Docking interface elevation shown; operator position, platform and local combination station require coordinated design.",
+        "specialHold": "Supplier SDS and decontamination procedure required; keep station runoff away from dry KBH4.",
+        "nearest": null,
+        "status": "elevated-gap",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
+        "id": "EXP-802-FEEDER",
+        "area": "A-800",
+        "label": "A-800 · PL-801 feeder service",
+        "point": [
+          94.2,
+          29.5
+        ],
+        "elevationM": 7.08,
+        "material": "KBH4 / rGO mixture",
+        "work": "F-802 weighing feeder service from PL-801",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "accessHold": "Same-level station space, water and runoff design required; ground station is not credited.",
+        "nearest": null,
+        "status": "elevated-gap",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      }
+    ],
+    "total": 61,
+    "withinDistanceScreen": 41,
+    "areas": [
+      {
+        "area": "A-100",
+        "label": "Feed / chemical handling",
+        "remaining": "Complete unloading hose, container and maintenance task survey.",
+        "assessmentComplete": false,
+        "stations": 2,
+        "tasks": 1,
+        "withinDistanceScreen": 1,
+        "accessGaps": 0,
+        "distanceGaps": 0,
+        "elevatedGaps": 0,
+        "status": "assessment-incomplete"
+      },
+      {
+        "area": "A-140",
+        "label": "Pre-G",
+        "remaining": "Confirm reactor task positions, chemical quantities and elevated work.",
+        "assessmentComplete": false,
+        "stations": 2,
+        "tasks": 4,
+        "withinDistanceScreen": 4,
+        "accessGaps": 0,
+        "distanceGaps": 0,
+        "elevatedGaps": 0,
+        "status": "assessment-incomplete"
+      },
+      {
+        "area": "A-160",
+        "label": "Filtration / fixing",
+        "remaining": "Resolve three local distance gaps and upper filter access.",
+        "assessmentComplete": false,
+        "stations": 3,
+        "tasks": 7,
+        "withinDistanceScreen": 3,
+        "accessGaps": 0,
+        "distanceGaps": 3,
+        "elevatedGaps": 1,
+        "status": "assessment-incomplete"
+      },
+      {
+        "area": "A-200",
+        "label": "Oxidation",
+        "remaining": "Confirm dosing tasks, actual exposure positions and upper reactor access.",
+        "assessmentComplete": false,
+        "stations": 8,
+        "tasks": 9,
+        "withinDistanceScreen": 8,
+        "accessGaps": 0,
+        "distanceGaps": 0,
+        "elevatedGaps": 1,
+        "status": "assessment-incomplete"
+      },
+      {
+        "area": "A-300",
+        "label": "Quench / separation",
+        "remaining": "Confirm peroxide, HCl and separation task positions.",
+        "assessmentComplete": false,
+        "stations": 4,
+        "tasks": 6,
+        "withinDistanceScreen": 6,
+        "accessGaps": 0,
+        "distanceGaps": 0,
+        "elevatedGaps": 0,
+        "status": "assessment-incomplete"
+      },
+      {
+        "area": "A-400",
+        "label": "Washing",
+        "remaining": "Replace sampled viewpoints with final cleaning, sampling and membrane work positions.",
+        "assessmentComplete": false,
+        "stations": 4,
+        "tasks": 3,
+        "withinDistanceScreen": 3,
+        "accessGaps": 0,
+        "distanceGaps": 0,
+        "elevatedGaps": 0,
+        "status": "assessment-incomplete"
+      },
+      {
+        "area": "A-500",
+        "label": "Sonication",
+        "remaining": "Confirm cleaning agents, residue classification and operating reach.",
+        "assessmentComplete": false,
+        "stations": 0,
+        "tasks": 2,
+        "withinDistanceScreen": 0,
+        "accessGaps": 2,
+        "distanceGaps": 0,
+        "elevatedGaps": 0,
+        "status": "assessment-incomplete"
+      },
+      {
+        "area": "A-600",
+        "label": "Spray drying",
+        "remaining": "Confirm feed, powder, cleaning and elevated service exposures.",
+        "assessmentComplete": false,
+        "stations": 3,
+        "tasks": 6,
+        "withinDistanceScreen": 3,
+        "accessGaps": 1,
+        "distanceGaps": 0,
+        "elevatedGaps": 2,
+        "status": "assessment-incomplete"
+      },
+      {
+        "area": "A-700",
+        "label": "Furnace",
+        "remaining": "Confirm powder and condensate hazards; heat and oxygen deficiency need separate controls.",
+        "assessmentComplete": false,
+        "stations": 1,
+        "tasks": 4,
+        "withinDistanceScreen": 1,
+        "accessGaps": 2,
+        "distanceGaps": 0,
+        "elevatedGaps": 1,
+        "status": "assessment-incomplete"
+      },
+      {
+        "area": "A-800",
+        "label": "Doping",
+        "remaining": "Prioritize KBH4 handling, same-level access and reactive runoff separation.",
+        "assessmentComplete": false,
+        "stations": 2,
+        "tasks": 5,
+        "withinDistanceScreen": 2,
+        "accessGaps": 0,
+        "distanceGaps": 1,
+        "elevatedGaps": 2,
+        "status": "assessment-incomplete"
+      },
+      {
+        "area": "A-1000",
+        "label": "Wastewater",
+        "remaining": "Confirm chemical strengths, actual connections and vessel access.",
+        "assessmentComplete": false,
+        "stations": 7,
+        "tasks": 8,
+        "withinDistanceScreen": 7,
+        "accessGaps": 1,
+        "distanceGaps": 0,
+        "elevatedGaps": 0,
+        "status": "assessment-incomplete"
+      },
+      {
+        "area": "A-2000",
+        "label": "Reclaimed water / RO",
+        "remaining": "Confirm CIP, CEB, antiscalant and spent-cleaner tasks.",
+        "assessmentComplete": false,
+        "stations": 3,
+        "tasks": 6,
+        "withinDistanceScreen": 3,
+        "accessGaps": 3,
+        "distanceGaps": 0,
+        "elevatedGaps": 0,
+        "status": "assessment-incomplete"
+      },
+      {
+        "area": "A-3000",
+        "label": "Vent gas",
+        "remaining": "Assess scrubber chemical addition, sampling and maintenance exposures.",
+        "assessmentComplete": false,
+        "stations": 1,
+        "tasks": 0,
+        "withinDistanceScreen": 0,
+        "accessGaps": 0,
+        "distanceGaps": 0,
+        "elevatedGaps": 0,
+        "status": "assessment-incomplete"
+      },
+      {
+        "area": "A-4000",
+        "label": "Compressed air",
+        "remaining": "Assess condensate, treatment chemicals and maintenance tasks.",
+        "assessmentComplete": false,
+        "stations": 0,
+        "tasks": 0,
+        "withinDistanceScreen": 0,
+        "accessGaps": 0,
+        "distanceGaps": 0,
+        "elevatedGaps": 0,
+        "status": "assessment-incomplete"
+      },
+      {
+        "area": "A-5000",
+        "label": "Heating / cooling",
+        "remaining": "Assess thermal-fluid and treatment-chemical contact tasks.",
+        "assessmentComplete": false,
+        "stations": 0,
+        "tasks": 0,
+        "withinDistanceScreen": 0,
+        "accessGaps": 0,
+        "distanceGaps": 0,
+        "elevatedGaps": 0,
+        "status": "assessment-incomplete"
+      },
+      {
+        "area": "A-6000",
+        "label": "Argon",
+        "remaining": "Assess maintenance substances; oxygen-deficiency controls are separate.",
+        "assessmentComplete": false,
+        "stations": 0,
+        "tasks": 0,
+        "withinDistanceScreen": 0,
+        "accessGaps": 0,
+        "distanceGaps": 0,
+        "elevatedGaps": 0,
+        "status": "assessment-incomplete"
+      }
+    ],
+    "gradeTotal": 54,
+    "elevatedGaps": 7,
+    "accessGaps": 9,
+    "distanceGaps": 4,
+    "exposureRegisterApproved": false,
+    "elevatedPlatformsVerified": false,
+    "simultaneousCapacityVerified": false,
+    "complianceVerified": false
+  },
+  "additionalAccess": {
+    "revision": "emergency-access-91",
+    "segments": [
+      {
+        "id": "PW-ES-001",
+        "a": [
+          53.75,
+          14.5
+        ],
+        "b": [
+          53.75,
+          16.5
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-002",
+        "a": [
+          47,
+          14.5
+        ],
+        "b": [
+          53.75,
+          14.5
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-003",
+        "a": [
+          74.25,
+          17.75
+        ],
+        "b": [
+          74.25,
+          18.5
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-004",
+        "a": [
+          74.25,
+          17.75
+        ],
+        "b": [
+          75.25,
+          17.75
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-005",
+        "a": [
+          75.25,
+          16.5
+        ],
+        "b": [
+          75.25,
+          17.75
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-006",
+        "a": [
+          75.25,
+          16.5
+        ],
+        "b": [
+          78.25,
+          16.5
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-007",
+        "a": [
+          78.25,
+          7.5
+        ],
+        "b": [
+          78.25,
+          16.5
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-008",
+        "a": [
+          62,
+          27
+        ],
+        "b": [
+          62,
+          28.5
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-009",
+        "a": [
+          54.25,
+          28.5
+        ],
+        "b": [
+          62,
+          28.5
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-010",
+        "a": [
+          54.25,
+          28.5
+        ],
+        "b": [
+          54.25,
+          29.25
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-011",
+        "a": [
+          54,
+          29.25
+        ],
+        "b": [
+          54.25,
+          29.25
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-012",
+        "a": [
+          54,
+          29.25
+        ],
+        "b": [
+          54,
+          33.25
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-013",
+        "a": [
+          93.75,
+          -17.5
+        ],
+        "b": [
+          93.75,
+          -17
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-014",
+        "a": [
+          93.75,
+          32
+        ],
+        "b": [
+          93.75,
+          32.5
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-015",
+        "a": [
+          91.5,
+          32.5
+        ],
+        "b": [
+          93.75,
+          32.5
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-016",
+        "a": [
+          91.5,
+          32.5
+        ],
+        "b": [
+          91.5,
+          33.25
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-017",
+        "a": [
+          91.25,
+          33.25
+        ],
+        "b": [
+          91.5,
+          33.25
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-018",
+        "a": [
+          111.5,
+          31.75
+        ],
+        "b": [
+          119,
+          31.75
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-019",
+        "a": [
+          107.75,
+          32.75
+        ],
+        "b": [
+          107.75,
+          37.25
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-020",
+        "a": [
+          107.75,
+          32.75
+        ],
+        "b": [
+          119,
+          32.75
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-021",
+        "a": [
+          28.5,
+          -17
+        ],
+        "b": [
+          28.75,
+          -17
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-022",
+        "a": [
+          93.75,
+          -17
+        ],
+        "b": [
+          102.25,
+          -17
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-023",
+        "a": [
+          93.25,
+          -25.25
+        ],
+        "b": [
+          93.25,
+          -25
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-024",
+        "a": [
+          93.25,
+          -25.25
+        ],
+        "b": [
+          100,
+          -25.25
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-025",
+        "a": [
+          20.25,
+          -20
+        ],
+        "b": [
+          20.25,
+          -15.25
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-026",
+        "a": [
+          28.75,
+          -20
+        ],
+        "b": [
+          28.75,
+          -17
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-027",
+        "a": [
+          28.5,
+          -17
+        ],
+        "b": [
+          28.5,
+          -15.25
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-028",
+        "a": [
+          36.5,
+          -20
+        ],
+        "b": [
+          36.5,
+          -15.25
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-029",
+        "a": [
+          49.25,
+          -24.75
+        ],
+        "b": [
+          49.25,
+          -24
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-030",
+        "a": [
+          49.25,
+          -24.75
+        ],
+        "b": [
+          56,
+          -24.75
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-031",
+        "a": [
+          56,
+          -26
+        ],
+        "b": [
+          56,
+          -24.75
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      }
+    ],
+    "connections": [
+      {
+        "id": "EXP-101-TRANSFER",
+        "label": "A-100 · Acid transfer / disconnection",
+        "area": "A-100",
+        "point": [
+          -41,
+          -11.5
+        ],
+        "walkPoint": [
+          -41,
+          -11.5
+        ],
+        "linkLengthM": 0
+      },
+      {
+        "id": "EXP-501-SAMPLE",
+        "label": "A-500 · T-501 sampling approach",
+        "area": "A-500",
+        "point": [
+          31,
+          13.25
+        ],
+        "walkPoint": null
+      },
+      {
+        "id": "EXP-501-SERVICE",
+        "label": "A-500 · US-501 cleaning / service",
+        "area": "A-500",
+        "point": [
+          38,
+          13.25
+        ],
+        "walkPoint": null
+      },
+      {
+        "id": "EXP-601-FEED",
+        "label": "A-600 · T-601 feed-side work",
+        "area": "A-600",
+        "point": [
+          47,
+          16.5
+        ],
+        "walkPoint": [
+          47,
+          16.5
+        ],
+        "linkLengthM": 0
+      },
+      {
+        "id": "EXP-601-PUMP",
+        "label": "A-600 · P-601 feed / recycle service",
+        "area": "A-600",
+        "point": [
+          53.75,
+          16.5
+        ],
+        "walkPoint": [
+          53.75,
+          16.5
+        ],
+        "linkLengthM": 8.75
+      },
+      {
+        "id": "EXP-602-TRANSFER",
+        "label": "A-600 · T-602 powder-transfer service",
+        "area": "A-600",
+        "point": [
+          62,
+          13.25
+        ],
+        "walkPoint": null
+      },
+      {
+        "id": "EXP-600-WASH",
+        "label": "A-600 · Wash return / collection",
+        "area": "A-600",
+        "point": [
+          74.25,
+          18.5
+        ],
+        "walkPoint": [
+          74.25,
+          18.5
+        ],
+        "linkLengthM": 15
+      },
+      {
+        "id": "EXP-701-FEED",
+        "label": "A-700 · Feed equipment grade service",
+        "area": "A-700",
+        "point": [
+          62,
+          27
+        ],
+        "walkPoint": [
+          62,
+          27
+        ],
+        "linkLengthM": 14.25
+      },
+      {
+        "id": "EXP-702-TRANSFER",
+        "label": "A-700 · T-702 product-transfer service",
+        "area": "A-700",
+        "point": [
+          86.5,
+          26.5
+        ],
+        "walkPoint": null
+      },
+      {
+        "id": "EXP-701-OFFGAS",
+        "label": "A-700 · Off-gas equipment service",
+        "area": "A-700",
+        "point": [
+          83,
+          22
+        ],
+        "walkPoint": null
+      },
+      {
+        "id": "EXP-801-FEED",
+        "label": "A-800 · RV-801 lower feed service",
+        "area": "A-800",
+        "point": [
+          93.75,
+          32
+        ],
+        "walkPoint": [
+          93.75,
+          32
+        ],
+        "linkLengthM": 3.75
+      },
+      {
+        "id": "EXP-801-PRODUCT",
+        "label": "A-800 · PY-801 discharge service",
+        "area": "A-800",
+        "point": [
+          111.5,
+          31.75
+        ],
+        "walkPoint": [
+          111.5,
+          31.75
+        ],
+        "linkLengthM": 7.5
+      },
+      {
+        "id": "EXP-801-OFFGAS",
+        "label": "A-800 · Off-gas maintenance approach",
+        "area": "A-800",
+        "point": [
+          107.75,
+          37.25
+        ],
+        "walkPoint": [
+          107.75,
+          37.25
+        ],
+        "linkLengthM": 15.75
+      },
+      {
+        "id": "EXP-2001-CIP",
+        "label": "A-2000 · CIP-2001 chemical-service approach",
+        "area": "A-2000",
+        "point": [
+          93.75,
+          -17.5
+        ],
+        "walkPoint": [
+          93.75,
+          -17.5
+        ],
+        "linkLengthM": 9
+      },
+      {
+        "id": "EXP-2001-WASTE",
+        "label": "A-2000 · Spent-CIP transfer",
+        "area": "A-2000",
+        "point": [
+          93.25,
+          -25
+        ],
+        "walkPoint": [
+          93.25,
+          -25
+        ],
+        "linkLengthM": 7
+      },
+      {
+        "id": "EXP-2001-DOSE",
+        "label": "A-2000 · Antiscalant dosing service",
+        "area": "A-2000",
+        "point": [
+          86,
+          -22
+        ],
+        "walkPoint": null
+      },
+      {
+        "id": "EXP-2001-CEB",
+        "label": "A-2000 · UF chemical-backwash interface",
+        "area": "A-2000",
+        "point": [
+          80.75,
+          -26
+        ],
+        "walkPoint": null
+      },
+      {
+        "id": "EXP-2001-RO",
+        "label": "A-2000 · RO cleaning / membrane service",
+        "area": "A-2000",
+        "point": [
+          87,
+          -12
+        ],
+        "walkPoint": null
+      },
+      {
+        "id": "EXP-1001-NAOH",
+        "label": "A-1000 · NaOH dosing service",
+        "area": "A-1000",
+        "point": [
+          20.25,
+          -20
+        ],
+        "walkPoint": [
+          20.25,
+          -20
+        ],
+        "linkLengthM": 4.75
+      },
+      {
+        "id": "EXP-1002-LIME",
+        "label": "A-1000 · Lime-slurry dosing service",
+        "area": "A-1000",
+        "point": [
+          28.75,
+          -20
+        ],
+        "walkPoint": [
+          28.75,
+          -20
+        ],
+        "linkLengthM": 5
+      },
+      {
+        "id": "EXP-1003-BARIUM",
+        "label": "A-1000 · Conditional BaCl2 dosing",
+        "area": "A-1000",
+        "point": [
+          36.5,
+          -20
+        ],
+        "walkPoint": [
+          36.5,
+          -20
+        ],
+        "linkLengthM": 4.75
+      },
+      {
+        "id": "EXP-1004-HCL",
+        "label": "A-1000 · HCl dosing service",
+        "area": "A-1000",
+        "point": [
+          42.5,
+          -20
+        ],
+        "walkPoint": null
+      },
+      {
+        "id": "EXP-1005-FLOC",
+        "label": "A-1000 · Flocculant preparation service",
+        "area": "A-1000",
+        "point": [
+          49.25,
+          -24
+        ],
+        "walkPoint": [
+          49.25,
+          -24
+        ],
+        "linkLengthM": 8.75
+      }
+    ],
+    "holds": [
+      {
+        "id": "EXP-501-SAMPLE",
+        "label": "A-500 · T-501 sampling approach: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+      },
+      {
+        "id": "EXP-501-SERVICE",
+        "label": "A-500 · US-501 cleaning / service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+      },
+      {
+        "id": "EXP-602-TRANSFER",
+        "label": "A-600 · T-602 powder-transfer service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+      },
+      {
+        "id": "EXP-702-TRANSFER",
+        "label": "A-700 · T-702 product-transfer service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+      },
+      {
+        "id": "EXP-701-OFFGAS",
+        "label": "A-700 · Off-gas equipment service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+      },
+      {
+        "id": "EXP-2001-DOSE",
+        "label": "A-2000 · Antiscalant dosing service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+      },
+      {
+        "id": "EXP-2001-CEB",
+        "label": "A-2000 · UF chemical-backwash interface: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+      },
+      {
+        "id": "EXP-2001-RO",
+        "label": "A-2000 · RO cleaning / membrane service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+      },
+      {
+        "id": "EXP-1004-HCL",
+        "label": "A-1000 · HCl dosing service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+      },
+      {
+        "id": "EXP-201-UPPER",
+        "label": "A-200 · Upper reactor work: Confirm actual platform work position and same-level emergency washing provision; grade route not credited."
+      },
+      {
+        "id": "EXP-166-PLATFORM",
+        "label": "A-160 · Filter upper work: Platform and task elevation require survey; grade station provides no elevated coverage credit."
+      },
+      {
+        "id": "EXP-601-ATOMIZER",
+        "label": "A-600 · DR-601 atomizer work: Equipment service elevation shown; standing platform and same-level washing provision require design."
+      },
+      {
+        "id": "EXP-601-FILTER",
+        "label": "A-600 · F-601 filter opening: Equipment service elevation shown; confirm standing deck and same-level emergency access."
+      },
+      {
+        "id": "EXP-701-UPPER",
+        "label": "A-700 · LK-701 / H-701 upper feed work: Elevated work position and local washing provision unresolved; do not project onto grade."
+      },
+      {
+        "id": "EXP-802-DOCK",
+        "label": "A-800 · LK-802 reagent docking: Docking interface elevation shown; operator position, platform and local combination station require coordinated design."
+      },
+      {
+        "id": "EXP-802-FEEDER",
+        "label": "A-800 · PL-801 feeder service: Same-level station space, water and runoff design required; ground station is not credited."
+      }
+    ]
+  },
+  "locationFindings": [
+    {
+      "tag": "ES-101",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-141",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-161",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-201",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-301",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-401",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-2000",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-3000",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-160-01",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-200-02",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-140-03",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-200-04",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-300-05",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-300-06",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-200-07",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-200-08",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-400-09",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-1000-10",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-1000-11",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-160-12",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-1000-13",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-400-14",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-200-15",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-200-16",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-300-17",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-400-18",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-102",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-601",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-701",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-801",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-802",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-1001",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-1002",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-1003",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-2001",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-2002",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-1004",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-602",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-603",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-202",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    }
+  ],
+  "fireLocationsClear": true,
+  "vehicleRoutesChecked": 14,
+  "structuralConnections": true,
+  "complianceVerified": false
+}

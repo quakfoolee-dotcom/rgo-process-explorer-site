@@ -1,0 +1,2565 @@
+{
+  "assetId": "IF-A6000-EW-SOURCE",
+  "streams": [
+    {
+      "streamId": "S-6000-EW-ES101",
+      "name": "ES-101 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-101",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-101"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES141",
+      "name": "ES-141 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-141",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-141"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES161",
+      "name": "ES-161 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-161",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-161"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES201",
+      "name": "ES-201 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-201",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-201"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES301",
+      "name": "ES-301 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-301",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-301"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES401",
+      "name": "ES-401 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-401",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-401"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES2000",
+      "name": "ES-2000 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-2000",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-2000"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES3000",
+      "name": "ES-3000 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-3000",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-3000"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES16001",
+      "name": "ES-160-01 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-160-01",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-160-01"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES20002",
+      "name": "ES-200-02 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-200-02",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-200-02"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES14003",
+      "name": "ES-140-03 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-140-03",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-140-03"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES20004",
+      "name": "ES-200-04 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-200-04",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-200-04"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES30005",
+      "name": "ES-300-05 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-300-05",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-300-05"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES30006",
+      "name": "ES-300-06 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-300-06",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-300-06"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES20007",
+      "name": "ES-200-07 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-200-07",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-200-07"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES20008",
+      "name": "ES-200-08 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-200-08",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-200-08"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES40009",
+      "name": "ES-400-09 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-400-09",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-400-09"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES100010",
+      "name": "ES-1000-10 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-1000-10",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-1000-10"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES100011",
+      "name": "ES-1000-11 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-1000-11",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-1000-11"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES16012",
+      "name": "ES-160-12 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-160-12",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-160-12"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES100013",
+      "name": "ES-1000-13 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-1000-13",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-1000-13"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES40014",
+      "name": "ES-400-14 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-400-14",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-400-14"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES20015",
+      "name": "ES-200-15 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-200-15",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-200-15"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES20016",
+      "name": "ES-200-16 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-200-16",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-200-16"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES30017",
+      "name": "ES-300-17 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-300-17",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-300-17"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES40018",
+      "name": "ES-400-18 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-400-18",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-400-18"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES102",
+      "name": "ES-102 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-102",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-102"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES601",
+      "name": "ES-601 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-601",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-601"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES701",
+      "name": "ES-701 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-701",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-701"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES801",
+      "name": "ES-801 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-801",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-801"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES802",
+      "name": "ES-802 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-802",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-802"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES1001",
+      "name": "ES-1001 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-1001",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-1001"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES1002",
+      "name": "ES-1002 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-1002",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-1002"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES1003",
+      "name": "ES-1003 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-1003",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-1003"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES2001",
+      "name": "ES-2001 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-2001",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-2001"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES2002",
+      "name": "ES-2002 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-2002",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-2002"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES1004",
+      "name": "ES-1004 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-1004",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-1004"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES602",
+      "name": "ES-602 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-602",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-602"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES603",
+      "name": "ES-603 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-603",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-603"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    },
+    {
+      "streamId": "S-6000-EW-ES202",
+      "name": "ES-202 emergency-water obligation",
+      "source": "IF-A6000-EW-SOURCE",
+      "via": [],
+      "destination": "ES-202",
+      "material": "Potable tempered emergency water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "ES-202"
+      ],
+      "operatingMode": "Independent station interface; common header topology is unresolved and not asserted",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A6000-EMERGENCY",
+          "title": "Emergency-water location, geometry and coverage model",
+          "revision": "emergency-stations-91",
+          "page": null,
+          "status": "model-derived planning basis; no operating or compliance approval",
+          "availability": "available model source reviewed"
+        },
+        {
+          "documentId": "BC-OHS-5-85-5-96",
+          "title": "WorkSafeBC OHS Regulation 5.85-5.96 and Tables 5-2/5-3",
+          "revision": null,
+          "page": null,
+          "status": "regulatory screening basis; site-specific assessment required",
+          "availability": "external reference",
+          "href": "https://www.worksafebc.com/en/law-policy/occupational-health-safety/searchable-ohs-regulation/ohs-regulation/part-05-chemical-and-biological-substances"
+        },
+        {
+          "documentId": "PANDID-A6000-EW",
+          "title": "Emergency-water P&ID and distribution drawing",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gaps A6000-001 through A6000-004"
+        },
+        {
+          "documentId": "CIVIL-A6000-RUNOFF",
+          "title": "Emergency runoff and drainage design",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-005"
+        },
+        {
+          "documentId": "COMMISSION-A6000-EW",
+          "title": "Emergency equipment commissioning and inspection records",
+          "revision": null,
+          "page": null,
+          "status": "required; not indexed",
+          "availability": "gap A6000-007"
+        }
+      ]
+    }
+  ]
+}

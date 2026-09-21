@@ -1,0 +1,55 @@
+{
+  "assetId": "P-UF2001",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "P-UF2001",
+      "source": "MODEL-A2000",
+      "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
+      "page": null,
+      "status": "model-derived",
+      "confidence": "review required",
+      "gapId": "A2000-005"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A2000-003"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A2000-003"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A2000-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A2000-003"
+    }
+  ]
+}

@@ -1,0 +1,1271 @@
+{
+  "reviewedAt": "2026-09-20",
+  "approvalStatus": "not-approved",
+  "sources": [
+    {
+      "documentId": "FEED-PFD-0200",
+      "sheetId": "FEED-PFD-0200",
+      "title": "TLGO Synthesis draft sheet",
+      "revision": null,
+      "revisionNote": "Sheet revision field is placeholder XXX; X01 document-creation row dated 15-Feb-2026. Do not equate it with the inherited V5.1/V5.1.1 bundle labels.",
+      "page": 3,
+      "file": "pfd-temperature-sheets.pdf",
+      "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+      "status": "Draft - Not for Use; not approved",
+      "availability": "available and reviewed",
+      "href": "./pfd-temperature-sheets.pdf#page=3"
+    },
+    {
+      "documentId": "FEED-PFD-0300",
+      "sheetId": "FEED-PFD-0300",
+      "title": "TLGO Fixing draft sheet",
+      "revision": null,
+      "revisionNote": "Sheet revision field is placeholder XXX; X01 document-creation row dated 15-Feb-2026. Do not equate it with the inherited V5.1/V5.1.1 bundle labels.",
+      "page": 4,
+      "file": "pfd-temperature-sheets.pdf",
+      "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+      "status": "Draft - Not for Use; not approved",
+      "availability": "available and reviewed",
+      "href": "./pfd-temperature-sheets.pdf#page=4"
+    },
+    {
+      "documentId": "MODEL-A400",
+      "title": "A-400 washing routes, VSEP and cleaning package model",
+      "revision": "V144 / f82bb71f58c4945fec3a0a1629193d9a16188926",
+      "page": null,
+      "status": "model-derived; not an approved process design",
+      "availability": "available model source reviewed",
+      "files": {
+        "a400.js": "a1030f59c4a82d4a7e01adce33f317865c4a87aec177aef8d45b115fe1ee9c16",
+        "vsep.js": "9bfd04db0fe2f35924cc0a348e8a4cf0952ab31bc898778b20b69d1356301b8f",
+        "a400-basis.js": "b5daadebe792c358ea3a6190ab39029382d80e1830e8073c34c67ff8b63a8ab9"
+      },
+      "hashNormalization": "UTF-8 text with LF line endings"
+    },
+    {
+      "documentId": "FEED-PFD-0400",
+      "title": "A-400 washing PFD referenced by inherited engineering register",
+      "revision": null,
+      "page": null,
+      "status": "not reviewed; source sheet unavailable in local excerpt bundle",
+      "availability": "missing; register references full-document page 9, not a page in pfd-temperature-sheets.pdf"
+    },
+    {
+      "documentId": "MODEL-A500",
+      "title": "Sonication model routes and provisional three-cell arrangement",
+      "revision": "V145 / b278d4c293d2eb9f98b5f08d975215873bd755c9",
+      "page": null,
+      "status": "model-derived; not an approved process design",
+      "availability": "available model source reviewed",
+      "files": {
+        "sonication.js": "f0fffae28815c2549da659a1ddd45df6c22de89ac89d83ecf1f3d0148202c25e"
+      },
+      "hashNormalization": "UTF-8 text with LF line endings"
+    },
+    {
+      "documentId": "FEED-PFD-0500",
+      "sheetId": "FEED-PFD-0500",
+      "title": "Commercial Scale Sonication",
+      "revision": null,
+      "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+      "page": 5,
+      "file": "pfd-temperature-sheets.pdf",
+      "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+      "status": "Draft - Not for Use; not approved",
+      "availability": "available and reviewed",
+      "href": "./pfd-temperature-sheets.pdf#page=5"
+    },
+    {
+      "documentId": "MODEL-A600",
+      "title": "Aqueous spray-drying routes, independent exhaust and A-700 solids handoff",
+      "revision": "V146 / 19534f4d6e3e8383ba84e72fd997460ad241d829",
+      "page": null,
+      "status": "model-derived; not an approved process design",
+      "availability": "available model source reviewed",
+      "files": {
+        "spray-drying.js": "c77c180b667bf82f9bceeee0369ca3a7ca1746d3895675e497286d4902a74080",
+        "furnace.js": "47ff8d0a21ff80f9882dfad79bf1db484c1536116894503f5dfbf0e425b882b3",
+        "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+      },
+      "hashNormalization": "UTF-8 text with LF line endings"
+    },
+    {
+      "documentId": "FEED-PFD-0600",
+      "sheetId": "FEED-PFD-0600",
+      "title": "Commercial Scale TLGO Drying",
+      "revision": null,
+      "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+      "page": 6,
+      "file": "pfd-temperature-sheets.pdf",
+      "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+      "status": "Draft - Not for Use; not approved",
+      "availability": "available and reviewed",
+      "href": "./pfd-temperature-sheets.pdf#page=6"
+    },
+    {
+      "documentId": "MODEL-A700",
+      "title": "Thermal-treatment routes, argon supply and independent exhaust interface",
+      "revision": "V147 / 3313c00fbde0d2bdc4480201823d2012260b2e15",
+      "page": null,
+      "status": "model-derived; not an approved process design",
+      "availability": "available model source reviewed",
+      "files": {
+        "furnace.js": "47ff8d0a21ff80f9882dfad79bf1db484c1536116894503f5dfbf0e425b882b3",
+        "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+        "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+      },
+      "hashNormalization": "UTF-8 text with LF line endings"
+    },
+    {
+      "documentId": "FEED-PFD-0700",
+      "sheetId": "FEED-PFD-0700",
+      "title": "High Temperature Pyrolysis",
+      "revision": null,
+      "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+      "page": 7,
+      "file": "pfd-temperature-sheets.pdf",
+      "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+      "status": "Draft - Not for Use; not approved",
+      "availability": "available and reviewed",
+      "href": "./pfd-temperature-sheets.pdf#page=7"
+    },
+    {
+      "documentId": "MODEL-A800",
+      "title": "Doping, dry charging, argon, independent exhaust and A-900 handoff",
+      "revision": "V148 / 19b52eb01578140a4d021ec6d47fd98d1b671ba5",
+      "page": null,
+      "status": "model-derived; not an approved process design",
+      "availability": "available model source reviewed",
+      "files": {
+        "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+        "a800-basis.js": "0ee9741872bf91a9e4898324690cd43ec2ab246478883645300b6311900bc757",
+        "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+        "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76"
+      },
+      "hashNormalization": "UTF-8 text with LF line endings"
+    },
+    {
+      "documentId": "FEED-PFD-0800",
+      "sheetId": "FEED-PFD-0800",
+      "title": "Commercial Scale rGO Doping and Pyrolysis",
+      "revision": null,
+      "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+      "page": 8,
+      "file": "pfd-temperature-sheets.pdf",
+      "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+      "status": "Draft - Not for Use; not approved",
+      "availability": "available and reviewed",
+      "href": "./pfd-temperature-sheets.pdf#page=8"
+    },
+    {
+      "documentId": "FEED-PFD-0900",
+      "title": "A-900 cartridge-filling source sheet required",
+      "revision": null,
+      "page": null,
+      "status": "unavailable; no equipment tags or process routes verified",
+      "availability": "not present in available project sources",
+      "gapId": "A900-001"
+    },
+    {
+      "documentId": "MODEL-A1000",
+      "title": "Wastewater treatment, receiving sources, conditional chemistry and A-2000 handoff",
+      "revision": "V150 / 0f89c6bb63ec5c5127db6f48f8d1843733c0b83c",
+      "page": null,
+      "status": "model-derived; not an approved process design",
+      "availability": "available model source reviewed",
+      "files": {
+        "wastewater.js": "492fd40422dd1e5a13133f0073847c363d52e782aedc69dd0f638edd9e8acf7f",
+        "a1000-basis.js": "fd08d2819df8087e44992ffb72428fda7ec9856315a45200741d408cdfe93982",
+        "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+        "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+        "thermal-utilities.js": "522210c2e87434d1b2a5f6fa3a1915b9ef285ec9afc58b05409edc22041fe79c"
+      },
+      "hashNormalization": "UTF-8 text with LF line endings"
+    },
+    {
+      "documentId": "FEED-PFD-1000",
+      "sheetId": "FEED-PFD-1000",
+      "title": "Commercial Scale Wastewater Treatment",
+      "revision": null,
+      "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+      "page": 9,
+      "file": "pfd-temperature-sheets.pdf",
+      "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+      "status": "Draft - Not for Use; not approved",
+      "availability": "available and reviewed",
+      "href": "./pfd-temperature-sheets.pdf#page=9"
+    },
+    {
+      "documentId": "MODEL-A2000",
+      "title": "Reclaimed-water pretreatment, UF, RO, reuse and segregated returns",
+      "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
+      "page": null,
+      "status": "model-derived; not an approved process design",
+      "availability": "available model source reviewed",
+      "files": {
+        "reclaimed-water.js": "2094a4386dd8751a83c2a34c064674ca26f85c97d5cb4d222c7706ac2636fe63",
+        "a2000-basis.js": "45a93aac1d560a1ffac329e1605a348db574807c363ecda5fea6bf481a320638",
+        "uf-manifolds.js": "bde5bc174a8c256b05cf0b1000855ea0eafb003a551d9477db6afabc5c270854"
+      },
+      "hashNormalization": "UTF-8 text with LF line endings"
+    },
+    {
+      "documentId": "FEED-PFD-2000",
+      "sheetId": "FEED-PFD-2000",
+      "title": "Commercial Scale Reclaimed Water RO System",
+      "revision": null,
+      "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+      "page": 1,
+      "file": "feed-pfd-2000.pdf",
+      "sha256": "c7ff684a1dd010cfd5399ae997aad339c31fd1c8c4bff543347d247561c4be0c",
+      "status": "Draft - Not for Use; not approved",
+      "availability": "available and reviewed",
+      "href": "./feed-pfd-2000.pdf#page=1"
+    },
+    {
+      "documentId": "MODEL-A3000",
+      "title": "Candidate wet-acid vent collection, treatment and segregated liquid handling",
+      "revision": "V152 / 18e2f81ccfb90eec25064f50c98540aea197908b",
+      "page": null,
+      "status": "model-derived; not an approved process design",
+      "availability": "available model source reviewed",
+      "files": {
+        "vent-gas.js": "099d96245240109ddb480d680e4007d128ea61281e54c424102c5b9b9f3dec31",
+        "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3",
+        "upstream.js": "a86dace5481a8870491f02663edfa01529150b9d649830c37a8b67aad3dd4ece",
+        "separations.js": "3f54880bd0f732e86ed2838471f8e7df83a4173276e31073ade8fe0a719c3f16"
+      },
+      "hashNormalization": "UTF-8 text with LF line endings"
+    },
+    {
+      "documentId": "FEED-PFD-3000",
+      "sheetId": "FEED-PFD-3000",
+      "title": "Commercial Scale Vent Gas Treatment System",
+      "revision": null,
+      "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+      "page": 1,
+      "file": "feed-pfd-3000.pdf",
+      "sha256": "4f735054c567eadecdbd1f00e4bc7d78751965bf856200af37b03ba504eb0a51",
+      "status": "Draft - Not for Use; not approved",
+      "availability": "available and reviewed",
+      "href": "./feed-pfd-3000.pdf#page=1"
+    },
+    {
+      "documentId": "FEED-PFD-3000-P01-S1",
+      "sheetId": "FEED-PFD-3000",
+      "title": "Proposed wet-acid vent treatment review redraw, sheet 1",
+      "revision": "P01",
+      "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+      "page": 1,
+      "file": "feed-pfd-3000-p01.pdf",
+      "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+      "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+      "availability": "available and reviewed",
+      "href": "./feed-pfd-3000-p01.pdf#page=1"
+    },
+    {
+      "documentId": "FEED-PFD-3000-P01-S2",
+      "sheetId": "FEED-PFD-3000",
+      "title": "Proposed wet-acid vent treatment review redraw, sheet 2",
+      "revision": "P01",
+      "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank; not an issued design.",
+      "page": 2,
+      "file": "feed-pfd-3000-p01.pdf",
+      "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+      "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+      "availability": "available and reviewed",
+      "href": "./feed-pfd-3000-p01.pdf#page=2"
+    },
+    {
+      "documentId": "MODEL-A3700",
+      "title": "A-700 independent thermal-abatement satellite and dedicated outlet",
+      "revision": "V153 / 798049b05688550b90813d8e16253364c8ccab5d",
+      "page": null,
+      "status": "model-derived layout envelope; technology and process release HOLD",
+      "availability": "available model source reviewed",
+      "files": {
+        "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76",
+        "furnace.js": "47ff8d0a21ff80f9882dfad79bf1db484c1536116894503f5dfbf0e425b882b3",
+        "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3"
+      },
+      "hashNormalization": "UTF-8 text with LF line endings"
+    },
+    {
+      "documentId": "FEED-PFD-0700",
+      "sheetId": "FEED-PFD-0700",
+      "title": "High Temperature Pyrolysis",
+      "revision": null,
+      "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+      "page": 7,
+      "file": "pfd-temperature-sheets.pdf",
+      "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+      "status": "Draft - Not for Use; not approved",
+      "availability": "available and reviewed",
+      "href": "./pfd-temperature-sheets.pdf#page=7"
+    },
+    {
+      "documentId": "FEED-PFD-3000-P01-S1",
+      "sheetId": "FEED-PFD-3000",
+      "title": "Proposed wet-acid vent review redraw - source segregation",
+      "revision": "P01",
+      "revisionNote": "09-Sep-2026 design-assistance redraw; checked/approved blank.",
+      "page": 1,
+      "file": "feed-pfd-3000-p01.pdf",
+      "sha256": "ec64399a3b7b5c78e3d0157722d6a0276249c37441e7037202d41b63e016ea33",
+      "status": "Proposed; NOT FOR CONSTRUCTION; not approved",
+      "availability": "available and reviewed",
+      "href": "./feed-pfd-3000-p01.pdf#page=1"
+    },
+    {
+      "documentId": "MODEL-A3800",
+      "title": "A-800 reactive-gas and dry-dust treatment satellites",
+      "revision": "V154 / 565c39858ef8c190a506d74d567b8b7a74a5c60a",
+      "page": null,
+      "status": "model-derived layout envelopes; technology and process release HOLD",
+      "availability": "available model source reviewed",
+      "files": {
+        "exhaust-groups.js": "6db091ae4f51a5e67114e0abcb96ee4bb7dd5959a773bbef0445d42f301f3c76",
+        "doping.js": "ad9f756fa33dd4f5c8dfa08e00e5bafcd0aecac14231a5d54f37b1be87f80f39",
+        "a800-basis.js": "0ee9741872bf91a9e4898324690cd43ec2ab246478883645300b6311900bc757",
+        "a3000-basis.js": "44d6b4de989cdd2bf522fa838591ba62adf03fe9b173f3ba5fe6855ba43d14c3"
+      },
+      "hashNormalization": "UTF-8 text with LF line endings"
+    },
+    {
+      "documentId": "FEED-PFD-5000",
+      "sheetId": "FEED-PFD-5000",
+      "title": "Thermal Utilities Process Flow Diagram",
+      "revision": "V5.1",
+      "page": 19,
+      "status": "Draft — not for use"
+    },
+    {
+      "documentId": "MODEL-A5000",
+      "title": "A-5000 thermal utility model and review",
+      "revision": "A5000-closeout-75",
+      "page": null,
+      "status": "model design basis; engineering qualification open"
+    },
+    {
+      "documentId": "MODEL-A6000-EMERGENCY",
+      "title": "Emergency-water location, geometry and coverage model",
+      "revision": "emergency-stations-91",
+      "page": null,
+      "status": "model-derived planning basis; no operating or compliance approval",
+      "availability": "available model source reviewed",
+      "files": {
+        "containment-basis.js": "7f6df0e2f36ebd075e49dc9c8718ce202888f9c1a7505d5976b01f2e06c8c711",
+        "emergency-location-plan.js": "83d87bcf6c4bfbd7900ffae8f2cec7551e71f3216ffb6b5437a73bbfdd2df91e",
+        "emergency-station-basis.js": "9e6a121f38563560f398c4d3f0a7bba969ce33747e5b04c8d07e7d6a131cb2c5",
+        "emergency-task-basis.js": "b779e256563ccfc9f1ba10d8011b57e0c8384ea0c842ee2e4803dfb5cc27b1ad",
+        "emergency-station-review.json": "97fc9efdfa7f4c7bec08e096dcde5fd0a2455e2ff98a38b847df4457cad7e749"
+      },
+      "hashNormalization": "UTF-8 text with LF line endings"
+    },
+    {
+      "documentId": "MODEL-EARLY-PROCESS",
+      "title": "A-100/A-140/A-160 process geometry, routes and engineering register",
+      "revision": "V160",
+      "page": null,
+      "status": "model-derived planning basis; no operating or design approval",
+      "availability": "available model source reviewed",
+      "files": {
+        "preg.js": "855183afb11e18e87436773cbbd30169b05d0f33219e3afa224d36a97284a21a",
+        "model.js": "24d1faa36edef797ed98447fb3a8d8b81d7a46ad3e1b0c33264d2c73b534b5ca",
+        "engineering-register.js": "d2cea97c6fd28b0d1c287ba0ba44ced577c82e05ee75bd834c322fd00bae1639",
+        "a160-alternatives.js": "e01b0d4cd4989dce5fe4b40a42631b2da6b70a32309033de82d5ffcd815ecec9",
+        "pfd-temperature-sheets.pdf": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f"
+      },
+      "hashNormalization": "UTF-8 text with LF line endings; PDF as binary"
+    },
+    {
+      "documentId": "MODEL-A900-V163",
+      "title": "A-900 compact contained pelletization functional foundation",
+      "revision": "V163",
+      "page": null,
+      "status": "model-derived planning basis; not approved for construction or operation",
+      "availability": "available model source reviewed",
+      "files": {
+        "a900.js": "2176d15015509596b9c178ae062dbd822d04ed08696079b39044f72a7ee6c836",
+        "a900-basis.js": "8cb811eb278bc09bebe080a7109a02d71f64f7ff6200b23ddd40ab8d9d6dee25"
+      },
+      "hashNormalization": "UTF-8 text with LF line endings"
+    }
+  ],
+  "findings": [
+    {
+      "id": "REC-200-001",
+      "status": "open",
+      "subject": "Recirculation package allocation",
+      "observed": "Available sheet lists P-205 A/B and M-201. Model has four branch packages; C/D pump identities and A/B/C/D mixer allocations remain proposed.",
+      "gapIds": [
+        "SRC-005",
+        "A200-001"
+      ]
+    },
+    {
+      "id": "REC-200-002",
+      "status": "open",
+      "subject": "Feeder branch allocation",
+      "observed": "Sheet lists H-201/SF-201 and H-202/SF-202 without branch suffixes. Four modeled branch allocations remain proposed.",
+      "gapIds": [
+        "SRC-006"
+      ]
+    },
+    {
+      "id": "REC-200-003",
+      "status": "open",
+      "subject": "Document revisions",
+      "observed": "Register cites V5.1; inherited pilot cites V5.1.1. Available sheet has a placeholder XXX revision field and is Draft - Not for Use. No controlling approved revision established.",
+      "gapIds": [
+        "SRC-REV-001"
+      ]
+    },
+    {
+      "id": "REC-200-004",
+      "status": "open",
+      "subject": "Temperature conflict",
+      "observed": "Available draft retains the 45–50 °C range and a separate ≤49 °C safety note. No setting selected.",
+      "gapIds": [
+        "SRC-004"
+      ]
+    },
+    {
+      "id": "REC-A400-001",
+      "status": "open",
+      "subject": "Missing controlling A-400 source",
+      "observed": "The local temperature-sheet PDF skips FEED-PFD-0400. The inherited register page 9 is a full-document reference, not an available excerpt. No approved source revision is established.",
+      "gapIds": [
+        "A400-001"
+      ]
+    },
+    {
+      "id": "REC-A400-002",
+      "status": "open",
+      "subject": "Washing and membrane capacity",
+      "observed": "Model screening identifies an eight-module capacity shortfall and differing solids assumptions. Layout volumes, flux and module count are not qualified ratings.",
+      "gapIds": [
+        "A400-002"
+      ]
+    },
+    {
+      "id": "REC-A400-003",
+      "status": "open",
+      "subject": "Feed pump package arrangement",
+      "observed": "The model has two parallel trains of two feed-pump stages. Supplier drawing and utility-sheet pump counts remain unreconciled; no duty/standby allocation is asserted.",
+      "gapIds": [
+        "A400-003"
+      ]
+    },
+    {
+      "id": "REC-A400-004",
+      "status": "open",
+      "subject": "Permeate destination conflict",
+      "observed": "The model retains wastewater disposal; its inherited V17 workbook reference includes filter/RO recycle. No recycle connection is established by this expansion.",
+      "gapIds": [
+        "A400-004"
+      ]
+    },
+    {
+      "id": "REC-A400-005",
+      "status": "open",
+      "subject": "Cleaning, drains, vents and instrumentation",
+      "observed": "Cleaning chemistry, product isolation, vent compatibility, drain receiving pressure/invert, instrument tags and protective settings remain unqualified.",
+      "gapIds": [
+        "A400-005"
+      ]
+    },
+    {
+      "id": "REC-A500-001",
+      "status": "open",
+      "subject": "Cooler identity and construction conflict",
+      "observed": "Draft HX-501 is a shell-and-tube exchanger; model E-501 depicts a coil arrangement. E-501 remains the model-bound record; HX-501 is an unresolved source-tag candidate, not a second exchanger or approved alias.",
+      "gapIds": [
+        "A500-001"
+      ]
+    },
+    {
+      "id": "REC-A500-002",
+      "status": "open",
+      "subject": "Product routing and recirculation conflict",
+      "observed": "Draft sends cooler outlet toward A-600 with an optional 507 recycle to T-501. Model returns cooled slurry to T-501 and uses proposed P-502 for accepted-product transfer. These paths are not an approved operating sequence.",
+      "gapIds": [
+        "A500-002"
+      ]
+    },
+    {
+      "id": "REC-A500-003",
+      "status": "open",
+      "subject": "Sonication performance and feed basis",
+      "observed": "Three modeled cells, energy dose, residence time, flow, backpressure, cooling duty and product quality require trials/vendor selection. Draft 1-2 wt% and 30-40 degC targets are not approved setpoints or equipment ratings.",
+      "gapIds": [
+        "A500-003"
+      ]
+    },
+    {
+      "id": "REC-A500-004",
+      "status": "open",
+      "subject": "Draft-only source and optional features",
+      "observed": "Available sheet is Draft - Not for Use with revision XXX. Bypass is mentioned conceptually and degassing is suggested; neither is asserted as an installed or connected package. Draft says no added water or DMF for sonication.",
+      "gapIds": [
+        "A500-004"
+      ]
+    },
+    {
+      "id": "REC-A500-005",
+      "status": "open",
+      "subject": "Protection, controls and segregated services",
+      "observed": "Pressure/vacuum and relief sizing, cooling-loss response, acoustic protection, CIP isolation, sampling criteria, vent compatibility and drain receiving conditions remain unqualified.",
+      "gapIds": [
+        "A500-005"
+      ]
+    },
+    {
+      "id": "REC-A600-001",
+      "status": "open",
+      "subject": "Indicative temperatures conflict with TBD notes",
+      "observed": "Draft typical inlet 140-145 degC, outlet 80-90 degC and approximate product discharge 60-100 degC coexist with temperatures TBD. No operating or safety setpoint is selected.",
+      "gapIds": [
+        "A600-001"
+      ]
+    },
+    {
+      "id": "REC-A600-002",
+      "status": "open",
+      "subject": "Powder and exhaust destination reconciliation",
+      "observed": "Draft routes dryer output through F-601 to T-602; the model also has a direct DR-601 powder chute to T-602. Draft exhaust arrow calls for off-gas treatment, while its scrubber note mentions atmospheric discharge. Model retains an independent discharge boundary; neither a common treatment header nor permitted release is established.",
+      "gapIds": [
+        "A600-002"
+      ]
+    },
+    {
+      "id": "REC-A600-003",
+      "status": "open",
+      "subject": "Atomization, heat duty and product quality",
+      "observed": "Atomizer technology, evaporation duty, heating medium, gas flow/pressure budget, moisture target, capacities and materials remain unqualified. The model is aqueous; the draft scrubber solvent-vapor wording requires reconciliation and does not add a solvent-recovery system.",
+      "gapIds": [
+        "A600-003"
+      ]
+    },
+    {
+      "id": "REC-A600-004",
+      "status": "open",
+      "subject": "Gas choice, dust and pressure protection",
+      "observed": "Air is a draft/model concept. Gas selection, GO thermal stability, dust explosibility, grounding, dryer/filter protection, pressure limits and interlocks remain open. Conditional oxygen monitoring for inert drying is not an installed protective system.",
+      "gapIds": [
+        "A600-004"
+      ]
+    },
+    {
+      "id": "REC-A600-005",
+      "status": "open",
+      "subject": "Draft-only source, cleaning and service boundaries",
+      "observed": "Sheet is Draft - Not for Use with revision XXX. Wash compatibility, powder isolation, filter-media servicing, scrubber-liquor chemistry, drain receivers and gas-admission procedures require approval. No common process/thermal drain or cleaning sequence is authorized.",
+      "gapIds": [
+        "A600-005"
+      ]
+    },
+    {
+      "id": "REC-A700-001",
+      "status": "open",
+      "subject": "Pressure and oxygen protection unresolved",
+      "observed": "Draft +2 psig conflicts with slight negative pressure. Draft oxygen <10 ppm is an unqualified source claim, not an approved alarm, trip or operating limit. No pressure sign, oxygen threshold or permissive is selected.",
+      "gapIds": [
+        "A700-001"
+      ]
+    },
+    {
+      "id": "REC-A700-002",
+      "status": "open",
+      "subject": "Thermal duty and product acceptance",
+      "observed": "Draft approximately 1100 degC, 4 h hold and 5 degC/min ramp are indicative only. Gas cooling 60-90 degC and product cooling 60-80 degC require qualification. Capacities, materials, gas composition and argon demand are unknown.",
+      "gapIds": [
+        "A700-002"
+      ]
+    },
+    {
+      "id": "REC-A700-003",
+      "status": "open",
+      "subject": "Cooling and knockout arrangement conflict",
+      "observed": "Draft considers KO/dust trap upstream of E-701; model KO-701 is downstream. Draft internal cooling zone differs from model-added E-702. Draft prior-to-cyclone note has no identified drawn/model cyclone; no cyclone is invented.",
+      "gapIds": [
+        "A700-003"
+      ]
+    },
+    {
+      "id": "REC-A700-004",
+      "status": "open",
+      "subject": "Independent off-gas and emergency relief",
+      "observed": "Normal gas connects to AB-3701 candidate only; treatment performance and permitted discharge remain unqualified. Model RV-701 differs from draft PSV-701. Relief destination, sizing and backpressure remain open and separate from normal treatment.",
+      "gapIds": [
+        "A700-004"
+      ]
+    },
+    {
+      "id": "REC-A700-005",
+      "status": "open",
+      "subject": "Draft identity and transfer sequences",
+      "observed": "Draft is Not for Use with XXX revision. AR701/AR702 are draft stream identifiers, not confirmed equipment aliases for model AR-701. Air-fill dust vent and inert purge exhaust are distinct modes; purge, equalization, sampling and solids release sequences remain unqualified.",
+      "gapIds": [
+        "A700-005"
+      ]
+    },
+    {
+      "id": "REC-A800-001",
+      "status": "open",
+      "subject": "Drawn route and tag reconciliation",
+      "observed": "Draft arrows 806/807 show H-803 through RV-801 to PY-801, while General Note 2 names F-801. The concept follows the arrows; document-owner confirmation remains open. Draft AR801 identifies an argon stream, not an approved alias for the model AR-801 manifold.",
+      "gapIds": [
+        "A800-001"
+      ]
+    },
+    {
+      "id": "REC-A800-002",
+      "status": "open",
+      "subject": "Reaction, ratio and thermal basis unqualified",
+      "observed": "Draft 1 kg KBH4 per kg rGO, 750 degC, 5 degC/min ramp and 2 h residence are source references only. Draft +2 psig and maximum 10 ppm oxygen are not selected control or protective limits. Feed accuracy during refill, residence distribution, reaction/gas evolution, throughput and product acceptance remain open.",
+      "gapIds": [
+        "A800-002"
+      ]
+    },
+    {
+      "id": "REC-A800-003",
+      "status": "open",
+      "subject": "Dry reagent containment and cooling separation",
+      "observed": "TR-801 and LK-802 are model-added contained-transfer concepts. KBH4 handling remains dry and isolated from indirect cooling water; no process-water wash or common process/utility drain is inferred. Dew point, leakage, materials, capacities and residue handling are unqualified. RV-801 is not credited as positive isolation.",
+      "gapIds": [
+        "A800-003"
+      ]
+    },
+    {
+      "id": "REC-A800-004",
+      "status": "open",
+      "subject": "Separate exhaust, relief and missing cyclone context",
+      "observed": "PY-801 normal off-gas runs through E-801 and FN-801 to AB-3801 candidate. Inventory vents use DC-3811; F-802 has its own DC-3812 route. Emergency PSV-801 relief stays separate. The draft mentions a cyclone without an identified symbol/tag; no cyclone is invented. H2/boron composition, treatment performance, relief loads and final disposal remain unqualified.",
+      "gapIds": [
+        "A800-004"
+      ]
+    },
+    {
+      "id": "REC-A800-005",
+      "status": "open",
+      "subject": "Draft-only controls and downstream release",
+      "observed": "Sheet is Draft - Not for Use with XXX revision. Oxygen, moisture and hydrogen verification are functional concepts, not qualified sensors or trip logic. PY-801 includes heating, hold and cooling zones; no separate product cooler is invented. A-900 receiving equipment is not modeled. Product temperature, residual reactivity, quality and receiving atmosphere require acceptance.",
+      "gapIds": [
+        "A800-005"
+      ]
+    },
+    {
+      "id": "REC-A1000-001",
+      "status": "open",
+      "subject": "Draft pH conflict and conditional chemistry",
+      "observed": "R-1002 draft targets conflict: 7-10.5 in stage text versus 8.5-10.5 by the reactor. R-1001 draft pH 3-4 is indicative only. BaCl2 polishing is conditional; the draft <1500 mg/L sulfate note is not a verified site discharge limit. HCl trim needs a metals-redissolution review. No dose or control target is approved.",
+      "gapIds": [
+        "A1000-001"
+      ]
+    },
+    {
+      "id": "REC-A1000-002",
+      "status": "open",
+      "subject": "Screening inventories are not equipment ratings",
+      "observed": "Model 100 m3/h, 15/30/20/20 min residence times, tank inventories and equalization assumptions are layout screening inputs, not measured flows or approved capacities. The model notes 62.208 m3/h eight-module A-400 capacity against a 71 m3/h duty. Upstream batch peaks, returns and actual chemistry remain unreconciled.",
+      "gapIds": [
+        "A1000-002"
+      ]
+    },
+    {
+      "id": "REC-A1000-003",
+      "status": "open",
+      "subject": "Bypass, recycle and RO acceptance",
+      "observed": "The draft permits conditional centrifuge bypass with downtime wording; the model keeps it closed and positively blinded. Downtime alone is not acceptance for A-2000. Centrate recycle improves solids capture only and does not remove dissolved salts. Residual Ba/Ca/sulfate, turbidity, pH and other RO acceptance criteria remain unqualified.",
+      "gapIds": [
+        "A1000-003"
+      ]
+    },
+    {
+      "id": "REC-A1000-004",
+      "status": "open",
+      "subject": "Vents, returns, drains and disposal remain qualified separately",
+      "observed": "Selected wet vents are candidate connections to HD-3100 only; chemical-storage vents remain separate by service. A-3000 condensate and blowdown returns are normally isolated. Low process drains are positively blinded; no common chemical drain or dry A-800 waste route is inferred. Sludge classification and receiving disposal acceptance require testing, not the draft non-hazardous wording.",
+      "gapIds": [
+        "A1000-004"
+      ]
+    },
+    {
+      "id": "REC-A1000-005",
+      "status": "open",
+      "subject": "Draft source, controls and service definition",
+      "observed": "Sheet is Draft - Not for Use with XXX revision. Cooling is a separate utility; duties and limits are unqualified. pH, temperature, level and mixing checks are functional concepts only. Legacy spare return connections remain capped; the modeled normal A-2000 backwash return is distinct. Aeration/oxidation remains future provision and is not invented as installed equipment.",
+      "gapIds": [
+        "A1000-005"
+      ]
+    },
+    {
+      "id": "REC-A2000-001",
+      "status": "open",
+      "subject": "Draft source and qualification",
+      "observed": "The sheet is Draft - Not for Use, revision XXX. Functional monitoring has no approved instrument tags, ranges or trip setpoints. Draft permeate quality targets are not measured performance or discharge permission. Conductivity alone does not verify all reuse criteria.",
+      "gapIds": [
+        "A2000-001"
+      ]
+    },
+    {
+      "id": "REC-A2000-002",
+      "status": "open",
+      "subject": "Model sizing and water balance",
+      "observed": "Model 100 m3/h feed, media 98%, UF 92.5%, 60% RO recovery and tank volumes are screening allowances, not ratings. Eight-hour inventory is a lower-end model selection within the draft 8-12 h recommendation. Base permeate is below the A-400 71 m3/h duty alone; supplemental water and batch balance remain unresolved.",
+      "gapIds": [
+        "A2000-002"
+      ]
+    },
+    {
+      "id": "REC-A2000-003",
+      "status": "open",
+      "subject": "Membrane and chemistry basis",
+      "observed": "Draft N+1 does not specify N; the model selects A/B duty and C standby with 72 elements per train and 8:4 staging in a single pass. Draft 70-75% higher recovery requires a scaling study. Residual Ba/Ca/sulfate, silica, oxidant breakthrough, greensand regeneration and antiscalant dose remain unqualified.",
+      "gapIds": [
+        "A2000-003"
+      ]
+    },
+    {
+      "id": "REC-A2000-004",
+      "status": "open",
+      "subject": "Segregated waste and cleaning",
+      "observed": "Normal media/UF backwash returns to A-1000. Brine and spent CIP have separate positively blinded boundaries with destinations unassigned. Sequential acid/alkaline CIP isolates one train from product and brine export. Low CIP drain needs contained pump-out; UF chemical CEB is an unmodeled hold with no active pipe.",
+      "gapIds": [
+        "A2000-004"
+      ]
+    },
+    {
+      "id": "REC-A2000-005",
+      "status": "open",
+      "subject": "Quality diversion and protection",
+      "observed": "Model off-spec permeate and stored water recycle to T-2001; no active off-spec drain is added from draft wording. Train C is modeled standby, not live state. Relief capacity/backpressure, tank vent qualification, pressure ratings and hygienic turnover remain open. Reclaimed water is not a potable emergency supply.",
+      "gapIds": [
+        "A2000-005"
+      ]
+    },
+    {
+      "id": "REC-A3000-001",
+      "status": "open",
+      "subject": "Source segregation and draft conflicts",
+      "observed": "The original Draft - Not for Use sheet joins wet/dry and furnace gases. P01 is a proposed NOT FOR CONSTRUCTION redraw, not approval. HD-3100 accepts candidate compatible wet vents only. Thermal/reactive gas, carbon/oxidizer dust, peroxide breathing, dryer vacuum exhaust and emergency relief remain separate. A-900 furnace wording conflicts with cartridge filling; no source is inferred.",
+      "gapIds": [
+        "A3000-001"
+      ]
+    },
+    {
+      "id": "REC-A3000-002",
+      "status": "open",
+      "subject": "Bypass and failure response",
+      "observed": "Original EX3003 operating bypass is deleted in the model/P01. Only a positively blinded stub remains, with no fan connection or operating stream. Loss of draft/liquor flow, high differential pressure or unqualified pH requires a reviewed response: inhibit new feed/heat, retain available residual-emission treatment, and do not blanket-close vessel vents. Fan stop is not vent isolation.",
+      "gapIds": [
+        "A3000-002"
+      ]
+    },
+    {
+      "id": "REC-A3000-003",
+      "status": "open",
+      "subject": "Unqualified gas load and performance",
+      "observed": "Model 5000 Nm3/h, 40 C, 3500 Pa drop, 2 m tower diameter and 12 m stack height are screening/layout inputs, not ratings or approved limits. KO separation is not a fine-mist guarantee or cooling duty. ME-3150 fiber-bed duty, removal efficiency, pressure budget, corrosion/materials and stack dispersion/emission acceptance remain unqualified.",
+      "gapIds": [
+        "A3000-003"
+      ]
+    },
+    {
+      "id": "REC-A3000-004",
+      "status": "open",
+      "subject": "Liquid seals, segregation and receiving",
+      "observed": "Acidic KO condensate and alkaline high-salt blowdown have distinct normally isolated A-1000 returns. Neutralization does not remove dissolved salts before A-2000. Sealed liquid returns and dedicated dirty-side pressure balances require verification at minimum liquid level and maximum differential pressure. Fan/stack low drains remain separately blinded with no continuous drainage credit.",
+      "gapIds": [
+        "A3000-004"
+      ]
+    },
+    {
+      "id": "REC-A3000-005",
+      "status": "open",
+      "subject": "Supply, instruments and identity holds",
+      "observed": "Makeup water uses a proposed physical air gap and buffer/pump; supply is blinded, overflow goes to an unqualified local catch tray. NaOH breathing stays independent. T-3180 is retained despite TK-3180 wording in the original notes. P01 uses AIT-3180 for pH while the model uses pHT-3180 for pH and AIT-3180 for conductivity: no instrument tag is selected. pH, flow, level, pressure and other trip limits remain null; no live control or SIS is validated.",
+      "gapIds": [
+        "A3000-005"
+      ]
+    },
+    {
+      "id": "REC-A3700-001",
+      "status": "open",
+      "subject": "Treatment technology and performance remain open",
+      "observed": "AB-3701 is a proposed vendor-package envelope. The model describes a thermal-oxidation candidate, but the A-700 draft only sends cooled gas to off-gas treatment. No oxidation, catalytic, filtration or polishing technology is selected; no destruction or removal efficiency is credited.",
+      "gapIds": [
+        "A3700-001"
+      ]
+    },
+    {
+      "id": "REC-A3700-002",
+      "status": "open",
+      "subject": "Combustible and oxygen envelope is unqualified",
+      "observed": "The draft identifies possible CO, CO2, water vapour and trace hydrocarbons, while model screening also retains particulate. Normal, peak, upset and residual batch emissions, oxygen ingress and flammability remain unknown. Draft oxygen <10 ppm is a source-side statement, not an approved package setpoint.",
+      "gapIds": [
+        "A3700-002"
+      ]
+    },
+    {
+      "id": "REC-A3700-003",
+      "status": "open",
+      "subject": "Pressure control and failure response are unresolved",
+      "observed": "The draft conflicts between +2 psig and slight negative pressure. FN-701 coordination, package pressure drop, furnace vacuum limits, fan trip response, purge continuity and safe shutdown are not approved. Emergency relief remains on IF-A700-RELIEF with no normal-treatment credit.",
+      "gapIds": [
+        "A3700-003"
+      ]
+    },
+    {
+      "id": "REC-A3700-004",
+      "status": "open",
+      "subject": "Dedicated outlet is not a permitted discharge",
+      "observed": "ST-3702 is a proposed independent outlet. Stack height, velocity, sampling plane/access, condensate management, dispersion, pollutant limits and jurisdictional air authorization remain unqualified. The geometry does not establish an atmospheric discharge approval.",
+      "gapIds": [
+        "A3700-004"
+      ]
+    },
+    {
+      "id": "REC-A3700-005",
+      "status": "open",
+      "subject": "Service segregation and package definition",
+      "observed": "AB-3701 remains separate from HD-3100 wet-acid treatment, AB-3801 reactive A-800 gas, dry-dust packages and emergency relief. Closed analyzer returns and inert lock purge enter the A-700 treatment context, while air-fill dust returns to A-600 filtration. Materials, refractory/insulation, utilities, drainage, access and vendor internals remain open.",
+      "gapIds": [
+        "A3700-005"
+      ]
+    },
+    {
+      "id": "REC-A3800-001",
+      "status": "open",
+      "subject": "Reactive off-gas treatment and performance remain open",
+      "observed": "AB-3801 is a proposed specialist package envelope. The draft requires H2-safe handling plus particulate and trace-boron capture, but selects no combustion, catalytic, adsorption, filtration or polishing technology. No destruction, capture or emission performance is credited.",
+      "gapIds": [
+        "A3800-001"
+      ]
+    },
+    {
+      "id": "REC-A3800-002",
+      "status": "open",
+      "subject": "Hydrogen, oxygen and reactivity envelope is unqualified",
+      "observed": "The draft identifies H2 and trace boron species and requires hydrogen monitoring. Oxygen ingress, moisture, boron chemistry, particulate loading, normal and peak gas evolution, ignition sources and residual batch reactivity remain unknown. Draft maximum 10 ppm oxygen is not an approved package setpoint.",
+      "gapIds": [
+        "A3800-002"
+      ]
+    },
+    {
+      "id": "REC-A3800-003",
+      "status": "open",
+      "subject": "Pressure control and failure response are unresolved",
+      "observed": "FN-801 and AB-3801 pressure drop, draft +2 psig source statement, furnace pressure limits, fan or purge failure response, isolation and safe shutdown are not approved. PSV-801 emergency relief remains independent on IF-A800-RELIEF with no normal-treatment credit.",
+      "gapIds": [
+        "A3800-003"
+      ]
+    },
+    {
+      "id": "REC-A3800-004",
+      "status": "open",
+      "subject": "Dedicated reactive-gas outlet is not a permitted discharge",
+      "observed": "ST-3802 is a proposed independent outlet. Stack height, velocity, sampling access, condensate or solids management, dispersion, pollutant limits and jurisdictional authorization remain unqualified. Geometry does not establish an atmospheric discharge approval.",
+      "gapIds": [
+        "A3800-004"
+      ]
+    },
+    {
+      "id": "REC-A3800-005",
+      "status": "open",
+      "subject": "DC-3811 inventory dust service remains unqualified",
+      "observed": "DC-3811 receives modeled dry vents from TR-801, H-801, H-802, F-801, MX-801, H-803 and LK-802. Each branch requires simultaneous-load, dust/reactivity, purge and pressure qualification. Collection media, cleaning method, containment, secondary treatment and final outlet are unselected.",
+      "gapIds": [
+        "A3800-005"
+      ]
+    },
+    {
+      "id": "REC-A3800-006",
+      "status": "open",
+      "subject": "DC-3812 borohydride feeder service remains isolated",
+      "observed": "F-802 uses the separate DC-3812 route because KBH4 dust may be water-reactive and may evolve H2. No generic water wash or air-pulse cleaning is assumed. The modeled outlet remains positively blinded until compatible downstream abatement and safe disposal are designed.",
+      "gapIds": [
+        "A3800-006"
+      ]
+    },
+    {
+      "id": "REC-A3800-007",
+      "status": "open",
+      "subject": "Treatment services remain segregated",
+      "observed": "AB-3801, DC-3811 and DC-3812 remain separate from HD-3100 wet-acid treatment, AB-3701 thermal service, E-801 reactive residue and emergency relief. No dry-package operating outlet stream is created because both modeled package outlets are blinded connection holds.",
+      "gapIds": [
+        "A3800-007"
+      ]
+    },
+    {
+      "id": "REC-A5000-001",
+      "status": "open",
+      "subject": "Rated thermal duties and simultaneous demand",
+      "observed": "No approved peak/normal loads, batch simultaneity, exchanger UA or fouling basis is indexed.",
+      "gapIds": [
+        "A5000-001"
+      ]
+    },
+    {
+      "id": "REC-A5000-002",
+      "status": "open",
+      "subject": "Hydraulic and mechanical design",
+      "observed": "Flow, pressure, pressure loss, NPSH, relief, expansion volume and equipment ratings remain unapproved.",
+      "gapIds": [
+        "A5000-002"
+      ]
+    },
+    {
+      "id": "REC-A5000-003",
+      "status": "open",
+      "subject": "Temperature basis",
+      "observed": "Draft ranges are 80–95/60–80 °C HW, 25–30/35–40 °C CW and 5–7/10–15 °C CHW; illustrated values are not operating setpoints.",
+      "gapIds": [
+        "A5000-003"
+      ]
+    },
+    {
+      "id": "REC-A5000-004",
+      "status": "open",
+      "subject": "Secondary-loop separation",
+      "observed": "Four TCUs use heat-transfer barriers; media, pressure hierarchy, leak detection and contamination response are unresolved.",
+      "gapIds": [
+        "A5000-004"
+      ]
+    },
+    {
+      "id": "REC-A5000-005",
+      "status": "open",
+      "subject": "R-201 cooldown margin",
+      "observed": "The 10 °C process target is only 3–5 K above draft chilled-water supply across two heat-transfer barriers.",
+      "gapIds": [
+        "A5000-005"
+      ]
+    },
+    {
+      "id": "REC-A5000-006",
+      "status": "open",
+      "subject": "Availability and safeguards",
+      "observed": "A/B pump geometry does not establish 2 × 100% capacity; shared systems receive no emergency-cooling credit.",
+      "gapIds": [
+        "A5000-006"
+      ]
+    },
+    {
+      "id": "REC-A5000-007",
+      "status": "open",
+      "subject": "HX-601 heating medium",
+      "observed": "HX-601 remains isolated and unassigned; draft hot water cannot provide the cited 140–145 °C dryer inlet by ordinary heat exchange.",
+      "gapIds": [
+        "A5000-007"
+      ]
+    },
+    {
+      "id": "REC-A5000-008",
+      "status": "open",
+      "subject": "Cooling-tower auxiliaries",
+      "observed": "Spray-water makeup, treatment, blowdown and winterization remain separate unresolved systems.",
+      "gapIds": [
+        "A5000-008"
+      ]
+    },
+    {
+      "id": "REC-A5000-009",
+      "status": "open",
+      "subject": "Controls and live state",
+      "observed": "CP-5000 is indication intent only; I/O, trips, setpoints and validated live data are absent.",
+      "gapIds": [
+        "A5000-009"
+      ]
+    },
+    {
+      "id": "REC-A6000-001",
+      "status": "open",
+      "subject": "Emergency-water source and topology",
+      "observed": "Dedicated potable, tempered source, treatment, storage and distribution topology are undefined; no common header is established.",
+      "gapIds": [
+        "A6000-001"
+      ]
+    },
+    {
+      "id": "REC-A6000-002",
+      "status": "open",
+      "subject": "Hydraulic capacity and duration",
+      "observed": "Station flow, pressure, simultaneous demand, duration, pipe sizing and residual pressure are unverified.",
+      "gapIds": [
+        "A6000-002"
+      ]
+    },
+    {
+      "id": "REC-A6000-003",
+      "status": "open",
+      "subject": "Temperature and winter protection",
+      "observed": "Tempering, delivered temperature, heat tracing, insulation, freeze protection and cold-weather availability are unresolved.",
+      "gapIds": [
+        "A6000-003"
+      ]
+    },
+    {
+      "id": "REC-A6000-004",
+      "status": "open",
+      "subject": "Backflow and isolation",
+      "observed": "Backflow prevention, branch isolation, test connections, dead-leg control and maintenance bypass are unresolved.",
+      "gapIds": [
+        "A6000-004"
+      ]
+    },
+    {
+      "id": "REC-A6000-005",
+      "status": "open",
+      "subject": "Runoff segregation and capacity",
+      "observed": "Compatible runoff destinations and capacity are unresolved; no reactive-spill, wastewater or storm connection is claimed.",
+      "gapIds": [
+        "A6000-005"
+      ]
+    },
+    {
+      "id": "REC-A6000-006",
+      "status": "open",
+      "subject": "Coverage and same-level access",
+      "observed": "Locations are planning reservations; exposure points, walking time, actuator reach and elevated-work coverage remain unapproved.",
+      "gapIds": [
+        "A6000-006"
+      ]
+    },
+    {
+      "id": "REC-A6000-007",
+      "status": "open",
+      "subject": "Selection and commissioning",
+      "observed": "Supplier selection, spray pattern, hands-free operation, signage, training, tests and commissioning are unavailable.",
+      "gapIds": [
+        "A6000-007"
+      ]
+    },
+    {
+      "id": "REC-A6000-008",
+      "status": "open",
+      "subject": "Common-service ownership",
+      "observed": "Battery limits, utility ownership, isolation and interfaces with A-4000/A-5000/A-6000 argon remain unresolved.",
+      "gapIds": [
+        "A6000-008"
+      ]
+    },
+    {
+      "id": "REC-A100-001",
+      "status": "open",
+      "subject": "Equipment capacities and ratings",
+      "observed": "Approved R-101, T-102 and H-101/SF-101 datasheets are unavailable.",
+      "gapIds": [
+        "A100-001"
+      ]
+    },
+    {
+      "id": "REC-A100-002",
+      "status": "open",
+      "subject": "Materials and corrosion basis",
+      "observed": "Materials of construction, linings, corrosion allowance and compatibility are unapproved.",
+      "gapIds": [
+        "A100-002"
+      ]
+    },
+    {
+      "id": "REC-A100-003",
+      "status": "open",
+      "subject": "Controls and safeguards",
+      "observed": "P&ID tags, alarm/trip setpoints, relief basis and permissives are unavailable.",
+      "gapIds": [
+        "A100-003"
+      ]
+    },
+    {
+      "id": "REC-A100-004",
+      "status": "open",
+      "subject": "Recipe and batch basis",
+      "observed": "Graphite/acid quantities, addition rates, mixing time and acceptance criteria are unresolved.",
+      "gapIds": [
+        "A100-004"
+      ]
+    },
+    {
+      "id": "REC-A100-005",
+      "status": "open",
+      "subject": "Containment and transfer details",
+      "observed": "Charging, dust control, acid unloading, drainage and spill-recovery details require approval.",
+      "gapIds": [
+        "A100-005"
+      ]
+    },
+    {
+      "id": "REC-A100-006",
+      "status": "open",
+      "subject": "Source revision status",
+      "observed": "FEED-PFD-0100 remains a draft basis and requires reconciliation with approved project documents.",
+      "gapIds": [
+        "A100-006"
+      ]
+    },
+    {
+      "id": "REC-A140-001",
+      "status": "open",
+      "subject": "Reactor capacities and ratings",
+      "observed": "Approved R-141A/B/C/D datasheets and working volumes are unavailable.",
+      "gapIds": [
+        "A140-001"
+      ]
+    },
+    {
+      "id": "REC-A140-002",
+      "status": "open",
+      "subject": "Materials and corrosion basis",
+      "observed": "Reactor, charging and transfer materials and compatibility are unapproved.",
+      "gapIds": [
+        "A140-002"
+      ]
+    },
+    {
+      "id": "REC-A140-003",
+      "status": "open",
+      "subject": "Controls and safeguards",
+      "observed": "Temperature, pressure, feed, agitation, relief and interlock details are unresolved.",
+      "gapIds": [
+        "A140-003"
+      ]
+    },
+    {
+      "id": "REC-A140-004",
+      "status": "open",
+      "subject": "Recipe and parallel allocation",
+      "observed": "Premix, K2S2O8 and P2O5 quantities, addition sequence and branch allocation are unresolved.",
+      "gapIds": [
+        "A140-004"
+      ]
+    },
+    {
+      "id": "REC-A140-005",
+      "status": "open",
+      "subject": "Shared charging-package definition",
+      "observed": "CH-141/CH-142 count, branch ownership, dust control and isolation require approved design.",
+      "gapIds": [
+        "A140-005"
+      ]
+    },
+    {
+      "id": "REC-A140-006",
+      "status": "open",
+      "subject": "Source revision status",
+      "observed": "FEED-PFD-0140 remains a draft basis and requires reconciliation with approved project documents.",
+      "gapIds": [
+        "A140-006"
+      ]
+    },
+    {
+      "id": "REC-A160-001",
+      "status": "open",
+      "subject": "Equipment capacities and ratings",
+      "observed": "Approved tank, filter, dryer, transfer and vacuum-package datasheets are unavailable.",
+      "gapIds": [
+        "A160-001"
+      ]
+    },
+    {
+      "id": "REC-A160-002",
+      "status": "open",
+      "subject": "Materials and corrosion basis",
+      "observed": "Materials, filter media, seals, trays and product-contact finishes are unapproved.",
+      "gapIds": [
+        "A160-002"
+      ]
+    },
+    {
+      "id": "REC-A160-003",
+      "status": "open",
+      "subject": "Controls and safeguards",
+      "observed": "P&ID tags, sequences, alarms, trips, relief and vacuum safeguards are unresolved.",
+      "gapIds": [
+        "A160-003"
+      ]
+    },
+    {
+      "id": "REC-A160-004",
+      "status": "open",
+      "subject": "Filtration and drying performance",
+      "observed": "Wash endpoint, filtration cycle, cake moisture and dryer endpoint are unresolved.",
+      "gapIds": [
+        "A160-004"
+      ]
+    },
+    {
+      "id": "REC-A160-005",
+      "status": "open",
+      "subject": "Baseline versus alternatives",
+      "observed": "Only the baseline FEED arrangement is promoted; dryer, enclosed and integrated layouts remain mutually exclusive design studies.",
+      "gapIds": [
+        "A160-005"
+      ]
+    },
+    {
+      "id": "REC-A160-006",
+      "status": "open",
+      "subject": "Interface qualification",
+      "observed": "RO water, wastewater, vent, condensate, thermal and dry-product battery limits require approved sources.",
+      "gapIds": [
+        "A160-006"
+      ]
+    },
+    {
+      "id": "REC-A900-001",
+      "status": "open",
+      "subject": "Missing approved A-900 source package",
+      "observed": "No approved PFD, P&ID, equipment list, vendor package or operating narrative is available.",
+      "gapIds": [
+        "A900-001"
+      ]
+    },
+    {
+      "id": "REC-A900-002",
+      "status": "open",
+      "subject": "Product acceptance and short transfer technology",
+      "observed": "Temperature, quality, residual reactivity, receiving atmosphere, transfer mechanism and receiver capacity are unresolved.",
+      "gapIds": [
+        "A900-002"
+      ]
+    },
+    {
+      "id": "REC-A900-003",
+      "status": "open",
+      "subject": "Argon consumers and demand",
+      "observed": "AR-901/902/903 remain positively blinded reservations; no branch is selected or operating.",
+      "gapIds": [
+        "A900-003"
+      ]
+    },
+    {
+      "id": "REC-A900-004",
+      "status": "open",
+      "subject": "Dust and exhaust destination",
+      "observed": "DC-901 is a local functional envelope with an independent unresolved outlet; no treatment or permitted release is asserted.",
+      "gapIds": [
+        "A900-004"
+      ]
+    },
+    {
+      "id": "REC-A900-005",
+      "status": "open",
+      "subject": "Pelletization, finishing and release criteria",
+      "observed": "Pellet formulation, formation method, size/strength, cooling, classification, package format, containment, cleaning and reject criteria are unresolved.",
+      "gapIds": [
+        "A900-005"
+      ]
+    },
+    {
+      "id": "REC-A900-006",
+      "status": "open",
+      "subject": "Protection and operability basis",
+      "observed": "Combustible-dust properties, ignition protection, inerting acceptance, ergonomics, maintenance and recovery procedures are unapproved. Equipment skids and frames are provisional; vendor loads, structural member sizing, anchorage and vibration isolation remain unverified.",
+      "gapIds": [
+        "A900-006"
+      ]
+    }
+  ]
+}

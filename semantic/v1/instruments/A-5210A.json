@@ -1,0 +1,109 @@
+{
+  "assetId": "A-5210A",
+  "instruments": [
+    {
+      "functionId": "A-5210A-SUCTION-PRESSURE",
+      "variable": "suction pressure",
+      "purpose": "Cooling-water circulation pump A monitoring",
+      "tag": null,
+      "range": null,
+      "status": "functional intent only; no approved instrument, setpoint, trip or SIS claim",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ],
+      "gapId": "A5000-009"
+    },
+    {
+      "functionId": "A-5210A-DISCHARGE-PRESSURE",
+      "variable": "discharge pressure",
+      "purpose": "Cooling-water circulation pump A monitoring",
+      "tag": null,
+      "range": null,
+      "status": "functional intent only; no approved instrument, setpoint, trip or SIS claim",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ],
+      "gapId": "A5000-009"
+    },
+    {
+      "functionId": "A-5210A-FLOW",
+      "variable": "flow",
+      "purpose": "Cooling-water circulation pump A monitoring",
+      "tag": null,
+      "range": null,
+      "status": "functional intent only; no approved instrument, setpoint, trip or SIS claim",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ],
+      "gapId": "A5000-009"
+    },
+    {
+      "functionId": "A-5210A-MOTOR-STATUS",
+      "variable": "motor status",
+      "purpose": "Cooling-water circulation pump A monitoring",
+      "tag": null,
+      "range": null,
+      "status": "functional intent only; no approved instrument, setpoint, trip or SIS claim",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ],
+      "gapId": "A5000-009"
+    }
+  ]
+}

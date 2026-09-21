@@ -1,0 +1,7 @@
+{
+  "assetId": "AB-3801",
+  "bindingId": "GEOMETRY-AB-3801",
+  "modelEquipmentId": 630,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; the package is a layout envelope and dimensions, internals, duties and ratings remain unqualified."
+}

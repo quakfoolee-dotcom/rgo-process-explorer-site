@@ -1,0 +1,59 @@
+{
+  "revision": "A5000-concept-70",
+  "all": {
+    "externalElements": 7296,
+    "directAttachmentElements": 1076,
+    "supports": 3602,
+    "rackFrames": 235,
+    "existingSteelAttachmentGroups": 23,
+    "columns": 589,
+    "sharedStructures": 112,
+    "placementHolds": 596,
+    "shortConnections": 5839,
+    "vendorFlexible": 132,
+    "structurallyQualified": false
+  },
+  "optimization": {
+    "baseline": {
+      "revision": "pipe-support-31",
+      "frames": 672,
+      "columns": 1272,
+      "bearings": 1229,
+      "memberLengthM": 13367.883563560415,
+      "memberEnvelopeVolumeM3": 248.0813152417644
+    },
+    "frames": 235,
+    "columns": 589,
+    "sharedStructures": 112,
+    "singleBearingStructures": 31,
+    "singleBearingAttachmentGroups": 9,
+    "memberLengthM": 13442.295756132358,
+    "memberEnvelopeVolumeM3": 167.7403657023889,
+    "columnReductionPercent": 53.69496855345912,
+    "frameReductionPercent": 65.02976190476191,
+    "memberLengthReductionPercent": -0.5566490179102379,
+    "metricBasis": "Current totals include the added A-1000 treatment area; comparison baselines predate that expansion. Geometry comparison only. Member envelope volume is not steel mass or a material take-off; sections and connections are unqualified.",
+    "previousRevision": {
+      "baseline": {
+        "revision": "pipe-support-32",
+        "frames": 226,
+        "columns": 434,
+        "bearings": 1236,
+        "singleBearingStructures": 89,
+        "memberLengthM": 6081.384688446933,
+        "memberEnvelopeVolumeM3": 92.20804656438064
+      },
+      "frameReductionPercent": -3.9823008849557473,
+      "columnReductionPercent": -35.71428571428572,
+      "memberLengthReductionPercent": -121.04005000159361
+    }
+  },
+  "a5000": {
+    "racks": 32,
+    "columns": 103,
+    "localColumns": 20,
+    "bearings": 788,
+    "placementElements": 63
+  },
+  "parts": 147592
+}

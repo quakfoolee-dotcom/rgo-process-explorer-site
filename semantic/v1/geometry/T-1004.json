@@ -1,0 +1,7 @@
+{
+  "assetId": "T-1004",
+  "bindingId": "GEOMETRY-T-1004",
+  "modelEquipmentId": 134,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

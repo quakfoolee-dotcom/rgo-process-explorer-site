@@ -1,0 +1,55 @@
+{
+  "assetId": "P-1011",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "P-1011",
+      "source": "MODEL-A1000",
+      "revision": "V150 / 0f89c6bb63ec5c5127db6f48f8d1843733c0b83c",
+      "page": null,
+      "status": "model-derived",
+      "confidence": "review required",
+      "gapId": "A1000-005"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A1000-003"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A1000-003"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A1000-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A1000-003"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+/* Quiet guidance above controls. Preserve semantic groups and reading order,
+   but let each button use the remaining row width before wrapping. */
+/* Give the scene and dock explicit, independent rectangles. The measured dock
+   height reserves only its real footprint and cannot collapse the 3D scene. */
+.stage{display:block;--stage-toolbar-space:240px}
+.stage #viewport{position:absolute;inset:0 0 var(--stage-toolbar-space,190px) 0;min-width:0;min-height:0;overflow:hidden}
+.stage #viewport > canvas{position:absolute;inset:0;width:100%;height:100%}
+/* The dock owns only the height its wrapped controls actually need.
+   --stage-toolbar-space is a measured viewport reservation, not a dock height. */
+.view-dock{position:absolute;left:0;right:0;bottom:0;height:auto;min-height:0;max-height:none;min-width:0;overflow-y:visible;padding:8px 14px 10px;display:flex;flex-direction:column;gap:6px;z-index:4;color:#d5e5f0;background:#0c1825;border-top:1px solid #34495d;pointer-events:none}
+.dock-info{display:flex;align-items:center;flex-wrap:wrap;gap:4px 18px;min-width:0;font-size:.875rem;line-height:1.4;pointer-events:auto}
+.navigation-hint{flex:0 1 auto;max-width:100%;color:#b9d0df}
+.view-dock #pivot-status{flex:1 1 18rem;min-width:0;max-width:none;margin:0;text-align:right;font-size:.875rem;line-height:1.4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#c6dce9}
+.view-dock #pivot-status:focus{white-space:normal;overflow-wrap:anywhere;outline:2px solid #68dfc6;outline-offset:2px}
+.view-dock #structure-visibility-status{flex:0 1 auto;font-size:.875rem;line-height:1.4;color:#ffd89a}
+.view-dock [hidden]{display:none!important}
+.view-dock .stage-options{position:static;inset:auto;transform:none;display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:stretch;gap:6px;width:100%;max-width:none;margin:0;padding:0;background:none;backdrop-filter:none;white-space:normal;pointer-events:auto}
+.view-dock .dock-group{display:contents}
+.view-dock .dock-group button{min-height:44px;margin:0;padding:7px 9px;font-size:.875rem;line-height:1.25;white-space:nowrap;border-radius:5px}
+.view-dock .dock-group button:disabled{opacity:.5;cursor:default}
+.view-dock .structure-visibility-control{display:flex;align-items:stretch}
+.view-dock .structure-visibility-control>button{width:100%;height:auto}
+.view-dock #structure-visibility-panel{max-width:calc(100cqw - 28px);max-height:calc(100svh - 180px);overflow:auto}
+.journey-card{scroll-margin-top:12px}
+@container (max-width:720px){
+ .view-dock #pivot-status{flex-basis:100%;text-align:left}
+}
+@container (max-width:480px){
+ .view-dock{padding:8px 10px}
+ .view-dock .stage-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+ .view-dock .dock-group button{white-space:normal;overflow-wrap:anywhere;min-width:0;padding:7px 5px}
+ .view-dock .structure-visibility-control{min-width:0}
+ .view-dock #structure-visibility-panel{left:auto;right:0;max-width:calc(100cqw - 20px)}
+}
+@media(min-width:1700px){.stage{--stage-toolbar-space:210px}}
+@media(max-width:760px){.stage{--stage-toolbar-space:300px}.stage,.inspection-mode .stage{min-height:calc(340px + var(--stage-toolbar-space))}}
+
+#precision[aria-pressed=true]{background:#244d5c;border-color:#8bdcd2;color:#edfffc}
+#set-pivot{margin-top:8px}
+
+/* Forklift and engineer tools share the same floating-panel footprint. */
+#transport-review{position:absolute;left:18px;top:84px;width:330px;max-width:calc(100% - 36px);max-height:calc(100% - var(--stage-toolbar-space) - 100px);overflow:auto;overscroll-behavior:contain;z-index:12;padding:14px;background:rgba(17,34,48,.97);border:1px solid #668895;border-radius:8px;color:#e1eaf1;box-shadow:0 8px 24px #0004;font-size:.875rem;line-height:1.5;scrollbar-width:thin}
+#transport-review[hidden]{display:none}
+#transport-review .transport-heading{position:sticky;top:-14px;margin:-14px -14px 0;padding:12px 14px 8px;display:flex;align-items:center;justify-content:space-between;gap:10px;background:#112230;z-index:1}
+#transport-heading{font-size:1rem;line-height:1.4;margin:0}
+#transport-close{min-width:44px;min-height:44px;font-size:20px;padding:0 7px}
+#transport-review p{margin:8px 0}
+#transport-review select{min-height:44px;background:#213749;border-color:#668895;font:inherit}
+#transport-review .tool-row{display:flex;gap:6px;margin:8px 0}
+#transport-review .transport-speed-row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+#transport-review .transport-speed-row label{margin:0}
+#transport-rate{flex:0 1 62%}
+#transport-position{display:block;min-height:44px;margin:0;accent-color:#f5c45d;cursor:ew-resize;touch-action:pan-y}
+#transport-position:disabled{cursor:not-allowed}
+#transport-pose{font-variant-numeric:tabular-nums;color:#f5c45d}
+#transport-review details{border-top:1px solid #405968;margin-top:12px;padding-top:10px}
+#transport-review summary{min-height:32px;color:#c3d8e5}
+#transport-review input[type=number]{min-height:40px}
+@media(max-width:640px){#transport-review{left:10px;top:112px;max-width:calc(100% - 20px);max-height:calc(100% - var(--stage-toolbar-space) - 124px)}}

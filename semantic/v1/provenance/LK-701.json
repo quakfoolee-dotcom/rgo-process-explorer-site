@@ -1,0 +1,55 @@
+{
+  "assetId": "LK-701",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "LK-701",
+      "source": "MODEL-A700",
+      "revision": "V147 / 3313c00fbde0d2bdc4480201823d2012260b2e15",
+      "page": null,
+      "status": "model-derived",
+      "confidence": "review required",
+      "gapId": "A700-005"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A700-003"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A700-003"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A700-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A700-003"
+    }
+  ]
+}

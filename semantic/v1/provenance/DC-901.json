@@ -1,0 +1,71 @@
+{
+  "assetId": "DC-901",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "DC-901",
+      "source": "MODEL-A900-V163",
+      "revision": "V163",
+      "status": "model-derived",
+      "confidence": "review required",
+      "gapId": "A900-001"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A900-005"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A900-005"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A900-005"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A900-005"
+    },
+    {
+      "valueId": "PV-A-900-0195",
+      "property": "design.materialOfConstruction",
+      "value": "Conductive and grounded 316L or conductive PTFE-lined duct/hoses; antistatic PTFE filter media",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 60 (M-056)",
+      "status": "held",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "CF-materialOfConstruc-DC-901",
+      "note": "scope: DC-901/FN-901 dust collection, recycle ducting and hoses; alt: Conductive FRP where vendor-certified for dust/static duty; status FIRM | D-A900-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "identityHold": "Model DC-901 serves PG-901 only and has no FN-901; register DC-901 is the enclosed-handling extraction for the whole area"
+    }
+  ]
+}

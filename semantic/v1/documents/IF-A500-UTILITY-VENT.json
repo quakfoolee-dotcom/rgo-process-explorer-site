@@ -1,0 +1,30 @@
+{
+  "assetId": "IF-A500-UTILITY-VENT",
+  "documents": [
+    {
+      "documentId": "MODEL-A500",
+      "title": "Sonication model routes and provisional three-cell arrangement",
+      "revision": "V145 / b278d4c293d2eb9f98b5f08d975215873bd755c9",
+      "page": null,
+      "status": "model-derived; not an approved process design",
+      "availability": "available model source reviewed",
+      "files": {
+        "sonication.js": "f0fffae28815c2549da659a1ddd45df6c22de89ac89d83ecf1f3d0148202c25e"
+      },
+      "hashNormalization": "UTF-8 text with LF line endings"
+    },
+    {
+      "documentId": "FEED-PFD-0500",
+      "sheetId": "FEED-PFD-0500",
+      "title": "Commercial Scale Sonication",
+      "revision": null,
+      "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+      "page": 5,
+      "file": "pfd-temperature-sheets.pdf",
+      "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+      "status": "Draft - Not for Use; not approved",
+      "availability": "available and reviewed",
+      "href": "./pfd-temperature-sheets.pdf#page=5"
+    }
+  ]
+}

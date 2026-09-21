@@ -1,0 +1,85 @@
+{
+  "assetId": "E-501",
+  "name": "Sonication cooler; draft HX-501 identity unresolved",
+  "assetClassId": "HeatExchanger",
+  "status": "proposed",
+  "identityStatus": "model-derived; tag qualification open",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-500",
+    "system": "A-500 sonication process context",
+    "parentAsset": null
+  },
+  "processFunction": "Sonication cooler; draft HX-501 identity unresolved",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": "PVDF process-wetted envelope, or 316L electropolished where product-metal budget permits"
+  },
+  "operatingEnvelope": {
+    "outletTemperatureC": "30–40 (control TLGO outlet temperature prior to A-600 drying 'for stability'; temperature monitoring at US-501 outlet)"
+  },
+  "processBasis": [
+    {
+      "label": "Draft outlet target before A-600",
+      "value": [
+        30,
+        40
+      ],
+      "unit": "°C",
+      "basisType": "draft-target-range",
+      "status": "draft process target; not a selected setpoint or equipment rating",
+      "source": {
+        "documentId": "FEED-PFD-0500",
+        "sheetId": "FEED-PFD-0500",
+        "title": "Commercial Scale Sonication",
+        "revision": null,
+        "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+        "page": 5,
+        "file": "pfd-temperature-sheets.pdf",
+        "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+        "status": "Draft - Not for Use; not approved",
+        "availability": "available and reviewed",
+        "href": "./pfd-temperature-sheets.pdf#page=5"
+      }
+    }
+  ],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Draft HX-501 is a shell-and-tube exchanger; model E-501 depicts a coil arrangement. E-501 remains the model-bound record; HX-501 is an unresolved source-tag candidate, not a second exchanger or approved alias.",
+    "Draft sends cooler outlet toward A-600 with an optional 507 recycle to T-501. Model returns cooled slurry to T-501 and uses proposed P-502 for accepted-product transfer. These paths are not an approved operating sequence.",
+    "Three modeled cells, energy dose, residence time, flow, backpressure, cooling duty and product quality require trials/vendor selection. Draft 1-2 wt% and 30-40 degC targets are not approved setpoints or equipment ratings.",
+    "Available sheet is Draft - Not for Use with revision XXX. Bypass is mentioned conceptually and degassing is suggested; neither is asserted as an installed or connected package. Draft says no added water or DMF for sonication.",
+    "Pressure/vacuum and relief sizing, cooling-loss response, acoustic protection, CIP isolation, sampling criteria, vent compatibility and drain receiving conditions remain unqualified."
+  ],
+  "sourceTagCandidates": [
+    {
+      "tag": "HX-501",
+      "documentId": "FEED-PFD-0500",
+      "status": "unresolved correspondence; not approved alias",
+      "gapId": "A500-001"
+    }
+  ],
+  "dataLayer": {
+    "area": "A-500",
+    "source": "data/semantic/A-500",
+    "approvedRows": 2,
+    "heldRows": 0,
+    "pendingRows": 3,
+    "identityHold": null,
+    "applied": "2026-09-21",
+    "baseline": {
+      "design": {
+        "capacityM3": null,
+        "designPressure": null,
+        "designTemperature": null,
+        "materialOfConstruction": null
+      },
+      "operatingEnvelope": null
+    },
+    "baselineAbsent": []
+  }
+}

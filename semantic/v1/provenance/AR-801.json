@@ -1,0 +1,55 @@
+{
+  "assetId": "AR-801",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "AR-801",
+      "source": "MODEL-A800",
+      "revision": "V148 / 19b52eb01578140a4d021ec6d47fd98d1b671ba5",
+      "page": null,
+      "status": "model-derived",
+      "confidence": "review required",
+      "gapId": "A800-005"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A800-003"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A800-003"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A800-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A800-003"
+    }
+  ]
+}

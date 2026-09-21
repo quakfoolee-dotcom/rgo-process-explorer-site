@@ -1,0 +1,23 @@
+{
+  "assetId": "VP-164-KO-164",
+  "relationships": [
+    {
+      "id": "REL-VP-164-KO-164-S-160-DRYER-VAPOR",
+      "type": "receivesFrom",
+      "target": "D-164",
+      "role": "D-164 vapor to vacuum/condensate package",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-160-DRYER-VAPOR",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-VP-164-KO-164-GEOM",
+      "type": "representedBy",
+      "target": "GEOMETRY-VP-164-KO-164",
+      "status": "bound to modeled equipment group",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    }
+  ]
+}

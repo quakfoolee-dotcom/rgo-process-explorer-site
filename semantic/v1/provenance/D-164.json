@@ -1,0 +1,97 @@
+{
+  "assetId": "D-164",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "D-164",
+      "source": "FEED-PE-PFD-001",
+      "revision": "V5.1",
+      "status": "draft PFD basis",
+      "confidence": "documented"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A160-001"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A160-002"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A160-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A160-004"
+    },
+    {
+      "valueId": "PV-A-160-0148",
+      "property": "design.materialOfConstruction",
+      "value": "316L, electropolished",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 18 (M-014)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "WV-materialOfConstruc-D-164",
+      "note": "scope: D-164 Pre-G Dryer; alt: 2205 duplex if free acid confirmed; status FIRM | D-A160-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-160-0170",
+      "property": "operatingEnvelope.dryingTemperatureC",
+      "value": 60,
+      "unit": "°C",
+      "source": "FEED-PE-MEB-004",
+      "revision": "V5.0",
+      "location": "'Design Basis & Inputs'!row 33 (T_dry)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": null,
+      "note": "C31 | D-A160-02: 60 °C drying temperature (MEB-004) target; dryer type per Option E.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-160-0171",
+      "property": "operatingEnvelope.productResidualMoistureWtFrac",
+      "value": 0.02,
+      "unit": "wt frac",
+      "source": "FEED-PE-MEB-004",
+      "revision": "V5.0",
+      "location": "'Design Basis & Inputs'!row 35 (w_prod)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": null,
+      "note": "C33 | D-A160-02: 2 wt% dried Pre-G residual moisture (MEB-004).",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

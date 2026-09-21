@@ -1,0 +1,113 @@
+{
+  "assetId": "R-101",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "R-101",
+      "source": "FEED-PE-PFD-001",
+      "revision": "V5.1",
+      "status": "draft PFD basis",
+      "confidence": "documented"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A100-001"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A100-002"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A100-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A100-004"
+    },
+    {
+      "valueId": "PV-A-100-0113",
+      "property": "design.materialOfConstruction",
+      "value": "Glass-lined carbon steel (ISO 28721 / DIN 28060)",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 5 (M-001)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "WV-materialOfConstruc-R-101",
+      "note": "scope: R-101 Graphite/Acid Premix Tank; alt: PTFE/PFA-lined CS; status FIRM | D-A100-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-100-0121",
+      "property": "operatingEnvelope.h2so4ToGraphiteRatio",
+      "value": 18.4,
+      "unit": "kg/kg graphite",
+      "source": "FEED-PE-MEB-002",
+      "revision": "V8.0",
+      "location": "'Design Basis & Inputs'!row 8 (R)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": null,
+      "note": "98 wt% acid | KEY VARIABLE — drives all acid/graphite flows | D-A100-02: 18.4 kg 98 wt% H₂SO₄ per kg graphite; MEB-002, MEB-003, LST-005 agree.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-100-0123",
+      "property": "operatingEnvelope.ventLossFraction",
+      "value": 0.007,
+      "unit": null,
+      "source": "FEED-PE-MEB-002",
+      "revision": "V8.0",
+      "location": "'Design Basis & Inputs'!row 31 (f_vent)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": null,
+      "note": "FG-103 | 0.7% of R-101 mixed feed exits as FG-103 acid mist vent (per PFD). Remainder (1−f_vent) is product stream 108. | D-A100-02: 0.7 % vent loss FG-103 (single source; consistent with MEB-003 f_V).",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-100-0137",
+      "property": "operatingEnvelope.batchBasis",
+      "value": "R-141: 500 kg graphite per batch (batch sizes of PFD V5.1.1) — R-101 premix feeds the R-141 bank; graphite design feed 1,523 kg/d (63.5 kg/h)",
+      "unit": null,
+      "source": "FEED-PE-DBM-001",
+      "revision": "V2.0",
+      "location": "§3.3 Table 3.3-1 / batch structure",
+      "status": "approved",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": null,
+      "note": "DBM V2.0 | D-A100-02: DBM V2.0: premix feeds R-141 batches of 500 kg graphite; design feed 1,523 kg/d.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

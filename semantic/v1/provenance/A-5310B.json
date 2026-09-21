@@ -1,0 +1,85 @@
+{
+  "assetId": "A-5310B",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "A-5310B",
+      "source": "MODEL-A5000",
+      "revision": "V156",
+      "status": "model-derived",
+      "confidence": "review required"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A5000-001"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A5000-002"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A5000-002"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A5000-002"
+    },
+    {
+      "property": "operatingEnvelope",
+      "value": {
+        "supplyTemperatureRangeC": [
+          5,
+          7
+        ],
+        "returnTemperatureRangeC": [
+          10,
+          15
+        ],
+        "status": "Draft PFD range; no selected setpoint or live measurement"
+      },
+      "source": "FEED-PFD-5000",
+      "revision": "V5.1",
+      "page": 19,
+      "status": "draft — not for use",
+      "confidence": "documented draft",
+      "gapId": "A5000-003"
+    },
+    {
+      "valueId": "PV-A-5000-0179",
+      "property": "design.materialOfConstruction",
+      "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
+      "unit": null,
+      "source": "FEED-PE-MAT-002",
+      "revision": "V1.1",
+      "location": "'Selection Matrix'!row 69 (M-065)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "CF-materialOfConstruc-A-5310B",
+      "note": "scope: A-5100/A-5110 A/B/V-5110/CV-5111; A-5200/A-5210 A/B/CV-5211; A-5300/A-5310 A/B/CV-5311; alt: Nonmetallic secondary piping on low-pressure branches where temperature/rating permits; status FIRM | D-A5000-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "assetId": "SI-201B",
+  "relationships": [
+    {
+      "id": "REL-SI-201B-AREA",
+      "type": "locatedIn",
+      "target": "A-200",
+      "status": "model register area",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-SI-201B-S-200-RC-B-P-205B",
+      "type": "connectedTo",
+      "target": "P-205B",
+      "streamId": "S-200-RC-B",
+      "role": "R-201B recirculation loop · modeled; package allocation open",
+      "status": "modeled; package allocation open",
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "REL-SI-201B-S-200-RC-B-M-201B",
+      "type": "connectedTo",
+      "target": "M-201B",
+      "streamId": "S-200-RC-B",
+      "role": "R-201B recirculation loop · modeled; package allocation open",
+      "status": "modeled; package allocation open",
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          25
+        ]
+      }
+    },
+    {
+      "id": "REL-SI-201B-S-200-KMNO4-B-SF-202B",
+      "type": "connectedTo",
+      "target": "SF-202B",
+      "streamId": "S-200-KMNO4-B",
+      "role": "KMnO4 induction B · PFD ratio; proposed induction arrangement",
+      "status": "PFD ratio; proposed induction arrangement",
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          23
+        ]
+      }
+    }
+  ]
+}

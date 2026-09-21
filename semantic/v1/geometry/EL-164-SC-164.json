@@ -1,0 +1,7 @@
+{
+  "assetId": "EL-164-SC-164",
+  "bindingId": "GEOMETRY-EL-164-SC-164",
+  "modelEquipmentId": 50,
+  "bindingScope": "modeled-equipment-group",
+  "bindingRule": "All geometry owned by model equipment 50 resolves to EL-164-SC-164; canonical identity remains stable across model rebuilds."
+}

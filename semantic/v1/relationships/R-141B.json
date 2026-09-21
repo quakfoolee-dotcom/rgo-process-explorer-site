@@ -1,0 +1,72 @@
+{
+  "assetId": "R-141B",
+  "relationships": [
+    {
+      "id": "REL-R-141B-S-100-PREMIX-B",
+      "type": "receivesFrom",
+      "target": "R-101",
+      "role": "R-101 premix to R-141B",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-100-PREMIX-B",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-R-141B-S-140-CH141-B",
+      "type": "receivesFrom",
+      "target": "CH-141-CH-142",
+      "role": "K2S2O8 charge to R-141B",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-140-CH141-B",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-R-141B-S-140-CH142-B",
+      "type": "receivesFrom",
+      "target": "CH-141-CH-142",
+      "role": "P2O5 charge to R-141B",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-140-CH142-B",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-R-141B-S-140-PREG-B",
+      "type": "feeds",
+      "target": "T-161",
+      "role": "R-141B product to T-161",
+      "status": "Modeled topology; quantities and operating conditions unresolved",
+      "streamId": "S-140-PREG-B",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-R-141B-S-140-VENT-R141B",
+      "type": "feeds",
+      "target": "IF-A3000-V-R-141B",
+      "role": "R-141B vent handoff",
+      "status": "Existing A-3000 collection interface; branch rate and composition unresolved",
+      "streamId": "S-140-VENT-R141B",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-R-141B-JACKET",
+      "type": "contains",
+      "target": "R-141B-JACKET",
+      "role": "existing structured thermal-jacket subasset",
+      "status": "modeled; duty unresolved",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-R-141B-GEOM",
+      "type": "representedBy",
+      "target": "GEOMETRY-R-141B",
+      "status": "bound to modeled equipment group",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    }
+  ]
+}

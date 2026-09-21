@@ -1,0 +1,14 @@
+{
+  "assetId": "R-141B",
+  "instruments": [
+    {
+      "functionId": "R-141B-STATE",
+      "variable": "equipment state",
+      "purpose": "Confirm permissive, operating and isolated state",
+      "tag": null,
+      "range": null,
+      "status": "function only; approved instrument tag and logic unresolved",
+      "gapId": "A140-003"
+    }
+  ]
+}

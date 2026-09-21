@@ -1,0 +1,7 @@
+{
+  "assetId": "DR-601",
+  "bindingId": "GEOMETRY-DR-601",
+  "modelEquipmentId": 71,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

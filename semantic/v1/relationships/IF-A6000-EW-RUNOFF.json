@@ -1,0 +1,405 @@
+{
+  "assetId": "IF-A6000-EW-RUNOFF",
+  "relationships": [
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES101",
+      "type": "receivesFrom",
+      "target": "ES-101",
+      "role": "ES-101 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES101",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES141",
+      "type": "receivesFrom",
+      "target": "ES-141",
+      "role": "ES-141 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES141",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES161",
+      "type": "receivesFrom",
+      "target": "ES-161",
+      "role": "ES-161 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES161",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES201",
+      "type": "receivesFrom",
+      "target": "ES-201",
+      "role": "ES-201 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES201",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES301",
+      "type": "receivesFrom",
+      "target": "ES-301",
+      "role": "ES-301 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES301",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES401",
+      "type": "receivesFrom",
+      "target": "ES-401",
+      "role": "ES-401 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES401",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES2000",
+      "type": "receivesFrom",
+      "target": "ES-2000",
+      "role": "ES-2000 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES2000",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES3000",
+      "type": "receivesFrom",
+      "target": "ES-3000",
+      "role": "ES-3000 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES3000",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES16001",
+      "type": "receivesFrom",
+      "target": "ES-160-01",
+      "role": "ES-160-01 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES16001",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES20002",
+      "type": "receivesFrom",
+      "target": "ES-200-02",
+      "role": "ES-200-02 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES20002",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES14003",
+      "type": "receivesFrom",
+      "target": "ES-140-03",
+      "role": "ES-140-03 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES14003",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES20004",
+      "type": "receivesFrom",
+      "target": "ES-200-04",
+      "role": "ES-200-04 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES20004",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES30005",
+      "type": "receivesFrom",
+      "target": "ES-300-05",
+      "role": "ES-300-05 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES30005",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES30006",
+      "type": "receivesFrom",
+      "target": "ES-300-06",
+      "role": "ES-300-06 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES30006",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES20007",
+      "type": "receivesFrom",
+      "target": "ES-200-07",
+      "role": "ES-200-07 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES20007",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES20008",
+      "type": "receivesFrom",
+      "target": "ES-200-08",
+      "role": "ES-200-08 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES20008",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES40009",
+      "type": "receivesFrom",
+      "target": "ES-400-09",
+      "role": "ES-400-09 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES40009",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES100010",
+      "type": "receivesFrom",
+      "target": "ES-1000-10",
+      "role": "ES-1000-10 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES100010",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES100011",
+      "type": "receivesFrom",
+      "target": "ES-1000-11",
+      "role": "ES-1000-11 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES100011",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES16012",
+      "type": "receivesFrom",
+      "target": "ES-160-12",
+      "role": "ES-160-12 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES16012",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES100013",
+      "type": "receivesFrom",
+      "target": "ES-1000-13",
+      "role": "ES-1000-13 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES100013",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES40014",
+      "type": "receivesFrom",
+      "target": "ES-400-14",
+      "role": "ES-400-14 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES40014",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES20015",
+      "type": "receivesFrom",
+      "target": "ES-200-15",
+      "role": "ES-200-15 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES20015",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES20016",
+      "type": "receivesFrom",
+      "target": "ES-200-16",
+      "role": "ES-200-16 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES20016",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES30017",
+      "type": "receivesFrom",
+      "target": "ES-300-17",
+      "role": "ES-300-17 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES30017",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES40018",
+      "type": "receivesFrom",
+      "target": "ES-400-18",
+      "role": "ES-400-18 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES40018",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES102",
+      "type": "receivesFrom",
+      "target": "ES-102",
+      "role": "ES-102 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES102",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES601",
+      "type": "receivesFrom",
+      "target": "ES-601",
+      "role": "ES-601 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES601",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES701",
+      "type": "receivesFrom",
+      "target": "ES-701",
+      "role": "ES-701 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES701",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES801",
+      "type": "receivesFrom",
+      "target": "ES-801",
+      "role": "ES-801 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES801",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES802",
+      "type": "receivesFrom",
+      "target": "ES-802",
+      "role": "ES-802 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES802",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES1001",
+      "type": "receivesFrom",
+      "target": "ES-1001",
+      "role": "ES-1001 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES1001",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES1002",
+      "type": "receivesFrom",
+      "target": "ES-1002",
+      "role": "ES-1002 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES1002",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES1003",
+      "type": "receivesFrom",
+      "target": "ES-1003",
+      "role": "ES-1003 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES1003",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES2001",
+      "type": "receivesFrom",
+      "target": "ES-2001",
+      "role": "ES-2001 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES2001",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES2002",
+      "type": "receivesFrom",
+      "target": "ES-2002",
+      "role": "ES-2002 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES2002",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES1004",
+      "type": "receivesFrom",
+      "target": "ES-1004",
+      "role": "ES-1004 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES1004",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES602",
+      "type": "receivesFrom",
+      "target": "ES-602",
+      "role": "ES-602 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES602",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES603",
+      "type": "receivesFrom",
+      "target": "ES-603",
+      "role": "ES-603 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES603",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES202",
+      "type": "receivesFrom",
+      "target": "ES-202",
+      "role": "ES-202 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES202",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    }
+  ]
+}

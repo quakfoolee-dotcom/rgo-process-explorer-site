@@ -1,0 +1,1062 @@
+{
+  "semanticCoreVersion": "1.19.0-foundation",
+  "area": "A-200",
+  "assets": [
+    "R-201A",
+    "R-201B",
+    "R-201C",
+    "R-201D",
+    "T-201",
+    "T-202",
+    "P-203",
+    "P-202",
+    "P-206A",
+    "P-206B",
+    "T-303",
+    "TCU-201",
+    "N2-HEADER-201",
+    "BL-A200",
+    "H-201A",
+    "SF-201A",
+    "H-202A",
+    "SF-202A",
+    "P-205A",
+    "SI-201A",
+    "M-201A",
+    "R-201A-JACKET",
+    "H-201B",
+    "SF-201B",
+    "H-202B",
+    "SF-202B",
+    "P-205B",
+    "SI-201B",
+    "M-201B",
+    "R-201B-JACKET",
+    "H-201C",
+    "SF-201C",
+    "H-202C",
+    "SF-202C",
+    "P-205C",
+    "SI-201C",
+    "M-201C",
+    "R-201C-JACKET",
+    "H-201D",
+    "SF-201D",
+    "H-202D",
+    "SF-202D",
+    "P-205D",
+    "SI-201D",
+    "M-201D",
+    "R-201D-JACKET",
+    "T-301",
+    "T-302",
+    "T-305",
+    "C-301",
+    "T-304",
+    "P-301",
+    "P-302",
+    "P-303",
+    "P-304",
+    "P-305",
+    "P-306",
+    "T-402",
+    "TCU-303",
+    "IF-A300-RO",
+    "IF-A300-WASTE",
+    "IF-A300-VENT",
+    "IF-A300-PEROXIDE-VENT",
+    "TFF-401",
+    "T-403",
+    "P-402",
+    "P-403",
+    "CIP-401",
+    "TK-405",
+    "P-405",
+    "BL-A400",
+    "T-501",
+    "IF-A400-RO",
+    "IF-A400-WASTE",
+    "IF-A400-DRAIN",
+    "IF-A400-TFF-DRAIN",
+    "IF-A400-T402-VENT",
+    "IF-A400-T403-VENT",
+    "IF-A400-TFF-VENT",
+    "P-501",
+    "US-501",
+    "E-501",
+    "P-502",
+    "BL-A500",
+    "T-601",
+    "IF-A500-CWS",
+    "IF-A500-CWR",
+    "IF-A500-CIP-SUPPLY",
+    "IF-A500-CIP-RETURN",
+    "IF-A500-SAMPLE",
+    "IF-A500-VENT",
+    "IF-A500-RELIEF",
+    "IF-A500-DRAIN",
+    "IF-A500-UTILITY-VENT",
+    "IF-A500-UTILITY-DRAIN",
+    "P-601",
+    "DR-601",
+    "BL-601",
+    "HX-601",
+    "F-601",
+    "FN-601",
+    "SC-601",
+    "T-602",
+    "P-SC601",
+    "BL-A600",
+    "TR-701",
+    "IF-A600-GAS",
+    "IF-A600-HEAT-SUPPLY",
+    "IF-A600-HEAT-RETURN",
+    "IF-A600-EXHAUST",
+    "IF-A600-WATER",
+    "IF-A600-BLOWDOWN",
+    "IF-A600-TANK-VENT",
+    "IF-A600-CIP",
+    "IF-A600-CIP-RETURN",
+    "IF-A600-DRYER-WASH",
+    "IF-A600-FILTER-WASH",
+    "IF-A600-WASH-COLLECTION",
+    "IF-A600-DRYER-VENT",
+    "IF-A600-FILTER-VENT",
+    "IF-A600-FEED-SUCTION-DRAIN",
+    "IF-A600-FEED-CASING-DRAIN",
+    "IF-A600-SCRUBBER-SUCTION-DRAIN",
+    "IF-A600-SCRUBBER-CASING-DRAIN",
+    "IF-A600-UTILITY-DRAIN",
+    "LK-701",
+    "H-701",
+    "C-701",
+    "PY-701",
+    "E-702",
+    "T-702",
+    "E-701",
+    "KO-701",
+    "FN-701",
+    "AR-701",
+    "AIT-701",
+    "BL-700-UTIL",
+    "TR-801",
+    "HD-6201",
+    "AB-3701",
+    "IF-A700-E701-SUPPLY",
+    "IF-A700-E701-RETURN",
+    "IF-A700-E702-SUPPLY",
+    "IF-A700-E702-RETURN",
+    "IF-A700-RELIEF",
+    "IF-A700-CONDENSATE",
+    "H-801",
+    "H-802",
+    "F-801",
+    "F-802",
+    "MX-801",
+    "H-803",
+    "RV-801",
+    "PY-801",
+    "E-801",
+    "FN-801",
+    "AR-801",
+    "AIT-801",
+    "PL-801",
+    "LK-802",
+    "BL-800-UTIL",
+    "PSV-801",
+    "AB-3801",
+    "DC-3811",
+    "DC-3812",
+    "IF-A800-REAGENT",
+    "IF-A800-PRODUCT",
+    "IF-A800-RELIEF",
+    "IF-A800-RESIDUE",
+    "IF-A800-PY801-SUPPLY",
+    "IF-A800-PY801-RETURN",
+    "IF-A800-PY801-SUPPLY-DRAIN",
+    "IF-A800-PY801-INLET-DRAIN",
+    "IF-A800-PY801-RETURN-DRAIN",
+    "IF-A800-E801-SUPPLY",
+    "IF-A800-E801-RETURN",
+    "IF-A800-E801-SUPPLY-DRAIN",
+    "IF-A800-E801-INLET-DRAIN",
+    "IF-A800-E801-RETURN-DRAIN",
+    "IF-A900-AR901",
+    "IF-A900-AR902",
+    "IF-A900-AR903",
+    "T-1006",
+    "R-1001",
+    "R-1002",
+    "R-1003",
+    "R-1004",
+    "DC-1001",
+    "T-1001",
+    "T-1002",
+    "T-1003",
+    "T-1004",
+    "T-1005",
+    "P-1004",
+    "P-1003",
+    "P-1002",
+    "P-1001",
+    "M-1001",
+    "P-1005",
+    "P-1006",
+    "P-1007",
+    "P-1008",
+    "P-1009",
+    "P-1010",
+    "BL-A2000",
+    "PL-1001",
+    "BIN-1001",
+    "T-1007",
+    "P-1011",
+    "CP-1001",
+    "T-1008",
+    "P-1012",
+    "T-2001",
+    "P-BW2001",
+    "P-3111",
+    "P-3183",
+    "HD-3100",
+    "IF-A160-WW161",
+    "IF-A160-WW163",
+    "IF-A160-DEC161",
+    "IF-A1000-FILL-T-1001",
+    "IF-A1000-FILL-T-1002",
+    "IF-A1000-FILL-T-1003",
+    "IF-A1000-FILL-T-1004",
+    "IF-A1000-FILL-T-1005",
+    "IF-A1000-VENT-T-1001",
+    "IF-A1000-VENT-T-1002",
+    "IF-A1000-VENT-T-1003",
+    "IF-A1000-VENT-T-1005",
+    "IF-A1000-DRAIN-T-1006",
+    "IF-A1000-DRAIN-R-1001",
+    "IF-A1000-DRAIN-R-1002",
+    "IF-A1000-DRAIN-R-1003",
+    "IF-A1000-DRAIN-R-1004",
+    "IF-A1000-DRAIN-T-1001",
+    "IF-A1000-DRAIN-T-1002",
+    "IF-A1000-DRAIN-T-1003",
+    "IF-A1000-DRAIN-T-1004",
+    "IF-A1000-DRAIN-T-1005",
+    "IF-A1000-CWS",
+    "IF-A1000-CWR",
+    "IF-A1000-SPARE-UF-RETURN",
+    "IF-A1000-SPARE-CIP-RETURN",
+    "IF-A1000-SPARE-SCRUBBER-RETURN",
+    "P-2001",
+    "MMF-2001",
+    "GF-2001",
+    "CF-2001",
+    "UF-2001",
+    "P-2002",
+    "RO-2001",
+    "T-2002",
+    "P-2005",
+    "CF-2002",
+    "T-2003",
+    "P-2003",
+    "T-2004",
+    "P-2004",
+    "CIP-2001",
+    "CP-2000",
+    "TK-UF2001",
+    "P-UF2001",
+    "TK-BW2001",
+    "TK-CIP2001-W",
+    "GF-RO2001A",
+    "P-2002A",
+    "RO-2001A",
+    "PSV-RO-A",
+    "GF-RO2001B",
+    "P-2002B",
+    "RO-2001B",
+    "PSV-RO-B",
+    "GF-RO2001C",
+    "P-2002C",
+    "RO-2001C",
+    "PSV-RO-C",
+    "IF-A2000-BRINE",
+    "IF-A2000-CIP-EHS",
+    "IF-A2000-CIP-LOW",
+    "IF-A2000-AS-FILL",
+    "IF-A2000-CEB",
+    "IF-A2000-RO161",
+    "IF-A2000-RO162",
+    "IF-A2000-RO-F161",
+    "IF-A2000-RO-201",
+    "V-3110",
+    "T-3140",
+    "T-3180",
+    "P-3181A",
+    "P-3181B",
+    "FN-3160",
+    "ST-3170",
+    "T-3182",
+    "P-3182",
+    "ME-3150",
+    "TK-3111",
+    "CP-3000",
+    "TK-3184",
+    "P-3184",
+    "IF-A3000-ATM",
+    "IF-A3000-BYPASS",
+    "IF-A3000-FAN-DRAIN",
+    "IF-A3000-STACK-DRAIN",
+    "IF-A3000-WATER",
+    "IF-A3000-NAOH",
+    "IF-A3000-OVERFLOW",
+    "IF-A3000-NAOH-VENT",
+    "IF-A3000-V-R-101",
+    "IF-A3000-V-T-102",
+    "IF-A3000-V-R-141A",
+    "IF-A3000-V-R-141B",
+    "IF-A3000-V-R-141C",
+    "IF-A3000-V-R-141D",
+    "IF-A3000-V-T-161",
+    "IF-A3000-V-T-162",
+    "IF-A3000-V-T-163",
+    "IF-A3000-AV201",
+    "ST-3702",
+    "CP-3700",
+    "IF-A3700-ATM",
+    "ST-3802",
+    "CP-3800",
+    "IF-A3800-ATM",
+    "IF-A3811-OUTLET",
+    "IF-A3812-OUTLET",
+    "A-5100",
+    "A-5110A",
+    "A-5110B",
+    "V-5110",
+    "HD-5100",
+    "A-5200",
+    "A-5210A",
+    "A-5210B",
+    "V-5210",
+    "HD-5200",
+    "A-5300",
+    "A-5310A",
+    "A-5310B",
+    "V-5310",
+    "HD-5300",
+    "TCU-141",
+    "TCU-1001",
+    "CP-5000",
+    "TK-5111",
+    "TK-5211",
+    "TK-5311",
+    "R-141A-JACKET",
+    "R-141B-JACKET",
+    "R-141C-JACKET",
+    "R-141D-JACKET",
+    "D-164-THERMAL",
+    "IF-A6000-EW-SOURCE",
+    "IF-A6000-EW-RUNOFF",
+    "ES-101",
+    "ES-141",
+    "ES-161",
+    "ES-201",
+    "ES-301",
+    "ES-401",
+    "ES-2000",
+    "ES-3000",
+    "ES-160-01",
+    "ES-200-02",
+    "ES-140-03",
+    "ES-200-04",
+    "ES-300-05",
+    "ES-300-06",
+    "ES-200-07",
+    "ES-200-08",
+    "ES-400-09",
+    "ES-1000-10",
+    "ES-1000-11",
+    "ES-160-12",
+    "ES-1000-13",
+    "ES-400-14",
+    "ES-200-15",
+    "ES-200-16",
+    "ES-300-17",
+    "ES-400-18",
+    "ES-102",
+    "ES-601",
+    "ES-701",
+    "ES-801",
+    "ES-802",
+    "ES-1001",
+    "ES-1002",
+    "ES-1003",
+    "ES-2001",
+    "ES-2002",
+    "ES-1004",
+    "ES-602",
+    "ES-603",
+    "ES-202",
+    "R-101",
+    "T-102",
+    "H-101-SF-101",
+    "R-141A",
+    "R-141B",
+    "R-141C",
+    "R-141D",
+    "CH-141-CH-142",
+    "T-161",
+    "T-162",
+    "F-161",
+    "D-164",
+    "TR-164",
+    "H-164",
+    "EL-164-SC-164",
+    "T-163",
+    "VP-164-KO-164",
+    "TR-901",
+    "H-901",
+    "F-901",
+    "PG-901",
+    "SC-901",
+    "PK-901",
+    "RB-901",
+    "DC-901",
+    "CP-901",
+    "IF-A900-PRODUCT",
+    "IF-A900-REJECT",
+    "IF-A900-DUST"
+  ],
+  "gaps": [
+    {
+      "gapId": "AREA-001",
+      "status": "resolved",
+      "subject": "R-201 bank area",
+      "resolution": "A-200",
+      "basis": "FEED-PE-PFD-001 V5.1.1, FEED-PFD-0200, PDF page 7",
+      "supersedes": "Semantic Core handoff V1.0 area label A-140"
+    },
+    {
+      "gapId": "SRC-001",
+      "status": "open",
+      "subject": "Capacity and working volume",
+      "requiredSource": "Approved R-201 datasheet"
+    },
+    {
+      "gapId": "SRC-002",
+      "status": "open",
+      "subject": "Material of construction, design pressure and design temperature",
+      "requiredSource": "Approved R-201 datasheet and mechanical design basis"
+    },
+    {
+      "gapId": "SRC-003",
+      "status": "open",
+      "subject": "Instrument tags, ranges and loop definitions",
+      "requiredSource": "Issued P&ID, instrument index and control narrative"
+    },
+    {
+      "gapId": "SRC-004",
+      "status": "open",
+      "subject": "Alarm, trip, relief and SIL setpoints",
+      "requiredSource": "HAZOP/LOPA, relief study and approved cause-and-effect"
+    },
+    {
+      "gapId": "SRC-005",
+      "status": "open",
+      "subject": "P-205 and M-201 allocation across four reactors",
+      "requiredSource": "Equipment register and P&ID reconciliation; PFD lists P-205A/B and one M-201 while the model reserves four dedicated packages"
+    },
+    {
+      "gapId": "SRC-006",
+      "status": "open",
+      "subject": "Branch-specific H-201/SF-201 and H-202/SF-202 quantities",
+      "requiredSource": "Equipment register and vendor package definition"
+    },
+    {
+      "gapId": "SRC-007",
+      "status": "open",
+      "subject": "Operational, maintenance and alarm state source",
+      "requiredSource": "Validated simulation, PLC/historian or maintenance-system integration"
+    },
+    {
+      "gapId": "A200-001",
+      "status": "open",
+      "subject": "A-200 supporting equipment identity, allocation, ratings and connectivity",
+      "requiredSource": "Reconcile model tags with approved equipment register, P&ID, datasheets and controlling document revision. Model-derived records are not approved engineering data."
+    },
+    {
+      "gapId": "SRC-REV-001",
+      "status": "open",
+      "subject": "Controlling approved PFD revision unavailable",
+      "requiredSource": "Approved document register and issued A-200/A-300 PFDs; locally available sheets are draft with a placeholder XXX revision field."
+    },
+    {
+      "gapId": "A300-001",
+      "status": "open",
+      "subject": "A-300 ratings, capacities, route identities and boundary qualification",
+      "requiredSource": "Approved equipment datasheets, P&ID, destination and compatibility review."
+    },
+    {
+      "gapId": "A300-002",
+      "status": "open",
+      "subject": "A-300 instrumentation and protective functions",
+      "requiredSource": "Issued instrument index, control narrative, cause-and-effect and safety review."
+    },
+    {
+      "gapId": "A400-001",
+      "status": "open",
+      "subject": "Missing controlling A-400 source",
+      "requiredSource": "Issued A-400 PFD, P&ID, equipment list and document register."
+    },
+    {
+      "gapId": "A400-002",
+      "status": "open",
+      "subject": "Washing and membrane capacity",
+      "requiredSource": "Approved stream table, wash endpoint specification, membrane performance and vessel datasheets."
+    },
+    {
+      "gapId": "A400-003",
+      "status": "open",
+      "subject": "Feed pump package arrangement",
+      "requiredSource": "Vendor-approved pump and membrane package arrangement."
+    },
+    {
+      "gapId": "A400-004",
+      "status": "open",
+      "subject": "Permeate destination conflict",
+      "requiredSource": "Approved wastewater/recycle routing and downstream acceptance criteria."
+    },
+    {
+      "gapId": "A400-005",
+      "status": "open",
+      "subject": "Cleaning, drains, vents and instrumentation",
+      "requiredSource": "Approved CIP narrative, line list, vent/drain review, instrument index and cause-and-effect."
+    },
+    {
+      "gapId": "A500-001",
+      "status": "open",
+      "subject": "Cooler identity and construction conflict",
+      "requiredSource": "Issued equipment register, P&ID and cooler datasheet."
+    },
+    {
+      "gapId": "A500-002",
+      "status": "open",
+      "subject": "Product routing and recirculation conflict",
+      "requiredSource": "Issued P&ID, batch/recirculation narrative and acceptance criteria."
+    },
+    {
+      "gapId": "A500-003",
+      "status": "open",
+      "subject": "Sonication performance and feed basis",
+      "requiredSource": "Approved mass balance, trial results and vendor package/datasheets."
+    },
+    {
+      "gapId": "A500-004",
+      "status": "open",
+      "subject": "Draft-only source and optional features",
+      "requiredSource": "Approved document register and issued A-500 PFD/P&ID."
+    },
+    {
+      "gapId": "A500-005",
+      "status": "open",
+      "subject": "Protection, controls and segregated services",
+      "requiredSource": "Issued instrument index, control/cleaning narrative, cause-and-effect and relief/vent/drain studies."
+    },
+    {
+      "gapId": "A600-001",
+      "status": "open",
+      "subject": "Indicative temperatures conflict with TBD notes",
+      "requiredSource": "Approved drying trials, thermal-stability basis and operating limits."
+    },
+    {
+      "gapId": "A600-002",
+      "status": "open",
+      "subject": "Powder and exhaust destination reconciliation",
+      "requiredSource": "Issued P&ID, vendor solids recovery arrangement and approved emissions/discharge basis."
+    },
+    {
+      "gapId": "A600-003",
+      "status": "open",
+      "subject": "Atomization, heat duty and product quality",
+      "requiredSource": "Approved mass/energy balance, feed analysis, dryer/filter/scrubber and heater datasheets."
+    },
+    {
+      "gapId": "A600-004",
+      "status": "open",
+      "subject": "Gas choice, dust and pressure protection",
+      "requiredSource": "Qualified dust/thermal testing, hazard study, protection design, instrument index and cause-and-effect."
+    },
+    {
+      "gapId": "A600-005",
+      "status": "open",
+      "subject": "Draft-only source, cleaning and service boundaries",
+      "requiredSource": "Issued PFD/P&ID/document register, cleaning narrative and vent/drain/utility review."
+    },
+    {
+      "gapId": "A700-001",
+      "status": "open",
+      "subject": "Pressure and oxygen protection unresolved",
+      "requiredSource": "Approved pressure-control philosophy, oxygen limit study, instrument index and cause-and-effect."
+    },
+    {
+      "gapId": "A700-002",
+      "status": "open",
+      "subject": "Thermal duty and product acceptance",
+      "requiredSource": "Approved trials, mass/energy balance, thermal stability data and vendor datasheets."
+    },
+    {
+      "gapId": "A700-003",
+      "status": "open",
+      "subject": "Cooling and knockout arrangement conflict",
+      "requiredSource": "Issued P&ID and approved particulate, condensation and product-cooling arrangement."
+    },
+    {
+      "gapId": "A700-004",
+      "status": "open",
+      "subject": "Independent off-gas and emergency relief",
+      "requiredSource": "Approved relief study, tag reconciliation, emissions basis and abatement vendor package."
+    },
+    {
+      "gapId": "A700-005",
+      "status": "open",
+      "subject": "Draft identity and transfer sequences",
+      "requiredSource": "Issued document register, transfer narrative, utility specification and isolation review."
+    },
+    {
+      "gapId": "A800-001",
+      "status": "open",
+      "subject": "Drawn route and tag reconciliation",
+      "requiredSource": "Issued PFD/P&ID and master tag register confirming the furnace feed route."
+    },
+    {
+      "gapId": "A800-002",
+      "status": "open",
+      "subject": "Reaction, ratio and thermal basis unqualified",
+      "requiredSource": "Approved reaction trials, mass/energy balance, ratio and thermal program, vendor data and operating limits."
+    },
+    {
+      "gapId": "A800-003",
+      "status": "open",
+      "subject": "Dry reagent containment and cooling separation",
+      "requiredSource": "Approved dry charging/isolation narrative, material compatibility, cooling-leak review and residue-disposal basis."
+    },
+    {
+      "gapId": "A800-004",
+      "status": "open",
+      "subject": "Separate exhaust, relief and missing cyclone context",
+      "requiredSource": "Approved gas characterization, independent treatment/relief designs, vendor packages and emissions/disposal basis."
+    },
+    {
+      "gapId": "A800-005",
+      "status": "open",
+      "subject": "Draft-only controls and downstream release",
+      "requiredSource": "Issued source register, instrument index, cause-and-effect and approved A-900 receiving specification."
+    },
+    {
+      "gapId": "A1000-001",
+      "status": "open",
+      "subject": "Draft pH conflict and conditional chemistry",
+      "requiredSource": "Approved characterization, titration/jar tests, precipitation/redox trials and operating/acceptance criteria."
+    },
+    {
+      "gapId": "A1000-002",
+      "status": "open",
+      "subject": "Screening inventories are not equipment ratings",
+      "requiredSource": "Approved water balance, batch schedule, vendor equipment/hydraulic design and surge-volume basis."
+    },
+    {
+      "gapId": "A1000-003",
+      "status": "open",
+      "subject": "Bypass, recycle and RO acceptance",
+      "requiredSource": "Approved A-2000 feed specification, membrane projection and bypass/recycle cause-and-effect."
+    },
+    {
+      "gapId": "A1000-004",
+      "status": "open",
+      "subject": "Vents, returns, drains and disposal remain qualified separately",
+      "requiredSource": "Source-specific vent compatibility/pressure assessment, wastewater/waste characterization, receiving criteria and disposal approval."
+    },
+    {
+      "gapId": "A1000-005",
+      "status": "open",
+      "subject": "Draft source, controls and service definition",
+      "requiredSource": "Issued PFD/P&ID, instrument index, utility/vendor specifications, containment/access and maintenance design."
+    },
+    {
+      "gapId": "A2000-001",
+      "status": "open",
+      "subject": "Draft source and qualification",
+      "requiredSource": "Issued PFD/P&ID, instrument index, sampling plan and approved reuse specification."
+    },
+    {
+      "gapId": "A2000-002",
+      "status": "open",
+      "subject": "Model sizing and water balance",
+      "requiredSource": "Approved water balance, surge study, vendor equipment ratings and reuse demand."
+    },
+    {
+      "gapId": "A2000-003",
+      "status": "open",
+      "subject": "Membrane and chemistry basis",
+      "requiredSource": "Measured feed characterization, membrane projection and vendor pretreatment/chemical programme."
+    },
+    {
+      "gapId": "A2000-004",
+      "status": "open",
+      "subject": "Segregated waste and cleaning",
+      "requiredSource": "Approved compatibility, isolation sequence, waste receiving criteria and disposal destinations."
+    },
+    {
+      "gapId": "A2000-005",
+      "status": "open",
+      "subject": "Quality diversion and protection",
+      "requiredSource": "Approved cause-and-effect, relief/vent design, operating limits and vendor safety review."
+    },
+    {
+      "gapId": "A3000-001",
+      "status": "open",
+      "subject": "Source segregation and draft conflicts",
+      "requiredSource": "Issued source schedule and source-specific chemistry, aerosol, flow, pressure and simultaneous-load qualification."
+    },
+    {
+      "gapId": "A3000-002",
+      "status": "open",
+      "subject": "Bypass and failure response",
+      "requiredSource": "Approved hazard review, cause-and-effect, residual-emission plan and backup fan/power assessment."
+    },
+    {
+      "gapId": "A3000-003",
+      "status": "open",
+      "subject": "Unqualified gas load and performance",
+      "requiredSource": "Measured normal/peak/upset gas envelope, vendor design/performance, materials and applicable air authorization."
+    },
+    {
+      "gapId": "A3000-004",
+      "status": "open",
+      "subject": "Liquid seals, segregation and receiving",
+      "requiredSource": "Approved hydraulics/seal heights, receiving chemistry/heat/salt limits and waste disposition."
+    },
+    {
+      "gapId": "A3000-005",
+      "status": "open",
+      "subject": "Supply, instruments and identity holds",
+      "requiredSource": "Approved P&ID/instrument index, supply/backflow qualification, containment, overflow and maintenance design."
+    },
+    {
+      "gapId": "A3700-001",
+      "status": "open",
+      "subject": "Treatment technology and performance remain open",
+      "requiredSource": "Measured gas characterization, alternatives assessment, vendor design and approved performance criteria."
+    },
+    {
+      "gapId": "A3700-002",
+      "status": "open",
+      "subject": "Combustible and oxygen envelope is unqualified",
+      "requiredSource": "Normal/peak/upset source schedule, oxygen/flammability assessment and residual-emission study."
+    },
+    {
+      "gapId": "A3700-003",
+      "status": "open",
+      "subject": "Pressure control and failure response are unresolved",
+      "requiredSource": "Approved pressure budget, cause-and-effect, purge/fan failure response and relief/backpressure design."
+    },
+    {
+      "gapId": "A3700-004",
+      "status": "open",
+      "subject": "Dedicated outlet is not a permitted discharge",
+      "requiredSource": "Applicable air authorization, emissions basis, dispersion study, stack and sampling design."
+    },
+    {
+      "gapId": "A3700-005",
+      "status": "open",
+      "subject": "Service segregation and package definition",
+      "requiredSource": "Issued PFD/P&ID, equipment/vendor data, utility list, materials, drainage, access and maintenance design."
+    },
+    {
+      "gapId": "A3800-001",
+      "status": "open",
+      "subject": "Reactive off-gas treatment and performance remain open",
+      "requiredSource": "Measured gas and particulate characterization, technology assessment, vendor design and approved performance criteria."
+    },
+    {
+      "gapId": "A3800-002",
+      "status": "open",
+      "subject": "Hydrogen, oxygen and reactivity envelope is unqualified",
+      "requiredSource": "Normal/peak/upset source schedule, oxygen/moisture and flammability assessment, ignition review and residual-reaction study."
+    },
+    {
+      "gapId": "A3800-003",
+      "status": "open",
+      "subject": "Pressure control and failure response are unresolved",
+      "requiredSource": "Approved pressure budget, cause-and-effect, purge/fan failure response and relief/backpressure design."
+    },
+    {
+      "gapId": "A3800-004",
+      "status": "open",
+      "subject": "Dedicated reactive-gas outlet is not a permitted discharge",
+      "requiredSource": "Applicable air authorization, emissions basis, dispersion study, stack and sampling design."
+    },
+    {
+      "gapId": "A3800-005",
+      "status": "open",
+      "subject": "DC-3811 inventory dust service remains unqualified",
+      "requiredSource": "Approved source register, dust and reactivity testing, vendor selection, cleaning/isolation philosophy and downstream disposal design."
+    },
+    {
+      "gapId": "A3800-006",
+      "status": "open",
+      "subject": "DC-3812 borohydride feeder service remains isolated",
+      "requiredSource": "KBH4 dust/reactivity tests, inert collection vendor design, cleaning and changeout procedure, H2 management and approved outlet."
+    },
+    {
+      "gapId": "A3800-007",
+      "status": "open",
+      "subject": "Treatment services remain segregated",
+      "requiredSource": "Issued PFD/P&ID, equipment and vendor data, utilities, materials, drainage, access, maintenance and final outlet design."
+    },
+    {
+      "gapId": "A5000-001",
+      "status": "open",
+      "subject": "Rated thermal duties and simultaneous demand",
+      "requiredSource": "Approved utility balance, datasheets, P&IDs, control narrative, relief study and commissioning records"
+    },
+    {
+      "gapId": "A5000-002",
+      "status": "open",
+      "subject": "Hydraulic and mechanical design",
+      "requiredSource": "Approved utility balance, datasheets, P&IDs, control narrative, relief study and commissioning records"
+    },
+    {
+      "gapId": "A5000-003",
+      "status": "open",
+      "subject": "Temperature basis",
+      "requiredSource": "Approved utility balance, datasheets, P&IDs, control narrative, relief study and commissioning records"
+    },
+    {
+      "gapId": "A5000-004",
+      "status": "open",
+      "subject": "Secondary-loop separation",
+      "requiredSource": "Approved utility balance, datasheets, P&IDs, control narrative, relief study and commissioning records"
+    },
+    {
+      "gapId": "A5000-005",
+      "status": "open",
+      "subject": "R-201 cooldown margin",
+      "requiredSource": "Approved utility balance, datasheets, P&IDs, control narrative, relief study and commissioning records"
+    },
+    {
+      "gapId": "A5000-006",
+      "status": "open",
+      "subject": "Availability and safeguards",
+      "requiredSource": "Approved utility balance, datasheets, P&IDs, control narrative, relief study and commissioning records"
+    },
+    {
+      "gapId": "A5000-007",
+      "status": "open",
+      "subject": "HX-601 heating medium",
+      "requiredSource": "Approved utility balance, datasheets, P&IDs, control narrative, relief study and commissioning records"
+    },
+    {
+      "gapId": "A5000-008",
+      "status": "open",
+      "subject": "Cooling-tower auxiliaries",
+      "requiredSource": "Approved utility balance, datasheets, P&IDs, control narrative, relief study and commissioning records"
+    },
+    {
+      "gapId": "A5000-009",
+      "status": "open",
+      "subject": "Controls and live state",
+      "requiredSource": "Approved utility balance, datasheets, P&IDs, control narrative, relief study and commissioning records"
+    },
+    {
+      "gapId": "A6000-001",
+      "status": "open",
+      "subject": "Emergency-water source and topology",
+      "requiredSource": "Dedicated potable, tempered source, treatment, storage and distribution topology are undefined; no common header is established."
+    },
+    {
+      "gapId": "A6000-002",
+      "status": "open",
+      "subject": "Hydraulic capacity and duration",
+      "requiredSource": "Station flow, pressure, simultaneous demand, duration, pipe sizing and residual pressure are unverified."
+    },
+    {
+      "gapId": "A6000-003",
+      "status": "open",
+      "subject": "Temperature and winter protection",
+      "requiredSource": "Tempering, delivered temperature, heat tracing, insulation, freeze protection and cold-weather availability are unresolved."
+    },
+    {
+      "gapId": "A6000-004",
+      "status": "open",
+      "subject": "Backflow and isolation",
+      "requiredSource": "Backflow prevention, branch isolation, test connections, dead-leg control and maintenance bypass are unresolved."
+    },
+    {
+      "gapId": "A6000-005",
+      "status": "open",
+      "subject": "Runoff segregation and capacity",
+      "requiredSource": "Compatible runoff destinations and capacity are unresolved; no reactive-spill, wastewater or storm connection is claimed."
+    },
+    {
+      "gapId": "A6000-006",
+      "status": "open",
+      "subject": "Coverage and same-level access",
+      "requiredSource": "Locations are planning reservations; exposure points, walking time, actuator reach and elevated-work coverage remain unapproved."
+    },
+    {
+      "gapId": "A6000-007",
+      "status": "open",
+      "subject": "Selection and commissioning",
+      "requiredSource": "Supplier selection, spray pattern, hands-free operation, signage, training, tests and commissioning are unavailable."
+    },
+    {
+      "gapId": "A6000-008",
+      "status": "open",
+      "subject": "Common-service ownership",
+      "requiredSource": "Battery limits, utility ownership, isolation and interfaces with A-4000/A-5000/A-6000 argon remain unresolved."
+    },
+    {
+      "gapId": "A100-001",
+      "status": "open",
+      "subject": "Equipment capacities and ratings",
+      "requiredSource": "Approved R-101, T-102 and H-101/SF-101 datasheets are unavailable."
+    },
+    {
+      "gapId": "A100-002",
+      "status": "open",
+      "subject": "Materials and corrosion basis",
+      "requiredSource": "Materials of construction, linings, corrosion allowance and compatibility are unapproved."
+    },
+    {
+      "gapId": "A100-003",
+      "status": "open",
+      "subject": "Controls and safeguards",
+      "requiredSource": "P&ID tags, alarm/trip setpoints, relief basis and permissives are unavailable."
+    },
+    {
+      "gapId": "A100-004",
+      "status": "open",
+      "subject": "Recipe and batch basis",
+      "requiredSource": "Graphite/acid quantities, addition rates, mixing time and acceptance criteria are unresolved."
+    },
+    {
+      "gapId": "A100-005",
+      "status": "open",
+      "subject": "Containment and transfer details",
+      "requiredSource": "Charging, dust control, acid unloading, drainage and spill-recovery details require approval."
+    },
+    {
+      "gapId": "A100-006",
+      "status": "open",
+      "subject": "Source revision status",
+      "requiredSource": "FEED-PFD-0100 remains a draft basis and requires reconciliation with approved project documents."
+    },
+    {
+      "gapId": "A140-001",
+      "status": "open",
+      "subject": "Reactor capacities and ratings",
+      "requiredSource": "Approved R-141A/B/C/D datasheets and working volumes are unavailable."
+    },
+    {
+      "gapId": "A140-002",
+      "status": "open",
+      "subject": "Materials and corrosion basis",
+      "requiredSource": "Reactor, charging and transfer materials and compatibility are unapproved."
+    },
+    {
+      "gapId": "A140-003",
+      "status": "open",
+      "subject": "Controls and safeguards",
+      "requiredSource": "Temperature, pressure, feed, agitation, relief and interlock details are unresolved."
+    },
+    {
+      "gapId": "A140-004",
+      "status": "open",
+      "subject": "Recipe and parallel allocation",
+      "requiredSource": "Premix, K2S2O8 and P2O5 quantities, addition sequence and branch allocation are unresolved."
+    },
+    {
+      "gapId": "A140-005",
+      "status": "open",
+      "subject": "Shared charging-package definition",
+      "requiredSource": "CH-141/CH-142 count, branch ownership, dust control and isolation require approved design."
+    },
+    {
+      "gapId": "A140-006",
+      "status": "open",
+      "subject": "Source revision status",
+      "requiredSource": "FEED-PFD-0140 remains a draft basis and requires reconciliation with approved project documents."
+    },
+    {
+      "gapId": "A160-001",
+      "status": "open",
+      "subject": "Equipment capacities and ratings",
+      "requiredSource": "Approved tank, filter, dryer, transfer and vacuum-package datasheets are unavailable."
+    },
+    {
+      "gapId": "A160-002",
+      "status": "open",
+      "subject": "Materials and corrosion basis",
+      "requiredSource": "Materials, filter media, seals, trays and product-contact finishes are unapproved."
+    },
+    {
+      "gapId": "A160-003",
+      "status": "open",
+      "subject": "Controls and safeguards",
+      "requiredSource": "P&ID tags, sequences, alarms, trips, relief and vacuum safeguards are unresolved."
+    },
+    {
+      "gapId": "A160-004",
+      "status": "open",
+      "subject": "Filtration and drying performance",
+      "requiredSource": "Wash endpoint, filtration cycle, cake moisture and dryer endpoint are unresolved."
+    },
+    {
+      "gapId": "A160-005",
+      "status": "open",
+      "subject": "Baseline versus alternatives",
+      "requiredSource": "Only the baseline FEED arrangement is promoted; dryer, enclosed and integrated layouts remain mutually exclusive design studies."
+    },
+    {
+      "gapId": "A160-006",
+      "status": "open",
+      "subject": "Interface qualification",
+      "requiredSource": "RO water, wastewater, vent, condensate, thermal and dry-product battery limits require approved sources."
+    },
+    {
+      "gapId": "A900-001",
+      "status": "open",
+      "subject": "Missing approved A-900 source package",
+      "requiredSource": "Issued A-900 PFD/P&ID, equipment list and vendor package."
+    },
+    {
+      "gapId": "A900-002",
+      "status": "open",
+      "subject": "Product acceptance and short transfer technology",
+      "requiredSource": "Approved product specification, short-transfer study and receiving/release narrative."
+    },
+    {
+      "gapId": "A900-003",
+      "status": "open",
+      "subject": "Argon consumers and demand",
+      "requiredSource": "Issued argon consumer schedule, tie-in, purity and demand specifications."
+    },
+    {
+      "gapId": "A900-004",
+      "status": "open",
+      "subject": "Dust and exhaust destination",
+      "requiredSource": "Dust characterization, hazardous-area review and qualified collection/disposal design."
+    },
+    {
+      "gapId": "A900-005",
+      "status": "open",
+      "subject": "Pelletization, finishing and release criteria",
+      "requiredSource": "Approved product specification, representative-material trials, package URS, vendor data and cause-and-effect."
+    },
+    {
+      "gapId": "A900-006",
+      "status": "open",
+      "subject": "Protection and operability basis",
+      "requiredSource": "DHA, HAZOP/LOPA, fire code review, maintainability study and approved procedures."
+    }
+  ]
+}

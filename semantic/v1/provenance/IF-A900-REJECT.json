@@ -1,0 +1,54 @@
+{
+  "assetId": "IF-A900-REJECT",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "IF-A900-REJECT",
+      "source": "MODEL-A900-V163",
+      "revision": "V163",
+      "status": "model-derived",
+      "confidence": "review required",
+      "gapId": "A900-001"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A900-005"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A900-005"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A900-005"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A900-005"
+    }
+  ]
+}

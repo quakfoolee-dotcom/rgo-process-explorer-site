@@ -1,0 +1,53 @@
+{
+  "assetId": "T-402",
+  "name": "Diafiltration / washing tank",
+  "assetClassId": "Tank",
+  "status": "proposed",
+  "identityStatus": "model-derived; tag qualification open",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-400",
+    "system": "A-400 washing process context",
+    "parentAsset": null
+  },
+  "processFunction": "Diafiltration / washing tank",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": "PVDF- or PFA-lined carbon-steel pressure vessel"
+  },
+  "operatingEnvelope": {
+    "feedPH": 1,
+    "targetPH": 5,
+    "operatingMode": "A-400 onward continuous or semi-continuous at the design rates of Table 3.3-1, with surge/hold at the batch-to-continuous boundary (T-501)"
+  },
+  "processBasis": [],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "The local temperature-sheet PDF skips FEED-PFD-0400. The inherited register page 9 is a full-document reference, not an available excerpt. No approved source revision is established.",
+    "Cleaning chemistry, product isolation, vent compatibility, drain receiving pressure/invert, instrument tags and protective settings remain unqualified.",
+    "Dimensions, model screening inputs and package layouts do not establish approved engineering values."
+  ],
+  "dataLayer": {
+    "area": "A-400",
+    "source": "data/semantic/A-400",
+    "approvedRows": 4,
+    "heldRows": 0,
+    "pendingRows": 24,
+    "identityHold": null,
+    "applied": "2026-09-21",
+    "baseline": {
+      "design": {
+        "capacityM3": null,
+        "designPressure": null,
+        "designTemperature": null,
+        "materialOfConstruction": null
+      },
+      "operatingEnvelope": null
+    },
+    "baselineAbsent": []
+  }
+}

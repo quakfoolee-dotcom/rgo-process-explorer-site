@@ -1,0 +1,7 @@
+{
+  "assetId": "TR-164",
+  "bindingId": "GEOMETRY-TR-164",
+  "modelEquipmentId": 48,
+  "bindingScope": "modeled-equipment-group",
+  "bindingRule": "All geometry owned by model equipment 48 resolves to TR-164; canonical identity remains stable across model rebuilds."
+}

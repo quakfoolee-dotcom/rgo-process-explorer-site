@@ -1,0 +1,50 @@
+{
+  "assetId": "R-201D",
+  "instruments": [
+    {
+      "functionId": "R-201D-TT",
+      "variable": "temperature",
+      "purpose": "Reactor temperature monitoring and control",
+      "tag": null,
+      "range": null,
+      "status": "PFD function; tag/range unresolved",
+      "gapId": "SRC-003"
+    },
+    {
+      "functionId": "R-201D-PT",
+      "variable": "pressure",
+      "purpose": "Pressure monitoring and relief coordination",
+      "tag": null,
+      "range": null,
+      "status": "required by design intent; tag/range unresolved",
+      "gapId": "SRC-003"
+    },
+    {
+      "functionId": "R-201D-LT",
+      "variable": "level",
+      "purpose": "Charge, reaction and transfer inventory monitoring",
+      "tag": null,
+      "range": null,
+      "status": "model function; P&ID confirmation required",
+      "gapId": "SRC-003"
+    },
+    {
+      "functionId": "R-201D-FT-RC",
+      "variable": "recirculation flow",
+      "purpose": "Confirm recirculation before staged oxidizer feed",
+      "tag": null,
+      "range": null,
+      "status": "design narrative function; P&ID confirmation required",
+      "gapId": "SRC-003"
+    },
+    {
+      "functionId": "R-201D-TORQUE",
+      "variable": "agitator torque",
+      "purpose": "Detect mixing overload and loss of mobility",
+      "tag": null,
+      "range": null,
+      "status": "design narrative function; setpoint unresolved",
+      "gapId": "SRC-003"
+    }
+  ]
+}

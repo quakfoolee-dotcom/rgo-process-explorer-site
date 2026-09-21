@@ -1,0 +1,405 @@
+{
+  "assetId": "IF-A6000-EW-SOURCE",
+  "relationships": [
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES101",
+      "type": "feeds",
+      "target": "ES-101",
+      "role": "ES-101 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES101",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES141",
+      "type": "feeds",
+      "target": "ES-141",
+      "role": "ES-141 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES141",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES161",
+      "type": "feeds",
+      "target": "ES-161",
+      "role": "ES-161 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES161",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES201",
+      "type": "feeds",
+      "target": "ES-201",
+      "role": "ES-201 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES201",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES301",
+      "type": "feeds",
+      "target": "ES-301",
+      "role": "ES-301 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES301",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES401",
+      "type": "feeds",
+      "target": "ES-401",
+      "role": "ES-401 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES401",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES2000",
+      "type": "feeds",
+      "target": "ES-2000",
+      "role": "ES-2000 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES2000",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES3000",
+      "type": "feeds",
+      "target": "ES-3000",
+      "role": "ES-3000 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES3000",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES16001",
+      "type": "feeds",
+      "target": "ES-160-01",
+      "role": "ES-160-01 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES16001",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES20002",
+      "type": "feeds",
+      "target": "ES-200-02",
+      "role": "ES-200-02 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES20002",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES14003",
+      "type": "feeds",
+      "target": "ES-140-03",
+      "role": "ES-140-03 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES14003",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES20004",
+      "type": "feeds",
+      "target": "ES-200-04",
+      "role": "ES-200-04 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES20004",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES30005",
+      "type": "feeds",
+      "target": "ES-300-05",
+      "role": "ES-300-05 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES30005",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES30006",
+      "type": "feeds",
+      "target": "ES-300-06",
+      "role": "ES-300-06 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES30006",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES20007",
+      "type": "feeds",
+      "target": "ES-200-07",
+      "role": "ES-200-07 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES20007",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES20008",
+      "type": "feeds",
+      "target": "ES-200-08",
+      "role": "ES-200-08 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES20008",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES40009",
+      "type": "feeds",
+      "target": "ES-400-09",
+      "role": "ES-400-09 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES40009",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES100010",
+      "type": "feeds",
+      "target": "ES-1000-10",
+      "role": "ES-1000-10 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES100010",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES100011",
+      "type": "feeds",
+      "target": "ES-1000-11",
+      "role": "ES-1000-11 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES100011",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES16012",
+      "type": "feeds",
+      "target": "ES-160-12",
+      "role": "ES-160-12 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES16012",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES100013",
+      "type": "feeds",
+      "target": "ES-1000-13",
+      "role": "ES-1000-13 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES100013",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES40014",
+      "type": "feeds",
+      "target": "ES-400-14",
+      "role": "ES-400-14 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES40014",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES20015",
+      "type": "feeds",
+      "target": "ES-200-15",
+      "role": "ES-200-15 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES20015",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES20016",
+      "type": "feeds",
+      "target": "ES-200-16",
+      "role": "ES-200-16 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES20016",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES30017",
+      "type": "feeds",
+      "target": "ES-300-17",
+      "role": "ES-300-17 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES30017",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES40018",
+      "type": "feeds",
+      "target": "ES-400-18",
+      "role": "ES-400-18 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES40018",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES102",
+      "type": "feeds",
+      "target": "ES-102",
+      "role": "ES-102 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES102",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES601",
+      "type": "feeds",
+      "target": "ES-601",
+      "role": "ES-601 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES601",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES701",
+      "type": "feeds",
+      "target": "ES-701",
+      "role": "ES-701 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES701",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES801",
+      "type": "feeds",
+      "target": "ES-801",
+      "role": "ES-801 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES801",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES802",
+      "type": "feeds",
+      "target": "ES-802",
+      "role": "ES-802 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES802",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES1001",
+      "type": "feeds",
+      "target": "ES-1001",
+      "role": "ES-1001 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES1001",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES1002",
+      "type": "feeds",
+      "target": "ES-1002",
+      "role": "ES-1002 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES1002",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES1003",
+      "type": "feeds",
+      "target": "ES-1003",
+      "role": "ES-1003 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES1003",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES2001",
+      "type": "feeds",
+      "target": "ES-2001",
+      "role": "ES-2001 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES2001",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES2002",
+      "type": "feeds",
+      "target": "ES-2002",
+      "role": "ES-2002 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES2002",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES1004",
+      "type": "feeds",
+      "target": "ES-1004",
+      "role": "ES-1004 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES1004",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES602",
+      "type": "feeds",
+      "target": "ES-602",
+      "role": "ES-602 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES602",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES603",
+      "type": "feeds",
+      "target": "ES-603",
+      "role": "ES-603 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES603",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES202",
+      "type": "feeds",
+      "target": "ES-202",
+      "role": "ES-202 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES202",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    }
+  ]
+}

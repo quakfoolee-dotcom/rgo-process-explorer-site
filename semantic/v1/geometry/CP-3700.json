@@ -1,0 +1,7 @@
+{
+  "assetId": "CP-3700",
+  "bindingId": "GEOMETRY-CP-3700",
+  "modelEquipmentId": 622,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; the package is a layout envelope and dimensions, internals, duties and ratings remain unqualified."
+}

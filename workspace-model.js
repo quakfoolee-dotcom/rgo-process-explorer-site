@@ -1,0 +1,4 @@
+// Shared navigation vocabulary for tabs, tools and legacy panel integrations.
+export const WORKSPACES=['process','equipment','inspect','safety'];
+export const TOOL_LABELS={product:'Product flow',thermal:'Thermal loops',routes:'Pipe connectivity',measure:'Measure',section:'Movable section',clashes:'Interference checks',supports:'Racks & supports',browse:'Browse plant',walk:'Walk plant',forklift:'Forklift tracing',access:'Operating & maintenance access',containment:'Spill containment',fire:'Fire safety',emergency:'Emergency stations',pedestrian:'Pedestrian safety'};
+export const TOOL_WORKSPACE={process:'process',tree:'equipment',systems:'equipment','inspect-home':'inspect',product:'inspect',thermal:'inspect',routes:'inspect',measure:'inspect',section:'inspect',clashes:'inspect',supports:'inspect',browse:'inspect',walk:'inspect',forklift:'inspect',access:'inspect',safety:'safety',containment:'safety',fire:'safety',emergency:'safety',pedestrian:'safety'};

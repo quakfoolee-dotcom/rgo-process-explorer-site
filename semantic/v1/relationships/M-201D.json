@@ -1,0 +1,57 @@
+{
+  "assetId": "M-201D",
+  "relationships": [
+    {
+      "id": "REL-M-201D-AREA",
+      "type": "locatedIn",
+      "target": "A-200",
+      "status": "model register area",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
+    },
+    {
+      "id": "REL-M-201D-S-200-RC-D-SI-201D",
+      "type": "connectedTo",
+      "target": "SI-201D",
+      "streamId": "S-200-RC-D",
+      "role": "R-201D recirculation loop · modeled; package allocation open",
+      "status": "modeled; package allocation open",
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          61
+        ]
+      }
+    },
+    {
+      "id": "REL-M-201D-S-200-RC-D-R-201D",
+      "type": "connectedTo",
+      "target": "R-201D",
+      "streamId": "S-200-RC-D",
+      "role": "R-201D recirculation loop · modeled; package allocation open",
+      "status": "modeled; package allocation open",
+      "evidenceStatus": "inherited-pilot",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "REACTOR-PILOT",
+          "revision": "1.1.0-pilot",
+          "page": null
+        }
+      ],
+      "geometry": {
+        "equipmentIds": [
+          55
+        ]
+      }
+    }
+  ]
+}

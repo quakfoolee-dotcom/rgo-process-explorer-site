@@ -1,0 +1,65 @@
+{
+  "assetId": "H-201A",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "H-201A",
+      "source": "MODEL-A200",
+      "revision": "V142 baseline",
+      "page": null,
+      "status": "model-derived; review open",
+      "confidence": "review required",
+      "gapId": "A200-001"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A200-001"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A200-001"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A200-001"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A200-001"
+    },
+    {
+      "property": "sourceReconciliation",
+      "value": "Draft sheet reviewed; approval, revision and allocation gaps remain open",
+      "source": "FEED-PFD-0200",
+      "revision": null,
+      "page": 3,
+      "status": "draft-pfd",
+      "confidence": "documented draft",
+      "gapId": "SRC-REV-001"
+    }
+  ]
+}

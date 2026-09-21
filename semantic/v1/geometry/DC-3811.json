@@ -1,0 +1,7 @@
+{
+  "assetId": "DC-3811",
+  "bindingId": "GEOMETRY-DC-3811",
+  "modelEquipmentId": 640,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; the package is a layout envelope and dimensions, internals, duties and ratings remain unqualified."
+}

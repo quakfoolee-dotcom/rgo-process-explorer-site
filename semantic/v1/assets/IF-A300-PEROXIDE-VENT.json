@@ -1,0 +1,30 @@
+{
+  "assetId": "IF-A300-PEROXIDE-VENT",
+  "name": "Separate peroxide vent boundary; destination unqualified",
+  "assetClassId": "ExternalInterface",
+  "status": "proposed",
+  "identityStatus": "model-interface-reference",
+  "recordScope": "external-interface",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-300",
+    "system": "A-300 fixing process context",
+    "parentAsset": null
+  },
+  "processFunction": "Separate peroxide vent boundary; destination unqualified",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null
+  },
+  "operatingEnvelope": null,
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "Draft process basis only; no approved ratings, capacity, control loops or protective setpoints are asserted.",
+    "Model route alignment and destination qualification remain open under A300-001.",
+    "A boundary groups records for review; it does not prescribe a common header or authorize mixing."
+  ],
+  "processBasis": []
+}

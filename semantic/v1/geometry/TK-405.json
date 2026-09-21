@@ -1,0 +1,7 @@
+{
+  "assetId": "TK-405",
+  "bindingId": "GEOMETRY-TK-405",
+  "modelEquipmentId": 124,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing CIP-401 assembly; no independent tank geometry selection or rated capacity is asserted."
+}

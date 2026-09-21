@@ -1,0 +1,345 @@
+{
+  "assetId": "HD-5200",
+  "streams": [
+    {
+      "streamId": "S-5000-CW-PRIMARY",
+      "name": "cooling-water primary circulation",
+      "source": "TK-5211",
+      "via": [
+        "A-5200",
+        "A-5210A"
+      ],
+      "destination": "HD-5200",
+      "material": "Closed-loop cooling water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": {
+        "supplyRangeC": [
+          25,
+          30
+        ],
+        "returnRangeC": [
+          35,
+          40
+        ],
+        "status": "draft PFD range"
+      },
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "A-5210B",
+        "V-5210"
+      ],
+      "operatingMode": "A-5210A illustrated duty; A-5210B isolated standby concept",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    },
+    {
+      "streamId": "S-5000-TCU1001",
+      "name": "TCU-1001 primary utility",
+      "source": "HD-5200",
+      "via": [],
+      "destination": "TCU-1001",
+      "material": "Closed-loop cooling water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": {
+        "supplyRangeC": [
+          25,
+          30
+        ],
+        "returnRangeC": [
+          35,
+          40
+        ],
+        "status": "draft PFD range"
+      },
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "TCU-1001"
+      ],
+      "operatingMode": "Heat transfer only across a sealed exchanger; no primary/secondary fluid connection",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    },
+    {
+      "streamId": "S-5000-E501-CW",
+      "name": "E-501 direct thermal service",
+      "source": "HD-5200",
+      "via": [],
+      "destination": "E-501",
+      "material": "Closed-loop cooling water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": {
+        "supplyRangeC": [
+          25,
+          30
+        ],
+        "returnRangeC": [
+          35,
+          40
+        ],
+        "status": "draft PFD range"
+      },
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "E-501"
+      ],
+      "operatingMode": "Direct primary circuit; consumer duty and allowable temperature unresolved",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    },
+    {
+      "streamId": "S-5000-E701-CW",
+      "name": "E-701 direct thermal service",
+      "source": "HD-5200",
+      "via": [],
+      "destination": "E-701",
+      "material": "Closed-loop cooling water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": {
+        "supplyRangeC": [
+          25,
+          30
+        ],
+        "returnRangeC": [
+          35,
+          40
+        ],
+        "status": "draft PFD range"
+      },
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "E-701"
+      ],
+      "operatingMode": "Direct primary circuit; consumer duty and allowable temperature unresolved",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    },
+    {
+      "streamId": "S-5000-E702-CW",
+      "name": "E-702 direct thermal service",
+      "source": "HD-5200",
+      "via": [],
+      "destination": "E-702",
+      "material": "Closed-loop cooling water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": {
+        "supplyRangeC": [
+          25,
+          30
+        ],
+        "returnRangeC": [
+          35,
+          40
+        ],
+        "status": "draft PFD range"
+      },
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "E-702"
+      ],
+      "operatingMode": "Direct primary circuit; consumer duty and allowable temperature unresolved",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    },
+    {
+      "streamId": "S-5000-PY801-CW",
+      "name": "PY-801 direct thermal service",
+      "source": "HD-5200",
+      "via": [],
+      "destination": "PY-801",
+      "material": "Closed-loop cooling water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": {
+        "supplyRangeC": [
+          25,
+          30
+        ],
+        "returnRangeC": [
+          35,
+          40
+        ],
+        "status": "draft PFD range"
+      },
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "PY-801"
+      ],
+      "operatingMode": "Direct primary circuit; consumer duty and allowable temperature unresolved",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    },
+    {
+      "streamId": "S-5000-E801-CW",
+      "name": "E-801 direct thermal service",
+      "source": "HD-5200",
+      "via": [],
+      "destination": "E-801",
+      "material": "Closed-loop cooling water",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": {
+        "supplyRangeC": [
+          25,
+          30
+        ],
+        "returnRangeC": [
+          35,
+          40
+        ],
+        "status": "draft PFD range"
+      },
+      "pressure": null,
+      "directionality": "forward",
+      "contextAssetIds": [
+        "E-801"
+      ],
+      "operatingMode": "Direct primary circuit; consumer duty and allowable temperature unresolved",
+      "status": "Proposed modeled connection; duty, flow, pressure and ratings require approval",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "FEED-PFD-5000",
+          "sheetId": "FEED-PFD-5000",
+          "title": "Thermal Utilities Process Flow Diagram",
+          "revision": "V5.1",
+          "page": 19,
+          "status": "Draft — not for use"
+        },
+        {
+          "documentId": "MODEL-A5000",
+          "title": "A-5000 thermal utility model and review",
+          "revision": "A5000-closeout-75",
+          "page": null,
+          "status": "model design basis; engineering qualification open"
+        }
+      ]
+    }
+  ]
+}

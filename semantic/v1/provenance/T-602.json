@@ -1,0 +1,71 @@
+{
+  "assetId": "T-602",
+  "properties": [
+    {
+      "property": "identity",
+      "value": "T-602",
+      "source": "FEED-PFD-0600",
+      "revision": null,
+      "page": 6,
+      "status": "draft-pfd",
+      "confidence": "review required",
+      "gapId": "A600-005"
+    },
+    {
+      "property": "design.capacityM3",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A600-003"
+    },
+    {
+      "property": "design.designPressure",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A600-003"
+    },
+    {
+      "property": "design.designTemperature",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A600-003"
+    },
+    {
+      "property": "design.materialOfConstruction",
+      "value": null,
+      "source": null,
+      "revision": null,
+      "page": null,
+      "status": "unresolved",
+      "confidence": "unknown",
+      "gapId": "A600-003"
+    },
+    {
+      "valueId": "PV-A-600-0194",
+      "property": "safeguards.combustibleDust",
+      "value": "Combustible dust hazard assessment (HOLD-6), solvent vapour / LEL monitoring (HOLD-7) and explosion protection strategy (HOLD-8) required; MAT-002 M-040 grounded conductive PTFE media",
+      "unit": null,
+      "source": "FEED-PE-REP-016",
+      "revision": "V1.4",
+      "location": "§10 HOLD-6…8",
+      "status": "approved",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": null,
+      "note": "D-A600-03: HOLD-6…8 requirements adopted as safeguard intent (with MAT-002 M-040 conductive grounded PTFE media).",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ]
+}
