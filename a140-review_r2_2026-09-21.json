@@ -1,0 +1,2668 @@
+{
+  "area": "A-140",
+  "title": "A-140 assembly & design review",
+  "revision": "r2",
+  "date": "2026-09-21",
+  "sourceCommit": "dc2af76",
+  "semanticCoreVersion": "1.19.0-foundation",
+  "registerRevision": "2026-09-10 · Physical equipment ownership and complete Explore assemblies",
+  "modelConfig": {
+    "scope": "feed",
+    "a160": "baseline",
+    "argonSource": "bulk"
+  },
+  "lead": "Pre-G synthesis (persulfate / P₂O₅ intercalation): four jacketed reactors R-141A–D as modelled (two operating plus one spare by DBM V2.0), dedicated reagent charging stations CH-141 / CH-142 (register T-141 / T-142 / SF-141 / SF-142), synthesis collection transfer pump P-PG141 (register P-141), four independent bunds and the approach fire point.",
+  "reviewer": {
+    "initials": "QFL",
+    "date": "2026-09-21"
+  },
+  "representedParts": 4346,
+  "ownedEquipment": 13,
+  "findings": [
+    {
+      "id": "A140-01",
+      "topic": "Reactor count, batch and cycle basis",
+      "status": "DBM V2.0 basis approved — sizing withdrawn",
+      "reason": "The number of reactors, the graphite per batch and the cycle time are the area's governing statement; vessel size and duties follow them.",
+      "observation": "D-A140-01 approves the DBM V2.0 basis — 500 kg graphite per R-141 batch (batch sizes of PFD V5.1.1), 2.3 batches/day nominal and 3.0 design, two operating reactors plus one spare (rule C-05) — and withdraws the MEB-003 V16 / LST-005 sizing (80 kg/h, 543 kg per batch, 7 h cycle, 3 batches/day; 6.12 / 8.16 m³ vs LST-005 7.87 / 10.49 m³ vs REP-040 5.4 / 6.8 m³), the batch masses, the 593.6 kg Pre-G per batch (DBM: 550 kg per R-201 batch) and every thermal duty. The cycle is 7 h (MEB-003) vs 10 h (PFD / Narrative) vs 9–10 h (REP-040 with the cool-down leg removed) and follows the hot-transfer decision. The model shows four reactors A–D; the DBM count is 2 + 1.",
+      "action": "Re-issue FEED-PE-MEB-003 (V17) on DBM V2.0 — 500 kg per batch, 2 + 1 reactors, 9–10 h cycle with P₂O₅ on heat-up and hot transfer — then fix the R-141 vessel size and reconcile the model's fourth reactor with the register.",
+      "discipline": "Process",
+      "evidence": [
+        {
+          "ref": "D-A140-01",
+          "kind": "decision"
+        },
+        {
+          "ref": "CF-totalVolumeM3-R-141A",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "CF-workingVolumeM3-R-141A",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "CF-batchCycleHours-R-141A",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "CF-graphitePerBatchKg-R-141A",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "GAP-A-140-DF-218759",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-140-ID-e3fb55",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-140-ID-5a2a6b",
+          "kind": "gap"
+        },
+        {
+          "ref": "FEED-PE-MEB-003",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DBM-001",
+          "kind": "document"
+        }
+      ],
+      "image": "overview"
+    },
+    {
+      "id": "A140-02",
+      "topic": "Reaction envelope, P₂O₅ on heat-up and hot transfer",
+      "status": "Approved — MoC on PFD sheets 0140 / 0160 required",
+      "reason": "Temperature, hold time, reagent ratios and the transfer condition define the synthesis and the utility demand; the hot-transfer decision removes a cooling leg and the chilled-water need.",
+      "observation": "Approved (D-A140-02, MEB-003 / REP-040): 80 °C hold for 4.5 h; 18.4 kg H₂SO₄, 0.50 kg K₂S₂O₈ and 0.50 kg P₂O₅ per kg graphite; P₂O₅ dosed during heat-up so its ≈ 400 MJ supplies ≈ 45 % of the heat-up duty; hot transfer at 80 °C to T-161 (PFD 10–20 °C superseded); utility basis HWS 95 °C / CW 25–30 °C with chilled water no longer needed once the cool-down leg is removed. REP-040 halves the 317 kW heat-up duty with P₂O₅ credit; the 83.8 kW jacket cooling rests on an assumed 50 kW exotherm.",
+      "action": "Raise the MoC on FEED-PE-PFD-001 sheets 0140 / 0160 for hot transfer and P₂O₅-on-heat-up; confirm T-161 water inlet ≤ 28 °C keeps T-161 below 50 °C (REP-042); carry the envelope into LST-007 and the C&E matrix.",
+      "discipline": "Process / controls",
+      "evidence": [
+        {
+          "ref": "D-A140-02",
+          "kind": "decision"
+        },
+        {
+          "ref": "GAP-A-140-DF-7383d8",
+          "kind": "gap"
+        },
+        {
+          "ref": "FEED-PE-REP-040",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-MEB-003",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-PFD-001",
+          "kind": "document"
+        }
+      ],
+      "image": "reactor"
+    },
+    {
+      "id": "A140-03",
+      "topic": "Persulfate exotherm and temperature safeguards",
+      "status": "Safety statement adopted — calorimetry required",
+      "reason": "A persulfate / sulphuric-acid / graphite batch is a runaway-capable reactive system; the safeguard ladder needs a measured exotherm behind it.",
+      "observation": "D-A140-02 adopts REP-040's worst credible case — +54 K adiabatic rise to ≈ 135 °C if the whole reactive inventory releases; hazards chemical, not pressure — as the safety design statement pending calorimetry, and records the 82 / 85 / 88 / 90 °C interlock ladder as a candidate of unstated origin. D-A140-01 withdrew the 83.8 kW jacket cooling capacity (assumed 50 kW exotherm) and the bounded 90–420 MJ persulfate oxidation as unmeasured (REP-040 F-06).",
+      "action": "Run persulfate calorimetry on the design recipe (F-06); confirm the ladder and the jacket capacity in HAZOP / LOPA; record the origin of each setpoint.",
+      "discipline": "Process safety",
+      "evidence": [
+        {
+          "ref": "D-A140-02",
+          "kind": "decision"
+        },
+        {
+          "ref": "D-A140-01",
+          "kind": "decision"
+        },
+        {
+          "ref": "R-141A",
+          "kind": "asset"
+        },
+        {
+          "ref": "R-141A-JACKET",
+          "kind": "asset"
+        },
+        {
+          "ref": "FEED-PE-REP-040",
+          "kind": "document"
+        }
+      ],
+      "image": "reactor"
+    },
+    {
+      "id": "A140-04",
+      "topic": "Reagent charging — CH-141 / CH-142 identity and materials",
+      "status": "Register reconciliation required",
+      "reason": "The register names two tanks and two feeders; the model carries one charging-station record, so materials and duties cannot attach until the identity is agreed.",
+      "observation": "LST-001 and MAT-002 M-005 list T-141, T-142, SF-141 and SF-142 (316L dry-contact with PFA / PTFE-lined drop tubes, ruled by D-A140-MOC); the model owns one \"Dedicated reagent charging stations\" record CH-141 / CH-142 (equipment 43, 1,200 parts) with a geometry-only CH-141 — in the assembled model this is two charging hoppers with feeders on top of each reactor, eight in all (image 01), not two shared stations. P-141 is ruled PFA / ETFE-lined sealless with SiC bearings; the model's P-PG141 synthesis collection pump has no register identity. The four reactor jackets are provisional model subassemblies without register tags; the two emergency stations are model-only.",
+      "action": "Split CH-141 / CH-142 into the four register tags or record the alias by decision; add P-PG141 to LST-001 or map it to P-141; decide whether jackets stay subassemblies.",
+      "discipline": "Process / layout",
+      "evidence": [
+        {
+          "ref": "GAP-A-140-ID-97505b",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-140-ID-a52f88",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-140-ID-ab63e3",
+          "kind": "gap"
+        },
+        {
+          "ref": "CH-141-CH-142",
+          "kind": "asset"
+        },
+        {
+          "ref": "CH-141",
+          "kind": "asset"
+        },
+        {
+          "ref": "T-141",
+          "kind": "asset"
+        },
+        {
+          "ref": "SF-141",
+          "kind": "asset"
+        },
+        {
+          "ref": "P-141",
+          "kind": "asset"
+        },
+        {
+          "ref": "D-A140-MOC",
+          "kind": "decision"
+        },
+        {
+          "ref": "FEED-PE-MAT-002",
+          "kind": "document"
+        }
+      ],
+      "image": "charging"
+    },
+    {
+      "id": "A140-05",
+      "topic": "Independent containment and access",
+      "status": "Model provision — retention unverified",
+      "reason": "Each reactive-synthesis reactor is bunded independently so that one release cannot reach another.",
+      "observation": "The model owns four independent bunds BND-141A–D (16.4 m³ retention each), two emergency stations (ES-141, ES-140-03) and fire point FE-141 at the synthesis approach; none is on LST-001. The reactors are glass-lined carbon steel with glass-lined agitator and wetted internals (MAT-002, D-A140-MOC). Retention volumes are model annotations; the hot-transfer decision changes the liquor temperature the bunds may receive.",
+      "action": "Verify retention against the 500 kg batch inventory at 80 °C in the containment review; assign register identities to bunds, stations and fire point or record them by decision.",
+      "discipline": "Civil / fire safety",
+      "evidence": [
+        {
+          "ref": "D-A140-MOC",
+          "kind": "decision"
+        },
+        {
+          "ref": "ES-141",
+          "kind": "asset"
+        },
+        {
+          "ref": "ES-140-03",
+          "kind": "asset"
+        },
+        {
+          "ref": "MODEL",
+          "kind": "document"
+        }
+      ],
+      "image": "containment"
+    }
+  ],
+  "checks": [
+    {
+      "command": "node tests/validate-early-areas-semantic.mjs",
+      "purpose": "A-100 / A-140 / A-160 record contract: geometry bindings, flows, interfaces and the approved-provenance rule for populated fields",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "PASS: A-100, A-140 and A-160 equipment, flows, interfaces, alternatives and source guards are structured without inventing ratings.",
+      "ranAt": "2026-09-21T23:16:37.090Z"
+    },
+    {
+      "command": "node tests/validate-semantic-data.mjs",
+      "purpose": "data-layer invariants (registered sources, reviewer on approvals, conflict groups, identity holds)",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "{\"passed\":true,\"areas\":[{\"area\":\"A-100\",\"assets\":10,\"holds\":0,\"values\":137,\"approved\":10,\"conflicts\":2,\"variants\":12,\"gaps\":23},{\"area\":\"A-1000\",\"assets\":60,\"holds\":0,\"values\":293,\"approved\":22,\"conflicts\":3,\"variants\":19,\"gaps\":93},{\"area\":\"A-140\",\"assets\":17,\"holds\":0,\"values\":304,\"approved\":57,\"conflicts\":20,\"variants\":14,\"gaps\":49},{\"area\":\"A-160\",\"assets\":22,\"holds\":0,\"values\":185,\"approved\":13,\"conflicts\":3,\"variants\":11,\"gaps\":29},{\"area\":\"A-200\",\"assets\":67,\"holds\":0,\"values\":834,\"approved\":78,\"conflicts\":69,\"variants\":37,\"gaps\":145},{\"area\":\"A-2000\",\"assets\":49,\"holds\":0,\"values\":268,\"approved\":17,\"conflicts\":10,\"variants\":18,\"gaps\":76},{\"area\":\"A-300\",\"assets\":20,\"holds\":0,\"values\":302,\"approved\":25,\"conflicts\":13,\"variants\":17,\"gaps\":62},{\"area\":\"A-3000\",\"assets\":51,\"holds\":0,\"values\":132,\"approved\":13,\"conflicts\":3,\"variants\":11,\"gaps\":43},{\"area\":\"A-400\",\"assets\":23,\"holds\":0,\"values\":152,\"approved\":13,\"conflicts\":7,\"variants\":8,\"gaps\":45},{\"area\":\"A-4000\",\"assets\":11,\"holds\":0,\"values\":201,\"approved\":13,\"conflicts\":11,\"variants\":11,\"gaps\":18},{\"area\":\"A-500\",\"assets\":12,\"holds\":0,\"values\":102,\"approved\":18,\"conflicts\":5,\"variants\":5,\"gaps\":24},{\"area\":\"A-5000\",\"assets\":47,\"holds\":0,\"values\":188,\"approved\":16,\"conflicts\":10,\"variants\":10,\"gaps\":40},{\"area\":\"A-600\",\"assets\":31,\"holds\":0,\"values\":194,\"approved\":18,\"conflicts\":5,\"variants\":12,\"gaps\":22},{\"area\":\"A-6000\",\"assets\":6,\"holds\":0,\"values\":38,\"approved\":3,\"conflicts\":2,\"variants\":2,\"gaps\":5},{\"area\":\"A-700\",\"assets\":17,\"holds\":0,\"values\":377,\"approved\":39,\"conflicts\":5,\"variants\":7,\"gaps\":72},{\"area\":\"A-800\",\"assets\":25,\"holds\":0,\"values\":319,\"approved\":29,\"conflicts\":9,\"variants\":14,\"gaps\":38},{\"area\":\"A-900\",\"assets\":23,\"holds\":4,\"values\":208,\"approved\":20,\"conflicts\":11,\"variants\":11,\"gaps\":21}]}",
+      "ranAt": "2026-09-21T23:16:40.332Z"
+    },
+    {
+      "command": "node tests/validate-semantic-fields.mjs",
+      "purpose": "inspector field rendering of documented and applied values",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "PASS: documented pending and superseded values, alternatives, mixed units, missing values and identity holds.",
+      "ranAt": "2026-09-21T23:16:50.967Z"
+    }
+  ],
+  "decisions": [
+    {
+      "decisionId": "D-A140-MOC",
+      "assetPattern": "P-141|R-141A|R-141B|R-141C|R-141D|SF-141|SF-142|T-141|T-142",
+      "property": "design.materialOfConstruction",
+      "approvedSourceDocId": "FEED-PE-MAT-002",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A140-01",
+      "assetPattern": "R-141[ABCD]",
+      "property": "design.totalVolumeM3",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "MEB-003 V16 / LST-005 size R-141 on 80 kg/h graphite, 543 kg per batch, 7 h cycle and 3 batches/day; withdrawn by DBM V2.0 (500 kg graphite per batch, 2 operating + 1 spare, 9–10 h cycle per REP-040). No value approved. REP-040 6.8 m³ / D 1.9 m is on the DBM batch but is a first-principles estimate, not a calculation sheet.",
+      "gapNote": "Re-issue FEED-PE-MEB-003 (V17) on DBM V2.0: 500 kg graphite per batch, 2 + 1 reactors, 9–10 h cycle with P₂O₅ dosed on heat-up and hot transfer (REP-040); run persulfate calorimetry (F-06); then fix R-141 volume, jacket duty and count, and reconcile the four-reactor model geometry (39–42) against the 2 + 1 ruling."
+    },
+    {
+      "decisionId": "D-A140-01",
+      "assetPattern": "R-141[ABCD]",
+      "property": "design.workingVolumeM3",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "MEB-003 V16 / LST-005 size R-141 on 80 kg/h graphite, 543 kg per batch, 7 h cycle and 3 batches/day; withdrawn by DBM V2.0 (500 kg graphite per batch, 2 operating + 1 spare, 9–10 h cycle per REP-040). No value approved.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A140-01",
+      "assetPattern": "R-141[ABCD]",
+      "property": "operatingEnvelope.batchCycleHours",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "7 h (MEB-003) vs 10 h (PFD/Narrative) vs 9–10 h (REP-040, cool-down removed); follows the D-A140-02 hot-transfer decision.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A140-01",
+      "assetPattern": "R-141[ABCD]",
+      "property": "operatingEnvelope.batchesPerDay",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "3/day (MEB-003) vs 2.3 nominal / 3.0 design (DBM V2.0).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A140-01",
+      "assetPattern": "R-141[ABCD]",
+      "property": "operatingEnvelope.totalBatchMassKg",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "On 543 kg graphite; DBM batch is 500 kg.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A140-01",
+      "assetPattern": "R-141[ABCD]",
+      "property": "operatingEnvelope.preGPerBatchKg",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "LST-005 593.6 kg on 543 kg graphite; DBM: 550 kg Pre-G per R-201 batch.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A140-01",
+      "assetPattern": "R-141[ABCD]",
+      "property": "design.startupHeatUpDutyKw",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "317 kW on the 543 kg batch without P₂O₅ credit; REP-040 halves heat-up with P₂O₅ dosed on heat-up.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A140-01",
+      "assetPattern": "R-141[ABCD]",
+      "property": "design.steadyStateHeatingDutyKw",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "MEB-003 V16 / LST-005 size R-141 on 80 kg/h graphite, 543 kg per batch, 7 h cycle and 3 batches/day; withdrawn by DBM V2.0 (500 kg graphite per batch, 2 operating + 1 spare, 9–10 h cycle per REP-040). No value approved.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A140-01",
+      "assetPattern": "R-141[ABCD]",
+      "property": "design.jacketCoolingCapacityKw",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "83.8 kW rests on an assumed 50 kW intercalation exotherm; calorimetry required (REP-040 F-06).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A140-01",
+      "assetPattern": "R-141[ABCD]",
+      "property": "operatingEnvelope.worstCaseExothermKw",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Bounded 90–420 MJ persulfate oxidation is unmeasured (REP-040).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A140-01",
+      "assetPattern": "R-141[ABCD]",
+      "property": "operatingEnvelope.graphitePerBatchKg",
+      "approvedSourceDocId": "FEED-PE-DBM-001",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "DBM V2.0 §3.3: 500 kg graphite per R-141 batch (batch sizes of PFD V5.1.1); MEB-003 543.2 kg superseded.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A140-01",
+      "assetPattern": "R-141[ABCD]",
+      "property": "identity.quantity",
+      "approvedSourceDocId": "FEED-PE-DBM-001",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "DBM V2.0 rules two operating reactors plus one spare (C-05); PFD/model A/B/C/D and Narrative 1 unit superseded.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A140-02",
+      "assetPattern": "R-141[ABCD]",
+      "property": "operatingEnvelope.reactionTemperatureC",
+      "approvedSourceDocId": "FEED-PE-MEB-003",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "80 °C hold (MEB-003; REP-040 agrees).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A140-02",
+      "assetPattern": "R-141[ABCD]",
+      "property": "operatingEnvelope.reactionTimeHours",
+      "approvedSourceDocId": "FEED-PE-MEB-003",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "4.5 h hold (MEB-003, PFD, REP-040 agree).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A140-02",
+      "assetPattern": "R-141[ABCD]",
+      "property": "operatingEnvelope.h2so4RatioKgPerKgGraphite",
+      "approvedSourceDocId": "FEED-PE-MEB-003",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "18.4 kg/kg graphite (MEB-002, MEB-003, LST-005 agree).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A140-02",
+      "assetPattern": "R-141[ABCD]",
+      "property": "operatingEnvelope.k2s2o8RatioKgPerKgGraphite",
+      "approvedSourceDocId": "FEED-PE-MEB-003",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "0.50 kg/kg graphite (MEB-003; DBM chemical table agrees).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A140-02",
+      "assetPattern": "R-141[ABCD]",
+      "property": "operatingEnvelope.p2o5RatioKgPerKgGraphite",
+      "approvedSourceDocId": "FEED-PE-MEB-003",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "0.50 kg/kg graphite (MEB-003; DBM chemical table agrees).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A140-02",
+      "assetPattern": "R-141[ABCD]",
+      "property": "operatingEnvelope.p2o5DosingStrategy",
+      "approvedSourceDocId": "FEED-PE-REP-040",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Dose P₂O₅ during heat-up (about 400 MJ supplies about 45 % of the heat-up duty); adopted as design lever.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A140-02",
+      "assetPattern": "R-141[ABCD]",
+      "property": "operatingEnvelope.transferTemperatureC",
+      "approvedSourceDocId": "FEED-PE-REP-040",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Hot transfer at 80 °C to T-161 (deletes the cool-down leg and the chilled-water need); PFD 10–20 °C superseded; MoC on PFD-0140/0160 required.",
+      "gapNote": "Raise MoC on FEED-PE-PFD-001 sheets 0140 / 0160 for hot transfer and P₂O₅-on-heat-up (REP-040); confirm T-161 water inlet ≤ 28 °C keeps T-161 < 50 °C (REP-042)."
+    },
+    {
+      "decisionId": "D-A140-02",
+      "assetPattern": "R-141[ABCD]",
+      "property": "operatingEnvelope.utilityBasis",
+      "approvedSourceDocId": "FEED-PE-REP-040",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "HWS 95 °C / CW 25–30 °C; CHW no longer needed once the cool-down leg is removed.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A140-02",
+      "assetPattern": "R-141[ABCD]",
+      "property": "operatingEnvelope.worstCaseAdiabaticRiseK",
+      "approvedSourceDocId": "FEED-PE-REP-040",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "+54 K to about 135 °C worst credible case; hazards chemical, not pressure; adopted as the safety design statement pending calorimetry.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A140-02",
+      "assetPattern": "R-141[ABCD]",
+      "property": "safeguards.temperatureInterlockLadder",
+      "approvedSourceDocId": "FEED-PE-REP-040",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "82 / 85 / 88 / 90 °C recorded as the candidate ladder; origin unstated; confirm in HAZOP / LOPA.",
+      "gapNote": ""
+    }
+  ],
+  "approvedValues": [
+    {
+      "valueId": "PV-A-140-0145",
+      "assetId": "R-141A",
+      "property": "design.materialOfConstruction",
+      "value": "Glass-lined carbon steel; glass-lined agitator and wetted internals",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 8 (M-004)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "WV-materialOfConstruc-R-141A",
+      "resolves": [
+        "FEED-PE-MDL-001: Glass-lined carbon steel vessel; PTFE/PFA wetted seals and gaskets; glass-lined or fluoropolymer-coated agitator."
+      ]
+    },
+    {
+      "valueId": "PV-A-140-0147",
+      "assetId": "R-141B",
+      "property": "design.materialOfConstruction",
+      "value": "Glass-lined carbon steel; glass-lined agitator and wetted internals",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 8 (M-004)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "WV-materialOfConstruc-R-141B",
+      "resolves": [
+        "FEED-PE-MDL-001: Glass-lined carbon steel vessel; PTFE/PFA wetted seals and gaskets; glass-lined or fluoropolymer-coated agitator."
+      ]
+    },
+    {
+      "valueId": "PV-A-140-0149",
+      "assetId": "R-141C",
+      "property": "design.materialOfConstruction",
+      "value": "Glass-lined carbon steel; glass-lined agitator and wetted internals",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 8 (M-004)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "WV-materialOfConstruc-R-141C",
+      "resolves": [
+        "FEED-PE-MDL-001: Glass-lined carbon steel vessel; PTFE/PFA wetted seals and gaskets; glass-lined or fluoropolymer-coated agitator."
+      ]
+    },
+    {
+      "valueId": "PV-A-140-0151",
+      "assetId": "R-141D",
+      "property": "design.materialOfConstruction",
+      "value": "Glass-lined carbon steel; glass-lined agitator and wetted internals",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 8 (M-004)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "WV-materialOfConstruc-R-141D",
+      "resolves": [
+        "FEED-PE-MDL-001: Glass-lined carbon steel vessel; PTFE/PFA wetted seals and gaskets; glass-lined or fluoropolymer-coated agitator."
+      ]
+    },
+    {
+      "valueId": "PV-A-140-0153",
+      "assetId": "T-141",
+      "property": "design.materialOfConstruction",
+      "value": "316L dry-contact tanks/feeders; PFA/PTFE-lined wetted drop tubes at reactor entry",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 9 (M-005)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-T-141",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS dry/sealed construction; PTFE gaskets; avoid copper/brass and incompatible organic contamination. 316L not required for normal dry K₂S₂O₈ service unless vendor testing indicates otherwise."
+      ]
+    },
+    {
+      "valueId": "PV-A-140-0155",
+      "assetId": "T-142",
+      "property": "design.materialOfConstruction",
+      "value": "316L dry-contact tanks/feeders; PFA/PTFE-lined wetted drop tubes at reactor entry",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 9 (M-005)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-T-142",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS moisture-tight dry-service construction; PTFE gaskets; dry/inert venting where required. Upgrade metallurgy only if moisture/acid exposure is expected."
+      ]
+    },
+    {
+      "valueId": "PV-A-140-0157",
+      "assetId": "SF-141",
+      "property": "design.materialOfConstruction",
+      "value": "316L dry-contact tanks/feeders; PFA/PTFE-lined wetted drop tubes at reactor entry",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 9 (M-005)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-SF-141",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS hopper/screw/product-contact parts; PTFE seals; clean, dry oxidizer-compatible construction."
+      ]
+    },
+    {
+      "valueId": "PV-A-140-0159",
+      "assetId": "SF-142",
+      "property": "design.materialOfConstruction",
+      "value": "316L dry-contact tanks/feeders; PFA/PTFE-lined wetted drop tubes at reactor entry",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 9 (M-005)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-SF-142",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS hopper/screw/product-contact parts; PTFE seals; moisture-tight dry-service construction."
+      ]
+    },
+    {
+      "valueId": "PV-A-140-0161",
+      "assetId": "P-141",
+      "property": "design.materialOfConstruction",
+      "value": "PFA- or ETFE-lined sealless pump with SiC wetted bearings",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 10 (M-006)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "WV-materialOfConstruc-P-141",
+      "resolves": [
+        "FEED-PE-MDL-001: PFA-lined slurry pump; SiC seal faces/bearings; PTFE gaskets; abrasion-resistant wetted parts."
+      ]
+    },
+    {
+      "valueId": "PV-A-140-0167",
+      "assetId": "R-141A",
+      "property": "operatingEnvelope.reactionTimeHours",
+      "value": "4.5",
+      "unit": "h",
+      "sourceDocId": "FEED-PE-MEB-003",
+      "sourceRevision": "V16.0",
+      "sourceLocation": "'Batch Cycle Design'!row 6 (t_rxn)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0168",
+      "assetId": "R-141B",
+      "property": "operatingEnvelope.reactionTimeHours",
+      "value": "4.5",
+      "unit": "h",
+      "sourceDocId": "FEED-PE-MEB-003",
+      "sourceRevision": "V16.0",
+      "sourceLocation": "'Batch Cycle Design'!row 6 (t_rxn)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0169",
+      "assetId": "R-141C",
+      "property": "operatingEnvelope.reactionTimeHours",
+      "value": "4.5",
+      "unit": "h",
+      "sourceDocId": "FEED-PE-MEB-003",
+      "sourceRevision": "V16.0",
+      "sourceLocation": "'Batch Cycle Design'!row 6 (t_rxn)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0170",
+      "assetId": "R-141D",
+      "property": "operatingEnvelope.reactionTimeHours",
+      "value": "4.5",
+      "unit": "h",
+      "sourceDocId": "FEED-PE-MEB-003",
+      "sourceRevision": "V16.0",
+      "sourceLocation": "'Batch Cycle Design'!row 6 (t_rxn)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0199",
+      "assetId": "R-141A",
+      "property": "operatingEnvelope.h2so4RatioKgPerKgGraphite",
+      "value": "18.4",
+      "unit": "kg/kg graphite",
+      "sourceDocId": "FEED-PE-MEB-003",
+      "sourceRevision": "V16.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 7 (R_A)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0200",
+      "assetId": "R-141B",
+      "property": "operatingEnvelope.h2so4RatioKgPerKgGraphite",
+      "value": "18.4",
+      "unit": "kg/kg graphite",
+      "sourceDocId": "FEED-PE-MEB-003",
+      "sourceRevision": "V16.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 7 (R_A)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0201",
+      "assetId": "R-141C",
+      "property": "operatingEnvelope.h2so4RatioKgPerKgGraphite",
+      "value": "18.4",
+      "unit": "kg/kg graphite",
+      "sourceDocId": "FEED-PE-MEB-003",
+      "sourceRevision": "V16.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 7 (R_A)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0202",
+      "assetId": "R-141D",
+      "property": "operatingEnvelope.h2so4RatioKgPerKgGraphite",
+      "value": "18.4",
+      "unit": "kg/kg graphite",
+      "sourceDocId": "FEED-PE-MEB-003",
+      "sourceRevision": "V16.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 7 (R_A)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0203",
+      "assetId": "R-141A",
+      "property": "operatingEnvelope.k2s2o8RatioKgPerKgGraphite",
+      "value": "0.5",
+      "unit": "kg/kg graphite",
+      "sourceDocId": "FEED-PE-MEB-003",
+      "sourceRevision": "V16.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 8 (R_K)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0204",
+      "assetId": "R-141B",
+      "property": "operatingEnvelope.k2s2o8RatioKgPerKgGraphite",
+      "value": "0.5",
+      "unit": "kg/kg graphite",
+      "sourceDocId": "FEED-PE-MEB-003",
+      "sourceRevision": "V16.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 8 (R_K)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0205",
+      "assetId": "R-141C",
+      "property": "operatingEnvelope.k2s2o8RatioKgPerKgGraphite",
+      "value": "0.5",
+      "unit": "kg/kg graphite",
+      "sourceDocId": "FEED-PE-MEB-003",
+      "sourceRevision": "V16.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 8 (R_K)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0206",
+      "assetId": "R-141D",
+      "property": "operatingEnvelope.k2s2o8RatioKgPerKgGraphite",
+      "value": "0.5",
+      "unit": "kg/kg graphite",
+      "sourceDocId": "FEED-PE-MEB-003",
+      "sourceRevision": "V16.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 8 (R_K)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0207",
+      "assetId": "R-141A",
+      "property": "operatingEnvelope.p2o5RatioKgPerKgGraphite",
+      "value": "0.5",
+      "unit": "kg/kg graphite",
+      "sourceDocId": "FEED-PE-MEB-003",
+      "sourceRevision": "V16.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 9 (R_P)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0208",
+      "assetId": "R-141B",
+      "property": "operatingEnvelope.p2o5RatioKgPerKgGraphite",
+      "value": "0.5",
+      "unit": "kg/kg graphite",
+      "sourceDocId": "FEED-PE-MEB-003",
+      "sourceRevision": "V16.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 9 (R_P)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0209",
+      "assetId": "R-141C",
+      "property": "operatingEnvelope.p2o5RatioKgPerKgGraphite",
+      "value": "0.5",
+      "unit": "kg/kg graphite",
+      "sourceDocId": "FEED-PE-MEB-003",
+      "sourceRevision": "V16.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 9 (R_P)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0210",
+      "assetId": "R-141D",
+      "property": "operatingEnvelope.p2o5RatioKgPerKgGraphite",
+      "value": "0.5",
+      "unit": "kg/kg graphite",
+      "sourceDocId": "FEED-PE-MEB-003",
+      "sourceRevision": "V16.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 9 (R_P)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0215",
+      "assetId": "R-141A",
+      "property": "operatingEnvelope.reactionTemperatureC",
+      "value": "80.0",
+      "unit": "°C",
+      "sourceDocId": "FEED-PE-MEB-003",
+      "sourceRevision": "V16.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 33 (T_rxn)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0216",
+      "assetId": "R-141B",
+      "property": "operatingEnvelope.reactionTemperatureC",
+      "value": "80.0",
+      "unit": "°C",
+      "sourceDocId": "FEED-PE-MEB-003",
+      "sourceRevision": "V16.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 33 (T_rxn)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0217",
+      "assetId": "R-141C",
+      "property": "operatingEnvelope.reactionTemperatureC",
+      "value": "80.0",
+      "unit": "°C",
+      "sourceDocId": "FEED-PE-MEB-003",
+      "sourceRevision": "V16.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 33 (T_rxn)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0218",
+      "assetId": "R-141D",
+      "property": "operatingEnvelope.reactionTemperatureC",
+      "value": "80.0",
+      "unit": "°C",
+      "sourceDocId": "FEED-PE-MEB-003",
+      "sourceRevision": "V16.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 33 (T_rxn)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0269",
+      "assetId": "R-141A",
+      "property": "operatingEnvelope.graphitePerBatchKg",
+      "value": "500 (batch sizes of PFD V5.1.1); 2.3 batches/day nominal, 3.0 design; two operating reactors plus one spare on the 9–10 h cycle of REP-040",
+      "unit": "kg/batch",
+      "sourceDocId": "FEED-PE-DBM-001",
+      "sourceRevision": "V2.0",
+      "sourceLocation": "§3.3 batch structure / §3.4",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-graphitePerBatchKg-R-141A",
+      "resolves": [
+        "FEED-PE-MEB-003: 543.2 kg/batch"
+      ]
+    },
+    {
+      "valueId": "PV-A-140-0270",
+      "assetId": "R-141B",
+      "property": "operatingEnvelope.graphitePerBatchKg",
+      "value": "500 (batch sizes of PFD V5.1.1); 2.3 batches/day nominal, 3.0 design; two operating reactors plus one spare on the 9–10 h cycle of REP-040",
+      "unit": "kg/batch",
+      "sourceDocId": "FEED-PE-DBM-001",
+      "sourceRevision": "V2.0",
+      "sourceLocation": "§3.3 batch structure / §3.4",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-graphitePerBatchKg-R-141B",
+      "resolves": [
+        "FEED-PE-MEB-003: 543.2 kg/batch"
+      ]
+    },
+    {
+      "valueId": "PV-A-140-0271",
+      "assetId": "R-141C",
+      "property": "operatingEnvelope.graphitePerBatchKg",
+      "value": "500 (batch sizes of PFD V5.1.1); 2.3 batches/day nominal, 3.0 design; two operating reactors plus one spare on the 9–10 h cycle of REP-040",
+      "unit": "kg/batch",
+      "sourceDocId": "FEED-PE-DBM-001",
+      "sourceRevision": "V2.0",
+      "sourceLocation": "§3.3 batch structure / §3.4",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-graphitePerBatchKg-R-141C",
+      "resolves": [
+        "FEED-PE-MEB-003: 543.2 kg/batch"
+      ]
+    },
+    {
+      "valueId": "PV-A-140-0272",
+      "assetId": "R-141D",
+      "property": "operatingEnvelope.graphitePerBatchKg",
+      "value": "500 (batch sizes of PFD V5.1.1); 2.3 batches/day nominal, 3.0 design; two operating reactors plus one spare on the 9–10 h cycle of REP-040",
+      "unit": "kg/batch",
+      "sourceDocId": "FEED-PE-DBM-001",
+      "sourceRevision": "V2.0",
+      "sourceLocation": "§3.3 batch structure / §3.4",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-graphitePerBatchKg-R-141D",
+      "resolves": [
+        "FEED-PE-MEB-003: 543.2 kg/batch"
+      ]
+    },
+    {
+      "valueId": "PV-A-140-0273",
+      "assetId": "R-141A",
+      "property": "identity.quantity",
+      "value": "Two operating reactors plus one spare (DBM V2.0, rules C-05) vs A/B/C/D on the PFD / model vs '1 unit' in the Narrative",
+      "unit": "units",
+      "sourceDocId": "FEED-PE-DBM-001",
+      "sourceRevision": "V2.0",
+      "sourceLocation": "§3.4",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0274",
+      "assetId": "R-141B",
+      "property": "identity.quantity",
+      "value": "Two operating reactors plus one spare (DBM V2.0, rules C-05) vs A/B/C/D on the PFD / model vs '1 unit' in the Narrative",
+      "unit": "units",
+      "sourceDocId": "FEED-PE-DBM-001",
+      "sourceRevision": "V2.0",
+      "sourceLocation": "§3.4",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0275",
+      "assetId": "R-141C",
+      "property": "identity.quantity",
+      "value": "Two operating reactors plus one spare (DBM V2.0, rules C-05) vs A/B/C/D on the PFD / model vs '1 unit' in the Narrative",
+      "unit": "units",
+      "sourceDocId": "FEED-PE-DBM-001",
+      "sourceRevision": "V2.0",
+      "sourceLocation": "§3.4",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0276",
+      "assetId": "R-141D",
+      "property": "identity.quantity",
+      "value": "Two operating reactors plus one spare (DBM V2.0, rules C-05) vs A/B/C/D on the PFD / model vs '1 unit' in the Narrative",
+      "unit": "units",
+      "sourceDocId": "FEED-PE-DBM-001",
+      "sourceRevision": "V2.0",
+      "sourceLocation": "§3.4",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0285",
+      "assetId": "R-141A",
+      "property": "safeguards.temperatureInterlockLadder",
+      "value": "82 / 85 / 88 / 90 °C (origin not stated)",
+      "unit": "°C",
+      "sourceDocId": "FEED-PE-REP-040",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "basis table",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0286",
+      "assetId": "R-141B",
+      "property": "safeguards.temperatureInterlockLadder",
+      "value": "82 / 85 / 88 / 90 °C (origin not stated)",
+      "unit": "°C",
+      "sourceDocId": "FEED-PE-REP-040",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "basis table",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0287",
+      "assetId": "R-141C",
+      "property": "safeguards.temperatureInterlockLadder",
+      "value": "82 / 85 / 88 / 90 °C (origin not stated)",
+      "unit": "°C",
+      "sourceDocId": "FEED-PE-REP-040",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "basis table",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0288",
+      "assetId": "R-141D",
+      "property": "safeguards.temperatureInterlockLadder",
+      "value": "82 / 85 / 88 / 90 °C (origin not stated)",
+      "unit": "°C",
+      "sourceDocId": "FEED-PE-REP-040",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "basis table",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0289",
+      "assetId": "R-141A",
+      "property": "operatingEnvelope.worstCaseAdiabaticRiseK",
+      "value": "+54 K to ≈ 135 °C if the whole reactive inventory releases at the 80 °C hold (P₂O₅ hydration ≈ 400 MJ computable; persulfate oxidation 90–420 MJ unmeasured — calorimetry required, F-06); no vapour-pressure runaway, hazards are chemical (persulfate decomposition → O₂, Caro's acid)",
+      "unit": "K",
+      "sourceDocId": "FEED-PE-REP-040",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive conclusion",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0290",
+      "assetId": "R-141B",
+      "property": "operatingEnvelope.worstCaseAdiabaticRiseK",
+      "value": "+54 K to ≈ 135 °C if the whole reactive inventory releases at the 80 °C hold (P₂O₅ hydration ≈ 400 MJ computable; persulfate oxidation 90–420 MJ unmeasured — calorimetry required, F-06); no vapour-pressure runaway, hazards are chemical (persulfate decomposition → O₂, Caro's acid)",
+      "unit": "K",
+      "sourceDocId": "FEED-PE-REP-040",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive conclusion",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0291",
+      "assetId": "R-141C",
+      "property": "operatingEnvelope.worstCaseAdiabaticRiseK",
+      "value": "+54 K to ≈ 135 °C if the whole reactive inventory releases at the 80 °C hold (P₂O₅ hydration ≈ 400 MJ computable; persulfate oxidation 90–420 MJ unmeasured — calorimetry required, F-06); no vapour-pressure runaway, hazards are chemical (persulfate decomposition → O₂, Caro's acid)",
+      "unit": "K",
+      "sourceDocId": "FEED-PE-REP-040",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive conclusion",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0292",
+      "assetId": "R-141D",
+      "property": "operatingEnvelope.worstCaseAdiabaticRiseK",
+      "value": "+54 K to ≈ 135 °C if the whole reactive inventory releases at the 80 °C hold (P₂O₅ hydration ≈ 400 MJ computable; persulfate oxidation 90–420 MJ unmeasured — calorimetry required, F-06); no vapour-pressure runaway, hazards are chemical (persulfate decomposition → O₂, Caro's acid)",
+      "unit": "K",
+      "sourceDocId": "FEED-PE-REP-040",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive conclusion",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0293",
+      "assetId": "R-141A",
+      "property": "operatingEnvelope.p2o5DosingStrategy",
+      "value": "Dose P₂O₅ during heat-up so its 400 MJ supplies ≈ 45 % of the 887 MJ heat-up duty and halves heat-up time on the 95 °C loop (≈ 1 h)",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-040",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive conclusion",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0294",
+      "assetId": "R-141B",
+      "property": "operatingEnvelope.p2o5DosingStrategy",
+      "value": "Dose P₂O₅ during heat-up so its 400 MJ supplies ≈ 45 % of the 887 MJ heat-up duty and halves heat-up time on the 95 °C loop (≈ 1 h)",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-040",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive conclusion",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0295",
+      "assetId": "R-141C",
+      "property": "operatingEnvelope.p2o5DosingStrategy",
+      "value": "Dose P₂O₅ during heat-up so its 400 MJ supplies ≈ 45 % of the 887 MJ heat-up duty and halves heat-up time on the 95 °C loop (≈ 1 h)",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-040",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive conclusion",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0296",
+      "assetId": "R-141D",
+      "property": "operatingEnvelope.p2o5DosingStrategy",
+      "value": "Dose P₂O₅ during heat-up so its 400 MJ supplies ≈ 45 % of the 887 MJ heat-up duty and halves heat-up time on the 95 °C loop (≈ 1 h)",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-040",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive conclusion",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0297",
+      "assetId": "R-141A",
+      "property": "operatingEnvelope.transferTemperatureC",
+      "value": "Transfer hot (80 °C) to T-161 rather than cooling to 10–20 °C — deletes the R-141 cool-down and the chilled-water need; sensible heat 0.9 GJ is 14 % of the T-161 dilution heat",
+      "unit": "°C",
+      "sourceDocId": "FEED-PE-REP-040",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "basis table / §cool-down",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0298",
+      "assetId": "R-141B",
+      "property": "operatingEnvelope.transferTemperatureC",
+      "value": "Transfer hot (80 °C) to T-161 rather than cooling to 10–20 °C — deletes the R-141 cool-down and the chilled-water need; sensible heat 0.9 GJ is 14 % of the T-161 dilution heat",
+      "unit": "°C",
+      "sourceDocId": "FEED-PE-REP-040",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "basis table / §cool-down",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0299",
+      "assetId": "R-141C",
+      "property": "operatingEnvelope.transferTemperatureC",
+      "value": "Transfer hot (80 °C) to T-161 rather than cooling to 10–20 °C — deletes the R-141 cool-down and the chilled-water need; sensible heat 0.9 GJ is 14 % of the T-161 dilution heat",
+      "unit": "°C",
+      "sourceDocId": "FEED-PE-REP-040",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "basis table / §cool-down",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0300",
+      "assetId": "R-141D",
+      "property": "operatingEnvelope.transferTemperatureC",
+      "value": "Transfer hot (80 °C) to T-161 rather than cooling to 10–20 °C — deletes the R-141 cool-down and the chilled-water need; sensible heat 0.9 GJ is 14 % of the T-161 dilution heat",
+      "unit": "°C",
+      "sourceDocId": "FEED-PE-REP-040",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "basis table / §cool-down",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0301",
+      "assetId": "R-141A",
+      "property": "operatingEnvelope.utilityBasis",
+      "value": "HWS 95 °C; cooling water 25–30 °C; chilled water 5–7 °C (A-5000) — CHW needed only for the cool-down leg this report removes",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-040",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "basis table",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0302",
+      "assetId": "R-141B",
+      "property": "operatingEnvelope.utilityBasis",
+      "value": "HWS 95 °C; cooling water 25–30 °C; chilled water 5–7 °C (A-5000) — CHW needed only for the cool-down leg this report removes",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-040",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "basis table",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0303",
+      "assetId": "R-141C",
+      "property": "operatingEnvelope.utilityBasis",
+      "value": "HWS 95 °C; cooling water 25–30 °C; chilled water 5–7 °C (A-5000) — CHW needed only for the cool-down leg this report removes",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-040",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "basis table",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-140-0304",
+      "assetId": "R-141D",
+      "property": "operatingEnvelope.utilityBasis",
+      "value": "HWS 95 °C; cooling water 25–30 °C; chilled water 5–7 °C (A-5000) — CHW needed only for the cool-down leg this report removes",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-040",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "basis table",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    }
+  ],
+  "openConflicts": [
+    {
+      "conflictGroup": "CF-batchCycleHours-R-141A",
+      "assetId": "R-141A",
+      "property": "operatingEnvelope.batchCycleHours",
+      "alternatives": [
+        {
+          "valueId": "PV-A-140-0171",
+          "value": "7.0",
+          "unit": "h",
+          "sourceDocId": "FEED-PE-MEB-003",
+          "sourceLocation": "'Batch Cycle Design'!row 12 (t_cyc)"
+        },
+        {
+          "valueId": "PV-A-140-0277",
+          "value": "PFD / Narrative: heat 1 h, hold 4.5 h, cool 1 h, transfer 0.5 h, clean 3 h = 10 h (2.4 batches/day); REP-040 removes the cool-down leg (hot transfer to T-161) → 9–10 h",
+          "unit": "h",
+          "sourceDocId": "FEED-PE-REP-040",
+          "sourceLocation": "basis table / §cycle"
+        }
+      ]
+    },
+    {
+      "conflictGroup": "CF-batchCycleHours-R-141B",
+      "assetId": "R-141B",
+      "property": "operatingEnvelope.batchCycleHours",
+      "alternatives": [
+        {
+          "valueId": "PV-A-140-0172",
+          "value": "7.0",
+          "unit": "h",
+          "sourceDocId": "FEED-PE-MEB-003",
+          "sourceLocation": "'Batch Cycle Design'!row 12 (t_cyc)"
+        },
+        {
+          "valueId": "PV-A-140-0278",
+          "value": "PFD / Narrative: heat 1 h, hold 4.5 h, cool 1 h, transfer 0.5 h, clean 3 h = 10 h (2.4 batches/day); REP-040 removes the cool-down leg (hot transfer to T-161) → 9–10 h",
+          "unit": "h",
+          "sourceDocId": "FEED-PE-REP-040",
+          "sourceLocation": "basis table / §cycle"
+        }
+      ]
+    },
+    {
+      "conflictGroup": "CF-batchCycleHours-R-141C",
+      "assetId": "R-141C",
+      "property": "operatingEnvelope.batchCycleHours",
+      "alternatives": [
+        {
+          "valueId": "PV-A-140-0173",
+          "value": "7.0",
+          "unit": "h",
+          "sourceDocId": "FEED-PE-MEB-003",
+          "sourceLocation": "'Batch Cycle Design'!row 12 (t_cyc)"
+        },
+        {
+          "valueId": "PV-A-140-0279",
+          "value": "PFD / Narrative: heat 1 h, hold 4.5 h, cool 1 h, transfer 0.5 h, clean 3 h = 10 h (2.4 batches/day); REP-040 removes the cool-down leg (hot transfer to T-161) → 9–10 h",
+          "unit": "h",
+          "sourceDocId": "FEED-PE-REP-040",
+          "sourceLocation": "basis table / §cycle"
+        }
+      ]
+    },
+    {
+      "conflictGroup": "CF-batchCycleHours-R-141D",
+      "assetId": "R-141D",
+      "property": "operatingEnvelope.batchCycleHours",
+      "alternatives": [
+        {
+          "valueId": "PV-A-140-0174",
+          "value": "7.0",
+          "unit": "h",
+          "sourceDocId": "FEED-PE-MEB-003",
+          "sourceLocation": "'Batch Cycle Design'!row 12 (t_cyc)"
+        },
+        {
+          "valueId": "PV-A-140-0280",
+          "value": "PFD / Narrative: heat 1 h, hold 4.5 h, cool 1 h, transfer 0.5 h, clean 3 h = 10 h (2.4 batches/day); REP-040 removes the cool-down leg (hot transfer to T-161) → 9–10 h",
+          "unit": "h",
+          "sourceDocId": "FEED-PE-REP-040",
+          "sourceLocation": "basis table / §cycle"
+        }
+      ]
+    },
+    {
+      "conflictGroup": "CF-workingVolumeM3-R-141A",
+      "assetId": "R-141A",
+      "property": "design.workingVolumeM3",
+      "alternatives": [
+        {
+          "valueId": "PV-A-140-0187",
+          "value": "6.117",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-MEB-003",
+          "sourceLocation": "'Batch Cycle Design'!row 32 (V_work_bat)"
+        },
+        {
+          "valueId": "PV-A-140-0246",
+          "value": "7.868",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-LST-005",
+          "sourceLocation": "'A140_Batch_Cycle'!row 39 (V_work_bat)"
+        }
+      ]
+    },
+    {
+      "conflictGroup": "CF-workingVolumeM3-R-141B",
+      "assetId": "R-141B",
+      "property": "design.workingVolumeM3",
+      "alternatives": [
+        {
+          "valueId": "PV-A-140-0188",
+          "value": "6.117",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-MEB-003",
+          "sourceLocation": "'Batch Cycle Design'!row 32 (V_work_bat)"
+        },
+        {
+          "valueId": "PV-A-140-0247",
+          "value": "7.868",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-LST-005",
+          "sourceLocation": "'A140_Batch_Cycle'!row 39 (V_work_bat)"
+        }
+      ]
+    },
+    {
+      "conflictGroup": "CF-workingVolumeM3-R-141C",
+      "assetId": "R-141C",
+      "property": "design.workingVolumeM3",
+      "alternatives": [
+        {
+          "valueId": "PV-A-140-0189",
+          "value": "6.117",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-MEB-003",
+          "sourceLocation": "'Batch Cycle Design'!row 32 (V_work_bat)"
+        },
+        {
+          "valueId": "PV-A-140-0248",
+          "value": "7.868",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-LST-005",
+          "sourceLocation": "'A140_Batch_Cycle'!row 39 (V_work_bat)"
+        }
+      ]
+    },
+    {
+      "conflictGroup": "CF-workingVolumeM3-R-141D",
+      "assetId": "R-141D",
+      "property": "design.workingVolumeM3",
+      "alternatives": [
+        {
+          "valueId": "PV-A-140-0190",
+          "value": "6.117",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-MEB-003",
+          "sourceLocation": "'Batch Cycle Design'!row 32 (V_work_bat)"
+        },
+        {
+          "valueId": "PV-A-140-0249",
+          "value": "7.868",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-LST-005",
+          "sourceLocation": "'A140_Batch_Cycle'!row 39 (V_work_bat)"
+        }
+      ]
+    },
+    {
+      "conflictGroup": "CF-totalVolumeM3-R-141A",
+      "assetId": "R-141A",
+      "property": "design.totalVolumeM3",
+      "alternatives": [
+        {
+          "valueId": "PV-A-140-0191",
+          "value": "8.16",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-MEB-003",
+          "sourceLocation": "'Batch Cycle Design'!row 33 (V_tot_bat)"
+        },
+        {
+          "valueId": "PV-A-140-0250",
+          "value": "10.491",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-LST-005",
+          "sourceLocation": "'A140_Batch_Cycle'!row 40 (V_tot_bat)"
+        },
+        {
+          "valueId": "PV-A-140-0281",
+          "value": "Working 5.4 m³, vessel 6.8 m³, D 1.9 m, jacket ≈ 15 m² (glass-lined, MAT-001)",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-REP-040",
+          "sourceLocation": "basis table"
+        }
+      ]
+    },
+    {
+      "conflictGroup": "CF-totalVolumeM3-R-141B",
+      "assetId": "R-141B",
+      "property": "design.totalVolumeM3",
+      "alternatives": [
+        {
+          "valueId": "PV-A-140-0192",
+          "value": "8.16",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-MEB-003",
+          "sourceLocation": "'Batch Cycle Design'!row 33 (V_tot_bat)"
+        },
+        {
+          "valueId": "PV-A-140-0251",
+          "value": "10.491",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-LST-005",
+          "sourceLocation": "'A140_Batch_Cycle'!row 40 (V_tot_bat)"
+        },
+        {
+          "valueId": "PV-A-140-0282",
+          "value": "Working 5.4 m³, vessel 6.8 m³, D 1.9 m, jacket ≈ 15 m² (glass-lined, MAT-001)",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-REP-040",
+          "sourceLocation": "basis table"
+        }
+      ]
+    },
+    {
+      "conflictGroup": "CF-totalVolumeM3-R-141C",
+      "assetId": "R-141C",
+      "property": "design.totalVolumeM3",
+      "alternatives": [
+        {
+          "valueId": "PV-A-140-0193",
+          "value": "8.16",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-MEB-003",
+          "sourceLocation": "'Batch Cycle Design'!row 33 (V_tot_bat)"
+        },
+        {
+          "valueId": "PV-A-140-0252",
+          "value": "10.491",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-LST-005",
+          "sourceLocation": "'A140_Batch_Cycle'!row 40 (V_tot_bat)"
+        },
+        {
+          "valueId": "PV-A-140-0283",
+          "value": "Working 5.4 m³, vessel 6.8 m³, D 1.9 m, jacket ≈ 15 m² (glass-lined, MAT-001)",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-REP-040",
+          "sourceLocation": "basis table"
+        }
+      ]
+    },
+    {
+      "conflictGroup": "CF-totalVolumeM3-R-141D",
+      "assetId": "R-141D",
+      "property": "design.totalVolumeM3",
+      "alternatives": [
+        {
+          "valueId": "PV-A-140-0194",
+          "value": "8.16",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-MEB-003",
+          "sourceLocation": "'Batch Cycle Design'!row 33 (V_tot_bat)"
+        },
+        {
+          "valueId": "PV-A-140-0253",
+          "value": "10.491",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-LST-005",
+          "sourceLocation": "'A140_Batch_Cycle'!row 40 (V_tot_bat)"
+        },
+        {
+          "valueId": "PV-A-140-0284",
+          "value": "Working 5.4 m³, vessel 6.8 m³, D 1.9 m, jacket ≈ 15 m² (glass-lined, MAT-001)",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-REP-040",
+          "sourceLocation": "basis table"
+        }
+      ]
+    }
+  ],
+  "identityHolds": [],
+  "gaps": [
+    {
+      "gapId": "GAP-A-140-MV-d4f321",
+      "assetId": "R-141A",
+      "kind": "missing value",
+      "subject": "design.designPressure",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-140-MV-57de84",
+      "assetId": "R-141A",
+      "kind": "missing value",
+      "subject": "design.designTemperature",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-140-MV-5a21d9",
+      "assetId": "R-141B",
+      "kind": "missing value",
+      "subject": "design.designPressure",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-140-MV-003577",
+      "assetId": "R-141B",
+      "kind": "missing value",
+      "subject": "design.designTemperature",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-140-MV-1e5572",
+      "assetId": "R-141C",
+      "kind": "missing value",
+      "subject": "design.designPressure",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-140-MV-43fa85",
+      "assetId": "R-141C",
+      "kind": "missing value",
+      "subject": "design.designTemperature",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-140-MV-9a5337",
+      "assetId": "R-141D",
+      "kind": "missing value",
+      "subject": "design.designPressure",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-140-MV-761aa9",
+      "assetId": "R-141D",
+      "kind": "missing value",
+      "subject": "design.designTemperature",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-140-MV-a9eec8",
+      "assetId": "T-141",
+      "kind": "missing value",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-140-MV-7bd80c",
+      "assetId": "T-141",
+      "kind": "missing value",
+      "subject": "design.designPressure",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-140-MV-3024d1",
+      "assetId": "T-141",
+      "kind": "missing value",
+      "subject": "design.designTemperature",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-140-MV-04f7de",
+      "assetId": "T-142",
+      "kind": "missing value",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-140-MV-757f41",
+      "assetId": "T-142",
+      "kind": "missing value",
+      "subject": "design.designPressure",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-140-MV-58c625",
+      "assetId": "T-142",
+      "kind": "missing value",
+      "subject": "design.designTemperature",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-140-MV-781cc4",
+      "assetId": "SF-141",
+      "kind": "missing value",
+      "subject": "design.ratedFeedRateKgh",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-140-MV-0bfefe",
+      "assetId": "SF-142",
+      "kind": "missing value",
+      "subject": "design.ratedFeedRateKgh",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-140-MV-dd3d67",
+      "assetId": "P-141",
+      "kind": "missing value",
+      "subject": "design.pumpType",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-140-MV-9c906d",
+      "assetId": "P-141",
+      "kind": "missing value",
+      "subject": "design.ratedFlowM3h",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-140-MV-764a8e",
+      "assetId": "P-141",
+      "kind": "missing value",
+      "subject": "design.differentialHead",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-140-MV-3463ee",
+      "assetId": "CH-141",
+      "kind": "missing value",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-140-MV-2183e6",
+      "assetId": "CH-141",
+      "kind": "missing value",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-140-CF-8d1ede",
+      "assetId": "T-141",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-T-141"
+    },
+    {
+      "gapId": "GAP-A-140-CF-10c077",
+      "assetId": "T-142",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-T-142"
+    },
+    {
+      "gapId": "GAP-A-140-CF-4fa96b",
+      "assetId": "SF-141",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-SF-141"
+    },
+    {
+      "gapId": "GAP-A-140-CF-7469c0",
+      "assetId": "SF-142",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-SF-142"
+    },
+    {
+      "gapId": "GAP-A-140-CF-6ecda5",
+      "assetId": "R-141A",
+      "kind": "conflict",
+      "subject": "operatingEnvelope.batchCycleHours",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MEB-003, FEED-PE-REP-040",
+      "status": "open",
+      "note": "CF-batchCycleHours-R-141A"
+    },
+    {
+      "gapId": "GAP-A-140-CF-e6a96b",
+      "assetId": "R-141B",
+      "kind": "conflict",
+      "subject": "operatingEnvelope.batchCycleHours",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MEB-003, FEED-PE-REP-040",
+      "status": "open",
+      "note": "CF-batchCycleHours-R-141B"
+    },
+    {
+      "gapId": "GAP-A-140-CF-7a87bd",
+      "assetId": "R-141C",
+      "kind": "conflict",
+      "subject": "operatingEnvelope.batchCycleHours",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MEB-003, FEED-PE-REP-040",
+      "status": "open",
+      "note": "CF-batchCycleHours-R-141C"
+    },
+    {
+      "gapId": "GAP-A-140-CF-a9bbd8",
+      "assetId": "R-141D",
+      "kind": "conflict",
+      "subject": "operatingEnvelope.batchCycleHours",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MEB-003, FEED-PE-REP-040",
+      "status": "open",
+      "note": "CF-batchCycleHours-R-141D"
+    },
+    {
+      "gapId": "GAP-A-140-CF-4ea62c",
+      "assetId": "R-141A",
+      "kind": "conflict",
+      "subject": "operatingEnvelope.graphitePerBatchKg",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-DBM-001, FEED-PE-MEB-003",
+      "status": "closed — FEED-PE-DBM-001 approved by QFL 2026-09-20",
+      "note": "CF-graphitePerBatchKg-R-141A"
+    },
+    {
+      "gapId": "GAP-A-140-CF-1a3406",
+      "assetId": "R-141B",
+      "kind": "conflict",
+      "subject": "operatingEnvelope.graphitePerBatchKg",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-DBM-001, FEED-PE-MEB-003",
+      "status": "closed — FEED-PE-DBM-001 approved by QFL 2026-09-20",
+      "note": "CF-graphitePerBatchKg-R-141B"
+    },
+    {
+      "gapId": "GAP-A-140-CF-4babd3",
+      "assetId": "R-141C",
+      "kind": "conflict",
+      "subject": "operatingEnvelope.graphitePerBatchKg",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-DBM-001, FEED-PE-MEB-003",
+      "status": "closed — FEED-PE-DBM-001 approved by QFL 2026-09-20",
+      "note": "CF-graphitePerBatchKg-R-141C"
+    },
+    {
+      "gapId": "GAP-A-140-CF-76e2d9",
+      "assetId": "R-141D",
+      "kind": "conflict",
+      "subject": "operatingEnvelope.graphitePerBatchKg",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-DBM-001, FEED-PE-MEB-003",
+      "status": "closed — FEED-PE-DBM-001 approved by QFL 2026-09-20",
+      "note": "CF-graphitePerBatchKg-R-141D"
+    },
+    {
+      "gapId": "GAP-A-140-CF-e8efd7",
+      "assetId": "R-141A",
+      "kind": "conflict",
+      "subject": "design.workingVolumeM3",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-LST-005, FEED-PE-MEB-003",
+      "status": "open",
+      "note": "CF-workingVolumeM3-R-141A"
+    },
+    {
+      "gapId": "GAP-A-140-CF-9910fc",
+      "assetId": "R-141B",
+      "kind": "conflict",
+      "subject": "design.workingVolumeM3",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-LST-005, FEED-PE-MEB-003",
+      "status": "open",
+      "note": "CF-workingVolumeM3-R-141B"
+    },
+    {
+      "gapId": "GAP-A-140-CF-cfba7e",
+      "assetId": "R-141C",
+      "kind": "conflict",
+      "subject": "design.workingVolumeM3",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-LST-005, FEED-PE-MEB-003",
+      "status": "open",
+      "note": "CF-workingVolumeM3-R-141C"
+    },
+    {
+      "gapId": "GAP-A-140-CF-9a858d",
+      "assetId": "R-141D",
+      "kind": "conflict",
+      "subject": "design.workingVolumeM3",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-LST-005, FEED-PE-MEB-003",
+      "status": "open",
+      "note": "CF-workingVolumeM3-R-141D"
+    },
+    {
+      "gapId": "GAP-A-140-CF-d4b048",
+      "assetId": "R-141A",
+      "kind": "conflict",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-LST-005, FEED-PE-MEB-003, FEED-PE-REP-040",
+      "status": "open",
+      "note": "CF-totalVolumeM3-R-141A"
+    },
+    {
+      "gapId": "GAP-A-140-CF-696eab",
+      "assetId": "R-141B",
+      "kind": "conflict",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-LST-005, FEED-PE-MEB-003, FEED-PE-REP-040",
+      "status": "open",
+      "note": "CF-totalVolumeM3-R-141B"
+    },
+    {
+      "gapId": "GAP-A-140-CF-2dd69e",
+      "assetId": "R-141C",
+      "kind": "conflict",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-LST-005, FEED-PE-MEB-003, FEED-PE-REP-040",
+      "status": "open",
+      "note": "CF-totalVolumeM3-R-141C"
+    },
+    {
+      "gapId": "GAP-A-140-CF-6e1cef",
+      "assetId": "R-141D",
+      "kind": "conflict",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-LST-005, FEED-PE-MEB-003, FEED-PE-REP-040",
+      "status": "open",
+      "note": "CF-totalVolumeM3-R-141D"
+    },
+    {
+      "gapId": "GAP-A-140-DF-218759",
+      "assetId": "R-141[ABCD]",
+      "kind": "decision follow-up",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Re-issue FEED-PE-MEB-003 (V17) on DBM V2.0: 500 kg graphite per batch, 2 + 1 reactors, 9–10 h cycle with P₂O₅ dosed on heat-up and hot transfer (REP-040); run persulfate calorimetry (F-06); then fix R-141 volume, jacket duty and count, and reconcile the four-reactor model geometry (39–42) against the 2 + 1 ruling.",
+      "status": "open",
+      "note": "D-A140-01"
+    },
+    {
+      "gapId": "GAP-A-140-DF-7383d8",
+      "assetId": "R-141[ABCD]",
+      "kind": "decision follow-up",
+      "subject": "operatingEnvelope.transferTemperatureC",
+      "requiredSource": "Raise MoC on FEED-PE-PFD-001 sheets 0140 / 0160 for hot transfer and P₂O₅-on-heat-up (REP-040); confirm T-161 water inlet ≤ 28 °C keeps T-161 < 50 °C (REP-042).",
+      "status": "open",
+      "note": "D-A140-02"
+    },
+    {
+      "gapId": "GAP-A-140-ID-97505b",
+      "assetId": "CH-141 / CH-142 record identity",
+      "kind": "identity / naming conflict",
+      "subject": "Register tags T-141, T-142, SF-141, SF-142 (LST-001; MAT-002 M-005)",
+      "requiredSource": "Model record CH-141-CH-142 (compound charge-hopper assembly, equipment 43) added in V160",
+      "status": "open",
+      "note": "Reagent tank / feeder approvals cannot attach until the compound record is split or aliased"
+    },
+    {
+      "gapId": "GAP-A-140-ID-a52f88",
+      "assetId": "R-141x-JACKET / ES-141 / ES-140-03",
+      "kind": "identity / naming conflict",
+      "subject": "Not on LST-001",
+      "requiredSource": "Model sub-assembly and emergency-station records (V158+)",
+      "status": "open",
+      "note": "Model-only tags"
+    },
+    {
+      "gapId": "GAP-A-140-ID-ab63e3",
+      "assetId": "A-140 in the 3D model",
+      "kind": "identity / naming conflict",
+      "subject": "Geometry for R-141A–D (39–42) and CH-141/CH-142 (43)",
+      "requiredSource": "No semantic records; T-141, T-142, SF-141, SF-142, P-141 have no geometry",
+      "status": "open",
+      "note": "Add expand-a140-semantic.mjs; map CH-141/142 to T-141/T-142 + SF-141/SF-142 or retire"
+    },
+    {
+      "gapId": "GAP-A-140-ID-e3fb55",
+      "assetId": "R-141 reactor count",
+      "kind": "identity / naming conflict",
+      "subject": "A/B/C/D (PFD-0140, LST-001, model)",
+      "requiredSource": "Two operating + one spare (DBM V2.0 C-05, REP-040); '1 unit' (Narrative)",
+      "status": "open",
+      "note": "Count and batch basis (500 kg graphite, 9–10 h) differ from MEB-003 (543 kg, 7 h, 3/day)"
+    },
+    {
+      "gapId": "GAP-A-140-ID-5a2a6b",
+      "assetId": "R-141 vessel size",
+      "kind": "identity / naming conflict",
+      "subject": "MEB-003 V16: 6.12 m³ working / 8.16 m³ total (batch) or 4.11 / 5.48 m³ (continuous)",
+      "requiredSource": "LST-005: 7.87 / 10.49 m³; REP-040: 5.4 / 6.8 m³, D 1.9 m",
+      "status": "open",
+      "note": "Three sizes on three bases"
+    },
+    {
+      "gapId": "GAP-A-140-ID-9e233e",
+      "assetId": "Graphite basis A-140",
+      "kind": "identity / naming conflict",
+      "subject": "80 kg/h (MEB-003 V16, LST-005)",
+      "requiredSource": "63.5 kg/h design (DBM V2.0)",
+      "status": "open",
+      "note": "MOC-001 realignment"
+    }
+  ],
+  "inventory": [
+    {
+      "tag": "R-141A",
+      "name": "Pre-G synthesis A",
+      "modelEquipmentId": 39,
+      "operation": "synthesis",
+      "parts": 554,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
+      "identityHold": false,
+      "approvedRows": 13,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "R-141B",
+      "name": "Pre-G synthesis B",
+      "modelEquipmentId": 40,
+      "operation": "synthesis",
+      "parts": 556,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
+      "identityHold": false,
+      "approvedRows": 13,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "R-141C",
+      "name": "Pre-G synthesis C",
+      "modelEquipmentId": 41,
+      "operation": "synthesis",
+      "parts": 563,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
+      "identityHold": false,
+      "approvedRows": 13,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "R-141D",
+      "name": "Pre-G synthesis D",
+      "modelEquipmentId": 42,
+      "operation": "synthesis",
+      "parts": 563,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
+      "identityHold": false,
+      "approvedRows": 13,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "CH-141 / CH-142",
+      "name": "Dedicated reagent charging stations",
+      "modelEquipmentId": 43,
+      "operation": "synthesis",
+      "parts": 1200,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "BND-141A",
+      "name": "Pre-G reactive synthesis · independent A · 16.4 m³ retention",
+      "modelEquipmentId": 157,
+      "operation": "containment-A-140",
+      "parts": 155,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "BND-141B",
+      "name": "Pre-G reactive synthesis · independent B · 16.4 m³ retention",
+      "modelEquipmentId": 158,
+      "operation": "containment-A-140",
+      "parts": 147,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "BND-141C",
+      "name": "Pre-G reactive synthesis · independent C · 16.4 m³ retention",
+      "modelEquipmentId": 159,
+      "operation": "containment-A-140",
+      "parts": 143,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "BND-141D",
+      "name": "Pre-G reactive synthesis · independent D · 16.4 m³ retention",
+      "modelEquipmentId": 160,
+      "operation": "containment-A-140",
+      "parts": 148,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "ES-141",
+      "name": "Proposed emergency shower / eyewash",
+      "modelEquipmentId": 193,
+      "operation": "containment-A-140",
+      "parts": 17,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model station tag; plant tag approval open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "FE-141",
+      "name": "Pre-G synthesis approach · fire point",
+      "modelEquipmentId": 120141,
+      "operation": "fire-safety",
+      "parts": 41,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "ES-140-03",
+      "name": "Proposed emergency shower / eyewash",
+      "modelEquipmentId": 122003,
+      "operation": "containment-A-140",
+      "parts": 17,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model station tag; plant tag approval open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "P-PG141",
+      "name": "Synthesis collection transfer",
+      "modelEquipmentId": 3919489089,
+      "operation": "synthesis",
+      "parts": 242,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "R-141A-JACKET",
+      "name": "R-141A thermal interface",
+      "modelEquipmentId": "39",
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "provisional model subassembly",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "R-141B-JACKET",
+      "name": "R-141B thermal interface",
+      "modelEquipmentId": "40",
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "provisional model subassembly",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "R-141C-JACKET",
+      "name": "R-141C thermal interface",
+      "modelEquipmentId": "41",
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "provisional model subassembly",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "R-141D-JACKET",
+      "name": "R-141D thermal interface",
+      "modelEquipmentId": "42",
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "provisional model subassembly",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "CH-141-CH-142",
+      "name": "Dedicated reagent charging stations",
+      "modelEquipmentId": "43",
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "T-141",
+      "name": "K2S2O8 Tank",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "yes",
+      "identityStatus": "register-tag-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    },
+    {
+      "tag": "T-142",
+      "name": "P2O5 Tank",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "yes",
+      "identityStatus": "register-tag-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    },
+    {
+      "tag": "SF-141",
+      "name": "Twin Screw Loss-in-Weight Feeder",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "yes",
+      "identityStatus": "register-tag-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    },
+    {
+      "tag": "SF-142",
+      "name": "Twin Screw Loss-in-Weight Feeder",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "yes",
+      "identityStatus": "register-tag-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    },
+    {
+      "tag": "P-141",
+      "name": "Slurry Transfer Pump",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "yes",
+      "identityStatus": "register-tag-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    },
+    {
+      "tag": "CH-141",
+      "name": "Model charge-hopper assembly CH-141 / CH-142 — no register identity",
+      "modelEquipmentId": "43",
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "geometry-only (no semantic record)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    }
+  ],
+  "documents": [
+    {
+      "documentId": "FEED-PE-LST-001",
+      "title": "Equipment and Stream Register",
+      "revision": "V5.1",
+      "docType": "LST",
+      "control": "controlled",
+      "tier": "A",
+      "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-LST-001_Equipment-and-Stream-Register_V5.1.xlsx",
+      "valueRows": "18"
+    },
+    {
+      "documentId": "FEED-PE-PFD-001",
+      "title": "Process Flow Diagram",
+      "revision": "V5.1.1",
+      "docType": "PFD",
+      "control": "controlled (Draft - IFR)",
+      "tier": "A",
+      "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-PFD-001_Process-Flow-Diagram_V5.1.1.pdf",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-LST-007",
+      "title": "Control and Instrumentation Loop Register",
+      "revision": "V1.0",
+      "docType": "LST",
+      "control": "controlled (conceptual)",
+      "tier": "A",
+      "file": "7 Piping and Instrumentation Diagrams (P&IDs)\\FEED-PE-LST-007_Control-and-Instrumentation-Loop-Register_V1.0.xlsx",
+      "valueRows": "36"
+    },
+    {
+      "documentId": "FEED-PE-MDL-001",
+      "title": "Equipment Scale-Up Study",
+      "revision": "V1.8",
+      "docType": "MDL",
+      "control": "controlled",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\FEED-PE-MDL-001_Equipment-Scale-Up-Study_V1.8.xlsx",
+      "valueRows": "90"
+    },
+    {
+      "documentId": "FEED-PE-MAT-002",
+      "title": "MOC Selection Matrix",
+      "revision": "V1.1",
+      "docType": "MAT",
+      "control": "controlled",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.1.xlsx",
+      "valueRows": "22"
+    },
+    {
+      "documentId": "FEED-PE-DBM-001",
+      "title": "Design Basis Memorandum",
+      "revision": "V2.0",
+      "docType": "DBM",
+      "control": "controlled (approved)",
+      "tier": "B",
+      "file": "3 Design Basis Memorandum (DBM)\\FEED-PE-DBM-001_Design-Basis-Memorandum_V2.0.docx",
+      "valueRows": "8"
+    },
+    {
+      "documentId": "MODEL",
+      "title": "rGO Process Explorer model and semantic core",
+      "revision": "semantic v1",
+      "docType": "MODEL",
+      "control": "model evidence only",
+      "tier": "A",
+      "file": "dist/semantic/v1 (scripts/generate-reactor-semantic.mjs, scripts/expand-*-semantic.mjs)",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-MEB-003",
+      "title": "A-140 Pre-G Reactor Stream Table (design basis, batch cycle, energy)",
+      "revision": "V16.0",
+      "docType": "MEB",
+      "control": "controlled",
+      "tier": "A",
+      "file": "5 Mass and Energy Balances\\3 - FEED MEB Calculations\\FEED-PE-MEB-003_A-140-Pre-G-Reactor-Stream-Table_V16.0.xlsx",
+      "valueRows": "90"
+    },
+    {
+      "documentId": "FEED-PE-LST-005",
+      "title": "Engineering Data Consolidated A-100 / A-140",
+      "revision": "V1.0",
+      "docType": "LST",
+      "control": "controlled",
+      "tier": "A",
+      "file": "5 Mass and Energy Balances\\3 - FEED MEB Calculations\\FEED-PE-LST-005_Engineering-Data-Consolidated-A-100-A-140_V1.0.xlsx",
+      "valueRows": "12"
+    },
+    {
+      "documentId": "FEED-PE-REP-040",
+      "title": "R-141 Pre-G Reactor Assessment (heat release, runaway inventory, jacket, cycle time, reactor count)",
+      "revision": "V1.0",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-040_R-141-Pre-G-Reactor-Assessment_V1.0.docx",
+      "valueRows": "28"
+    }
+  ],
+  "images": [
+    {
+      "key": "overview",
+      "title": "01 | A-140 Pre-G synthesis — four reactors, charging stations and transfer pump, assembled",
+      "owners": [
+        "R-141A",
+        "R-141B",
+        "R-141C",
+        "R-141D",
+        "CH-141 / CH-142",
+        "P-PG141"
+      ],
+      "direction": [
+        1,
+        0.8,
+        1
+      ],
+      "alt": "the four modelled synthesis reactors with the reagent charging stations and the collection transfer pump"
+    },
+    {
+      "key": "reactor",
+      "title": "02 | R-141A jacketed synthesis reactor with its charging station",
+      "owners": [
+        "R-141A",
+        "CH-141 / CH-142"
+      ],
+      "frame": [
+        "R-141A"
+      ],
+      "zoom": 1.2,
+      "direction": [
+        -1,
+        0.5,
+        1
+      ],
+      "alt": "one synthesis reactor with jacket, agitator drive and the charging station beside it"
+    },
+    {
+      "key": "charging",
+      "title": "03 | CH-141 / CH-142 dedicated reagent charging stations (register T-141 / T-142 / SF-141 / SF-142)",
+      "owners": [
+        "CH-141 / CH-142",
+        "R-141A",
+        "R-141B"
+      ],
+      "frame": [
+        "CH-141 / CH-142"
+      ],
+      "zoom": 1.15,
+      "direction": [
+        1,
+        0.5,
+        -1
+      ],
+      "alt": "the persulfate and P₂O₅ charging stations with two reactors behind"
+    },
+    {
+      "key": "containment",
+      "title": "04 | Four independent bunds BND-141A–D, emergency stations and fire point FE-141",
+      "owners": [
+        "BND-141A",
+        "BND-141B",
+        "BND-141C",
+        "BND-141D",
+        "R-141A",
+        "R-141B",
+        "R-141C",
+        "R-141D",
+        "ES-141",
+        "ES-140-03",
+        "FE-141"
+      ],
+      "direction": [
+        0.35,
+        1,
+        0.3
+      ],
+      "percentiles": [
+        2,
+        96
+      ],
+      "alt": "plan-like view of the four reactors in their independent bunds with the two emergency stations and the fire point"
+    }
+  ],
+  "related": [
+    {
+      "href": "./a100-review.html",
+      "label": "A-100 premix (upstream)"
+    },
+    {
+      "href": "./a160-review.html",
+      "label": "A-160 Pre-G fixing (downstream)"
+    },
+    {
+      "href": "./a200-review.html",
+      "label": "A-200 oxidation bank"
+    }
+  ],
+  "counts": {
+    "assets": 17,
+    "propertyRows": 304,
+    "approved": 57,
+    "openConflicts": 12,
+    "decisions": 3,
+    "holds": 0,
+    "gapsOpen": 41,
+    "gapsClosed": 8
+  }
+}
