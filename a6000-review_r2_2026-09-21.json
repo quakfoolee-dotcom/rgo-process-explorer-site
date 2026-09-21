@@ -1,0 +1,635 @@
+{
+  "area": "A-6000",
+  "title": "A-6000 assembly & design review",
+  "revision": "r2",
+  "date": "2026-09-21",
+  "sourceCommit": "78b7d0e",
+  "semanticCoreVersion": "1.19.0-foundation",
+  "registerRevision": "2026-09-10 · Physical equipment ownership and complete Explore assemblies",
+  "modelConfig": {
+    "scope": "feed",
+    "a160": "baseline",
+    "argonSource": "bulk"
+  },
+  "lead": "Inert-gas supply: register packages A-6100 (inert-gas supply) and A-6200 (distribution); model (bulk-argon configuration) liquid-argon storage TK-6101 with ambient vaporizer E-6101, reserve cylinder bank MN-6102, source regulation and changeover PCV-6101 / PCV-6102, the common argon distribution header HD-6201 and the A-700 purge / process manifold AR-701.",
+  "reviewer": {
+    "initials": "QFL",
+    "date": "2026-09-21"
+  },
+  "representedParts": 4872,
+  "ownedEquipment": 7,
+  "findings": [
+    {
+      "id": "A6000-01",
+      "topic": "Inert-gas identity — argon or nitrogen",
+      "status": "No basis approved — MoC on DBM §3.6.3 / PFD-6000",
+      "reason": "The gas identity decides the source (cryogenic argon vs nitrogen generator or bulk N₂), the purity chain and the demand table for every user.",
+      "observation": "D-A6000-01 records the conflict and approves no basis: argon on PFD-6000, DAT-004 / DAT-008, MEB-009 / 010 and in the model (AR-701, HD-6201, bulk TK-6101 configuration) versus nitrogen in DBM §3.6.3; R-201 blanketing needs N₂ (NTE-010) while the furnaces need argon. The one approved value is the furnace argon specification — ≥ 99.999 % with ≤ 2 ppm O₂ at source (DAT-004 / DAT-008, REP-043). No demand has been tabulated.",
+      "action": "Rule the plant inert-gas basis by MoC on DBM §3.6.3 / PFD-6000 — argon for A-700 / A-800 / A-900 at ≥ 99.999 %, nitrogen for A-200 blanketing (N2-HEADER-201) — then tabulate demand (AR-701 / 702, AR-801 / 802, blanketing) and size the A-6100 supply package.",
+      "discipline": "Process / utilities",
+      "evidence": [
+        {
+          "ref": "D-A6000-01",
+          "kind": "decision"
+        },
+        {
+          "ref": "GAP-A-6000-DF-f1d9ef",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-6000-ID-f21cdd",
+          "kind": "gap"
+        },
+        {
+          "ref": "A-6100",
+          "kind": "asset"
+        },
+        {
+          "ref": "FEED-PE-REP-043",
+          "kind": "document"
+        }
+      ],
+      "image": "overview"
+    },
+    {
+      "id": "A6000-02",
+      "topic": "Register packages vs modelled source equipment",
+      "status": "Register reconciliation required",
+      "reason": "The register lists two packages; the model lists the equipment inside them — one identity scheme is needed before values can attach.",
+      "observation": "LST-001 lists A-6100 (inert-gas supply) and A-6200 (distribution) as packages with no model record; the model owns TK-6101 liquid-argon storage, E-6101 ambient vaporizer, MN-6102 reserve cylinder bank and the PCV-6101 / PCV-6102 regulation and changeover station under the bulk-argon configuration, with fire point FE-6001 at the source approach — none of these has a register tag or a semantic record. Materials are ruled for both packages (MAT-002: 316L bright-annealed / electropolished tubing and regulator bodies; MDL-001 304L superseded).",
+      "action": "Either register the model source equipment under A-6100 / A-6200 (with the alternative source configuration recorded) or model the packages as single records; then apply the MAT-002 rulings to the equipment.",
+      "discipline": "Process / layout",
+      "evidence": [
+        {
+          "ref": "GAP-A-6000-ID-e742af",
+          "kind": "gap"
+        },
+        {
+          "ref": "A-6100",
+          "kind": "asset"
+        },
+        {
+          "ref": "A-6200",
+          "kind": "asset"
+        },
+        {
+          "ref": "D-A6000-MOC",
+          "kind": "decision"
+        },
+        {
+          "ref": "CF-materialOfConstruc-A-6100",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "FEED-PE-MAT-002",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-LST-001",
+          "kind": "document"
+        }
+      ],
+      "image": "source"
+    },
+    {
+      "id": "A6000-03",
+      "topic": "Distribution header and user manifolds",
+      "status": "Modelled — demand and reservations open",
+      "reason": "The header and manifolds are sized on the tabulated demand and carry the A-900 reservations that are currently blinded.",
+      "observation": "The model provides the common distribution header HD-6201 (1,415 parts) and the A-700 purge / process manifold AR-701 (1,694 parts), both with semantic records but no register identity; the A-800 manifold AR-801 sits in A-800; the three A-900 takeoffs from HD-6201 are positively blinded reservations (S-900-901 … 903). The emergency-water source and run-off interfaces are semantic boundaries with unresolved physical tags.",
+      "action": "Size HD-6201 and the manifolds on the demand table once the gas basis is ruled; register HD-6201 / AR-701 / AR-801 on LST-001; keep the A-900 branches blinded until that area is reconciled.",
+      "discipline": "Process / utilities",
+      "evidence": [
+        {
+          "ref": "HD-6201",
+          "kind": "asset"
+        },
+        {
+          "ref": "AR-701",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A6000-EW-SOURCE",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A6000-EW-RUNOFF",
+          "kind": "asset"
+        },
+        {
+          "ref": "MODEL",
+          "kind": "document"
+        }
+      ],
+      "image": "header"
+    }
+  ],
+  "checks": [
+    {
+      "command": "node tests/validate-a6000-semantic.mjs",
+      "purpose": "A-6000 record contract: argon header and manifold records, station bindings",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "PASS: A-6000 preserves argon, structures 40 emergency stations, and keeps supply/runoff/common-service boundaries unresolved.",
+      "ranAt": "2026-09-21T23:52:46.479Z"
+    },
+    {
+      "command": "node tests/validate-semantic-data.mjs",
+      "purpose": "data-layer invariants (registered sources, reviewer on approvals, conflict groups, identity holds)",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "{\"passed\":true,\"areas\":[{\"area\":\"A-100\",\"assets\":10,\"holds\":0,\"values\":137,\"approved\":10,\"conflicts\":2,\"variants\":12,\"gaps\":23},{\"area\":\"A-1000\",\"assets\":60,\"holds\":0,\"values\":293,\"approved\":22,\"conflicts\":3,\"variants\":19,\"gaps\":93},{\"area\":\"A-140\",\"assets\":17,\"holds\":0,\"values\":304,\"approved\":57,\"conflicts\":20,\"variants\":14,\"gaps\":49},{\"area\":\"A-160\",\"assets\":22,\"holds\":0,\"values\":185,\"approved\":13,\"conflicts\":3,\"variants\":11,\"gaps\":29},{\"area\":\"A-200\",\"assets\":67,\"holds\":0,\"values\":834,\"approved\":78,\"conflicts\":69,\"variants\":37,\"gaps\":145},{\"area\":\"A-2000\",\"assets\":49,\"holds\":0,\"values\":268,\"approved\":17,\"conflicts\":10,\"variants\":18,\"gaps\":76},{\"area\":\"A-300\",\"assets\":20,\"holds\":0,\"values\":302,\"approved\":25,\"conflicts\":13,\"variants\":17,\"gaps\":62},{\"area\":\"A-3000\",\"assets\":51,\"holds\":0,\"values\":132,\"approved\":13,\"conflicts\":3,\"variants\":11,\"gaps\":43},{\"area\":\"A-400\",\"assets\":23,\"holds\":0,\"values\":152,\"approved\":13,\"conflicts\":7,\"variants\":8,\"gaps\":45},{\"area\":\"A-4000\",\"assets\":11,\"holds\":0,\"values\":201,\"approved\":13,\"conflicts\":11,\"variants\":11,\"gaps\":18},{\"area\":\"A-500\",\"assets\":12,\"holds\":0,\"values\":102,\"approved\":18,\"conflicts\":5,\"variants\":5,\"gaps\":24},{\"area\":\"A-5000\",\"assets\":47,\"holds\":0,\"values\":188,\"approved\":16,\"conflicts\":10,\"variants\":10,\"gaps\":40},{\"area\":\"A-600\",\"assets\":31,\"holds\":0,\"values\":194,\"approved\":18,\"conflicts\":5,\"variants\":12,\"gaps\":22},{\"area\":\"A-6000\",\"assets\":6,\"holds\":0,\"values\":38,\"approved\":3,\"conflicts\":2,\"variants\":2,\"gaps\":5},{\"area\":\"A-700\",\"assets\":17,\"holds\":0,\"values\":377,\"approved\":39,\"conflicts\":5,\"variants\":7,\"gaps\":72},{\"area\":\"A-800\",\"assets\":25,\"holds\":0,\"values\":319,\"approved\":29,\"conflicts\":9,\"variants\":14,\"gaps\":38},{\"area\":\"A-900\",\"assets\":23,\"holds\":4,\"values\":208,\"approved\":20,\"conflicts\":11,\"variants\":11,\"gaps\":21}]}",
+      "ranAt": "2026-09-21T23:52:48.555Z"
+    },
+    {
+      "command": "node tests/validate-semantic-fields.mjs",
+      "purpose": "inspector field rendering of documented and applied values",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "PASS: documented pending and superseded values, alternatives, mixed units, missing values and identity holds.",
+      "ranAt": "2026-09-21T23:53:01.123Z"
+    }
+  ],
+  "decisions": [
+    {
+      "decisionId": "D-A6000-MOC",
+      "assetPattern": "A-6100|A-6200",
+      "property": "design.materialOfConstruction",
+      "approvedSourceDocId": "FEED-PE-MAT-002",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A6000-01",
+      "assetPattern": "A-6100",
+      "property": "operatingEnvelope.gasBasis",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Inert-gas identity conflict: argon (PFD-6000, DAT-004/008, MEB-009/010, model) vs nitrogen (DBM §3.6.3); R-201 blanketing needs N₂ (NTE-010), furnaces need Ar. No basis approved.",
+      "gapNote": "Rule the plant inert-gas basis by MoC on DBM §3.6.3 / PFD-6000: argon for A-700 / A-800 / A-900 (purity ≥ 99.999 %, ≤ 2 ppm O₂) and nitrogen for A-200 blanketing (N2-HEADER-201); then tabulate demand (AR-701/702, AR-801/802, blanketing) and model the A-6100 supply package."
+    },
+    {
+      "decisionId": "D-A6000-01",
+      "assetPattern": "A-6100",
+      "property": "operatingEnvelope.purity",
+      "approvedSourceDocId": "FEED-PE-REP-043",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "≥ 99.999 % (≤ 2 ppm O₂) as required by DAT-004 / DAT-008 — approved as the furnace argon specification.",
+      "gapNote": ""
+    }
+  ],
+  "approvedValues": [
+    {
+      "valueId": "PV-A-6000-0033",
+      "assetId": "A-6100",
+      "property": "design.materialOfConstruction",
+      "value": "316L bright-annealed/electropolished tubing on low-ppm critical sections, orbital-welded; CS acceptable on non-critical bulk headers",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 70 (M-066)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-A-6100",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS regulator body/tubing and fittings; PTFE/PCTFE seats/seals; clean, leak-tight inert-gas construction. Use 316L only if ultra-high-purity specification requires it."
+      ]
+    },
+    {
+      "valueId": "PV-A-6000-0035",
+      "assetId": "A-6200",
+      "property": "design.materialOfConstruction",
+      "value": "316L bright-annealed/electropolished tubing on low-ppm critical sections, orbital-welded; CS acceptable on non-critical bulk headers",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 70 (M-066)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-A-6200",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS welded tubing/piping and fittings; PTFE/PCTFE seals; leak-tight inert-gas construction. Use 316L only if ultra-high-purity specification requires it."
+      ]
+    },
+    {
+      "valueId": "PV-A-6000-0038",
+      "assetId": "A-6100",
+      "property": "operatingEnvelope.purity",
+      "value": "≥ 99.999 % (≤ 2 ppm O₂ at source) required by DAT-004 / DAT-008",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-043",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "as cited from DAT-004 / DAT-008",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    }
+  ],
+  "openConflicts": [],
+  "identityHolds": [],
+  "gaps": [
+    {
+      "gapId": "GAP-A-6000-CF-613c02",
+      "assetId": "A-6100",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-A-6100"
+    },
+    {
+      "gapId": "GAP-A-6000-CF-e8d8be",
+      "assetId": "A-6200",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-A-6200"
+    },
+    {
+      "gapId": "GAP-A-6000-DF-f1d9ef",
+      "assetId": "A-6100",
+      "kind": "decision follow-up",
+      "subject": "operatingEnvelope.gasBasis",
+      "requiredSource": "Rule the plant inert-gas basis by MoC on DBM §3.6.3 / PFD-6000: argon for A-700 / A-800 / A-900 (purity ≥ 99.999 %, ≤ 2 ppm O₂) and nitrogen for A-200 blanketing (N2-HEADER-201); then tabulate demand (AR-701/702, AR-801/802, blanketing) and model the A-6100 supply package.",
+      "status": "open",
+      "note": "D-A6000-01"
+    },
+    {
+      "gapId": "GAP-A-6000-ID-f21cdd",
+      "assetId": "Inert gas identity",
+      "kind": "identity / naming conflict",
+      "subject": "Argon (PFD-6000, DAT-004, DAT-008, MEB-009/010, model AR-701 / HD-6201)",
+      "requiredSource": "Nitrogen (DBM §3.6.3); R-201 N₂ blanketing design intent (N2-HEADER-201)",
+      "status": "open",
+      "note": "DBM and PFD disagree on the plant inert gas; R-201 needs N₂, furnaces need Ar"
+    },
+    {
+      "gapId": "GAP-A-6000-ID-e742af",
+      "assetId": "A-6000 in the 3D model",
+      "kind": "identity / naming conflict",
+      "subject": "A-6100 / A-6200 packages (LST-001)",
+      "requiredSource": "Model: AR-701 branch (89) and HD-6201 header (117) only",
+      "status": "open",
+      "note": "Supply package unmodelled"
+    }
+  ],
+  "inventory": [
+    {
+      "tag": "AR-701",
+      "name": "Argon purge / process manifold · proposed",
+      "modelEquipmentId": 89,
+      "operation": "a6000",
+      "parts": 1694,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "HD-6201",
+      "name": "Common Ar distribution header",
+      "modelEquipmentId": 117,
+      "operation": "a6000",
+      "parts": 1415,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "TK-6101",
+      "name": "Liquid argon storage",
+      "modelEquipmentId": 118,
+      "operation": "a6000",
+      "parts": 286,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "E-6101",
+      "name": "Ambient argon vaporizer",
+      "modelEquipmentId": 119,
+      "operation": "a6000",
+      "parts": 296,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "MN-6102",
+      "name": "Reserve argon cylinder bank",
+      "modelEquipmentId": 121,
+      "operation": "a6000",
+      "parts": 414,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "PCV-6101 / PCV-6102",
+      "name": "Source regulation and changeover",
+      "modelEquipmentId": 122,
+      "operation": "a6000",
+      "parts": 726,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "FE-6001",
+      "name": "Argon source approach · fire point",
+      "modelEquipmentId": 126001,
+      "operation": "fire-safety",
+      "parts": 41,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "IF-A6000-EW-SOURCE",
+      "name": "Emergency-water source boundary",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "semantic boundary; physical tag and battery limit unresolved",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A6000-EW-RUNOFF",
+      "name": "Emergency-water runoff boundary",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "semantic boundary; physical tag and battery limit unresolved",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "A-6100",
+      "name": "Argon Supply and Pressure Regulation",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "yes",
+      "identityStatus": "register-tag-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    },
+    {
+      "tag": "A-6200",
+      "name": "Argon Distribution Header",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "yes",
+      "identityStatus": "register-tag-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    }
+  ],
+  "documents": [
+    {
+      "documentId": "FEED-PE-LST-001",
+      "title": "Equipment and Stream Register",
+      "revision": "V5.1",
+      "docType": "LST",
+      "control": "controlled",
+      "tier": "A",
+      "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-LST-001_Equipment-and-Stream-Register_V5.1.xlsx",
+      "valueRows": "4"
+    },
+    {
+      "documentId": "FEED-PE-PFD-001",
+      "title": "Process Flow Diagram",
+      "revision": "V5.1.1",
+      "docType": "PFD",
+      "control": "controlled (Draft - IFR)",
+      "tier": "A",
+      "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-PFD-001_Process-Flow-Diagram_V5.1.1.pdf",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-LST-007",
+      "title": "Control and Instrumentation Loop Register",
+      "revision": "V1.0",
+      "docType": "LST",
+      "control": "controlled (conceptual)",
+      "tier": "A",
+      "file": "7 Piping and Instrumentation Diagrams (P&IDs)\\FEED-PE-LST-007_Control-and-Instrumentation-Loop-Register_V1.0.xlsx",
+      "valueRows": "8"
+    },
+    {
+      "documentId": "FEED-PE-MDL-001",
+      "title": "Equipment Scale-Up Study",
+      "revision": "V1.8",
+      "docType": "MDL",
+      "control": "controlled",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\FEED-PE-MDL-001_Equipment-Scale-Up-Study_V1.8.xlsx",
+      "valueRows": "20"
+    },
+    {
+      "documentId": "FEED-PE-MAT-002",
+      "title": "MOC Selection Matrix",
+      "revision": "V1.1",
+      "docType": "MAT",
+      "control": "controlled",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.1.xlsx",
+      "valueRows": "4"
+    },
+    {
+      "documentId": "FEED-PE-DBM-001",
+      "title": "Design Basis Memorandum",
+      "revision": "V2.0",
+      "docType": "DBM",
+      "control": "controlled (approved)",
+      "tier": "B",
+      "file": "3 Design Basis Memorandum (DBM)\\FEED-PE-DBM-001_Design-Basis-Memorandum_V2.0.docx",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "MODEL",
+      "title": "rGO Process Explorer model and semantic core",
+      "revision": "semantic v1",
+      "docType": "MODEL",
+      "control": "model evidence only",
+      "tier": "A",
+      "file": "dist/semantic/v1 (scripts/generate-reactor-semantic.mjs, scripts/expand-*-semantic.mjs)",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-REP-038",
+      "title": "A-1000 / A-2000 Wastewater and Water Reclaim (first principles)",
+      "revision": "V1.0",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-038_A-1000-A-2000-Wastewater-and-Water-Reclaim_V1.0.docx",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-REP-039",
+      "title": "Sulphuric Acid Recovery vs Neutralisation (cross-area)",
+      "revision": "V1.0",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-039_Sulphuric-Acid-Recovery-vs-Neutralisation_V1.0.docx",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-REP-043",
+      "title": "Plant Utilities and Thermal Balance (A-5000 / A-6000 / A-4000)",
+      "revision": "V1.0",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-043_Plant-Utilities-and-Thermal-Balance_V1.0.docx",
+      "valueRows": "2"
+    },
+    {
+      "documentId": "FEED-PE-REP-041",
+      "title": "Furnace Off-Gas and Vent Gas Assessment",
+      "revision": "V1.0",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-041_Furnace-Off-Gas-and-Vent-Gas-Assessment_V1.0.docx",
+      "valueRows": "0"
+    }
+  ],
+  "images": [
+    {
+      "key": "overview",
+      "title": "01 | A-6000 argon source and distribution as modelled (bulk configuration)",
+      "owners": [
+        "TK-6101",
+        "E-6101",
+        "MN-6102",
+        "PCV-6101 / PCV-6102",
+        "HD-6201",
+        "AR-701"
+      ],
+      "direction": [
+        1,
+        0.8,
+        1
+      ],
+      "alt": "liquid-argon tank, vaporizer, reserve cylinder bank, regulation station, the common header and the A-700 manifold in assembled position"
+    },
+    {
+      "key": "source",
+      "title": "02 | Argon source: TK-6101 liquid storage, E-6101 ambient vaporizer, MN-6102 reserve cylinders and PCV-6101 / PCV-6102 changeover",
+      "owners": [
+        "TK-6101",
+        "E-6101",
+        "MN-6102",
+        "PCV-6101 / PCV-6102",
+        "FE-6001"
+      ],
+      "direction": [
+        -1,
+        0.5,
+        1
+      ],
+      "alt": "the bulk-argon source equipment with the fire point at its approach"
+    },
+    {
+      "key": "header",
+      "title": "03 | HD-6201 common argon distribution header and AR-701 A-700 purge / process manifold",
+      "owners": [
+        "HD-6201",
+        "AR-701"
+      ],
+      "direction": [
+        1,
+        0.5,
+        -1
+      ],
+      "alt": "the distribution header run and the A-700 manifold branch"
+    }
+  ],
+  "related": [
+    {
+      "href": "./a700-review.html",
+      "label": "A-700 pyrolysis (argon user)"
+    },
+    {
+      "href": "./a800-review.html",
+      "label": "A-800 doping (argon user, AR-801)"
+    },
+    {
+      "href": "./a900-review.html",
+      "label": "A-900 (blinded argon reservations)"
+    }
+  ],
+  "counts": {
+    "assets": 6,
+    "propertyRows": 38,
+    "approved": 3,
+    "openConflicts": 0,
+    "decisions": 2,
+    "holds": 0,
+    "gapsOpen": 3,
+    "gapsClosed": 2
+  }
+}
