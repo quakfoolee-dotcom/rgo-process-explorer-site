@@ -1,0 +1,2640 @@
+{
+  "area": "A-700",
+  "title": "A-700 assembly & design review",
+  "revision": "r2",
+  "date": "2026-09-21",
+  "sourceCommit": "5922bbc",
+  "semanticCoreVersion": "1.19.0-foundation",
+  "registerRevision": "2026-09-10 · Physical equipment ownership and complete Explore assemblies",
+  "modelConfig": {
+    "scope": "feed",
+    "a160": "baseline",
+    "argonSource": "bulk"
+  },
+  "lead": "Thermal reduction of TLGO to rGO: contained powder lift TR-701, argon transfer lock LK-701, sealed feed buffer H-701, screw feeder C-701, continuous three-zone furnace PY-701 (one unit as modelled; three modules by design closure), product screw cooler E-702 and cooled receiver T-702, off-gas cooler E-701, condensate separator KO-701, exhaust fan FN-701, oxygen / pressure instrument assembly AIT-701 and the argon, cooling and gas-treatment battery limit BL-700-UTIL.",
+  "reviewer": {
+    "initials": "QFL",
+    "date": "2026-09-21"
+  },
+  "representedParts": 5815,
+  "ownedEquipment": 15,
+  "findings": [
+    {
+      "id": "A700-01",
+      "topic": "Furnace configuration — three modules by closure, one in the model",
+      "status": "Design basis approved — datasheet, PFD and model to follow",
+      "reason": "The furnace count, retort size and installed duty are the area's governing design statement; every downstream item follows them.",
+      "observation": "D-A700-01 approves the REP-018 design closure as the FEED design-basis statement: three identical indirectly electrically heated screw-furnace modules PY-701A/B/C, 0.90 m ID × 12 m heated retort (15 m overall), 180 kW per module in six zones, DN200 off-gas at 650 m³/h and 1,100 °C per module, hot zone UNS N06230 with Kanthal APMT as qualified alternative. DAT-004, PFD-0700, LST-001 and the model all show a single PY-701 (equipment 83); the single-unit statements are superseded, not deleted.",
+      "action": "Update FEED-PE-DAT-004 (V1.1) to the three-module basis and complete its 55 blank items; add PY-701B/C geometry and records to the model and LST-001; raise the MoC on MAT-002 M-042 / M-045 for the N06230 selection or record the reason to keep Alloy 602 CA.",
+      "discipline": "Process / mechanical",
+      "evidence": [
+        {
+          "ref": "D-A700-01",
+          "kind": "decision"
+        },
+        {
+          "ref": "GAP-A-700-ID-f36845",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-700-ID-35239f",
+          "kind": "gap"
+        },
+        {
+          "ref": "FEED-PE-REP-018",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-004",
+          "kind": "document"
+        }
+      ],
+      "image": "furnace"
+    },
+    {
+      "id": "A700-02",
+      "topic": "Feed-rate basis",
+      "status": "Basis withdrawn — four rates on record",
+      "reason": "Furnace, feeder and cooler duties scale with the dried-TLGO rate, which must be single-valued on the DBM V2.0 basis.",
+      "observation": "Four rates are on record: 22.5 kg/h (MEB-009 V10, on 50 kg/h graphite), 44.1 kg/h (DAT-004), 3 × 46 kg/h (REP-018) and the DBM V2.0 design rate of 74 kg/h dried TLGO (57 kg/h nominal). D-A700-04 withdrew the feed rate, product rate and the MEB-009 screening duties for PY-701, C-701, E-701 and E-702; the MEB-009 vs DAT-004 conflict stays open until MEB-009 is re-issued.",
+      "action": "Re-issue FEED-PE-MEB-009 (V11) on DBM V2.0 (57 / 74 kg/h dried TLGO), restate the module rates and duties, then derive E-701 / E-702 duties and the C-701 feeder rating.",
+      "discipline": "Process",
+      "evidence": [
+        {
+          "ref": "D-A700-04",
+          "kind": "decision"
+        },
+        {
+          "ref": "CF-feedRateKgh-PY-701",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "GAP-A-700-CF-9f8fa8",
+          "kind": "gap"
+        },
+        {
+          "ref": "FEED-PE-MEB-009",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DBM-001",
+          "kind": "document"
+        }
+      ],
+      "image": "overview"
+    },
+    {
+      "id": "A700-03",
+      "topic": "Operating envelope and design inconsistencies",
+      "status": "Approved — two RED inconsistencies to resolve",
+      "reason": "Temperature, residence, ramp, atmosphere and pressure define the reduction and the hazardous-area basis.",
+      "observation": "Approved (D-A700-02): 1,100 °C reaction temperature and 4 h active-zone residence (DAT-004, MEB-009, REP-018 / 021 agree), ≤ 10 ppm O₂ operating and pre-heat, −3 mbar(g) furnace pressure (MEB-009, consistent with the PSV-701 80 mbarg set / 100 mbarg MAWP), indirect heating with the process isolated from the elements, Zone 1 internal (H₂ service + combustible dust). The 5 °C/min ramp is recorded as the stated basis, but REP-021 shows it cannot fit within the 4 h residence — recorded as an open RED item together with the deoxygenation sequence.",
+      "action": "Resolve the ramp / residence inconsistency and the deoxygenation basis in DAT-004 V1.1; fill the PY-701 design pressure (blank in DAT-004) consistent with the 100 mbarg MAWP used by DAT-007.",
+      "discipline": "Process / controls",
+      "evidence": [
+        {
+          "ref": "D-A700-02",
+          "kind": "decision"
+        },
+        {
+          "ref": "GAP-A-700-ID-b1cedb",
+          "kind": "gap"
+        },
+        {
+          "ref": "FEED-PE-DAT-004",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-REP-021",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-MEB-009",
+          "kind": "document"
+        }
+      ],
+      "image": "furnace"
+    },
+    {
+      "id": "A700-04",
+      "topic": "Off-gas basis, vent segregation and relief",
+      "status": "Segregation required — S2 header",
+      "reason": "CO-in-argon furnace gas is a dry inert combustible stream; it must never share a header with wet oxidising vents or with the A-800 hydrogen / potassium stream.",
+      "observation": "D-A700-02 adopts REP-041: CO 4–8 Nm³/h steady (× 3–5 in the burst), 8–10 vol % in argon, water dew point 60–70 °C — segregated as system S2 from the wet S1 vents and from the A-800 S3 stream; the PFD-3000 common header is superseded as intent. PSV-701 (DAT-007) is approved at 80 mbarg set, 100 mbarg MAWP, ASME VIII + API 526, SS316L / Inconel 625 hot, safe atmospheric vent with a rupture disc in series recommended; PSV-701 has no model geometry. KO-701 (DAT-006): 200 °C / 100 mbarg / full vacuum, ≥ 90 % fines removal, ≤ 10 mbar, conical 60° head.",
+      "action": "Confirm the three-system segregation (S1 / S2 / S3) on FEED-PFD-3000 and in HAZOP; size E-701 for the 60–70 °C dew point and fines; add PSV-701 to the model at its mounting location (hot-side body temperature governs its material) and complete the DAT-007 relieving-capacity items.",
+      "discipline": "Process safety / mechanical",
+      "evidence": [
+        {
+          "ref": "D-A700-02",
+          "kind": "decision"
+        },
+        {
+          "ref": "D-A700-03",
+          "kind": "decision"
+        },
+        {
+          "ref": "PSV-701",
+          "kind": "asset"
+        },
+        {
+          "ref": "KO-701",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A700-RELIEF",
+          "kind": "asset"
+        },
+        {
+          "ref": "FEED-PE-REP-041",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-007",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-006",
+          "kind": "document"
+        }
+      ],
+      "image": "offgas"
+    },
+    {
+      "id": "A700-05",
+      "topic": "Product cooling and receiver",
+      "status": "Datasheet values approved — scope question open",
+      "reason": "The product must leave the inert envelope cooled below its ignition-sensitive temperature into a contained receiver.",
+      "observation": "E-702 (DAT-005) approved: 60–80 °C solids outlet, 200 °C / +50 mbarg / full vacuum design, 1.5 mm corrosion allowance, 32 °C CWS / 40 °C CWR. DAT-005 itself asks the furnace vendor whether E-702 is essential or a safety margin against under-performance of the PY-701 internal cooling zone; its duty, cooling-water flows and residence time are blank. T-702 is ruled 316L (MAT-002). The T-701 cyclone named in the design notes is not on PFD-0700, LST-001 or in the model.",
+      "action": "Decide the E-702 scope with the furnace vendor (essential vs margin), complete the DAT-005 duty and cooling-water items on the re-issued MEB-009, and rule the T-701 cyclone in or out of PFD-0700.",
+      "discipline": "Process / mechanical",
+      "evidence": [
+        {
+          "ref": "D-A700-03",
+          "kind": "decision"
+        },
+        {
+          "ref": "E-702",
+          "kind": "asset"
+        },
+        {
+          "ref": "T-702",
+          "kind": "asset"
+        },
+        {
+          "ref": "GAP-A-700-ID-d6c59a",
+          "kind": "gap"
+        },
+        {
+          "ref": "T-701",
+          "kind": "asset"
+        },
+        {
+          "ref": "FEED-PE-DAT-005",
+          "kind": "document"
+        }
+      ],
+      "image": "product"
+    },
+    {
+      "id": "A700-06",
+      "topic": "Materials of construction",
+      "status": "Ruled — hot-zone alloy to align by MoC",
+      "reason": "Carburising, reducing service at 1,100 °C with carbon-bearing solids is aggressive to stainless steels and to some nickel alloys (metal dusting window).",
+      "observation": "D-A700-MOC applies MAT-002: E-701 Alloy 602 CA or alonised Alloy 800H in the metal-dusting window; C-701 316L / 310S at the cool end and Alloy 601 / 602 CA at the hot transition; T-702 in 316L; FN-701 / PSV wetted metal in 316L or Alloy 601 / 602 CA where hot. D-A700-01 approves REP-018's hot-zone UNS N06230 for PY-701 over MAT-002 M-042 (Alloy 602 CA), and D-A700-03 the DAT-006 SS316L shell for KO-701; MDL-001 (Inconel 601 retort, 304L casings) is superseded.",
+      "action": "Align MAT-002 M-042 / M-045 / M-047 with the N06230 selection and the KO-701 316L shell by MoC; confirm the carburisation life target (25,000 h screening) with the vendor.",
+      "discipline": "Materials",
+      "evidence": [
+        {
+          "ref": "D-A700-MOC",
+          "kind": "decision"
+        },
+        {
+          "ref": "D-A700-01",
+          "kind": "decision"
+        },
+        {
+          "ref": "CF-materialOfConstruc-PY-701",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "CF-materialOfConstruc-E-701",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "CF-materialOfConstruc-C-701",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "FEED-PE-MAT-002",
+          "kind": "document"
+        }
+      ],
+      "image": "overview"
+    },
+    {
+      "id": "A700-07",
+      "topic": "Register and model reconciliation",
+      "status": "Register reconciliation required",
+      "reason": "Every equipment item in the area must have one identity in the register, the model and the data layer.",
+      "observation": "Five LST-001 tags (C-701, PY-701, E-701, FN-701, T-702) are bound to model geometry. The model additionally owns the proposed contained feed chain TR-701 / LK-701 / H-701, the product cooler E-702, the separator KO-701, the instrument assembly AIT-701, the battery limit BL-700-UTIL, two fire points and one emergency station — none on LST-001. PSV-701 has a datasheet and approved values but no geometry; the T-701 cyclone has neither. Relief and condensate interfaces have no destinations.",
+      "action": "Add TR-701, LK-701, H-701, E-702, KO-701, AIT-701 and PSV-701 to LST-001 and PFD-0700 (or record them as proposed by decision); model PSV-701; rule T-701; assign the relief and condensate destinations.",
+      "discipline": "Process / layout",
+      "evidence": [
+        {
+          "ref": "GAP-A-700-ID-ee9ffc",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-700-ID-d6c59a",
+          "kind": "gap"
+        },
+        {
+          "ref": "TR-701",
+          "kind": "asset"
+        },
+        {
+          "ref": "LK-701",
+          "kind": "asset"
+        },
+        {
+          "ref": "H-701",
+          "kind": "asset"
+        },
+        {
+          "ref": "AIT-701",
+          "kind": "asset"
+        },
+        {
+          "ref": "BL-700-UTIL",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A700-CONDENSATE",
+          "kind": "asset"
+        }
+      ],
+      "image": "feed"
+    },
+    {
+      "id": "A700-08",
+      "topic": "Datasheet completeness",
+      "status": "55 blank items across four unsigned datasheets",
+      "reason": "Unsigned datasheets with blank duty, flow, weight and rating items cannot support a vendor enquiry.",
+      "observation": "DAT-004 (furnace), DAT-005 (cooler), DAT-006 (separator) and DAT-007 (PSV) are controlled but unsigned; the data layer lists 55 blank items — among them the furnace zone duties and installed capacity, shell design temperature, drive ratings and operating weights; the cooler duty, cooling-water flows and residence time; the separator gas and solids flows; the PSV required and certified relieving capacities, ratings and facings. Most depend on the withdrawn feed-rate basis (A700-02).",
+      "action": "Complete and sign DAT-004 … DAT-007 on the re-issued MEB-009 basis; the blank-item list in the evidence register is the work-list.",
+      "discipline": "Process / mechanical",
+      "evidence": [
+        {
+          "ref": "GAP-A-700-DB-56ffc3",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-700-DB-11d6e3",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-700-DB-560e58",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-700-DB-3fcce0",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-700-DB-031b23",
+          "kind": "gap"
+        },
+        {
+          "ref": "FEED-PE-DAT-004",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-005",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-006",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-007",
+          "kind": "document"
+        }
+      ],
+      "image": "access"
+    }
+  ],
+  "checks": [
+    {
+      "command": "node tests/validate-a700-semantic.mjs",
+      "purpose": "A-700 record contract: populated design / operating fields carry approved, reviewer-initialled provenance",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "PASS: A-700 handoff, independent gas/relief paths, argon branches, draft thermal basis, open conflicts and source guards.",
+      "ranAt": "2026-09-21T21:02:43.165Z"
+    },
+    {
+      "command": "node tests/validate-semantic-data.mjs",
+      "purpose": "data-layer invariants (registered sources, reviewer on approvals, conflict groups, identity holds)",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "{\"passed\":true,\"areas\":[{\"area\":\"A-100\",\"assets\":10,\"holds\":0,\"values\":137,\"approved\":10,\"conflicts\":2,\"variants\":12,\"gaps\":23},{\"area\":\"A-1000\",\"assets\":60,\"holds\":0,\"values\":293,\"approved\":22,\"conflicts\":3,\"variants\":19,\"gaps\":93},{\"area\":\"A-140\",\"assets\":17,\"holds\":0,\"values\":304,\"approved\":57,\"conflicts\":20,\"variants\":14,\"gaps\":49},{\"area\":\"A-160\",\"assets\":22,\"holds\":0,\"values\":185,\"approved\":13,\"conflicts\":3,\"variants\":11,\"gaps\":29},{\"area\":\"A-200\",\"assets\":67,\"holds\":0,\"values\":834,\"approved\":78,\"conflicts\":69,\"variants\":37,\"gaps\":145},{\"area\":\"A-2000\",\"assets\":49,\"holds\":0,\"values\":268,\"approved\":17,\"conflicts\":10,\"variants\":18,\"gaps\":76},{\"area\":\"A-300\",\"assets\":20,\"holds\":0,\"values\":302,\"approved\":25,\"conflicts\":13,\"variants\":17,\"gaps\":62},{\"area\":\"A-3000\",\"assets\":51,\"holds\":0,\"values\":132,\"approved\":13,\"conflicts\":3,\"variants\":11,\"gaps\":43},{\"area\":\"A-400\",\"assets\":23,\"holds\":0,\"values\":152,\"approved\":13,\"conflicts\":7,\"variants\":8,\"gaps\":45},{\"area\":\"A-4000\",\"assets\":11,\"holds\":0,\"values\":201,\"approved\":13,\"conflicts\":11,\"variants\":11,\"gaps\":18},{\"area\":\"A-500\",\"assets\":12,\"holds\":0,\"values\":102,\"approved\":18,\"conflicts\":5,\"variants\":5,\"gaps\":24},{\"area\":\"A-5000\",\"assets\":47,\"holds\":0,\"values\":188,\"approved\":16,\"conflicts\":10,\"variants\":10,\"gaps\":40},{\"area\":\"A-600\",\"assets\":31,\"holds\":0,\"values\":194,\"approved\":18,\"conflicts\":5,\"variants\":12,\"gaps\":22},{\"area\":\"A-6000\",\"assets\":6,\"holds\":0,\"values\":38,\"approved\":3,\"conflicts\":2,\"variants\":2,\"gaps\":5},{\"area\":\"A-700\",\"assets\":17,\"holds\":0,\"values\":377,\"approved\":39,\"conflicts\":5,\"variants\":7,\"gaps\":72},{\"area\":\"A-800\",\"assets\":25,\"holds\":0,\"values\":319,\"approved\":29,\"conflicts\":9,\"variants\":14,\"gaps\":38},{\"area\":\"A-900\",\"assets\":23,\"holds\":4,\"values\":208,\"approved\":20,\"conflicts\":11,\"variants\":11,\"gaps\":21}]}",
+      "ranAt": "2026-09-21T21:02:46.688Z"
+    },
+    {
+      "command": "node tests/validate-semantic-fields.mjs",
+      "purpose": "inspector field rendering of documented and applied values",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "PASS: documented pending and superseded values, alternatives, mixed units, missing values and identity holds.",
+      "ranAt": "2026-09-21T21:03:04.820Z"
+    }
+  ],
+  "decisions": [
+    {
+      "decisionId": "D-A700-MOC",
+      "assetPattern": "C-701|E-701|FN-701|PY-701|T-702",
+      "property": "design.materialOfConstruction",
+      "approvedSourceDocId": "FEED-PE-MAT-002",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-01",
+      "assetPattern": "PY-701",
+      "property": "identity.designConcept",
+      "approvedSourceDocId": "FEED-PE-REP-018",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "REP-018 design closure: three identical indirectly electrically heated screw-furnace modules PY-701A/B/C adopted as the FEED design-basis statement (DAT-004 / PFD / model show a single unit).",
+      "gapNote": "Update FEED-PE-DAT-004 (V1.1) to the three-module basis and complete its 55 blank items; add PY-701B/C geometry and records to the model; decide the T-701 cyclone (on or off PFD-0700) and the E-702 / KO-701 / PSV-701 register entries (LST-001 V5.2); close REP-021 items (ramp vs residence, burst pressure zone, scope note) before vendor RFQ."
+    },
+    {
+      "decisionId": "D-A700-01",
+      "assetPattern": "PY-701",
+      "property": "identity.quantity",
+      "approvedSourceDocId": "FEED-PE-REP-018",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "3 modules (REP-018); single-unit statements superseded.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-01",
+      "assetPattern": "PY-701",
+      "property": "design.retortGeometry",
+      "approvedSourceDocId": "FEED-PE-REP-018",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "0.90 m ID × 12 m heated retort per module (REP-018).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-01",
+      "assetPattern": "PY-701",
+      "property": "design.installedHeatingDutyKw",
+      "approvedSourceDocId": "FEED-PE-REP-018",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "180 kW per module, six zones (REP-018).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-01",
+      "assetPattern": "PY-701",
+      "property": "design.offGasConnection",
+      "approvedSourceDocId": "FEED-PE-REP-018",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "DN200, 650 m³/h at 1,100 °C per module.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-01",
+      "assetPattern": "PY-701",
+      "property": "design.materialOfConstruction",
+      "approvedSourceDocId": "FEED-PE-REP-018",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Hot zone UNS N06230 selected (APMT alternative); MAT-002 M-042 (Alloy 602 CA) and MDL-001 to be aligned by MoC.",
+      "gapNote": "Raise MoC on FEED-PE-MAT-002 M-042 / M-045 for the N06230 selection (REP-018) or record the reason to keep 602 CA."
+    },
+    {
+      "decisionId": "D-A700-02",
+      "assetPattern": "PY-701",
+      "property": "operatingEnvelope.reactionTemperatureC",
+      "approvedSourceDocId": "FEED-PE-DAT-004",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "1,100 °C (DAT-004, MEB-009, REP-018/021 agree).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-02",
+      "assetPattern": "PY-701",
+      "property": "operatingEnvelope.residenceTimeHours",
+      "approvedSourceDocId": "FEED-PE-DAT-004",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "4 h active-zone residence (DAT-004, MEB-009, REP-018 agree); REP-021 ramp/residence inconsistency carried as follow-up.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-02",
+      "assetPattern": "PY-701",
+      "property": "operatingEnvelope.rampRateCPerMin",
+      "approvedSourceDocId": "FEED-PE-DAT-004",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "5 °C/min recorded as the stated basis; REP-021 shows it cannot fit within 4 h — resolve in DAT-004 V1.1.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-02",
+      "assetPattern": "PY-701",
+      "property": "operatingEnvelope.oxygenLimitPpm",
+      "approvedSourceDocId": "FEED-PE-DAT-004",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "≤ 10 ppm O₂ operating / pre-heat.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-02",
+      "assetPattern": "PY-701",
+      "property": "operatingEnvelope.operatingPressureMbarg",
+      "approvedSourceDocId": "FEED-PE-MEB-009",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "−3 mbar(g) furnace operating pressure (MEB-009); consistent with PSV-701 80 mbarg set / 100 mbarg MAWP.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-02",
+      "assetPattern": "PY-701",
+      "property": "design.heatingMode",
+      "approvedSourceDocId": "FEED-PE-DAT-004",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Indirect heating, process isolated from elements.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-02",
+      "assetPattern": "PY-701",
+      "property": "safety.hazardousClass",
+      "approvedSourceDocId": "FEED-PE-DAT-004",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Zone 1 internal — H₂ service + combustible dust.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-02",
+      "assetPattern": "PY-701",
+      "property": "operatingEnvelope.designInconsistencies",
+      "approvedSourceDocId": "FEED-PE-REP-021",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Recorded as open design-basis items (RED) — see follow-up.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-02",
+      "assetPattern": "PY-701|E-701",
+      "property": "safeguards.offGasBasis",
+      "approvedSourceDocId": "FEED-PE-REP-041",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "CO-in-argon furnace gas is an inert combustible dry stream — segregate (S2) from wet oxidising vents; PFD-3000 common header superseded as intent.",
+      "gapNote": "Confirm the three-system vent segregation (REP-041 S1/S2/S3) on FEED-PFD-3000 and in HAZOP; size E-701 for the 60–70 °C dew point and fines."
+    },
+    {
+      "decisionId": "D-A700-03",
+      "assetPattern": "E-702|KO-701",
+      "property": "design.designTemperature",
+      "approvedSourceDocId": "FEED-PE-DAT-005",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "E-702 200 °C (DAT-005); KO-701 200 °C (DAT-006) — approved from each datasheet.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-03",
+      "assetPattern": "KO-701",
+      "property": "design.designTemperature",
+      "approvedSourceDocId": "FEED-PE-DAT-006",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "200 °C (DAT-006).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-03",
+      "assetPattern": "E-702",
+      "property": "design.designPressure",
+      "approvedSourceDocId": "FEED-PE-DAT-005",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "+50 mbarg (DAT-005).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-03",
+      "assetPattern": "KO-701",
+      "property": "design.designPressure",
+      "approvedSourceDocId": "FEED-PE-DAT-006",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "100 mbarg (DAT-006).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-03",
+      "assetPattern": "E-702|KO-701",
+      "property": "design.designPressureExternal",
+      "approvedSourceDocId": "FEED-PE-DAT-005",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Full vacuum (DAT-005 / DAT-006).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-03",
+      "assetPattern": "KO-701",
+      "property": "design.designPressureExternal",
+      "approvedSourceDocId": "FEED-PE-DAT-006",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Full vacuum (DAT-006).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-03",
+      "assetPattern": "E-702|KO-701",
+      "property": "design.corrosionAllowanceMm",
+      "approvedSourceDocId": "FEED-PE-DAT-005",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "1.5 mm (DAT-005 / DAT-006).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-03",
+      "assetPattern": "KO-701",
+      "property": "design.corrosionAllowanceMm",
+      "approvedSourceDocId": "FEED-PE-DAT-006",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "1.5 mm (DAT-006).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-03",
+      "assetPattern": "KO-701",
+      "property": "design.materialOfConstruction",
+      "approvedSourceDocId": "FEED-PE-DAT-006",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "SS316L shell (DAT-006); MAT-002 M-045/M-047 wording variants to be aligned.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-03",
+      "assetPattern": "KO-701",
+      "property": "design.bottomHead",
+      "approvedSourceDocId": "FEED-PE-DAT-006",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Conical, 60° (DAT-006).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-03",
+      "assetPattern": "KO-701",
+      "property": "design.finesRemovalEfficiencyPct",
+      "approvedSourceDocId": "FEED-PE-DAT-006",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "≥ 90 % (DAT-006).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-03",
+      "assetPattern": "KO-701",
+      "property": "design.allowablePressureDropMbar",
+      "approvedSourceDocId": "FEED-PE-DAT-006",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "≤ 10 mbar (DAT-006).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-03",
+      "assetPattern": "E-702",
+      "property": "operatingEnvelope.solidsOutletTemperatureC",
+      "approvedSourceDocId": "FEED-PE-DAT-005",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "60–80 °C target (DAT-005).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-03",
+      "assetPattern": "E-702",
+      "property": "operatingEnvelope.coolingWaterSupplyC",
+      "approvedSourceDocId": "FEED-PE-DAT-005",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "32 °C CWS (DAT-005).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-03",
+      "assetPattern": "E-702",
+      "property": "operatingEnvelope.coolingWaterReturnC",
+      "approvedSourceDocId": "FEED-PE-DAT-005",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "40 °C CWR max (DAT-005).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-03",
+      "assetPattern": "PSV-701",
+      "property": "design.setPressureMbarg",
+      "approvedSourceDocId": "FEED-PE-DAT-007",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "80 mbarg set (DAT-007).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-03",
+      "assetPattern": "PSV-701",
+      "property": "design.protectedEquipmentMAWPMbarg",
+      "approvedSourceDocId": "FEED-PE-DAT-007",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "100 mbarg MAWP of PY-701 (DAT-007) — PY-701 design pressure itself is blank in DAT-004.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-03",
+      "assetPattern": "PSV-701",
+      "property": "design.designCode",
+      "approvedSourceDocId": "FEED-PE-DAT-007",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "ASME VIII + API 526 (DAT-007).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-03",
+      "assetPattern": "PSV-701",
+      "property": "design.materialOfConstruction",
+      "approvedSourceDocId": "FEED-PE-DAT-007",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "SS316L / Inconel 625 hot (DAT-007).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-03",
+      "assetPattern": "PSV-701",
+      "property": "design.dischargeDestination",
+      "approvedSourceDocId": "FEED-PE-DAT-007",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Safe atmospheric vent (DAT-007); REP-041 segregation applies; rupture disc in series recommended (item 10.6).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-04",
+      "assetPattern": "PY-701|C-701|E-701|E-702",
+      "property": "design.feedRateKgh",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "22.5 kg/h (MEB-009, 50 kg/h graphite), 44.1 kg/h (DAT-004), 3 × 46 kg/h (REP-018) vs DBM V2.0 74 kg/h design dried TLGO — basis withdrawn.",
+      "gapNote": "Re-issue FEED-PE-MEB-009 (V11) on DBM V2.0 (57 / 74 kg/h dried TLGO) and restate PY-701 module rates and duties; E-701 / E-702 duties follow."
+    },
+    {
+      "decisionId": "D-A700-04",
+      "assetPattern": "PY-701",
+      "property": "design.productRateKgh",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Follows the feed-rate decision.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A700-04",
+      "assetPattern": "PY-701|E-701|E-702",
+      "property": "design.dutyKw",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "MEB-009 screening duties on the withdrawn basis.",
+      "gapNote": ""
+    }
+  ],
+  "approvedValues": [
+    {
+      "valueId": "PV-A-700-0087",
+      "assetId": "E-701",
+      "property": "design.materialOfConstruction",
+      "value": "Alloy 602 CA, or alonised Alloy 800H in the metal-dusting window",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 49 (M-045)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-E-701",
+      "resolves": [
+        "FEED-PE-MDL-001: 316L SS gas-side tubes/wetted parts; high-temperature compatible gaskets."
+      ]
+    },
+    {
+      "valueId": "PV-A-700-0089",
+      "assetId": "C-701",
+      "property": "design.materialOfConstruction",
+      "value": "316L/310S at the cool end; Alloy 601/602 CA at the hot transition; hardfaced wear surfaces",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 50 (M-046)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-C-701",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS screw/housing/product-contact surfaces; grounded/bonded; high-temperature interface seal suitable for inert service."
+      ]
+    },
+    {
+      "valueId": "PV-A-700-0091",
+      "assetId": "T-702",
+      "property": "design.materialOfConstruction",
+      "value": "T-702 in 316L; FN-701/PSV wetted metal in 316L or Alloy 601/602 CA where temperature/deposit duty persists",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 51 (M-047)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-T-702",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS product-contact tank; grounded/bonded; inert-gas compatible seals and fittings."
+      ]
+    },
+    {
+      "valueId": "PV-A-700-0093",
+      "assetId": "FN-701",
+      "property": "design.materialOfConstruction",
+      "value": "T-702 in 316L; FN-701/PSV wetted metal in 316L or Alloy 601/602 CA where temperature/deposit duty persists",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 51 (M-047)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "WV-materialOfConstruc-FN-701",
+      "resolves": [
+        "FEED-PE-MDL-001: 316L SS gas-wetted casing/impeller; grounded, spark-resistant construction."
+      ]
+    },
+    {
+      "valueId": "PV-A-700-0100",
+      "assetId": "PY-701",
+      "property": "operatingEnvelope.operatingPressureMbarg",
+      "value": "-3.0",
+      "unit": "mbar(g)",
+      "sourceDocId": "FEED-PE-MEB-009",
+      "sourceRevision": "V10.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 26 (P_furn)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0117",
+      "assetId": "PY-701",
+      "property": "operatingEnvelope.oxygenLimitPpm",
+      "value": "≤ 10 ppm",
+      "unit": "ppm",
+      "sourceDocId": "FEED-PE-DAT-004",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'PY-701 Datasheet'!row 26 (item 2.7)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0119",
+      "assetId": "PY-701",
+      "property": "design.heatingMode",
+      "value": "Indirect (process fully isolated from heating elements)",
+      "unit": "",
+      "sourceDocId": "FEED-PE-DAT-004",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'PY-701 Datasheet'!row 29 (item 2.10)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0121",
+      "assetId": "PY-701",
+      "property": "safety.hazardousClass",
+      "value": "Zone 1 internal — H₂ service + combustible dust",
+      "unit": "",
+      "sourceDocId": "FEED-PE-DAT-004",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'PY-701 Datasheet'!row 32 (item 2.13)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "WV-hazardousClass-PY-701",
+      "resolves": [
+        "FEED-PE-MDL-001: High Temperature / Asphyxiant / Combustible Off-Gas / Energetic TLGO Decomposition"
+      ]
+    },
+    {
+      "valueId": "PV-A-700-0130",
+      "assetId": "PY-701",
+      "property": "operatingEnvelope.reactionTemperatureC",
+      "value": "1,100 °C",
+      "unit": "°C",
+      "sourceDocId": "FEED-PE-DAT-004",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'PY-701 Datasheet'!row 57 (item 3.18)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0132",
+      "assetId": "PY-701",
+      "property": "operatingEnvelope.rampRateCPerMin",
+      "value": "5",
+      "unit": "°C/min",
+      "sourceDocId": "FEED-PE-DAT-004",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'PY-701 Datasheet'!row 59 (item 3.20)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0133",
+      "assetId": "PY-701",
+      "property": "operatingEnvelope.residenceTimeHours",
+      "value": "4",
+      "unit": "h",
+      "sourceDocId": "FEED-PE-DAT-004",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'PY-701 Datasheet'!row 60 (item 3.21)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0209",
+      "assetId": "E-702",
+      "property": "operatingEnvelope.solidsOutletTemperatureC",
+      "value": "60 – 80",
+      "unit": "°C",
+      "sourceDocId": "FEED-PE-DAT-005",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'E-702 Datasheet'!row 42 (item 3.9)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0212",
+      "assetId": "E-702",
+      "property": "design.designTemperature",
+      "value": "200",
+      "unit": "°C",
+      "sourceDocId": "FEED-PE-DAT-005",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'E-702 Datasheet'!row 55 (item 4.2)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0213",
+      "assetId": "E-702",
+      "property": "design.designPressure",
+      "value": "+50",
+      "unit": "mbarg",
+      "sourceDocId": "FEED-PE-DAT-005",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'E-702 Datasheet'!row 57 (item 4.4)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0214",
+      "assetId": "E-702",
+      "property": "design.designPressureExternal",
+      "value": "Full vacuum",
+      "unit": "",
+      "sourceDocId": "FEED-PE-DAT-005",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'E-702 Datasheet'!row 58 (item 4.5)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0215",
+      "assetId": "E-702",
+      "property": "design.corrosionAllowanceMm",
+      "value": "1.5",
+      "unit": "mm",
+      "sourceDocId": "FEED-PE-DAT-005",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'E-702 Datasheet'!row 61 (item 4.8)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0218",
+      "assetId": "E-702",
+      "property": "operatingEnvelope.coolingWaterSupplyC",
+      "value": "32",
+      "unit": "°C",
+      "sourceDocId": "FEED-PE-DAT-005",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'E-702 Datasheet'!row 72 (item 5.5)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0219",
+      "assetId": "E-702",
+      "property": "operatingEnvelope.coolingWaterReturnC",
+      "value": "40",
+      "unit": "°C",
+      "sourceDocId": "FEED-PE-DAT-005",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'E-702 Datasheet'!row 73 (item 5.6)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0277",
+      "assetId": "KO-701",
+      "property": "design.finesRemovalEfficiencyPct",
+      "value": "≥ 90",
+      "unit": "%",
+      "sourceDocId": "FEED-PE-DAT-006",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'KO-701 Datasheet'!row 47 (item 3.12)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0279",
+      "assetId": "KO-701",
+      "property": "design.allowablePressureDropMbar",
+      "value": "≤ 10",
+      "unit": "mbar",
+      "sourceDocId": "FEED-PE-DAT-006",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'KO-701 Datasheet'!row 50 (item 3.15)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0281",
+      "assetId": "KO-701",
+      "property": "design.designTemperature",
+      "value": "200",
+      "unit": "°C",
+      "sourceDocId": "FEED-PE-DAT-006",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'KO-701 Datasheet'!row 60 (item 4.2)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0282",
+      "assetId": "KO-701",
+      "property": "design.designPressure",
+      "value": "100",
+      "unit": "mbarg",
+      "sourceDocId": "FEED-PE-DAT-006",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'KO-701 Datasheet'!row 62 (item 4.4)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0283",
+      "assetId": "KO-701",
+      "property": "design.designPressureExternal",
+      "value": "Full vacuum",
+      "unit": "—",
+      "sourceDocId": "FEED-PE-DAT-006",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'KO-701 Datasheet'!row 63 (item 4.5)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0284",
+      "assetId": "KO-701",
+      "property": "design.corrosionAllowanceMm",
+      "value": "1.5",
+      "unit": "mm",
+      "sourceDocId": "FEED-PE-DAT-006",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'KO-701 Datasheet'!row 64 (item 4.6)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0287",
+      "assetId": "KO-701",
+      "property": "design.bottomHead",
+      "value": "Conical",
+      "unit": "",
+      "sourceDocId": "FEED-PE-DAT-006",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'KO-701 Datasheet'!row 72 (item 5.3)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0290",
+      "assetId": "KO-701",
+      "property": "design.materialOfConstruction",
+      "value": "SS316L",
+      "unit": "",
+      "sourceDocId": "FEED-PE-DAT-006",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'KO-701 Datasheet'!row 87 (item 6.1)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0320",
+      "assetId": "PSV-701",
+      "property": "design.dischargeDestination",
+      "value": "Safe vent (atmospheric discharge)",
+      "unit": "",
+      "sourceDocId": "FEED-PE-DAT-007",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'PSV-701 Datasheet'!row 17 (item 1.7)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0331",
+      "assetId": "PSV-701",
+      "property": "design.setPressureMbarg",
+      "value": "80",
+      "unit": "mbarg",
+      "sourceDocId": "FEED-PE-DAT-007",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'PSV-701 Datasheet'!row 56 (item 4.1)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0332",
+      "assetId": "PSV-701",
+      "property": "design.protectedEquipmentMAWPMbarg",
+      "value": "100",
+      "unit": "mbarg",
+      "sourceDocId": "FEED-PE-DAT-007",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'PSV-701 Datasheet'!row 57 (item 4.2)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0335",
+      "assetId": "PSV-701",
+      "property": "design.designCode",
+      "value": "ASME BPVC VIII + API 526",
+      "unit": "",
+      "sourceDocId": "FEED-PE-DAT-007",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'PSV-701 Datasheet'!row 64 (item 4.9)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0339",
+      "assetId": "PSV-701",
+      "property": "design.materialOfConstruction",
+      "value": "SS316L (cold service) / Inconel 625 (hot ≥500 °C)",
+      "unit": "",
+      "sourceDocId": "FEED-PE-DAT-007",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'PSV-701 Datasheet'!row 104 (item 8.1)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0369",
+      "assetId": "PY-701",
+      "property": "identity.designConcept",
+      "value": "Three identical indirectly electrically heated screw-furnace modules PY-701A/B/C, 46 kg/h dry feed each at 1,100 °C under argon, 4 h active-zone residence",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-018",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive design conclusion",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0370",
+      "assetId": "PY-701",
+      "property": "design.retortGeometry",
+      "value": "0.90 m ID × 12 m heated retort (15 m overall); ≈ 0.85 m screw, 0.45 m pitch, 0.16 rpm — per module",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-018",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive design conclusion",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0371",
+      "assetId": "PY-701",
+      "property": "design.installedHeatingDutyKw",
+      "value": "180 per module in six independent zones (× 3 modules)",
+      "unit": "kW",
+      "sourceDocId": "FEED-PE-REP-018",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive design conclusion",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0372",
+      "assetId": "PY-701",
+      "property": "design.materialOfConstruction",
+      "value": "Hot-zone UNS N06230 selected; Kanthal APMT retained as qualified alternative",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-018",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive design conclusion",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-PY-701",
+      "resolves": [
+        "FEED-PE-MDL-001: Inconel 601 process retort/hot-zone metal; high-alumina refractory insulation; 316L SS cold-end piping and seals.",
+        "FEED-PE-MAT-002: Alloy 602 CA (UNS N06025)"
+      ]
+    },
+    {
+      "valueId": "PV-A-700-0373",
+      "assetId": "PY-701",
+      "property": "design.offGasConnection",
+      "value": "DN200 hot off-gas connection, 650 m³/h at 1,100 °C per module",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-018",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive design conclusion",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0374",
+      "assetId": "PY-701",
+      "property": "identity.quantity",
+      "value": "3 modules (A/B/C)",
+      "unit": "units",
+      "sourceDocId": "FEED-PE-REP-018",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive design conclusion",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0375",
+      "assetId": "PY-701",
+      "property": "operatingEnvelope.designInconsistencies",
+      "value": "(1) 5 °C/min solids ramp cannot fit in a 4 h total residence; (2) deoxygenation is a fast exothermic gas burst complete by ≈ 300 °C while the anneal needs the length — pressure zones and control boundaries must be defined; (3) single rotary-kiln draft note is out of scope",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-021",
+      "sourceRevision": "V2.2",
+      "sourceLocation": "Executive conclusion / basis table",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-700-0376",
+      "assetId": "PY-701",
+      "property": "safeguards.offGasBasis",
+      "value": "CO 4–8 Nm³/h steady (× 3–5 in the burst), 8–10 vol % in Ar; water dew point 60–70 °C in E-701; entrained pyrophoric rGO fines — inert combustible dry gas, must be segregated from wet oxidising vents (S2 system)",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-041",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive conclusion / §4",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    }
+  ],
+  "openConflicts": [
+    {
+      "conflictGroup": "CF-feedRateKgh-PY-701",
+      "assetId": "PY-701",
+      "property": "design.feedRateKgh",
+      "alternatives": [
+        {
+          "valueId": "PV-A-700-0095",
+          "value": "22.5",
+          "unit": "kg/h",
+          "sourceDocId": "FEED-PE-MEB-009",
+          "sourceLocation": "'Design Basis & Inputs'!row 11 (ṁ_610)"
+        },
+        {
+          "valueId": "PV-A-700-0123",
+          "value": "44.1",
+          "unit": "kg/h",
+          "sourceDocId": "FEED-PE-DAT-004",
+          "sourceLocation": "'PY-701 Datasheet'!row 37 (item 3.1)"
+        }
+      ]
+    }
+  ],
+  "identityHolds": [],
+  "gaps": [
+    {
+      "gapId": "GAP-A-700-MV-09ecea",
+      "assetId": "H-701",
+      "kind": "missing value",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-700-MV-eaa7e3",
+      "assetId": "H-701",
+      "kind": "missing value",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-700-MV-f51741",
+      "assetId": "E-702",
+      "kind": "missing value",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-700-CF-9dc9af",
+      "assetId": "C-701",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-C-701"
+    },
+    {
+      "gapId": "GAP-A-700-CF-8b2846",
+      "assetId": "PY-701",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001, FEED-PE-REP-018",
+      "status": "closed — FEED-PE-REP-018 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-PY-701"
+    },
+    {
+      "gapId": "GAP-A-700-CF-769fed",
+      "assetId": "E-701",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-E-701"
+    },
+    {
+      "gapId": "GAP-A-700-CF-02a254",
+      "assetId": "T-702",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-T-702"
+    },
+    {
+      "gapId": "GAP-A-700-CF-9f8fa8",
+      "assetId": "PY-701",
+      "kind": "conflict",
+      "subject": "design.feedRateKgh",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-DAT-004, FEED-PE-MEB-009",
+      "status": "open",
+      "note": "CF-feedRateKgh-PY-701"
+    },
+    {
+      "gapId": "GAP-A-700-DF-d13902",
+      "assetId": "PY-701",
+      "kind": "decision follow-up",
+      "subject": "identity.designConcept",
+      "requiredSource": "Update FEED-PE-DAT-004 (V1.1) to the three-module basis and complete its 55 blank items; add PY-701B/C geometry and records to the model; decide the T-701 cyclone (on or off PFD-0700) and the E-702 / KO-701 / PSV-701 register entries (LST-001 V5.2); close REP-021 items (ramp vs residence, burst pressure zone, scope note) before vendor RFQ.",
+      "status": "open",
+      "note": "D-A700-01"
+    },
+    {
+      "gapId": "GAP-A-700-DF-a669c7",
+      "assetId": "PY-701",
+      "kind": "decision follow-up",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Raise MoC on FEED-PE-MAT-002 M-042 / M-045 for the N06230 selection (REP-018) or record the reason to keep 602 CA.",
+      "status": "open",
+      "note": "D-A700-01"
+    },
+    {
+      "gapId": "GAP-A-700-DF-ccecce",
+      "assetId": "PY-701|E-701",
+      "kind": "decision follow-up",
+      "subject": "safeguards.offGasBasis",
+      "requiredSource": "Confirm the three-system vent segregation (REP-041 S1/S2/S3) on FEED-PFD-3000 and in HAZOP; size E-701 for the 60–70 °C dew point and fines.",
+      "status": "open",
+      "note": "D-A700-02"
+    },
+    {
+      "gapId": "GAP-A-700-DF-6deced",
+      "assetId": "PY-701|C-701|E-701|E-702",
+      "kind": "decision follow-up",
+      "subject": "design.feedRateKgh",
+      "requiredSource": "Re-issue FEED-PE-MEB-009 (V11) on DBM V2.0 (57 / 74 kg/h dried TLGO) and restate PY-701 module rates and duties; E-701 / E-702 duties follow.",
+      "status": "open",
+      "note": "D-A700-04"
+    },
+    {
+      "gapId": "GAP-A-700-DB-38d3cf",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.solidsFeedRateDesign10 (FEED-PE-DAT-004 item 3.2: Solids feed rate, design (+10%))",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-f367dc",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.reactionZoneResidenceTime (FEED-PE-DAT-004 item 3.22: Reaction zone residence time)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-a2a0ba",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.heatingZoneDutySensibleVolatile (FEED-PE-DAT-004 item 3.24: Heating-zone duty (sensible + volatile))",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-20902a",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.reactionZoneDutyHolding (FEED-PE-DAT-004 item 3.25: Reaction-zone duty (holding))",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-2b9724",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.coolingZoneDutyHeatRemoval (FEED-PE-DAT-004 item 3.26: Cooling-zone duty (heat removal))",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-56ffc3",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.totalInstalledHeatingCapacity (FEED-PE-DAT-004 item 3.27: Total installed heating capacity)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-11d6e3",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.externalShellDesignTemperature (FEED-PE-DAT-004 item 4.3: External shell design temperature)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-a5eae7",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.installedHeatingCapacityTotal (FEED-PE-DAT-004 item 5.10: Installed heating capacity (total))",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-aeebdc",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.operatingWeightWithSolidsHoldUp (FEED-PE-DAT-004 item 6.8: Operating weight (with solids hold-up))",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-8d641a",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.driveMotorRating (FEED-PE-DAT-004 item 7.8: Drive motor rating)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-2494ab",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.py701IsTheCentralProcessingUnitOfAreaA700ThermalReductionOfTlgoToRgoUnderInertAtmosphereAt1100CWith4HResidence5CMinRampScrewSpeedControllingResidenceViaFillFactor (FEED-PE-DAT-004 item 16.1: PY-701 is the central processing unit of Area A-700. Thermal reduction of TLGO to rGO under inert atmosphere at 1,100 °C with 4 h residence, 5 °C/min ramp, screw speed controlling residence via fill factor.)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-6fc741",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.carburisationRisk1100CInReducingAtmosphereWithCBearingSolidsIsAggressiveForStainlessSteelsInconel601ScreeningAssumes25000HLifeTargetAlternativeInconel625Incoloy800htMayBeConsideredConfirmWithMaterialsSpecialist (FEED-PE-DAT-004 item 16.5: Carburisation risk: 1,100 °C in reducing atmosphere with C-bearing solids is aggressive for stainless steels. Inconel 601 screening assumes ≤ 25,000 h life target; alternative Inconel 625 / Incoloy 800HT may be considered. Confirm with materials specialist.)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-b63c98",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.coolingZoneDutySensibleHeatRemovalFrom1100C150CFor25KgHRgoArSweepRepresentsOrderOfMagnitude25KwIndirectCoolingPreferredWaterJacketCoilToAvoidIntroducingGasIntoHotZone (FEED-PE-DAT-004 item 16.7: Cooling zone duty: sensible heat removal from 1,100 °C → 150 °C for ~25 kg/h rGO + ~Ar sweep represents order-of-magnitude 25 kW. Indirect cooling preferred (water jacket / coil) to avoid introducing gas into hot zone.)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-961abd",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.residenceTimeIsSetByScrewSpeedViaVfdTurndownCapabilityToBeSpecifiedTypical50100OfNominalSpeedRange (FEED-PE-DAT-004 item 16.9: Residence time is set by screw speed via VFD. Turndown capability to be specified — typical 50–100 % of nominal speed range.)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-d153b8",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.solidsMassFlowDesign10 (FEED-PE-DAT-005 item 3.2: Solids mass flow, design (+10 %))",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-8e13ae",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.entrainedGasMassFlow (FEED-PE-DAT-005 item 3.8: Entrained gas mass flow)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-560e58",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.totalHeatDutySensible (FEED-PE-DAT-005 item 3.12: Total heat duty (sensible))",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-bc0afc",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.designDutyWithMargin (FEED-PE-DAT-005 item 3.13: Design duty (with margin))",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-bd785c",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.designTemperatureProcessMin (FEED-PE-DAT-005 item 4.3: Design temperature (process, min))",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-3b2426",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.designTemperatureUtilityMax (FEED-PE-DAT-005 item 4.6: Design temperature (utility, max))",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-4e5bee",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.designPressureUtilitySide (FEED-PE-DAT-005 item 4.7: Design pressure (utility side))",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-19a99f",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.coolingWaterMassFlow (FEED-PE-DAT-005 item 5.7: Cooling water mass flow)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-081a25",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.coolingWaterVolumetricFlow (FEED-PE-DAT-005 item 5.8: Cooling water volumetric flow)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-a42fc5",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.operatingWeight (FEED-PE-DAT-005 item 6.10: Operating weight)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-b335f7",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.meanResidenceTime (FEED-PE-DAT-005 item 7.9: Mean residence time)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-4d344b",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.driveMotorRating (FEED-PE-DAT-005 item 7.10: Drive motor rating)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-1437ff",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.e702IsALowDutyFinishingCooler0310KwNormalDutyConditioningRgoFromTheT701CycloneDischarge100150CToTheT702ProductTankInletSpecification6080CDutyIsModestBecauseTheBulkOfSensibleHeatRemovalFrom1100COccursInThePy701InternalCoolingZoneUpstream (FEED-PE-DAT-005 item 16.1: E-702 is a low-duty finishing cooler (~0.3–1.0 kW normal duty) conditioning rGO from the T-701 cyclone discharge (100–150 °C) to the T-702 product tank inlet specification (60–80 °C). Duty is modest because the bulk of sensible heat removal from 1,100 °C occurs in the PY-701 internal cooling zone upstream.)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-076ba8",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.scopeVerificationConfirmWithPyrolysisFurnaceVendorWhetherE702IsEssentialOrIsInstalledAsASafetyMarginAgainstPy701InternalCoolingZoneUnderperformanceAtLowDutyAShortInsulatedTransferLineWithNaturalConvectionMayBeSufficientPotentialCostSaving (FEED-PE-DAT-005 item 16.2: Scope verification: confirm with pyrolysis furnace vendor whether E-702 is essential or is installed as a safety margin against PY-701 internal cooling zone underperformance. At low duty, a short insulated transfer line with natural convection may be sufficient — potential cost saving.)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-537ce3",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.residenceTimeIsPositiveSetByScrewSpeedViaVfdNoBackMixingOrEntrainmentConcernsTypicalOfFluidBedOrRotaryDrumCoolers (FEED-PE-DAT-005 item 16.6: Residence time is positive (set by screw speed via VFD). No back-mixing or entrainment concerns typical of fluid-bed or rotary drum coolers.)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-3fcce0",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.inletGasMassFlowNormal (FEED-PE-DAT-006 item 3.1: Inlet gas mass flow, normal)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-dbf4b0",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.inletGasMassFlowDesign11 (FEED-PE-DAT-006 item 3.2: Inlet gas mass flow, design (×1.1))",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-6c560e",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.inletGasVolumetricFlowActual (FEED-PE-DAT-006 item 3.3: Inlet gas volumetric flow, actual)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-f46ae5",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.inletGasVolumetricFlowStandard (FEED-PE-DAT-006 item 3.4: Inlet gas volumetric flow, standard)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-6cf042",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.inletSolidsMassFlowNormal (FEED-PE-DAT-006 item 3.5: Inlet solids mass flow, normal)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-69307f",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.inletPressureMaxOperating (FEED-PE-DAT-006 item 3.10: Inlet pressure, max operating)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-19279c",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.outletGasMassFlow (FEED-PE-DAT-006 item 3.11: Outlet gas mass flow)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-f9938a",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.designTemperatureMinMdmt (FEED-PE-DAT-006 item 4.3: Design temperature (min / MDMT))",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-b96717",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.operatingWeight (FEED-PE-DAT-006 item 5.13: Operating weight)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-7acf74",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.balancedDraftServiceOperatingPressureIsApproximatelyAtmosphericSlightlyBelowDueToFn701SuctionDownstreamOfTheNppDesignForFullVacuumUpsetFn701TripWithBlockedGasOutlet (FEED-PE-DAT-006 item 15.2: Balanced-draft service: operating pressure is approximately atmospheric, slightly below due to FN-701 suction downstream of the NPP. Design for full vacuum upset (FN-701 trip with blocked gas outlet).)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-04c990",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.solidsDrainIsADoubleIsolationValvePairWithASmallIntermediateVolumeDrainSequenceAndFrequencyToBeAgreedDuringPIdDevelopmentAndOperatingPhilosophy (FEED-PE-DAT-006 item 15.4: Solids drain is a double isolation valve pair with a small intermediate volume; drain sequence and frequency to be agreed during P&ID development and operating philosophy.)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-72ac4f",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.requiredMassFlowRate (FEED-PE-DAT-007 item 3.17: Required mass flow rate)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-c74b0d",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.requiredVolumetricFlowStdConditions (FEED-PE-DAT-007 item 3.18: Required volumetric flow (std. conditions))",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-57bf83",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.requiredVolumetricFlowActualAtTP (FEED-PE-DAT-007 item 3.19: Required volumetric flow (actual, at T₁, P₁))",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-1a9035",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.designTemperatureMax (FEED-PE-DAT-007 item 4.7: Design temperature (max))",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-579233",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.designTemperatureMin (FEED-PE-DAT-007 item 4.8: Design temperature (min))",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-031b23",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.certifiedRelievingCapacityGas (FEED-PE-DAT-007 item 5.10: Certified relieving capacity (gas))",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-74f52a",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.certifiedRelievingCapacityVolumetric (FEED-PE-DAT-007 item 5.11: Certified relieving capacity (volumetric))",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-4dfe50",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.overcapacityMarginQCertQReq (FEED-PE-DAT-007 item 5.12: Overcapacity margin (Q_cert / Q_req))",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-d2431e",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.inletRatingFacing (FEED-PE-DAT-007 item 6.5: Inlet rating / facing)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-3e815c",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.outletRatingFacing (FEED-PE-DAT-007 item 6.6: Outlet rating / facing)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-0192c2",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.lowSetPressureServicePsv701SetPressureIsApproximately80MbargAnOrderOfMagnitudeBelowTypicalSpringLoadedPsvTerritoryAtThisSetPressureConventionalSpringLoadedPsvsExhibitMarginalSimmerBehaviourSensitiveToMinorBackPressureFluctuationsPilotOperatedOrWeightLoadedReliefDevicesWarrantEvaluationAsAlternativesAndShouldBeAddressedInTheReliefStudy (FEED-PE-DAT-007 item 16.1: Low-set-pressure service: PSV-701 set pressure is approximately 80 mbarg — an order of magnitude below typical spring-loaded PSV territory. At this set pressure, conventional spring-loaded PSVs exhibit marginal simmer behaviour, sensitive to minor back-pressure fluctuations. Pilot-operated or weight-loaded relief devices warrant evaluation as alternatives and should be addressed in the relief study.)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-cb86ad",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.mountingLocationAffectsMaterialSelectionSignificantlyIfMountedOnFurnaceFreeboardHotSideValveBodyMaySee5001100CDependingOnInsulationAndInletPipingDesignInconel625BodyNozzleRequiredIfMountedDownstreamOfE701OffGasCoolerT100CAndSs316lAdequateTheReliefStudyMustResolveThisLocationDecisionExplicitly (FEED-PE-DAT-007 item 16.3: Mounting location affects material selection significantly. If mounted on furnace freeboard (hot side), valve body may see 500 – 1,100 °C depending on insulation and inlet piping design — Inconel 625 body/nozzle required. If mounted downstream of E-701 off-gas cooler, T ≤ 100 °C and SS316L adequate. The relief study must resolve this location decision explicitly.)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-b7f746",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.inletPipingPressureDropAtReliefFlowMustBe3OfPsvSetPressureApi520PartIiAtSetP80MbargTheAllowablePIsOnly24MbarExtremelyTightInletLineMustBeShortStraightAndAtLeastOneSizeLargerThanPsvInletThisConstraintOftenDrivesPsvOrificeSizeSmallerThanPureReliefRateWouldSuggest (FEED-PE-DAT-007 item 16.5: Inlet piping pressure drop at relief flow must be ≤ 3% of PSV set pressure (API 520 Part II). At set P = 80 mbarg, the allowable ΔP is only 2.4 mbar — extremely tight. Inlet line must be short, straight, and at least one size larger than PSV inlet. This constraint often drives PSV orifice size smaller than pure relief rate would suggest.)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-a13824",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.springMaterialHighTService250CRequiresInconelX750OrEquivalentSpringStandardCarbonSteelOr177PhSpringUnsuitableConfirmWithValveVendorBasedOnBodyTemperature (FEED-PE-DAT-007 item 16.9: Spring material: high-T service (> 250 °C) requires Inconel X-750 or equivalent spring; standard carbon steel or 17-7 PH spring unsuitable. Confirm with valve vendor based on body temperature.)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-DB-4f38d0",
+      "assetId": "A-700 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.codeStampingAndCertificationPsvMustCarryAsmeViiiUvStampOrPedCeMarkEnIso4126ComplianceSupplierAsmeCertifiedRelievingCapacityAndPermanentNameplateVendorQaQcDocumentationPackMandatory (FEED-PE-DAT-007 item 16.10: Code stamping and certification: PSV must carry ASME VIII UV stamp (or PED CE mark + EN ISO 4126 compliance), supplier ASME-certified relieving capacity, and permanent nameplate. Vendor QA/QC documentation pack mandatory.)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-700-ID-f36845",
+      "assetId": "PY-701 unit count / rate",
+      "kind": "identity / naming conflict",
+      "subject": "Single PY-701, 44.1 kg/h (DAT-004); single furnace (PFD-0700, LST-001, model); 22.5 kg/h (MEB-009)",
+      "requiredSource": "3 × 46 kg/h modules PY-701A/B/C (REP-018); DBM V2.0 design 74 kg/h dried TLGO to A-700",
+      "status": "open",
+      "note": "Count and rate differ across four controlled documents"
+    },
+    {
+      "gapId": "GAP-A-700-ID-d6c59a",
+      "assetId": "T-701 cyclone",
+      "kind": "identity / naming conflict",
+      "subject": "Not on PFD-0700 / LST-001 / model",
+      "requiredSource": "DAT-004/005/006 name 'T-701 High Temperature Cyclone' as PY-701 downstream; MEB-009 'post-cyclone'",
+      "status": "open",
+      "note": "Solids/gas separation train undefined on the PFD"
+    },
+    {
+      "gapId": "GAP-A-700-ID-ee9ffc",
+      "assetId": "E-702 / KO-701 / LK-701 / TR-701 / H-701 / AIT-701",
+      "kind": "identity / naming conflict",
+      "subject": "Not on LST-001 (register lists C-701, PY-701, E-701, FN-701, T-702)",
+      "requiredSource": "Model and datasheets (DAT-005 E-702, DAT-006 KO-701, DAT-007 PSV-701)",
+      "status": "open",
+      "note": "Register lags the model and datasheets"
+    },
+    {
+      "gapId": "GAP-A-700-ID-35239f",
+      "assetId": "PY-701 hot-zone material",
+      "kind": "identity / naming conflict",
+      "subject": "Alloy 602 CA (MAT-002 M-042)",
+      "requiredSource": "UNS N06230 selected, APMT alternative (REP-018)",
+      "status": "open",
+      "note": "MoC conflict"
+    },
+    {
+      "gapId": "GAP-A-700-ID-b1cedb",
+      "assetId": "PY-701 pressure",
+      "kind": "identity / naming conflict",
+      "subject": "−3 mbar(g) operating (MEB-009)",
+      "requiredSource": "PSV-701 set 80 mbarg / MAWP 100 mbarg (DAT-007); E-702 / KO-701 design +50 / +100 mbarg, FV",
+      "status": "open",
+      "note": "Consistent in magnitude; furnace design pressure itself is blank in DAT-004"
+    }
+  ],
+  "inventory": [
+    {
+      "tag": "TR-701",
+      "name": "Contained powder lift · proposed",
+      "modelEquipmentId": 79,
+      "operation": "a700",
+      "parts": 1043,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "LK-701",
+      "name": "Argon purge transfer lock · proposed",
+      "modelEquipmentId": 80,
+      "operation": "a700",
+      "parts": 711,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "H-701",
+      "name": "Sealed continuous-feed buffer · proposed",
+      "modelEquipmentId": 81,
+      "operation": "a700",
+      "parts": 460,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "C-701",
+      "name": "Metered screw feeder",
+      "modelEquipmentId": 82,
+      "operation": "a700",
+      "parts": 369,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "PY-701",
+      "name": "Continuous three-zone furnace",
+      "modelEquipmentId": 83,
+      "operation": "a700",
+      "parts": 944,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 15,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "E-702",
+      "name": "Indirect product screw cooler",
+      "modelEquipmentId": 84,
+      "operation": "a700",
+      "parts": 753,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 7,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "T-702",
+      "name": "Cooled pyrolyzed product receiver",
+      "modelEquipmentId": 85,
+      "operation": "a700",
+      "parts": 238,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "E-701",
+      "name": "Furnace off-gas cooler",
+      "modelEquipmentId": 86,
+      "operation": "a700",
+      "parts": 411,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "KO-701",
+      "name": "Condensate separator · proposed",
+      "modelEquipmentId": 87,
+      "operation": "a700",
+      "parts": 225,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 8,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "FN-701",
+      "name": "Pressure-control exhaust fan",
+      "modelEquipmentId": 88,
+      "operation": "a700",
+      "parts": 183,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "AIT-701",
+      "name": "Oxygen verification / pressure control",
+      "modelEquipmentId": 90,
+      "operation": "a700",
+      "parts": 377,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "BL-700-UTIL",
+      "name": "Argon, cooling and gas treatment interfaces",
+      "modelEquipmentId": 91,
+      "operation": "a700",
+      "parts": 2,
+      "designStatus": "interface",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "FE-701",
+      "name": "Pyrolysis west approach · fire point",
+      "modelEquipmentId": 120701,
+      "operation": "fire-safety",
+      "parts": 41,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "FE-702",
+      "name": "Pyrolysis east approach · fire point",
+      "modelEquipmentId": 120702,
+      "operation": "fire-safety",
+      "parts": 41,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "ES-701",
+      "name": "Proposed emergency shower / eyewash",
+      "modelEquipmentId": 122021,
+      "operation": "containment-A-700",
+      "parts": 17,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model station tag; plant tag approval open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "IF-A700-RELIEF",
+      "name": "Separate emergency relief destination unresolved",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A700-CONDENSATE",
+      "name": "Segregated condensate receiver unresolved",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "PSV-701",
+      "name": "PY-701 relief valve (DAT-007; model carries IF-A700-RELIEF only)",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "candidate-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    },
+    {
+      "tag": "T-701",
+      "name": "High-temperature cyclone named as PY-701 downstream in DAT-004/005/006 and MEB-009 ('post-cyclone') — not on PFD-0700 / LST-001 / model",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "candidate-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    }
+  ],
+  "documents": [
+    {
+      "documentId": "FEED-PE-LST-001",
+      "title": "Equipment and Stream Register",
+      "revision": "V5.1",
+      "docType": "LST",
+      "control": "controlled",
+      "tier": "A",
+      "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-LST-001_Equipment-and-Stream-Register_V5.1.xlsx",
+      "valueRows": "10"
+    },
+    {
+      "documentId": "FEED-PE-PFD-001",
+      "title": "Process Flow Diagram",
+      "revision": "V5.1.1",
+      "docType": "PFD",
+      "control": "controlled (Draft - IFR)",
+      "tier": "A",
+      "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-PFD-001_Process-Flow-Diagram_V5.1.1.pdf",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-LST-007",
+      "title": "Control and Instrumentation Loop Register",
+      "revision": "V1.0",
+      "docType": "LST",
+      "control": "controlled (conceptual)",
+      "tier": "A",
+      "file": "7 Piping and Instrumentation Diagrams (P&IDs)\\FEED-PE-LST-007_Control-and-Instrumentation-Loop-Register_V1.0.xlsx",
+      "valueRows": "20"
+    },
+    {
+      "documentId": "FEED-PE-MDL-001",
+      "title": "Equipment Scale-Up Study",
+      "revision": "V1.8",
+      "docType": "MDL",
+      "control": "controlled",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\FEED-PE-MDL-001_Equipment-Scale-Up-Study_V1.8.xlsx",
+      "valueRows": "50"
+    },
+    {
+      "documentId": "FEED-PE-MAT-002",
+      "title": "MOC Selection Matrix",
+      "revision": "V1.1",
+      "docType": "MAT",
+      "control": "controlled",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.1.xlsx",
+      "valueRows": "14"
+    },
+    {
+      "documentId": "FEED-PE-DBM-001",
+      "title": "Design Basis Memorandum",
+      "revision": "V2.0",
+      "docType": "DBM",
+      "control": "controlled (approved)",
+      "tier": "B",
+      "file": "3 Design Basis Memorandum (DBM)\\FEED-PE-DBM-001_Design-Basis-Memorandum_V2.0.docx",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "MODEL",
+      "title": "rGO Process Explorer model and semantic core",
+      "revision": "semantic v1",
+      "docType": "MODEL",
+      "control": "model evidence only",
+      "tier": "A",
+      "file": "dist/semantic/v1 (scripts/generate-reactor-semantic.mjs, scripts/expand-*-semantic.mjs)",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-MEB-009",
+      "title": "A-700 TLGO Pyrolysis Stream Table",
+      "revision": "V10.0",
+      "docType": "MEB",
+      "control": "controlled",
+      "tier": "A",
+      "file": "5 Mass and Energy Balances\\3 - FEED MEB Calculations\\FEED-PE-MEB-009_A-700-TLGO-Pyrolysis-Stream-Table_V10.0.xlsx",
+      "valueRows": "11"
+    },
+    {
+      "documentId": "FEED-PE-DAT-004",
+      "title": "PY-701 Pyrolysis Furnace Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (unsigned)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-004_PY-701-Pyrolysis-Furnace-Datasheet_V1.0.xlsx",
+      "valueRows": "86"
+    },
+    {
+      "documentId": "FEED-PE-DAT-005",
+      "title": "E-702 Indirect Screw Cooler Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (unsigned)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-005_E-702-Indirect-Screw-Cooler-Datasheet_V1.0.xlsx",
+      "valueRows": "71"
+    },
+    {
+      "documentId": "FEED-PE-DAT-006",
+      "title": "KO-701 Knockout Drum Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (unsigned)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-006_KO-701-Knockout-Drum-Datasheet_V1.0.xlsx",
+      "valueRows": "53"
+    },
+    {
+      "documentId": "FEED-PE-DAT-007",
+      "title": "PSV-701 Pressure Relief Valve Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (unsigned)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-007_PSV-701-Pressure-Relief-Valve-Datasheet_V1.0.xlsx",
+      "valueRows": "53"
+    },
+    {
+      "documentId": "FEED-PE-REP-018",
+      "title": "PY-701 Furnace FEED Design Closure (modular screw furnace)",
+      "revision": "V1.0",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-018_PY-701-Furnace-FEED-Design-Closure_V1.0.docx",
+      "valueRows": "6"
+    },
+    {
+      "documentId": "FEED-PE-REP-021",
+      "title": "PY-701 Pyrolysis Furnace Assessment (first principles)",
+      "revision": "V2.2",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-021_PY-701-Pyrolysis-Furnace-Assessment_V2.2.docx",
+      "valueRows": "1"
+    },
+    {
+      "documentId": "FEED-PE-REP-041",
+      "title": "Furnace Off-Gas and Vent Gas Assessment",
+      "revision": "V1.0",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-041_Furnace-Off-Gas-and-Vent-Gas-Assessment_V1.0.docx",
+      "valueRows": "2"
+    }
+  ],
+  "images": [
+    {
+      "key": "overview",
+      "title": "01 | A-700 pyrolysis train — all register equipment, assembled",
+      "owners": [
+        "TR-701",
+        "LK-701",
+        "H-701",
+        "C-701",
+        "PY-701",
+        "E-702",
+        "T-702",
+        "E-701",
+        "KO-701",
+        "FN-701",
+        "AIT-701"
+      ],
+      "direction": [
+        1,
+        0.8,
+        1
+      ],
+      "alt": "powder lift, transfer lock, feed buffer, screw feeder, furnace, product cooler and receiver, off-gas cooler, separator, fan and instrument assembly in assembled position"
+    },
+    {
+      "key": "feed",
+      "title": "02 | Contained feed path: TR-701 powder lift, LK-701 argon transfer lock, H-701 buffer and C-701 screw feeder into PY-701",
+      "owners": [
+        "TR-701",
+        "LK-701",
+        "H-701",
+        "C-701",
+        "PY-701"
+      ],
+      "frame": [
+        "TR-701",
+        "LK-701",
+        "H-701",
+        "C-701"
+      ],
+      "zoom": 1.15,
+      "direction": [
+        -1,
+        0.5,
+        1
+      ],
+      "alt": "the inerted feed chain from the powder lift through the lock and buffer to the feeder at the furnace inlet"
+    },
+    {
+      "key": "furnace",
+      "title": "03 | PY-701 continuous three-zone furnace with feeder C-701 and product cooler E-702",
+      "owners": [
+        "PY-701",
+        "C-701",
+        "E-702"
+      ],
+      "direction": [
+        1,
+        0.45,
+        -1
+      ],
+      "alt": "the single modelled furnace retort with the feeder at its inlet and the screw cooler at its discharge"
+    },
+    {
+      "key": "product",
+      "title": "04 | Product side: screw cooler E-702 and cooled receiver T-702",
+      "owners": [
+        "E-702",
+        "T-702",
+        "PY-701"
+      ],
+      "frame": [
+        "E-702",
+        "T-702"
+      ],
+      "zoom": 1.2,
+      "direction": [
+        -1,
+        0.5,
+        -1
+      ],
+      "alt": "the indirect screw cooler discharging into the contained product receiver, with the furnace behind"
+    },
+    {
+      "key": "offgas",
+      "title": "05 | Off-gas train: E-701 cooler, KO-701 condensate separator, FN-701 exhaust fan and AIT-701 oxygen / pressure control",
+      "owners": [
+        "E-701",
+        "KO-701",
+        "FN-701",
+        "AIT-701",
+        "PY-701"
+      ],
+      "frame": [
+        "E-701",
+        "KO-701",
+        "FN-701",
+        "AIT-701"
+      ],
+      "zoom": 1.15,
+      "direction": [
+        1,
+        0.5,
+        1
+      ],
+      "alt": "off-gas cooler, knockout pot, pressure-control fan and the oxygen verification assembly with the furnace behind"
+    },
+    {
+      "key": "access",
+      "title": "06 | Fire points FE-701 / FE-702 at the west and east approaches and emergency station ES-701",
+      "owners": [
+        "FE-701",
+        "FE-702",
+        "ES-701",
+        "PY-701",
+        "C-701",
+        "E-702",
+        "T-702",
+        "E-701",
+        "KO-701",
+        "FN-701"
+      ],
+      "direction": [
+        0.35,
+        1,
+        0.3
+      ],
+      "percentiles": [
+        2,
+        97
+      ],
+      "alt": "plan-like view of the furnace train with the two fire points and the emergency station"
+    }
+  ],
+  "related": [
+    {
+      "href": "./a600-review.html",
+      "label": "A-600 spray drying (upstream)"
+    },
+    {
+      "href": "./a3000-review.html",
+      "label": "Vent-gas assembly review (A-3000 S2 header)"
+    },
+    {
+      "href": "./a5000-review.html",
+      "label": "A-5000 thermal interfaces"
+    }
+  ],
+  "counts": {
+    "assets": 17,
+    "propertyRows": 377,
+    "approved": 39,
+    "openConflicts": 1,
+    "decisions": 5,
+    "holds": 0,
+    "gapsOpen": 68,
+    "gapsClosed": 4
+  }
+}
