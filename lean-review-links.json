@@ -1,0 +1,548 @@
+{
+ "version": "b9a79db",
+ "date": "2026-09-22",
+ "items": {
+  "L01": {
+   "kind": "engineering",
+   "note": "Containment, emergency stations and fire points are model-side records in every area; retention figures are model annotations pending the containment review.",
+   "findings": [
+    {
+     "id": "A100-04",
+     "area": "A-100",
+     "href": "./a100-review.html#A100-04",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Containment, stations and fire point",
+     "status": "Model provision — register identities open"
+    },
+    {
+     "id": "A140-05",
+     "area": "A-140",
+     "href": "./a140-review.html#A140-05",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Independent containment and access",
+     "status": "Model provision — retention unverified"
+    },
+    {
+     "id": "A160-05",
+     "area": "A-160",
+     "href": "./a160-review.html#A160-05",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Register and model reconciliation, containment and interfaces",
+     "status": "Register reconciliation required"
+    },
+    {
+     "id": "A200-06",
+     "area": "A-200",
+     "href": "./a200-review.html#A200-06",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Drainage and containment",
+     "status": "Receiving and retention basis open"
+    },
+    {
+     "id": "A300-07",
+     "area": "A-300",
+     "href": "./a300-review.html#A300-07",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Register and model reconciliation",
+     "status": "Register reconciliation required"
+    },
+    {
+     "id": "A400-07",
+     "area": "A-400",
+     "href": "./a400-review.html#A400-07",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Vents, drains and CIP interfaces",
+     "status": "Destinations open"
+    },
+    {
+     "id": "A600-06",
+     "area": "A-600",
+     "href": "./a600-review.html#A600-06",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Access, maintenance and fire points",
+     "status": "Model access provided — qualification open"
+    },
+    {
+     "id": "A800-07",
+     "area": "A-800",
+     "href": "./a800-review.html#A800-07",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Access, reactive inventory and fire points",
+     "status": "Model access provided — qualification open"
+    },
+    {
+     "id": "A1000-05",
+     "area": "A-1000",
+     "href": "./a1000-review.html#A1000-05",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Containment, access and inbound interfaces",
+     "status": "Model provision — retention unverified"
+    }
+   ],
+   "decisions": [],
+   "pages": []
+  },
+  "L02": {
+   "kind": "application",
+   "note": "Application item — no engineering evidence applies.",
+   "findings": [],
+   "decisions": [],
+   "pages": []
+  },
+  "L03": {
+   "kind": "application",
+   "note": "Application item — no engineering evidence applies.",
+   "findings": [],
+   "decisions": [],
+   "pages": []
+  },
+  "L04": {
+   "kind": "application",
+   "note": "Application item — no engineering evidence applies.",
+   "findings": [],
+   "decisions": [],
+   "pages": []
+  },
+  "L05": {
+   "kind": "application",
+   "note": "Application item — the Semantic Plant Core and the data layer are the engineering references the loader must keep consistent.",
+   "findings": [],
+   "decisions": [],
+   "pages": [
+    {
+     "label": "Semantic Plant Core",
+     "href": "./semantic-core.html"
+    }
+   ]
+  },
+  "L06": {
+   "kind": "engineering",
+   "note": "Drain, vent and wastewater routes without destinations are recorded as interface gaps; the A-3000 header and the A-1000 inbound lines are the long runs the model carries.",
+   "findings": [
+    {
+     "id": "A400-07",
+     "area": "A-400",
+     "href": "./a400-review.html#A400-07",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Vents, drains and CIP interfaces",
+     "status": "Destinations open"
+    },
+    {
+     "id": "A600-05",
+     "area": "A-600",
+     "href": "./a600-review.html#A600-05",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Register and model reconciliation",
+     "status": "Register reconciliation required"
+    },
+    {
+     "id": "A160-05",
+     "area": "A-160",
+     "href": "./a160-review.html#A160-05",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Register and model reconciliation, containment and interfaces",
+     "status": "Register reconciliation required"
+    },
+    {
+     "id": "A1000-05",
+     "area": "A-1000",
+     "href": "./a1000-review.html#A1000-05",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Containment, access and inbound interfaces",
+     "status": "Model provision — retention unverified"
+    },
+    {
+     "id": "A3000-05",
+     "area": "A-3000",
+     "href": "./a3000-review.html#A3000-05",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Assembled wet train — connections, air gap and liquor handling",
+     "status": "Geometry checks pass — six interfaces unresolved"
+    },
+    {
+     "id": "A3000-02",
+     "area": "A-3000",
+     "href": "./a3000-review.html#A3000-02",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "S1 wet-vent source register and sizing basis",
+     "status": "Basis approved — no source register, nothing sized"
+    }
+   ],
+   "decisions": [
+    {
+     "id": "D-A3000-01",
+     "area": "A-3000",
+     "rationale": "REP-041 segregation adopted as design intent: S1 wet caustic scrubber on wet vents only (a few hundred to ≈ 1,000 Nm³/h); furnace gases excluded.",
+     "reviewer": "QFL",
+     "date": "2026-09-20"
+    },
+    {
+     "id": "D-A1000-01",
+     "area": "A-1000",
+     "rationale": "REP-038 first-principles load adopted as the design statement: 0.64 mol/L H₂SO₄ + 0.23 mol/L HCl (179 t/d H₂SO₄, 24 t/d HCl) with Mn / K / P — the feed is dilut",
+     "reviewer": "QFL",
+     "date": "2026-09-20"
+    }
+   ],
+   "pages": []
+  },
+  "L07": {
+   "kind": "engineering",
+   "note": "Supports, access towers and skids are provisional model geometry with vendor loads unverified.",
+   "findings": [
+    {
+     "id": "A900-07",
+     "area": "A-900",
+     "href": "./a900-review.html#A900-07",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Layout, supports and access",
+     "status": "Provisional geometry — vendor loads unverified"
+    },
+    {
+     "id": "A600-06",
+     "area": "A-600",
+     "href": "./a600-review.html#A600-06",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Access, maintenance and fire points",
+     "status": "Model access provided — qualification open"
+    },
+    {
+     "id": "A800-07",
+     "area": "A-800",
+     "href": "./a800-review.html#A800-07",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Access, reactive inventory and fire points",
+     "status": "Model access provided — qualification open"
+    },
+    {
+     "id": "A700-08",
+     "area": "A-700",
+     "href": "./a700-review.html#A700-08",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Datasheet completeness",
+     "status": "55 blank items across four unsigned datasheets"
+    }
+   ],
+   "decisions": [],
+   "pages": []
+  },
+  "L08": {
+   "kind": "engineering",
+   "note": "The finishing route A-400 → A-900 is reviewed area by area; batch sizes, rates and cycle times are largely withdrawn pending the DBM V2.0 re-issues.",
+   "findings": [
+    {
+     "id": "A400-02",
+     "area": "A-400",
+     "href": "./a400-review.html#A400-02",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Graphite and wash-water basis",
+     "status": "Basis withdrawn — 8× spread in wash water"
+    },
+    {
+     "id": "A500-01",
+     "area": "A-500",
+     "href": "./a500-review.html#A500-01",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Sonication acceptance criterion and dose window",
+     "status": "Not defined — gating item for A-500"
+    },
+    {
+     "id": "A600-01",
+     "area": "A-600",
+     "href": "./a600-review.html#A600-01",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Dryer readiness — twelve REP-016 holds",
+     "status": "NOT READY for vendor inquiry"
+    },
+    {
+     "id": "A700-02",
+     "area": "A-700",
+     "href": "./a700-review.html#A700-02",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Feed-rate basis",
+     "status": "Basis withdrawn — four rates on record"
+    },
+    {
+     "id": "A800-01",
+     "area": "A-800",
+     "href": "./a800-review.html#A800-01",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "KBH₄ : rGO ratio and feed-rate basis",
+     "status": "Ratio ruled 1 : 1 — rates withdrawn"
+    },
+    {
+     "id": "A900-03",
+     "area": "A-900",
+     "href": "./a900-review.html#A900-03",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Product rate basis",
+     "status": "Basis withdrawn — three rates on record"
+    }
+   ],
+   "decisions": [
+    {
+     "id": "D-A400-01",
+     "area": "A-400",
+     "rationale": "FEED technology hold H-01 is active: VSEP i84 (REP-001 V1.1 / MEB-007), standalone spiral TFF (REP-007, reference only) and hybrid bulk separation + TFF polishi",
+     "reviewer": "QFL",
+     "date": "2026-09-20"
+    },
+    {
+     "id": "D-A500-01",
+     "area": "A-500",
+     "rationale": "No acceptance criterion exists for sonication (REP-024 RED item), so cumulative dose, dose per pass, pass count and therefore acoustic power (29–573 kW across t",
+     "reviewer": "QFL",
+     "date": "2026-09-20"
+    },
+    {
+     "id": "D-A600-01",
+     "area": "A-600",
+     "rationale": "MEB-008 V6 sizing is on 50 kg/h graphite and 1 wt% feed, and DR-601 is NOT READY (REP-016 twelve HOLDs). No value approved.",
+     "reviewer": "QFL",
+     "date": "2026-09-20"
+    },
+    {
+     "id": "D-A700-04",
+     "area": "A-700",
+     "rationale": "22.5 kg/h (MEB-009, 50 kg/h graphite), 44.1 kg/h (DAT-004), 3 × 46 kg/h (REP-018) vs DBM V2.0 74 kg/h design dried TLGO — basis withdrawn.",
+     "reviewer": "QFL",
+     "date": "2026-09-20"
+    },
+    {
+     "id": "D-A800-01",
+     "area": "A-800",
+     "rationale": "DBM V2.0 / MOC-001 rule 1 : 1 KBH₄ : rGO (PFD V5.1.1, REP-019, REP-022 agree); DAT-008 item 2.6 (1.5) and MEB-010 R_KBH4 (1.5) superseded.",
+     "reviewer": "QFL",
+     "date": "2026-09-20"
+    },
+    {
+     "id": "D-A900-01",
+     "area": "A-900",
+     "rationale": "Recorded as NOT DEFINED with the REP-023 requirement: state which density 1.6 g/mL means (ribbon envelope / granule / packed cartridge) and whether the storage ",
+     "reviewer": "QFL",
+     "date": "2026-09-20"
+    }
+   ],
+   "pages": []
+  },
+  "L09": {
+   "kind": "engineering",
+   "note": "Intermediate tank duties and working volumes are withdrawn or unsized in the data layer; no vessel can be consolidated before the re-issued balances.",
+   "findings": [
+    {
+     "id": "A400-02",
+     "area": "A-400",
+     "href": "./a400-review.html#A400-02",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Graphite and wash-water basis",
+     "status": "Basis withdrawn — 8× spread in wash water"
+    },
+    {
+     "id": "A500-03",
+     "area": "A-500",
+     "href": "./a500-review.html#A500-03",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Solids concentration and commercial design basis",
+     "status": "PFD basis approved — MDL-001 basis withdrawn"
+    },
+    {
+     "id": "A300-01",
+     "area": "A-300",
+     "href": "./a300-review.html#A300-01",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Fixing tank T-303 sizing basis",
+     "status": "Sizing basis withdrawn — re-issue required"
+    },
+    {
+     "id": "A300-02",
+     "area": "A-300",
+     "href": "./a300-review.html#A300-02",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Acid-wash vessels T-305 — count and marination hold point",
+     "status": "Hold point — vessel count is not a design decision"
+    },
+    {
+     "id": "A160-01",
+     "area": "A-160",
+     "href": "./a160-review.html#A160-01",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Dilution basis — Option B now, Option C later",
+     "status": "Design concept approved — sizing withdrawn"
+    },
+    {
+     "id": "A200-08",
+     "area": "A-200",
+     "href": "./a200-review.html#A200-08",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Vessel sizing basis — the cascading decision",
+     "status": "Sizing withdrawn — CAL-011 V8 required"
+    },
+    {
+     "id": "A1000-01",
+     "area": "A-1000",
+     "href": "./a1000-review.html#A1000-01",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Discharge route and acid recovery — the governing decision",
+     "status": "Design lever identified — no flow approved"
+    },
+    {
+     "id": "A2000-01",
+     "area": "A-2000",
+     "href": "./a2000-review.html#A2000-01",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Feed and product basis",
+     "status": "No basis approved — follows the A-1000 case"
+    }
+   ],
+   "decisions": [
+    {
+     "id": "D-A200-01",
+     "area": "A-200",
+     "rationale": "Vessel size: NTE-008 (488 kg graphite/batch on the 32 % pilot yield chain), CAL-011 V7 (398 kg Pre-G, 20 h, 46 kg/kg) and DAT-003 (Calc V6) are all computed on ",
+     "reviewer": "QFL",
+     "date": "2026-09-20"
+    },
+    {
+     "id": "D-A300-01",
+     "area": "A-300",
+     "rationale": "T-303 sizing: MEB-006 V14 (47.6 m³, N = 2) is on the withdrawn 50 kg/h graphite / 46 kg/kg H₂SO₄ / 12 h fill basis (MOC-001 lists MEB-006 for realignment); REP-",
+     "reviewer": "QFL",
+     "date": "2026-09-20"
+    },
+    {
+     "id": "D-A400-01",
+     "area": "A-400",
+     "rationale": "FEED technology hold H-01 is active: VSEP i84 (REP-001 V1.1 / MEB-007), standalone spiral TFF (REP-007, reference only) and hybrid bulk separation + TFF polishi",
+     "reviewer": "QFL",
+     "date": "2026-09-20"
+    },
+    {
+     "id": "D-A160-01",
+     "area": "A-160",
+     "rationale": "MEB-004 V5 sizes T-161 on 50 kg/h graphite and 170 kg water per kg graphite; REP-042 shows the water is a heat sink and recommends Option B (about 10–15 t per b",
+     "reviewer": "QFL",
+     "date": "2026-09-20"
+    }
+   ],
+   "pages": []
+  },
+  "L10": {
+   "kind": "engineering",
+   "note": "Utility identities and demands are open: inert-gas identity (argon vs nitrogen), the ≥ 200 °C heating loop, compressed-air demand and the A-5000 duties.",
+   "findings": [
+    {
+     "id": "A6000-01",
+     "area": "A-6000",
+     "href": "./a6000-review.html#A6000-01",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Inert-gas identity — argon or nitrogen",
+     "status": "No basis approved — MoC on DBM §3.6.3 / PFD-6000"
+    },
+    {
+     "id": "A6000-03",
+     "area": "A-6000",
+     "href": "./a6000-review.html#A6000-03",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Distribution header and user manifolds",
+     "status": "Modelled — demand and reservations open"
+    },
+    {
+     "id": "A800-03",
+     "area": "A-800",
+     "href": "./a800-review.html#A800-03",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Inert atmosphere, hydrolysis hazard and hazardous area",
+     "status": "Approved from DAT-008 — HAC to confirm"
+    },
+    {
+     "id": "A600-02",
+     "area": "A-600",
+     "href": "./a600-review.html#A600-02",
+     "revision": "r2",
+     "reviewer": "QFL",
+     "topic": "Drying envelope and feed solids",
+     "status": "Targets approved — subject to HOLD-4 / HOLD-1"
+    }
+   ],
+   "decisions": [
+    {
+     "id": "D-A6000-01",
+     "area": "A-6000",
+     "rationale": "Inert-gas identity conflict: argon (PFD-6000, DAT-004/008, MEB-009/010, model) vs nitrogen (DBM §3.6.3); R-201 blanketing needs N₂ (NTE-010), furnaces need Ar. ",
+     "reviewer": "QFL",
+     "date": "2026-09-20"
+    },
+    {
+     "id": "D-A5000-01",
+     "area": "A-5000",
+     "rationale": "Four utility loops, not three (REP-043): add a ≥ 200 °C steam / thermal-oil loop for HX-601, the acid concentrator and R-141 heat-up; keep hot water, cooling wa",
+     "reviewer": "QFL",
+     "date": "2026-09-20"
+    },
+    {
+     "id": "D-A4000-01",
+     "area": "A-4000",
+     "rationale": "K-4001A operating / K-4001B standby per LST-001 / PFD-4000.",
+     "reviewer": "QFL",
+     "date": "2026-09-20"
+    }
+   ],
+   "pages": [
+    {
+     "label": "A-5000 review (model engineer)",
+     "href": "./a5000-review.html"
+    }
+   ]
+  },
+  "L11": {
+   "kind": "application",
+   "note": "Application item — measurement geometry underpins the assembly checks recorded on the review pages.",
+   "findings": [],
+   "decisions": [],
+   "pages": []
+  },
+  "L12": {
+   "kind": "application",
+   "note": "Application item — no engineering evidence applies.",
+   "findings": [],
+   "decisions": [],
+   "pages": []
+  }
+ }
+}
