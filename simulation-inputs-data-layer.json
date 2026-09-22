@@ -1,0 +1,1937 @@
+{
+ "schema": "rgo-simulation-inputs-v1",
+ "layout": "FEED baseline · press + tray dryer",
+ "generated": "2026-09-22",
+ "counts": {
+  "approved": 30,
+  "withdrawn": 20,
+  "documented": 0,
+  "none": 98
+ },
+ "matches": [
+  {
+   "rowId": "R-101-charge",
+   "asset": "R-101",
+   "area": "A-100",
+   "parameter": "Charge / retained material mass",
+   "status": "none"
+  },
+  {
+   "rowId": "R-101-duration",
+   "asset": "R-101",
+   "area": "A-100",
+   "parameter": "Operation duration",
+   "status": "none"
+  },
+  {
+   "rowId": "R-101-start-offset",
+   "asset": "R-101",
+   "area": "A-100",
+   "parameter": "Batch start offset from schedule origin",
+   "status": "approved",
+   "property": "operatingEnvelope.batchBasis",
+   "valueId": "PV-A-100-0137",
+   "prefill": false,
+   "value": null,
+   "unit": "h",
+   "documented": "R-141: 500 kg graphite per batch (batch sizes of PFD V5.1.1) — R-101 premix feeds the R-141 bank; graphite design feed 1,523 kg/d (63.5 kg/h)",
+   "source": "FEED-PE-DBM-001 V2.0 · §3.3 Table 3.3-1 / batch structure",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": null,
+   "alternatives": []
+  },
+  {
+   "rowId": "R-101-release",
+   "asset": "R-101",
+   "area": "A-100",
+   "parameter": "Release / transfer condition",
+   "status": "none"
+  },
+  {
+   "rowId": "R-101-working",
+   "asset": "R-101",
+   "area": "A-100",
+   "parameter": "Working liquid inventory",
+   "status": "none"
+  },
+  {
+   "rowId": "R-101-density",
+   "asset": "R-101",
+   "area": "A-100",
+   "parameter": "Mixture density",
+   "status": "none"
+  },
+  {
+   "rowId": "R-141A-charge",
+   "asset": "R-141A",
+   "area": "A-140",
+   "parameter": "Charge / retained material mass",
+   "status": "approved",
+   "property": "operatingEnvelope.graphitePerBatchKg",
+   "valueId": "PV-A-140-0269",
+   "prefill": true,
+   "value": 500,
+   "unit": "kg",
+   "documented": "500 (batch sizes of PFD V5.1.1); 2.3 batches/day nominal, 3.0 design; two operating reactors plus one spare on the 9–10 h cycle of REP-040 kg/batch",
+   "source": "FEED-PE-DBM-001 V2.0 · §3.3 batch structure / §3.4",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": null,
+   "alternatives": [
+    {
+     "value": "543.2",
+     "unit": "kg/batch",
+     "source": "FEED-PE-MEB-003",
+     "location": "'Batch Cycle Design'!row 18 (m_C_bat)",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "R-141A-duration",
+   "asset": "R-141A",
+   "area": "A-140",
+   "parameter": "Operation duration",
+   "status": "approved",
+   "property": "operatingEnvelope.reactionTimeHours",
+   "valueId": "PV-A-140-0167",
+   "prefill": true,
+   "value": 270,
+   "unit": "min",
+   "documented": "4.5 h",
+   "source": "FEED-PE-MEB-003 V16.0 · 'Batch Cycle Design'!row 6 (t_rxn)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": "× 60 (h → min)",
+   "alternatives": []
+  },
+  {
+   "rowId": "R-141A-start-offset",
+   "asset": "R-141A",
+   "area": "A-140",
+   "parameter": "Batch start offset from schedule origin",
+   "status": "none"
+  },
+  {
+   "rowId": "R-141A-release",
+   "asset": "R-141A",
+   "area": "A-140",
+   "parameter": "Release / transfer condition",
+   "status": "approved",
+   "property": "operatingEnvelope.transferTemperatureC",
+   "valueId": "PV-A-140-0297",
+   "prefill": true,
+   "value": "transfer temperature °C: Transfer hot (80 °C) to T-161 rather than cooling to 10–20 °C — deletes the R-141 cool-down and the chilled-water need; sensible heat 0.9 GJ is 14 % of the T-161 dilution heat °C",
+   "unit": "text",
+   "documented": "Transfer hot (80 °C) to T-161 rather than cooling to 10–20 °C — deletes the R-141 cool-down and the chilled-water need; sensible heat 0.9 GJ is 14 % of the T-161 dilution heat °C",
+   "source": "FEED-PE-REP-040 V1.0 · basis table / §cool-down",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": null,
+   "alternatives": []
+  },
+  {
+   "rowId": "R-141A-working",
+   "asset": "R-141A",
+   "area": "A-140",
+   "parameter": "Working liquid inventory",
+   "status": "withdrawn",
+   "property": "design.workingVolumeM3",
+   "decisionId": "D-A140-01",
+   "rationale": "MEB-003 V16 / LST-005 size R-141 on 80 kg/h graphite, 543 kg per batch, 7 h cycle and 3 batches/day; withdrawn by DBM V2.0 (500 kg graphite per batch, 2 operating + 1 spare, 9–10 h cycle per REP-040). No value approved.",
+   "alternatives": [
+    {
+     "value": "6.117",
+     "unit": "m³",
+     "source": "FEED-PE-MEB-003",
+     "location": "'Batch Cycle Design'!row 32 (V_work_bat)",
+     "status": "superseded"
+    },
+    {
+     "value": "7.868",
+     "unit": "m³",
+     "source": "FEED-PE-LST-005",
+     "location": "'A140_Batch_Cycle'!row 39 (V_work_bat)",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "R-141A-density",
+   "asset": "R-141A",
+   "area": "A-140",
+   "parameter": "Mixture density",
+   "status": "none"
+  },
+  {
+   "rowId": "R-141B-charge",
+   "asset": "R-141B",
+   "area": "A-140",
+   "parameter": "Charge / retained material mass",
+   "status": "approved",
+   "property": "operatingEnvelope.graphitePerBatchKg",
+   "valueId": "PV-A-140-0270",
+   "prefill": true,
+   "value": 500,
+   "unit": "kg",
+   "documented": "500 (batch sizes of PFD V5.1.1); 2.3 batches/day nominal, 3.0 design; two operating reactors plus one spare on the 9–10 h cycle of REP-040 kg/batch",
+   "source": "FEED-PE-DBM-001 V2.0 · §3.3 batch structure / §3.4",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": null,
+   "alternatives": [
+    {
+     "value": "543.2",
+     "unit": "kg/batch",
+     "source": "FEED-PE-MEB-003",
+     "location": "'Batch Cycle Design'!row 18 (m_C_bat)",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "R-141B-duration",
+   "asset": "R-141B",
+   "area": "A-140",
+   "parameter": "Operation duration",
+   "status": "approved",
+   "property": "operatingEnvelope.reactionTimeHours",
+   "valueId": "PV-A-140-0168",
+   "prefill": true,
+   "value": 270,
+   "unit": "min",
+   "documented": "4.5 h",
+   "source": "FEED-PE-MEB-003 V16.0 · 'Batch Cycle Design'!row 6 (t_rxn)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": "× 60 (h → min)",
+   "alternatives": []
+  },
+  {
+   "rowId": "R-141B-start-offset",
+   "asset": "R-141B",
+   "area": "A-140",
+   "parameter": "Batch start offset from schedule origin",
+   "status": "none"
+  },
+  {
+   "rowId": "R-141B-release",
+   "asset": "R-141B",
+   "area": "A-140",
+   "parameter": "Release / transfer condition",
+   "status": "approved",
+   "property": "operatingEnvelope.transferTemperatureC",
+   "valueId": "PV-A-140-0298",
+   "prefill": true,
+   "value": "transfer temperature °C: Transfer hot (80 °C) to T-161 rather than cooling to 10–20 °C — deletes the R-141 cool-down and the chilled-water need; sensible heat 0.9 GJ is 14 % of the T-161 dilution heat °C",
+   "unit": "text",
+   "documented": "Transfer hot (80 °C) to T-161 rather than cooling to 10–20 °C — deletes the R-141 cool-down and the chilled-water need; sensible heat 0.9 GJ is 14 % of the T-161 dilution heat °C",
+   "source": "FEED-PE-REP-040 V1.0 · basis table / §cool-down",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": null,
+   "alternatives": []
+  },
+  {
+   "rowId": "R-141B-working",
+   "asset": "R-141B",
+   "area": "A-140",
+   "parameter": "Working liquid inventory",
+   "status": "withdrawn",
+   "property": "design.workingVolumeM3",
+   "decisionId": "D-A140-01",
+   "rationale": "MEB-003 V16 / LST-005 size R-141 on 80 kg/h graphite, 543 kg per batch, 7 h cycle and 3 batches/day; withdrawn by DBM V2.0 (500 kg graphite per batch, 2 operating + 1 spare, 9–10 h cycle per REP-040). No value approved.",
+   "alternatives": [
+    {
+     "value": "6.117",
+     "unit": "m³",
+     "source": "FEED-PE-MEB-003",
+     "location": "'Batch Cycle Design'!row 32 (V_work_bat)",
+     "status": "superseded"
+    },
+    {
+     "value": "7.868",
+     "unit": "m³",
+     "source": "FEED-PE-LST-005",
+     "location": "'A140_Batch_Cycle'!row 39 (V_work_bat)",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "R-141B-density",
+   "asset": "R-141B",
+   "area": "A-140",
+   "parameter": "Mixture density",
+   "status": "none"
+  },
+  {
+   "rowId": "R-141C-charge",
+   "asset": "R-141C",
+   "area": "A-140",
+   "parameter": "Charge / retained material mass",
+   "status": "approved",
+   "property": "operatingEnvelope.graphitePerBatchKg",
+   "valueId": "PV-A-140-0271",
+   "prefill": true,
+   "value": 500,
+   "unit": "kg",
+   "documented": "500 (batch sizes of PFD V5.1.1); 2.3 batches/day nominal, 3.0 design; two operating reactors plus one spare on the 9–10 h cycle of REP-040 kg/batch",
+   "source": "FEED-PE-DBM-001 V2.0 · §3.3 batch structure / §3.4",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": null,
+   "alternatives": [
+    {
+     "value": "543.2",
+     "unit": "kg/batch",
+     "source": "FEED-PE-MEB-003",
+     "location": "'Batch Cycle Design'!row 18 (m_C_bat)",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "R-141C-duration",
+   "asset": "R-141C",
+   "area": "A-140",
+   "parameter": "Operation duration",
+   "status": "approved",
+   "property": "operatingEnvelope.reactionTimeHours",
+   "valueId": "PV-A-140-0169",
+   "prefill": true,
+   "value": 270,
+   "unit": "min",
+   "documented": "4.5 h",
+   "source": "FEED-PE-MEB-003 V16.0 · 'Batch Cycle Design'!row 6 (t_rxn)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": "× 60 (h → min)",
+   "alternatives": []
+  },
+  {
+   "rowId": "R-141C-start-offset",
+   "asset": "R-141C",
+   "area": "A-140",
+   "parameter": "Batch start offset from schedule origin",
+   "status": "none"
+  },
+  {
+   "rowId": "R-141C-release",
+   "asset": "R-141C",
+   "area": "A-140",
+   "parameter": "Release / transfer condition",
+   "status": "approved",
+   "property": "operatingEnvelope.transferTemperatureC",
+   "valueId": "PV-A-140-0299",
+   "prefill": true,
+   "value": "transfer temperature °C: Transfer hot (80 °C) to T-161 rather than cooling to 10–20 °C — deletes the R-141 cool-down and the chilled-water need; sensible heat 0.9 GJ is 14 % of the T-161 dilution heat °C",
+   "unit": "text",
+   "documented": "Transfer hot (80 °C) to T-161 rather than cooling to 10–20 °C — deletes the R-141 cool-down and the chilled-water need; sensible heat 0.9 GJ is 14 % of the T-161 dilution heat °C",
+   "source": "FEED-PE-REP-040 V1.0 · basis table / §cool-down",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": null,
+   "alternatives": []
+  },
+  {
+   "rowId": "R-141C-working",
+   "asset": "R-141C",
+   "area": "A-140",
+   "parameter": "Working liquid inventory",
+   "status": "withdrawn",
+   "property": "design.workingVolumeM3",
+   "decisionId": "D-A140-01",
+   "rationale": "MEB-003 V16 / LST-005 size R-141 on 80 kg/h graphite, 543 kg per batch, 7 h cycle and 3 batches/day; withdrawn by DBM V2.0 (500 kg graphite per batch, 2 operating + 1 spare, 9–10 h cycle per REP-040). No value approved.",
+   "alternatives": [
+    {
+     "value": "6.117",
+     "unit": "m³",
+     "source": "FEED-PE-MEB-003",
+     "location": "'Batch Cycle Design'!row 32 (V_work_bat)",
+     "status": "superseded"
+    },
+    {
+     "value": "7.868",
+     "unit": "m³",
+     "source": "FEED-PE-LST-005",
+     "location": "'A140_Batch_Cycle'!row 39 (V_work_bat)",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "R-141C-density",
+   "asset": "R-141C",
+   "area": "A-140",
+   "parameter": "Mixture density",
+   "status": "none"
+  },
+  {
+   "rowId": "R-141D-charge",
+   "asset": "R-141D",
+   "area": "A-140",
+   "parameter": "Charge / retained material mass",
+   "status": "approved",
+   "property": "operatingEnvelope.graphitePerBatchKg",
+   "valueId": "PV-A-140-0272",
+   "prefill": true,
+   "value": 500,
+   "unit": "kg",
+   "documented": "500 (batch sizes of PFD V5.1.1); 2.3 batches/day nominal, 3.0 design; two operating reactors plus one spare on the 9–10 h cycle of REP-040 kg/batch",
+   "source": "FEED-PE-DBM-001 V2.0 · §3.3 batch structure / §3.4",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": null,
+   "alternatives": [
+    {
+     "value": "543.2",
+     "unit": "kg/batch",
+     "source": "FEED-PE-MEB-003",
+     "location": "'Batch Cycle Design'!row 18 (m_C_bat)",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "R-141D-duration",
+   "asset": "R-141D",
+   "area": "A-140",
+   "parameter": "Operation duration",
+   "status": "approved",
+   "property": "operatingEnvelope.reactionTimeHours",
+   "valueId": "PV-A-140-0170",
+   "prefill": true,
+   "value": 270,
+   "unit": "min",
+   "documented": "4.5 h",
+   "source": "FEED-PE-MEB-003 V16.0 · 'Batch Cycle Design'!row 6 (t_rxn)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": "× 60 (h → min)",
+   "alternatives": []
+  },
+  {
+   "rowId": "R-141D-start-offset",
+   "asset": "R-141D",
+   "area": "A-140",
+   "parameter": "Batch start offset from schedule origin",
+   "status": "none"
+  },
+  {
+   "rowId": "R-141D-release",
+   "asset": "R-141D",
+   "area": "A-140",
+   "parameter": "Release / transfer condition",
+   "status": "approved",
+   "property": "operatingEnvelope.transferTemperatureC",
+   "valueId": "PV-A-140-0300",
+   "prefill": true,
+   "value": "transfer temperature °C: Transfer hot (80 °C) to T-161 rather than cooling to 10–20 °C — deletes the R-141 cool-down and the chilled-water need; sensible heat 0.9 GJ is 14 % of the T-161 dilution heat °C",
+   "unit": "text",
+   "documented": "Transfer hot (80 °C) to T-161 rather than cooling to 10–20 °C — deletes the R-141 cool-down and the chilled-water need; sensible heat 0.9 GJ is 14 % of the T-161 dilution heat °C",
+   "source": "FEED-PE-REP-040 V1.0 · basis table / §cool-down",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": null,
+   "alternatives": []
+  },
+  {
+   "rowId": "R-141D-working",
+   "asset": "R-141D",
+   "area": "A-140",
+   "parameter": "Working liquid inventory",
+   "status": "withdrawn",
+   "property": "design.workingVolumeM3",
+   "decisionId": "D-A140-01",
+   "rationale": "MEB-003 V16 / LST-005 size R-141 on 80 kg/h graphite, 543 kg per batch, 7 h cycle and 3 batches/day; withdrawn by DBM V2.0 (500 kg graphite per batch, 2 operating + 1 spare, 9–10 h cycle per REP-040). No value approved.",
+   "alternatives": [
+    {
+     "value": "6.117",
+     "unit": "m³",
+     "source": "FEED-PE-MEB-003",
+     "location": "'Batch Cycle Design'!row 32 (V_work_bat)",
+     "status": "superseded"
+    },
+    {
+     "value": "7.868",
+     "unit": "m³",
+     "source": "FEED-PE-LST-005",
+     "location": "'A140_Batch_Cycle'!row 39 (V_work_bat)",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "R-141D-density",
+   "asset": "R-141D",
+   "area": "A-140",
+   "parameter": "Mixture density",
+   "status": "none"
+  },
+  {
+   "rowId": "T-161-charge",
+   "asset": "T-161",
+   "area": "A-160",
+   "parameter": "Charge / retained material mass",
+   "status": "none"
+  },
+  {
+   "rowId": "T-161-duration",
+   "asset": "T-161",
+   "area": "A-160",
+   "parameter": "Operation duration",
+   "status": "none"
+  },
+  {
+   "rowId": "T-161-release",
+   "asset": "T-161",
+   "area": "A-160",
+   "parameter": "Release / transfer condition",
+   "status": "none"
+  },
+  {
+   "rowId": "T-161-working",
+   "asset": "T-161",
+   "area": "A-160",
+   "parameter": "Working liquid inventory",
+   "status": "withdrawn",
+   "property": "design.workingVolumeM3",
+   "decisionId": "D-A160-01",
+   "rationale": "MEB-004 V5 sizes T-161 on 50 kg/h graphite and 170 kg water per kg graphite; REP-042 shows the water is a heat sink and recommends Option B (about 10–15 t per batch). No size approved.",
+   "alternatives": [
+    {
+     "value": "36.9",
+     "unit": "m³",
+     "source": "FEED-PE-MEB-004",
+     "location": "'Design Basis & Inputs'!row 64 (V₁₆₁_work)",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "T-161-density",
+   "asset": "T-161",
+   "area": "A-160",
+   "parameter": "Mixture density",
+   "status": "none"
+  },
+  {
+   "rowId": "T-162-charge",
+   "asset": "T-162",
+   "area": "A-160",
+   "parameter": "Charge / retained material mass",
+   "status": "none"
+  },
+  {
+   "rowId": "T-162-duration",
+   "asset": "T-162",
+   "area": "A-160",
+   "parameter": "Operation duration",
+   "status": "none"
+  },
+  {
+   "rowId": "T-162-release",
+   "asset": "T-162",
+   "area": "A-160",
+   "parameter": "Release / transfer condition",
+   "status": "none"
+  },
+  {
+   "rowId": "T-162-working",
+   "asset": "T-162",
+   "area": "A-160",
+   "parameter": "Working liquid inventory",
+   "status": "withdrawn",
+   "property": "design.workingVolumeM3",
+   "decisionId": "D-A160-01",
+   "rationale": "MEB-004 V5 sizes T-161 on 50 kg/h graphite and 170 kg water per kg graphite; REP-042 shows the water is a heat sink and recommends Option B (about 10–15 t per batch). No size approved.",
+   "alternatives": [
+    {
+     "value": "17.2",
+     "unit": "m³",
+     "source": "FEED-PE-MEB-004",
+     "location": "'Design Basis & Inputs'!row 69 (V₁₆₂_work)",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "T-162-density",
+   "asset": "T-162",
+   "area": "A-160",
+   "parameter": "Mixture density",
+   "status": "none"
+  },
+  {
+   "rowId": "F-161-charge",
+   "asset": "F-161",
+   "area": "A-160",
+   "parameter": "Charge / retained material mass",
+   "status": "none"
+  },
+  {
+   "rowId": "F-161-duration",
+   "asset": "F-161",
+   "area": "A-160",
+   "parameter": "Operation duration",
+   "status": "none"
+  },
+  {
+   "rowId": "F-161-release",
+   "asset": "F-161",
+   "area": "A-160",
+   "parameter": "Release / transfer condition",
+   "status": "approved",
+   "property": "operatingEnvelope.cakeMoistureWtFrac",
+   "valueId": "PV-A-160-0169",
+   "prefill": true,
+   "value": "cake moisture wt frac: 0.5 wt frac",
+   "unit": "text",
+   "documented": "0.5 wt frac",
+   "source": "FEED-PE-MEB-004 V5.0 · 'Design Basis & Inputs'!row 31 (w_cake)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": null,
+   "alternatives": []
+  },
+  {
+   "rowId": "D-164-charge",
+   "asset": "D-164",
+   "area": "A-160",
+   "parameter": "Charge / retained material mass",
+   "status": "none"
+  },
+  {
+   "rowId": "D-164-duration",
+   "asset": "D-164",
+   "area": "A-160",
+   "parameter": "Operation duration",
+   "status": "none"
+  },
+  {
+   "rowId": "D-164-release",
+   "asset": "D-164",
+   "area": "A-160",
+   "parameter": "Release / transfer condition",
+   "status": "approved",
+   "property": "operatingEnvelope.productResidualMoistureWtFrac",
+   "valueId": "PV-A-160-0171",
+   "prefill": true,
+   "value": "product residual moisture wt frac: 0.02 wt frac",
+   "unit": "text",
+   "documented": "0.02 wt frac",
+   "source": "FEED-PE-MEB-004 V5.0 · 'Design Basis & Inputs'!row 35 (w_prod)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": null,
+   "alternatives": []
+  },
+  {
+   "rowId": "R-201A-charge",
+   "asset": "R-201A",
+   "area": "A-200",
+   "parameter": "Charge / retained material mass",
+   "status": "approved",
+   "property": "operatingEnvelope.preGPerBatchKg",
+   "valueId": "PV-A-200-0613",
+   "prefill": true,
+   "value": 550,
+   "unit": "kg",
+   "documented": "550 kg/batch",
+   "source": "FEED-PE-DBM-001 V2.0 · §3.3 batch structure (batch sizes of FEED-PE-PFD-001 V5.1.1)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": null,
+   "alternatives": [
+    {
+     "value": "397.75",
+     "unit": "kg/batch",
+     "source": "FEED-PE-CAL-011",
+     "location": "'Results_Summary'!row 8 (m_G)",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "R-201A-duration",
+   "asset": "R-201A",
+   "area": "A-200",
+   "parameter": "Operation duration",
+   "status": "approved",
+   "property": "operatingEnvelope.batchCycleHours",
+   "valueId": "PV-A-200-0617",
+   "prefill": true,
+   "value": 1440,
+   "unit": "min",
+   "documented": "24 h",
+   "source": "FEED-PE-DBM-001 V2.0 · §3.3 / §3.4 (R-201 24 h, staggered 6 h)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": "× 60 (h → min)",
+   "alternatives": [
+    {
+     "value": "20.0",
+     "unit": "h",
+     "source": "FEED-PE-CAL-011",
+     "location": "'Inputs'!row 39 (t_cyc)",
+     "status": "superseded"
+    },
+    {
+     "value": "24",
+     "unit": "h",
+     "source": "FEED-PE-NTE-008",
+     "location": "§2.3",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "R-201A-start-offset",
+   "asset": "R-201A",
+   "area": "A-200",
+   "parameter": "Batch start offset from schedule origin",
+   "status": "none"
+  },
+  {
+   "rowId": "R-201A-release",
+   "asset": "R-201A",
+   "area": "A-200",
+   "parameter": "Release / transfer condition",
+   "status": "approved",
+   "property": "operatingEnvelope.transferTemperatureC",
+   "valueId": "PV-A-200-0605",
+   "prefill": true,
+   "value": "transfer temperature °C: 10 °C",
+   "unit": "text",
+   "documented": "10 °C",
+   "source": "FEED-PE-PFD-001 V5.1.1 · FEED-PFD-0200, PDF p.7 process data ('Cooling: chill down to 10 °C')",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": null,
+   "alternatives": [
+    {
+     "value": "≤ 20",
+     "unit": "°C",
+     "source": "FEED-PE-DAT-003",
+     "location": "'R-201 Datasheet'!row 61 (item 3.18)",
+     "status": "superseded"
+    },
+    {
+     "value": "10",
+     "unit": "°C",
+     "source": "FEED-PE-NTE-008",
+     "location": "§9.1",
+     "status": "superseded"
+    },
+    {
+     "value": "≈30 (final cooldown)",
+     "unit": "°C",
+     "source": "FEED-PE-NTE-010",
+     "location": "§11",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "R-201A-working",
+   "asset": "R-201A",
+   "area": "A-200",
+   "parameter": "Working liquid inventory",
+   "status": "withdrawn",
+   "property": "design.workingVolumeM3",
+   "decisionId": "D-A200-01",
+   "rationale": "Vessel size: NTE-008 (488 kg graphite/batch on the 32 % pilot yield chain), CAL-011 V7 (398 kg Pre-G, 20 h, 46 kg/kg) and DAT-003 (Calc V6) are all computed on bases withdrawn by FEED-PE-DBM-001 V2.0 / FEED-PE-MOC-001 (550 kg Pre-G per batch, 24 h cycle, PFD ratios). No value approved.",
+   "alternatives": [
+    {
+     "value": "12.81",
+     "unit": "m³",
+     "source": "FEED-PE-DAT-003",
+     "location": "'R-201 Datasheet'!row 100 (item 5.4)",
+     "status": "superseded"
+    },
+    {
+     "value": "12.011",
+     "unit": "m³",
+     "source": "FEED-PE-CAL-011",
+     "location": "'Results_Summary'!row 15 (V_wk)",
+     "status": "superseded"
+    },
+    {
+     "value": "19.8",
+     "unit": "m³",
+     "source": "FEED-PE-NTE-008",
+     "location": "§5.1",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "R-201A-density",
+   "asset": "R-201A",
+   "area": "A-200",
+   "parameter": "Mixture density",
+   "status": "none"
+  },
+  {
+   "rowId": "R-201B-charge",
+   "asset": "R-201B",
+   "area": "A-200",
+   "parameter": "Charge / retained material mass",
+   "status": "approved",
+   "property": "operatingEnvelope.preGPerBatchKg",
+   "valueId": "PV-A-200-0614",
+   "prefill": true,
+   "value": 550,
+   "unit": "kg",
+   "documented": "550 kg/batch",
+   "source": "FEED-PE-DBM-001 V2.0 · §3.3 batch structure (batch sizes of FEED-PE-PFD-001 V5.1.1)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": null,
+   "alternatives": [
+    {
+     "value": "397.75",
+     "unit": "kg/batch",
+     "source": "FEED-PE-CAL-011",
+     "location": "'Results_Summary'!row 8 (m_G)",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "R-201B-duration",
+   "asset": "R-201B",
+   "area": "A-200",
+   "parameter": "Operation duration",
+   "status": "approved",
+   "property": "operatingEnvelope.batchCycleHours",
+   "valueId": "PV-A-200-0618",
+   "prefill": true,
+   "value": 1440,
+   "unit": "min",
+   "documented": "24 h",
+   "source": "FEED-PE-DBM-001 V2.0 · §3.3 / §3.4 (R-201 24 h, staggered 6 h)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": "× 60 (h → min)",
+   "alternatives": [
+    {
+     "value": "20.0",
+     "unit": "h",
+     "source": "FEED-PE-CAL-011",
+     "location": "'Inputs'!row 39 (t_cyc)",
+     "status": "superseded"
+    },
+    {
+     "value": "24",
+     "unit": "h",
+     "source": "FEED-PE-NTE-008",
+     "location": "§2.3",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "R-201B-start-offset",
+   "asset": "R-201B",
+   "area": "A-200",
+   "parameter": "Batch start offset from schedule origin",
+   "status": "none"
+  },
+  {
+   "rowId": "R-201B-release",
+   "asset": "R-201B",
+   "area": "A-200",
+   "parameter": "Release / transfer condition",
+   "status": "approved",
+   "property": "operatingEnvelope.transferTemperatureC",
+   "valueId": "PV-A-200-0606",
+   "prefill": true,
+   "value": "transfer temperature °C: 10 °C",
+   "unit": "text",
+   "documented": "10 °C",
+   "source": "FEED-PE-PFD-001 V5.1.1 · FEED-PFD-0200, PDF p.7 process data ('Cooling: chill down to 10 °C')",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": null,
+   "alternatives": [
+    {
+     "value": "≤ 20",
+     "unit": "°C",
+     "source": "FEED-PE-DAT-003",
+     "location": "'R-201 Datasheet'!row 61 (item 3.18)",
+     "status": "superseded"
+    },
+    {
+     "value": "10",
+     "unit": "°C",
+     "source": "FEED-PE-NTE-008",
+     "location": "§9.1",
+     "status": "superseded"
+    },
+    {
+     "value": "≈30 (final cooldown)",
+     "unit": "°C",
+     "source": "FEED-PE-NTE-010",
+     "location": "§11",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "R-201B-working",
+   "asset": "R-201B",
+   "area": "A-200",
+   "parameter": "Working liquid inventory",
+   "status": "withdrawn",
+   "property": "design.workingVolumeM3",
+   "decisionId": "D-A200-01",
+   "rationale": "Vessel size: NTE-008 (488 kg graphite/batch on the 32 % pilot yield chain), CAL-011 V7 (398 kg Pre-G, 20 h, 46 kg/kg) and DAT-003 (Calc V6) are all computed on bases withdrawn by FEED-PE-DBM-001 V2.0 / FEED-PE-MOC-001 (550 kg Pre-G per batch, 24 h cycle, PFD ratios). No value approved.",
+   "alternatives": [
+    {
+     "value": "12.81",
+     "unit": "m³",
+     "source": "FEED-PE-DAT-003",
+     "location": "'R-201 Datasheet'!row 100 (item 5.4)",
+     "status": "superseded"
+    },
+    {
+     "value": "12.011",
+     "unit": "m³",
+     "source": "FEED-PE-CAL-011",
+     "location": "'Results_Summary'!row 15 (V_wk)",
+     "status": "superseded"
+    },
+    {
+     "value": "19.8",
+     "unit": "m³",
+     "source": "FEED-PE-NTE-008",
+     "location": "§5.1",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "R-201B-density",
+   "asset": "R-201B",
+   "area": "A-200",
+   "parameter": "Mixture density",
+   "status": "none"
+  },
+  {
+   "rowId": "R-201C-charge",
+   "asset": "R-201C",
+   "area": "A-200",
+   "parameter": "Charge / retained material mass",
+   "status": "approved",
+   "property": "operatingEnvelope.preGPerBatchKg",
+   "valueId": "PV-A-200-0615",
+   "prefill": true,
+   "value": 550,
+   "unit": "kg",
+   "documented": "550 kg/batch",
+   "source": "FEED-PE-DBM-001 V2.0 · §3.3 batch structure (batch sizes of FEED-PE-PFD-001 V5.1.1)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": null,
+   "alternatives": [
+    {
+     "value": "397.75",
+     "unit": "kg/batch",
+     "source": "FEED-PE-CAL-011",
+     "location": "'Results_Summary'!row 8 (m_G)",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "R-201C-duration",
+   "asset": "R-201C",
+   "area": "A-200",
+   "parameter": "Operation duration",
+   "status": "approved",
+   "property": "operatingEnvelope.batchCycleHours",
+   "valueId": "PV-A-200-0619",
+   "prefill": true,
+   "value": 1440,
+   "unit": "min",
+   "documented": "24 h",
+   "source": "FEED-PE-DBM-001 V2.0 · §3.3 / §3.4 (R-201 24 h, staggered 6 h)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": "× 60 (h → min)",
+   "alternatives": [
+    {
+     "value": "20.0",
+     "unit": "h",
+     "source": "FEED-PE-CAL-011",
+     "location": "'Inputs'!row 39 (t_cyc)",
+     "status": "superseded"
+    },
+    {
+     "value": "24",
+     "unit": "h",
+     "source": "FEED-PE-NTE-008",
+     "location": "§2.3",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "R-201C-start-offset",
+   "asset": "R-201C",
+   "area": "A-200",
+   "parameter": "Batch start offset from schedule origin",
+   "status": "none"
+  },
+  {
+   "rowId": "R-201C-release",
+   "asset": "R-201C",
+   "area": "A-200",
+   "parameter": "Release / transfer condition",
+   "status": "approved",
+   "property": "operatingEnvelope.transferTemperatureC",
+   "valueId": "PV-A-200-0607",
+   "prefill": true,
+   "value": "transfer temperature °C: 10 °C",
+   "unit": "text",
+   "documented": "10 °C",
+   "source": "FEED-PE-PFD-001 V5.1.1 · FEED-PFD-0200, PDF p.7 process data ('Cooling: chill down to 10 °C')",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": null,
+   "alternatives": [
+    {
+     "value": "≤ 20",
+     "unit": "°C",
+     "source": "FEED-PE-DAT-003",
+     "location": "'R-201 Datasheet'!row 61 (item 3.18)",
+     "status": "superseded"
+    },
+    {
+     "value": "10",
+     "unit": "°C",
+     "source": "FEED-PE-NTE-008",
+     "location": "§9.1",
+     "status": "superseded"
+    },
+    {
+     "value": "≈30 (final cooldown)",
+     "unit": "°C",
+     "source": "FEED-PE-NTE-010",
+     "location": "§11",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "R-201C-working",
+   "asset": "R-201C",
+   "area": "A-200",
+   "parameter": "Working liquid inventory",
+   "status": "withdrawn",
+   "property": "design.workingVolumeM3",
+   "decisionId": "D-A200-01",
+   "rationale": "Vessel size: NTE-008 (488 kg graphite/batch on the 32 % pilot yield chain), CAL-011 V7 (398 kg Pre-G, 20 h, 46 kg/kg) and DAT-003 (Calc V6) are all computed on bases withdrawn by FEED-PE-DBM-001 V2.0 / FEED-PE-MOC-001 (550 kg Pre-G per batch, 24 h cycle, PFD ratios). No value approved.",
+   "alternatives": [
+    {
+     "value": "12.81",
+     "unit": "m³",
+     "source": "FEED-PE-DAT-003",
+     "location": "'R-201 Datasheet'!row 100 (item 5.4)",
+     "status": "superseded"
+    },
+    {
+     "value": "12.011",
+     "unit": "m³",
+     "source": "FEED-PE-CAL-011",
+     "location": "'Results_Summary'!row 15 (V_wk)",
+     "status": "superseded"
+    },
+    {
+     "value": "19.8",
+     "unit": "m³",
+     "source": "FEED-PE-NTE-008",
+     "location": "§5.1",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "R-201C-density",
+   "asset": "R-201C",
+   "area": "A-200",
+   "parameter": "Mixture density",
+   "status": "none"
+  },
+  {
+   "rowId": "R-201D-charge",
+   "asset": "R-201D",
+   "area": "A-200",
+   "parameter": "Charge / retained material mass",
+   "status": "approved",
+   "property": "operatingEnvelope.preGPerBatchKg",
+   "valueId": "PV-A-200-0616",
+   "prefill": true,
+   "value": 550,
+   "unit": "kg",
+   "documented": "550 kg/batch",
+   "source": "FEED-PE-DBM-001 V2.0 · §3.3 batch structure (batch sizes of FEED-PE-PFD-001 V5.1.1)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": null,
+   "alternatives": [
+    {
+     "value": "397.75",
+     "unit": "kg/batch",
+     "source": "FEED-PE-CAL-011",
+     "location": "'Results_Summary'!row 8 (m_G)",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "R-201D-duration",
+   "asset": "R-201D",
+   "area": "A-200",
+   "parameter": "Operation duration",
+   "status": "approved",
+   "property": "operatingEnvelope.batchCycleHours",
+   "valueId": "PV-A-200-0620",
+   "prefill": true,
+   "value": 1440,
+   "unit": "min",
+   "documented": "24 h",
+   "source": "FEED-PE-DBM-001 V2.0 · §3.3 / §3.4 (R-201 24 h, staggered 6 h)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": "× 60 (h → min)",
+   "alternatives": [
+    {
+     "value": "20.0",
+     "unit": "h",
+     "source": "FEED-PE-CAL-011",
+     "location": "'Inputs'!row 39 (t_cyc)",
+     "status": "superseded"
+    },
+    {
+     "value": "24",
+     "unit": "h",
+     "source": "FEED-PE-NTE-008",
+     "location": "§2.3",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "R-201D-start-offset",
+   "asset": "R-201D",
+   "area": "A-200",
+   "parameter": "Batch start offset from schedule origin",
+   "status": "none"
+  },
+  {
+   "rowId": "R-201D-release",
+   "asset": "R-201D",
+   "area": "A-200",
+   "parameter": "Release / transfer condition",
+   "status": "approved",
+   "property": "operatingEnvelope.transferTemperatureC",
+   "valueId": "PV-A-200-0608",
+   "prefill": true,
+   "value": "transfer temperature °C: 10 °C",
+   "unit": "text",
+   "documented": "10 °C",
+   "source": "FEED-PE-PFD-001 V5.1.1 · FEED-PFD-0200, PDF p.7 process data ('Cooling: chill down to 10 °C')",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": null,
+   "alternatives": [
+    {
+     "value": "≤ 20",
+     "unit": "°C",
+     "source": "FEED-PE-DAT-003",
+     "location": "'R-201 Datasheet'!row 61 (item 3.18)",
+     "status": "superseded"
+    },
+    {
+     "value": "10",
+     "unit": "°C",
+     "source": "FEED-PE-NTE-008",
+     "location": "§9.1",
+     "status": "superseded"
+    },
+    {
+     "value": "≈30 (final cooldown)",
+     "unit": "°C",
+     "source": "FEED-PE-NTE-010",
+     "location": "§11",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "R-201D-working",
+   "asset": "R-201D",
+   "area": "A-200",
+   "parameter": "Working liquid inventory",
+   "status": "withdrawn",
+   "property": "design.workingVolumeM3",
+   "decisionId": "D-A200-01",
+   "rationale": "Vessel size: NTE-008 (488 kg graphite/batch on the 32 % pilot yield chain), CAL-011 V7 (398 kg Pre-G, 20 h, 46 kg/kg) and DAT-003 (Calc V6) are all computed on bases withdrawn by FEED-PE-DBM-001 V2.0 / FEED-PE-MOC-001 (550 kg Pre-G per batch, 24 h cycle, PFD ratios). No value approved.",
+   "alternatives": [
+    {
+     "value": "12.81",
+     "unit": "m³",
+     "source": "FEED-PE-DAT-003",
+     "location": "'R-201 Datasheet'!row 100 (item 5.4)",
+     "status": "superseded"
+    },
+    {
+     "value": "12.011",
+     "unit": "m³",
+     "source": "FEED-PE-CAL-011",
+     "location": "'Results_Summary'!row 15 (V_wk)",
+     "status": "superseded"
+    },
+    {
+     "value": "19.8",
+     "unit": "m³",
+     "source": "FEED-PE-NTE-008",
+     "location": "§5.1",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "R-201D-density",
+   "asset": "R-201D",
+   "area": "A-200",
+   "parameter": "Mixture density",
+   "status": "none"
+  },
+  {
+   "rowId": "T-303-charge",
+   "asset": "T-303",
+   "area": "A-300",
+   "parameter": "Charge / retained material mass",
+   "status": "withdrawn",
+   "property": "operatingEnvelope.batchMassKg",
+   "decisionId": "D-A300-01",
+   "rationale": "See D-A300-01: MEB-006 34,988 kg on withdrawn basis; REP-037 ≈300 t / ≈75 t depends on the Option A/B choice.",
+   "alternatives": [
+    {
+     "value": "34988.0",
+     "unit": "kg/batch",
+     "source": "FEED-PE-MEB-006",
+     "location": "'Batch Cycle Design'!row 20 (M_303)",
+     "status": "superseded"
+    },
+    {
+     "value": "≈ 300,000 as drawn (≥ 220 t water precharge for ΔT ≤ 25 K without cooling) or ≈ 75,000 with cooled in-line dilution (Option B)",
+     "unit": "kg/batch",
+     "source": "FEED-PE-REP-037",
+     "location": "§3 / §7 Table",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "T-303-duration",
+   "asset": "T-303",
+   "area": "A-300",
+   "parameter": "Operation duration",
+   "status": "withdrawn",
+   "property": "operatingEnvelope.batchCycleHours",
+   "decisionId": "D-A300-01",
+   "rationale": "See D-A300-01: 22 h cycle built on the withdrawn 12 h fill.",
+   "alternatives": [
+    {
+     "value": "22.0",
+     "unit": "h",
+     "source": "FEED-PE-MEB-006",
+     "location": "'Batch Cycle Design'!row 14 (t_cyc_303)",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "T-303-release",
+   "asset": "T-303",
+   "area": "A-300",
+   "parameter": "Release / transfer condition",
+   "status": "none"
+  },
+  {
+   "rowId": "T-303-working",
+   "asset": "T-303",
+   "area": "A-300",
+   "parameter": "Working liquid inventory",
+   "status": "withdrawn",
+   "property": "design.workingVolumeM3",
+   "decisionId": "D-A300-01",
+   "rationale": "See D-A300-01 T-303 total volume: withdrawn basis.",
+   "alternatives": [
+    {
+     "value": "33.3",
+     "unit": "m³",
+     "source": "FEED-PE-MEB-006",
+     "location": "'Batch Cycle Design'!row 21 (V_w_303)",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "T-303-density",
+   "asset": "T-303",
+   "area": "A-300",
+   "parameter": "Mixture density",
+   "status": "none"
+  },
+  {
+   "rowId": "T-305-charge",
+   "asset": "T-305",
+   "area": "A-300",
+   "parameter": "Charge / retained material mass",
+   "status": "withdrawn",
+   "property": "operatingEnvelope.batchMassKg",
+   "decisionId": "D-A300-01",
+   "rationale": "See D-A300-01 T-305: 51,050 kg on withdrawn basis and unreduced HCl dose.",
+   "alternatives": [
+    {
+     "value": "51050.0",
+     "unit": "kg/batch",
+     "source": "FEED-PE-MEB-006",
+     "location": "'Batch Cycle Design'!row 27 (M_305)",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "T-305-duration",
+   "asset": "T-305",
+   "area": "A-300",
+   "parameter": "Operation duration",
+   "status": "withdrawn",
+   "property": "operatingEnvelope.batchCycleHours",
+   "decisionId": "D-A300-01",
+   "rationale": "110 h cycle is 96 h marination + withdrawn-basis steps.",
+   "alternatives": [
+    {
+     "value": "110.0",
+     "unit": "h",
+     "source": "FEED-PE-MEB-006",
+     "location": "'Batch Cycle Design'!row 15 (t_cyc_305)",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "T-305-release",
+   "asset": "T-305",
+   "area": "A-300",
+   "parameter": "Release / transfer condition",
+   "status": "none"
+  },
+  {
+   "rowId": "T-305-working",
+   "asset": "T-305",
+   "area": "A-300",
+   "parameter": "Working liquid inventory",
+   "status": "withdrawn",
+   "property": "design.workingVolumeM3",
+   "decisionId": "D-A300-01",
+   "rationale": "See D-A300-01 T-305.",
+   "alternatives": [
+    {
+     "value": "47.5",
+     "unit": "m³",
+     "source": "FEED-PE-MEB-006",
+     "location": "'Batch Cycle Design'!row 28 (V_w_305)",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "T-305-density",
+   "asset": "T-305",
+   "area": "A-300",
+   "parameter": "Mixture density",
+   "status": "none"
+  },
+  {
+   "rowId": "T-402-charge",
+   "asset": "T-402",
+   "area": "A-400",
+   "parameter": "Charge / retained material mass",
+   "status": "none"
+  },
+  {
+   "rowId": "T-402-duration",
+   "asset": "T-402",
+   "area": "A-400",
+   "parameter": "Operation duration",
+   "status": "none"
+  },
+  {
+   "rowId": "T-402-release",
+   "asset": "T-402",
+   "area": "A-400",
+   "parameter": "Release / transfer condition",
+   "status": "none"
+  },
+  {
+   "rowId": "T-402-working",
+   "asset": "T-402",
+   "area": "A-400",
+   "parameter": "Working liquid inventory",
+   "status": "withdrawn",
+   "property": "design.workingVolumeM3",
+   "decisionId": "D-A400-01",
+   "rationale": "V_R = 20 m³ is a screening input (MEB-007 VSEP model); CAL-010 3.2 m³ is a pilot batch value.",
+   "alternatives": [
+    {
+     "value": "20.0",
+     "unit": "m³",
+     "source": "FEED-PE-MEB-007",
+     "location": "'VSEP 84 Model'!row 25 (V_R)",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "T-402-density",
+   "asset": "T-402",
+   "area": "A-400",
+   "parameter": "Mixture density",
+   "status": "none"
+  },
+  {
+   "rowId": "T-402-model-volume",
+   "asset": "T-402",
+   "area": "A-400",
+   "parameter": "Conceptual nominal vessel volume",
+   "status": "withdrawn",
+   "property": "design.workingVolumeM3",
+   "decisionId": "D-A400-01",
+   "rationale": "V_R = 20 m³ is a screening input (MEB-007 VSEP model); CAL-010 3.2 m³ is a pilot batch value.",
+   "alternatives": [
+    {
+     "value": "20.0",
+     "unit": "m³",
+     "source": "FEED-PE-MEB-007",
+     "location": "'VSEP 84 Model'!row 25 (V_R)",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "T-501-charge",
+   "asset": "T-501",
+   "area": "A-500",
+   "parameter": "Charge / retained material mass",
+   "status": "none"
+  },
+  {
+   "rowId": "T-501-duration",
+   "asset": "T-501",
+   "area": "A-500",
+   "parameter": "Operation duration",
+   "status": "none"
+  },
+  {
+   "rowId": "T-501-release",
+   "asset": "T-501",
+   "area": "A-500",
+   "parameter": "Release / transfer condition",
+   "status": "none"
+  },
+  {
+   "rowId": "T-501-working",
+   "asset": "T-501",
+   "area": "A-500",
+   "parameter": "Working liquid inventory",
+   "status": "none"
+  },
+  {
+   "rowId": "T-501-density",
+   "asset": "T-501",
+   "area": "A-500",
+   "parameter": "Mixture density",
+   "status": "approved",
+   "property": "operatingEnvelope.solidsConcentrationWtPct",
+   "valueId": "PV-A-500-0075",
+   "prefill": false,
+   "value": null,
+   "unit": "kg/m³",
+   "documented": "1–2 (T-501 agitated to maintain uniform TLGO solids concentration) wt%",
+   "source": "FEED-PE-PFD-001 V5.1.1 · FEED-PFD-0500, PDF p.10 General Note 1",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": null,
+   "alternatives": [
+    {
+     "value": "Run at the highest concentration the TFF delivers and rheology tolerates (check gelation above ~2–3 wt%); dilute to dryer spec after sonication; exclude DMF from A-500",
+     "unit": "wt%",
+     "source": "FEED-PE-REP-024",
+     "location": "§4.1 / §11 Lever 2",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "T-601-charge",
+   "asset": "T-601",
+   "area": "A-600",
+   "parameter": "Charge / retained material mass",
+   "status": "none"
+  },
+  {
+   "rowId": "T-601-duration",
+   "asset": "T-601",
+   "area": "A-600",
+   "parameter": "Operation duration",
+   "status": "none"
+  },
+  {
+   "rowId": "T-601-release",
+   "asset": "T-601",
+   "area": "A-600",
+   "parameter": "Release / transfer condition",
+   "status": "none"
+  },
+  {
+   "rowId": "T-601-working",
+   "asset": "T-601",
+   "area": "A-600",
+   "parameter": "Working liquid inventory",
+   "status": "none"
+  },
+  {
+   "rowId": "T-601-density",
+   "asset": "T-601",
+   "area": "A-600",
+   "parameter": "Mixture density",
+   "status": "none"
+  },
+  {
+   "rowId": "DR-601-charge",
+   "asset": "DR-601",
+   "area": "A-600",
+   "parameter": "Charge / retained material mass",
+   "status": "none"
+  },
+  {
+   "rowId": "DR-601-duration",
+   "asset": "DR-601",
+   "area": "A-600",
+   "parameter": "Operation duration",
+   "status": "none"
+  },
+  {
+   "rowId": "DR-601-release",
+   "asset": "DR-601",
+   "area": "A-600",
+   "parameter": "Release / transfer condition",
+   "status": "approved",
+   "property": "operatingEnvelope.productResidualMoistureWtFrac",
+   "valueId": "PV-A-600-0171",
+   "prefill": true,
+   "value": "product residual moisture wt frac: 0.02 wt frac",
+   "unit": "text",
+   "documented": "0.02 wt frac",
+   "source": "FEED-PE-MEB-008 V6.0 · 'Design Basis & Inputs'!row 19 (w_moisture)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": null,
+   "alternatives": []
+  },
+  {
+   "rowId": "T-602-charge",
+   "asset": "T-602",
+   "area": "A-600",
+   "parameter": "Charge / retained material mass",
+   "status": "none"
+  },
+  {
+   "rowId": "T-602-duration",
+   "asset": "T-602",
+   "area": "A-600",
+   "parameter": "Operation duration",
+   "status": "none"
+  },
+  {
+   "rowId": "T-602-release",
+   "asset": "T-602",
+   "area": "A-600",
+   "parameter": "Release / transfer condition",
+   "status": "none"
+  },
+  {
+   "rowId": "LK-701-charge",
+   "asset": "LK-701",
+   "area": "A-700",
+   "parameter": "Charge / retained material mass",
+   "status": "none"
+  },
+  {
+   "rowId": "LK-701-duration",
+   "asset": "LK-701",
+   "area": "A-700",
+   "parameter": "Operation duration",
+   "status": "none"
+  },
+  {
+   "rowId": "LK-701-release",
+   "asset": "LK-701",
+   "area": "A-700",
+   "parameter": "Release / transfer condition",
+   "status": "none"
+  },
+  {
+   "rowId": "H-701-charge",
+   "asset": "H-701",
+   "area": "A-700",
+   "parameter": "Charge / retained material mass",
+   "status": "none"
+  },
+  {
+   "rowId": "H-701-duration",
+   "asset": "H-701",
+   "area": "A-700",
+   "parameter": "Operation duration",
+   "status": "none"
+  },
+  {
+   "rowId": "H-701-release",
+   "asset": "H-701",
+   "area": "A-700",
+   "parameter": "Release / transfer condition",
+   "status": "none"
+  },
+  {
+   "rowId": "T-702-charge",
+   "asset": "T-702",
+   "area": "A-700",
+   "parameter": "Charge / retained material mass",
+   "status": "none"
+  },
+  {
+   "rowId": "T-702-duration",
+   "asset": "T-702",
+   "area": "A-700",
+   "parameter": "Operation duration",
+   "status": "none"
+  },
+  {
+   "rowId": "T-702-release",
+   "asset": "T-702",
+   "area": "A-700",
+   "parameter": "Release / transfer condition",
+   "status": "none"
+  },
+  {
+   "rowId": "MX-801-charge",
+   "asset": "MX-801",
+   "area": "A-800",
+   "parameter": "Charge / retained material mass",
+   "status": "none"
+  },
+  {
+   "rowId": "MX-801-duration",
+   "asset": "MX-801",
+   "area": "A-800",
+   "parameter": "Operation duration",
+   "status": "none"
+  },
+  {
+   "rowId": "MX-801-release",
+   "asset": "MX-801",
+   "area": "A-800",
+   "parameter": "Release / transfer condition",
+   "status": "none"
+  },
+  {
+   "rowId": "H-803-charge",
+   "asset": "H-803",
+   "area": "A-800",
+   "parameter": "Charge / retained material mass",
+   "status": "approved",
+   "property": "design.capacityBasis",
+   "valueId": "PV-A-800-0315",
+   "prefill": false,
+   "value": null,
+   "unit": "kg",
+   "documented": "3.75 m³ gross mass-flow wedge hopper, 1.20 m × 0.35 m slot outlet, twin live-bottom extraction screws, 120 kg reactive-inventory cap (≈ 2 h hold-up), load cells, closed inert vent filtration, no air-pulse",
+   "source": "FEED-PE-REP-019 V1.0 · Executive design conclusion / Recommendations",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "conversion": null,
+   "alternatives": []
+  },
+  {
+   "rowId": "H-803-duration",
+   "asset": "H-803",
+   "area": "A-800",
+   "parameter": "Operation duration",
+   "status": "none"
+  },
+  {
+   "rowId": "H-803-release",
+   "asset": "H-803",
+   "area": "A-800",
+   "parameter": "Release / transfer condition",
+   "status": "none"
+  },
+  {
+   "rowId": "graphite-transfer",
+   "asset": "A-100",
+   "area": "A-100",
+   "parameter": "Product transfer rate",
+   "status": "none"
+  },
+  {
+   "rowId": "preg-transfer",
+   "asset": "A-140",
+   "area": "A-140",
+   "parameter": "Product transfer rate",
+   "status": "none"
+  },
+  {
+   "rowId": "recovery-transfer",
+   "asset": "A-160",
+   "area": "A-160",
+   "parameter": "Product transfer rate",
+   "status": "none"
+  },
+  {
+   "rowId": "oxidation-transfer",
+   "asset": "A-200",
+   "area": "A-200",
+   "parameter": "Product transfer rate",
+   "status": "none"
+  },
+  {
+   "rowId": "washing-transfer",
+   "asset": "A-300",
+   "area": "A-300",
+   "parameter": "Product transfer rate",
+   "status": "none"
+  },
+  {
+   "rowId": "membranes-transfer",
+   "asset": "A-400",
+   "area": "A-400",
+   "parameter": "Product transfer rate",
+   "status": "none"
+  },
+  {
+   "rowId": "sonication-transfer",
+   "asset": "A-500",
+   "area": "A-500",
+   "parameter": "Product transfer rate",
+   "status": "none"
+  },
+  {
+   "rowId": "drying-transfer",
+   "asset": "A-600",
+   "area": "A-600",
+   "parameter": "Product transfer rate",
+   "status": "none"
+  },
+  {
+   "rowId": "thermal-transfer",
+   "asset": "A-700",
+   "area": "A-700",
+   "parameter": "Product transfer rate",
+   "status": "none"
+  },
+  {
+   "rowId": "doping-transfer",
+   "asset": "A-800",
+   "area": "A-800",
+   "parameter": "Product transfer rate",
+   "status": "none"
+  },
+  {
+   "rowId": "P-206-duty",
+   "asset": "P-206A/B",
+   "area": "A-200",
+   "parameter": "Duty / standby allocation",
+   "status": "none"
+  },
+  {
+   "rowId": "P-206-changeover",
+   "asset": "P-206A/B",
+   "area": "A-200",
+   "parameter": "Pump changeover conditions",
+   "status": "none"
+  },
+  {
+   "rowId": "TFF-401-pumps",
+   "asset": "TFF-401",
+   "area": "A-400",
+   "parameter": "Feed-pump assignment to membrane branches",
+   "status": "none"
+  },
+  {
+   "rowId": "segment-length",
+   "asset": "T-305",
+   "area": "A-400",
+   "parameter": "Representative straight spool length",
+   "status": "none"
+  },
+  {
+   "rowId": "segment-model-bore",
+   "asset": "T-305",
+   "area": "A-400",
+   "parameter": "Modeled spool bore",
+   "status": "none"
+  },
+  {
+   "rowId": "segment-bore",
+   "asset": "T-305",
+   "area": "A-400",
+   "parameter": "Confirmed / scenario internal diameter",
+   "status": "none"
+  },
+  {
+   "rowId": "segment-flow",
+   "asset": "P-304",
+   "area": "A-400",
+   "parameter": "Volumetric flow through the representative spool",
+   "status": "none"
+  },
+  {
+   "rowId": "tff-header",
+   "asset": "TFF-401",
+   "area": "A-400",
+   "parameter": "Total circulating feed at bank inlet",
+   "status": "none"
+  },
+  {
+   "rowId": "tff-A",
+   "asset": "TFF-401A",
+   "area": "A-400",
+   "parameter": "Branch circulating feed",
+   "status": "none"
+  },
+  {
+   "rowId": "tff-B",
+   "asset": "TFF-401B",
+   "area": "A-400",
+   "parameter": "Branch circulating feed",
+   "status": "none"
+  },
+  {
+   "rowId": "tff-C",
+   "asset": "TFF-401C",
+   "area": "A-400",
+   "parameter": "Branch circulating feed",
+   "status": "none"
+  },
+  {
+   "rowId": "tff-D",
+   "asset": "TFF-401D",
+   "area": "A-400",
+   "parameter": "Branch circulating feed",
+   "status": "none"
+  },
+  {
+   "rowId": "tff-E",
+   "asset": "TFF-401E",
+   "area": "A-400",
+   "parameter": "Branch circulating feed",
+   "status": "none"
+  },
+  {
+   "rowId": "tff-F",
+   "asset": "TFF-401F",
+   "area": "A-400",
+   "parameter": "Branch circulating feed",
+   "status": "none"
+  },
+  {
+   "rowId": "tff-G",
+   "asset": "TFF-401G",
+   "area": "A-400",
+   "parameter": "Branch circulating feed",
+   "status": "none"
+  },
+  {
+   "rowId": "tff-H",
+   "asset": "TFF-401H",
+   "area": "A-400",
+   "parameter": "Branch circulating feed",
+   "status": "none"
+  },
+  {
+   "rowId": "tff-permeate",
+   "asset": "TFF-401",
+   "area": "A-400",
+   "parameter": "Actual / scenario total permeate removal",
+   "status": "none"
+  },
+  {
+   "rowId": "tff-makeup",
+   "asset": "T-402",
+   "area": "A-400",
+   "parameter": "Makeup-water inflow",
+   "status": "none"
+  },
+  {
+   "rowId": "tff-product",
+   "asset": "T-402",
+   "area": "A-400",
+   "parameter": "Net product outflow",
+   "status": "none"
+  },
+  {
+   "rowId": "tff-duty-reference",
+   "asset": "TFF-401",
+   "area": "A-400",
+   "parameter": "Draft permeate duty reference",
+   "status": "withdrawn",
+   "property": "design.permeateDutyKgh",
+   "decisionId": "D-A400-01",
+   "rationale": "See D-A400-01: 50 / 80 kg/h basis conflict.",
+   "alternatives": [
+    {
+     "value": "44597.0",
+     "unit": "kg/h",
+     "source": "FEED-PE-MEB-007",
+     "location": "'Design Basis & Inputs'!row 38 (ṁ_perm)",
+     "status": "superseded"
+    }
+   ]
+  },
+  {
+   "rowId": "tff-capacity-reference",
+   "asset": "TFF-401",
+   "area": "A-400",
+   "parameter": "Eight-module capacity screening",
+   "status": "withdrawn",
+   "property": "design.installedModules",
+   "decisionId": "D-A400-01",
+   "rationale": "8 VSEP modules (MEB-007) vs 1 pilot module (CAL-010) vs 238 elements (REP-007): equipment count is frozen by H-01, not approved.",
+   "alternatives": [
+    {
+     "value": "8.0",
+     "unit": "modules",
+     "source": "FEED-PE-MEB-007",
+     "location": "'VSEP 84 Model'!row 31 (n_inst)",
+     "status": "superseded"
+    },
+    {
+     "value": "1.0",
+     "unit": "modules",
+     "source": "FEED-PE-CAL-010",
+     "location": "'Results_Summary'!row 14 (N_mod)",
+     "status": "superseded"
+    }
+   ]
+  }
+ ]
+}
