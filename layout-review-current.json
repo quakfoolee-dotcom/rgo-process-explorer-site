@@ -1,0 +1,4481 @@
+{
+ "version": "8bca31f",
+ "date": "2026-09-22",
+ "generated": "2026-09-22T07:40:38.473Z",
+ "revision": "r2",
+ "reviewer": {
+  "initials": "QFL",
+  "date": "2026-09-22"
+ },
+ "lead": "The published gate report (bc-corridors-85, 2026-09-12) is retained below as the coordinated baseline; the sections above it are measured on the current model on every refresh. Nothing here qualifies structure, slabs, vehicles or traffic.",
+ "basis": {
+  "transport": "bc-corridors-85",
+  "jurisdiction": "British Columbia, Canada",
+  "status": "Concept layout — engineering qualification outstanding",
+  "scope": "feed",
+  "method": "Continuous sweep bounded by adaptive poses and added allowance; oriented component envelopes. Full assembled geometry is screened regardless of display filters. No dynamic stability, braking, slab capacity or operating approval."
+ },
+ "summary": {
+  "externalElements": 7642,
+  "directAttachmentElements": 1139,
+  "supports": 3802,
+  "rackFrames": 243,
+  "existingSteelAttachmentGroups": 20,
+  "columns": 590,
+  "sharedStructures": 106,
+  "placementHolds": 271,
+  "shortConnections": 6187,
+  "vendorFlexible": 132,
+  "structurallyQualified": false,
+  "memberLengthM": 14005.124790832027,
+  "parts": 154594
+ },
+ "published": {
+  "revision": "bc-corridors-85",
+  "generated": "2026-09-12T06:05:47.931Z",
+  "summary": {
+   "externalElements": 7526,
+   "directAttachmentElements": 1122,
+   "supports": 3783,
+   "rackFrames": 247,
+   "existingSteelAttachmentGroups": 20,
+   "columns": 593,
+   "sharedStructures": 107,
+   "placementHolds": 316,
+   "shortConnections": 6064,
+   "vendorFlexible": 132,
+   "structurallyQualified": false,
+   "memberLengthM": 13980.316042305692
+  },
+  "a5000": {
+   "racks": 42,
+   "columns": 123,
+   "localColumns": 14,
+   "localBoundsM": [
+    -31.3,
+    12.4,
+    -13,
+    28.5
+   ],
+   "bearings": 973,
+   "placementElements": 11,
+   "memberLengthM": 3872.915421344172,
+   "coordinatedRacks": 10
+  }
+ },
+ "holdsByArea": [
+  {
+   "area": "A-2000",
+   "holds": 229
+  },
+  {
+   "area": "A-4000",
+   "holds": 26
+  },
+  {
+   "area": "A-5000",
+   "holds": 11
+  },
+  {
+   "area": "A-3000",
+   "holds": 2
+  },
+  {
+   "area": "A-200",
+   "holds": 1
+  },
+  {
+   "area": "A-800",
+   "holds": 1
+  },
+  {
+   "area": "A-6000",
+   "holds": 1
+  }
+ ],
+ "holdsByReason": [
+  {
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required",
+   "holds": 200
+  },
+  {
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment",
+   "holds": 44
+  },
+  {
+   "reason": "Local bearing requires shared-column bracket or single-post exception",
+   "holds": 27
+  }
+ ],
+ "inventory": [
+  {
+   "status": "short spool / fitting",
+   "count": 6187
+  },
+  {
+   "status": "attached — calculation hold",
+   "count": 1094
+  },
+  {
+   "status": "placement review",
+   "count": 187
+  },
+  {
+   "status": "vendor flexible connection",
+   "count": 132
+  },
+  {
+   "status": "existing registered attachment",
+   "count": 42
+  }
+ ],
+ "routes": [
+  {
+   "id": "perimeter",
+   "label": "Plant perimeter logistics circuit",
+   "note": "Proposed receiving/dispatch circulation outside process bays and remote retention tanks. Requires site-boundary and new slab qualification; it is not an existing approved roadway.",
+   "status": "No modeled obstruction in screened envelope",
+   "poseCount": 2670,
+   "blockedPoseCount": 0,
+   "lengthM": 551,
+   "findings": [],
+   "trafficControl": {
+    "mode": "separated-preview",
+    "pedestrianZones": [],
+    "qualified": false,
+    "operatingRelease": "HOLD",
+    "requirement": "Confirm the site traffic plan, crossings and actual truck/load before use."
+   },
+   "forklift": {
+    "poseCount": 2459,
+    "blockedPoseCount": 0,
+    "lengthM": 551,
+    "findings": []
+   }
+  },
+  {
+   "id": "west-delivery",
+   "label": "A-100 / A-140 / A-160 delivery frontage",
+   "note": "Frontage staging only. Individual unloading interfaces and pedestrian crossings require an operating plan.",
+   "status": "No modeled obstruction in screened envelope",
+   "poseCount": 197,
+   "blockedPoseCount": 0,
+   "lengthM": 40.3,
+   "findings": [],
+   "trafficControl": {
+    "mode": "exclusive-access-preview",
+    "pedestrianZones": [
+     "PW-096"
+    ],
+    "qualified": false,
+    "operatingRelease": "HOLD",
+    "requirement": "Preview assumes pedestrian access is closed and the engineer animation is stopped. Real use requires a separated pedestrian route where practicable, or an engineered closure/control arrangement under WorkSafeBC 16.6. This preview does not operate physical gates."
+   },
+   "forklift": {
+    "poseCount": 182,
+    "blockedPoseCount": 0,
+    "lengthM": 40.3,
+    "findings": []
+   }
+  },
+  {
+   "id": "thermal-delivery",
+   "label": "A-5000 east service approach",
+   "note": "Connects west delivery frontage to the north logistics corridor. Controlled reversing at delivery stops; no lifting beneath utilities.",
+   "status": "No modeled obstruction in screened envelope",
+   "poseCount": 308,
+   "blockedPoseCount": 0,
+   "lengthM": 62.8,
+   "findings": [],
+   "trafficControl": {
+    "mode": "separated-preview",
+    "pedestrianZones": [],
+    "qualified": false,
+    "operatingRelease": "HOLD",
+    "requirement": "Confirm the site traffic plan, crossings and actual truck/load before use."
+   },
+   "forklift": {
+    "poseCount": 285,
+    "blockedPoseCount": 0,
+    "lengthM": 62.8,
+    "findings": []
+   }
+  },
+  {
+   "id": "argon-delivery",
+   "label": "A-6000 approach → right turn → service aisle",
+   "note": "Approach north on the west frontage, turn right into the cross-aisle, continue east and stop before the distribution risers. The turn starts at X32 / Z39.5 and ends at X35.5 / Z36 with the 3.5 m planning radius. This is a forklift route; bulk supplier unloading and the return manoeuvre are separate studies.",
+   "status": "No modeled obstruction in screened envelope",
+   "poseCount": 150,
+   "blockedPoseCount": 0,
+   "lengthM": 30.5,
+   "findings": [],
+   "trafficControl": {
+    "mode": "separated-preview",
+    "pedestrianZones": [],
+    "qualified": false,
+    "operatingRelease": "HOLD",
+    "requirement": "Confirm the site traffic plan, crossings and actual truck/load before use."
+   },
+   "forklift": {
+    "poseCount": 138,
+    "blockedPoseCount": 0,
+    "lengthM": 30.5,
+    "findings": []
+   }
+  },
+  {
+   "id": "wash-wastewater",
+   "label": "A-300 → A-1000 under-rack aisle",
+   "note": "Approach from the open space east of A-300, turn right and continue beneath the shared services along the A-1000 frontage. Stop at X52 / Z2.6. The entrance is offset from the existing wash-service columns and low filtration piping. The complete truck/load envelope is reserved before rack placement; pipe endpoints, gravity slopes and equipment legs remain fixed. One-way access preview; loading and return movements remain unqualified.",
+   "status": "No modeled obstruction in screened envelope",
+   "poseCount": 218,
+   "blockedPoseCount": 0,
+   "lengthM": 44.6,
+   "findings": [],
+   "trafficControl": {
+    "mode": "separated-preview",
+    "pedestrianZones": [],
+    "qualified": false,
+    "operatingRelease": "HOLD",
+    "requirement": "Confirm the site traffic plan, crossings and actual truck/load before use."
+   },
+   "forklift": {
+    "poseCount": 201,
+    "blockedPoseCount": 0,
+    "lengthM": 44.6,
+    "findings": []
+   }
+  },
+  {
+   "id": "receiving-delivery",
+   "label": "Receiving → A-100 delivery frontage",
+   "note": "Proposed receiving transfer via the reserved west corridor to raw-material staging. Stops at the frontage; dock interfaces, unloading and the return manoeuvre are not modeled.",
+   "status": "No modeled obstruction in screened envelope",
+   "poseCount": 299,
+   "blockedPoseCount": 0,
+   "lengthM": 61.3,
+   "findings": [],
+   "trafficControl": {
+    "mode": "exclusive-access-preview",
+    "pedestrianZones": [
+     "PW-096"
+    ],
+    "qualified": false,
+    "operatingRelease": "HOLD",
+    "requirement": "Preview assumes pedestrian access is closed and the engineer animation is stopped. Real use requires a separated pedestrian route where practicable, or an engineered closure/control arrangement under WorkSafeBC 16.6. This preview does not operate physical gates."
+   },
+   "forklift": {
+    "poseCount": 275,
+    "blockedPoseCount": 0,
+    "lengthM": 61.3,
+    "findings": []
+   }
+  },
+  {
+   "id": "product-dispatch",
+   "label": "A-800 east frontage → north dispatch",
+   "note": "Proposed outward transfer along the reserved east and north perimeter. Starts outside A-800; equipment pickup, dispatch bays, site boundary and slab capacity still require confirmation.",
+   "status": "No modeled obstruction in screened envelope",
+   "poseCount": 295,
+   "blockedPoseCount": 0,
+   "lengthM": 60.5,
+   "findings": [],
+   "trafficControl": {
+    "mode": "separated-preview",
+    "pedestrianZones": [],
+    "qualified": false,
+    "operatingRelease": "HOLD",
+    "requirement": "Confirm the site traffic plan, crossings and actual truck/load before use."
+   },
+   "forklift": {
+    "poseCount": 271,
+    "blockedPoseCount": 0,
+    "lengthM": 60.5,
+    "findings": []
+   }
+  }
+ ],
+ "reservedSpaces": {
+  "checked": 496,
+  "zones": [
+   "REMOVE-R201C",
+   "REMOVE-PY801",
+   "PIPE-standing-access-613-CP-3000 / CP-3000 control display",
+   "HEADROOM-PL-801 feeder walkway"
+  ],
+  "findings": [
+   {
+    "zone": "REMOVE-R201C",
+    "zoneKind": "maintenance",
+    "partId": 152646,
+    "name": "PS-A200-3370 bearing collar",
+    "area": "A-200",
+    "kind": "Pipe support"
+   },
+   {
+    "zone": "REMOVE-PY801",
+    "zoneKind": "removal",
+    "partId": 151277,
+    "name": "PS-A900-3018 bearing collar",
+    "area": "A-900",
+    "kind": "Pipe support"
+   },
+   {
+    "zone": "PIPE-standing-access-613-CP-3000 / CP-3000 control display",
+    "zoneKind": "standing",
+    "partId": 153695,
+    "name": "PS-A3000-3622 local bracket",
+    "area": "A-3000",
+    "kind": "Pipe support"
+   },
+   {
+    "zone": "HEADROOM-PL-801 feeder walkway",
+    "zoneKind": "platform-access",
+    "partId": 148490,
+    "name": "PS-A5000-2238 insulation insert bearing collar",
+    "area": "A-5000",
+    "kind": "Pipe support"
+   }
+  ],
+  "newSincePublished": [
+   "REMOVE-PY801 · PS-A900-3018 bearing collar"
+  ],
+  "resolvedSincePublished": [
+   "REMOVE-R201D · bearing collar"
+  ]
+ },
+ "pedestrian": {
+  "overlaps": [
+   "WALK-A400-LINK",
+   "WALK-UTILITY-WEST",
+   "WALK-WATER-FRONT",
+   "WALK-WW-WEST"
+  ],
+  "declared": [
+   "PW-096"
+  ],
+  "undeclared": [
+   "WALK-A400-LINK",
+   "WALK-UTILITY-WEST",
+   "WALK-WATER-FRONT",
+   "WALK-WW-WEST"
+  ]
+ },
+ "thermalAccess": {
+  "zones": 23,
+  "findings": []
+ },
+ "thermalPaths": {
+  "total": 21,
+  "available": 20,
+  "findings": [
+   {
+    "id": "HX-601",
+    "reason": "PFD typical dryer air inlet 140–145 °C; outlet 80–90 °C. Final values, heating medium and evaporation duty remain unselected. 90 °C hot water alone cannot provide this inlet-air target; no connection is assumed"
+   }
+  ]
+ },
+ "portals": [
+  {
+   "id": "PR-A5000-T002",
+   "stations": [
+    [
+     12.7,
+     11.299999999999999,
+     4.966666666666665
+    ],
+    [
+     24,
+     11.299999999999999,
+     4.966666666666665
+    ],
+    [
+     30,
+     11.299999999999999,
+     4.966666666666665
+    ]
+   ],
+   "bayLengthsM": [
+    11.3,
+    6
+   ],
+   "bearings": 46,
+   "qualification": "HOLD: combined pipe reactions, lateral stability, guide/anchor loads, connection strength and foundations; entrance portal span, deflection and lateral/seismic load paths require calculation before construction"
+  }
+ ],
+ "delta": {
+  "supports": 19,
+  "columns": -3,
+  "rackFrames": -4,
+  "sharedStructures": -1,
+  "placementHolds": -45,
+  "directAttachmentElements": 17,
+  "externalElements": 116,
+  "memberLengthM": 24.808748526334966,
+  "holdsNew": 3,
+  "holdsResolved": 48,
+  "areasAdded": [
+   "A-900"
+  ]
+ },
+ "a5000": {
+  "racks": 41,
+  "columns": 121,
+  "localColumns": 14,
+  "localBoundsM": [
+   -31.3,
+   12.4,
+   -13,
+   28.5
+  ],
+  "bearings": 973,
+  "placementElements": 11,
+  "memberLengthM": 3843.7382467876414,
+  "coordinatedRacks": 10
+ },
+ "areas": [
+  {
+   "area": "A-100",
+   "supports": 22,
+   "placementElements": 0,
+   "holds": 0,
+   "transportFindings": 0,
+   "reservedSpaceFindings": 0,
+   "review": {
+    "href": "./a100-review.html",
+    "revision": "r2",
+    "reviewer": "QFL"
+   }
+  },
+  {
+   "area": "A-140",
+   "supports": 14,
+   "placementElements": 0,
+   "holds": 0,
+   "transportFindings": 0,
+   "reservedSpaceFindings": 0,
+   "review": {
+    "href": "./a140-review.html",
+    "revision": "r2",
+    "reviewer": "QFL"
+   }
+  },
+  {
+   "area": "A-160",
+   "supports": 37,
+   "placementElements": 0,
+   "holds": 0,
+   "transportFindings": 0,
+   "reservedSpaceFindings": 0,
+   "review": {
+    "href": "./a160-review.html",
+    "revision": "r2",
+    "reviewer": "QFL"
+   }
+  },
+  {
+   "area": "A-200",
+   "supports": 368,
+   "placementElements": 1,
+   "holds": 1,
+   "transportFindings": 0,
+   "reservedSpaceFindings": 1,
+   "review": {
+    "href": "./a200-review.html",
+    "revision": "r2",
+    "reviewer": "QFL"
+   }
+  },
+  {
+   "area": "A-300",
+   "supports": 73,
+   "placementElements": 0,
+   "holds": 0,
+   "transportFindings": 0,
+   "reservedSpaceFindings": 0,
+   "review": {
+    "href": "./a300-review.html",
+    "revision": "r2",
+    "reviewer": "QFL"
+   }
+  },
+  {
+   "area": "A-400",
+   "supports": 74,
+   "placementElements": 0,
+   "holds": 0,
+   "transportFindings": 0,
+   "reservedSpaceFindings": 0,
+   "review": {
+    "href": "./a400-review.html",
+    "revision": "r2",
+    "reviewer": "QFL"
+   }
+  },
+  {
+   "area": "A-500",
+   "supports": 75,
+   "placementElements": 0,
+   "holds": 0,
+   "transportFindings": 0,
+   "reservedSpaceFindings": 0,
+   "review": {
+    "href": "./a500-review.html",
+    "revision": "r2",
+    "reviewer": "QFL"
+   }
+  },
+  {
+   "area": "A-600",
+   "supports": 115,
+   "placementElements": 0,
+   "holds": 0,
+   "transportFindings": 0,
+   "reservedSpaceFindings": 0,
+   "review": {
+    "href": "./a600-review.html",
+    "revision": "r2",
+    "reviewer": "QFL"
+   }
+  },
+  {
+   "area": "A-700",
+   "supports": 130,
+   "placementElements": 0,
+   "holds": 0,
+   "transportFindings": 0,
+   "reservedSpaceFindings": 0,
+   "review": {
+    "href": "./a700-review.html",
+    "revision": "r2",
+    "reviewer": "QFL"
+   }
+  },
+  {
+   "area": "A-800",
+   "supports": 298,
+   "placementElements": 1,
+   "holds": 1,
+   "transportFindings": 0,
+   "reservedSpaceFindings": 0,
+   "review": {
+    "href": "./a800-review.html",
+    "revision": "r2",
+    "reviewer": "QFL"
+   }
+  },
+  {
+   "area": "A-900",
+   "supports": 12,
+   "placementElements": 0,
+   "holds": 0,
+   "transportFindings": 0,
+   "reservedSpaceFindings": 1,
+   "review": {
+    "href": "./a900-review.html",
+    "revision": "r2",
+    "reviewer": "QFL"
+   }
+  },
+  {
+   "area": "A-1000",
+   "supports": 310,
+   "placementElements": 0,
+   "holds": 0,
+   "transportFindings": 0,
+   "reservedSpaceFindings": 0,
+   "review": {
+    "href": "./a1000-review.html",
+    "revision": "r2",
+    "reviewer": "QFL"
+   }
+  },
+  {
+   "area": "A-2000",
+   "supports": 518,
+   "placementElements": 163,
+   "holds": 229,
+   "transportFindings": 0,
+   "reservedSpaceFindings": 0,
+   "review": {
+    "href": "./a2000-review.html",
+    "revision": "r2",
+    "reviewer": "QFL"
+   }
+  },
+  {
+   "area": "A-3000",
+   "supports": 554,
+   "placementElements": 1,
+   "holds": 2,
+   "transportFindings": 0,
+   "reservedSpaceFindings": 1,
+   "review": {
+    "href": "./a3000-review.html",
+    "revision": "r2",
+    "reviewer": "QFL"
+   }
+  },
+  {
+   "area": "A-4000",
+   "supports": 107,
+   "placementElements": 9,
+   "holds": 26,
+   "transportFindings": 0,
+   "reservedSpaceFindings": 0,
+   "review": null
+  },
+  {
+   "area": "A-5000",
+   "supports": 973,
+   "placementElements": 11,
+   "holds": 11,
+   "transportFindings": 0,
+   "reservedSpaceFindings": 1,
+   "review": {
+    "href": "./a5000-review.html",
+    "revision": "model engineer",
+    "reviewer": null
+   }
+  },
+  {
+   "area": "A-6000",
+   "supports": 122,
+   "placementElements": 1,
+   "holds": 1,
+   "transportFindings": 0,
+   "reservedSpaceFindings": 0,
+   "review": {
+    "href": "./a6000-review.html",
+    "revision": "r2",
+    "reviewer": "QFL"
+   }
+  }
+ ],
+ "holds": [
+  {
+   "area": "A-200",
+   "equipment": "R-201C",
+   "line": "XV-SMR201-C tagged actuator supply",
+   "lineId": "LINE-2547",
+   "partId": 120104,
+   "point": [
+    -3.034,
+    1.415,
+    -14.987
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-800",
+   "equipment": "F-802",
+   "line": "F-802 separate EX802 off-gas",
+   "lineId": "LINE-826",
+   "partId": 56231,
+   "point": [
+    92,
+    8.714,
+    30.97
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "T-2001",
+   "line": "A-1000 centrate to T-2001",
+   "lineId": "LINE-1580",
+   "partId": 107089,
+   "point": [
+    66.55,
+    10.6,
+    -19.2
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "P-BW2001",
+   "line": "A-2000 backwash to T-1006",
+   "lineId": "LINE-1798",
+   "partId": 109737,
+   "point": [
+    19.2,
+    8.9,
+    -6
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "P-2005",
+   "line": "A-2000 water to BL-RO162",
+   "lineId": "LINE-2060",
+   "partId": 116466,
+   "point": [
+    -18.45,
+    10.2,
+    -7.2
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "Accepted RO permeate to T-2002",
+   "lineId": "LINE-2047",
+   "partId": 115856,
+   "point": [
+    96.55,
+    6,
+    -7.2
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "P-2002",
+   "line": "Antiscalant mixed RO feed",
+   "lineId": "LINE-1799",
+   "partId": 109755,
+   "point": [
+    79.2,
+    1.5,
+    -17
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "P-2002",
+   "line": "Antiscalant mixed RO feed",
+   "lineId": "LINE-1799",
+   "partId": 109755,
+   "point": [
+    81.6,
+    1.5,
+    -17
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "P-2002",
+   "line": "Antiscalant mixed RO feed",
+   "lineId": "LINE-1799",
+   "partId": 109755,
+   "point": [
+    84,
+    1.5,
+    -17
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "CF-2001",
+   "line": "CF-2001 backwash header 0",
+   "lineId": "LINE-1611",
+   "partId": 107746,
+   "point": [
+    76.8,
+    5.2,
+    -9.9
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "CF-2001",
+   "line": "CF-2001 backwash header 1",
+   "lineId": "LINE-1615",
+   "partId": 107853,
+   "point": [
+    76.8,
+    5.2,
+    -9.9
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "CF-2001",
+   "line": "CF-2001 filtrate branch 0",
+   "lineId": "LINE-1617",
+   "partId": 107871,
+   "point": [
+    77.6,
+    1.5,
+    -7.2
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "UF-2001",
+   "line": "CF-2001 to UF-2001",
+   "lineId": "LINE-1788",
+   "partId": 109475,
+   "point": [
+    77.6,
+    2.26,
+    -6.7
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "UF-2001",
+   "line": "CF-2001 to UF-2001",
+   "lineId": "LINE-1788",
+   "partId": 109475,
+   "point": [
+    77.6,
+    3.78,
+    -6.7
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "UF-2001",
+   "line": "CF-2001 to UF-2001",
+   "lineId": "LINE-1788",
+   "partId": 109476,
+   "point": [
+    77.6,
+    4.7,
+    -7.2
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "CIP-2001",
+   "line": "CIP low drain collection",
+   "lineId": "LINE-2071",
+   "partId": 116967,
+   "point": [
+    91.2,
+    0.5,
+    -19
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "CIP-2001",
+   "line": "CIP waste pump suction",
+   "lineId": "LINE-2075",
+   "partId": 117271,
+   "point": [
+    91.2,
+    0.5,
+    -19
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "GF-2001",
+   "line": "GF-2001 backwash header 0",
+   "lineId": "LINE-1599",
+   "partId": 107496,
+   "point": [
+    72.01,
+    5.2,
+    -9.9
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "GF-2001",
+   "line": "GF-2001 backwash header 0",
+   "lineId": "LINE-1599",
+   "partId": 107496,
+   "point": [
+    74.4,
+    5.2,
+    -9.9
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "GF-2001",
+   "line": "GF-2001 backwash header 1",
+   "lineId": "LINE-1603",
+   "partId": 107603,
+   "point": [
+    72.01,
+    5.2,
+    -9.9
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "GF-2001",
+   "line": "GF-2001 backwash header 1",
+   "lineId": "LINE-1603",
+   "partId": 107603,
+   "point": [
+    74.4,
+    5.2,
+    -9.9
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "GF-2001",
+   "line": "GF-2001 filtrate branch 0",
+   "lineId": "LINE-1605",
+   "partId": 107621,
+   "point": [
+    71.6,
+    1.5,
+    -7.2
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "GF-2001",
+   "line": "GF-2001 to CF-2001",
+   "lineId": "LINE-1622",
+   "partId": 107918,
+   "point": [
+    71.6,
+    2.26,
+    -6.7
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "GF-2001",
+   "line": "GF-2001 to CF-2001",
+   "lineId": "LINE-1622",
+   "partId": 107918,
+   "point": [
+    71.6,
+    3.78,
+    -6.7
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "MMF-2001",
+   "line": "MMF-2001 backwash header 0",
+   "lineId": "LINE-1587",
+   "partId": 107246,
+   "point": [
+    72,
+    5.2,
+    -9.9
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "MMF-2001",
+   "line": "MMF-2001 backwash header 0",
+   "lineId": "LINE-1587",
+   "partId": 107246,
+   "point": [
+    74.4,
+    5.2,
+    -9.9
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "MMF-2001",
+   "line": "MMF-2001 backwash header 0",
+   "lineId": "LINE-1587",
+   "partId": 107246,
+   "point": [
+    67.2,
+    5.2,
+    -9.9
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "MMF-2001",
+   "line": "MMF-2001 backwash header 0",
+   "lineId": "LINE-1587",
+   "partId": 107246,
+   "point": [
+    69.6,
+    5.2,
+    -9.9
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "MMF-2001",
+   "line": "MMF-2001 backwash header 1",
+   "lineId": "LINE-1591",
+   "partId": 107353,
+   "point": [
+    72,
+    5.2,
+    -9.9
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "MMF-2001",
+   "line": "MMF-2001 backwash header 1",
+   "lineId": "LINE-1591",
+   "partId": 107353,
+   "point": [
+    74.4,
+    5.2,
+    -9.9
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "MMF-2001",
+   "line": "MMF-2001 backwash header 1",
+   "lineId": "LINE-1591",
+   "partId": 107353,
+   "point": [
+    67.2,
+    5.2,
+    -9.9
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "MMF-2001",
+   "line": "MMF-2001 backwash header 1",
+   "lineId": "LINE-1591",
+   "partId": 107353,
+   "point": [
+    69.6,
+    5.2,
+    -9.9
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "MMF-2001",
+   "line": "MMF-2001 filtrate branch 0",
+   "lineId": "LINE-1593",
+   "partId": 107371,
+   "point": [
+    65.6,
+    1.5,
+    -7.2
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "MMF-2001",
+   "line": "MMF-2001 to GF-2001",
+   "lineId": "LINE-1621",
+   "partId": 107909,
+   "point": [
+    65.6,
+    2.26,
+    -6.7
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "MMF-2001",
+   "line": "MMF-2001 to GF-2001",
+   "lineId": "LINE-1621",
+   "partId": 107909,
+   "point": [
+    65.6,
+    3.78,
+    -6.7
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "T-2001",
+   "line": "R-1004 conditional bypass to T-2001",
+   "lineId": "LINE-1582",
+   "partId": 107123,
+   "point": [
+    67,
+    10.9,
+    -19.2
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "T-2001",
+   "line": "R-1004 conditional bypass to T-2001",
+   "lineId": "LINE-1582",
+   "partId": 107123,
+   "point": [
+    67,
+    10.9,
+    -16.8
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "T-2001",
+   "line": "R-1004 conditional bypass to T-2001",
+   "lineId": "LINE-1582",
+   "partId": 107124,
+   "point": [
+    67,
+    10.121,
+    -20
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "CIP-2001",
+   "line": "RO cleaning return to CIP-2001",
+   "lineId": "LINE-2069",
+   "partId": 116918,
+   "point": [
+    81.6,
+    5.3,
+    -14.3
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "CIP-2001",
+   "line": "RO cleaning return to CIP-2001",
+   "lineId": "LINE-2069",
+   "partId": 116918,
+   "point": [
+    79.2,
+    5.3,
+    -14.3
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "CIP-2001",
+   "line": "RO cleaning return to CIP-2001",
+   "lineId": "LINE-2069",
+   "partId": 116918,
+   "point": [
+    84,
+    5.3,
+    -14.3
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "CIP-2001",
+   "line": "RO cleaning return to CIP-2001",
+   "lineId": "LINE-2069",
+   "partId": 116918,
+   "point": [
+    88.8,
+    5.3,
+    -14.3
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "CIP-2001",
+   "line": "RO cleaning return to CIP-2001",
+   "lineId": "LINE-2069",
+   "partId": 116918,
+   "point": [
+    86.4,
+    5.3,
+    -14.3
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO concentrate to T-2003",
+   "lineId": "LINE-2049",
+   "partId": 115922,
+   "point": [
+    81.6,
+    4.9,
+    -13.5
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO concentrate to T-2003",
+   "lineId": "LINE-2049",
+   "partId": 115922,
+   "point": [
+    79.2,
+    4.9,
+    -13.5
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO concentrate to T-2003",
+   "lineId": "LINE-2049",
+   "partId": 115922,
+   "point": [
+    84,
+    4.9,
+    -13.5
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO concentrate to T-2003",
+   "lineId": "LINE-2049",
+   "partId": 115922,
+   "point": [
+    88.8,
+    4.9,
+    -13.5
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO concentrate to T-2003",
+   "lineId": "LINE-2049",
+   "partId": 115922,
+   "point": [
+    86.4,
+    4.9,
+    -13.5
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO concentrate to T-2003",
+   "lineId": "LINE-2049",
+   "partId": 115926,
+   "point": [
+    96.55,
+    5.727,
+    -21
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO off-spec recycle to T-2001",
+   "lineId": "LINE-2048",
+   "partId": 115907,
+   "point": [
+    72,
+    11.2,
+    -16
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO off-spec recycle to T-2001",
+   "lineId": "LINE-2048",
+   "partId": 115908,
+   "point": [
+    66.55,
+    11.2,
+    -19.2
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO off-spec recycle to T-2001",
+   "lineId": "LINE-2048",
+   "partId": 115908,
+   "point": [
+    66.55,
+    11.2,
+    -16.8
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO off-spec recycle to T-2001",
+   "lineId": "LINE-2048",
+   "partId": 115907,
+   "point": [
+    67.2,
+    11.2,
+    -16
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO off-spec recycle to T-2001",
+   "lineId": "LINE-2048",
+   "partId": 115907,
+   "point": [
+    69.6,
+    11.2,
+    -16
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO off-spec recycle to T-2001",
+   "lineId": "LINE-2048",
+   "partId": 115909,
+   "point": [
+    66.55,
+    10.271,
+    -20
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "P-2002",
+   "line": "RO train B feed",
+   "lineId": "LINE-1887",
+   "partId": 112048,
+   "point": [
+    79.2,
+    1.5,
+    -17
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "P-2002",
+   "line": "RO train B feed",
+   "lineId": "LINE-1887",
+   "partId": 112048,
+   "point": [
+    81.6,
+    1.5,
+    -17
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "P-2002",
+   "line": "RO train B feed",
+   "lineId": "LINE-1887",
+   "partId": 112048,
+   "point": [
+    83.899,
+    1.5,
+    -17
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "P-2002",
+   "line": "RO train C feed",
+   "lineId": "LINE-1968",
+   "partId": 114009,
+   "point": [
+    79.2,
+    1.5,
+    -17
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "P-2002",
+   "line": "RO train C feed",
+   "lineId": "LINE-1968",
+   "partId": 114009,
+   "point": [
+    81.6,
+    1.5,
+    -17
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A CIP feed branch",
+   "lineId": "LINE-1875",
+   "partId": 111741,
+   "point": [
+    79.2,
+    4.1,
+    -13.9
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A CIP return header",
+   "lineId": "LINE-1878",
+   "partId": 111818,
+   "point": [
+    81.6,
+    5.3,
+    -14.3
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A CIP return header",
+   "lineId": "LINE-1878",
+   "partId": 111818,
+   "point": [
+    79.2,
+    5.3,
+    -14.3
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A concentrate collection",
+   "lineId": "LINE-1872",
+   "partId": 111703,
+   "point": [
+    81.6,
+    4.9,
+    -13.5
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A concentrate collection",
+   "lineId": "LINE-1872",
+   "partId": 111703,
+   "point": [
+    79.2,
+    4.9,
+    -13.5
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A relief to concentrate tank",
+   "lineId": "LINE-1883",
+   "partId": 111869,
+   "point": [
+    88.8,
+    6,
+    -15.2
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A relief to concentrate tank",
+   "lineId": "LINE-1883",
+   "partId": 111869,
+   "point": [
+    91.2,
+    6,
+    -15.2
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A relief to concentrate tank",
+   "lineId": "LINE-1883",
+   "partId": 111871,
+   "point": [
+    96,
+    5.235,
+    -21
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A relief to concentrate tank",
+   "lineId": "LINE-1883",
+   "partId": 111870,
+   "point": [
+    95,
+    6,
+    -16.8
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A relief to concentrate tank",
+   "lineId": "LINE-1883",
+   "partId": 111869,
+   "point": [
+    93.6,
+    6,
+    -15.2
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A relief to concentrate tank",
+   "lineId": "LINE-1883",
+   "partId": 111870,
+   "point": [
+    95,
+    6,
+    -19.2
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 1 concentrate",
+   "lineId": "LINE-1814",
+   "partId": 110426,
+   "point": [
+    81.6,
+    3.8,
+    -5.45
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 1 concentrate",
+   "lineId": "LINE-1814",
+   "partId": 110425,
+   "point": [
+    80.4,
+    2.955,
+    -5.465
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 1 permeate",
+   "lineId": "LINE-1815",
+   "partId": 110430,
+   "point": [
+    80.6,
+    2.73,
+    -12.606
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 2 concentrate",
+   "lineId": "LINE-1819",
+   "partId": 110538,
+   "point": [
+    81.6,
+    3.8,
+    -5.45
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 2 concentrate",
+   "lineId": "LINE-1819",
+   "partId": 110537,
+   "point": [
+    80.4,
+    2.62,
+    -5.477
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 2 permeate",
+   "lineId": "LINE-1820",
+   "partId": 110542,
+   "point": [
+    80.6,
+    2.47,
+    -12.569
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 3 concentrate",
+   "lineId": "LINE-1824",
+   "partId": 110650,
+   "point": [
+    81.6,
+    3.8,
+    -5.45
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 3 concentrate",
+   "lineId": "LINE-1824",
+   "partId": 110649,
+   "point": [
+    80.4,
+    2.97,
+    -5.478
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 4 concentrate",
+   "lineId": "LINE-1829",
+   "partId": 110762,
+   "point": [
+    81.6,
+    3.8,
+    -5.45
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 5 concentrate",
+   "lineId": "LINE-1834",
+   "partId": 110874,
+   "point": [
+    81.6,
+    3.8,
+    -5.45
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 5 concentrate",
+   "lineId": "LINE-1834",
+   "partId": 110873,
+   "point": [
+    81,
+    1.585,
+    -5.488
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 5 concentrate",
+   "lineId": "LINE-1834",
+   "partId": 110873,
+   "point": [
+    81,
+    2.955,
+    -5.465
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 5 permeate",
+   "lineId": "LINE-1835",
+   "partId": 110878,
+   "point": [
+    81.2,
+    2.73,
+    -12.606
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 5 permeate",
+   "lineId": "LINE-1835",
+   "partId": 110879,
+   "point": [
+    80.295,
+    3.5,
+    -12.65
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 6 concentrate",
+   "lineId": "LINE-1839",
+   "partId": 110986,
+   "point": [
+    81.6,
+    3.8,
+    -5.45
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 6 concentrate",
+   "lineId": "LINE-1839",
+   "partId": 110985,
+   "point": [
+    81,
+    2.62,
+    -5.477
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 6 permeate",
+   "lineId": "LINE-1840",
+   "partId": 110990,
+   "point": [
+    81.2,
+    2.47,
+    -12.569
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 6 permeate",
+   "lineId": "LINE-1840",
+   "partId": 110991,
+   "point": [
+    80.295,
+    3.5,
+    -12.65
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 7 concentrate",
+   "lineId": "LINE-1844",
+   "partId": 111098,
+   "point": [
+    81.6,
+    3.8,
+    -5.45
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 7 concentrate",
+   "lineId": "LINE-1844",
+   "partId": 111097,
+   "point": [
+    81,
+    2.97,
+    -5.478
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 7 permeate",
+   "lineId": "LINE-1845",
+   "partId": 111103,
+   "point": [
+    80.295,
+    3.5,
+    -12.65
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 8 concentrate",
+   "lineId": "LINE-1849",
+   "partId": 111210,
+   "point": [
+    81.6,
+    3.8,
+    -5.45
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 8 feed",
+   "lineId": "LINE-1848",
+   "partId": 111204,
+   "point": [
+    80.281,
+    2.8,
+    -12.65
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 8 permeate",
+   "lineId": "LINE-1850",
+   "partId": 111215,
+   "point": [
+    80.295,
+    3.5,
+    -12.65
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 9 concentrate",
+   "lineId": "LINE-1854",
+   "partId": 111321,
+   "point": [
+    81.6,
+    2.955,
+    -12.606
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 9 feed",
+   "lineId": "LINE-1853",
+   "partId": 111317,
+   "point": [
+    81.6,
+    2.955,
+    -5.465
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 9 permeate",
+   "lineId": "LINE-1855",
+   "partId": 111327,
+   "point": [
+    81,
+    3.5,
+    -12.65
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 9 permeate",
+   "lineId": "LINE-1855",
+   "partId": 111326,
+   "point": [
+    81.8,
+    2.73,
+    -12.606
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 10 concentrate",
+   "lineId": "LINE-1859",
+   "partId": 111433,
+   "point": [
+    81.6,
+    2.62,
+    -12.57
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 10 feed",
+   "lineId": "LINE-1858",
+   "partId": 111429,
+   "point": [
+    81.6,
+    2.62,
+    -5.477
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 10 permeate",
+   "lineId": "LINE-1860",
+   "partId": 111439,
+   "point": [
+    81,
+    3.5,
+    -12.65
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 10 permeate",
+   "lineId": "LINE-1860",
+   "partId": 111438,
+   "point": [
+    81.8,
+    2.47,
+    -12.569
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 11 concentrate",
+   "lineId": "LINE-1864",
+   "partId": 111545,
+   "point": [
+    81.6,
+    2.97,
+    -12.567
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 11 feed",
+   "lineId": "LINE-1863",
+   "partId": 111541,
+   "point": [
+    81.6,
+    2.97,
+    -5.478
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 11 permeate",
+   "lineId": "LINE-1865",
+   "partId": 111551,
+   "point": [
+    81,
+    3.5,
+    -12.65
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001A vessel 12 permeate",
+   "lineId": "LINE-1870",
+   "partId": 111663,
+   "point": [
+    81,
+    3.5,
+    -12.65
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B CIP feed branch",
+   "lineId": "LINE-1956",
+   "partId": 113702,
+   "point": [
+    81.6,
+    4.1,
+    -13.9
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B CIP feed branch",
+   "lineId": "LINE-1956",
+   "partId": 113702,
+   "point": [
+    79.2,
+    4.1,
+    -13.9
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B CIP feed branch",
+   "lineId": "LINE-1956",
+   "partId": 113702,
+   "point": [
+    84,
+    4.1,
+    -13.9
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B CIP permeate header",
+   "lineId": "LINE-1961",
+   "partId": 113816,
+   "point": [
+    81.6,
+    5.6,
+    -14.6
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B CIP permeate header",
+   "lineId": "LINE-1961",
+   "partId": 113816,
+   "point": [
+    79.348,
+    5.6,
+    -14.6
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B CIP permeate header",
+   "lineId": "LINE-1961",
+   "partId": 113816,
+   "point": [
+    83.85,
+    5.6,
+    -14.6
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B CIP return header",
+   "lineId": "LINE-1959",
+   "partId": 113779,
+   "point": [
+    81.6,
+    5.3,
+    -14.3
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B CIP return header",
+   "lineId": "LINE-1959",
+   "partId": 113779,
+   "point": [
+    79.2,
+    5.3,
+    -14.3
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B CIP return header",
+   "lineId": "LINE-1959",
+   "partId": 113779,
+   "point": [
+    84,
+    5.3,
+    -14.3
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B CIP return header",
+   "lineId": "LINE-1959",
+   "partId": 113779,
+   "point": [
+    86.4,
+    5.3,
+    -14.3
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B concentrate collection",
+   "lineId": "LINE-1953",
+   "partId": 113664,
+   "point": [
+    81.6,
+    4.9,
+    -13.5
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B concentrate collection",
+   "lineId": "LINE-1953",
+   "partId": 113664,
+   "point": [
+    79.2,
+    4.9,
+    -13.5
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B concentrate collection",
+   "lineId": "LINE-1953",
+   "partId": 113664,
+   "point": [
+    84,
+    4.9,
+    -13.5
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B concentrate collection",
+   "lineId": "LINE-1953",
+   "partId": 113664,
+   "point": [
+    86.4,
+    4.9,
+    -13.5
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B permeate collection",
+   "lineId": "LINE-1955",
+   "partId": 113701,
+   "point": [
+    81.6,
+    4.5,
+    -13.1
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B permeate collection",
+   "lineId": "LINE-1955",
+   "partId": 113701,
+   "point": [
+    79.2,
+    4.5,
+    -13.1
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B permeate collection",
+   "lineId": "LINE-1955",
+   "partId": 113701,
+   "point": [
+    83.85,
+    4.5,
+    -13.1
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B relief to concentrate tank",
+   "lineId": "LINE-1964",
+   "partId": 113830,
+   "point": [
+    88.8,
+    6,
+    -15.2
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B relief to concentrate tank",
+   "lineId": "LINE-1964",
+   "partId": 113830,
+   "point": [
+    91.2,
+    6,
+    -15.2
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B relief to concentrate tank",
+   "lineId": "LINE-1964",
+   "partId": 113832,
+   "point": [
+    96,
+    5.235,
+    -21
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B relief to concentrate tank",
+   "lineId": "LINE-1964",
+   "partId": 113831,
+   "point": [
+    95,
+    6,
+    -16.8
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B relief to concentrate tank",
+   "lineId": "LINE-1964",
+   "partId": 113830,
+   "point": [
+    93.6,
+    6,
+    -15.2
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B relief to concentrate tank",
+   "lineId": "LINE-1964",
+   "partId": 113831,
+   "point": [
+    95,
+    6,
+    -19.2
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 1 concentrate",
+   "lineId": "LINE-1895",
+   "partId": 112387,
+   "point": [
+    86.4,
+    3.8,
+    -5.45
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 1 concentrate",
+   "lineId": "LINE-1895",
+   "partId": 112386,
+   "point": [
+    84.9,
+    2.955,
+    -5.465
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 1 permeate",
+   "lineId": "LINE-1896",
+   "partId": 112391,
+   "point": [
+    85.1,
+    2.73,
+    -12.606
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 2 concentrate",
+   "lineId": "LINE-1900",
+   "partId": 112499,
+   "point": [
+    86.4,
+    3.8,
+    -5.45
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 2 concentrate",
+   "lineId": "LINE-1900",
+   "partId": 112498,
+   "point": [
+    84.9,
+    2.62,
+    -5.477
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 2 permeate",
+   "lineId": "LINE-1901",
+   "partId": 112503,
+   "point": [
+    85.1,
+    2.47,
+    -12.569
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 3 concentrate",
+   "lineId": "LINE-1905",
+   "partId": 112611,
+   "point": [
+    86.4,
+    3.8,
+    -5.45
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 3 concentrate",
+   "lineId": "LINE-1905",
+   "partId": 112610,
+   "point": [
+    84.9,
+    2.97,
+    -5.478
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 4 concentrate",
+   "lineId": "LINE-1910",
+   "partId": 112723,
+   "point": [
+    86.4,
+    3.8,
+    -5.45
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 5 concentrate",
+   "lineId": "LINE-1915",
+   "partId": 112835,
+   "point": [
+    86.4,
+    3.8,
+    -5.45
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 5 concentrate",
+   "lineId": "LINE-1915",
+   "partId": 112834,
+   "point": [
+    85.5,
+    1.585,
+    -5.488
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 5 concentrate",
+   "lineId": "LINE-1915",
+   "partId": 112834,
+   "point": [
+    85.5,
+    2.955,
+    -5.465
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 5 permeate",
+   "lineId": "LINE-1916",
+   "partId": 112840,
+   "point": [
+    84.6,
+    3.5,
+    -12.65
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 5 permeate",
+   "lineId": "LINE-1916",
+   "partId": 112839,
+   "point": [
+    85.7,
+    2.73,
+    -12.606
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 6 concentrate",
+   "lineId": "LINE-1920",
+   "partId": 112947,
+   "point": [
+    86.4,
+    3.8,
+    -5.45
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 6 concentrate",
+   "lineId": "LINE-1920",
+   "partId": 112946,
+   "point": [
+    85.5,
+    2.62,
+    -5.477
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 6 permeate",
+   "lineId": "LINE-1921",
+   "partId": 112952,
+   "point": [
+    84.6,
+    3.5,
+    -12.65
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 6 permeate",
+   "lineId": "LINE-1921",
+   "partId": 112951,
+   "point": [
+    85.7,
+    2.47,
+    -12.569
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 7 concentrate",
+   "lineId": "LINE-1925",
+   "partId": 113059,
+   "point": [
+    86.4,
+    3.8,
+    -5.45
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 7 concentrate",
+   "lineId": "LINE-1925",
+   "partId": 113058,
+   "point": [
+    85.5,
+    2.97,
+    -5.478
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 7 permeate",
+   "lineId": "LINE-1926",
+   "partId": 113064,
+   "point": [
+    84.6,
+    3.5,
+    -12.65
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 8 concentrate",
+   "lineId": "LINE-1930",
+   "partId": 113171,
+   "point": [
+    86.4,
+    3.8,
+    -5.45
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 8 feed",
+   "lineId": "LINE-1929",
+   "partId": 113165,
+   "point": [
+    84.781,
+    2.8,
+    -12.65
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 8 permeate",
+   "lineId": "LINE-1931",
+   "partId": 113176,
+   "point": [
+    84.6,
+    3.5,
+    -12.65
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 9 concentrate",
+   "lineId": "LINE-1935",
+   "partId": 113282,
+   "point": [
+    86.1,
+    2.955,
+    -12.606
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 9 feed",
+   "lineId": "LINE-1934",
+   "partId": 113278,
+   "point": [
+    86.1,
+    2.955,
+    -5.465
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 9 permeate",
+   "lineId": "LINE-1936",
+   "partId": 113288,
+   "point": [
+    84.6,
+    3.5,
+    -12.65
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 9 permeate",
+   "lineId": "LINE-1936",
+   "partId": 113287,
+   "point": [
+    86.3,
+    2.73,
+    -12.606
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 10 concentrate",
+   "lineId": "LINE-1940",
+   "partId": 113394,
+   "point": [
+    86.1,
+    2.62,
+    -12.57
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 10 feed",
+   "lineId": "LINE-1939",
+   "partId": 113390,
+   "point": [
+    86.1,
+    2.62,
+    -5.477
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 10 permeate",
+   "lineId": "LINE-1941",
+   "partId": 113400,
+   "point": [
+    84.6,
+    3.5,
+    -12.65
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 10 permeate",
+   "lineId": "LINE-1941",
+   "partId": 113399,
+   "point": [
+    86.3,
+    2.47,
+    -12.569
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 11 concentrate",
+   "lineId": "LINE-1945",
+   "partId": 113506,
+   "point": [
+    86.1,
+    2.97,
+    -12.567
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 11 feed",
+   "lineId": "LINE-1944",
+   "partId": 113502,
+   "point": [
+    86.1,
+    2.97,
+    -5.478
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 11 permeate",
+   "lineId": "LINE-1946",
+   "partId": 113512,
+   "point": [
+    84.6,
+    3.5,
+    -12.65
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001B vessel 12 permeate",
+   "lineId": "LINE-1951",
+   "partId": 113624,
+   "point": [
+    84.6,
+    3.5,
+    -12.65
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C CIP feed branch",
+   "lineId": "LINE-2037",
+   "partId": 115663,
+   "point": [
+    81.6,
+    4.1,
+    -13.9
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C CIP feed branch",
+   "lineId": "LINE-2037",
+   "partId": 115663,
+   "point": [
+    79.2,
+    4.1,
+    -13.9
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C CIP feed branch",
+   "lineId": "LINE-2037",
+   "partId": 115663,
+   "point": [
+    84,
+    4.1,
+    -13.9
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C CIP permeate header",
+   "lineId": "LINE-2042",
+   "partId": 115777,
+   "point": [
+    81.6,
+    5.6,
+    -14.6
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C CIP permeate header",
+   "lineId": "LINE-2042",
+   "partId": 115777,
+   "point": [
+    79.348,
+    5.6,
+    -14.6
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C CIP return header",
+   "lineId": "LINE-2040",
+   "partId": 115740,
+   "point": [
+    81.6,
+    5.3,
+    -14.3
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C CIP return header",
+   "lineId": "LINE-2040",
+   "partId": 115740,
+   "point": [
+    79.2,
+    5.3,
+    -14.3
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C CIP return header",
+   "lineId": "LINE-2040",
+   "partId": 115740,
+   "point": [
+    84,
+    5.3,
+    -14.3
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C CIP return header",
+   "lineId": "LINE-2040",
+   "partId": 115740,
+   "point": [
+    88.8,
+    5.3,
+    -14.3
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C CIP return header",
+   "lineId": "LINE-2040",
+   "partId": 115740,
+   "point": [
+    86.4,
+    5.3,
+    -14.3
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C CIP return header",
+   "lineId": "LINE-2040",
+   "partId": 115740,
+   "point": [
+    91.2,
+    5.3,
+    -14.3
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C concentrate collection",
+   "lineId": "LINE-2034",
+   "partId": 115625,
+   "point": [
+    81.6,
+    4.9,
+    -13.5
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C concentrate collection",
+   "lineId": "LINE-2034",
+   "partId": 115625,
+   "point": [
+    79.2,
+    4.9,
+    -13.5
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C concentrate collection",
+   "lineId": "LINE-2034",
+   "partId": 115625,
+   "point": [
+    84,
+    4.9,
+    -13.5
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C concentrate collection",
+   "lineId": "LINE-2034",
+   "partId": 115625,
+   "point": [
+    88.8,
+    4.9,
+    -13.5
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C concentrate collection",
+   "lineId": "LINE-2034",
+   "partId": 115625,
+   "point": [
+    86.4,
+    4.9,
+    -13.5
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C concentrate collection",
+   "lineId": "LINE-2034",
+   "partId": 115625,
+   "point": [
+    91.2,
+    4.9,
+    -13.5
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C permeate collection",
+   "lineId": "LINE-2036",
+   "partId": 115662,
+   "point": [
+    81.6,
+    4.5,
+    -13.1
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C permeate collection",
+   "lineId": "LINE-2036",
+   "partId": 115662,
+   "point": [
+    79.2,
+    4.5,
+    -13.1
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C relief to concentrate tank",
+   "lineId": "LINE-2045",
+   "partId": 115793,
+   "point": [
+    96,
+    5.235,
+    -21
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C relief to concentrate tank",
+   "lineId": "LINE-2045",
+   "partId": 115792,
+   "point": [
+    95,
+    6,
+    -16.8
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C relief to concentrate tank",
+   "lineId": "LINE-2045",
+   "partId": 115791,
+   "point": [
+    93.6,
+    6,
+    -15.2
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C relief to concentrate tank",
+   "lineId": "LINE-2045",
+   "partId": 115792,
+   "point": [
+    95,
+    6,
+    -19.2
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 1 concentrate",
+   "lineId": "LINE-1976",
+   "partId": 114348,
+   "point": [
+    91.2,
+    3.8,
+    -5.45
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 1 concentrate",
+   "lineId": "LINE-1976",
+   "partId": 114347,
+   "point": [
+    89.4,
+    2.955,
+    -5.465
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 1 permeate",
+   "lineId": "LINE-1977",
+   "partId": 114352,
+   "point": [
+    89.6,
+    2.73,
+    -12.606
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 2 concentrate",
+   "lineId": "LINE-1981",
+   "partId": 114460,
+   "point": [
+    91.2,
+    3.8,
+    -5.45
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 2 concentrate",
+   "lineId": "LINE-1981",
+   "partId": 114459,
+   "point": [
+    89.4,
+    2.62,
+    -5.477
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 2 permeate",
+   "lineId": "LINE-1982",
+   "partId": 114464,
+   "point": [
+    89.6,
+    2.47,
+    -12.569
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 3 concentrate",
+   "lineId": "LINE-1986",
+   "partId": 114572,
+   "point": [
+    91.2,
+    3.8,
+    -5.45
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 3 concentrate",
+   "lineId": "LINE-1986",
+   "partId": 114571,
+   "point": [
+    89.4,
+    2.97,
+    -5.478
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 4 concentrate",
+   "lineId": "LINE-1991",
+   "partId": 114684,
+   "point": [
+    91.2,
+    3.8,
+    -5.45
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 5 concentrate",
+   "lineId": "LINE-1996",
+   "partId": 114796,
+   "point": [
+    91.2,
+    3.8,
+    -5.45
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 5 concentrate",
+   "lineId": "LINE-1996",
+   "partId": 114795,
+   "point": [
+    90,
+    1.585,
+    -5.488
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 5 concentrate",
+   "lineId": "LINE-1996",
+   "partId": 114795,
+   "point": [
+    90,
+    2.955,
+    -5.465
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 5 permeate",
+   "lineId": "LINE-1997",
+   "partId": 114801,
+   "point": [
+    89.295,
+    3.5,
+    -12.65
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 5 permeate",
+   "lineId": "LINE-1997",
+   "partId": 114800,
+   "point": [
+    90.2,
+    2.73,
+    -12.606
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 6 concentrate",
+   "lineId": "LINE-2001",
+   "partId": 114908,
+   "point": [
+    91.2,
+    3.8,
+    -5.45
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 6 concentrate",
+   "lineId": "LINE-2001",
+   "partId": 114907,
+   "point": [
+    90,
+    2.62,
+    -5.477
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 6 permeate",
+   "lineId": "LINE-2002",
+   "partId": 114913,
+   "point": [
+    89.295,
+    3.5,
+    -12.65
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 6 permeate",
+   "lineId": "LINE-2002",
+   "partId": 114912,
+   "point": [
+    90.2,
+    2.47,
+    -12.569
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 7 concentrate",
+   "lineId": "LINE-2006",
+   "partId": 115020,
+   "point": [
+    91.2,
+    3.8,
+    -5.45
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 7 concentrate",
+   "lineId": "LINE-2006",
+   "partId": 115019,
+   "point": [
+    90,
+    2.97,
+    -5.478
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 7 permeate",
+   "lineId": "LINE-2007",
+   "partId": 115025,
+   "point": [
+    89.295,
+    3.5,
+    -12.65
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 8 concentrate",
+   "lineId": "LINE-2011",
+   "partId": 115132,
+   "point": [
+    91.2,
+    3.8,
+    -5.45
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 8 feed",
+   "lineId": "LINE-2010",
+   "partId": 115126,
+   "point": [
+    89.281,
+    2.8,
+    -12.65
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 8 permeate",
+   "lineId": "LINE-2012",
+   "partId": 115137,
+   "point": [
+    89.295,
+    3.5,
+    -12.65
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 9 concentrate",
+   "lineId": "LINE-2016",
+   "partId": 115243,
+   "point": [
+    90.6,
+    2.955,
+    -12.606
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 9 feed",
+   "lineId": "LINE-2015",
+   "partId": 115239,
+   "point": [
+    90.6,
+    2.955,
+    -5.465
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 9 permeate",
+   "lineId": "LINE-2017",
+   "partId": 115248,
+   "point": [
+    90.8,
+    2.73,
+    -12.606
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 9 permeate",
+   "lineId": "LINE-2017",
+   "partId": 115249,
+   "point": [
+    90,
+    3.5,
+    -12.65
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 10 concentrate",
+   "lineId": "LINE-2021",
+   "partId": 115355,
+   "point": [
+    90.6,
+    2.62,
+    -12.57
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 10 feed",
+   "lineId": "LINE-2020",
+   "partId": 115351,
+   "point": [
+    90.6,
+    2.62,
+    -5.477
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 10 permeate",
+   "lineId": "LINE-2022",
+   "partId": 115360,
+   "point": [
+    90.8,
+    2.47,
+    -12.569
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 10 permeate",
+   "lineId": "LINE-2022",
+   "partId": 115361,
+   "point": [
+    90,
+    3.5,
+    -12.65
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 11 concentrate",
+   "lineId": "LINE-2026",
+   "partId": 115467,
+   "point": [
+    90.6,
+    2.97,
+    -12.567
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 11 feed",
+   "lineId": "LINE-2025",
+   "partId": 115463,
+   "point": [
+    90.6,
+    2.97,
+    -5.478
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 11 permeate",
+   "lineId": "LINE-2027",
+   "partId": 115473,
+   "point": [
+    90,
+    3.5,
+    -12.65
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO-2001C vessel 12 permeate",
+   "lineId": "LINE-2032",
+   "partId": 115585,
+   "point": [
+    90,
+    3.5,
+    -12.65
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "CF-2002",
+   "line": "Stored off-spec water to T-2001",
+   "lineId": "LINE-2056",
+   "partId": 116134,
+   "point": [
+    66.55,
+    11.5,
+    -19.2
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "CF-2002",
+   "line": "Stored off-spec water to T-2001",
+   "lineId": "LINE-2056",
+   "partId": 116135,
+   "point": [
+    66.55,
+    10.421,
+    -20
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "P-2005",
+   "line": "T-2002 to P-2005",
+   "lineId": "LINE-2052",
+   "partId": 116045,
+   "point": [
+    97,
+    0.65,
+    -1.946
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "P-2003",
+   "line": "T-2003 to P-2003",
+   "lineId": "LINE-2050",
+   "partId": 115940,
+   "point": [
+    98.4,
+    0.65,
+    -20.56
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "P-2003",
+   "line": "T-2003 to P-2003",
+   "lineId": "LINE-2050",
+   "partId": 115939,
+   "point": [
+    97,
+    0.65,
+    -19.2
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "TK-UF2001",
+   "line": "UF clean filtrate backwash",
+   "lineId": "LINE-1793",
+   "partId": 109594,
+   "point": [
+    82.83,
+    1.5,
+    -20
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-3000",
+   "equipment": "P-3111",
+   "line": "P-3111 qualified return to T-1006",
+   "lineId": "LINE-1412",
+   "partId": 101621,
+   "point": [
+    20.6,
+    9.714,
+    -5.7
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-3000",
+   "equipment": "P-3111",
+   "line": "P-3111 qualified return to T-1006",
+   "lineId": "LINE-1412",
+   "partId": 101621,
+   "point": [
+    20.6,
+    7.862,
+    -5.7
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "HD-4001",
+   "line": "A-4000 to BL-IA201-D",
+   "lineId": "LINE-2196",
+   "partId": 118522,
+   "point": [
+    4.76,
+    12.15,
+    -19.8
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "HD-4001",
+   "line": "A-4000 to BL-IA201-D",
+   "lineId": "LINE-2196",
+   "partId": 118522,
+   "point": [
+    4.76,
+    12.15,
+    -23.4
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "BL-PA4000",
+   "line": "BL-PA4000 supply",
+   "lineId": "LINE-2197",
+   "partId": 118535,
+   "point": [
+    -26.4,
+    5.3,
+    8.8
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "BL-PA4000",
+   "line": "BL-PA4000 supply",
+   "lineId": "LINE-2197",
+   "partId": 118535,
+   "point": [
+    -24,
+    5.3,
+    8.8
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "BL-PC4000",
+   "line": "BL-PC4000 supply",
+   "lineId": "LINE-2200",
+   "partId": 118580,
+   "point": [
+    -22.97,
+    5.3,
+    8.8
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "TK-CD4001",
+   "line": "D-4001A closed drain transfer",
+   "lineId": "LINE-2207",
+   "partId": 118655,
+   "point": [
+    -24.3,
+    0.12,
+    5.4
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "TK-CD4001",
+   "line": "D-4001B closed drain transfer",
+   "lineId": "LINE-2212",
+   "partId": 118697,
+   "point": [
+    -27,
+    0.12,
+    5.97
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "TK-CD4001",
+   "line": "D-4001B closed drain transfer",
+   "lineId": "LINE-2212",
+   "partId": 118697,
+   "point": [
+    -25.2,
+    0.12,
+    5.97
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "TK-CD4001",
+   "line": "D-4001B closed drain transfer",
+   "lineId": "LINE-2212",
+   "partId": 118696,
+   "point": [
+    -24.3,
+    0.12,
+    5.4
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "HD-4001",
+   "line": "HD-4001 loop section 0",
+   "lineId": "LINE-2168",
+   "partId": 118342,
+   "point": [
+    -28.8,
+    11.8,
+    -9.8
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "HD-4001",
+   "line": "HD-4001 loop section 0",
+   "lineId": "LINE-2168",
+   "partId": 118342,
+   "point": [
+    -26.4,
+    11.8,
+    -9.8
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "HD-4001",
+   "line": "HD-4001 loop section 0",
+   "lineId": "LINE-2168",
+   "partId": 118342,
+   "point": [
+    -24,
+    11.8,
+    -9.8
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "HD-4001",
+   "line": "HD-4001 loop section 0",
+   "lineId": "LINE-2168",
+   "partId": 118342,
+   "point": [
+    -21.6,
+    11.8,
+    -9.8
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "HD-4001",
+   "line": "HD-4001 loop section 0",
+   "lineId": "LINE-2168",
+   "partId": 118342,
+   "point": [
+    -19.2,
+    11.8,
+    -9.8
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "HD-4001",
+   "line": "HD-4001 loop section 0",
+   "lineId": "LINE-2168",
+   "partId": 118342,
+   "point": [
+    -16.8,
+    11.8,
+    -9.8
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "HD-4001",
+   "line": "HD-4001 loop section 0",
+   "lineId": "LINE-2168",
+   "partId": 118342,
+   "point": [
+    -14.4,
+    11.8,
+    -9.8
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "HD-4001",
+   "line": "HD-4001 loop section 0",
+   "lineId": "LINE-2168",
+   "partId": 118342,
+   "point": [
+    -12,
+    11.8,
+    -9.8
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "HD-4001",
+   "line": "HD-4001 loop section 4",
+   "lineId": "LINE-2180",
+   "partId": 118382,
+   "point": [
+    -28.8,
+    11.8,
+    -9.8
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "HD-4001",
+   "line": "HD-4001 loop section 4",
+   "lineId": "LINE-2180",
+   "partId": 118382,
+   "point": [
+    -26.4,
+    11.8,
+    -9.8
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "HD-4001",
+   "line": "HD-4001 loop section 4",
+   "lineId": "LINE-2180",
+   "partId": 118382,
+   "point": [
+    -24,
+    11.8,
+    -9.8
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "HD-4001",
+   "line": "HD-4001 loop section 4",
+   "lineId": "LINE-2180",
+   "partId": 118382,
+   "point": [
+    -21.6,
+    11.8,
+    -9.8
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "HD-4001",
+   "line": "HD-4001 loop section 4",
+   "lineId": "LINE-2180",
+   "partId": 118382,
+   "point": [
+    -19.2,
+    11.8,
+    -9.8
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "HD-4001",
+   "line": "HD-4001 loop section 4",
+   "lineId": "LINE-2180",
+   "partId": 118382,
+   "point": [
+    -16.8,
+    11.8,
+    -9.8
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "HD-4001",
+   "line": "HD-4001 loop section 4",
+   "lineId": "LINE-2180",
+   "partId": 118382,
+   "point": [
+    -14.4,
+    11.8,
+    -9.8
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "HD-4001",
+   "line": "HD-4001 loop section 4",
+   "lineId": "LINE-2180",
+   "partId": 118382,
+   "point": [
+    -12,
+    11.8,
+    -9.8
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-4000",
+   "equipment": "TK-CD4001",
+   "line": "T-4001 closed drain transfer",
+   "lineId": "LINE-2217",
+   "partId": 118738,
+   "point": [
+    -27,
+    0.07,
+    6.04
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-5000",
+   "equipment": "HD-5300",
+   "line": "Chilled water supply riser",
+   "lineId": "LINE-2847",
+   "partId": 126920,
+   "point": [
+    -14.1,
+    12.4,
+    7.2
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-5000",
+   "equipment": "HD-5200",
+   "line": "Cooling water supply riser",
+   "lineId": "LINE-2785",
+   "partId": 124826,
+   "point": [
+    -14.1,
+    10.8,
+    7.2
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-5000",
+   "equipment": "HD-5100",
+   "line": "Hot water supply riser",
+   "lineId": "LINE-2720",
+   "partId": 122444,
+   "point": [
+    -14.1,
+    7.2,
+    7.2
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-5000",
+   "equipment": "TCU-141",
+   "line": "R-141D return branch to service station",
+   "lineId": "LINE-2987",
+   "partId": 132225,
+   "point": [
+    -28.8,
+    3.3,
+    -19.35
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-5000",
+   "equipment": "HD-5300",
+   "line": "TCU-141 cooldown return branch to service station",
+   "lineId": "LINE-2955",
+   "partId": 130951,
+   "point": [
+    -14.37,
+    12.72,
+    7.2
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-5000",
+   "equipment": "TCU-141",
+   "line": "TCU-141 single secondary return riser",
+   "lineId": "LINE-2905",
+   "partId": 129343,
+   "point": [
+    -14.15,
+    10.32,
+    7.2
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-5000",
+   "equipment": "TCU-201",
+   "line": "TCU-201 single secondary return riser",
+   "lineId": "LINE-2909",
+   "partId": 129383,
+   "point": [
+    -14.15,
+    8.72,
+    7.2
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-5000",
+   "equipment": "HD-5300",
+   "line": "TCU-201 supply branch to service station",
+   "lineId": "LINE-2927",
+   "partId": 129787,
+   "point": [
+    -17.23,
+    12.4,
+    4.8
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-5000",
+   "equipment": "TCU-1001",
+   "line": "TCU-1001 single secondary return riser",
+   "lineId": "LINE-2913",
+   "partId": 129423,
+   "point": [
+    -14.15,
+    11.92,
+    7.2
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-5000",
+   "equipment": "HD-5200",
+   "line": "TCU-1001 supply branch to service station",
+   "lineId": "LINE-2935",
+   "partId": 130131,
+   "point": [
+    -17.23,
+    10.8,
+    4.8
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-5000",
+   "equipment": "A-5200",
+   "line": "Tower spray distribution",
+   "lineId": "LINE-2729",
+   "partId": 122874,
+   "point": [
+    -26.4,
+    3.6,
+    20.45
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-6000",
+   "equipment": "HD-6201",
+   "line": "AR-902 reserved takeoff",
+   "lineId": "LINE-934",
+   "partId": 61827,
+   "point": [
+    108,
+    2.19,
+    45.8
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  }
+ ],
+ "structuralAttachments": {
+  "passes": true,
+  "loads": 2601,
+  "contacts": 21074,
+  "foundations": 5230,
+  "failures": 0,
+  "method": "Declared mounting points checked against part geometry and assembled transforms, with graph reachability to foundations. Structural strength is not calculated."
+ },
+ "containment": {
+  "geometryPass": true,
+  "findings": []
+ },
+ "findings": [
+  {
+   "id": "LAY-01",
+   "topic": "Pipe-support placement holds",
+   "status": "Open — layout revision required",
+   "priority": "high",
+   "discipline": "Piping / structural",
+   "observation": "271 candidate support positions remain unresolved on the current model (published report: 316); A-2000 229, A-4000 26, A-5000 11. Leading reasons: \"Support rod conflicts with another service\" (200), \"No clear rack foundation / beam corridor\" (44).",
+   "action": "Revise the A-2000 RO / UF permeate rack tiers and the A-4000 header brackets so each held line has a bearing corridor; record the rack revision in the model before support calculations start.",
+   "evidence": [
+    {
+     "kind": "holds",
+     "id": "A-2000",
+     "label": "A-2000 · 229 placement holds",
+     "href": "#holds"
+    },
+    {
+     "kind": "holds",
+     "id": "A-4000",
+     "label": "A-4000 · 26 placement holds",
+     "href": "#holds"
+    },
+    {
+     "kind": "page",
+     "id": "A-2000",
+     "label": "A-2000 review r2 · QFL",
+     "href": "./a2000-review.html"
+    },
+    {
+     "kind": "finding",
+     "id": "A2000-03",
+     "label": "A2000-03 · Pretreatment and backwash — Configuration as modelled — duties open (A-2000 review r2 · QFL)",
+     "href": "./a2000-review.html#A2000-03"
+    }
+   ]
+  },
+  {
+   "id": "LAY-02",
+   "topic": "Generated supports inside reserved spaces",
+   "status": "Open — model correction",
+   "priority": "high",
+   "discipline": "Layout",
+   "observation": "4 support element(s) intrude into 4 reserved vehicle, maintenance or standing space(s) on the current model: PS-A200-3370 bearing collar in REMOVE-R201C; PS-A900-3018 bearing collar in REMOVE-PY801; PS-A3000-3622 local bracket in PIPE-standing-access-613-CP-3000 / CP-3000 control display; PS-A5000-2238 insulation insert bearing collar in HEADROOM-PL-801 feeder walkway. 1 new since the published report (REMOVE-PY801 · PS-A900-3018 bearing collar); 1 resolved (REMOVE-R201D · bearing collar). The A-3000 bracket position also moved with the A-3000 rebuild.",
+   "action": "Relocate or re-tier the intruding supports (A-900 collar in the PY-801 removal space, A-3000 bracket in the CP-3000 standing space) and re-run the corridor gate; the ES-3000 shower-head overlap stays an open access finding.",
+   "evidence": [
+    {
+     "kind": "zone",
+     "id": "REMOVE-PY801",
+     "label": "Reserved space REMOVE-PY801 · 1 intruding element",
+     "href": "#reserved-spaces"
+    },
+    {
+     "kind": "zone",
+     "id": "REMOVE-R201C",
+     "label": "Reserved space REMOVE-R201C · 1 intruding element",
+     "href": "#reserved-spaces"
+    },
+    {
+     "kind": "finding",
+     "id": "A900-07",
+     "label": "A900-07 · Layout, supports and access — Provisional geometry — vendor loads unverified (A-900 review r2 · QFL)",
+     "href": "./a900-review.html#A900-07"
+    },
+    {
+     "kind": "finding",
+     "id": "A3000-05",
+     "label": "A3000-05 · Assembled wet train — connections, air gap and liquor handling — Geometry checks pass — six interfaces unresolved (A-3000 review r2 · QFL)",
+     "href": "./a3000-review.html#A3000-05"
+    },
+    {
+     "kind": "finding",
+     "id": "A200-05",
+     "label": "A200-05 · Top drive, impeller and maintenance — Impeller type in conflict — disassembly basis open (A-200 review r2 · QFL)",
+     "href": "./a200-review.html#A200-05"
+    }
+   ]
+  },
+  {
+   "id": "LAY-03",
+   "topic": "Shared pedestrian reservations without declared traffic control",
+   "status": "Open — traffic plan",
+   "priority": "medium",
+   "discipline": "Safety / layout",
+   "observation": "4 pedestrian reservations overlap vehicle reservations; 4 have no declared traffic control on any route (WALK-A400-LINK, WALK-UTILITY-WEST, WALK-WATER-FRONT, WALK-WW-WEST). Declared shared spaces: PW-096.",
+   "action": "Extend the route traffic-control declarations (or move the walkway reservations) before the site traffic plan; vehicle playback assumes pedestrian closure.",
+   "evidence": [
+    {
+     "kind": "route",
+     "id": "argon-delivery",
+     "label": "Route A-6000 approach → right turn → service aisle · 30.5 m · 0 obstructions · release HOLD",
+     "href": "#routes-current"
+    },
+    {
+     "kind": "route",
+     "id": "wash-wastewater",
+     "label": "Route A-300 → A-1000 under-rack aisle · 44.6 m · 0 obstructions · release HOLD",
+     "href": "#routes-current"
+    },
+    {
+     "kind": "finding",
+     "id": "A600-06",
+     "label": "A600-06 · Access, maintenance and fire points — Model access provided — qualification open (A-600 review r2 · QFL)",
+     "href": "./a600-review.html#A600-06"
+    },
+    {
+     "kind": "finding",
+     "id": "A800-07",
+     "label": "A800-07 · Access, reactive inventory and fire points — Model access provided — qualification open (A-800 review r2 · QFL)",
+     "href": "./a800-review.html#A800-07"
+    }
+   ]
+  },
+  {
+   "id": "LAY-04",
+   "topic": "Vehicle route screening",
+   "status": "Screened — operating release HOLD",
+   "priority": "medium",
+   "discipline": "Logistics",
+   "observation": "7 routes swept on the current model (851 m, 4137 planning poses, 3811 animated poses): 0 planning-envelope and 0 animated-envelope obstructions. Every route carries operating release HOLD.",
+   "action": "Select the truck, attachments and loads; qualify slabs, covers and the site boundary; keep the sweeps as geometry screening only.",
+   "evidence": [
+    {
+     "kind": "route",
+     "id": "perimeter",
+     "label": "Route Plant perimeter logistics circuit · 551 m · 0 obstructions · release HOLD",
+     "href": "#routes-current"
+    },
+    {
+     "kind": "route",
+     "id": "receiving-delivery",
+     "label": "Route Receiving → A-100 delivery frontage · 61.3 m · 0 obstructions · release HOLD",
+     "href": "#routes-current"
+    },
+    {
+     "kind": "route",
+     "id": "product-dispatch",
+     "label": "Route A-800 east frontage → north dispatch · 60.5 m · 0 obstructions · release HOLD",
+     "href": "#routes-current"
+    },
+    {
+     "kind": "doc",
+     "id": "docs/bc-forklift-corridor-handoff.md",
+     "label": "docs/bc-forklift-corridor-handoff.md",
+     "href": "https://github.com/quakfoolee-dotcom/rGO_3D_Plant_Model/blob/main/docs/bc-forklift-corridor-handoff.md"
+    }
+   ]
+  },
+  {
+   "id": "LAY-05",
+   "topic": "Entrance portal PR-A5000-T002",
+   "status": "Open — structural calculation",
+   "priority": "medium",
+   "discipline": "Structural",
+   "observation": "PR-A5000-T002: 46 assigned bearings across bays of 11.3 / 6.0 m; longest bay 11.3 m spans the A-300 → A-1000 under-rack aisle. HOLD: combined pipe reactions, lateral stability, guide/anchor loads, connection strength and foundations; entrance portal span, deflection and lateral/seismic load paths require calculation before construction.",
+   "action": "Size the portal members, deflection, lateral / seismic restraint, connections and foundations with the combined pipe reactions before any construction release.",
+   "evidence": [
+    {
+     "kind": "rack",
+     "id": "PR-A5000-T002",
+     "label": "Rack PR-A5000-T002 · 46 bearings",
+     "href": "#portals"
+    },
+    {
+     "kind": "route",
+     "id": "wash-wastewater",
+     "label": "Route A-300 → A-1000 under-rack aisle · 44.6 m · 0 obstructions · release HOLD",
+     "href": "#routes-current"
+    },
+    {
+     "kind": "page",
+     "id": "A-5000",
+     "label": "A-5000 review model engineer",
+     "href": "./a5000-review.html"
+    }
+   ]
+  },
+  {
+   "id": "LAY-06",
+   "topic": "Thermal continuity and A-5000 maintenance spaces",
+   "status": "Model paths available — heating medium unselected",
+   "priority": "medium",
+   "discipline": "Process / utilities",
+   "observation": "20 of 21 illustrated thermal paths are available (HX-601: PFD typical dryer air inlet 140–145 °C; outlet 80–90 °C). 23 A-5000 maintenance and operating spaces registered, 0 obstruction envelopes.",
+   "action": "Close the HX-601 heating-medium selection (REP-016 HOLD-5) and the fourth ≥ 200 °C utility loop (REP-043) so the A-5000 → A-600 path can be connected and its access spaces confirmed with vendor envelopes.",
+   "evidence": [
+    {
+     "kind": "decision",
+     "id": "D-A600-03",
+     "label": "D-A600-03 (A-600, QFL 2026-09-20): Readiness status recorded as the controlling statement for A-600 procurement.",
+     "href": "./semantic-core.html#area-A-600"
+    },
+    {
+     "kind": "decision",
+     "id": "D-A5000-01",
+     "label": "D-A5000-01 (A-5000, QFL 2026-09-20): Four utility loops, not three (REP-043): add a ≥ 200 °C steam / thermal-oil loop for HX-601, the acid concentrator and R-141 heat-up; keep hot water, cooling wa…",
+     "href": "./semantic-core.html#area-A-5000"
+    },
+    {
+     "kind": "finding",
+     "id": "A600-01",
+     "label": "A600-01 · Dryer readiness — twelve REP-016 holds — NOT READY for vendor inquiry (A-600 review r2 · QFL)",
+     "href": "./a600-review.html#A600-01"
+    },
+    {
+     "kind": "page",
+     "id": "A-5000",
+     "label": "A-5000 review model engineer",
+     "href": "./a5000-review.html"
+    }
+   ]
+  },
+  {
+   "id": "LAY-07",
+   "topic": "Supports are provisional plant-wide",
+   "status": "Provisional geometry — vendor loads unverified",
+   "priority": "low",
+   "discipline": "Structural",
+   "observation": "3802 modelled bearings, 590 support columns and 14.01 km of member envelope on the current model; 1094 pipe elements are attached on calculation hold and none is structurally qualified. Skids, frames and towers added since the published report (A-900 V163, A-3000 rebuild) carry the same provisional status.",
+   "action": "Collect vendor loads and anchor patterns; calculate spans, pipe stress, guide / anchor reactions, steel, bracing, connections and foundations (WorkSafeBC 4.2 / 4.3, BC Building Code).",
+   "evidence": [
+    {
+     "kind": "finding",
+     "id": "A900-07",
+     "label": "A900-07 · Layout, supports and access — Provisional geometry — vendor loads unverified (A-900 review r2 · QFL)",
+     "href": "./a900-review.html#A900-07"
+    },
+    {
+     "kind": "finding",
+     "id": "A600-06",
+     "label": "A600-06 · Access, maintenance and fire points — Model access provided — qualification open (A-600 review r2 · QFL)",
+     "href": "./a600-review.html#A600-06"
+    },
+    {
+     "kind": "finding",
+     "id": "A800-07",
+     "label": "A800-07 · Access, reactive inventory and fire points — Model access provided — qualification open (A-800 review r2 · QFL)",
+     "href": "./a800-review.html#A800-07"
+    },
+    {
+     "kind": "finding",
+     "id": "A1000-05",
+     "label": "A1000-05 · Containment, access and inbound interfaces — Model provision — retention unverified (A-1000 review r2 · QFL)",
+     "href": "./a1000-review.html#A1000-05"
+    },
+    {
+     "kind": "finding",
+     "id": "A140-05",
+     "label": "A140-05 · Independent containment and access — Model provision — retention unverified (A-140 review r2 · QFL)",
+     "href": "./a140-review.html#A140-05"
+    },
+    {
+     "kind": "core",
+     "id": "semantic-core",
+     "label": "Semantic Plant Core",
+     "href": "./semantic-core.html"
+    }
+   ]
+  },
+  {
+   "id": "LAY-08",
+   "topic": "Published gate report no longer regenerates",
+   "status": "Open — model engineer",
+   "priority": "high",
+   "discipline": "Model management",
+   "observation": "tests/validate-corridors.mjs fails on the current model against the corridors-v84 fixture (pipe-geometry and component signatures, previously attached elements, reserved-space intrusions and undeclared pedestrian overlaps), so dist/layout-review.json stays at bc-corridors-85 (2026-09-12) and is not refreshed by the release checks. Current-model figures differ: supports 3783 → 3802, holds 316 → 271, columns 593 → 590.",
+   "action": "Model engineer to rebaseline tests/fixtures/corridors-v84.json to the current model once LAY-02 and LAY-03 are corrected, then regenerate the gate report; this refresh remains the interim record.",
+   "evidence": [
+    {
+     "kind": "doc",
+     "id": "tests/validate-corridors.mjs",
+     "label": "tests/validate-corridors.mjs",
+     "href": "https://github.com/quakfoolee-dotcom/rGO_3D_Plant_Model/blob/main/tests/validate-corridors.mjs"
+    },
+    {
+     "kind": "doc",
+     "id": "tests/fixtures/corridors-v84.json",
+     "label": "tests/fixtures/corridors-v84.json",
+     "href": "https://github.com/quakfoolee-dotcom/rGO_3D_Plant_Model/blob/main/tests/fixtures/corridors-v84.json"
+    },
+    {
+     "kind": "doc",
+     "id": "docs/bc-forklift-corridor-handoff.md",
+     "label": "docs/bc-forklift-corridor-handoff.md",
+     "href": "https://github.com/quakfoolee-dotcom/rGO_3D_Plant_Model/blob/main/docs/bc-forklift-corridor-handoff.md"
+    }
+   ]
+  }
+ ]
+}
