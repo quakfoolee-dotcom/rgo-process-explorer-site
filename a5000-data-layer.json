@@ -1,0 +1,2313 @@
+{
+ "area": "A-5000",
+ "version": "3f73aff",
+ "date": "2026-09-22",
+ "revision": "r2",
+ "reviewer": {
+  "initials": "QFL",
+  "date": "2026-09-22"
+ },
+ "lead": "The engineering content of this page — the thermal projections, the PFD temperature register, the fluid-separation and consumer tables and the heat balance — is the model engineer’s and is unchanged. This section adds the data-layer record for A-5000: what is approved, what is in conflict, what is withdrawn and what is still missing, on the same basis as the other fifteen area reviews.",
+ "semanticCoreVersion": "1.19.0-foundation",
+ "counts": {
+  "assets": 47,
+  "values": 188,
+  "approved": 16,
+  "superseded": 12,
+  "conflictsOpen": 10,
+  "conflictsClosed": 10,
+  "decisions": 6,
+  "gapsOpen": 30,
+  "gapsClosed": 10,
+  "holds": 0,
+  "documents": 11
+ },
+ "approved": [
+  {
+   "valueId": "PV-A-5000-0161",
+   "assetId": "A-5100",
+   "property": "design.materialOfConstruction",
+   "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
+   "unit": null,
+   "source": "FEED-PE-MAT-002 V1.1",
+   "location": "'Selection Matrix'!row 69 (M-065)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20"
+  },
+  {
+   "valueId": "PV-A-5000-0163",
+   "assetId": "A-5110A",
+   "property": "design.materialOfConstruction",
+   "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
+   "unit": null,
+   "source": "FEED-PE-MAT-002 V1.1",
+   "location": "'Selection Matrix'!row 69 (M-065)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20"
+  },
+  {
+   "valueId": "PV-A-5000-0165",
+   "assetId": "A-5110B",
+   "property": "design.materialOfConstruction",
+   "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
+   "unit": null,
+   "source": "FEED-PE-MAT-002 V1.1",
+   "location": "'Selection Matrix'!row 69 (M-065)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20"
+  },
+  {
+   "valueId": "PV-A-5000-0167",
+   "assetId": "V-5110",
+   "property": "design.materialOfConstruction",
+   "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
+   "unit": null,
+   "source": "FEED-PE-MAT-002 V1.1",
+   "location": "'Selection Matrix'!row 69 (M-065)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20"
+  },
+  {
+   "valueId": "PV-A-5000-0169",
+   "assetId": "A-5200",
+   "property": "design.materialOfConstruction",
+   "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
+   "unit": null,
+   "source": "FEED-PE-MAT-002 V1.1",
+   "location": "'Selection Matrix'!row 69 (M-065)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20"
+  },
+  {
+   "valueId": "PV-A-5000-0171",
+   "assetId": "A-5210A",
+   "property": "design.materialOfConstruction",
+   "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
+   "unit": null,
+   "source": "FEED-PE-MAT-002 V1.1",
+   "location": "'Selection Matrix'!row 69 (M-065)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20"
+  },
+  {
+   "valueId": "PV-A-5000-0173",
+   "assetId": "A-5210B",
+   "property": "design.materialOfConstruction",
+   "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
+   "unit": null,
+   "source": "FEED-PE-MAT-002 V1.1",
+   "location": "'Selection Matrix'!row 69 (M-065)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20"
+  },
+  {
+   "valueId": "PV-A-5000-0175",
+   "assetId": "A-5300",
+   "property": "design.materialOfConstruction",
+   "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
+   "unit": null,
+   "source": "FEED-PE-MAT-002 V1.1",
+   "location": "'Selection Matrix'!row 69 (M-065)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20"
+  },
+  {
+   "valueId": "PV-A-5000-0177",
+   "assetId": "A-5310A",
+   "property": "design.materialOfConstruction",
+   "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
+   "unit": null,
+   "source": "FEED-PE-MAT-002 V1.1",
+   "location": "'Selection Matrix'!row 69 (M-065)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20"
+  },
+  {
+   "valueId": "PV-A-5000-0179",
+   "assetId": "A-5310B",
+   "property": "design.materialOfConstruction",
+   "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
+   "unit": null,
+   "source": "FEED-PE-MAT-002 V1.1",
+   "location": "'Selection Matrix'!row 69 (M-065)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20"
+  },
+  {
+   "valueId": "PV-A-5000-0181",
+   "assetId": "A-5100",
+   "property": "operatingEnvelope.supplyTemperatureC",
+   "value": "Hot water 80–95 °C as drawn; duties 'to be confirmed' — cannot serve HX-601, the concentrator or fast R-141 heat-up (≥ 160 °C needed, F-51)",
+   "unit": "°C",
+   "source": "FEED-PE-REP-043 V1.0",
+   "location": "Executive conclusion / basis table",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20"
+  },
+  {
+   "valueId": "PV-A-5000-0182",
+   "assetId": "A-5200",
+   "property": "operatingEnvelope.supplyTemperatureC",
+   "value": "Cooling water 25–30 °C as drawn; R-1001 ≈ 2 MW (Case 0) and E-701/E-801/E-702 loads",
+   "unit": "°C",
+   "source": "FEED-PE-REP-043 V1.0",
+   "location": "basis table",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20"
+  },
+  {
+   "valueId": "PV-A-5000-0183",
+   "assetId": "A-5300",
+   "property": "operatingEnvelope.supplyTemperatureC",
+   "value": "Chilled water 5–7 °C as drawn; the plant's exotherm control lives here — coincident load 2–3 of 4 R-201 reactors dosing (0.3–1 MW per reactor bounded, not known; calorimetry A-059 is the gating measurement) plus jacket chill-downs",
+   "unit": "°C",
+   "source": "FEED-PE-REP-043 V1.0",
+   "location": "Executive conclusion / basis table",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20"
+  },
+  {
+   "valueId": "PV-A-5000-0184",
+   "assetId": "A-5100",
+   "property": "identity.designConcept",
+   "value": "Four loops, not three: ≥ 200 °C steam / thermal-oil (3–7 MW at 5 wt % dryer feed; 15–20 MW if 1 wt % is retained), hot water, cooling water, chilled water — duties from Reports 021–042",
+   "unit": null,
+   "source": "FEED-PE-REP-043 V1.0",
+   "location": "Executive conclusion",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20"
+  },
+  {
+   "valueId": "PV-A-5000-0185",
+   "assetId": "A-5200",
+   "property": "identity.designConcept",
+   "value": "Four loops, not three: ≥ 200 °C steam / thermal-oil (3–7 MW at 5 wt % dryer feed; 15–20 MW if 1 wt % is retained), hot water, cooling water, chilled water — duties from Reports 021–042",
+   "unit": null,
+   "source": "FEED-PE-REP-043 V1.0",
+   "location": "Executive conclusion",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20"
+  },
+  {
+   "valueId": "PV-A-5000-0186",
+   "assetId": "A-5300",
+   "property": "identity.designConcept",
+   "value": "Four loops, not three: ≥ 200 °C steam / thermal-oil (3–7 MW at 5 wt % dryer feed; 15–20 MW if 1 wt % is retained), hot water, cooling water, chilled water — duties from Reports 021–042",
+   "unit": null,
+   "source": "FEED-PE-REP-043 V1.0",
+   "location": "Executive conclusion",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20"
+  }
+ ],
+ "conflicts": {
+  "open": [
+   {
+    "group": "WV-icCriticality-A-5100",
+    "assetId": "A-5100",
+    "property": "control.icCriticality",
+    "rows": [
+     {
+      "valueId": "PV-A-5000-0021",
+      "value": "High",
+      "unit": null,
+      "status": "variant",
+      "source": "FEED-PE-LST-007 V1.0",
+      "location": "'02_Equipment_Control'!row 151"
+     },
+     {
+      "valueId": "PV-A-5000-0065",
+      "value": "High — header pressure/temperature/flow or dew point plus availability/low-pressure alarms protect critical users.",
+      "unit": null,
+      "status": "variant",
+      "source": "FEED-PE-MDL-001 V1.8",
+      "location": "'Equipment Scale-Up Register'!row 146"
+     }
+    ]
+   },
+   {
+    "group": "WV-icCriticality-A-5110A",
+    "assetId": "A-5110A",
+    "property": "control.icCriticality",
+    "rows": [
+     {
+      "valueId": "PV-A-5000-0024",
+      "value": "Medium",
+      "unit": null,
+      "status": "variant",
+      "source": "FEED-PE-LST-007 V1.0",
+      "location": "'02_Equipment_Control'!row 152"
+     },
+     {
+      "valueId": "PV-A-5000-0075",
+      "value": "Medium — level/flow/pressure/status indication and alarms appropriate to the equipment criticality.",
+      "unit": null,
+      "status": "variant",
+      "source": "FEED-PE-MDL-001 V1.8",
+      "location": "'Equipment Scale-Up Register'!row 147"
+     }
+    ]
+   },
+   {
+    "group": "WV-icCriticality-A-5110B",
+    "assetId": "A-5110B",
+    "property": "control.icCriticality",
+    "rows": [
+     {
+      "valueId": "PV-A-5000-0027",
+      "value": "Medium",
+      "unit": null,
+      "status": "variant",
+      "source": "FEED-PE-LST-007 V1.0",
+      "location": "'02_Equipment_Control'!row 152"
+     },
+     {
+      "valueId": "PV-A-5000-0085",
+      "value": "Medium — level/flow/pressure/status indication and alarms appropriate to the equipment criticality.",
+      "unit": null,
+      "status": "variant",
+      "source": "FEED-PE-MDL-001 V1.8",
+      "location": "'Equipment Scale-Up Register'!row 147"
+     }
+    ]
+   },
+   {
+    "group": "WV-icCriticality-A-5200",
+    "assetId": "A-5200",
+    "property": "control.icCriticality",
+    "rows": [
+     {
+      "valueId": "PV-A-5000-0033",
+      "value": "High",
+      "unit": null,
+      "status": "variant",
+      "source": "FEED-PE-LST-007 V1.0",
+      "location": "'02_Equipment_Control'!row 154"
+     },
+     {
+      "valueId": "PV-A-5000-0105",
+      "value": "High — header pressure/temperature/flow or dew point plus availability/low-pressure alarms protect critical users.",
+      "unit": null,
+      "status": "variant",
+      "source": "FEED-PE-MDL-001 V1.8",
+      "location": "'Equipment Scale-Up Register'!row 150"
+     }
+    ]
+   },
+   {
+    "group": "WV-icCriticality-A-5210A",
+    "assetId": "A-5210A",
+    "property": "control.icCriticality",
+    "rows": [
+     {
+      "valueId": "PV-A-5000-0036",
+      "value": "Medium",
+      "unit": null,
+      "status": "variant",
+      "source": "FEED-PE-LST-007 V1.0",
+      "location": "'02_Equipment_Control'!row 155"
+     },
+     {
+      "valueId": "PV-A-5000-0115",
+      "value": "Medium — level/flow/pressure/status indication and alarms appropriate to the equipment criticality.",
+      "unit": null,
+      "status": "variant",
+      "source": "FEED-PE-MDL-001 V1.8",
+      "location": "'Equipment Scale-Up Register'!row 151"
+     }
+    ]
+   },
+   {
+    "group": "WV-icCriticality-A-5210B",
+    "assetId": "A-5210B",
+    "property": "control.icCriticality",
+    "rows": [
+     {
+      "valueId": "PV-A-5000-0039",
+      "value": "Medium",
+      "unit": null,
+      "status": "variant",
+      "source": "FEED-PE-LST-007 V1.0",
+      "location": "'02_Equipment_Control'!row 155"
+     },
+     {
+      "valueId": "PV-A-5000-0125",
+      "value": "Medium — level/flow/pressure/status indication and alarms appropriate to the equipment criticality.",
+      "unit": null,
+      "status": "variant",
+      "source": "FEED-PE-MDL-001 V1.8",
+      "location": "'Equipment Scale-Up Register'!row 151"
+     }
+    ]
+   },
+   {
+    "group": "WV-icCriticality-A-5300",
+    "assetId": "A-5300",
+    "property": "control.icCriticality",
+    "rows": [
+     {
+      "valueId": "PV-A-5000-0042",
+      "value": "High",
+      "unit": null,
+      "status": "variant",
+      "source": "FEED-PE-LST-007 V1.0",
+      "location": "'02_Equipment_Control'!row 156"
+     },
+     {
+      "valueId": "PV-A-5000-0135",
+      "value": "High — header pressure/temperature/flow or dew point plus availability/low-pressure alarms protect critical users.",
+      "unit": null,
+      "status": "variant",
+      "source": "FEED-PE-MDL-001 V1.8",
+      "location": "'Equipment Scale-Up Register'!row 153"
+     }
+    ]
+   },
+   {
+    "group": "WV-icCriticality-A-5310A",
+    "assetId": "A-5310A",
+    "property": "control.icCriticality",
+    "rows": [
+     {
+      "valueId": "PV-A-5000-0045",
+      "value": "Medium",
+      "unit": null,
+      "status": "variant",
+      "source": "FEED-PE-LST-007 V1.0",
+      "location": "'02_Equipment_Control'!row 157"
+     },
+     {
+      "valueId": "PV-A-5000-0145",
+      "value": "Medium — level/flow/pressure/status indication and alarms appropriate to the equipment criticality.",
+      "unit": null,
+      "status": "variant",
+      "source": "FEED-PE-MDL-001 V1.8",
+      "location": "'Equipment Scale-Up Register'!row 154"
+     }
+    ]
+   },
+   {
+    "group": "WV-icCriticality-A-5310B",
+    "assetId": "A-5310B",
+    "property": "control.icCriticality",
+    "rows": [
+     {
+      "valueId": "PV-A-5000-0048",
+      "value": "Medium",
+      "unit": null,
+      "status": "variant",
+      "source": "FEED-PE-LST-007 V1.0",
+      "location": "'02_Equipment_Control'!row 157"
+     },
+     {
+      "valueId": "PV-A-5000-0155",
+      "value": "Medium — level/flow/pressure/status indication and alarms appropriate to the equipment criticality.",
+      "unit": null,
+      "status": "variant",
+      "source": "FEED-PE-MDL-001 V1.8",
+      "location": "'Equipment Scale-Up Register'!row 154"
+     }
+    ]
+   },
+   {
+    "group": "WV-icCriticality-V-5110",
+    "assetId": "V-5110",
+    "property": "control.icCriticality",
+    "rows": [
+     {
+      "valueId": "PV-A-5000-0030",
+      "value": "Medium",
+      "unit": null,
+      "status": "variant",
+      "source": "FEED-PE-LST-007 V1.0",
+      "location": "'02_Equipment_Control'!row 153"
+     },
+     {
+      "valueId": "PV-A-5000-0095",
+      "value": "Medium — level/flow/pressure/status indication and alarms appropriate to the equipment criticality.",
+      "unit": null,
+      "status": "variant",
+      "source": "FEED-PE-MDL-001 V1.8",
+      "location": "'Equipment Scale-Up Register'!row 149"
+     }
+    ]
+   }
+  ],
+  "closed": [
+   {
+    "group": "CF-materialOfConstruc-A-5100",
+    "assetId": "A-5100",
+    "property": "design.materialOfConstruction",
+    "rows": [
+     {
+      "valueId": "PV-A-5000-0063",
+      "value": "Carbon-steel closed-loop piping/vessels; 304L SS or copper-alloy heat-transfer surfaces selected for water chemistry; EPDM seals.",
+      "unit": null,
+      "status": "superseded",
+      "source": "FEED-PE-MDL-001 V1.8",
+      "location": "'Equipment Scale-Up Register'!row 146"
+     },
+     {
+      "valueId": "PV-A-5000-0161",
+      "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
+      "unit": null,
+      "status": "approved",
+      "source": "FEED-PE-MAT-002 V1.1",
+      "location": "'Selection Matrix'!row 69 (M-065)"
+     }
+    ]
+   },
+   {
+    "group": "CF-materialOfConstruc-A-5110A",
+    "assetId": "A-5110A",
+    "property": "design.materialOfConstruction",
+    "rows": [
+     {
+      "valueId": "PV-A-5000-0073",
+      "value": "Ductile-iron/cast-iron pump casing; bronze or 304L SS impeller/shaft; SiC/EPDM mechanical seal.",
+      "unit": null,
+      "status": "superseded",
+      "source": "FEED-PE-MDL-001 V1.8",
+      "location": "'Equipment Scale-Up Register'!row 147"
+     },
+     {
+      "valueId": "PV-A-5000-0163",
+      "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
+      "unit": null,
+      "status": "approved",
+      "source": "FEED-PE-MAT-002 V1.1",
+      "location": "'Selection Matrix'!row 69 (M-065)"
+     }
+    ]
+   },
+   {
+    "group": "CF-materialOfConstruc-A-5110B",
+    "assetId": "A-5110B",
+    "property": "design.materialOfConstruction",
+    "rows": [
+     {
+      "valueId": "PV-A-5000-0083",
+      "value": "Ductile-iron/cast-iron pump casing; bronze or 304L SS impeller/shaft; SiC/EPDM mechanical seal.",
+      "unit": null,
+      "status": "superseded",
+      "source": "FEED-PE-MDL-001 V1.8",
+      "location": "'Equipment Scale-Up Register'!row 147"
+     },
+     {
+      "valueId": "PV-A-5000-0165",
+      "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
+      "unit": null,
+      "status": "approved",
+      "source": "FEED-PE-MAT-002 V1.1",
+      "location": "'Selection Matrix'!row 69 (M-065)"
+     }
+    ]
+   },
+   {
+    "group": "CF-materialOfConstruc-A-5200",
+    "assetId": "A-5200",
+    "property": "design.materialOfConstruction",
+    "rows": [
+     {
+      "valueId": "PV-A-5000-0103",
+      "value": "Carbon-steel closed-loop piping/vessels with corrosion-control treatment; 304L SS or copper-alloy heat-transfer surfaces selected for water chemistry; EPDM seals.",
+      "unit": null,
+      "status": "superseded",
+      "source": "FEED-PE-MDL-001 V1.8",
+      "location": "'Equipment Scale-Up Register'!row 150"
+     },
+     {
+      "valueId": "PV-A-5000-0169",
+      "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
+      "unit": null,
+      "status": "approved",
+      "source": "FEED-PE-MAT-002 V1.1",
+      "location": "'Selection Matrix'!row 69 (M-065)"
+     }
+    ]
+   },
+   {
+    "group": "CF-materialOfConstruc-A-5210A",
+    "assetId": "A-5210A",
+    "property": "design.materialOfConstruction",
+    "rows": [
+     {
+      "valueId": "PV-A-5000-0113",
+      "value": "Ductile-iron/cast-iron pump casing; bronze or 304L SS impeller/shaft; SiC/EPDM mechanical seal.",
+      "unit": null,
+      "status": "superseded",
+      "source": "FEED-PE-MDL-001 V1.8",
+      "location": "'Equipment Scale-Up Register'!row 151"
+     },
+     {
+      "valueId": "PV-A-5000-0171",
+      "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
+      "unit": null,
+      "status": "approved",
+      "source": "FEED-PE-MAT-002 V1.1",
+      "location": "'Selection Matrix'!row 69 (M-065)"
+     }
+    ]
+   },
+   {
+    "group": "CF-materialOfConstruc-A-5210B",
+    "assetId": "A-5210B",
+    "property": "design.materialOfConstruction",
+    "rows": [
+     {
+      "valueId": "PV-A-5000-0123",
+      "value": "Ductile-iron/cast-iron pump casing; bronze or 304L SS impeller/shaft; SiC/EPDM mechanical seal.",
+      "unit": null,
+      "status": "superseded",
+      "source": "FEED-PE-MDL-001 V1.8",
+      "location": "'Equipment Scale-Up Register'!row 151"
+     },
+     {
+      "valueId": "PV-A-5000-0173",
+      "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
+      "unit": null,
+      "status": "approved",
+      "source": "FEED-PE-MAT-002 V1.1",
+      "location": "'Selection Matrix'!row 69 (M-065)"
+     }
+    ]
+   },
+   {
+    "group": "CF-materialOfConstruc-A-5300",
+    "assetId": "A-5300",
+    "property": "design.materialOfConstruction",
+    "rows": [
+     {
+      "valueId": "PV-A-5000-0133",
+      "value": "Carbon-steel closed-loop piping/vessels; 304L SS or copper-alloy heat-transfer surfaces; EPDM seals rated for chilled-water service.",
+      "unit": null,
+      "status": "superseded",
+      "source": "FEED-PE-MDL-001 V1.8",
+      "location": "'Equipment Scale-Up Register'!row 153"
+     },
+     {
+      "valueId": "PV-A-5000-0175",
+      "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
+      "unit": null,
+      "status": "approved",
+      "source": "FEED-PE-MAT-002 V1.1",
+      "location": "'Selection Matrix'!row 69 (M-065)"
+     }
+    ]
+   },
+   {
+    "group": "CF-materialOfConstruc-A-5310A",
+    "assetId": "A-5310A",
+    "property": "design.materialOfConstruction",
+    "rows": [
+     {
+      "valueId": "PV-A-5000-0143",
+      "value": "Ductile-iron/cast-iron pump casing; bronze or 304L SS impeller/shaft; SiC/EPDM mechanical seal.",
+      "unit": null,
+      "status": "superseded",
+      "source": "FEED-PE-MDL-001 V1.8",
+      "location": "'Equipment Scale-Up Register'!row 154"
+     },
+     {
+      "valueId": "PV-A-5000-0177",
+      "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
+      "unit": null,
+      "status": "approved",
+      "source": "FEED-PE-MAT-002 V1.1",
+      "location": "'Selection Matrix'!row 69 (M-065)"
+     }
+    ]
+   },
+   {
+    "group": "CF-materialOfConstruc-A-5310B",
+    "assetId": "A-5310B",
+    "property": "design.materialOfConstruction",
+    "rows": [
+     {
+      "valueId": "PV-A-5000-0153",
+      "value": "Ductile-iron/cast-iron pump casing; bronze or 304L SS impeller/shaft; SiC/EPDM mechanical seal.",
+      "unit": null,
+      "status": "superseded",
+      "source": "FEED-PE-MDL-001 V1.8",
+      "location": "'Equipment Scale-Up Register'!row 154"
+     },
+     {
+      "valueId": "PV-A-5000-0179",
+      "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
+      "unit": null,
+      "status": "approved",
+      "source": "FEED-PE-MAT-002 V1.1",
+      "location": "'Selection Matrix'!row 69 (M-065)"
+     }
+    ]
+   },
+   {
+    "group": "CF-materialOfConstruc-V-5110",
+    "assetId": "V-5110",
+    "property": "design.materialOfConstruction",
+    "rows": [
+     {
+      "valueId": "PV-A-5000-0093",
+      "value": "ASME carbon-steel expansion vessel with EPDM bladder/diaphragm and corrosion allowance.",
+      "unit": null,
+      "status": "superseded",
+      "source": "FEED-PE-MDL-001 V1.8",
+      "location": "'Equipment Scale-Up Register'!row 149"
+     },
+     {
+      "valueId": "PV-A-5000-0167",
+      "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
+      "unit": null,
+      "status": "approved",
+      "source": "FEED-PE-MAT-002 V1.1",
+      "location": "'Selection Matrix'!row 69 (M-065)"
+     }
+    ]
+   }
+  ]
+ },
+ "superseded": [
+  {
+   "valueId": "PV-A-5000-0063",
+   "assetId": "A-5100",
+   "property": "design.materialOfConstruction",
+   "value": "Carbon-steel closed-loop piping/vessels; 304L SS or copper-alloy heat-transfer surfaces selected for water chemistry; EPDM seals.",
+   "source": "FEED-PE-MDL-001 V1.8"
+  },
+  {
+   "valueId": "PV-A-5000-0073",
+   "assetId": "A-5110A",
+   "property": "design.materialOfConstruction",
+   "value": "Ductile-iron/cast-iron pump casing; bronze or 304L SS impeller/shaft; SiC/EPDM mechanical seal.",
+   "source": "FEED-PE-MDL-001 V1.8"
+  },
+  {
+   "valueId": "PV-A-5000-0083",
+   "assetId": "A-5110B",
+   "property": "design.materialOfConstruction",
+   "value": "Ductile-iron/cast-iron pump casing; bronze or 304L SS impeller/shaft; SiC/EPDM mechanical seal.",
+   "source": "FEED-PE-MDL-001 V1.8"
+  },
+  {
+   "valueId": "PV-A-5000-0093",
+   "assetId": "V-5110",
+   "property": "design.materialOfConstruction",
+   "value": "ASME carbon-steel expansion vessel with EPDM bladder/diaphragm and corrosion allowance.",
+   "source": "FEED-PE-MDL-001 V1.8"
+  },
+  {
+   "valueId": "PV-A-5000-0103",
+   "assetId": "A-5200",
+   "property": "design.materialOfConstruction",
+   "value": "Carbon-steel closed-loop piping/vessels with corrosion-control treatment; 304L SS or copper-alloy heat-transfer surfaces selected for water chemistry; EPDM seals.",
+   "source": "FEED-PE-MDL-001 V1.8"
+  },
+  {
+   "valueId": "PV-A-5000-0113",
+   "assetId": "A-5210A",
+   "property": "design.materialOfConstruction",
+   "value": "Ductile-iron/cast-iron pump casing; bronze or 304L SS impeller/shaft; SiC/EPDM mechanical seal.",
+   "source": "FEED-PE-MDL-001 V1.8"
+  },
+  {
+   "valueId": "PV-A-5000-0123",
+   "assetId": "A-5210B",
+   "property": "design.materialOfConstruction",
+   "value": "Ductile-iron/cast-iron pump casing; bronze or 304L SS impeller/shaft; SiC/EPDM mechanical seal.",
+   "source": "FEED-PE-MDL-001 V1.8"
+  },
+  {
+   "valueId": "PV-A-5000-0133",
+   "assetId": "A-5300",
+   "property": "design.materialOfConstruction",
+   "value": "Carbon-steel closed-loop piping/vessels; 304L SS or copper-alloy heat-transfer surfaces; EPDM seals rated for chilled-water service.",
+   "source": "FEED-PE-MDL-001 V1.8"
+  },
+  {
+   "valueId": "PV-A-5000-0143",
+   "assetId": "A-5310A",
+   "property": "design.materialOfConstruction",
+   "value": "Ductile-iron/cast-iron pump casing; bronze or 304L SS impeller/shaft; SiC/EPDM mechanical seal.",
+   "source": "FEED-PE-MDL-001 V1.8"
+  },
+  {
+   "valueId": "PV-A-5000-0153",
+   "assetId": "A-5310B",
+   "property": "design.materialOfConstruction",
+   "value": "Ductile-iron/cast-iron pump casing; bronze or 304L SS impeller/shaft; SiC/EPDM mechanical seal.",
+   "source": "FEED-PE-MDL-001 V1.8"
+  },
+  {
+   "valueId": "PV-A-5000-0187",
+   "assetId": "TCU-201",
+   "property": "design.dutyBasis",
+   "value": "R-201 jacket service: CAL-011 590–629 kW peak per reactor (withdrawn basis, D-A200-01) vs REP-035 feed-limited ≈ 120–180 kW peak; batch enthalpy 1.5–6.8 GJ (two bounds)",
+   "source": "FEED-PE-REP-043 V1.0"
+  },
+  {
+   "valueId": "PV-A-5000-0188",
+   "assetId": "TCU-303",
+   "property": "design.dutyBasis",
+   "value": "T-303 service: 35 kW average / 211 kW peak (MEB-006, H₂O₂ only) vs 1.7–2.3 MW Option B dilution cooler (REP-037) — see D-A300-01",
+   "source": "FEED-PE-REP-043 V1.0"
+  }
+ ],
+ "decisions": [
+  {
+   "decisionId": "D-A5000-MOC",
+   "assetPattern": "A-5100|A-5110A|A-5110B|A-5200|A-5210A|A-5210B|A-5300|A-5310A|A-5310B|V-5110",
+   "property": "design.materialOfConstruction",
+   "approvedSourceDocId": "FEED-PE-MAT-002",
+   "approvedValue": null,
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "rationale": "Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+   "gapNote": null
+  },
+  {
+   "decisionId": "D-A5000-01",
+   "assetPattern": "A-5100|A-5200|A-5300",
+   "property": "identity.designConcept",
+   "approvedSourceDocId": "FEED-PE-REP-043",
+   "approvedValue": null,
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "rationale": "Four utility loops, not three (REP-043): add a ≥ 200 °C steam / thermal-oil loop for HX-601, the acid concentrator and R-141 heat-up; keep hot water, cooling water, chilled water.",
+   "gapNote": "MoC on FEED-PFD-5000: add the ≥ 200 °C loop (A-5400 placeholder), move R-201 / R-303 exotherm control to chilled water, and derive all duties from the DBM V2.0 re-issued stream tables (D-A200-01, D-A300-01, D-A600-01); model the A-5000 packages (only TCU-201 / TCU-303 interfaces exist)."
+  },
+  {
+   "decisionId": "D-A5000-01",
+   "assetPattern": "A-5100",
+   "property": "operatingEnvelope.supplyTemperatureC",
+   "approvedSourceDocId": "FEED-PE-REP-043",
+   "approvedValue": null,
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "rationale": "Hot water 80–95 °C recorded as the as-drawn basis; insufficient for the ≥ 160 °C users (F-51).",
+   "gapNote": null
+  },
+  {
+   "decisionId": "D-A5000-01",
+   "assetPattern": "A-5200",
+   "property": "operatingEnvelope.supplyTemperatureC",
+   "approvedSourceDocId": "FEED-PE-REP-043",
+   "approvedValue": null,
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "rationale": "Cooling water 25–30 °C as drawn.",
+   "gapNote": null
+  },
+  {
+   "decisionId": "D-A5000-01",
+   "assetPattern": "A-5300",
+   "property": "operatingEnvelope.supplyTemperatureC",
+   "approvedSourceDocId": "FEED-PE-REP-043",
+   "approvedValue": null,
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "rationale": "Chilled water 5–7 °C as drawn; carries the reactor exotherm control (coincident 2–3 of 4 R-201 dosing); calorimetry A-059 is the gating measurement.",
+   "gapNote": null
+  },
+  {
+   "decisionId": "D-A5000-01",
+   "assetPattern": "TCU-201|TCU-303",
+   "property": "design.dutyBasis",
+   "approvedSourceDocId": "NONE",
+   "approvedValue": null,
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-20",
+   "rationale": "Jacket-service duties follow D-A200-01 (R-201 basis) and D-A300-01 (T-303 Option B) — not approved here.",
+   "gapNote": null
+  }
+ ],
+ "gaps": {
+  "open": [
+   {
+    "gapId": "GAP-A-5000-MV-e93313",
+    "assetId": "TCU-201",
+    "kind": "missing value",
+    "subject": "design.dutyKw",
+    "requiredSource": "Equipment datasheet",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-debc3b",
+    "assetId": "TCU-201",
+    "kind": "missing value",
+    "subject": "design.materialOfConstruction",
+    "requiredSource": "Equipment datasheet",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-d07b3d",
+    "assetId": "TCU-303",
+    "kind": "missing value",
+    "subject": "design.dutyKw",
+    "requiredSource": "Equipment datasheet",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-320b7d",
+    "assetId": "TCU-303",
+    "kind": "missing value",
+    "subject": "design.materialOfConstruction",
+    "requiredSource": "Equipment datasheet",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-70c448",
+    "assetId": "A-5110A",
+    "kind": "missing value",
+    "subject": "design.pumpType",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-4ab141",
+    "assetId": "A-5110A",
+    "kind": "missing value",
+    "subject": "design.ratedFlowM3h",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-64f318",
+    "assetId": "A-5110A",
+    "kind": "missing value",
+    "subject": "design.differentialHead",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-d09e3a",
+    "assetId": "A-5110B",
+    "kind": "missing value",
+    "subject": "design.pumpType",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-33de75",
+    "assetId": "A-5110B",
+    "kind": "missing value",
+    "subject": "design.ratedFlowM3h",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-4a97b9",
+    "assetId": "A-5110B",
+    "kind": "missing value",
+    "subject": "design.differentialHead",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-bcf835",
+    "assetId": "A-5210A",
+    "kind": "missing value",
+    "subject": "design.pumpType",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-131958",
+    "assetId": "A-5210A",
+    "kind": "missing value",
+    "subject": "design.ratedFlowM3h",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-89709e",
+    "assetId": "A-5210A",
+    "kind": "missing value",
+    "subject": "design.differentialHead",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-bf6f5a",
+    "assetId": "A-5210B",
+    "kind": "missing value",
+    "subject": "design.pumpType",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-523c1e",
+    "assetId": "A-5210B",
+    "kind": "missing value",
+    "subject": "design.ratedFlowM3h",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-e08d9f",
+    "assetId": "A-5210B",
+    "kind": "missing value",
+    "subject": "design.differentialHead",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-961750",
+    "assetId": "A-5310A",
+    "kind": "missing value",
+    "subject": "design.pumpType",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-f4d80e",
+    "assetId": "A-5310A",
+    "kind": "missing value",
+    "subject": "design.ratedFlowM3h",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-8a83d3",
+    "assetId": "A-5310A",
+    "kind": "missing value",
+    "subject": "design.differentialHead",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-352d2f",
+    "assetId": "A-5310B",
+    "kind": "missing value",
+    "subject": "design.pumpType",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-427128",
+    "assetId": "A-5310B",
+    "kind": "missing value",
+    "subject": "design.ratedFlowM3h",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-da33a6",
+    "assetId": "A-5310B",
+    "kind": "missing value",
+    "subject": "design.differentialHead",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-20c3a7",
+    "assetId": "TCU-141",
+    "kind": "missing value",
+    "subject": "design.dutyKw",
+    "requiredSource": "Equipment datasheet",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-79c50a",
+    "assetId": "TCU-141",
+    "kind": "missing value",
+    "subject": "design.materialOfConstruction",
+    "requiredSource": "Equipment datasheet",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-07b275",
+    "assetId": "TCU-1001",
+    "kind": "missing value",
+    "subject": "design.dutyKw",
+    "requiredSource": "Equipment datasheet",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-75f609",
+    "assetId": "TCU-1001",
+    "kind": "missing value",
+    "subject": "design.materialOfConstruction",
+    "requiredSource": "Equipment datasheet",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-DF-a52501",
+    "assetId": "A-5100|A-5200|A-5300",
+    "kind": "decision follow-up",
+    "subject": "identity.designConcept",
+    "requiredSource": "MoC on FEED-PFD-5000: add the ≥ 200 °C loop (A-5400 placeholder), move R-201 / R-303 exotherm control to chilled water, and derive all duties from the DBM V2.0 re-issued stream tables (D-A200-01, D-A300-01, D-A600-01); model the A-5000 packages (only TCU-201 / TCU-303 interfaces exist).",
+    "status": "open",
+    "note": "D-A5000-01"
+   },
+   {
+    "gapId": "GAP-A-5000-ID-c1cac2",
+    "assetId": "A-5000 in the 3D model",
+    "kind": "identity / naming conflict",
+    "subject": "Register packages A-5100 / A-5110 A/B / A-5200 / A-5210 A/B / A-5300 / A-5310 A/B / V-5110 (LST-001)",
+    "requiredSource": "Model: 25 A-5000 records are TCU-201 / TCU-303 jacket-service interfaces and IF-* boundaries; no package equipment",
+    "status": "open",
+    "note": "Utility packages unmodelled; duties TBC on every document"
+   },
+   {
+    "gapId": "GAP-A-5000-ID-d4928c",
+    "assetId": "Reactor cooling loop",
+    "kind": "identity / naming conflict",
+    "subject": "PFD: R-201 jackets on HWS/HWR (U201/U202 'From HWS')",
+    "requiredSource": "REP-043: exotherm control must be on chilled water",
+    "status": "open",
+    "note": "Utility identity for the R-201 jacket — same conflict as the A-200 identity gap"
+   },
+   {
+    "gapId": "GAP-A-5000-ID-1ebb96",
+    "assetId": "Missing ≥ 160 °C medium",
+    "kind": "identity / naming conflict",
+    "subject": "A-5000 as drawn: HW / CW / CHW only",
+    "requiredSource": "REP-043 F-51: steam or thermal oil required for HX-601, acid concentrator, R-141",
+    "status": "open",
+    "note": "Fourth loop to be added to PFD-5000"
+   }
+  ],
+  "closed": [
+   {
+    "gapId": "GAP-A-5000-CF-8049bb",
+    "assetId": "A-5100",
+    "kind": "conflict",
+    "subject": "design.materialOfConstruction",
+    "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+    "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+    "note": "CF-materialOfConstruc-A-5100"
+   },
+   {
+    "gapId": "GAP-A-5000-CF-b641fb",
+    "assetId": "A-5110A",
+    "kind": "conflict",
+    "subject": "design.materialOfConstruction",
+    "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+    "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+    "note": "CF-materialOfConstruc-A-5110A"
+   },
+   {
+    "gapId": "GAP-A-5000-CF-3d49a7",
+    "assetId": "A-5110B",
+    "kind": "conflict",
+    "subject": "design.materialOfConstruction",
+    "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+    "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+    "note": "CF-materialOfConstruc-A-5110B"
+   },
+   {
+    "gapId": "GAP-A-5000-CF-01e3b8",
+    "assetId": "V-5110",
+    "kind": "conflict",
+    "subject": "design.materialOfConstruction",
+    "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+    "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+    "note": "CF-materialOfConstruc-V-5110"
+   },
+   {
+    "gapId": "GAP-A-5000-CF-72e605",
+    "assetId": "A-5200",
+    "kind": "conflict",
+    "subject": "design.materialOfConstruction",
+    "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+    "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+    "note": "CF-materialOfConstruc-A-5200"
+   },
+   {
+    "gapId": "GAP-A-5000-CF-139586",
+    "assetId": "A-5210A",
+    "kind": "conflict",
+    "subject": "design.materialOfConstruction",
+    "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+    "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+    "note": "CF-materialOfConstruc-A-5210A"
+   },
+   {
+    "gapId": "GAP-A-5000-CF-373f91",
+    "assetId": "A-5210B",
+    "kind": "conflict",
+    "subject": "design.materialOfConstruction",
+    "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+    "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+    "note": "CF-materialOfConstruc-A-5210B"
+   },
+   {
+    "gapId": "GAP-A-5000-CF-d6b159",
+    "assetId": "A-5300",
+    "kind": "conflict",
+    "subject": "design.materialOfConstruction",
+    "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+    "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+    "note": "CF-materialOfConstruc-A-5300"
+   },
+   {
+    "gapId": "GAP-A-5000-CF-e9f928",
+    "assetId": "A-5310A",
+    "kind": "conflict",
+    "subject": "design.materialOfConstruction",
+    "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+    "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+    "note": "CF-materialOfConstruc-A-5310A"
+   },
+   {
+    "gapId": "GAP-A-5000-CF-ff5f96",
+    "assetId": "A-5310B",
+    "kind": "conflict",
+    "subject": "design.materialOfConstruction",
+    "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+    "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+    "note": "CF-materialOfConstruc-A-5310B"
+   }
+  ]
+ },
+ "gapsByAsset": [
+  {
+   "assetId": "A-5110A",
+   "gaps": 3,
+   "subjects": [
+    "design.pumpType",
+    "design.ratedFlowM3h",
+    "design.differentialHead"
+   ]
+  },
+  {
+   "assetId": "A-5110B",
+   "gaps": 3,
+   "subjects": [
+    "design.pumpType",
+    "design.ratedFlowM3h",
+    "design.differentialHead"
+   ]
+  },
+  {
+   "assetId": "A-5210A",
+   "gaps": 3,
+   "subjects": [
+    "design.pumpType",
+    "design.ratedFlowM3h",
+    "design.differentialHead"
+   ]
+  },
+  {
+   "assetId": "A-5210B",
+   "gaps": 3,
+   "subjects": [
+    "design.pumpType",
+    "design.ratedFlowM3h",
+    "design.differentialHead"
+   ]
+  },
+  {
+   "assetId": "A-5310A",
+   "gaps": 3,
+   "subjects": [
+    "design.pumpType",
+    "design.ratedFlowM3h",
+    "design.differentialHead"
+   ]
+  },
+  {
+   "assetId": "A-5310B",
+   "gaps": 3,
+   "subjects": [
+    "design.pumpType",
+    "design.ratedFlowM3h",
+    "design.differentialHead"
+   ]
+  },
+  {
+   "assetId": "TCU-141",
+   "gaps": 2,
+   "subjects": [
+    "design.dutyKw",
+    "design.materialOfConstruction"
+   ]
+  },
+  {
+   "assetId": "TCU-201",
+   "gaps": 2,
+   "subjects": [
+    "design.dutyKw",
+    "design.materialOfConstruction"
+   ]
+  },
+  {
+   "assetId": "TCU-303",
+   "gaps": 2,
+   "subjects": [
+    "design.dutyKw",
+    "design.materialOfConstruction"
+   ]
+  },
+  {
+   "assetId": "TCU-1001",
+   "gaps": 2,
+   "subjects": [
+    "design.dutyKw",
+    "design.materialOfConstruction"
+   ]
+  },
+  {
+   "assetId": "A-5000 in the 3D model",
+   "gaps": 1,
+   "subjects": [
+    "Register packages A-5100 / A-5110 A/B / A-5200 / A-5210 A/B / A-5300 / A-5310 A/B / V-5110 (LST-001)"
+   ]
+  },
+  {
+   "assetId": "A-5100|A-5200|A-5300",
+   "gaps": 1,
+   "subjects": [
+    "identity.designConcept"
+   ]
+  },
+  {
+   "assetId": "Missing ≥ 160 °C medium",
+   "gaps": 1,
+   "subjects": [
+    "A-5000 as drawn: HW / CW / CHW only"
+   ]
+  },
+  {
+   "assetId": "Reactor cooling loop",
+   "gaps": 1,
+   "subjects": [
+    "PFD: R-201 jackets on HWS/HWR (U201/U202 'From HWS')"
+   ]
+  }
+ ],
+ "assets": [
+  {
+   "assetId": "TCU-201",
+   "name": "Oxidation isolated cooling loop",
+   "assetClassId": "HeatExchanger",
+   "system": "Thermal Utility System",
+   "modelEquipmentId": "831",
+   "bound": true,
+   "identityStatus": "model tag; equipment-register reconciliation open",
+   "values": 1,
+   "approved": 0,
+   "gaps": 2
+  },
+  {
+   "assetId": "TCU-303",
+   "name": "Quench isolated cooling loop",
+   "assetClassId": "HeatExchanger",
+   "system": "Thermal Utility System",
+   "modelEquipmentId": "833",
+   "bound": true,
+   "identityStatus": "model tag; equipment-register reconciliation open",
+   "values": 1,
+   "approved": 0,
+   "gaps": 2
+  },
+  {
+   "assetId": "IF-A500-CWS",
+   "name": "Cooling supply boundary",
+   "assetClassId": "ExternalInterface",
+   "system": "A-500 sonication process context",
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "model-derived; tag qualification open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "IF-A500-CWR",
+   "name": "Cooling return boundary",
+   "assetClassId": "ExternalInterface",
+   "system": "A-500 sonication process context",
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "model-derived; tag qualification open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "IF-A500-UTILITY-VENT",
+   "name": "Separate cooling-utility vent boundary",
+   "assetClassId": "ExternalInterface",
+   "system": "A-500 sonication process context",
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "model-derived; tag qualification open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "IF-A500-UTILITY-DRAIN",
+   "name": "Separate cooling-utility drain boundary",
+   "assetClassId": "ExternalInterface",
+   "system": "A-500 sonication process context",
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "model-derived; tag qualification open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "IF-A600-HEAT-SUPPLY",
+   "name": "Heating supply; medium unselected",
+   "assetClassId": "ExternalInterface",
+   "system": "A-600 drying process context",
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "model-derived; tag qualification open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "IF-A600-HEAT-RETURN",
+   "name": "Separate heating return",
+   "assetClassId": "ExternalInterface",
+   "system": "A-600 drying process context",
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "model-derived; tag qualification open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "IF-A600-UTILITY-DRAIN",
+   "name": "Separate heater utility drain receiver",
+   "assetClassId": "ExternalInterface",
+   "system": "A-600 drying process context",
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "model-derived; tag qualification open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "IF-A700-E701-SUPPLY",
+   "name": "Off-gas cooler cooling supply",
+   "assetClassId": "ExternalInterface",
+   "system": "A-700 thermal-treatment process context",
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "model-derived; tag qualification open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "IF-A700-E701-RETURN",
+   "name": "Off-gas cooler cooling return",
+   "assetClassId": "ExternalInterface",
+   "system": "A-700 thermal-treatment process context",
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "model-derived; tag qualification open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "IF-A700-E702-SUPPLY",
+   "name": "Product cooler cooling supply",
+   "assetClassId": "ExternalInterface",
+   "system": "A-700 thermal-treatment process context",
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "model-derived; tag qualification open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "IF-A700-E702-RETURN",
+   "name": "Product cooler cooling return",
+   "assetClassId": "ExternalInterface",
+   "system": "A-700 thermal-treatment process context",
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "model-derived; tag qualification open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "IF-A800-PY801-SUPPLY",
+   "name": "PY801 Indirect cooling supply",
+   "assetClassId": "ExternalInterface",
+   "system": "A-800 doping and pyrolysis process context",
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "model-derived; tag qualification open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "IF-A800-PY801-RETURN",
+   "name": "PY801 Indirect cooling return",
+   "assetClassId": "ExternalInterface",
+   "system": "A-800 doping and pyrolysis process context",
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "model-derived; tag qualification open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "IF-A800-PY801-SUPPLY-DRAIN",
+   "name": "PY801 Isolated supply-panel utility drain",
+   "assetClassId": "ExternalInterface",
+   "system": "A-800 doping and pyrolysis process context",
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "model-derived; tag qualification open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "IF-A800-PY801-INLET-DRAIN",
+   "name": "PY801 Isolated cooling-inlet utility drain",
+   "assetClassId": "ExternalInterface",
+   "system": "A-800 doping and pyrolysis process context",
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "model-derived; tag qualification open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "IF-A800-PY801-RETURN-DRAIN",
+   "name": "PY801 Isolated return-pocket utility drain",
+   "assetClassId": "ExternalInterface",
+   "system": "A-800 doping and pyrolysis process context",
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "model-derived; tag qualification open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "IF-A800-E801-SUPPLY",
+   "name": "E801 Indirect cooling supply",
+   "assetClassId": "ExternalInterface",
+   "system": "A-800 doping and pyrolysis process context",
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "model-derived; tag qualification open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "IF-A800-E801-RETURN",
+   "name": "E801 Indirect cooling return",
+   "assetClassId": "ExternalInterface",
+   "system": "A-800 doping and pyrolysis process context",
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "model-derived; tag qualification open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "IF-A800-E801-SUPPLY-DRAIN",
+   "name": "E801 Isolated supply-panel utility drain",
+   "assetClassId": "ExternalInterface",
+   "system": "A-800 doping and pyrolysis process context",
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "model-derived; tag qualification open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "IF-A800-E801-INLET-DRAIN",
+   "name": "E801 Isolated cooling-inlet utility drain",
+   "assetClassId": "ExternalInterface",
+   "system": "A-800 doping and pyrolysis process context",
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "model-derived; tag qualification open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "IF-A800-E801-RETURN-DRAIN",
+   "name": "E801 Isolated return-pocket utility drain",
+   "assetClassId": "ExternalInterface",
+   "system": "A-800 doping and pyrolysis process context",
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "model-derived; tag qualification open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "IF-A1000-CWS",
+   "name": "Separate R-1001 cooling utility CWS",
+   "assetClassId": "ExternalInterface",
+   "system": "A-1000 wastewater treatment context",
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "model-derived; tag qualification open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "IF-A1000-CWR",
+   "name": "Separate R-1001 cooling utility CWR",
+   "assetClassId": "ExternalInterface",
+   "system": "A-1000 wastewater treatment context",
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "model-derived; tag qualification open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "A-5100",
+   "name": "Hot-water generation · electric-heater concept",
+   "assetClassId": "Package",
+   "system": "Thermal Utility System",
+   "modelEquipmentId": "800",
+   "bound": true,
+   "identityStatus": "model tag; equipment-register reconciliation open",
+   "values": 20,
+   "approved": 3,
+   "gaps": 0
+  },
+  {
+   "assetId": "A-5110A",
+   "name": "Hot-water circulation pump A",
+   "assetClassId": "Pump",
+   "system": "Thermal Utility System",
+   "modelEquipmentId": "801",
+   "bound": true,
+   "identityStatus": "model tag; equipment-register reconciliation open",
+   "values": 18,
+   "approved": 1,
+   "gaps": 3
+  },
+  {
+   "assetId": "A-5110B",
+   "name": "Hot-water circulation pump B",
+   "assetClassId": "Pump",
+   "system": "Thermal Utility System",
+   "modelEquipmentId": "802",
+   "bound": true,
+   "identityStatus": "model tag; equipment-register reconciliation open",
+   "values": 18,
+   "approved": 1,
+   "gaps": 3
+  },
+  {
+   "assetId": "V-5110",
+   "name": "Hot-water diaphragm expansion vessel",
+   "assetClassId": "Vessel",
+   "system": "Thermal Utility System",
+   "modelEquipmentId": "803",
+   "bound": true,
+   "identityStatus": "model tag; equipment-register reconciliation open",
+   "values": 18,
+   "approved": 1,
+   "gaps": 0
+  },
+  {
+   "assetId": "HD-5100",
+   "name": "Hot-water supply and return headers",
+   "assetClassId": "Header",
+   "system": "Thermal Utility System",
+   "modelEquipmentId": "804",
+   "bound": true,
+   "identityStatus": "model tag; equipment-register reconciliation open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "A-5200",
+   "name": "Closed-circuit evaporative fluid cooler",
+   "assetClassId": "Package",
+   "system": "Thermal Utility System",
+   "modelEquipmentId": "810",
+   "bound": true,
+   "identityStatus": "model tag; equipment-register reconciliation open",
+   "values": 20,
+   "approved": 3,
+   "gaps": 0
+  },
+  {
+   "assetId": "A-5210A",
+   "name": "Cooling-water circulation pump A",
+   "assetClassId": "Pump",
+   "system": "Thermal Utility System",
+   "modelEquipmentId": "811",
+   "bound": true,
+   "identityStatus": "model tag; equipment-register reconciliation open",
+   "values": 18,
+   "approved": 1,
+   "gaps": 3
+  },
+  {
+   "assetId": "A-5210B",
+   "name": "Cooling-water circulation pump B",
+   "assetClassId": "Pump",
+   "system": "Thermal Utility System",
+   "modelEquipmentId": "812",
+   "bound": true,
+   "identityStatus": "model tag; equipment-register reconciliation open",
+   "values": 18,
+   "approved": 1,
+   "gaps": 3
+  },
+  {
+   "assetId": "V-5210",
+   "name": "Cooling-water diaphragm expansion vessel",
+   "assetClassId": "Vessel",
+   "system": "Thermal Utility System",
+   "modelEquipmentId": "813",
+   "bound": true,
+   "identityStatus": "model tag; equipment-register reconciliation open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "HD-5200",
+   "name": "Cooling-water supply and return headers",
+   "assetClassId": "Header",
+   "system": "Thermal Utility System",
+   "modelEquipmentId": "814",
+   "bound": true,
+   "identityStatus": "model tag; equipment-register reconciliation open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "A-5300",
+   "name": "Air-cooled chiller package",
+   "assetClassId": "Package",
+   "system": "Thermal Utility System",
+   "modelEquipmentId": "820",
+   "bound": true,
+   "identityStatus": "model tag; equipment-register reconciliation open",
+   "values": 20,
+   "approved": 3,
+   "gaps": 0
+  },
+  {
+   "assetId": "A-5310A",
+   "name": "Chilled-water circulation pump A",
+   "assetClassId": "Pump",
+   "system": "Thermal Utility System",
+   "modelEquipmentId": "821",
+   "bound": true,
+   "identityStatus": "model tag; equipment-register reconciliation open",
+   "values": 18,
+   "approved": 1,
+   "gaps": 3
+  },
+  {
+   "assetId": "A-5310B",
+   "name": "Chilled-water circulation pump B",
+   "assetClassId": "Pump",
+   "system": "Thermal Utility System",
+   "modelEquipmentId": "822",
+   "bound": true,
+   "identityStatus": "model tag; equipment-register reconciliation open",
+   "values": 18,
+   "approved": 1,
+   "gaps": 3
+  },
+  {
+   "assetId": "V-5310",
+   "name": "Chilled-water diaphragm expansion vessel",
+   "assetClassId": "Vessel",
+   "system": "Thermal Utility System",
+   "modelEquipmentId": "823",
+   "bound": true,
+   "identityStatus": "model tag; equipment-register reconciliation open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "HD-5300",
+   "name": "Chilled-water supply and return headers",
+   "assetClassId": "Header",
+   "system": "Thermal Utility System",
+   "modelEquipmentId": "824",
+   "bound": true,
+   "identityStatus": "model tag; equipment-register reconciliation open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "TCU-141",
+   "name": "Pre-G isolated heating and cooling loop",
+   "assetClassId": "HeatExchanger",
+   "system": "Thermal Utility System",
+   "modelEquipmentId": "830",
+   "bound": true,
+   "identityStatus": "model tag; equipment-register reconciliation open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 2
+  },
+  {
+   "assetId": "TCU-1001",
+   "name": "Wastewater isolated cooling loop",
+   "assetClassId": "HeatExchanger",
+   "system": "Thermal Utility System",
+   "modelEquipmentId": "832",
+   "bound": true,
+   "identityStatus": "model tag; equipment-register reconciliation open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 2
+  },
+  {
+   "assetId": "CP-5000",
+   "name": "Thermal utility controls",
+   "assetClassId": "InstrumentAssembly",
+   "system": "Thermal Utility System",
+   "modelEquipmentId": "834",
+   "bound": true,
+   "identityStatus": "model tag; equipment-register reconciliation open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "TK-5111",
+   "name": "Hot-water buffer",
+   "assetClassId": "Vessel",
+   "system": "Thermal Utility System",
+   "modelEquipmentId": "835",
+   "bound": true,
+   "identityStatus": "model tag; equipment-register reconciliation open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "TK-5211",
+   "name": "Cooling-water buffer",
+   "assetClassId": "Vessel",
+   "system": "Thermal Utility System",
+   "modelEquipmentId": "836",
+   "bound": true,
+   "identityStatus": "model tag; equipment-register reconciliation open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "TK-5311",
+   "name": "Chilled-water buffer",
+   "assetClassId": "Vessel",
+   "system": "Thermal Utility System",
+   "modelEquipmentId": "837",
+   "bound": true,
+   "identityStatus": "model tag; equipment-register reconciliation open",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "A-5400",
+   "name": "Missing ≥ 200 °C steam / thermal-oil loop (REP-043 F-51: HX-601 2.9–15 MW, acid concentrator 1.5–4.4 MW, R-141 fast heat-up)",
+   "assetClassId": "UtilityPackage",
+   "system": null,
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "candidate-not-in-model",
+   "values": 0,
+   "approved": 0,
+   "gaps": 0
+  }
+ ],
+ "binding": {
+  "assets": 47,
+  "bound": 23,
+  "unbound": 24,
+  "interfaces": 23,
+  "withValues": 12
+ },
+ "documents": [
+  {
+   "documentId": "FEED-PE-LST-001",
+   "title": "Equipment and Stream Register",
+   "revision": "V5.1",
+   "docType": "LST",
+   "control": "controlled",
+   "tier": "A",
+   "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-LST-001_Equipment-and-Stream-Register_V5.1.xlsx",
+   "valueRows": "20"
+  },
+  {
+   "documentId": "FEED-PE-PFD-001",
+   "title": "Process Flow Diagram",
+   "revision": "V5.1.1",
+   "docType": "PFD",
+   "control": "controlled (Draft - IFR)",
+   "tier": "A",
+   "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-PFD-001_Process-Flow-Diagram_V5.1.1.pdf",
+   "valueRows": "0"
+  },
+  {
+   "documentId": "FEED-PE-LST-007",
+   "title": "Control and Instrumentation Loop Register",
+   "revision": "V1.0",
+   "docType": "LST",
+   "control": "controlled (conceptual)",
+   "tier": "A",
+   "file": "7 Piping and Instrumentation Diagrams (P&IDs)\\FEED-PE-LST-007_Control-and-Instrumentation-Loop-Register_V1.0.xlsx",
+   "valueRows": "40"
+  },
+  {
+   "documentId": "FEED-PE-MDL-001",
+   "title": "Equipment Scale-Up Study",
+   "revision": "V1.8",
+   "docType": "MDL",
+   "control": "controlled",
+   "tier": "A",
+   "file": "8 Equipment Design and Specifications\\FEED-PE-MDL-001_Equipment-Scale-Up-Study_V1.8.xlsx",
+   "valueRows": "100"
+  },
+  {
+   "documentId": "FEED-PE-MAT-002",
+   "title": "MOC Selection Matrix",
+   "revision": "V1.1",
+   "docType": "MAT",
+   "control": "controlled",
+   "tier": "A",
+   "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.1.xlsx",
+   "valueRows": "20"
+  },
+  {
+   "documentId": "FEED-PE-DBM-001",
+   "title": "Design Basis Memorandum",
+   "revision": "V2.0",
+   "docType": "DBM",
+   "control": "controlled (approved)",
+   "tier": "B",
+   "file": "3 Design Basis Memorandum (DBM)\\FEED-PE-DBM-001_Design-Basis-Memorandum_V2.0.docx",
+   "valueRows": "0"
+  },
+  {
+   "documentId": "MODEL",
+   "title": "rGO Process Explorer model and semantic core",
+   "revision": "semantic v1",
+   "docType": "MODEL",
+   "control": "model evidence only",
+   "tier": "A",
+   "file": "dist/semantic/v1 (scripts/generate-reactor-semantic.mjs, scripts/expand-*-semantic.mjs)",
+   "valueRows": "0"
+  },
+  {
+   "documentId": "FEED-PE-REP-038",
+   "title": "A-1000 / A-2000 Wastewater and Water Reclaim (first principles)",
+   "revision": "V1.0",
+   "docType": "REP",
+   "control": "controlled",
+   "tier": "B",
+   "file": "B. Technical Reports\\FEED-PE-REP-038_A-1000-A-2000-Wastewater-and-Water-Reclaim_V1.0.docx",
+   "valueRows": "0"
+  },
+  {
+   "documentId": "FEED-PE-REP-039",
+   "title": "Sulphuric Acid Recovery vs Neutralisation (cross-area)",
+   "revision": "V1.0",
+   "docType": "REP",
+   "control": "controlled",
+   "tier": "B",
+   "file": "B. Technical Reports\\FEED-PE-REP-039_Sulphuric-Acid-Recovery-vs-Neutralisation_V1.0.docx",
+   "valueRows": "0"
+  },
+  {
+   "documentId": "FEED-PE-REP-043",
+   "title": "Plant Utilities and Thermal Balance (A-5000 / A-6000 / A-4000)",
+   "revision": "V1.0",
+   "docType": "REP",
+   "control": "controlled",
+   "tier": "B",
+   "file": "B. Technical Reports\\FEED-PE-REP-043_Plant-Utilities-and-Thermal-Balance_V1.0.docx",
+   "valueRows": "8"
+  },
+  {
+   "documentId": "FEED-PE-REP-041",
+   "title": "Furnace Off-Gas and Vent Gas Assessment",
+   "revision": "V1.0",
+   "docType": "REP",
+   "control": "controlled",
+   "tier": "B",
+   "file": "B. Technical Reports\\FEED-PE-REP-041_Furnace-Off-Gas-and-Vent-Gas-Assessment_V1.0.docx",
+   "valueRows": "0"
+  }
+ ],
+ "layout": {
+  "version": "8bca31f",
+  "date": "2026-09-22",
+  "revision": "r2",
+  "reviewer": "QFL",
+  "supports": 973,
+  "holds": 11,
+  "placementElements": 11,
+  "reserved": 1,
+  "records": 87,
+  "findings": [
+   "LAY-01",
+   "LAY-02",
+   "LAY-05",
+   "LAY-06"
+  ]
+ },
+ "findings": [
+  {
+   "id": "A5000-01",
+   "topic": "Four utility loops, not three — the ≥ 200 °C medium is missing",
+   "status": "Design concept approved — model and PFD not yet updated",
+   "priority": "high",
+   "discipline": "Process / utilities",
+   "observation": "D-A5000-01 approves FEED-PE-REP-043 F-51: a fourth loop — ≥ 200 °C steam or thermal oil — is required for HX-601, the acid concentrator and R-141, and the exotherm control belongs on chilled water. The model and FEED-PFD-5000 still show three water circuits (HW 80–95 °C, CW 25–30 °C, CHW 5–7 °C), so the page sections below describe the as-drawn arrangement, not the approved concept. 16 approved values are applied on 12 assets.",
+   "action": "Raise the MoC on FEED-PFD-5000 to add the ≥ 200 °C loop (A-5400 placeholder), move the R-201 / T-303 exotherm control to chilled water, and re-issue the thermal balance; until then no heating duty above 95 °C may be shown as served.",
+   "evidence": [
+    {
+     "kind": "decision",
+     "id": "D-A5000-01",
+     "label": "D-A5000-01 (QFL 2026-09-20, FEED-PE-REP-043): Four utility loops, not three (REP-043): add a ≥ 200 °C steam / thermal-oil loop for HX-601, the acid concentrator and R-141 heat-up; keep hot water, …",
+     "href": "#a5000-decisions"
+    },
+    {
+     "kind": "value",
+     "id": "PV-A-5000-0184",
+     "label": "PV-A-5000-0184 · A-5100 identity.designConcept = Four loops, not three: ≥ 200 °C steam / thermal-oil (3–7 MW at 5 wt %  (FEED-PE-REP-043 V1.0)",
+     "href": "#a5000-approved"
+    },
+    {
+     "kind": "gap",
+     "id": "GAP-A-5000-ID-1ebb96",
+     "label": "GAP-A-5000-ID-1ebb96 · Missing ≥ 160 °C medium: A-5000 as drawn: HW / CW / CHW only (REP-043 F-51: steam or thermal oil required for HX-601, acid)",
+     "href": "#a5000-gaps"
+    },
+    {
+     "kind": "gap",
+     "id": "GAP-A-5000-DF-a52501",
+     "label": "GAP-A-5000-DF-a52501 · A-5100|A-5200|A-5300: identity.designConcept (MoC on FEED-PFD-5000: add the ≥ 200 °C loop (A-5400 placehol)",
+     "href": "#a5000-gaps"
+    },
+    {
+     "kind": "document",
+     "id": "FEED-PE-REP-043",
+     "label": "FEED-PE-REP-043 V1.0 · Plant Utilities and Thermal Balance (A-5000 / A-6000 / A-4000) (controlled)",
+     "href": "#a5000-documents"
+    }
+   ]
+  },
+  {
+   "id": "A5000-02",
+   "topic": "R-201 jacket service — hot water on the PFD, chilled water in the assessment",
+   "status": "Open conflict — routing not settled",
+   "priority": "high",
+   "discipline": "Process",
+   "observation": "FEED-PFD-5000 shows the R-201 jackets on HWS / HWR (U201 / U202 “From HWS”) while REP-043 requires the oxidation exotherm to be controlled on chilled water through TCU-201. The model follows the chilled-water route. Both cannot be right, and the 10 °C cooldown target on PFD page 7 is separated from the 5–7 °C primary supply by only 3–5 K across two heat-transfer barriers, with the secondary temperatures unknown.",
+   "action": "Settle the R-201 jacket service on the re-issued PFD, then confirm the TCU-201 exchanger approach, flow and fouling against the R-201 calorimetry before any cooldown time is claimed.",
+   "evidence": [
+    {
+     "kind": "gap",
+     "id": "GAP-A-5000-ID-d4928c",
+     "label": "GAP-A-5000-ID-d4928c · Reactor cooling loop: PFD: R-201 jackets on HWS/HWR (U201/U202 'From HWS') (REP-043: exotherm control must be on chilled water)",
+     "href": "#a5000-gaps"
+    },
+    {
+     "kind": "value",
+     "id": "PV-A-5000-0183",
+     "label": "PV-A-5000-0183 · A-5300 operatingEnvelope.supplyTemperatureC = Chilled water 5–7 °C as drawn; the plant's exotherm control lives here °C (FEED-PE-REP-043 V1.0)",
+     "href": "#a5000-approved"
+    },
+    {
+     "kind": "asset",
+     "id": "TCU-201",
+     "label": "TCU-201 · Oxidation isolated cooling loop (HeatExchanger) — 1 rows, 0 approved, 2 open gaps",
+     "href": "#a5000-assets"
+    },
+    {
+     "kind": "finding",
+     "id": "A200-05",
+     "label": "A200-05 · Top drive, impeller and maintenance — Impeller type in conflict — disassembly basis open (A-200 review r2 · QFL)",
+     "href": "./a200-review.html#A200-05"
+    },
+    {
+     "kind": "page",
+     "id": "A-200",
+     "label": "A-200 review r2 · QFL",
+     "href": "./a200-review.html"
+    }
+   ]
+  },
+  {
+   "id": "A5000-03",
+   "topic": "Circulation pumps — no datasheet values on record",
+   "status": "Not ready for inquiry — 18 open gaps",
+   "priority": "high",
+   "discipline": "Rotating equipment",
+   "observation": "18 open gaps across the six circulation pumps (A-5110A, A-5110B, A-5210A, A-5210B, A-5310A, A-5310B): pumpType, ratedFlowM3h, differentialHead are unrecorded for every one. The pumps carry an approved material of construction and nothing else; no rated flow, head or type exists to price or select against.",
+   "action": "Produce the hydraulic calculation for each loop (flow from the duty balance, head from the circuit pressure drop), then issue pump datasheets; do not let the model geometry stand in for a selection.",
+   "evidence": [
+    {
+     "kind": "gap",
+     "id": "GAP-A-5000-MV-70c448",
+     "label": "GAP-A-5000-MV-70c448 · A-5110A: design.pumpType (Pump datasheet / hydraulic calculation)",
+     "href": "#a5000-gaps"
+    },
+    {
+     "kind": "gap",
+     "id": "GAP-A-5000-MV-4ab141",
+     "label": "GAP-A-5000-MV-4ab141 · A-5110A: design.ratedFlowM3h (Pump datasheet / hydraulic calculation)",
+     "href": "#a5000-gaps"
+    },
+    {
+     "kind": "gap",
+     "id": "GAP-A-5000-MV-64f318",
+     "label": "GAP-A-5000-MV-64f318 · A-5110A: design.differentialHead (Pump datasheet / hydraulic calculation)",
+     "href": "#a5000-gaps"
+    },
+    {
+     "kind": "asset",
+     "id": "A-5110A",
+     "label": "A-5110A · Hot-water circulation pump A (Pump) — 18 rows, 1 approved, 3 open gaps",
+     "href": "#a5000-assets"
+    },
+    {
+     "kind": "value",
+     "id": "PV-A-5000-0163",
+     "label": "PV-A-5000-0163 · A-5110A design.materialOfConstruction = Carbon steel with inhibitor/oxygen control in closed loops; 316L where (FEED-PE-MAT-002 V1.1)",
+     "href": "#a5000-approved"
+    }
+   ]
+  },
+  {
+   "id": "A5000-04",
+   "topic": "Secondary loop exchangers TCU-141 / TCU-201 / TCU-303 / TCU-1001 — duty and material open",
+   "status": "Duty basis deferred to the served areas",
+   "priority": "medium",
+   "discipline": "Process / mechanical",
+   "observation": "8 open gaps on the four isolated-loop exchangers (TCU-201, TCU-303, TCU-141, TCU-1001): duty and material of construction are unrecorded for each. D-A5000-01 defers the jacket-service duties to D-A200-01 (R-201 basis) and D-A300-01 (T-303 Option B), neither of which approves a rate, so no exchanger can be sized from this area.",
+   "action": "Close the A-200 and A-300 duty decisions first, then size the secondary exchangers with approach, fouling, pressure hierarchy and leak-detection requirements, and extend the MoC ruling to the TCU train.",
+   "evidence": [
+    {
+     "kind": "decision",
+     "id": "D-A5000-01",
+     "label": "D-A5000-01 (QFL 2026-09-20, FEED-PE-REP-043): Four utility loops, not three (REP-043): add a ≥ 200 °C steam / thermal-oil loop for HX-601, the acid concentrator and R-141 heat-up; keep hot water, …",
+     "href": "#a5000-decisions"
+    },
+    {
+     "kind": "gap",
+     "id": "GAP-A-5000-MV-e93313",
+     "label": "GAP-A-5000-MV-e93313 · TCU-201: design.dutyKw (Equipment datasheet)",
+     "href": "#a5000-gaps"
+    },
+    {
+     "kind": "gap",
+     "id": "GAP-A-5000-MV-20c3a7",
+     "label": "GAP-A-5000-MV-20c3a7 · TCU-141: design.dutyKw (Equipment datasheet)",
+     "href": "#a5000-gaps"
+    },
+    {
+     "kind": "finding",
+     "id": "A300-01",
+     "label": "A300-01 · Fixing tank T-303 sizing basis — Sizing basis withdrawn — re-issue required (A-300 review r2 · QFL)",
+     "href": "./a300-review.html#A300-01"
+    },
+    {
+     "kind": "page",
+     "id": "A-300",
+     "label": "A-300 review r2 · QFL",
+     "href": "./a300-review.html"
+    }
+   ]
+  },
+  {
+   "id": "A5000-05",
+   "topic": "Control criticality recorded twice in different words",
+   "status": "Open conflicts — wording to reconcile",
+   "priority": "low",
+   "discipline": "Control and instrumentation",
+   "observation": "10 open value conflicts, all of the same kind: FEED-PE-LST-007 records control.icCriticality as a bare rating (“High”, “Medium”) while FEED-PE-MDL-001 records the same rating with its reason (“High — header pressure/temperature…”). The packages, pumps and expansion vessels are affected (A-5100, A-5110A, A-5110B, A-5200…). No safety classification is changed by either row.",
+   "action": "Adopt the FEED-PE-MDL-001 wording as the recorded value in the next harvest, or supersede it from a single register, so one criticality statement stands per asset.",
+   "evidence": [
+    {
+     "kind": "conflict",
+     "id": "WV-icCriticality-A-5100",
+     "label": "WV-icCriticality-A-5100 · A-5100 control.icCriticality — 2 rows on record",
+     "href": "#a5000-conflicts"
+    },
+    {
+     "kind": "conflict",
+     "id": "WV-icCriticality-A-5110A",
+     "label": "WV-icCriticality-A-5110A · A-5110A control.icCriticality — 2 rows on record",
+     "href": "#a5000-conflicts"
+    },
+    {
+     "kind": "document",
+     "id": "FEED-PE-LST-007",
+     "label": "FEED-PE-LST-007 V1.0 · Control and Instrumentation Loop Register (controlled (conceptual))",
+     "href": "#a5000-documents"
+    },
+    {
+     "kind": "document",
+     "id": "FEED-PE-MDL-001",
+     "label": "FEED-PE-MDL-001 V1.8 · Equipment Scale-Up Study (controlled)",
+     "href": "#a5000-documents"
+    }
+   ]
+  },
+  {
+   "id": "A5000-06",
+   "topic": "Materials of construction",
+   "status": "Ruled — TCU train and buffers not yet covered",
+   "priority": "medium",
+   "discipline": "Materials",
+   "observation": "10 assets carry the plant-wide ruling (D-A5000-MOC, FEED-PE-MAT-002 V1.1: carbon steel with inhibitor and oxygen control in closed loops, 316L where required). Still uncovered in this area: TCU-201, TCU-303, HD-5100, V-5210, HD-5200, V-5310, HD-5300, TCU-141, TCU-1001, CP-5000, TK-5111, TK-5211, TK-5311, A-5400.",
+   "action": "Extend the MAT-002 ruling to the secondary exchangers, the buffer tanks and the headers, and state the tower-side water treatment separately — the open evaporative circuit is not a closed-loop duty.",
+   "evidence": [
+    {
+     "kind": "decision",
+     "id": "D-A5000-MOC",
+     "label": "D-A5000-MOC (QFL 2026-09-20, FEED-PE-MAT-002): Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-not…",
+     "href": "#a5000-decisions"
+    },
+    {
+     "kind": "document",
+     "id": "FEED-PE-MAT-002",
+     "label": "FEED-PE-MAT-002 V1.1 · MOC Selection Matrix (controlled)",
+     "href": "#a5000-documents"
+    },
+    {
+     "kind": "value",
+     "id": "PV-A-5000-0161",
+     "label": "PV-A-5000-0161 · A-5100 design.materialOfConstruction = Carbon steel with inhibitor/oxygen control in closed loops; 316L where (FEED-PE-MAT-002 V1.1)",
+     "href": "#a5000-approved"
+    },
+    {
+     "kind": "gap",
+     "id": "GAP-A-5000-MV-debc3b",
+     "label": "GAP-A-5000-MV-debc3b · TCU-201: design.materialOfConstruction (Equipment datasheet)",
+     "href": "#a5000-gaps"
+    }
+   ]
+  },
+  {
+   "id": "A5000-07",
+   "topic": "Register and model reconciliation",
+   "status": "Identity conflict recorded — no register value applied to the model packages",
+   "priority": "medium",
+   "discipline": "Model management",
+   "observation": "47 A-5000 semantic records exist; 23 are bound to model equipment and 24 are unbound, of which 23 are IF-* boundary records. GAP-A-5000-ID-c1cac2 records the naming conflict: the register packages (A-5100, A-5110A/B, A-5200, A-5210A/B, A-5300, A-5310A/B) do not appear under those tags on the model side, where the A-5000 records are TCU jacket-service interfaces and IF-* boundaries.",
+   "action": "Reconcile the package tags between FEED-PE-LST-001 and the model register in the next harvest, so approved package values can be applied to the model items instead of stopping at the interface records.",
+   "evidence": [
+    {
+     "kind": "gap",
+     "id": "GAP-A-5000-ID-c1cac2",
+     "label": "GAP-A-5000-ID-c1cac2 · A-5000 in the 3D model: Register packages A-5100 / A-5110 A/B / A-5200 / A-5210 A/B / A-5300 / A-5310 A/ (Model: 25 A-5000 records are TCU-201 / TCU-303 jacket-servic)",
+     "href": "#a5000-gaps"
+    },
+    {
+     "kind": "asset",
+     "id": "A-5100",
+     "label": "A-5100 · Hot-water generation · electric-heater concept (Package) — 20 rows, 3 approved, 0 open gaps",
+     "href": "#a5000-assets"
+    },
+    {
+     "kind": "asset",
+     "id": "IF-A600-HEAT-SUPPLY",
+     "label": "IF-A600-HEAT-SUPPLY · Heating supply; medium unselected (ExternalInterface) — 0 rows, 0 approved, 0 open gaps",
+     "href": "#a5000-assets"
+    },
+    {
+     "kind": "core",
+     "id": "semantic-core",
+     "label": "Semantic Plant Core",
+     "href": "./semantic-core.html#area-A-5000"
+    }
+   ]
+  },
+  {
+   "id": "A5000-08",
+   "topic": "Layout, supports and access in this area",
+   "status": "Provisional geometry — vendor loads unverified",
+   "priority": "medium",
+   "discipline": "Structural / layout",
+   "observation": "The current-model layout review records 973 modelled bearings and 11 support placement holds in A-5000, 1 support element(s) inside a reserved space, and 87 located access records on this area’s plan. The 18.3 × 16.1 m planning footprint, the service reservations and the entrance portal PR-A5000-T002 remain unqualified.",
+   "action": "Carry the A-5000 holds and the portal into the structural calculation set with vendor loads and maintenance envelopes; the reserved spaces must be cleared before the corridor gate can be rebaselined.",
+   "evidence": [
+    {
+     "kind": "layout",
+     "id": "LAY-01",
+     "label": "LAY-01 · Pipe-support placement holds — Open — layout revision required",
+     "href": "./layout-review.html#LAY-01"
+    },
+    {
+     "kind": "layout",
+     "id": "LAY-05",
+     "label": "LAY-05 · Entrance portal PR-A5000-T002 — Open — structural calculation",
+     "href": "./layout-review.html#LAY-05"
+    },
+    {
+     "kind": "layout",
+     "id": "LAY-07",
+     "label": "LAY-07 · Supports are provisional plant-wide — Provisional geometry — vendor loads unverified",
+     "href": "./layout-review.html#LAY-07"
+    },
+    {
+     "kind": "page",
+     "id": "layout",
+     "label": "Transport, racks and layout review",
+     "href": "./layout-review.html"
+    }
+   ]
+  }
+ ]
+}
