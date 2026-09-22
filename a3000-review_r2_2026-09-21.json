@@ -1,0 +1,2141 @@
+{
+  "area": "A-3000",
+  "title": "A-3000 assembly & design review",
+  "revision": "r2",
+  "date": "2026-09-21",
+  "sourceCommit": "8788e57",
+  "semanticCoreVersion": "1.19.0-foundation",
+  "registerRevision": "2026-09-10 · Physical equipment ownership and complete Explore assemblies",
+  "modelConfig": {
+    "scope": "feed",
+    "a160": "baseline",
+    "argonSource": "bulk"
+  },
+  "lead": "Vent-gas treatment: the wet-acid train (collection header HD-3100, knock-out drum V-3110, packed caustic scrubber T-3140, mist polishing ME-3150, induced-draft fan FN-3160, stack ST-3170) with its liquor and waste handling (T-3180 / P-3181A-B, NaOH day tank T-3182 / P-3182, makeup TK-3184 / P-3184, condensate TK-3111 / P-3111, blowdown P-3183, control station CP-3000), and the segregated satellite packages — A-700 thermal abatement AB-3701 / ST-3702, A-800 reactive-gas AB-3801 / ST-3802 and the dry-inventory / KBH₄-feeder vent packages DC-3811 / DC-3812.",
+  "reviewer": {
+    "initials": "QFL",
+    "date": "2026-09-21"
+  },
+  "representedParts": 8784,
+  "ownedEquipment": 27,
+  "findings": [
+    {
+      "id": "A3000-01",
+      "topic": "Vent routing philosophy — three segregated systems",
+      "status": "Design intent approved — MoC on PFD-3000 required",
+      "reason": "H₂, O₂ and CO in one header, and potassium vapour into water, are the two failure modes the as-drawn single-header PFD-3000 creates; treatment must match the contaminant and the pressure regime of each source.",
+      "observation": "D-A3000-01 adopts REP-041 as the design intent: S1 — the wet caustic scrubber on wet vents only (a few hundred to ≈ 1,000 Nm³/h; A-300 quench O₂ ≈ 160 Nm³/h peak); S2 — PY-701 CO / CO₂ / H₂O in argon (4–8 Nm³/h CO steady, ×3–5 in the burst, 8–10 vol %) to a thermal treatment; S3 — PY-801 H₂ in argon (12–35 Nm³/h, 30–55 vol %) with 10–20 kg/h potassium vapour to a hot-end condenser with no water contact. PFD-3000 as drawn routes every vent to one knock-out drum and caustic scrubber; LST-001 lists only the seven wet-train tags. The model already carries the segregated branches AB-3701 and AB-3801 and the two dry packages, and its exhaust-group check confirms they are not accidentally connected. WorkSafeBC Part 5.71 requires separate exhaust where combining combustible sources creates a fire or explosion risk.",
+      "action": "Raise the MoC on FEED-PFD-3000 for S1 / S2 / S3; add the S2 / S3 packages and the dry-vent packages to LST-001; confirm the segregation in HAZOP and against the actual source duties.",
+      "discipline": "Process safety / process",
+      "evidence": [
+        {
+          "ref": "D-A3000-01",
+          "kind": "decision"
+        },
+        {
+          "ref": "GAP-A-3000-DF-a6b0b0",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-3000-ID-450bd8",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-3000-ID-319728",
+          "kind": "gap"
+        },
+        {
+          "ref": "T-3140",
+          "kind": "asset"
+        },
+        {
+          "ref": "AB-3701",
+          "kind": "asset"
+        },
+        {
+          "ref": "AB-3801",
+          "kind": "asset"
+        },
+        {
+          "ref": "FEED-PE-REP-041",
+          "kind": "document"
+        }
+      ],
+      "image": "overview"
+    },
+    {
+      "id": "A3000-02",
+      "topic": "S1 wet-vent source register and sizing basis",
+      "status": "Basis approved — no source register, nothing sized",
+      "reason": "The scrubber, fan and stack are sized on the simultaneous peak of the wet sources; without a source register with compositions there is no duty.",
+      "observation": "D-A3000-01 approves the S1 basis — wet vents only, a few hundred to ≈ 1,000 Nm³/h — and records that A-600 is not an A-3000 load (its own F-601 / SC-601 in the DBM inert closed loop; 333,000 Nm³/h if it were air-swept). The model header HD-3100 collects the A-100 / A-140 / A-160 tank vents, A-200 AV201, A-300, A-500 and the A-600 tank vent as interface records without composition or flow. No source register with simultaneous peaks exists; the model's \"candidate wet source register\" is a placeholder, and the fan is \"VFD proposed\" without a duty.",
+      "action": "Issue the S1 source register (composition, normal and peak flow, simultaneity, pressure limits of each connected vessel), then size V-3110, T-3140, ME-3150, FN-3160 and ST-3170 and qualify the stack height.",
+      "discipline": "Process",
+      "evidence": [
+        {
+          "ref": "D-A3000-01",
+          "kind": "decision"
+        },
+        {
+          "ref": "FN-3160",
+          "kind": "asset"
+        },
+        {
+          "ref": "HD-3100",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A300-VENT",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A500-VENT",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A600-TANK-VENT",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A3000-AV201",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A3000-V-R-141A",
+          "kind": "asset"
+        },
+        {
+          "ref": "ST-3170",
+          "kind": "asset"
+        },
+        {
+          "ref": "FEED-PE-REP-041",
+          "kind": "document"
+        }
+      ],
+      "image": "header"
+    },
+    {
+      "id": "A3000-03",
+      "topic": "S2 and S3 satellite packages — technology and permits",
+      "status": "Envelopes reserved — technology selection and permit HOLD",
+      "reason": "A CO-in-argon stream and a hydrogen / potassium stream need their own treatment mechanism, outlet and permit; a caustic absorber does not destroy CO or H₂.",
+      "observation": "The model reserves AB-3701 (A-700 thermal abatement candidate) with its independent outlet ST-3702 and permissive station CP-3700, and AB-3801 (A-800 specialist reactive-gas package) with ST-3802 / CP-3800; both outlets are \"permit HOLD\" and their atmospheric interfaces are records only. D-A3000-01 fixes S3 as a hot-end potassium condenser with no water contact and the S3 vent branch to ASME B31.12 (A-800 review); the A-700 and A-800 emergency reliefs (PSV-701, PSV-801) stay independent of treatment. The satellite floor reservation is 23.0 × 2.9 m; package internals and maintenance withdrawal need vendor design.",
+      "action": "Select the S2 thermal treatment and the S3 condenser / hydrogen handling technology on the re-issued A-700 / A-800 balances; obtain the emissions permits for ST-3702 / ST-3802; fix the vendor envelopes.",
+      "discipline": "Process / environmental / process safety",
+      "evidence": [
+        {
+          "ref": "D-A3000-01",
+          "kind": "decision"
+        },
+        {
+          "ref": "AB-3701",
+          "kind": "asset"
+        },
+        {
+          "ref": "ST-3702",
+          "kind": "asset"
+        },
+        {
+          "ref": "CP-3700",
+          "kind": "asset"
+        },
+        {
+          "ref": "AB-3801",
+          "kind": "asset"
+        },
+        {
+          "ref": "ST-3802",
+          "kind": "asset"
+        },
+        {
+          "ref": "CP-3800",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A3700-ATM",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A3800-ATM",
+          "kind": "asset"
+        }
+      ],
+      "image": "satellites"
+    },
+    {
+      "id": "A3000-04",
+      "topic": "Dry-inventory and KBH₄-feeder vent packages",
+      "status": "Selection HOLD — outlets positively blinded",
+      "reason": "Dry inerted inventories breathe argon with fines and, on the KBH₄ side, hydrolysis-sensitive dust; they must not enter the wet train.",
+      "observation": "The model reserves DC-3811 (dry inventory vent) and DC-3812 (KBH₄ feeder vent) as selection-HOLD packages with positively blinded outlets. The previous review corrected the tags: BL-VENT801 is dry-inventory / mixer breathing, BL-REL801 the A-800 emergency relief outlet, BL-RV701 the A-700 relief. Neither package is on LST-001 and neither has a duty or a material.",
+      "action": "Define the breathing and dust loads from the A-700 / A-800 inerting basis (D-A6000-01 gas ruling), select the package type, register both and assign their outlets.",
+      "discipline": "Process / process safety",
+      "evidence": [
+        {
+          "ref": "DC-3811",
+          "kind": "asset"
+        },
+        {
+          "ref": "DC-3812",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A3811-OUTLET",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A3812-OUTLET",
+          "kind": "asset"
+        },
+        {
+          "ref": "MODEL",
+          "kind": "document"
+        }
+      ],
+      "image": "satellites"
+    },
+    {
+      "id": "A3000-05",
+      "topic": "Assembled wet train — connections, air gap and liquor handling",
+      "status": "Geometry checks pass — six interfaces unresolved",
+      "reason": "An assembled model with every endpoint dispositioned is the basis for the P&ID and for the plant-wide connectivity checks; the makeup-water air gap is a backflow safeguard that must survive detailing.",
+      "observation": "The revision A3000-45 register dispositions 340 endpoints (connected, positively blinded, intentional discharge, intentional air gap); six interfaces remain unresolved — the fan and stack drain receivers, the two external supplies (water, NaOH) and the two dry-package outlets — all positively blinded in the planning configuration. The proposed 520 mm air gap between the water supply and TK-3184 is intentional and must not be bridged; the V-3110 inlet has been re-aligned with an elbow and a straight approach; six pump adapters match their pipe sizes. The checks are re-run for this revision (see recorded checks). Liquor handling — T-3180 with duty / standby P-3181A / B, NaOH day tank T-3182 / P-3182, makeup TK-3184 / P-3184, sealed condensate receiver TK-3111 / P-3111 and controlled blowdown P-3183 — is modelled, but overflow, bypass and blowdown destinations are records only and the drain-seal, receiver-capacity and disposal acceptance remain HOLD.",
+      "action": "Keep the air gap through detailing (final flood level, splash control, overflow duty); assign the fan / stack drain receivers, the water and NaOH supplies and the blowdown, overflow and bypass destinations on the P&ID; carry the A3000-45 register into the P&ID line list.",
+      "discipline": "Mechanical / process",
+      "evidence": [
+        {
+          "ref": "V-3110",
+          "kind": "asset"
+        },
+        {
+          "ref": "TK-3184",
+          "kind": "asset"
+        },
+        {
+          "ref": "P-3184",
+          "kind": "asset"
+        },
+        {
+          "ref": "T-3180",
+          "kind": "asset"
+        },
+        {
+          "ref": "P-3181A",
+          "kind": "asset"
+        },
+        {
+          "ref": "P-3181B",
+          "kind": "asset"
+        },
+        {
+          "ref": "TK-3111",
+          "kind": "asset"
+        },
+        {
+          "ref": "P-3183",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A3000-FAN-DRAIN",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A3000-STACK-DRAIN",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A3000-WATER",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A3000-NAOH",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A3000-OVERFLOW",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A3000-BYPASS",
+          "kind": "asset"
+        }
+      ],
+      "image": "liquor"
+    },
+    {
+      "id": "A3000-06",
+      "topic": "Materials of construction",
+      "status": "Ruled for the register train — model-only items uncovered",
+      "reason": "Wet acid gas with caustic liquor sets FRP after the cooling / wetting point and alloy on the hot, dry inlet side.",
+      "observation": "D-A3000-MOC applies MAT-002 to the seven register items: vinyl-ester-novolac FRP after cooling / wetting, PP / PVDF packing and demister, 316L or Alloy 601 / 602 CA on the hot / dry sections; MDL-001 (HDPE / XLPE liquor tank, PVDF / PFA-lined pumps) superseded. The model-only items — T-3182, P-3182, ME-3150, TK-3111, P-3111, P-3183, TK-3184, P-3184, HD-3100, CP-3000 and the six satellite items — have neither a register identity nor a material.",
+      "action": "Extend MAT-002 to the model-only wet-train items once they are registered; specify the S2 / S3 package materials with the technology selection (S3 to ASME B31.12).",
+      "discipline": "Materials",
+      "evidence": [
+        {
+          "ref": "D-A3000-MOC",
+          "kind": "decision"
+        },
+        {
+          "ref": "CF-materialOfConstruc-T-3180",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "CF-materialOfConstruc-P-3181A",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "T-3182",
+          "kind": "asset"
+        },
+        {
+          "ref": "ME-3150",
+          "kind": "asset"
+        },
+        {
+          "ref": "HD-3100",
+          "kind": "asset"
+        },
+        {
+          "ref": "FEED-PE-MAT-002",
+          "kind": "document"
+        }
+      ],
+      "image": "wet"
+    },
+    {
+      "id": "A3000-07",
+      "topic": "Register and model reconciliation, stack and emissions",
+      "status": "Register reconciliation required — emissions acceptance open",
+      "reason": "Every item in the area must have one identity in the register, the model and the data layer; the stack and outlets need emissions acceptance before any operating release.",
+      "observation": "LST-001 lists seven A-3000 tags (V-3110, T-3140, T-3180, P-3181A / B, FN-3160, ST-3170); the model owns 27 items including ten wet-train auxiliaries, the six satellite items, the two dry packages, fire point FE-3001 and emergency station ES-3000. ST-3170's height is unqualified; the atmospheric outlets (ST-3170, ST-3702, ST-3802) have no emissions basis. The operating release remains HOLD: gas composition, simultaneous peak loads, pressure limits, vendor selection and emissions acceptance are still required.",
+      "action": "Register the model-only items on LST-001 or record them as proposed by decision; qualify the stack heights and the emissions basis for the three outlets with the permit; keep the operating release on HOLD until the source register and vendor designs exist.",
+      "discipline": "Process / environmental / layout",
+      "evidence": [
+        {
+          "ref": "GAP-A-3000-ID-319728",
+          "kind": "gap"
+        },
+        {
+          "ref": "ST-3170",
+          "kind": "asset"
+        },
+        {
+          "ref": "ST-3702",
+          "kind": "asset"
+        },
+        {
+          "ref": "ST-3802",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A3000-ATM",
+          "kind": "asset"
+        },
+        {
+          "ref": "CP-3000",
+          "kind": "asset"
+        },
+        {
+          "ref": "FEED-PE-LST-001",
+          "kind": "document"
+        }
+      ],
+      "image": "access"
+    }
+  ],
+  "checks": [
+    {
+      "command": "node tests/validate-a3000-semantic.mjs",
+      "purpose": "A-3000 record contract: wet-source segregation, treatment, absent bypass, duty / standby, sealed returns, conditional supplies",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "PASS: A-3000 wet-source segregation, treatment, absent bypass, duty/standby, sealed/balanced returns, conditional supplies, draft conflicts and all three source guards.",
+      "ranAt": "2026-09-22T04:04:47.910Z"
+    },
+    {
+      "command": "node tests/validate-a3700-semantic.mjs",
+      "purpose": "A-3700 satellite: AB-3701 thermal treatment with its own outlet, null ratings, source segregation",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "PASS: AB-3701 promotion, preserved A-700 inputs, separate thermal treatment/outlet, null ratings, source segregation and three source guards.",
+      "ranAt": "2026-09-22T04:04:49.719Z"
+    },
+    {
+      "command": "node tests/validate-a3800-semantic.mjs",
+      "purpose": "A-3800 satellite: AB-3801 reactive treatment, dedicated outlet, dry-inventory and KBH₄ packages with blinded outlets",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "PASS: AB-3801 reactive treatment, dedicated outlet, independent dry inventory and KBH4 dust packages, blinded outlet holds, segregation and source guards.",
+      "ranAt": "2026-09-22T04:04:51.350Z"
+    },
+    {
+      "command": "node tests/review-a3000.mjs",
+      "purpose": "assembly checks of the A3000-45 review: structure, actual apertures, exhaust-group segregation, satellite front access, endpoint disposition, radial joints, opposing end faces, pump adapter sizes, gasket contact, 520 mm air-gap alignment, cross-owner visibility",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "}",
+      "ranAt": "2026-09-22T04:06:59.110Z"
+    },
+    {
+      "command": "node tests/validate-a3000-joints.mjs",
+      "purpose": "fitted radial joints, circumferential bore probes, gasket contact and the aligned air gap",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "PASS: 64 fitted radial joints, 48 circumferential material/bore probes per joint, gasket contact, aligned 520 mm air gap, cross-owner pipe visibility and retained holds",
+      "ranAt": "2026-09-22T04:08:26.024Z"
+    },
+    {
+      "command": "node tests/validate-a3000-end-alignment.mjs",
+      "purpose": "opposing end faces and matched pump adapter sizes (two declared three-way headers excluded)",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "PASS: {\"opposingEndFaces\":470,\"matchedPumpAdapters\":6,\"declaredBranchContacts\":6,\"limitations\":\"Two declared three-way headers are excluded from the two-face test; no pressure integrity or fabrication approval is inferred.\"}",
+      "ranAt": "2026-09-22T04:09:28.461Z"
+    },
+    {
+      "command": "node tests/validate-semantic-data.mjs",
+      "purpose": "data-layer invariants (registered sources, reviewer on approvals, conflict groups, identity holds)",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "{\"passed\":true,\"areas\":[{\"area\":\"A-100\",\"assets\":10,\"holds\":0,\"values\":137,\"approved\":10,\"conflicts\":2,\"variants\":12,\"gaps\":23},{\"area\":\"A-1000\",\"assets\":60,\"holds\":0,\"values\":293,\"approved\":22,\"conflicts\":3,\"variants\":19,\"gaps\":93},{\"area\":\"A-140\",\"assets\":17,\"holds\":0,\"values\":304,\"approved\":57,\"conflicts\":20,\"variants\":14,\"gaps\":49},{\"area\":\"A-160\",\"assets\":22,\"holds\":0,\"values\":185,\"approved\":13,\"conflicts\":3,\"variants\":11,\"gaps\":29},{\"area\":\"A-200\",\"assets\":67,\"holds\":0,\"values\":834,\"approved\":78,\"conflicts\":69,\"variants\":37,\"gaps\":145},{\"area\":\"A-2000\",\"assets\":49,\"holds\":0,\"values\":268,\"approved\":17,\"conflicts\":10,\"variants\":18,\"gaps\":76},{\"area\":\"A-300\",\"assets\":20,\"holds\":0,\"values\":302,\"approved\":25,\"conflicts\":13,\"variants\":17,\"gaps\":62},{\"area\":\"A-3000\",\"assets\":51,\"holds\":0,\"values\":132,\"approved\":13,\"conflicts\":3,\"variants\":11,\"gaps\":43},{\"area\":\"A-400\",\"assets\":23,\"holds\":0,\"values\":152,\"approved\":13,\"conflicts\":7,\"variants\":8,\"gaps\":45},{\"area\":\"A-4000\",\"assets\":11,\"holds\":0,\"values\":201,\"approved\":13,\"conflicts\":11,\"variants\":11,\"gaps\":18},{\"area\":\"A-500\",\"assets\":12,\"holds\":0,\"values\":102,\"approved\":18,\"conflicts\":5,\"variants\":5,\"gaps\":24},{\"area\":\"A-5000\",\"assets\":47,\"holds\":0,\"values\":188,\"approved\":16,\"conflicts\":10,\"variants\":10,\"gaps\":40},{\"area\":\"A-600\",\"assets\":31,\"holds\":0,\"values\":194,\"approved\":18,\"conflicts\":5,\"variants\":12,\"gaps\":22},{\"area\":\"A-6000\",\"assets\":6,\"holds\":0,\"values\":38,\"approved\":3,\"conflicts\":2,\"variants\":2,\"gaps\":5},{\"area\":\"A-700\",\"assets\":17,\"holds\":0,\"values\":377,\"approved\":39,\"conflicts\":5,\"variants\":7,\"gaps\":72},{\"area\":\"A-800\",\"assets\":25,\"holds\":0,\"values\":319,\"approved\":29,\"conflicts\":9,\"variants\":14,\"gaps\":38},{\"area\":\"A-900\",\"assets\":23,\"holds\":4,\"values\":208,\"approved\":20,\"conflicts\":11,\"variants\":11,\"gaps\":21}]}",
+      "ranAt": "2026-09-22T04:09:31.237Z"
+    }
+  ],
+  "decisions": [
+    {
+      "decisionId": "D-A3000-MOC",
+      "assetPattern": "FN-3160|P-3181A|P-3181B|ST-3170|T-3140|T-3180|V-3110",
+      "property": "design.materialOfConstruction",
+      "approvedSourceDocId": "FEED-PE-MAT-002",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A3000-01",
+      "assetPattern": "T-3140|V-3110",
+      "property": "identity.designConcept",
+      "approvedSourceDocId": "FEED-PE-REP-041",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "REP-041 segregation adopted as design intent: S1 wet caustic scrubber on wet vents only (a few hundred to ≈ 1,000 Nm³/h); furnace gases excluded.",
+      "gapNote": "MoC on FEED-PFD-3000: three segregated vent systems S1 (wet, caustic scrubber) / S2 (PY-701 CO-in-argon, thermal oxidiser) / S3 (PY-801 H₂/K-in-argon, hot-end K condenser, ASME B31.12); add S2 / S3 to LST-001 (the model's A-3700 branch already exists); confirm in HAZOP."
+    },
+    {
+      "decisionId": "D-A3000-01",
+      "assetPattern": "AB-3701",
+      "property": "identity.designConcept",
+      "approvedSourceDocId": "FEED-PE-REP-041",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "S2 — PY-701 CO/CO₂/H₂O-in-argon treated separately (model branch AB-3701).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A3000-01",
+      "assetPattern": "AB-3801",
+      "property": "identity.designConcept",
+      "approvedSourceDocId": "FEED-PE-REP-041",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "S3 — PY-801 H₂-in-argon with potassium vapour: hot-end condenser, no water contact (model branch AB-3801).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A3000-01",
+      "assetPattern": "T-3140",
+      "property": "safeguards.segregation",
+      "approvedSourceDocId": "FEED-PE-REP-041",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "H₂ + O₂ + CO in one header and K into water are the failure modes the as-drawn PFD-3000 creates — segregation is the safeguard intent.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A3000-01",
+      "assetPattern": "FN-3160",
+      "property": "design.feedBasis",
+      "approvedSourceDocId": "FEED-PE-REP-041",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "A-600 is not an A-3000 load (own F-601 / SC-601; DBM inert closed loop); S1 sized on wet vents only.",
+      "gapNote": ""
+    }
+  ],
+  "approvedValues": [
+    {
+      "valueId": "PV-A-3000-0113",
+      "assetId": "V-3110",
+      "property": "design.materialOfConstruction",
+      "value": "Vinyl-ester-novolac FRP after cooling/wetting; PP/PVDF packing/demister; 316L or Alloy 601/602 CA on hot/dry/H₂ upstream branches",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 66 (M-062)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "WV-materialOfConstruc-V-3110",
+      "resolves": [
+        "FEED-PE-MDL-001: FRP (vinyl-ester resin) vessel; PVDF/PP demister and internals; PTFE gaskets."
+      ]
+    },
+    {
+      "valueId": "PV-A-3000-0115",
+      "assetId": "T-3140",
+      "property": "design.materialOfConstruction",
+      "value": "Vinyl-ester-novolac FRP after cooling/wetting; PP/PVDF packing/demister; 316L or Alloy 601/602 CA on hot/dry/H₂ upstream branches",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 66 (M-062)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "WV-materialOfConstruc-T-3140",
+      "resolves": [
+        "FEED-PE-MDL-001: FRP (vinyl-ester resin) column shell; PP/PVDF packing/internals; PTFE gaskets."
+      ]
+    },
+    {
+      "valueId": "PV-A-3000-0117",
+      "assetId": "T-3180",
+      "property": "design.materialOfConstruction",
+      "value": "Vinyl-ester-novolac FRP after cooling/wetting; PP/PVDF packing/demister; 316L or Alloy 601/602 CA on hot/dry/H₂ upstream branches",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 66 (M-062)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-T-3180",
+      "resolves": [
+        "FEED-PE-MDL-001: HDPE/XLPE scrubber-liquor tank with PP/PVDF fittings and EPDM/PTFE seals for ambient alkaline/high-salt service. Use vinyl-ester FRP if temperature, tank size or structural duty exceeds molded-PE limits."
+      ]
+    },
+    {
+      "valueId": "PV-A-3000-0119",
+      "assetId": "P-3181A",
+      "property": "design.materialOfConstruction",
+      "value": "Vinyl-ester-novolac FRP after cooling/wetting; PP/PVDF packing/demister; 316L or Alloy 601/602 CA on hot/dry/H₂ upstream branches",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 66 (M-062)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-P-3181A",
+      "resolves": [
+        "FEED-PE-MDL-001: PVDF/PFA-lined recirculation pump; SiC seal faces/bearings; PTFE gaskets."
+      ]
+    },
+    {
+      "valueId": "PV-A-3000-0121",
+      "assetId": "P-3181B",
+      "property": "design.materialOfConstruction",
+      "value": "Vinyl-ester-novolac FRP after cooling/wetting; PP/PVDF packing/demister; 316L or Alloy 601/602 CA on hot/dry/H₂ upstream branches",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 66 (M-062)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-P-3181B",
+      "resolves": [
+        "FEED-PE-MDL-001: PVDF/PFA-lined recirculation pump; SiC seal faces/bearings; PTFE gaskets."
+      ]
+    },
+    {
+      "valueId": "PV-A-3000-0123",
+      "assetId": "FN-3160",
+      "property": "design.materialOfConstruction",
+      "value": "Vinyl-ester-novolac FRP after cooling/wetting; PP/PVDF packing/demister; 316L or Alloy 601/602 CA on hot/dry/H₂ upstream branches",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 66 (M-062)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "WV-materialOfConstruc-FN-3160",
+      "resolves": [
+        "FEED-PE-MDL-001: FRP (vinyl-ester resin) gas-wetted fan casing/impeller; corrosion-resistant shaft hardware."
+      ]
+    },
+    {
+      "valueId": "PV-A-3000-0125",
+      "assetId": "ST-3170",
+      "property": "design.materialOfConstruction",
+      "value": "Vinyl-ester-novolac FRP after cooling/wetting; PP/PVDF packing/demister; 316L or Alloy 601/602 CA on hot/dry/H₂ upstream branches",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 66 (M-062)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "WV-materialOfConstruc-ST-3170",
+      "resolves": [
+        "FEED-PE-MDL-001: FRP (vinyl-ester resin) stack/liner; corrosion-resistant supports and drain hardware."
+      ]
+    },
+    {
+      "valueId": "PV-A-3000-0127",
+      "assetId": "T-3140",
+      "property": "identity.designConcept",
+      "value": "S1 — the existing wet caustic scrubber sized on the WET vents only (a few hundred to ≈ 1,000 Nm³/h: A-300 quench O₂ ≈ 160 Nm³/h peak with acid mist, tank breathing, future acid-concentrator SO₂/CO₂); furnace gases excluded",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-041",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive conclusion / §4",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-3000-0128",
+      "assetId": "V-3110",
+      "property": "identity.designConcept",
+      "value": "S1 — the existing wet caustic scrubber sized on the WET vents only (a few hundred to ≈ 1,000 Nm³/h: A-300 quench O₂ ≈ 160 Nm³/h peak with acid mist, tank breathing, future acid-concentrator SO₂/CO₂); furnace gases excluded",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-041",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive conclusion / §4",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-3000-0129",
+      "assetId": "AB-3701",
+      "property": "identity.designConcept",
+      "value": "S2 — PY-701 CO/CO₂/H₂O-in-argon (4–8 Nm³/h CO steady, ×3–5 in the burst; 8–10 vol %): inert combustible dry gas, thermal oxidiser / separate treatment, never into the wet header",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-041",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "§4",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-3000-0130",
+      "assetId": "AB-3801",
+      "property": "identity.designConcept",
+      "value": "S3 — PY-801 H₂-in-argon (12–35 Nm³/h H₂, 30–55 vol %) with 10–20 kg/h potassium vapour: hot-end K condenser, no water contact (pyrophoric, water-reactive condensate), ASME B31.12 branch",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-041",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "§4",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-3000-0131",
+      "assetId": "T-3140",
+      "property": "safeguards.segregation",
+      "value": "H₂ + O₂ + CO in one header and K into water are the two failure modes the as-drawn PFD-3000 creates — segregation into three systems is the safeguard intent",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-041",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive conclusion",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-3000-0132",
+      "assetId": "FN-3160",
+      "property": "design.feedBasis",
+      "value": "333,000 Nm³/h if A-600 were air-swept at 1 wt % (REP-026 F-27/F-29) — DBM specifies an inert closed loop for A-600; A-600 has its own F-601 / SC-601 and is not an A-3000 load",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-041",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "basis table",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    }
+  ],
+  "openConflicts": [],
+  "identityHolds": [],
+  "gaps": [
+    {
+      "gapId": "GAP-A-3000-MV-c3ced6",
+      "assetId": "P-3111",
+      "kind": "missing value",
+      "subject": "design.pumpType",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-c9ccd8",
+      "assetId": "P-3111",
+      "kind": "missing value",
+      "subject": "design.ratedFlowM3h",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-2903e8",
+      "assetId": "P-3111",
+      "kind": "missing value",
+      "subject": "design.differentialHead",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-30501a",
+      "assetId": "P-3111",
+      "kind": "missing value",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-b22c29",
+      "assetId": "P-3183",
+      "kind": "missing value",
+      "subject": "design.pumpType",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-fd414e",
+      "assetId": "P-3183",
+      "kind": "missing value",
+      "subject": "design.ratedFlowM3h",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-c11c33",
+      "assetId": "P-3183",
+      "kind": "missing value",
+      "subject": "design.differentialHead",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-06096e",
+      "assetId": "P-3183",
+      "kind": "missing value",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-c34158",
+      "assetId": "T-3180",
+      "kind": "missing value",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-c3d6e6",
+      "assetId": "T-3180",
+      "kind": "missing value",
+      "subject": "design.designPressure",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-0f5510",
+      "assetId": "T-3180",
+      "kind": "missing value",
+      "subject": "design.designTemperature",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-fdc012",
+      "assetId": "P-3181A",
+      "kind": "missing value",
+      "subject": "design.pumpType",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-5a4a50",
+      "assetId": "P-3181A",
+      "kind": "missing value",
+      "subject": "design.ratedFlowM3h",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-b2bf85",
+      "assetId": "P-3181A",
+      "kind": "missing value",
+      "subject": "design.differentialHead",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-c1aa68",
+      "assetId": "P-3181B",
+      "kind": "missing value",
+      "subject": "design.pumpType",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-c4353c",
+      "assetId": "P-3181B",
+      "kind": "missing value",
+      "subject": "design.ratedFlowM3h",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-80b3bb",
+      "assetId": "P-3181B",
+      "kind": "missing value",
+      "subject": "design.differentialHead",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-ab1d16",
+      "assetId": "T-3182",
+      "kind": "missing value",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-757b16",
+      "assetId": "T-3182",
+      "kind": "missing value",
+      "subject": "design.designPressure",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-e8e8a4",
+      "assetId": "T-3182",
+      "kind": "missing value",
+      "subject": "design.designTemperature",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-8f73f4",
+      "assetId": "T-3182",
+      "kind": "missing value",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-6dece4",
+      "assetId": "P-3182",
+      "kind": "missing value",
+      "subject": "design.pumpType",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-0c70c7",
+      "assetId": "P-3182",
+      "kind": "missing value",
+      "subject": "design.ratedFlowM3h",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-3ebfdf",
+      "assetId": "P-3182",
+      "kind": "missing value",
+      "subject": "design.differentialHead",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-5c5796",
+      "assetId": "P-3182",
+      "kind": "missing value",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-1c24fe",
+      "assetId": "TK-3111",
+      "kind": "missing value",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-a13241",
+      "assetId": "TK-3111",
+      "kind": "missing value",
+      "subject": "design.designPressure",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-900312",
+      "assetId": "TK-3111",
+      "kind": "missing value",
+      "subject": "design.designTemperature",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-8bda0e",
+      "assetId": "TK-3111",
+      "kind": "missing value",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-afc981",
+      "assetId": "TK-3184",
+      "kind": "missing value",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-fe91b4",
+      "assetId": "TK-3184",
+      "kind": "missing value",
+      "subject": "design.designPressure",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-9a38f0",
+      "assetId": "TK-3184",
+      "kind": "missing value",
+      "subject": "design.designTemperature",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-004b26",
+      "assetId": "TK-3184",
+      "kind": "missing value",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-dea463",
+      "assetId": "P-3184",
+      "kind": "missing value",
+      "subject": "design.pumpType",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-0ff386",
+      "assetId": "P-3184",
+      "kind": "missing value",
+      "subject": "design.ratedFlowM3h",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-18b811",
+      "assetId": "P-3184",
+      "kind": "missing value",
+      "subject": "design.differentialHead",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-MV-4a451e",
+      "assetId": "P-3184",
+      "kind": "missing value",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-3000-CF-242371",
+      "assetId": "T-3180",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-T-3180"
+    },
+    {
+      "gapId": "GAP-A-3000-CF-aedab1",
+      "assetId": "P-3181A",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-P-3181A"
+    },
+    {
+      "gapId": "GAP-A-3000-CF-67ea3a",
+      "assetId": "P-3181B",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-P-3181B"
+    },
+    {
+      "gapId": "GAP-A-3000-DF-a6b0b0",
+      "assetId": "T-3140|V-3110",
+      "kind": "decision follow-up",
+      "subject": "identity.designConcept",
+      "requiredSource": "MoC on FEED-PFD-3000: three segregated vent systems S1 (wet, caustic scrubber) / S2 (PY-701 CO-in-argon, thermal oxidiser) / S3 (PY-801 H₂/K-in-argon, hot-end K condenser, ASME B31.12); add S2 / S3 to LST-001 (the model's A-3700 branch already exists); confirm in HAZOP.",
+      "status": "open",
+      "note": "D-A3000-01"
+    },
+    {
+      "gapId": "GAP-A-3000-ID-319728",
+      "assetId": "A-3000 scope",
+      "kind": "identity / naming conflict",
+      "subject": "LST-001: V-3110, T-3140, T-3180, P-3181 A/B, FN-3160, ST-3170 (one wet scrubber train)",
+      "requiredSource": "Model: 23 records incl. A-3700 furnace-gas branch (AB-3701, AB-3801, DC-3811/3812, ST-3702, CP-3700) and liquor tags (T-3182, P-3182, TK-3111, TK-3184, P-3184, ME-3150, HD-3100)",
+      "status": "open",
+      "note": "Model already anticipates REP-041's segregation; register does not"
+    },
+    {
+      "gapId": "GAP-A-3000-ID-450bd8",
+      "assetId": "Vent routing philosophy",
+      "kind": "identity / naming conflict",
+      "subject": "PFD-3000: every vent to one knock-out drum + caustic scrubber",
+      "requiredSource": "REP-041: three segregated systems S1 / S2 / S3",
+      "status": "open",
+      "note": "Safety-critical; MoC on PFD-3000 required"
+    }
+  ],
+  "inventory": [
+    {
+      "tag": "ES-3000",
+      "name": "Proposed emergency shower / eyewash",
+      "modelEquipmentId": 199,
+      "operation": "containment-A-3000",
+      "parts": 17,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model station tag; plant tag approval open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "V-3110",
+      "name": "Wet acid vent knock-out drum",
+      "modelEquipmentId": 600,
+      "operation": "vgcollect",
+      "parts": 365,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 2,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "T-3140",
+      "name": "Counter-current packed acid-gas scrubber",
+      "modelEquipmentId": 601,
+      "operation": "vgtreat",
+      "parts": 626,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 3,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "T-3180",
+      "name": "Scrubber liquor tank",
+      "modelEquipmentId": 602,
+      "operation": "vgliquor",
+      "parts": 386,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "P-3181A",
+      "name": "Recirculation pump · duty",
+      "modelEquipmentId": 603,
+      "operation": "vgliquor",
+      "parts": 398,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "P-3181B",
+      "name": "Recirculation pump · standby",
+      "modelEquipmentId": 604,
+      "operation": "vgliquor",
+      "parts": 408,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "FN-3160",
+      "name": "Induced-draft fan · VFD proposed",
+      "modelEquipmentId": 605,
+      "operation": "vgtreat",
+      "parts": 296,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 2,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "ST-3170",
+      "name": "Acid vent stack · height unqualified",
+      "modelEquipmentId": 606,
+      "operation": "vgtreat",
+      "parts": 238,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "T-3182",
+      "name": "Proposed closed NaOH day tank",
+      "modelEquipmentId": 607,
+      "operation": "vgliquor",
+      "parts": 225,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "P-3182",
+      "name": "Proposed NaOH metering pump",
+      "modelEquipmentId": 608,
+      "operation": "vgliquor",
+      "parts": 90,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "ME-3150",
+      "name": "Proposed fine-mist polishing vessel",
+      "modelEquipmentId": 609,
+      "operation": "vgtreat",
+      "parts": 243,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "TK-3111",
+      "name": "Proposed sealed acidic condensate receiver",
+      "modelEquipmentId": 610,
+      "operation": "vgwaste",
+      "parts": 178,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "P-3111",
+      "name": "Proposed condensate transfer pump",
+      "modelEquipmentId": 611,
+      "operation": "vgwaste",
+      "parts": 664,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "P-3183",
+      "name": "Proposed controlled blowdown pump",
+      "modelEquipmentId": 612,
+      "operation": "vgwaste",
+      "parts": 557,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "CP-3000",
+      "name": "Vent treatment control station",
+      "modelEquipmentId": 613,
+      "operation": "vgcollect",
+      "parts": 39,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "HD-3100",
+      "name": "Compatible wet vent collection header",
+      "modelEquipmentId": 614,
+      "operation": "vgcollect",
+      "parts": 2230,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "TK-3184",
+      "name": "Proposed air-gap makeup buffer",
+      "modelEquipmentId": 615,
+      "operation": "vgliquor",
+      "parts": 241,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "P-3184",
+      "name": "Proposed makeup and wash pump",
+      "modelEquipmentId": 616,
+      "operation": "vgliquor",
+      "parts": 462,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "AB-3701",
+      "name": "A-700 thermal abatement candidate",
+      "modelEquipmentId": 620,
+      "operation": "vgtreat",
+      "parts": 253,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "ST-3702",
+      "name": "A-700 independent outlet · permit HOLD",
+      "modelEquipmentId": 621,
+      "operation": "vgtreat",
+      "parts": 72,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "CP-3700",
+      "name": "A-700 treatment permissive station",
+      "modelEquipmentId": 622,
+      "operation": "vgtreat",
+      "parts": 31,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "AB-3801",
+      "name": "A-800 specialist reactive-gas package",
+      "modelEquipmentId": 630,
+      "operation": "vgtreat",
+      "parts": 219,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "ST-3802",
+      "name": "A-800 independent outlet · permit HOLD",
+      "modelEquipmentId": 631,
+      "operation": "vgtreat",
+      "parts": 67,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "CP-3800",
+      "name": "A-800 treatment permissive station",
+      "modelEquipmentId": 632,
+      "operation": "vgtreat",
+      "parts": 31,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "DC-3811",
+      "name": "Dry inventory vent package · selection HOLD",
+      "modelEquipmentId": 640,
+      "operation": "vgtreat",
+      "parts": 217,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "DC-3812",
+      "name": "KBH4 feeder vent package · selection HOLD",
+      "modelEquipmentId": 641,
+      "operation": "vgtreat",
+      "parts": 190,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "FE-3001",
+      "name": "Vent-treatment approach · fire point",
+      "modelEquipmentId": 123001,
+      "operation": "fire-safety",
+      "parts": 41,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "IF-A300-VENT",
+      "name": "Off-gas treatment boundary; compatibility unqualified",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-interface-reference",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A500-VENT",
+      "name": "Vessel breathing treatment; compatibility unqualified",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A600-TANK-VENT",
+      "name": "Aqueous tank breathing boundary; compatibility unqualified",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A3000-ATM",
+      "name": "Stack atmospheric permit boundary; acceptance unresolved",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A3000-BYPASS",
+      "name": "EX3003 blinded review stub; no operating connection",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A3000-FAN-DRAIN",
+      "name": "Separate blinded fan condensate receiver hold",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A3000-STACK-DRAIN",
+      "name": "Separate blinded stack condensate receiver hold",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A3000-WATER",
+      "name": "Blinded external makeup-water supply",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A3000-NAOH",
+      "name": "Blinded compatible NaOH delivery boundary",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A3000-OVERFLOW",
+      "name": "Local makeup catch tray; disposal unresolved",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A3000-NAOH-VENT",
+      "name": "Independent NaOH breathing hold",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A3000-V-R-101",
+      "name": "Candidate wet source BL-V-R-101",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A3000-V-T-102",
+      "name": "Candidate wet source BL-V-T-102",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A3000-V-R-141A",
+      "name": "Candidate wet source BL-V-R-141A",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A3000-V-R-141B",
+      "name": "Candidate wet source BL-V-R-141B",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A3000-V-R-141C",
+      "name": "Candidate wet source BL-V-R-141C",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A3000-V-R-141D",
+      "name": "Candidate wet source BL-V-R-141D",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A3000-V-T-161",
+      "name": "Candidate wet source BL-V-T-161",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A3000-V-T-162",
+      "name": "Candidate wet source BL-V-T-162",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A3000-V-T-163",
+      "name": "Candidate wet source BL-V-T-163",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A3000-AV201",
+      "name": "A-200 and quench wet-vent header boundary BL-AV-201",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A3700-ATM",
+      "name": "Unqualified atmospheric discharge boundary",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A3800-ATM",
+      "name": "Unqualified A-800 atmospheric discharge boundary",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A3811-OUTLET",
+      "name": "DC-3811 blinded downstream treatment connection",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A3812-OUTLET",
+      "name": "DC-3812 blinded downstream treatment connection",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    }
+  ],
+  "documents": [
+    {
+      "documentId": "FEED-PE-LST-001",
+      "title": "Equipment and Stream Register",
+      "revision": "V5.1",
+      "docType": "LST",
+      "control": "controlled",
+      "tier": "A",
+      "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-LST-001_Equipment-and-Stream-Register_V5.1.xlsx",
+      "valueRows": "14"
+    },
+    {
+      "documentId": "FEED-PE-PFD-001",
+      "title": "Process Flow Diagram",
+      "revision": "V5.1.1",
+      "docType": "PFD",
+      "control": "controlled (Draft - IFR)",
+      "tier": "A",
+      "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-PFD-001_Process-Flow-Diagram_V5.1.1.pdf",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-LST-007",
+      "title": "Control and Instrumentation Loop Register",
+      "revision": "V1.0",
+      "docType": "LST",
+      "control": "controlled (conceptual)",
+      "tier": "A",
+      "file": "7 Piping and Instrumentation Diagrams (P&IDs)\\FEED-PE-LST-007_Control-and-Instrumentation-Loop-Register_V1.0.xlsx",
+      "valueRows": "28"
+    },
+    {
+      "documentId": "FEED-PE-MDL-001",
+      "title": "Equipment Scale-Up Study",
+      "revision": "V1.8",
+      "docType": "MDL",
+      "control": "controlled",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\FEED-PE-MDL-001_Equipment-Scale-Up-Study_V1.8.xlsx",
+      "valueRows": "70"
+    },
+    {
+      "documentId": "FEED-PE-MAT-002",
+      "title": "MOC Selection Matrix",
+      "revision": "V1.1",
+      "docType": "MAT",
+      "control": "controlled",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.1.xlsx",
+      "valueRows": "14"
+    },
+    {
+      "documentId": "FEED-PE-DBM-001",
+      "title": "Design Basis Memorandum",
+      "revision": "V2.0",
+      "docType": "DBM",
+      "control": "controlled (approved)",
+      "tier": "B",
+      "file": "3 Design Basis Memorandum (DBM)\\FEED-PE-DBM-001_Design-Basis-Memorandum_V2.0.docx",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "MODEL",
+      "title": "rGO Process Explorer model and semantic core",
+      "revision": "semantic v1",
+      "docType": "MODEL",
+      "control": "model evidence only",
+      "tier": "A",
+      "file": "dist/semantic/v1 (scripts/generate-reactor-semantic.mjs, scripts/expand-*-semantic.mjs)",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-REP-038",
+      "title": "A-1000 / A-2000 Wastewater and Water Reclaim (first principles)",
+      "revision": "V1.0",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-038_A-1000-A-2000-Wastewater-and-Water-Reclaim_V1.0.docx",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-REP-039",
+      "title": "Sulphuric Acid Recovery vs Neutralisation (cross-area)",
+      "revision": "V1.0",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-039_Sulphuric-Acid-Recovery-vs-Neutralisation_V1.0.docx",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-REP-043",
+      "title": "Plant Utilities and Thermal Balance (A-5000 / A-6000 / A-4000)",
+      "revision": "V1.0",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-043_Plant-Utilities-and-Thermal-Balance_V1.0.docx",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-REP-041",
+      "title": "Furnace Off-Gas and Vent Gas Assessment",
+      "revision": "V1.0",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-041_Furnace-Off-Gas-and-Vent-Gas-Assessment_V1.0.docx",
+      "valueRows": "6"
+    }
+  ],
+  "images": [
+    {
+      "key": "overview",
+      "title": "01 | A-3000 vent-gas treatment — plant-wide routing: wet train (left), HD-3100 collection header, satellite packages beside A-700 / A-800 (right)",
+      "owners": [
+        "HD-3100",
+        "V-3110",
+        "T-3140",
+        "ME-3150",
+        "FN-3160",
+        "ST-3170",
+        "T-3180",
+        "P-3181A",
+        "P-3181B",
+        "T-3182",
+        "P-3182",
+        "TK-3184",
+        "P-3184",
+        "TK-3111",
+        "P-3111",
+        "P-3183",
+        "CP-3000",
+        "AB-3701",
+        "ST-3702",
+        "AB-3801",
+        "ST-3802",
+        "DC-3811",
+        "DC-3812"
+      ],
+      "frame": [
+        "V-3110",
+        "T-3140",
+        "ME-3150",
+        "FN-3160",
+        "ST-3170",
+        "T-3180",
+        "AB-3701",
+        "AB-3801",
+        "DC-3811",
+        "DC-3812"
+      ],
+      "direction": [
+        1,
+        0.8,
+        1
+      ],
+      "alt": "plant-wide view: the wet scrubber train at one end, the collection header running across the plant, and the four satellite packages reserved beside the furnaces"
+    },
+    {
+      "key": "wet",
+      "title": "02 | S1 wet train: V-3110 knock-out drum → T-3140 packed scrubber → ME-3150 mist polishing → FN-3160 fan → ST-3170 stack",
+      "owners": [
+        "V-3110",
+        "T-3140",
+        "ME-3150",
+        "FN-3160",
+        "ST-3170"
+      ],
+      "direction": [
+        -1,
+        0.5,
+        1
+      ],
+      "alt": "the wet-acid treatment train from the knock-out drum to the stack"
+    },
+    {
+      "key": "liquor",
+      "title": "03 | Scrubber liquor and waste: T-3180 with P-3181A / B, NaOH T-3182 / P-3182, makeup TK-3184 / P-3184 (air gap), condensate TK-3111 / P-3111, blowdown P-3183",
+      "owners": [
+        "T-3180",
+        "P-3181A",
+        "P-3181B",
+        "T-3182",
+        "P-3182",
+        "TK-3184",
+        "P-3184",
+        "TK-3111",
+        "P-3111",
+        "P-3183",
+        "T-3140"
+      ],
+      "frame": [
+        "T-3180",
+        "P-3181A",
+        "P-3181B",
+        "T-3182",
+        "TK-3184",
+        "TK-3111",
+        "P-3183"
+      ],
+      "zoom": 1.05,
+      "direction": [
+        1,
+        0.5,
+        -1
+      ],
+      "alt": "the liquor tank with duty and standby recirculation pumps, the caustic day tank, the makeup buffer with its air gap, the condensate receiver and the blowdown pump"
+    },
+    {
+      "key": "header",
+      "title": "04 | HD-3100 compatible wet-vent collection header into V-3110",
+      "owners": [
+        "HD-3100",
+        "V-3110",
+        "CP-3000"
+      ],
+      "frame": [
+        "V-3110"
+      ],
+      "zoom": 0.8,
+      "direction": [
+        1,
+        0.5,
+        1
+      ],
+      "alt": "the wet-vent header runs arriving at the knock-out drum with the control station"
+    },
+    {
+      "key": "satellites",
+      "title": "05 | Segregated satellites: AB-3701 / ST-3702 / CP-3700 (A-700, S2), AB-3801 / ST-3802 / CP-3800 (A-800, S3), DC-3811 / DC-3812 dry-vent packages",
+      "owners": [
+        "AB-3701",
+        "ST-3702",
+        "CP-3700",
+        "AB-3801",
+        "ST-3802",
+        "CP-3800",
+        "DC-3811",
+        "DC-3812"
+      ],
+      "direction": [
+        -1,
+        0.5,
+        -1
+      ],
+      "alt": "the four package envelopes with their independent outlets and permissive stations"
+    },
+    {
+      "key": "access",
+      "title": "06 | Fire point FE-3001 and emergency station ES-3000 at the vent-treatment approach",
+      "owners": [
+        "FE-3001",
+        "ES-3000",
+        "V-3110",
+        "T-3140",
+        "FN-3160",
+        "ST-3170",
+        "T-3180",
+        "AB-3701",
+        "AB-3801"
+      ],
+      "frame": [
+        "FE-3001",
+        "ES-3000",
+        "V-3110",
+        "T-3140",
+        "FN-3160",
+        "T-3180"
+      ],
+      "direction": [
+        0.35,
+        1,
+        0.3
+      ],
+      "percentiles": [
+        2,
+        97
+      ],
+      "alt": "plan-like view of the wet train and satellites with the fire point and emergency station"
+    }
+  ],
+  "related": [
+    {
+      "href": "./a3000/review.json",
+      "label": "Endpoint-disposition register, revision A3000-45 (340 endpoints)"
+    },
+    {
+      "href": "./a300-review.html",
+      "label": "A-300 fixing (O₂ evolution source)"
+    },
+    {
+      "href": "./a700-review.html",
+      "label": "A-700 pyrolysis (S2 source)"
+    },
+    {
+      "href": "./a800-review.html",
+      "label": "A-800 doping (S3 source)"
+    }
+  ],
+  "counts": {
+    "assets": 51,
+    "propertyRows": 132,
+    "approved": 13,
+    "openConflicts": 0,
+    "decisions": 2,
+    "holds": 0,
+    "gapsOpen": 40,
+    "gapsClosed": 3
+  }
+}
