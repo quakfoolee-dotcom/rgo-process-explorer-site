@@ -1,0 +1,1779 @@
+{
+  "area": "A-160",
+  "title": "A-160 assembly & design review",
+  "revision": "r3",
+  "date": "2026-09-22",
+  "sourceCommit": "30cbb82",
+  "semanticCoreVersion": "1.19.0-foundation",
+  "registerRevision": "2026-09-10 · Physical equipment ownership and complete Explore assemblies",
+  "modelConfig": {
+    "scope": "feed",
+    "a160": "baseline",
+    "argonSource": "bulk"
+  },
+  "lead": "Pre-G fixing, filtration and drying: fixing tank T-161, holding tank T-162, membrane filter press F-161 with wet-cake tray handling TR-164, vacuum tray dryer D-164 with vacuum / condensate package VP-164 / KO-164 and dry tray unloading H-164, dry Pre-G distribution EL-164 / SC-164, filtrate tank T-163 and the four register pumps P-162 … P-165 (baseline A-160 configuration).",
+  "reviewer": {
+    "initials": "QFL",
+    "date": "2026-09-22"
+  },
+  "representedParts": 11749,
+  "ownedEquipment": 20,
+  "findings": [
+    {
+      "id": "A160-01",
+      "topic": "Dilution basis — Option B now, Option C later",
+      "status": "Design concept approved — sizing withdrawn",
+      "reason": "The fixing-water quantity decides tank size, cooling, settle / decant practice and the wastewater load; the PFD figure is a heat sink, not a process requirement.",
+      "observation": "D-A160-02 approves the REP-042 concept — Option B now, designed so that its filter and rinse become Option C when REP-039 M4 confirms GIC filterability — and D-A160-01 withdraws the MEB-004 V5 sizing on 50 kg/h graphite and 170 kg water per kg graphite (T-161 49.2 m³; REP-042 shows ≈ 2 × 110 m³ HDPE as drawn and recommends 10–15 t per batch, about 20–30 kg/kg), the 28 kW dilution cooling (REP-042: 6.2 GJ per batch dilution heat), the settle / decant hours (pilot 3 × 3.5 h do not transfer — Stokes settling scales with depth; decant is dilution washing), the T-162 wash water and the D-164 duty. Feed now arrives at 80 °C by hot transfer (D-A140-02); no jacket on a 110 m³ HDPE tank — protect the addition point against local boiling.",
+      "action": "The Option B basis is now sized (A160-06: 15 t water, cooled loop, 25 m³ tanks) — re-issue FEED-PE-MEB-004 (V6) on DBM V2.0 and that basis, then approve the T-161 / T-162 sizes by decision.",
+      "discipline": "Process",
+      "evidence": [
+        {
+          "ref": "D-A160-02",
+          "kind": "decision"
+        },
+        {
+          "ref": "D-A160-01",
+          "kind": "decision"
+        },
+        {
+          "ref": "CF-totalVolumeM3-T-161",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "GAP-A-160-DF-3c9d77",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-160-ID-f5c31f",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-160-ID-5e4b35",
+          "kind": "gap"
+        },
+        {
+          "ref": "FEED-PE-REP-042",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-MEB-004",
+          "kind": "document"
+        }
+      ],
+      "image": "fixing"
+    },
+    {
+      "id": "A160-02",
+      "topic": "Filter press and cake basis",
+      "status": "Approved — GREEN, cake-volume-limited",
+      "reason": "The press cycle and cake moisture set the dryer duty and the tray handling rate.",
+      "observation": "D-A160-02 approves F-161 as correctly sized and cake-volume-limited (REP-042 F-10, GREEN): 3 wash / press cycles, 6 h cycle, cake 0.57 m³ per batch, displacement wash ≈ 2 m³; cake moisture 50 wt% (MEB-004) — REP-042 states ≈ 80 wt% solids after press, a difference carried to the follow-up. F-161 is PP plates and cloth with protected frame (MAT-002). Wet-cake tray handling TR-164 and the register pumps P-164 (slurry to press) and P-165 (filtrate wastewater) have model geometry; P-162 … P-165 have no semantic record.",
+      "action": "Reconcile the 50 wt% moisture (MEB-004) with the ≈ 80 wt% solids (REP-042) in MEB-004 V6; create semantic records for P-162 … P-165.",
+      "discipline": "Process / mechanical",
+      "evidence": [
+        {
+          "ref": "D-A160-02",
+          "kind": "decision"
+        },
+        {
+          "ref": "F-161",
+          "kind": "asset"
+        },
+        {
+          "ref": "TR-164",
+          "kind": "asset"
+        },
+        {
+          "ref": "P-164",
+          "kind": "asset"
+        },
+        {
+          "ref": "P-165",
+          "kind": "asset"
+        },
+        {
+          "ref": "GAP-A-160-ID-2d969e",
+          "kind": "gap"
+        },
+        {
+          "ref": "FEED-PE-REP-042",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-MEB-004",
+          "kind": "document"
+        }
+      ],
+      "image": "press"
+    },
+    {
+      "id": "A160-03",
+      "topic": "Drying — vacuum tray dryer as modelled, Option E open",
+      "status": "Targets approved — dryer type follows Option E",
+      "reason": "The dryer type and duty follow the cake solids and the REP-042 Option E alternative.",
+      "observation": "Approved (D-A160-02, MEB-004): 60 °C drying temperature target and 2 wt% residual moisture; D-164 316L electropolished (MAT-002). The 47.3 kW duty on 50 kg/h is withdrawn and REP-042 Option E changes the dryer. The model carries the vacuum tray dryer with its vacuum / condensate package VP-164 / KO-164, dry tray unloading H-164 and the dry Pre-G distribution EL-164 / SC-164 (4,586 parts) — none of these auxiliaries is on LST-001, and the D-164-THERMAL subassembly is provisional.",
+      "action": "Decide Option E with the dilution basis; then size D-164 (or its replacement) on MEB-004 V6 and register VP-164 / KO-164, H-164, TR-164 and EL-164 / SC-164 or record them by decision.",
+      "discipline": "Process / mechanical",
+      "evidence": [
+        {
+          "ref": "D-A160-02",
+          "kind": "decision"
+        },
+        {
+          "ref": "D-A160-01",
+          "kind": "decision"
+        },
+        {
+          "ref": "D-164",
+          "kind": "asset"
+        },
+        {
+          "ref": "VP-164-KO-164",
+          "kind": "asset"
+        },
+        {
+          "ref": "EL-164-SC-164",
+          "kind": "asset"
+        },
+        {
+          "ref": "H-164",
+          "kind": "asset"
+        },
+        {
+          "ref": "D-164-THERMAL",
+          "kind": "asset"
+        },
+        {
+          "ref": "GAP-A-160-ID-295995",
+          "kind": "gap"
+        },
+        {
+          "ref": "FEED-PE-REP-042",
+          "kind": "document"
+        }
+      ],
+      "image": "dryer"
+    },
+    {
+      "id": "A160-04",
+      "topic": "Materials of construction",
+      "status": "Ruled — six items not yet covered",
+      "reason": "Dilute sulphuric / persulfate liquor at up to 80 °C sets the tank and pump materials; the press and dryer see wet and dry Pre-G.",
+      "observation": "D-A160-MOC applies MAT-002: T-161 dual-laminate FRP (PVDF / ECTFE liner + VE-novolac) to ASME RTP-1; F-161 PP plates and cloth; D-164 316L electropolished; MDL-001 (glass-lined CS, PP plates) superseded. MAT-002 does not cover T-162, T-163 and the four pumps P-162 … P-165, which keep an MDL-001 material only. REP-042 speaks of 110 m³ HDPE tanks as drawn — the tank material and the dilution option are linked.",
+      "action": "Extend MAT-002 to T-162, T-163 and P-162 … P-165: the A-160 datasheets propose dual-laminate FRP tanks, a PFA-lined P-162, PVDF P-165 and a PVDF / PTFE AODD P-164 (A160-06).",
+      "discipline": "Materials",
+      "evidence": [
+        {
+          "ref": "D-A160-MOC",
+          "kind": "decision"
+        },
+        {
+          "ref": "CF-materialOfConstruc-T-161",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "CF-materialOfConstruc-F-161",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "GAP-A-160-DF-5c3794",
+          "kind": "gap"
+        },
+        {
+          "ref": "FEED-PE-MAT-002",
+          "kind": "document"
+        }
+      ],
+      "image": "overview"
+    },
+    {
+      "id": "A160-05",
+      "topic": "Register and model reconciliation, containment and interfaces",
+      "status": "Register reconciliation required",
+      "reason": "Every equipment item in the area must have one identity in the register, the model and the data layer; wastewater and decant interfaces need destinations.",
+      "observation": "Five LST-001 tags (T-161, T-162, F-161, D-164, T-163) are bound to model geometry; the four register pumps have geometry but no semantic record; the model additionally owns TR-164, H-164, EL-164 / SC-164 and VP-164 / KO-164 without register identities, four bunds (16.4 / 16.4 / 10.4 / 11.5 m³ retention), two emergency stations and fire point FE-161. Three interfaces — fixing wastewater WW161, filtrate wastewater WW163 and decant DEC161 — have no destination in A-1000.",
+      "action": "Register the model-only auxiliaries or record them by decision; create the pump records; assign the WW161 / WW163 / DEC161 destinations with the A-1000 discharge decision (D-A1000-01); verify bund retention for the hot-transfer case.",
+      "discipline": "Process / layout / civil",
+      "evidence": [
+        {
+          "ref": "GAP-A-160-ID-a92318",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-160-ID-295995",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-160-ID-2d969e",
+          "kind": "gap"
+        },
+        {
+          "ref": "IF-A160-WW161",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A160-WW163",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A160-DEC161",
+          "kind": "asset"
+        },
+        {
+          "ref": "ES-161",
+          "kind": "asset"
+        },
+        {
+          "ref": "ES-160-12",
+          "kind": "asset"
+        }
+      ],
+      "image": "containment"
+    },
+    {
+      "id": "A160-06",
+      "topic": "Equipment datasheets — Option B cooled dilution",
+      "status": "Preliminary datasheets issued — candidate values, none approved",
+      "reason": "T-161 / T-162 had withdrawn sizes only, T-163 and the four pumps had no sizing values, and the approved concept (Option B now) had never been turned into equipment.",
+      "observation": "FEED-PE-CAL-016 V1.0 sizes REP-042 Option B on the bases approved in review 2026-09-22 (D1 15 t water per batch with a cooled loop; D2 P-162 as loop + transfer pump, loop cooler held as placeholder E-161; D3 no datasheet for P-163, whose decant service Option B deletes; D4 proposed materials): the 10.2 t batch plus 15 t water gives 25.2 t at 35 wt % acid (19.7 m³), the 6.2 GJ dilution heat is removed at 861 kW over 2 h with 82 m³/h circulating, and 21.4 m³ of filtrate and wash leaves per batch. Datasheets FEED-PE-DAT-024…029 carry it — T-161 / T-162 19.7 / 25 m³ dual-laminate FRP, T-163 21.4 / 30 m³, P-162 90 m³/h at 16 m (PFA-lined), P-164 AODD 20 m³/h to 7 barg, P-165 20 m³/h at 23 m to A-1000. They enter as 132 candidate rows — none approved; the T-161 / T-162 volumes join conflict groups with the withdrawn MEB-004 V5 sizes, and P-163 keeps its gaps pending the PFD MoC.",
+      "action": "Close the holds — hydrolysis hold time and the press wash curve by pilot test, the E-161 thermal design (and its register tag), routing, the electrical basis and the MAT-002 extension — raise the PFD-0160 MoC for Option B (deleting the P-163 service), then approve the A-160 sizing values by decision.",
+      "discipline": "Process / mechanical",
+      "evidence": [
+        {
+          "ref": "FEED-PE-CAL-016",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-024",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-027",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-028",
+          "kind": "document"
+        },
+        {
+          "ref": "PV-A-160-0195",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-160-0257",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-160-0282",
+          "kind": "value"
+        },
+        {
+          "ref": "CF-totalVolumeM3-T-161",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "D-A160-02",
+          "kind": "decision"
+        },
+        {
+          "ref": "P-163",
+          "kind": "asset"
+        }
+      ],
+      "image": "fixing"
+    }
+  ],
+  "checks": [
+    {
+      "command": "node tests/validate-early-areas-semantic.mjs",
+      "purpose": "A-100 / A-140 / A-160 record contract: geometry bindings, flows, interfaces, alternatives and the approved-provenance rule for populated fields",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "PASS: A-100, A-140 and A-160 equipment, flows, interfaces, alternatives and source guards are structured without inventing ratings.",
+      "ranAt": "2026-09-23T05:04:49.067Z"
+    },
+    {
+      "command": "node tests/validate-semantic-data.mjs",
+      "purpose": "data-layer invariants (registered sources, reviewer on approvals, conflict groups, identity holds)",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "{\"passed\":true,\"areas\":[{\"area\":\"A-100\",\"assets\":10,\"holds\":0,\"values\":308,\"approved\":10,\"conflicts\":2,\"variants\":12,\"gaps\":8},{\"area\":\"A-1000\",\"assets\":60,\"holds\":0,\"values\":293,\"approved\":22,\"conflicts\":3,\"variants\":19,\"gaps\":93},{\"area\":\"A-140\",\"assets\":17,\"holds\":0,\"values\":517,\"approved\":57,\"conflicts\":20,\"variants\":14,\"gaps\":32},{\"area\":\"A-160\",\"assets\":22,\"holds\":0,\"values\":317,\"approved\":13,\"conflicts\":6,\"variants\":11,\"gaps\":16},{\"area\":\"A-200\",\"assets\":67,\"holds\":0,\"values\":834,\"approved\":78,\"conflicts\":69,\"variants\":37,\"gaps\":145},{\"area\":\"A-2000\",\"assets\":49,\"holds\":0,\"values\":268,\"approved\":17,\"conflicts\":10,\"variants\":18,\"gaps\":76},{\"area\":\"A-300\",\"assets\":20,\"holds\":0,\"values\":302,\"approved\":25,\"conflicts\":13,\"variants\":17,\"gaps\":62},{\"area\":\"A-3000\",\"assets\":51,\"holds\":0,\"values\":132,\"approved\":13,\"conflicts\":3,\"variants\":11,\"gaps\":43},{\"area\":\"A-400\",\"assets\":23,\"holds\":0,\"values\":152,\"approved\":13,\"conflicts\":7,\"variants\":8,\"gaps\":45},{\"area\":\"A-4000\",\"assets\":11,\"holds\":0,\"values\":201,\"approved\":13,\"conflicts\":11,\"variants\":11,\"gaps\":18},{\"area\":\"A-500\",\"assets\":12,\"holds\":0,\"values\":102,\"approved\":18,\"conflicts\":5,\"variants\":5,\"gaps\":24},{\"area\":\"A-5000\",\"assets\":47,\"holds\":0,\"values\":470,\"approved\":16,\"conflicts\":10,\"variants\":10,\"gaps\":22},{\"area\":\"A-600\",\"assets\":31,\"holds\":0,\"values\":194,\"approved\":18,\"conflicts\":5,\"variants\":12,\"gaps\":22},{\"area\":\"A-6000\",\"assets\":6,\"holds\":0,\"values\":38,\"approved\":3,\"conflicts\":2,\"variants\":2,\"gaps\":5},{\"area\":\"A-700\",\"assets\":17,\"holds\":0,\"values\":377,\"approved\":39,\"conflicts\":5,\"variants\":7,\"gaps\":72},{\"area\":\"A-800\",\"assets\":25,\"holds\":0,\"values\":319,\"approved\":29,\"conflicts\":9,\"variants\":14,\"gaps\":38},{\"area\":\"A-900\",\"assets\":23,\"holds\":4,\"values\":208,\"approved\":20,\"conflicts\":11,\"variants\":11,\"gaps\":21}]}",
+      "ranAt": "2026-09-23T05:04:50.081Z"
+    },
+    {
+      "command": "node tests/validate-semantic-fields.mjs",
+      "purpose": "inspector field rendering of documented and applied values",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "PASS: documented pending and superseded values, alternatives, mixed units, missing values and identity holds.",
+      "ranAt": "2026-09-23T05:04:56.203Z"
+    }
+  ],
+  "decisions": [
+    {
+      "decisionId": "D-A160-MOC",
+      "assetPattern": "D-164|F-161|T-161",
+      "property": "design.materialOfConstruction",
+      "approvedSourceDocId": "FEED-PE-MAT-002",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "gapNote": "MAT-002 does not cover 6 item(s) with an MDL-001 material only (P-162, P-163, P-164, P-165, T-162, T-163): extend MAT-002 before those MoCs are approved."
+    },
+    {
+      "decisionId": "D-A160-01",
+      "assetPattern": "T-161",
+      "property": "design.totalVolumeM3",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "MEB-004 V5 sizes T-161 on 50 kg/h graphite and 170 kg water per kg graphite; REP-042 shows the water is a heat sink and recommends Option B (about 10–15 t per batch). No size approved.",
+      "gapNote": "Decide the A-160 dilution basis (REP-042 Option B, filter/rinse designed to become Option C when REP-039 M4 confirms GIC filterability); then re-issue FEED-PE-MEB-004 (V6) on DBM V2.0 and fix T-161 count, volume and the D-164 dryer change (Option E); create semantic records for A-160 (geometry 44–53) and settle the model-only TR/H/EL/VP-164 tags."
+    },
+    {
+      "decisionId": "D-A160-01",
+      "assetPattern": "T-161",
+      "property": "design.workingVolumeM3",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "MEB-004 V5 sizes T-161 on 50 kg/h graphite and 170 kg water per kg graphite; REP-042 shows the water is a heat sink and recommends Option B (about 10–15 t per batch). No size approved.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A160-01",
+      "assetPattern": "T-161",
+      "property": "design.insideDiameterM",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "MEB-004 V5 sizes T-161 on 50 kg/h graphite and 170 kg water per kg graphite; REP-042 shows the water is a heat sink and recommends Option B (about 10–15 t per batch). No size approved.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A160-01",
+      "assetPattern": "T-161",
+      "property": "design.tangentHeightM",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "MEB-004 V5 sizes T-161 on 50 kg/h graphite and 170 kg water per kg graphite; REP-042 shows the water is a heat sink and recommends Option B (about 10–15 t per batch). No size approved.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A160-01",
+      "assetPattern": "T-161",
+      "property": "design.agitatorShaftPowerKw",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "MEB-004 V5 sizes T-161 on 50 kg/h graphite and 170 kg water per kg graphite; REP-042 shows the water is a heat sink and recommends Option B (about 10–15 t per batch). No size approved.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A160-01",
+      "assetPattern": "T-161",
+      "property": "design.dilutionCoolingDutyKw",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "28 kW peak (MEB-004) vs 6.2 GJ per batch dilution heat (REP-042); follows the Option decision.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A160-01",
+      "assetPattern": "T-161",
+      "property": "operatingEnvelope.dilutionWaterKgPerKgGraphite",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "170 kg/kg (PFD/MEB-004) is a thermodynamic sink; Option B about 20–30 kg/kg; decision pending.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A160-01",
+      "assetPattern": "T-161",
+      "property": "operatingEnvelope.settleHours",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Pilot settle/decant hours do not transfer (REP-042 F-12).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A160-01",
+      "assetPattern": "T-161",
+      "property": "operatingEnvelope.decantHours",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "See settle hours.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A160-01",
+      "assetPattern": "T-161",
+      "property": "operatingEnvelope.decantCyclesPerBatch",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "See settle hours.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A160-01",
+      "assetPattern": "T-162",
+      "property": "design.totalVolumeM3",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "MEB-004 V5 sizes T-161 on 50 kg/h graphite and 170 kg water per kg graphite; REP-042 shows the water is a heat sink and recommends Option B (about 10–15 t per batch). No size approved.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A160-01",
+      "assetPattern": "T-162",
+      "property": "design.workingVolumeM3",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "MEB-004 V5 sizes T-161 on 50 kg/h graphite and 170 kg water per kg graphite; REP-042 shows the water is a heat sink and recommends Option B (about 10–15 t per batch). No size approved.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A160-01",
+      "assetPattern": "T-162",
+      "property": "design.insideDiameterM",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "MEB-004 V5 sizes T-161 on 50 kg/h graphite and 170 kg water per kg graphite; REP-042 shows the water is a heat sink and recommends Option B (about 10–15 t per batch). No size approved.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A160-01",
+      "assetPattern": "T-162",
+      "property": "design.tangentHeightM",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "MEB-004 V5 sizes T-161 on 50 kg/h graphite and 170 kg water per kg graphite; REP-042 shows the water is a heat sink and recommends Option B (about 10–15 t per batch). No size approved.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A160-01",
+      "assetPattern": "T-162",
+      "property": "operatingEnvelope.washWaterKgPerKgGraphite",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "170 kg/kg T-162 wash follows the same dilution decision.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A160-01",
+      "assetPattern": "D-164",
+      "property": "design.dutyKw",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "47.3 kW on 50 kg/h; REP-042 Option E changes the dryer.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A160-01",
+      "assetPattern": "P-162|P-163|P-164|P-165",
+      "property": "design.shaftPowerKw",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "MEB-004 V5 sizes T-161 on 50 kg/h graphite and 170 kg water per kg graphite; REP-042 shows the water is a heat sink and recommends Option B (about 10–15 t per batch). No size approved.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A160-02",
+      "assetPattern": "T-161",
+      "property": "operatingEnvelope.operatingTemperatureC",
+      "approvedSourceDocId": "FEED-PE-MEB-004",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "40 °C T-161 operating temperature (MEB-004); PFD 50 °C interlock; REP-042 water in ≤ 28 °C keeps < 50 °C.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A160-02",
+      "assetPattern": "T-162",
+      "property": "operatingEnvelope.operatingTemperatureC",
+      "approvedSourceDocId": "FEED-PE-MEB-004",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "35 °C T-162 (MEB-004).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A160-02",
+      "assetPattern": "D-164",
+      "property": "operatingEnvelope.dryingTemperatureC",
+      "approvedSourceDocId": "FEED-PE-MEB-004",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "60 °C drying temperature (MEB-004) target; dryer type per Option E.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A160-02",
+      "assetPattern": "D-164",
+      "property": "operatingEnvelope.productResidualMoistureWtFrac",
+      "approvedSourceDocId": "FEED-PE-MEB-004",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "2 wt% dried Pre-G residual moisture (MEB-004).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A160-02",
+      "assetPattern": "F-161",
+      "property": "operatingEnvelope.cakeMoistureWtFrac",
+      "approvedSourceDocId": "FEED-PE-MEB-004",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "50 wt% cake moisture (MEB-004); REP-042 states about 80 wt% solids after press; difference noted for the follow-up.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A160-02",
+      "assetPattern": "F-161",
+      "property": "operatingEnvelope.cycleBasis",
+      "approvedSourceDocId": "FEED-PE-REP-042",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "F-161 correctly sized and cake-volume-limited (GREEN, F-10): 3 wash/press cycles, 6 h cycle, cake 0.57 m³/batch, displacement wash about 2 m³.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A160-02",
+      "assetPattern": "T-161",
+      "property": "operatingEnvelope.settleDecantBasis",
+      "approvedSourceDocId": "FEED-PE-REP-042",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Stokes settling scales with depth; pilot hours do not transfer; decant is dilution washing.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A160-02",
+      "assetPattern": "T-161",
+      "property": "design.jacketProvision",
+      "approvedSourceDocId": "FEED-PE-REP-042",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "No jacket on a 110 m³ HDPE tank; protect the addition point against local boiling (F-08).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A160-02",
+      "assetPattern": "T-161",
+      "property": "identity.designConcept",
+      "approvedSourceDocId": "FEED-PE-REP-042",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Option B now, designed to become Option C.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A160-02",
+      "assetPattern": "T-161",
+      "property": "operatingEnvelope.feedTemperatureC",
+      "approvedSourceDocId": "FEED-PE-REP-042",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Feed arrives at 80 °C (hot transfer per D-A140-02); PFD 10–20 °C superseded.",
+      "gapNote": ""
+    }
+  ],
+  "approvedValues": [
+    {
+      "valueId": "PV-A-160-0145",
+      "assetId": "T-161",
+      "property": "design.materialOfConstruction",
+      "value": "Dual-laminate FRP (PVDF/ECTFE liner + VE-novolac) to ASME RTP-1",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 16 (M-012)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-T-161",
+      "resolves": [
+        "FEED-PE-MDL-001: Glass-lined carbon steel vessel; PTFE/PFA wetted seals and gaskets; corrosion-resistant agitator coating."
+      ]
+    },
+    {
+      "valueId": "PV-A-160-0147",
+      "assetId": "F-161",
+      "property": "design.materialOfConstruction",
+      "value": "PP plates and cloth; protected frame",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 17 (M-013)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-F-161",
+      "resolves": [
+        "FEED-PE-MDL-001: Polypropylene filter plates and process-contact components; PTFE/EPDM seals; epoxy-coated carbon-steel frame isolated from process."
+      ]
+    },
+    {
+      "valueId": "PV-A-160-0148",
+      "assetId": "D-164",
+      "property": "design.materialOfConstruction",
+      "value": "316L, electropolished",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 18 (M-014)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "WV-materialOfConstruc-D-164",
+      "resolves": [
+        "FEED-PE-MDL-001: 316L SS product-contact chamber/trays; 304L SS non-contact enclosure; temperature-rated PTFE/silicone seals."
+      ]
+    },
+    {
+      "valueId": "PV-A-160-0151",
+      "assetId": "T-161",
+      "property": "operatingEnvelope.operatingTemperatureC",
+      "value": "40.0",
+      "unit": "°C",
+      "sourceDocId": "FEED-PE-MEB-004",
+      "sourceRevision": "V5.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 24 (T_161_op)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-160-0162",
+      "assetId": "T-162",
+      "property": "operatingEnvelope.operatingTemperatureC",
+      "value": "35.0",
+      "unit": "°C",
+      "sourceDocId": "FEED-PE-MEB-004",
+      "sourceRevision": "V5.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 25 (T_162_op)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-160-0169",
+      "assetId": "F-161",
+      "property": "operatingEnvelope.cakeMoistureWtFrac",
+      "value": "0.5",
+      "unit": "wt frac",
+      "sourceDocId": "FEED-PE-MEB-004",
+      "sourceRevision": "V5.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 31 (w_cake)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-160-0170",
+      "assetId": "D-164",
+      "property": "operatingEnvelope.dryingTemperatureC",
+      "value": "60.0",
+      "unit": "°C",
+      "sourceDocId": "FEED-PE-MEB-004",
+      "sourceRevision": "V5.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 33 (T_dry)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-160-0171",
+      "assetId": "D-164",
+      "property": "operatingEnvelope.productResidualMoistureWtFrac",
+      "value": "0.02",
+      "unit": "wt frac",
+      "sourceDocId": "FEED-PE-MEB-004",
+      "sourceRevision": "V5.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 35 (w_prod)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-160-0180",
+      "assetId": "T-161",
+      "property": "design.jacketProvision",
+      "value": "A jacket on a 110 m³ HDPE tank is impractical and unnecessary at +17 K; the hazard is local boiling at the addition point (F-08)",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-042",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "basis table",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-160-0181",
+      "assetId": "T-161",
+      "property": "operatingEnvelope.feedTemperatureC",
+      "value": "10–20 °C (R-141 cooled, PFD) vs 80 °C hot transfer per REP-040 (+2.4 K in T-161); water in at ≤ 28 °C keeps T-161 < 50 °C",
+      "unit": "°C",
+      "sourceDocId": "FEED-PE-REP-042",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "basis table",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-160-0182",
+      "assetId": "T-161",
+      "property": "operatingEnvelope.settleDecantBasis",
+      "value": "Pilot 3 cycles × 3.5 h do not transfer — Stokes settling scales with tank depth (≈ 5 m commercial); decant is dilution washing (F-12)",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-042",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "basis table",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-160-0183",
+      "assetId": "F-161",
+      "property": "operatingEnvelope.cycleBasis",
+      "value": "3 wash / press cycles, cake ≈ 80 wt% solids, 6 h cycle; cake 0.57 m³/batch; filtration ≈ 2 min — cake-volume-limited, correctly sized (F-10); displacement wash ≈ 2 m³/batch",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-042",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive conclusion / basis table",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-160-0185",
+      "assetId": "T-161",
+      "property": "identity.designConcept",
+      "value": "Option B now, designed so that its filter and rinse become Option C's when REP-039 M4 confirms GIC filterability",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-042",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Recommendation",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    }
+  ],
+  "openConflicts": [
+    {
+      "conflictGroup": "CF-workingVolumeM3-T-161",
+      "assetId": "T-161",
+      "property": "design.workingVolumeM3",
+      "alternatives": [
+        {
+          "valueId": "PV-A-160-0153",
+          "value": "36.9",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-MEB-004",
+          "sourceLocation": "'Design Basis & Inputs'!row 64 (V₁₆₁_work)"
+        },
+        {
+          "valueId": "PV-A-160-0194",
+          "value": "19.7",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-DAT-024",
+          "sourceLocation": "'T-161 Datasheet'!row 21 (item 3.1)"
+        }
+      ]
+    },
+    {
+      "conflictGroup": "CF-totalVolumeM3-T-161",
+      "assetId": "T-161",
+      "property": "design.totalVolumeM3",
+      "alternatives": [
+        {
+          "valueId": "PV-A-160-0154",
+          "value": "49.2",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-MEB-004",
+          "sourceLocation": "'Design Basis & Inputs'!row 65 (V₁₆₁_total)"
+        },
+        {
+          "valueId": "PV-A-160-0179",
+          "value": "HDPE, 2 × ≈ 110 m³ as drawn (PFD); Option B (recommended) replaces most of the water with a cooled dilution step — 'Option A should not be frozen'",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-REP-042",
+          "sourceLocation": "basis table / Recommendation"
+        },
+        {
+          "valueId": "PV-A-160-0195",
+          "value": "25",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-DAT-024",
+          "sourceLocation": "'T-161 Datasheet'!row 22 (item 3.2)"
+        }
+      ]
+    },
+    {
+      "conflictGroup": "CF-workingVolumeM3-T-162",
+      "assetId": "T-162",
+      "property": "design.workingVolumeM3",
+      "alternatives": [
+        {
+          "valueId": "PV-A-160-0164",
+          "value": "17.2",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-MEB-004",
+          "sourceLocation": "'Design Basis & Inputs'!row 69 (V₁₆₂_work)"
+        },
+        {
+          "valueId": "PV-A-160-0220",
+          "value": "19.7",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-DAT-025",
+          "sourceLocation": "'T-162 Datasheet'!row 21 (item 3.1)"
+        }
+      ]
+    },
+    {
+      "conflictGroup": "CF-totalVolumeM3-T-162",
+      "assetId": "T-162",
+      "property": "design.totalVolumeM3",
+      "alternatives": [
+        {
+          "valueId": "PV-A-160-0165",
+          "value": "22.9",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-MEB-004",
+          "sourceLocation": "'Design Basis & Inputs'!row 70 (V₁₆₂_total)"
+        },
+        {
+          "valueId": "PV-A-160-0221",
+          "value": "25",
+          "unit": "m³",
+          "sourceDocId": "FEED-PE-DAT-025",
+          "sourceLocation": "'T-162 Datasheet'!row 22 (item 3.2)"
+        }
+      ]
+    }
+  ],
+  "identityHolds": [],
+  "gaps": [
+    {
+      "gapId": "GAP-A-160-MV-78e35b",
+      "assetId": "P-163",
+      "kind": "missing value",
+      "subject": "design.pumpType",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-160-MV-a8d7d6",
+      "assetId": "P-163",
+      "kind": "missing value",
+      "subject": "design.ratedFlowM3h",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-160-MV-8e5ef8",
+      "assetId": "P-163",
+      "kind": "missing value",
+      "subject": "design.differentialHead",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-160-CF-476118",
+      "assetId": "T-161",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-T-161"
+    },
+    {
+      "gapId": "GAP-A-160-CF-38b648",
+      "assetId": "F-161",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-F-161"
+    },
+    {
+      "gapId": "GAP-A-160-CF-a76c70",
+      "assetId": "T-161",
+      "kind": "conflict",
+      "subject": "design.workingVolumeM3",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-DAT-024, FEED-PE-MEB-004",
+      "status": "open",
+      "note": "CF-workingVolumeM3-T-161"
+    },
+    {
+      "gapId": "GAP-A-160-CF-685773",
+      "assetId": "T-161",
+      "kind": "conflict",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-DAT-024, FEED-PE-MEB-004, FEED-PE-REP-042",
+      "status": "open",
+      "note": "CF-totalVolumeM3-T-161"
+    },
+    {
+      "gapId": "GAP-A-160-CF-230edf",
+      "assetId": "T-162",
+      "kind": "conflict",
+      "subject": "design.workingVolumeM3",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-DAT-025, FEED-PE-MEB-004",
+      "status": "open",
+      "note": "CF-workingVolumeM3-T-162"
+    },
+    {
+      "gapId": "GAP-A-160-CF-ac32dc",
+      "assetId": "T-162",
+      "kind": "conflict",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-DAT-025, FEED-PE-MEB-004",
+      "status": "open",
+      "note": "CF-totalVolumeM3-T-162"
+    },
+    {
+      "gapId": "GAP-A-160-DF-5c3794",
+      "assetId": "D-164|F-161|T-161",
+      "kind": "decision follow-up",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "MAT-002 does not cover 6 item(s) with an MDL-001 material only (P-162, P-163, P-164, P-165, T-162, T-163): extend MAT-002 before those MoCs are approved.",
+      "status": "open",
+      "note": "D-A160-MOC"
+    },
+    {
+      "gapId": "GAP-A-160-DF-3c9d77",
+      "assetId": "T-161",
+      "kind": "decision follow-up",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Decide the A-160 dilution basis (REP-042 Option B, filter/rinse designed to become Option C when REP-039 M4 confirms GIC filterability); then re-issue FEED-PE-MEB-004 (V6) on DBM V2.0 and fix T-161 count, volume and the D-164 dryer change (Option E); create semantic records for A-160 (geometry 44–53) and settle the model-only TR/H/EL/VP-164 tags.",
+      "status": "open",
+      "note": "D-A160-01"
+    },
+    {
+      "gapId": "GAP-A-160-ID-295995",
+      "assetId": "EL-164 / SC-164, VP-164 / KO-164, D-164-THERMAL",
+      "kind": "identity / naming conflict",
+      "subject": "Not on LST-001",
+      "requiredSource": "Model compound records EL-164-SC-164, VP-164-KO-164 and D-164-THERMAL (V160)",
+      "status": "open",
+      "note": "Model-only dryer-train tags — give them a register identity or retire"
+    },
+    {
+      "gapId": "GAP-A-160-ID-2d969e",
+      "assetId": "P-162 … P-165",
+      "kind": "identity / naming conflict",
+      "subject": "Register pumps (LST-001)",
+      "requiredSource": "No model records (V160 adds tanks, press and dryer only)",
+      "status": "open",
+      "note": "Pump approvals held"
+    },
+    {
+      "gapId": "GAP-A-160-ID-a92318",
+      "assetId": "A-160 in the 3D model",
+      "kind": "identity / naming conflict",
+      "subject": "Geometry for T-161, T-162, F-161, D-164, T-163 plus model-only TR-164, H-164, EL/SC-164, VP/KO-164 (44–53)",
+      "requiredSource": "Semantic records exist only for three interfaces (IF-A160-*); P-162…P-165 have no geometry",
+      "status": "open",
+      "note": "Add expand-a160-semantic.mjs; give model-only dryer-train tags a register identity or retire them"
+    },
+    {
+      "gapId": "GAP-A-160-ID-f5c31f",
+      "assetId": "T-161 count / size",
+      "kind": "identity / naming conflict",
+      "subject": "One T-161 (LST-001); MEB-004 49.2 m³ on 50 kg/h",
+      "requiredSource": "2 × ≈ 110 m³ HDPE (PFD note per REP-042); REP-042 Option B ≈ 10–15 t water per batch",
+      "status": "open",
+      "note": "Count and size follow the dilution decision (same physics as A-300 D-A300-01)"
+    },
+    {
+      "gapId": "GAP-A-160-ID-5e4b35",
+      "assetId": "A-160 water basis",
+      "kind": "identity / naming conflict",
+      "subject": "170 kg/kg graphite (PFD, MEB-004)",
+      "requiredSource": "10–15 t per batch ≈ 20–30 kg/kg (REP-042 Option B)",
+      "status": "open",
+      "note": "340 m³/d vs ≈ 40–60 m³/d wastewater — 12 % of Case 0 (REP-038)"
+    }
+  ],
+  "inventory": [
+    {
+      "tag": "T-161",
+      "name": "Pre-G fixing tank",
+      "modelEquipmentId": 44,
+      "operation": "fixing",
+      "parts": 1015,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
+      "identityHold": false,
+      "approvedRows": 6,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "T-162",
+      "name": "Pre-G holding tank",
+      "modelEquipmentId": 45,
+      "operation": "fixing",
+      "parts": 483,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "F-161",
+      "name": "Membrane filter press",
+      "modelEquipmentId": 46,
+      "operation": "pregpress",
+      "parts": 1227,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
+      "identityHold": false,
+      "approvedRows": 3,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "D-164",
+      "name": "Vacuum tray dryer",
+      "modelEquipmentId": 47,
+      "operation": "pregdry",
+      "parts": 766,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
+      "identityHold": false,
+      "approvedRows": 3,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "TR-164",
+      "name": "Contained wet-cake tray handling",
+      "modelEquipmentId": 48,
+      "operation": "pregpress",
+      "parts": 129,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "H-164",
+      "name": "Contained dry tray unloading",
+      "modelEquipmentId": 49,
+      "operation": "pregdry",
+      "parts": 121,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "EL-164 / SC-164",
+      "name": "Dry Pre-G distribution",
+      "modelEquipmentId": 50,
+      "operation": "pregdry",
+      "parts": 4586,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "T-163",
+      "name": "Pre-G filtrate holding tank",
+      "modelEquipmentId": 51,
+      "operation": "pregpress",
+      "parts": 391,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "VP-164 / KO-164",
+      "name": "Dryer vacuum and condensate",
+      "modelEquipmentId": 53,
+      "operation": "pregdry",
+      "parts": 596,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "BND-161",
+      "name": "Pre-G fixing liquor · 16.4 m³ retention",
+      "modelEquipmentId": 161,
+      "operation": "containment-A-160",
+      "parts": 344,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "BND-162",
+      "name": "Pre-G holding slurry · 16.4 m³ retention",
+      "modelEquipmentId": 162,
+      "operation": "containment-A-160",
+      "parts": 239,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "BND-163",
+      "name": "Pre-G filtrate · 10.4 m³ retention",
+      "modelEquipmentId": 163,
+      "operation": "containment-A-160",
+      "parts": 318,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "BND-164",
+      "name": "Filter washing / slurry · 11.5 m³ retention",
+      "modelEquipmentId": 164,
+      "operation": "containment-A-160",
+      "parts": 491,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "ES-161",
+      "name": "Proposed emergency shower / eyewash",
+      "modelEquipmentId": 194,
+      "operation": "containment-A-160",
+      "parts": 17,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model station tag; plant tag approval open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "FE-161",
+      "name": "Washing / dryer approach · fire point",
+      "modelEquipmentId": 120161,
+      "operation": "fire-safety",
+      "parts": 41,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "ES-160-12",
+      "name": "Proposed emergency shower / eyewash",
+      "modelEquipmentId": 122012,
+      "operation": "containment-A-160",
+      "parts": 17,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model station tag; plant tag approval open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "P-163",
+      "name": "Fixing wastewater transfer",
+      "modelEquipmentId": 4115091118,
+      "operation": "fixing",
+      "parts": 242,
+      "designStatus": "proposed",
+      "inRegister": "yes",
+      "identityStatus": "register-tag-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "P-162",
+      "name": "Fixing recycle / holding transfer",
+      "modelEquipmentId": 4131868737,
+      "operation": "fixing",
+      "parts": 242,
+      "designStatus": "proposed",
+      "inRegister": "yes",
+      "identityStatus": "register-tag-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "P-165",
+      "name": "Filtrate wastewater transfer",
+      "modelEquipmentId": 4148646356,
+      "operation": "pregpress",
+      "parts": 242,
+      "designStatus": "proposed",
+      "inRegister": "yes",
+      "identityStatus": "register-tag-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "P-164",
+      "name": "Holding slurry to filter press",
+      "modelEquipmentId": 4165423975,
+      "operation": "pregpress",
+      "parts": 242,
+      "designStatus": "proposed",
+      "inRegister": "yes",
+      "identityStatus": "register-tag-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "IF-A160-WW161",
+      "name": "Existing Pre-G WW161 wastewater interface",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A160-WW163",
+      "name": "Existing Pre-G WW163 wastewater interface",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A160-DEC161",
+      "name": "Existing Pre-G DEC161 wastewater interface",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "D-164-THERMAL",
+      "name": "D-164 thermal interface",
+      "modelEquipmentId": "47",
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "provisional model subassembly",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "ES-160-01",
+      "name": "Emergency shower and eyewash station",
+      "modelEquipmentId": "122001",
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model station tag; plant tag approval open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "EL-164-SC-164",
+      "name": "Dry Pre-G distribution",
+      "modelEquipmentId": "50",
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "VP-164-KO-164",
+      "name": "Dryer vacuum and condensate package",
+      "modelEquipmentId": "53",
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "EL-164",
+      "name": "model-only EL-164 / SC-164 assembly",
+      "modelEquipmentId": "50",
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "geometry-only (no semantic record)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    },
+    {
+      "tag": "VP-164",
+      "name": "model-only VP-164 / KO-164 assembly",
+      "modelEquipmentId": "53",
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "geometry-only (no semantic record)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    }
+  ],
+  "documents": [
+    {
+      "documentId": "FEED-PE-LST-001",
+      "title": "Equipment and Stream Register",
+      "revision": "V5.1",
+      "docType": "LST",
+      "control": "controlled",
+      "tier": "A",
+      "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-LST-001_Equipment-and-Stream-Register_V5.1.xlsx",
+      "valueRows": "18"
+    },
+    {
+      "documentId": "FEED-PE-PFD-001",
+      "title": "Process Flow Diagram",
+      "revision": "V5.1.1",
+      "docType": "PFD",
+      "control": "controlled (Draft - IFR)",
+      "tier": "A",
+      "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-PFD-001_Process-Flow-Diagram_V5.1.1.pdf",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-LST-007",
+      "title": "Control and Instrumentation Loop Register",
+      "revision": "V1.0",
+      "docType": "LST",
+      "control": "controlled (conceptual)",
+      "tier": "A",
+      "file": "7 Piping and Instrumentation Diagrams (P&IDs)\\FEED-PE-LST-007_Control-and-Instrumentation-Loop-Register_V1.0.xlsx",
+      "valueRows": "36"
+    },
+    {
+      "documentId": "FEED-PE-MDL-001",
+      "title": "Equipment Scale-Up Study",
+      "revision": "V1.8",
+      "docType": "MDL",
+      "control": "controlled",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\FEED-PE-MDL-001_Equipment-Scale-Up-Study_V1.8.xlsx",
+      "valueRows": "90"
+    },
+    {
+      "documentId": "FEED-PE-MAT-002",
+      "title": "MOC Selection Matrix",
+      "revision": "V1.1",
+      "docType": "MAT",
+      "control": "controlled",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.1.xlsx",
+      "valueRows": "5"
+    },
+    {
+      "documentId": "FEED-PE-DBM-001",
+      "title": "Design Basis Memorandum",
+      "revision": "V2.0",
+      "docType": "DBM",
+      "control": "controlled (approved)",
+      "tier": "B",
+      "file": "3 Design Basis Memorandum (DBM)\\FEED-PE-DBM-001_Design-Basis-Memorandum_V2.0.docx",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "MODEL",
+      "title": "rGO Process Explorer model and semantic core",
+      "revision": "semantic v1",
+      "docType": "MODEL",
+      "control": "model evidence only",
+      "tier": "A",
+      "file": "dist/semantic/v1 (scripts/generate-reactor-semantic.mjs, scripts/expand-*-semantic.mjs)",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-MEB-004",
+      "title": "A-160 Pre-G Washing and Drying Stream Table",
+      "revision": "V5.0",
+      "docType": "MEB",
+      "control": "controlled",
+      "tier": "A",
+      "file": "5 Mass and Energy Balances\\3 - FEED MEB Calculations\\FEED-PE-MEB-004_A-160-Pre-G-Washing-and-Drying-Stream-Table_V5.0.xlsx",
+      "valueRows": "28"
+    },
+    {
+      "documentId": "FEED-PE-REP-042",
+      "title": "A-160 Pre-G Washing and Drying Assessment (heat of dilution, decant, filter press, dryer)",
+      "revision": "V1.0",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-042_A-160-Pre-G-Washing-and-Drying-Assessment_V1.0.docx",
+      "valueRows": "8"
+    },
+    {
+      "documentId": "FEED-PE-CAL-016",
+      "title": "A-160 Option B Equipment Sizing Basis",
+      "revision": "V1.0",
+      "docType": "CAL",
+      "control": "controlled (preliminary)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\4 - Equipment Calculation (CAL) Sheets\\FEED-PE-CAL-016_A-160-Option-B-Equipment-Sizing-Basis_V1.0.xlsx",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-DAT-024",
+      "title": "T-161 Pre-G Fixing Tank Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-024_T-161-Pre-G-Fixing-Tank-Datasheet_V1.0.xlsx",
+      "valueRows": "26"
+    },
+    {
+      "documentId": "FEED-PE-DAT-025",
+      "title": "T-162 Pre-G Hold Tank Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-025_T-162-Pre-G-Hold-Tank-Datasheet_V1.0.xlsx",
+      "valueRows": "18"
+    },
+    {
+      "documentId": "FEED-PE-DAT-026",
+      "title": "T-163 Pre-G Filtrate Tank Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-026_T-163-Pre-G-Filtrate-Tank-Datasheet_V1.0.xlsx",
+      "valueRows": "18"
+    },
+    {
+      "documentId": "FEED-PE-DAT-027",
+      "title": "P-162 Dilution Loop Pump Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-027_P-162-Dilution-Loop-Pump-Datasheet_V1.0.xlsx",
+      "valueRows": "25"
+    },
+    {
+      "documentId": "FEED-PE-DAT-028",
+      "title": "P-164 Press Feed Pump Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-028_P-164-Press-Feed-Pump-Datasheet_V1.0.xlsx",
+      "valueRows": "20"
+    },
+    {
+      "documentId": "FEED-PE-DAT-029",
+      "title": "P-165 Filtrate Transfer Pump Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-029_P-165-Filtrate-Transfer-Pump-Datasheet_V1.0.xlsx",
+      "valueRows": "25"
+    }
+  ],
+  "images": [
+    {
+      "key": "overview",
+      "title": "01 | A-160 fixing, filtration and drying — all register equipment, assembled (baseline)",
+      "owners": [
+        "T-161",
+        "T-162",
+        "F-161",
+        "TR-164",
+        "D-164",
+        "H-164",
+        "EL-164 / SC-164",
+        "T-163",
+        "VP-164 / KO-164",
+        "P-162",
+        "P-163",
+        "P-164",
+        "P-165"
+      ],
+      "direction": [
+        1,
+        0.8,
+        1
+      ],
+      "alt": "fixing and holding tanks, filter press, tray dryer with vacuum package, tray handling, distribution elevator, filtrate tank and pumps in assembled position"
+    },
+    {
+      "key": "fixing",
+      "title": "02 | T-161 fixing tank and T-162 holding tank with transfer pumps P-162 / P-163",
+      "owners": [
+        "T-161",
+        "T-162",
+        "P-162",
+        "P-163"
+      ],
+      "direction": [
+        -1,
+        0.5,
+        1
+      ],
+      "alt": "the two large HDPE tanks with the recycle / holding and wastewater transfer pumps"
+    },
+    {
+      "key": "press",
+      "title": "03 | F-161 membrane filter press with feed pump P-164, filtrate tank T-163, pump P-165 and wet-cake tray handling TR-164",
+      "owners": [
+        "F-161",
+        "P-164",
+        "T-163",
+        "P-165",
+        "TR-164"
+      ],
+      "direction": [
+        1,
+        0.5,
+        -1
+      ],
+      "alt": "filter press on its frame with the slurry feed pump, filtrate tank and wastewater pump, and the tray handling below"
+    },
+    {
+      "key": "dryer",
+      "title": "04 | D-164 vacuum tray dryer with VP-164 / KO-164, dry tray unloading H-164 and EL-164 / SC-164 distribution",
+      "owners": [
+        "D-164",
+        "VP-164 / KO-164",
+        "H-164",
+        "EL-164 / SC-164"
+      ],
+      "frame": [
+        "D-164",
+        "VP-164 / KO-164",
+        "H-164"
+      ],
+      "zoom": 1.1,
+      "direction": [
+        -1,
+        0.5,
+        -1
+      ],
+      "alt": "the tray dryer with its vacuum and condensate package, the unloading station and the distribution elevator"
+    },
+    {
+      "key": "containment",
+      "title": "05 | Bunds BND-161 … BND-164, emergency stations and fire point FE-161",
+      "owners": [
+        "BND-161",
+        "BND-162",
+        "BND-163",
+        "BND-164",
+        "T-161",
+        "T-162",
+        "F-161",
+        "T-163",
+        "D-164",
+        "ES-161",
+        "ES-160-12",
+        "FE-161"
+      ],
+      "direction": [
+        0.35,
+        1,
+        0.3
+      ],
+      "percentiles": [
+        2,
+        96
+      ],
+      "alt": "plan-like view of the four bunds with the tanks, press and dryer they serve, two emergency stations and the fire point"
+    }
+  ],
+  "related": [
+    {
+      "href": "./a140-review.html",
+      "label": "A-140 Pre-G synthesis (upstream)"
+    },
+    {
+      "href": "./a200-review.html",
+      "label": "A-200 oxidation bank (downstream)"
+    },
+    {
+      "href": "./semantic-core.html",
+      "label": "Semantic Plant Core (A-1000 wastewater records)"
+    }
+  ],
+  "counts": {
+    "assets": 22,
+    "propertyRows": 317,
+    "approved": 13,
+    "openConflicts": 4,
+    "decisions": 3,
+    "holds": 0,
+    "gapsOpen": 14,
+    "gapsClosed": 2
+  }
+}

@@ -538,6 +538,13 @@
      "source": "FEED-PE-MEB-004",
      "location": "'Design Basis & Inputs'!row 64 (V₁₆₁_work)",
      "status": "superseded"
+    },
+    {
+     "value": "19.7",
+     "unit": "m³",
+     "source": "FEED-PE-DAT-024",
+     "location": "'T-161 Datasheet'!row 21 (item 3.1)",
+     "status": "conflict"
     }
    ]
   },
@@ -585,6 +592,13 @@
      "source": "FEED-PE-MEB-004",
      "location": "'Design Basis & Inputs'!row 69 (V₁₆₂_work)",
      "status": "superseded"
+    },
+    {
+     "value": "19.7",
+     "unit": "m³",
+     "source": "FEED-PE-DAT-025",
+     "location": "'T-162 Datasheet'!row 21 (item 3.1)",
+     "status": "conflict"
     }
    ]
   },
