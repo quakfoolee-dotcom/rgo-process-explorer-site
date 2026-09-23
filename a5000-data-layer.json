@@ -1,8 +1,8 @@
 {
  "area": "A-5000",
- "version": "3f73aff",
+ "version": "ceaba6f",
  "date": "2026-09-22",
- "revision": "r2",
+ "revision": "r3",
  "reviewer": {
   "initials": "QFL",
   "date": "2026-09-22"
@@ -20,7 +20,7 @@
   "gapsOpen": 30,
   "gapsClosed": 10,
   "holds": 0,
-  "documents": 11
+  "documents": 12
  },
  "approved": [
   {
@@ -1985,6 +1985,16 @@
    "tier": "B",
    "file": "B. Technical Reports\\FEED-PE-REP-041_Furnace-Off-Gas-and-Vent-Gas-Assessment_V1.0.docx",
    "valueRows": "0"
+  },
+  {
+   "documentId": "FEED-PE-MOC-002",
+   "title": "MOC Request: A-5000 Fourth Utility Loop and Exotherm Control (PFD-5000)",
+   "revision": "V1.0",
+   "docType": "MOC",
+   "control": "controlled (raised 2026-09-22 - pending review and decision)",
+   "tier": "B",
+   "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-MOC-002_A-5000-Fourth-Utility-Loop_V1.0.docx",
+   "valueRows": "0"
   }
  ],
  "layout": {
@@ -2008,17 +2018,23 @@
   {
    "id": "A5000-01",
    "topic": "Four utility loops, not three — the ≥ 200 °C medium is missing",
-   "status": "Design concept approved — model and PFD not yet updated",
+   "status": "Design concept approved — MoC FEED-PE-MOC-002 raised, pending review and decision; model and PFD not yet updated",
    "priority": "high",
    "discipline": "Process / utilities",
-   "observation": "D-A5000-01 approves FEED-PE-REP-043 F-51: a fourth loop — ≥ 200 °C steam or thermal oil — is required for HX-601, the acid concentrator and R-141, and the exotherm control belongs on chilled water. The model and FEED-PFD-5000 still show three water circuits (HW 80–95 °C, CW 25–30 °C, CHW 5–7 °C), so the page sections below describe the as-drawn arrangement, not the approved concept. 16 approved values are applied on 12 assets.",
-   "action": "Raise the MoC on FEED-PFD-5000 to add the ≥ 200 °C loop (A-5400 placeholder), move the R-201 / T-303 exotherm control to chilled water, and re-issue the thermal balance; until then no heating duty above 95 °C may be shown as served.",
+   "observation": "D-A5000-01 approves FEED-PE-REP-043 F-51: a fourth loop — ≥ 200 °C steam or thermal oil — is required for HX-601, the acid concentrator and R-141, and the exotherm control belongs on chilled water. The model and FEED-PFD-5000 still show three water circuits (HW 80–95 °C, CW 25–30 °C, CHW 5–7 °C), so the page sections below describe the as-drawn arrangement, not the approved concept. The change is now recorded as FEED-PE-MOC-002 V1.0 (raised 2026-09-22 against FEED-PE-PFD-001 V5.1.1 sheet PFD-5000; Parts A–C complete, review and decision open), so nothing in it is approved yet. 16 approved values are applied on 12 assets.",
+   "action": "Take FEED-PE-MOC-002 through review (Part D, with the HAZOP / What-If of the new loop and the chilled-water exotherm service) and decision (Part F); then revise PFD-5000 and the user sheets to add the ≥ 200 °C loop (A-5400 placeholder) and move the R-201 / T-303 exotherm control to chilled water, and re-issue the thermal balance as REP-043 V1.1. Until Part F is signed no heating duty above 95 °C may be shown as served.",
    "evidence": [
     {
      "kind": "decision",
      "id": "D-A5000-01",
      "label": "D-A5000-01 (QFL 2026-09-20, FEED-PE-REP-043): Four utility loops, not three (REP-043): add a ≥ 200 °C steam / thermal-oil loop for HX-601, the acid concentrator and R-141 heat-up; keep hot water, …",
      "href": "#a5000-decisions"
+    },
+    {
+     "kind": "document",
+     "id": "FEED-PE-MOC-002",
+     "label": "FEED-PE-MOC-002 V1.0 · MOC Request: A-5000 Fourth Utility Loop and Exotherm Control (PFD-5000) (controlled (raised 2026-09-22 - pending review and decision))",
+     "href": "#a5000-documents"
     },
     {
      "kind": "value",
@@ -2053,7 +2069,7 @@
    "priority": "high",
    "discipline": "Process",
    "observation": "FEED-PFD-5000 shows the R-201 jackets on HWS / HWR (U201 / U202 “From HWS”) while REP-043 requires the oxidation exotherm to be controlled on chilled water through TCU-201. The model follows the chilled-water route. Both cannot be right, and the 10 °C cooldown target on PFD page 7 is separated from the 5–7 °C primary supply by only 3–5 K across two heat-transfer barriers, with the secondary temperatures unknown.",
-   "action": "Settle the R-201 jacket service on the re-issued PFD, then confirm the TCU-201 exchanger approach, flow and fouling against the R-201 calorimetry before any cooldown time is claimed.",
+   "action": "Settle the R-201 jacket service on the re-issued PFD (in scope of FEED-PE-MOC-002), then confirm the TCU-201 exchanger approach, flow and fouling against the R-201 calorimetry before any cooldown time is claimed.",
    "evidence": [
     {
      "kind": "gap",
