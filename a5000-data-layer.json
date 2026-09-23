@@ -1,6 +1,6 @@
 {
  "area": "A-5000",
- "version": "af535b4",
+ "version": "2c0c148",
  "date": "2026-09-23",
  "revision": "r4",
  "reviewer": {
@@ -11,7 +11,7 @@
  "semanticCoreVersion": "1.19.0-foundation",
  "counts": {
   "assets": 47,
-  "values": 470,
+  "values": 476,
   "approved": 16,
   "superseded": 12,
   "conflictsOpen": 10,
@@ -1407,7 +1407,7 @@
    "modelEquipmentId": "801",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 65,
+   "values": 66,
    "approved": 1,
    "gaps": 0
   },
@@ -1419,7 +1419,7 @@
    "modelEquipmentId": "802",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 65,
+   "values": 66,
    "approved": 1,
    "gaps": 0
   },
@@ -1467,7 +1467,7 @@
    "modelEquipmentId": "811",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 65,
+   "values": 66,
    "approved": 1,
    "gaps": 0
   },
@@ -1479,7 +1479,7 @@
    "modelEquipmentId": "812",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 65,
+   "values": 66,
    "approved": 1,
    "gaps": 0
   },
@@ -1527,7 +1527,7 @@
    "modelEquipmentId": "821",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 65,
+   "values": 66,
    "approved": 1,
    "gaps": 0
   },
@@ -1539,7 +1539,7 @@
    "modelEquipmentId": "822",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 65,
+   "values": 66,
    "approved": 1,
    "gaps": 0
   },
@@ -1793,36 +1793,36 @@
   {
    "documentId": "FEED-PE-DAT-009",
    "title": "A-5110A/B Hot-Water Circulation Pumps Datasheet",
-   "revision": "V1.0",
+   "revision": "V1.1",
    "docType": "DAT",
    "control": "controlled (preliminary - budget enquiry)",
    "tier": "A",
-   "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-009_A-5110AB-Hot-Water-Circulation-Pumps-Datasheet_V1.0.xlsx",
-   "valueRows": "94"
+   "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-009_A-5110AB-Hot-Water-Circulation-Pumps-Datasheet_V1.1.xlsx",
+   "valueRows": "96"
   },
   {
    "documentId": "FEED-PE-DAT-010",
    "title": "A-5210A/B Cooling-Water Circulation Pumps Datasheet",
-   "revision": "V1.0",
+   "revision": "V1.1",
    "docType": "DAT",
    "control": "controlled (preliminary - budget enquiry)",
    "tier": "A",
-   "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-010_A-5210AB-Cooling-Water-Circulation-Pumps-Datasheet_V1.0.xlsx",
-   "valueRows": "94"
+   "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-010_A-5210AB-Cooling-Water-Circulation-Pumps-Datasheet_V1.1.xlsx",
+   "valueRows": "96"
   },
   {
    "documentId": "FEED-PE-DAT-011",
    "title": "A-5310A/B Chilled-Water Circulation Pumps Datasheet",
-   "revision": "V1.0",
+   "revision": "V1.1",
    "docType": "DAT",
    "control": "controlled (preliminary - budget enquiry)",
    "tier": "A",
-   "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-011_A-5310AB-Chilled-Water-Circulation-Pumps-Datasheet_V1.0.xlsx",
-   "valueRows": "94"
+   "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-011_A-5310AB-Chilled-Water-Circulation-Pumps-Datasheet_V1.1.xlsx",
+   "valueRows": "96"
   }
  ],
  "layout": {
-  "version": "30cbb82",
+  "version": "c4e9ad2",
   "date": "2026-09-23",
   "revision": "r2",
   "reviewer": "QFL",
@@ -1933,7 +1933,7 @@
    "status": "Datasheets issued for budget enquiry — candidate values, none approved",
    "priority": "high",
    "discipline": "Rotating equipment",
-   "observation": "FEED-PE-CAL-013 V1.0 sets the hydraulic basis and FEED-PE-DAT-009 / 010 / 011 V1.0 carry it (issued 2026-09-22, preliminary — for budget enquiry): A-5110A/B 25 m³/h at 23 m, A-5210A/B 1,335 m³/h at 33 m, A-5310A/B 610 m³/h at 31 m. That is 282 candidate rows on the six pumps, 0 approved — the pumps still carry only the approved MAT-002 material, and no rate is applied to the model. The flows rest on REP-043 V1.0 duties on the Case P envelope (H1); the chilled-water pair waits on calorimetry A-059 / A-079 (H2); and the cooling-water pair carries a new identity question — a cooling tower on the PFD, LST-001 and REP-043, a closed-circuit evaporative fluid cooler in the model (H4).",
+   "observation": "FEED-PE-CAL-013 V1.0 sets the hydraulic basis and FEED-PE-DAT-009 / 010 / 011 V1.0 carry it (issued 2026-09-22, preliminary — for budget enquiry): A-5110A/B 25 m³/h at 23 m, A-5210A/B 1,335 m³/h at 33 m, A-5310A/B 610 m³/h at 31 m. That is 288 candidate rows on the six pumps, 0 approved — the pumps still carry only the approved MAT-002 material, and no rate is applied to the model. The flows rest on REP-043 V1.0 duties on the Case P envelope (H1); the chilled-water pair waits on calorimetry A-059 / A-079 (H2); and the cooling-water pair carries a new identity question — a cooling tower on the PFD, LST-001 and REP-043, a closed-circuit evaporative fluid cooler in the model (H4).",
    "action": "Close the datasheet holds — restate the duties in REP-043 V1.1 (MOC-002 D.1 item 4), settle the cooling-water loop type and the CW / CHW pressurisation points, fix the electrical basis and obtain vendor curves — then approve pump type, rated flow and head by decision. Until then the datasheet values stay candidate and are not applied to the model.",
    "evidence": [
     {
@@ -1945,7 +1945,7 @@
     {
      "kind": "document",
      "id": "FEED-PE-DAT-010",
-     "label": "FEED-PE-DAT-010 V1.0 · A-5210A/B Cooling-Water Circulation Pumps Datasheet (controlled (preliminary - budget enquiry))",
+     "label": "FEED-PE-DAT-010 V1.1 · A-5210A/B Cooling-Water Circulation Pumps Datasheet (controlled (preliminary - budget enquiry))",
      "href": "#a5000-documents"
     },
     {
@@ -1963,7 +1963,7 @@
     {
      "kind": "asset",
      "id": "A-5110A",
-     "label": "A-5110A · Hot-water circulation pump A (Pump) — 65 rows, 1 approved, 0 open gaps",
+     "label": "A-5110A · Hot-water circulation pump A (Pump) — 66 rows, 1 approved, 0 open gaps",
      "href": "#a5000-assets"
     },
     {

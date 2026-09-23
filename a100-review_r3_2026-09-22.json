@@ -3,7 +3,7 @@
   "title": "A-100 assembly & design review",
   "revision": "r3",
   "date": "2026-09-22",
-  "sourceCommit": "af535b4",
+  "sourceCommit": "2c0c148",
   "semanticCoreVersion": "1.19.0-foundation",
   "registerRevision": "2026-09-10 · Physical equipment ownership and complete Explore assemblies",
   "modelConfig": {
@@ -219,15 +219,15 @@
       "exitCode": 0,
       "passed": true,
       "lastLine": "PASS: A-100, A-140 and A-160 equipment, flows, interfaces, alternatives and source guards are structured without inventing ratings.",
-      "ranAt": "2026-09-23T05:58:02.293Z"
+      "ranAt": "2026-09-23T16:10:24.036Z"
     },
     {
       "command": "node tests/validate-semantic-data.mjs",
       "purpose": "data-layer invariants (registered sources, reviewer on approvals, conflict groups, identity holds)",
       "exitCode": 0,
       "passed": true,
-      "lastLine": "{\"passed\":true,\"areas\":[{\"area\":\"A-100\",\"assets\":10,\"holds\":0,\"values\":308,\"approved\":10,\"conflicts\":2,\"variants\":12,\"gaps\":8},{\"area\":\"A-1000\",\"assets\":60,\"holds\":0,\"values\":293,\"approved\":22,\"conflicts\":3,\"variants\":19,\"gaps\":93},{\"area\":\"A-140\",\"assets\":17,\"holds\":0,\"values\":517,\"approved\":57,\"conflicts\":20,\"variants\":14,\"gaps\":32},{\"area\":\"A-160\",\"assets\":22,\"holds\":0,\"values\":317,\"approved\":13,\"conflicts\":6,\"variants\":11,\"gaps\":16},{\"area\":\"A-200\",\"assets\":67,\"holds\":0,\"values\":834,\"approved\":78,\"conflicts\":69,\"variants\":37,\"gaps\":145},{\"area\":\"A-2000\",\"assets\":49,\"holds\":0,\"values\":268,\"approved\":17,\"conflicts\":10,\"variants\":18,\"gaps\":76},{\"area\":\"A-300\",\"assets\":20,\"holds\":0,\"values\":302,\"approved\":25,\"conflicts\":13,\"variants\":17,\"gaps\":62},{\"area\":\"A-3000\",\"assets\":51,\"holds\":0,\"values\":132,\"approved\":13,\"conflicts\":3,\"variants\":11,\"gaps\":43},{\"area\":\"A-400\",\"assets\":23,\"holds\":0,\"values\":152,\"approved\":13,\"conflicts\":7,\"variants\":8,\"gaps\":45},{\"area\":\"A-4000\",\"assets\":11,\"holds\":0,\"values\":201,\"approved\":13,\"conflicts\":11,\"variants\":11,\"gaps\":18},{\"area\":\"A-500\",\"assets\":12,\"holds\":0,\"values\":102,\"approved\":18,\"conflicts\":5,\"variants\":5,\"gaps\":24},{\"area\":\"A-5000\",\"assets\":47,\"holds\":0,\"values\":470,\"approved\":16,\"conflicts\":10,\"variants\":10,\"gaps\":22},{\"area\":\"A-600\",\"assets\":31,\"holds\":0,\"values\":194,\"approved\":18,\"conflicts\":5,\"variants\":12,\"gaps\":22},{\"area\":\"A-6000\",\"assets\":6,\"holds\":0,\"values\":38,\"approved\":3,\"conflicts\":2,\"variants\":2,\"gaps\":5},{\"area\":\"A-700\",\"assets\":17,\"holds\":0,\"values\":377,\"approved\":39,\"conflicts\":5,\"variants\":7,\"gaps\":72},{\"area\":\"A-800\",\"assets\":25,\"holds\":0,\"values\":319,\"approved\":29,\"conflicts\":9,\"variants\":14,\"gaps\":38},{\"area\":\"A-900\",\"assets\":23,\"holds\":4,\"values\":208,\"approved\":20,\"conflicts\":11,\"variants\":11,\"gaps\":21}]}",
-      "ranAt": "2026-09-23T05:58:03.175Z"
+      "lastLine": "{\"passed\":true,\"areas\":[{\"area\":\"A-100\",\"assets\":10,\"holds\":0,\"values\":310,\"approved\":10,\"conflicts\":2,\"variants\":12,\"gaps\":8},{\"area\":\"A-1000\",\"assets\":60,\"holds\":0,\"values\":293,\"approved\":22,\"conflicts\":3,\"variants\":19,\"gaps\":93},{\"area\":\"A-140\",\"assets\":17,\"holds\":0,\"values\":518,\"approved\":57,\"conflicts\":20,\"variants\":14,\"gaps\":32},{\"area\":\"A-160\",\"assets\":22,\"holds\":0,\"values\":319,\"approved\":13,\"conflicts\":6,\"variants\":11,\"gaps\":16},{\"area\":\"A-200\",\"assets\":67,\"holds\":0,\"values\":834,\"approved\":78,\"conflicts\":69,\"variants\":37,\"gaps\":145},{\"area\":\"A-2000\",\"assets\":49,\"holds\":0,\"values\":268,\"approved\":17,\"conflicts\":10,\"variants\":18,\"gaps\":76},{\"area\":\"A-300\",\"assets\":20,\"holds\":0,\"values\":302,\"approved\":25,\"conflicts\":13,\"variants\":17,\"gaps\":62},{\"area\":\"A-3000\",\"assets\":51,\"holds\":0,\"values\":337,\"approved\":13,\"conflicts\":3,\"variants\":11,\"gaps\":6},{\"area\":\"A-400\",\"assets\":23,\"holds\":0,\"values\":152,\"approved\":13,\"conflicts\":7,\"variants\":8,\"gaps\":45},{\"area\":\"A-4000\",\"assets\":11,\"holds\":0,\"values\":201,\"approved\":13,\"conflicts\":11,\"variants\":11,\"gaps\":18},{\"area\":\"A-500\",\"assets\":12,\"holds\":0,\"values\":102,\"approved\":18,\"conflicts\":5,\"variants\":5,\"gaps\":24},{\"area\":\"A-5000\",\"assets\":47,\"holds\":0,\"values\":476,\"approved\":16,\"conflicts\":10,\"variants\":10,\"gaps\":22},{\"area\":\"A-600\",\"assets\":31,\"holds\":0,\"values\":194,\"approved\":18,\"conflicts\":5,\"variants\":12,\"gaps\":22},{\"area\":\"A-6000\",\"assets\":6,\"holds\":0,\"values\":38,\"approved\":3,\"conflicts\":2,\"variants\":2,\"gaps\":5},{\"area\":\"A-700\",\"assets\":17,\"holds\":0,\"values\":377,\"approved\":39,\"conflicts\":5,\"variants\":7,\"gaps\":72},{\"area\":\"A-800\",\"assets\":25,\"holds\":0,\"values\":319,\"approved\":29,\"conflicts\":9,\"variants\":14,\"gaps\":38},{\"area\":\"A-900\",\"assets\":23,\"holds\":4,\"values\":208,\"approved\":20,\"conflicts\":11,\"variants\":11,\"gaps\":21}]}",
+      "ranAt": "2026-09-23T16:10:26.256Z"
     },
     {
       "command": "node tests/validate-semantic-fields.mjs",
@@ -235,7 +235,7 @@
       "exitCode": 0,
       "passed": true,
       "lastLine": "PASS: documented pending and superseded values, alternatives, mixed units, missing values and identity holds.",
-      "ranAt": "2026-09-23T05:58:06.907Z"
+      "ranAt": "2026-09-23T16:10:38.855Z"
     }
   ],
   "decisions": [
@@ -911,22 +911,22 @@
     {
       "documentId": "FEED-PE-DAT-012",
       "title": "P-101 H2SO4 Transfer Pump Datasheet",
-      "revision": "V1.0",
+      "revision": "V1.1",
       "docType": "DAT",
       "control": "controlled (preliminary - budget enquiry)",
       "tier": "A",
-      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-012_P-101-H2SO4-Transfer-Pump-Datasheet_V1.0.xlsx",
-      "valueRows": "36"
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-012_P-101-H2SO4-Transfer-Pump-Datasheet_V1.1.xlsx",
+      "valueRows": "37"
     },
     {
       "documentId": "FEED-PE-DAT-013",
       "title": "P-102 Premix Slurry Transfer Pump Datasheet",
-      "revision": "V1.0",
+      "revision": "V1.1",
       "docType": "DAT",
       "control": "controlled (preliminary - budget enquiry)",
       "tier": "A",
-      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-013_P-102-Premix-Slurry-Transfer-Pump-Datasheet_V1.0.xlsx",
-      "valueRows": "36"
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-013_P-102-Premix-Slurry-Transfer-Pump-Datasheet_V1.1.xlsx",
+      "valueRows": "37"
     },
     {
       "documentId": "FEED-PE-DAT-014",
@@ -1065,7 +1065,7 @@
   ],
   "counts": {
     "assets": 10,
-    "propertyRows": 308,
+    "propertyRows": 310,
     "approved": 10,
     "openConflicts": 1,
     "decisions": 3,
