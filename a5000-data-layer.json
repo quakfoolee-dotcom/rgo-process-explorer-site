@@ -1,8 +1,8 @@
 {
  "area": "A-5000",
- "version": "ceaba6f",
- "date": "2026-09-22",
- "revision": "r3",
+ "version": "4c538b8",
+ "date": "2026-09-23",
+ "revision": "r4",
  "reviewer": {
   "initials": "QFL",
   "date": "2026-09-22"
@@ -11,16 +11,16 @@
  "semanticCoreVersion": "1.19.0-foundation",
  "counts": {
   "assets": 47,
-  "values": 188,
+  "values": 470,
   "approved": 16,
   "superseded": 12,
   "conflictsOpen": 10,
   "conflictsClosed": 10,
   "decisions": 6,
-  "gapsOpen": 30,
+  "gapsOpen": 12,
   "gapsClosed": 10,
   "holds": 0,
-  "documents": 12
+  "documents": 16
  },
  "approved": [
   {
@@ -859,168 +859,6 @@
     "note": "no source row harvested"
    },
    {
-    "gapId": "GAP-A-5000-MV-70c448",
-    "assetId": "A-5110A",
-    "kind": "missing value",
-    "subject": "design.pumpType",
-    "requiredSource": "Pump datasheet / hydraulic calculation",
-    "status": "open",
-    "note": "no source row harvested"
-   },
-   {
-    "gapId": "GAP-A-5000-MV-4ab141",
-    "assetId": "A-5110A",
-    "kind": "missing value",
-    "subject": "design.ratedFlowM3h",
-    "requiredSource": "Pump datasheet / hydraulic calculation",
-    "status": "open",
-    "note": "no source row harvested"
-   },
-   {
-    "gapId": "GAP-A-5000-MV-64f318",
-    "assetId": "A-5110A",
-    "kind": "missing value",
-    "subject": "design.differentialHead",
-    "requiredSource": "Pump datasheet / hydraulic calculation",
-    "status": "open",
-    "note": "no source row harvested"
-   },
-   {
-    "gapId": "GAP-A-5000-MV-d09e3a",
-    "assetId": "A-5110B",
-    "kind": "missing value",
-    "subject": "design.pumpType",
-    "requiredSource": "Pump datasheet / hydraulic calculation",
-    "status": "open",
-    "note": "no source row harvested"
-   },
-   {
-    "gapId": "GAP-A-5000-MV-33de75",
-    "assetId": "A-5110B",
-    "kind": "missing value",
-    "subject": "design.ratedFlowM3h",
-    "requiredSource": "Pump datasheet / hydraulic calculation",
-    "status": "open",
-    "note": "no source row harvested"
-   },
-   {
-    "gapId": "GAP-A-5000-MV-4a97b9",
-    "assetId": "A-5110B",
-    "kind": "missing value",
-    "subject": "design.differentialHead",
-    "requiredSource": "Pump datasheet / hydraulic calculation",
-    "status": "open",
-    "note": "no source row harvested"
-   },
-   {
-    "gapId": "GAP-A-5000-MV-bcf835",
-    "assetId": "A-5210A",
-    "kind": "missing value",
-    "subject": "design.pumpType",
-    "requiredSource": "Pump datasheet / hydraulic calculation",
-    "status": "open",
-    "note": "no source row harvested"
-   },
-   {
-    "gapId": "GAP-A-5000-MV-131958",
-    "assetId": "A-5210A",
-    "kind": "missing value",
-    "subject": "design.ratedFlowM3h",
-    "requiredSource": "Pump datasheet / hydraulic calculation",
-    "status": "open",
-    "note": "no source row harvested"
-   },
-   {
-    "gapId": "GAP-A-5000-MV-89709e",
-    "assetId": "A-5210A",
-    "kind": "missing value",
-    "subject": "design.differentialHead",
-    "requiredSource": "Pump datasheet / hydraulic calculation",
-    "status": "open",
-    "note": "no source row harvested"
-   },
-   {
-    "gapId": "GAP-A-5000-MV-bf6f5a",
-    "assetId": "A-5210B",
-    "kind": "missing value",
-    "subject": "design.pumpType",
-    "requiredSource": "Pump datasheet / hydraulic calculation",
-    "status": "open",
-    "note": "no source row harvested"
-   },
-   {
-    "gapId": "GAP-A-5000-MV-523c1e",
-    "assetId": "A-5210B",
-    "kind": "missing value",
-    "subject": "design.ratedFlowM3h",
-    "requiredSource": "Pump datasheet / hydraulic calculation",
-    "status": "open",
-    "note": "no source row harvested"
-   },
-   {
-    "gapId": "GAP-A-5000-MV-e08d9f",
-    "assetId": "A-5210B",
-    "kind": "missing value",
-    "subject": "design.differentialHead",
-    "requiredSource": "Pump datasheet / hydraulic calculation",
-    "status": "open",
-    "note": "no source row harvested"
-   },
-   {
-    "gapId": "GAP-A-5000-MV-961750",
-    "assetId": "A-5310A",
-    "kind": "missing value",
-    "subject": "design.pumpType",
-    "requiredSource": "Pump datasheet / hydraulic calculation",
-    "status": "open",
-    "note": "no source row harvested"
-   },
-   {
-    "gapId": "GAP-A-5000-MV-f4d80e",
-    "assetId": "A-5310A",
-    "kind": "missing value",
-    "subject": "design.ratedFlowM3h",
-    "requiredSource": "Pump datasheet / hydraulic calculation",
-    "status": "open",
-    "note": "no source row harvested"
-   },
-   {
-    "gapId": "GAP-A-5000-MV-8a83d3",
-    "assetId": "A-5310A",
-    "kind": "missing value",
-    "subject": "design.differentialHead",
-    "requiredSource": "Pump datasheet / hydraulic calculation",
-    "status": "open",
-    "note": "no source row harvested"
-   },
-   {
-    "gapId": "GAP-A-5000-MV-352d2f",
-    "assetId": "A-5310B",
-    "kind": "missing value",
-    "subject": "design.pumpType",
-    "requiredSource": "Pump datasheet / hydraulic calculation",
-    "status": "open",
-    "note": "no source row harvested"
-   },
-   {
-    "gapId": "GAP-A-5000-MV-427128",
-    "assetId": "A-5310B",
-    "kind": "missing value",
-    "subject": "design.ratedFlowM3h",
-    "requiredSource": "Pump datasheet / hydraulic calculation",
-    "status": "open",
-    "note": "no source row harvested"
-   },
-   {
-    "gapId": "GAP-A-5000-MV-da33a6",
-    "assetId": "A-5310B",
-    "kind": "missing value",
-    "subject": "design.differentialHead",
-    "requiredSource": "Pump datasheet / hydraulic calculation",
-    "status": "open",
-    "note": "no source row harvested"
-   },
-   {
     "gapId": "GAP-A-5000-MV-20c3a7",
     "assetId": "TCU-141",
     "kind": "missing value",
@@ -1187,60 +1025,6 @@
   ]
  },
  "gapsByAsset": [
-  {
-   "assetId": "A-5110A",
-   "gaps": 3,
-   "subjects": [
-    "design.pumpType",
-    "design.ratedFlowM3h",
-    "design.differentialHead"
-   ]
-  },
-  {
-   "assetId": "A-5110B",
-   "gaps": 3,
-   "subjects": [
-    "design.pumpType",
-    "design.ratedFlowM3h",
-    "design.differentialHead"
-   ]
-  },
-  {
-   "assetId": "A-5210A",
-   "gaps": 3,
-   "subjects": [
-    "design.pumpType",
-    "design.ratedFlowM3h",
-    "design.differentialHead"
-   ]
-  },
-  {
-   "assetId": "A-5210B",
-   "gaps": 3,
-   "subjects": [
-    "design.pumpType",
-    "design.ratedFlowM3h",
-    "design.differentialHead"
-   ]
-  },
-  {
-   "assetId": "A-5310A",
-   "gaps": 3,
-   "subjects": [
-    "design.pumpType",
-    "design.ratedFlowM3h",
-    "design.differentialHead"
-   ]
-  },
-  {
-   "assetId": "A-5310B",
-   "gaps": 3,
-   "subjects": [
-    "design.pumpType",
-    "design.ratedFlowM3h",
-    "design.differentialHead"
-   ]
-  },
   {
    "assetId": "TCU-141",
    "gaps": 2,
@@ -1623,9 +1407,9 @@
    "modelEquipmentId": "801",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 18,
+   "values": 65,
    "approved": 1,
-   "gaps": 3
+   "gaps": 0
   },
   {
    "assetId": "A-5110B",
@@ -1635,9 +1419,9 @@
    "modelEquipmentId": "802",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 18,
+   "values": 65,
    "approved": 1,
-   "gaps": 3
+   "gaps": 0
   },
   {
    "assetId": "V-5110",
@@ -1683,9 +1467,9 @@
    "modelEquipmentId": "811",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 18,
+   "values": 65,
    "approved": 1,
-   "gaps": 3
+   "gaps": 0
   },
   {
    "assetId": "A-5210B",
@@ -1695,9 +1479,9 @@
    "modelEquipmentId": "812",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 18,
+   "values": 65,
    "approved": 1,
-   "gaps": 3
+   "gaps": 0
   },
   {
    "assetId": "V-5210",
@@ -1743,9 +1527,9 @@
    "modelEquipmentId": "821",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 18,
+   "values": 65,
    "approved": 1,
-   "gaps": 3
+   "gaps": 0
   },
   {
    "assetId": "A-5310B",
@@ -1755,9 +1539,9 @@
    "modelEquipmentId": "822",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 18,
+   "values": 65,
    "approved": 1,
-   "gaps": 3
+   "gaps": 0
   },
   {
    "assetId": "V-5310",
@@ -1995,6 +1779,46 @@
    "tier": "B",
    "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-MOC-002_A-5000-Fourth-Utility-Loop_V1.0.docx",
    "valueRows": "0"
+  },
+  {
+   "documentId": "FEED-PE-CAL-013",
+   "title": "A-5000 Circulation Pump Hydraulic Basis",
+   "revision": "V1.0",
+   "docType": "CAL",
+   "control": "controlled (preliminary)",
+   "tier": "A",
+   "file": "8 Equipment Design and Specifications\\4 - Equipment Calculation (CAL) Sheets\\FEED-PE-CAL-013_A-5000-Circulation-Pump-Hydraulic-Basis_V1.0.xlsx",
+   "valueRows": "0"
+  },
+  {
+   "documentId": "FEED-PE-DAT-009",
+   "title": "A-5110A/B Hot-Water Circulation Pumps Datasheet",
+   "revision": "V1.0",
+   "docType": "DAT",
+   "control": "controlled (preliminary - budget enquiry)",
+   "tier": "A",
+   "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-009_A-5110AB-Hot-Water-Circulation-Pumps-Datasheet_V1.0.xlsx",
+   "valueRows": "94"
+  },
+  {
+   "documentId": "FEED-PE-DAT-010",
+   "title": "A-5210A/B Cooling-Water Circulation Pumps Datasheet",
+   "revision": "V1.0",
+   "docType": "DAT",
+   "control": "controlled (preliminary - budget enquiry)",
+   "tier": "A",
+   "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-010_A-5210AB-Cooling-Water-Circulation-Pumps-Datasheet_V1.0.xlsx",
+   "valueRows": "94"
+  },
+  {
+   "documentId": "FEED-PE-DAT-011",
+   "title": "A-5310A/B Chilled-Water Circulation Pumps Datasheet",
+   "revision": "V1.0",
+   "docType": "DAT",
+   "control": "controlled (preliminary - budget enquiry)",
+   "tier": "A",
+   "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-011_A-5310AB-Chilled-Water-Circulation-Pumps-Datasheet_V1.0.xlsx",
+   "valueRows": "94"
   }
  ],
  "layout": {
@@ -2105,35 +1929,41 @@
   },
   {
    "id": "A5000-03",
-   "topic": "Circulation pumps — no datasheet values on record",
-   "status": "Not ready for inquiry — 18 open gaps",
+   "topic": "Circulation pumps — preliminary datasheets issued, values not approved",
+   "status": "Datasheets issued for budget enquiry — candidate values, none approved",
    "priority": "high",
    "discipline": "Rotating equipment",
-   "observation": "18 open gaps across the six circulation pumps (A-5110A, A-5110B, A-5210A, A-5210B, A-5310A, A-5310B): pumpType, ratedFlowM3h, differentialHead are unrecorded for every one. The pumps carry an approved material of construction and nothing else; no rated flow, head or type exists to price or select against.",
-   "action": "Produce the hydraulic calculation for each loop (flow from the duty balance, head from the circuit pressure drop), then issue pump datasheets; do not let the model geometry stand in for a selection.",
+   "observation": "FEED-PE-CAL-013 V1.0 sets the hydraulic basis and FEED-PE-DAT-009 / 010 / 011 V1.0 carry it (issued 2026-09-22, preliminary — for budget enquiry): A-5110A/B 25 m³/h at 23 m, A-5210A/B 1,335 m³/h at 33 m, A-5310A/B 610 m³/h at 31 m. That is 282 candidate rows on the six pumps, 0 approved — the pumps still carry only the approved MAT-002 material, and no rate is applied to the model. The flows rest on REP-043 V1.0 duties on the Case P envelope (H1); the chilled-water pair waits on calorimetry A-059 / A-079 (H2); and the cooling-water pair carries a new identity question — a cooling tower on the PFD, LST-001 and REP-043, a closed-circuit evaporative fluid cooler in the model (H4).",
+   "action": "Close the datasheet holds — restate the duties in REP-043 V1.1 (MOC-002 D.1 item 4), settle the cooling-water loop type and the CW / CHW pressurisation points, fix the electrical basis and obtain vendor curves — then approve pump type, rated flow and head by decision. Until then the datasheet values stay candidate and are not applied to the model.",
    "evidence": [
     {
-     "kind": "gap",
-     "id": "GAP-A-5000-MV-70c448",
-     "label": "GAP-A-5000-MV-70c448 · A-5110A: design.pumpType (Pump datasheet / hydraulic calculation)",
-     "href": "#a5000-gaps"
+     "kind": "document",
+     "id": "FEED-PE-CAL-013",
+     "label": "FEED-PE-CAL-013 V1.0 · A-5000 Circulation Pump Hydraulic Basis (controlled (preliminary))",
+     "href": "#a5000-documents"
     },
     {
-     "kind": "gap",
-     "id": "GAP-A-5000-MV-4ab141",
-     "label": "GAP-A-5000-MV-4ab141 · A-5110A: design.ratedFlowM3h (Pump datasheet / hydraulic calculation)",
-     "href": "#a5000-gaps"
+     "kind": "document",
+     "id": "FEED-PE-DAT-010",
+     "label": "FEED-PE-DAT-010 V1.0 · A-5210A/B Cooling-Water Circulation Pumps Datasheet (controlled (preliminary - budget enquiry))",
+     "href": "#a5000-documents"
     },
     {
-     "kind": "gap",
-     "id": "GAP-A-5000-MV-64f318",
-     "label": "GAP-A-5000-MV-64f318 · A-5110A: design.differentialHead (Pump datasheet / hydraulic calculation)",
-     "href": "#a5000-gaps"
+     "kind": "value",
+     "id": "PV-A-5000-0302",
+     "label": "PV-A-5000-0302 · A-5210A design.ratedFlowM3h = 1335 m³/h (FEED-PE-DAT-010)",
+     "href": "#a5000-approved"
+    },
+    {
+     "kind": "value",
+     "id": "PV-A-5000-0396",
+     "label": "PV-A-5000-0396 · A-5310A design.ratedFlowM3h = 610 m³/h (FEED-PE-DAT-011)",
+     "href": "#a5000-approved"
     },
     {
      "kind": "asset",
      "id": "A-5110A",
-     "label": "A-5110A · Hot-water circulation pump A (Pump) — 18 rows, 1 approved, 3 open gaps",
+     "label": "A-5110A · Hot-water circulation pump A (Pump) — 65 rows, 1 approved, 0 open gaps",
      "href": "#a5000-assets"
     },
     {
