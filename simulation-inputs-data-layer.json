@@ -5,8 +5,8 @@
  "counts": {
   "approved": 30,
   "withdrawn": 20,
-  "documented": 0,
-  "none": 98
+  "documented": 1,
+  "none": 97
  },
  "matches": [
   {
@@ -53,7 +53,17 @@
    "asset": "R-101",
    "area": "A-100",
    "parameter": "Working liquid inventory",
-   "status": "none"
+   "status": "documented",
+   "property": "design.workingVolumeM3",
+   "alternatives": [
+    {
+     "value": "5.3",
+     "unit": "m³",
+     "source": "FEED-PE-DAT-014",
+     "location": "'R-101 Datasheet'!row 29 (item 3.1)",
+     "status": "candidate"
+    }
+   ]
   },
   {
    "rowId": "R-101-density",
