@@ -1,5 +1,5 @@
 {
- "version": "379fc75",
+ "version": "4753fb0",
  "date": "2026-09-23",
  "items": {
   "L01": {
@@ -209,7 +209,7 @@
      "id": "A900-07",
      "area": "A-900",
      "href": "./a900-review.html#A900-07",
-     "revision": "r2",
+     "revision": "r3",
      "reviewer": "QFL",
      "topic": "Layout, supports and access",
      "status": "Provisional geometry — vendor loads unverified"
@@ -298,7 +298,7 @@
      "id": "A900-03",
      "area": "A-900",
      "href": "./a900-review.html#A900-03",
-     "revision": "r2",
+     "revision": "r3",
      "reviewer": "QFL",
      "topic": "Product rate basis",
      "status": "Basis withdrawn — three rates on record"

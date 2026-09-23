@@ -1,0 +1,1581 @@
+{
+  "area": "A-900",
+  "title": "A-900 assembly & design review",
+  "revision": "r3",
+  "date": "2026-09-23",
+  "sourceCommit": "9e1f383",
+  "semanticCoreVersion": "1.19.0-foundation",
+  "registerRevision": "2026-09-10 · Physical equipment ownership and complete Explore assemblies",
+  "modelConfig": {
+    "scope": "feed",
+    "a160": "baseline",
+    "argonSource": "bulk"
+  },
+  "lead": "rGO-BCK product densification and filling. Register (FEED-PFD-0900 / LST-001): product tank T-901, hopper H-901, screw C-901, roll compactor RC-901, mill M-901, screener SC-901, cartridge filler PK-901, checkweigher W-901, sealer SE-901, dust collector DC-901 and fan FN-901. Model (V162 / V163): a technology-neutral contained pelletization line TR-901 → H-901 → F-901 → PG-901 → SC-901 → PK-901 with reject receiver RB-901, dust capture DC-901 and control panel CP-901.",
+  "reviewer": {
+    "initials": "QFL",
+    "date": "2026-09-23"
+  },
+  "representedParts": 711,
+  "ownedEquipment": 10,
+  "findings": [
+    {
+      "id": "A900-01",
+      "topic": "Two trains, four shared tags — identity holds",
+      "status": "Identity holds active — no register values applied",
+      "reason": "A value approved for the register equipment must not be written into a model record that denotes different equipment, even when the tag is the same.",
+      "observation": "The register (PFD-0900 / LST-001) is a densification train — T-901 → H-901 → C-901 → RC-901 roll compactor → M-901 mill → SC-901 screener → PK-901 cartridge filler → W-901 → SE-901, with DC-901 / FN-901 area extraction. The model (V162 / V163) is a technology-neutral pelletization line — TR-901 → H-901 → F-901 → PG-901 → SC-901 cooling / classification → PK-901 collection package, with RB-901, DC-901 local capture and CP-901 — built without the FEED-PFD-0900 package. Four tags coincide with different meanings; QFL placed H-901, SC-901, PK-901 and DC-901 on identity hold on 2026-09-20, so their six approved rows (materials, inerting basis, product specification) are listed as held and not applied. Seven register items (T-901, C-901, RC-901, M-901, W-901, SE-901, FN-901) have no model record; five model items (TR-901, F-901, PG-901, RB-901, CP-901) have no register identity.",
+      "action": "Reconcile the two trains by MoC on FEED-PFD-0900 — either adopt the pelletization line and retire the densification tags, or model the register train — then lift or convert the holds; until then the model A-900 is a layout placeholder.",
+      "discipline": "Process / layout",
+      "evidence": [
+        {
+          "ref": "H-901",
+          "kind": "identityHold"
+        },
+        {
+          "ref": "SC-901",
+          "kind": "identityHold"
+        },
+        {
+          "ref": "PK-901",
+          "kind": "identityHold"
+        },
+        {
+          "ref": "DC-901",
+          "kind": "identityHold"
+        },
+        {
+          "ref": "GAP-A-900-ID-100582",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-900-ID-6060eb",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-900-ID-1f4b5d",
+          "kind": "gap"
+        },
+        {
+          "ref": "FEED-PE-LST-001",
+          "kind": "document"
+        }
+      ],
+      "image": "overview"
+    },
+    {
+      "id": "A900-02",
+      "topic": "Product acceptance criterion and mechanism",
+      "status": "NOT DEFINED — gating item (REP-023 RED)",
+      "reason": "The compaction target must state which density it means and whether the storage mechanism tolerates the loss of micropore volume.",
+      "observation": "D-A900-01 records the acceptance criterion as NOT DEFINED: \"1.6 g/mL pellets\" does not say whether it is ribbon envelope, granule or packed-cartridge density, and a 1.6 g/mL envelope on a 2.1 g/cm³ carbon leaves ≈ 0.15 cm³/g pore volume — incompatible with a physisorption carbon (0.5–1.0 cm³/g). RC-901 is approved as volume-limited (0.2–1.5 m³/h at 30–200 kg/m³ bulk density: bulk density governs, not mass rate). The model's PG-901 is explicitly a \"technology HOLD\" envelope.",
+      "action": "Close REP-023's five design-basis items — density definition, product-rate basis, potassium form and ignition sensitivity, A-800 discharge cooling responsibility, inerting extent — then select the densification technology and size the train.",
+      "discipline": "Process / R&D",
+      "evidence": [
+        {
+          "ref": "D-A900-01",
+          "kind": "decision"
+        },
+        {
+          "ref": "GAP-A-900-DF-fc2b25",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-900-ID-9dd744",
+          "kind": "gap"
+        },
+        {
+          "ref": "PG-901",
+          "kind": "asset"
+        },
+        {
+          "ref": "FEED-PE-REP-023",
+          "kind": "document"
+        }
+      ],
+      "image": "line"
+    },
+    {
+      "id": "A900-03",
+      "topic": "Product rate basis",
+      "status": "Basis withdrawn — three rates on record",
+      "reason": "Every item in the area is sized on the packed-product rate, which must be single-valued on the DBM V2.0 basis.",
+      "observation": "Three rates are on record: 28 / 26 kg/h (Narrative capacity table), 44.91 / 42.67 kg/h (MEB V2.0 / REP-019 after 0.95 densification yield) and the DBM V2.0 packed product 625 / 812 kg/d nominal / design (≈ 26 / 34 kg/h). D-A900-01 withdrew the RC-901 feed rate; D-A900-02 approves the DBM V2.0 packed-product rate as the T-901 feed basis. The A-800 → A-900 product handoff is the interface IF-A800-PRODUCT.",
+      "action": "Restate the A-900 rate once on DBM V2.0 in the Narrative and MEB; carry the 0.95 densification yield and the reject stream explicitly.",
+      "discipline": "Process",
+      "evidence": [
+        {
+          "ref": "D-A900-01",
+          "kind": "decision"
+        },
+        {
+          "ref": "D-A900-02",
+          "kind": "decision"
+        },
+        {
+          "ref": "GAP-A-900-ID-2f622c",
+          "kind": "gap"
+        },
+        {
+          "ref": "IF-A800-PRODUCT",
+          "kind": "asset"
+        },
+        {
+          "ref": "FEED-PE-DBM-001",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-REP-019",
+          "kind": "document"
+        }
+      ],
+      "image": "line"
+    },
+    {
+      "id": "A900-04",
+      "topic": "Reactive hazard, inerting and dust extraction",
+      "status": "Intent approved — extent unresolved",
+      "reason": "Until the residual potassium form in the product is known, the compaction and milling enclosures are water-reactive combustible-dust service.",
+      "observation": "D-A900-01 approves the REP-023 safeguard statement for RC-901 / M-901: residual potassium form (metallic, K₂O / KOH or bound) unresolved, ignition-sensitive temperature unmeasured, A-800 discharge temperature and cooling responsibility to be assigned. D-A900-02 adopts the PFD-0900 inerting reading — T-901 argon-blanketed, AR902 purge to the compaction enclosure \"as required\", AR903 to filling, enclosed handling at slight negative pressure via DC-901 / FN-901. The model reserves the three argon takeoffs as positively blinded branches (IF-A900-AR901 … 903) and models DC-901 as a local capture on PG-901 without FN-901.",
+      "action": "Resolve the potassium form (REP-022 / REP-023) and the ignition sensitivity, then fix the inerting extent (which enclosures, which purge) and the extraction philosophy (local vs area) before the dust-hazard assessment; connect the argon branches when the train is settled.",
+      "discipline": "Process safety",
+      "evidence": [
+        {
+          "ref": "D-A900-01",
+          "kind": "decision"
+        },
+        {
+          "ref": "D-A900-02",
+          "kind": "decision"
+        },
+        {
+          "ref": "IF-A900-AR901",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A900-AR902",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A900-AR903",
+          "kind": "asset"
+        },
+        {
+          "ref": "DC-901",
+          "kind": "identityHold"
+        },
+        {
+          "ref": "FEED-PE-REP-023",
+          "kind": "document"
+        }
+      ],
+      "image": "dust"
+    },
+    {
+      "id": "A900-05",
+      "topic": "Product release and filling",
+      "status": "Specification draft — held on PK-901",
+      "reason": "Filling and release need the product specification and the hold point that gates dispatch.",
+      "observation": "D-A900-02 approves product release per FEED-QA-SPC-001 (rGO-BCK specification, stream 804, draft V0.1) with hold point HP-1, and a checkweigher verification before sealing (W-901). Both are recorded against the register's cartridge filler PK-901; the model's PK-901 is a collection / packaging envelope, so the rows are held. W-901 and SE-901 have no model record; the model's accepted / reject / dust boundaries are the interfaces IF-A900-PRODUCT / REJECT / DUST.",
+      "action": "Issue FEED-QA-SPC-001 beyond draft with the package format decided; then map release, checkweigh and seal functions onto whichever train is adopted and lift the PK-901 hold.",
+      "discipline": "Quality / process",
+      "evidence": [
+        {
+          "ref": "D-A900-02",
+          "kind": "decision"
+        },
+        {
+          "ref": "PK-901",
+          "kind": "identityHold"
+        },
+        {
+          "ref": "W-901",
+          "kind": "asset"
+        },
+        {
+          "ref": "SE-901",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A900-PRODUCT",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A900-REJECT",
+          "kind": "asset"
+        },
+        {
+          "ref": "FEED-QA-SPC-001",
+          "kind": "document"
+        }
+      ],
+      "image": "finish"
+    },
+    {
+      "id": "A900-06",
+      "topic": "Materials of construction",
+      "status": "Ruled for the register train — held on shared tags",
+      "reason": "Product-contact surfaces for a reactive combustible carbon powder must be grounded, electropolished and hard-faced at wear points.",
+      "observation": "D-A900-MOC applies MAT-002 to the eleven register items: 316L electropolished, grounded and bonded product-contact surfaces with hard-facing (M-055) and conductive grounded 316L or conductive PTFE-lined ducting for DC-901 / FN-901 (M-056); MDL-001 304L superseded. Seven of the eleven rulings sit on register-only items without a model record; the four on shared tags are held. The model-only items TR-901, F-901, PG-901, RB-901 and CP-901 have no material at all.",
+      "action": "Once the train is reconciled, extend MAT-002 to the adopted model items and apply the rulings; keep the M-055 / M-056 basis for whichever equipment survives.",
+      "discipline": "Materials",
+      "evidence": [
+        {
+          "ref": "D-A900-MOC",
+          "kind": "decision"
+        },
+        {
+          "ref": "CF-materialOfConstruc-RC-901",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "CF-materialOfConstruc-DC-901",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "TR-901",
+          "kind": "asset"
+        },
+        {
+          "ref": "F-901",
+          "kind": "asset"
+        },
+        {
+          "ref": "RB-901",
+          "kind": "asset"
+        },
+        {
+          "ref": "FEED-PE-MAT-002",
+          "kind": "document"
+        }
+      ],
+      "image": "overview"
+    },
+    {
+      "id": "A900-07",
+      "topic": "Layout, supports and access",
+      "status": "Provisional geometry — vendor loads unverified",
+      "reason": "A placeholder line still needs a plausible footprint, supports and access so that the plant-wide reviews remain meaningful.",
+      "observation": "V162 relocated the line beside the cooled PY-801 outlet and removed the former long transfer route and its three walkway conflicts; V163 added floor-connected skids, a feeder frame, a dust-filter frame, a reject tray and a control-cabinet plinth, all provisional (vendor loads, member sizing, anchors and vibration isolation unverified). The model places fire point FE-901 at the future filling / dispatch approach; no emergency station is assigned to A-900. The packaged-product route to dispatch is not modelled.",
+      "action": "Keep the footprint as the reserved envelope; qualify supports and access once a technology is selected; add an emergency station and the dispatch route to the plant-wide access and fire-safety reviews.",
+      "discipline": "Layout / structural / fire safety",
+      "evidence": [
+        {
+          "ref": "TR-901",
+          "kind": "asset"
+        },
+        {
+          "ref": "PG-901",
+          "kind": "asset"
+        },
+        {
+          "ref": "CP-901",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A900-DUST",
+          "kind": "asset"
+        },
+        {
+          "ref": "MODEL",
+          "kind": "document"
+        }
+      ],
+      "image": "access"
+    },
+    {
+      "id": "A900-08",
+      "topic": "Equipment datasheets — product buffer T-901 and feeder C-901",
+      "status": "Preliminary datasheets issued — candidate values, none approved",
+      "reason": "T-901 had no volume or design conditions and C-901 no rated feed; REP-023 had already shown that the downstream compactor is volume-limited, so bulk density — not mass rate — sizes both.",
+      "observation": "FEED-PE-CAL-019 V1.0 sizes them on the DBM V2.0 design rate (856 kg/d ex PY-801 = 35.7 kg/h, D-A900-02) and the bases approved in review (L1 volumes at 30 kg/m³, the REP-023 low end, checked at 200 kg/m³; L2 eight hours of hold-up; L3 argon blanket at ≈ 20 mbarg with PVRV and make-up, design +0.5 / −0.05 barg). FEED-PE-DAT-042: T-901 11.9 m³ required, 12 m³ nominal, 316L electropolished, 80 °C, mass-flow cone — at 200 kg/m³ it holds 1.9 t (≈ 54 h). FEED-PE-DAT-043: C-901 1.19 m³/h at 30 kg/m³, rated 1.5 m³/h (the REP-023 upper bound), 10 : 1, argon-purged. They enter as 35 candidate rows — none approved; every A-900 missing-value gap now has a source, and the approved T-901 feed rate is quoted, not re-harvested.",
+      "action": "Close the holds — flow-function and bulk-density tests, the A-800 discharge temperature, the residual-potassium form and dust hazard analysis, the product-rate identity (A900-03) and the register / model reconciliation of C-901, F-901 and H-901 (A900-01) — then approve the sizing values by decision.",
+      "discipline": "Process / mechanical",
+      "evidence": [
+        {
+          "ref": "FEED-PE-CAL-019",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-042",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-043",
+          "kind": "document"
+        },
+        {
+          "ref": "PV-A-900-0217",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-900-0219",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-900-0235",
+          "kind": "value"
+        },
+        {
+          "ref": "D-A900-02",
+          "kind": "decision"
+        },
+        {
+          "ref": "T-901",
+          "kind": "asset"
+        },
+        {
+          "ref": "C-901",
+          "kind": "asset"
+        }
+      ],
+      "image": "line"
+    }
+  ],
+  "checks": [
+    {
+      "command": "node tests/validate-a900-semantic.mjs",
+      "purpose": "A-900 record contract (model engineer): nine proposed equipment records with null design values, product / reject / dust boundaries, blinded argon reservations",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "PASS: A-900 compact contained pelletization equipment, accepted/reject/dust boundaries, blinded argon reservations and unresolved design values.",
+      "ranAt": "2026-09-23T19:28:12.855Z"
+    },
+    {
+      "command": "node tests/validate-semantic-data.mjs",
+      "purpose": "data-layer invariants incl. identity holds (a held asset must carry no applied value)",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "{\"passed\":true,\"areas\":[{\"area\":\"A-100\",\"assets\":10,\"holds\":0,\"values\":310,\"approved\":10,\"conflicts\":2,\"variants\":12,\"gaps\":8},{\"area\":\"A-1000\",\"assets\":60,\"holds\":0,\"values\":293,\"approved\":22,\"conflicts\":3,\"variants\":19,\"gaps\":93},{\"area\":\"A-140\",\"assets\":17,\"holds\":0,\"values\":518,\"approved\":57,\"conflicts\":20,\"variants\":14,\"gaps\":32},{\"area\":\"A-160\",\"assets\":22,\"holds\":0,\"values\":319,\"approved\":13,\"conflicts\":6,\"variants\":11,\"gaps\":16},{\"area\":\"A-200\",\"assets\":67,\"holds\":0,\"values\":834,\"approved\":78,\"conflicts\":69,\"variants\":37,\"gaps\":145},{\"area\":\"A-2000\",\"assets\":49,\"holds\":0,\"values\":268,\"approved\":17,\"conflicts\":10,\"variants\":18,\"gaps\":76},{\"area\":\"A-300\",\"assets\":20,\"holds\":0,\"values\":302,\"approved\":25,\"conflicts\":13,\"variants\":17,\"gaps\":62},{\"area\":\"A-3000\",\"assets\":51,\"holds\":0,\"values\":337,\"approved\":13,\"conflicts\":3,\"variants\":11,\"gaps\":6},{\"area\":\"A-400\",\"assets\":23,\"holds\":0,\"values\":152,\"approved\":13,\"conflicts\":7,\"variants\":8,\"gaps\":45},{\"area\":\"A-4000\",\"assets\":11,\"holds\":0,\"values\":293,\"approved\":13,\"conflicts\":11,\"variants\":11,\"gaps\":13},{\"area\":\"A-500\",\"assets\":12,\"holds\":0,\"values\":102,\"approved\":18,\"conflicts\":5,\"variants\":5,\"gaps\":24},{\"area\":\"A-5000\",\"assets\":47,\"holds\":0,\"values\":476,\"approved\":16,\"conflicts\":10,\"variants\":10,\"gaps\":22},{\"area\":\"A-600\",\"assets\":31,\"holds\":0,\"values\":194,\"approved\":18,\"conflicts\":5,\"variants\":12,\"gaps\":22},{\"area\":\"A-6000\",\"assets\":6,\"holds\":0,\"values\":38,\"approved\":3,\"conflicts\":2,\"variants\":2,\"gaps\":5},{\"area\":\"A-700\",\"assets\":17,\"holds\":0,\"values\":377,\"approved\":39,\"conflicts\":5,\"variants\":7,\"gaps\":72},{\"area\":\"A-800\",\"assets\":25,\"holds\":0,\"values\":319,\"approved\":29,\"conflicts\":9,\"variants\":14,\"gaps\":38},{\"area\":\"A-900\",\"assets\":23,\"holds\":4,\"values\":243,\"approved\":20,\"conflicts\":11,\"variants\":11,\"gaps\":17}]}",
+      "ranAt": "2026-09-23T19:28:17.070Z"
+    },
+    {
+      "command": "node tests/validate-semantic-fields.mjs",
+      "purpose": "inspector field rendering of documented, held and applied values",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "PASS: documented pending and superseded values, alternatives, mixed units, missing values and identity holds.",
+      "ranAt": "2026-09-23T19:28:35.827Z"
+    }
+  ],
+  "decisions": [
+    {
+      "decisionId": "D-A900-MOC",
+      "assetPattern": "C-901|DC-901|FN-901|H-901|M-901|PK-901|RC-901|SC-901|SE-901|T-901|W-901",
+      "property": "design.materialOfConstruction",
+      "approvedSourceDocId": "FEED-PE-MAT-002",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A900-01",
+      "assetPattern": "RC-901",
+      "property": "operatingEnvelope.acceptanceCriterion",
+      "approvedSourceDocId": "FEED-PE-REP-023",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Recorded as NOT DEFINED with the REP-023 requirement: state which density 1.6 g/mL means (ribbon envelope / granule / packed cartridge) and whether the storage mechanism depends on micropore volume.",
+      "gapNote": "Close REP-023's five design-basis items (density definition, product rate basis, potassium form / ignition sensitivity, A-800 discharge cooling responsibility, inerting extent); then size RC-901 / M-901 / SC-901 and model A-900 (no equipment records or geometry exist)."
+    },
+    {
+      "decisionId": "D-A900-01",
+      "assetPattern": "RC-901",
+      "property": "design.feedRateKgh",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "28 / 26 kg/h (Narrative) vs 44.91 / 42.67 kg/h (MEB V2.0 / REP-019) vs DBM V2.0 27 / 34 kg/h packed — basis withdrawn.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A900-01",
+      "assetPattern": "RC-901",
+      "property": "design.feedBasis",
+      "approvedSourceDocId": "FEED-PE-REP-023",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "RC-901 is volume-limited (0.2–1.5 m³/h at 30–200 kg/m³) — bulk density governs, adopted as the sizing rule.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A900-01",
+      "assetPattern": "RC-901|M-901",
+      "property": "safeguards.reactiveHazard",
+      "approvedSourceDocId": "FEED-PE-REP-023",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Until the residual potassium form is resolved, RC-901 / M-901 enclosures are water-reactive combustible-dust service.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A900-02",
+      "assetPattern": "T-901|RC-901|PK-901",
+      "property": "operatingEnvelope.inertingBasis",
+      "approvedSourceDocId": "FEED-PE-REP-023",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "PFD-0900 inerting reading adopted: T-901 argon-blanketed, AR902 purge to compaction enclosure, AR903 to filling, enclosed handling at slight negative pressure via DC-901 / FN-901.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A900-02",
+      "assetPattern": "PK-901",
+      "property": "operatingEnvelope.productSpecification",
+      "approvedSourceDocId": "FEED-QA-SPC-001",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Product release per FEED-QA-SPC-001 (draft V0.1) — hold point HP-1.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A900-02",
+      "assetPattern": "T-901",
+      "property": "operatingEnvelope.feedRateKgh",
+      "approvedSourceDocId": "FEED-PE-DBM-001",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "DBM V2.0 packed product 625 / 812 kg/d nominal / design.",
+      "gapNote": ""
+    }
+  ],
+  "approvedValues": [
+    {
+      "valueId": "PV-A-900-0177",
+      "assetId": "T-901",
+      "property": "design.materialOfConstruction",
+      "value": "316L electropolished product-contact surfaces, grounded and bonded; hardfaced/tungsten-carbide rolls and wear parts",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 59 (M-055)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-T-901",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS product-contact tank; grounded/bonded conductive construction; PTFE seals."
+      ]
+    },
+    {
+      "valueId": "PV-A-900-0179",
+      "assetId": "H-901",
+      "property": "design.materialOfConstruction",
+      "value": "316L electropolished product-contact surfaces, grounded and bonded; hardfaced/tungsten-carbide rolls and wear parts",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 59 (M-055)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": true,
+      "conflictGroup": "CF-materialOfConstruc-H-901",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS product-contact bin; grounded/bonded; PTFE seals."
+      ]
+    },
+    {
+      "valueId": "PV-A-900-0181",
+      "assetId": "C-901",
+      "property": "design.materialOfConstruction",
+      "value": "316L electropolished product-contact surfaces, grounded and bonded; hardfaced/tungsten-carbide rolls and wear parts",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 59 (M-055)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-C-901",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS screw/housing/product-contact parts; grounded/bonded; PTFE seals."
+      ]
+    },
+    {
+      "valueId": "PV-A-900-0183",
+      "assetId": "RC-901",
+      "property": "design.materialOfConstruction",
+      "value": "316L electropolished product-contact surfaces, grounded and bonded; hardfaced/tungsten-carbide rolls and wear parts",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 59 (M-055)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-RC-901",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS product-contact base construction; hardened 17-4PH SS or tungsten-carbide wear surfaces where required; grounded/bonded."
+      ]
+    },
+    {
+      "valueId": "PV-A-900-0185",
+      "assetId": "M-901",
+      "property": "design.materialOfConstruction",
+      "value": "316L electropolished product-contact surfaces, grounded and bonded; hardfaced/tungsten-carbide rolls and wear parts",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 59 (M-055)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-M-901",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS product-contact mill/granulator surfaces; hardened 17-4PH SS or tungsten-carbide replaceable wear parts; grounded/bonded."
+      ]
+    },
+    {
+      "valueId": "PV-A-900-0187",
+      "assetId": "SC-901",
+      "property": "design.materialOfConstruction",
+      "value": "316L electropolished product-contact surfaces, grounded and bonded; hardfaced/tungsten-carbide rolls and wear parts",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 59 (M-055)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": true,
+      "conflictGroup": "CF-materialOfConstruc-SC-901",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS screens/product-contact surfaces; grounded/bonded; conductive seals/gaskets."
+      ]
+    },
+    {
+      "valueId": "PV-A-900-0189",
+      "assetId": "PK-901",
+      "property": "design.materialOfConstruction",
+      "value": "316L electropolished product-contact surfaces, grounded and bonded; hardfaced/tungsten-carbide rolls and wear parts",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 59 (M-055)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": true,
+      "conflictGroup": "CF-materialOfConstruc-PK-901",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS product-contact filling path; grounded/bonded conductive construction; PTFE seals."
+      ]
+    },
+    {
+      "valueId": "PV-A-900-0191",
+      "assetId": "W-901",
+      "property": "design.materialOfConstruction",
+      "value": "316L electropolished product-contact surfaces, grounded and bonded; hardfaced/tungsten-carbide rolls and wear parts",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 59 (M-055)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-W-901",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS product-zone frame and contact surfaces; grounded/bonded conveyor hardware."
+      ]
+    },
+    {
+      "valueId": "PV-A-900-0193",
+      "assetId": "SE-901",
+      "property": "design.materialOfConstruction",
+      "value": "316L electropolished product-contact surfaces, grounded and bonded; hardfaced/tungsten-carbide rolls and wear parts",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 59 (M-055)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-SE-901",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS product-zone surfaces; temperature-rated non-shedding seals and guards."
+      ]
+    },
+    {
+      "valueId": "PV-A-900-0195",
+      "assetId": "DC-901",
+      "property": "design.materialOfConstruction",
+      "value": "Conductive and grounded 316L or conductive PTFE-lined duct/hoses; antistatic PTFE filter media",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 60 (M-056)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": true,
+      "conflictGroup": "CF-materialOfConstruc-DC-901",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS housing/product-contact surfaces; conductive antistatic filter media; grounded/bonded construction."
+      ]
+    },
+    {
+      "valueId": "PV-A-900-0197",
+      "assetId": "FN-901",
+      "property": "design.materialOfConstruction",
+      "value": "Conductive and grounded 316L or conductive PTFE-lined duct/hoses; antistatic PTFE filter media",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 60 (M-056)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-FN-901",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS gas-wetted casing/impeller; grounded, spark-resistant construction. Coated carbon steel may be acceptable only where product contamination and corrosion are excluded."
+      ]
+    },
+    {
+      "valueId": "PV-A-900-0199",
+      "assetId": "RC-901",
+      "property": "operatingEnvelope.acceptanceCriterion",
+      "value": "NOT DEFINED — '1.6 g/mL pellets' does not state which density (ribbon envelope, granule or packed cartridge); 1.6 g/mL envelope on a 2.1 g/cm³ carbon leaves ≈ 0.15 cm³/g pore volume, incompatible with a physisorption carbon (0.5–1.0 cm³/g)",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-023",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive conclusion / basis table (RED)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-900-0200",
+      "assetId": "RC-901",
+      "property": "design.feedBasis",
+      "value": "Volume-limited: 0.2–1.5 m³/h of feed at 30–200 kg/m³ bulk density — bulk density matters more than mass rate",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-023",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "basis table",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-900-0202",
+      "assetId": "RC-901",
+      "property": "safeguards.reactiveHazard",
+      "value": "Residual potassium form in BCK (metallic, K₂O/KOH or bound) unresolved (REP-022) — until resolved, RC-901 / M-901 enclosures are water-reactive combustible-dust service; ignition-sensitive temperature unmeasured; A-800 discharge temperature and cooling responsibility must be assigned",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-023",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "basis table",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-900-0203",
+      "assetId": "M-901",
+      "property": "safeguards.reactiveHazard",
+      "value": "Residual potassium form in BCK (metallic, K₂O/KOH or bound) unresolved (REP-022) — until resolved, RC-901 / M-901 enclosures are water-reactive combustible-dust service; ignition-sensitive temperature unmeasured; A-800 discharge temperature and cooling responsibility must be assigned",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-023",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "basis table",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-900-0204",
+      "assetId": "T-901",
+      "property": "operatingEnvelope.inertingBasis",
+      "value": "T-901 argon-blanketed; AR902 inert purge to compaction enclosure 'as required'; AR903 to filling; enclosed handling at slight negative pressure via DC-901 / FN-901",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-023",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "basis table (PFD-0900 reading)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-900-0205",
+      "assetId": "RC-901",
+      "property": "operatingEnvelope.inertingBasis",
+      "value": "T-901 argon-blanketed; AR902 inert purge to compaction enclosure 'as required'; AR903 to filling; enclosed handling at slight negative pressure via DC-901 / FN-901",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-023",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "basis table (PFD-0900 reading)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-900-0206",
+      "assetId": "PK-901",
+      "property": "operatingEnvelope.inertingBasis",
+      "value": "T-901 argon-blanketed; AR902 inert purge to compaction enclosure 'as required'; AR903 to filling; enclosed handling at slight negative pressure via DC-901 / FN-901",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-023",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "basis table (PFD-0900 reading)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": true,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-900-0207",
+      "assetId": "PK-901",
+      "property": "operatingEnvelope.productSpecification",
+      "value": "Product release per FEED-QA-SPC-001 (stream 804 rGO-BCK specification, draft V0.1)",
+      "unit": "",
+      "sourceDocId": "FEED-QA-SPC-001",
+      "sourceRevision": "V0.1",
+      "sourceLocation": "whole document",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": true,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-900-0208",
+      "assetId": "T-901",
+      "property": "operatingEnvelope.feedRateKgh",
+      "value": "Product ex PY-801 / packed 658 / 625 kg/d nominal, 856 / 812 kg/d design (× 0.80 × 0.95)",
+      "unit": "kg/d",
+      "sourceDocId": "FEED-PE-DBM-001",
+      "sourceRevision": "V2.0",
+      "sourceLocation": "§3.3 Table 3.3-1",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    }
+  ],
+  "openConflicts": [],
+  "identityHolds": [
+    {
+      "assetId": "PK-901",
+      "modelIdentity": "Contained product collection package (V162: PG-901 / SC-901 / PK-901 replace the filling, weighing and closure assumptions)",
+      "registerIdentity": "Cartridge filling machine (FEED-PFD-0900 / LST-001)",
+      "reason": "Same tag, different equipment: model PK-901 is a technology-neutral collection envelope, not the register cartridge filler; register approvals (inerting basis, product specification) held until FEED-PFD-0900 identities are reconciled with the V162 pelletization line",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    },
+    {
+      "assetId": "SC-901",
+      "modelIdentity": "Cooling / classification module (V162)",
+      "registerIdentity": "Screener downstream of M-901 mill (FEED-PFD-0900 / LST-001)",
+      "reason": "Same tag, different duty: model SC-901 is a cooling / classification envelope after PG-901; register SC-901 is the densification-train screener",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    },
+    {
+      "assetId": "H-901",
+      "modelIdentity": "Inerted surge / weigh hopper feeding F-901 (V162)",
+      "registerIdentity": "Product hopper T-901 → H-901 → C-901 (FEED-PFD-0900 / LST-001)",
+      "reason": "Function similar but the model has no T-901 upstream and no RC-901 / M-901 downstream; identity held until the PFD-0900 train is reconciled",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    },
+    {
+      "assetId": "DC-901",
+      "modelIdentity": "Local dust capture on PG-901 (V162)",
+      "registerIdentity": "Area dust collector with FN-901 exhaust fan (FEED-PFD-0900 / LST-001)",
+      "reason": "Model DC-901 serves PG-901 only and has no FN-901; register DC-901 is the enclosed-handling extraction for the whole area",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20"
+    }
+  ],
+  "gaps": [
+    {
+      "gapId": "GAP-A-900-CF-04d9e7",
+      "assetId": "T-901",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-T-901"
+    },
+    {
+      "gapId": "GAP-A-900-CF-6557c0",
+      "assetId": "H-901",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-H-901"
+    },
+    {
+      "gapId": "GAP-A-900-CF-9f17d7",
+      "assetId": "C-901",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-C-901"
+    },
+    {
+      "gapId": "GAP-A-900-CF-3f40ee",
+      "assetId": "RC-901",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-RC-901"
+    },
+    {
+      "gapId": "GAP-A-900-CF-d0ac07",
+      "assetId": "M-901",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-M-901"
+    },
+    {
+      "gapId": "GAP-A-900-CF-1c5daf",
+      "assetId": "SC-901",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-SC-901"
+    },
+    {
+      "gapId": "GAP-A-900-CF-8b18be",
+      "assetId": "PK-901",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-PK-901"
+    },
+    {
+      "gapId": "GAP-A-900-CF-174e0a",
+      "assetId": "W-901",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-W-901"
+    },
+    {
+      "gapId": "GAP-A-900-CF-cc49e1",
+      "assetId": "SE-901",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-SE-901"
+    },
+    {
+      "gapId": "GAP-A-900-CF-be75ab",
+      "assetId": "DC-901",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-DC-901"
+    },
+    {
+      "gapId": "GAP-A-900-CF-23b943",
+      "assetId": "FN-901",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-FN-901"
+    },
+    {
+      "gapId": "GAP-A-900-DF-fc2b25",
+      "assetId": "RC-901",
+      "kind": "decision follow-up",
+      "subject": "operatingEnvelope.acceptanceCriterion",
+      "requiredSource": "Close REP-023's five design-basis items (density definition, product rate basis, potassium form / ignition sensitivity, A-800 discharge cooling responsibility, inerting extent); then size RC-901 / M-901 / SC-901 and model A-900 (no equipment records or geometry exist).",
+      "status": "open",
+      "note": "D-A900-01"
+    },
+    {
+      "gapId": "GAP-A-900-ID-100582",
+      "assetId": "A-900 in the 3D model",
+      "kind": "identity / naming conflict",
+      "subject": "Eleven register tags on PFD-0900 / LST-001: T-901, H-901, C-901, RC-901, M-901, SC-901, PK-901, W-901, SE-901, DC-901, FN-901 (densification train RC-901 → M-901 → SC-901 ahead of cartridge filling)",
+      "requiredSource": "Model V162/V163: TR-901, H-901, F-901, PG-901, SC-901, PK-901, RB-901, DC-901, CP-901 — a pellet-formation line (PG-901 'technology-neutral pellet-formation module') built without FEED-PFD-0900; TR/F/PG/RB/CP-901 are model-only, T/C/RC/M/W/SE/FN-901 are register-only",
+      "status": "open",
+      "note": "Reconcile by MoC on FEED-PFD-0900 or re-tag the model; until then H-901 / SC-901 / PK-901 / DC-901 are identity holds"
+    },
+    {
+      "gapId": "GAP-A-900-ID-6060eb",
+      "assetId": "PK-901",
+      "kind": "identity / naming conflict",
+      "subject": "Cartridge filling machine (PFD-0900 / LST-001; REP-023 'AR903 to filling')",
+      "requiredSource": "Model V162: contained product collection package (replaces the filling / weighing / closure assumptions of V161)",
+      "status": "open",
+      "note": "Same tag, different equipment — identity hold"
+    },
+    {
+      "gapId": "GAP-A-900-ID-1f4b5d",
+      "assetId": "SC-901",
+      "kind": "identity / naming conflict",
+      "subject": "Screener after M-901 mill (PFD-0900 / LST-001)",
+      "requiredSource": "Model V162: cooling / classification module after PG-901",
+      "status": "open",
+      "note": "Same tag, different duty — identity hold"
+    },
+    {
+      "gapId": "GAP-A-900-ID-2f622c",
+      "assetId": "A-900 product rate",
+      "kind": "identity / naming conflict",
+      "subject": "28 / 26 kg/h (Narrative capacity table)",
+      "requiredSource": "44.91 / 42.67 kg/h (MEB V2.0, REP-019); DBM V2.0 27 / 34 kg/h packed (625 / 812 kg/d)",
+      "status": "open",
+      "note": "Three rates"
+    },
+    {
+      "gapId": "GAP-A-900-ID-9dd744",
+      "assetId": "Pellet density 1.6 g/mL",
+      "kind": "identity / naming conflict",
+      "subject": "PFD / Narrative target",
+      "requiredSource": "Undefined which density; incompatible with physisorption pore volume (REP-023 RED)",
+      "status": "open",
+      "note": "Product mechanism decides whether the target is even meaningful"
+    }
+  ],
+  "inventory": [
+    {
+      "tag": "TR-901",
+      "name": "Short contained product transfer · proposed",
+      "modelEquipmentId": 200,
+      "operation": "a900receive",
+      "parts": 19,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "H-901",
+      "name": "Inerted surge / weigh hopper · proposed",
+      "modelEquipmentId": 201,
+      "operation": "a900receive",
+      "parts": 261,
+      "designStatus": "proposed",
+      "inRegister": "yes",
+      "identityStatus": "identity hold (QFL 2026-09-20): model = Inerted surge / weigh hopper feeding F-901 (V162); register = Product hopper T-901 → H-901 → C-901 (FEED-PFD-0900 / LST-001)",
+      "identityHold": true,
+      "approvedRows": 0,
+      "heldRows": 1,
+      "semanticRecord": true
+    },
+    {
+      "tag": "F-901",
+      "name": "Controlled metering feeder · proposed",
+      "modelEquipmentId": 202,
+      "operation": "a900pelletize",
+      "parts": 32,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "PG-901",
+      "name": "Contained pellet-formation module · technology HOLD",
+      "modelEquipmentId": 203,
+      "operation": "a900pelletize",
+      "parts": 33,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "SC-901",
+      "name": "Cooling and classification module · proposed",
+      "modelEquipmentId": 204,
+      "operation": "a900finish",
+      "parts": 27,
+      "designStatus": "proposed",
+      "inRegister": "yes",
+      "identityStatus": "identity hold (QFL 2026-09-20): model = Cooling / classification module (V162); register = Screener downstream of M-901 mill (FEED-PFD-0900 / LST-001)",
+      "identityHold": true,
+      "approvedRows": 0,
+      "heldRows": 1,
+      "semanticRecord": true
+    },
+    {
+      "tag": "PK-901",
+      "name": "Product collection / packaging · proposed",
+      "modelEquipmentId": 205,
+      "operation": "a900finish",
+      "parts": 90,
+      "designStatus": "proposed",
+      "inRegister": "yes",
+      "identityStatus": "identity hold (QFL 2026-09-20): model = Contained product collection package (V162: PG-901 / SC-901 / PK-901 replace the filling, weighing and closure assumptions); register = Cartridge filling machine (FEED-PFD-0900 / LST-001)",
+      "identityHold": true,
+      "approvedRows": 0,
+      "heldRows": 3,
+      "semanticRecord": true
+    },
+    {
+      "tag": "RB-901",
+      "name": "Sealed reject / recovery receiver · proposed",
+      "modelEquipmentId": 206,
+      "operation": "a900reject",
+      "parts": 90,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "DC-901",
+      "name": "Local dust capture / filter envelope · proposed",
+      "modelEquipmentId": 207,
+      "operation": "a900dust",
+      "parts": 103,
+      "designStatus": "proposed",
+      "inRegister": "yes",
+      "identityStatus": "identity hold (QFL 2026-09-20): model = Local dust capture on PG-901 (V162); register = Area dust collector with FN-901 exhaust fan (FEED-PFD-0900 / LST-001)",
+      "identityHold": true,
+      "approvedRows": 0,
+      "heldRows": 1,
+      "semanticRecord": true
+    },
+    {
+      "tag": "CP-901",
+      "name": "Control and traceability panel · proposed",
+      "modelEquipmentId": 208,
+      "operation": "a900finish",
+      "parts": 15,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "FE-901",
+      "name": "Future filling / dispatch approach · fire point",
+      "modelEquipmentId": 120901,
+      "operation": "fire-safety",
+      "parts": 41,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "IF-A800-PRODUCT",
+      "name": "A-900 product receiving boundary; filling equipment undefined",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A900-AR901",
+      "name": "AR-901 capped argon reservation; no receiver connected",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A900-AR902",
+      "name": "AR-902 capped argon reservation; no receiver connected",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A900-AR903",
+      "name": "AR-903 capped argon reservation; no receiver connected",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A900-PRODUCT",
+      "name": "Accepted packaged-pellet release boundary",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A900-REJECT",
+      "name": "Quarantined reject disposition boundary",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A900-DUST",
+      "name": "Independent filtered dust-exhaust boundary",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "T-901",
+      "name": "TLGO-BCK Product Tank - Argon Blanketed",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "yes",
+      "identityStatus": "register-tag-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    },
+    {
+      "tag": "C-901",
+      "name": "Screw Feeder",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "yes",
+      "identityStatus": "register-tag-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    },
+    {
+      "tag": "RC-901",
+      "name": "Roll Compactor",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "yes",
+      "identityStatus": "register-tag-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    },
+    {
+      "tag": "M-901",
+      "name": "Mill/Granulator",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "yes",
+      "identityStatus": "register-tag-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    },
+    {
+      "tag": "W-901",
+      "name": "Checkweigher",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "yes",
+      "identityStatus": "register-tag-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    },
+    {
+      "tag": "SE-901",
+      "name": "Sealer",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "yes",
+      "identityStatus": "register-tag-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    },
+    {
+      "tag": "FN-901",
+      "name": "Exhaust/ID Fan",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "yes",
+      "identityStatus": "register-tag-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    }
+  ],
+  "documents": [
+    {
+      "documentId": "FEED-PE-LST-001",
+      "title": "Equipment and Stream Register",
+      "revision": "V5.1",
+      "docType": "LST",
+      "control": "controlled",
+      "tier": "A",
+      "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-LST-001_Equipment-and-Stream-Register_V5.1.xlsx",
+      "valueRows": "22"
+    },
+    {
+      "documentId": "FEED-PE-PFD-001",
+      "title": "Process Flow Diagram",
+      "revision": "V5.1.1",
+      "docType": "PFD",
+      "control": "controlled (Draft - IFR)",
+      "tier": "A",
+      "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-PFD-001_Process-Flow-Diagram_V5.1.1.pdf",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-LST-007",
+      "title": "Control and Instrumentation Loop Register",
+      "revision": "V1.0",
+      "docType": "LST",
+      "control": "controlled (conceptual)",
+      "tier": "A",
+      "file": "7 Piping and Instrumentation Diagrams (P&IDs)\\FEED-PE-LST-007_Control-and-Instrumentation-Loop-Register_V1.0.xlsx",
+      "valueRows": "44"
+    },
+    {
+      "documentId": "FEED-PE-MDL-001",
+      "title": "Equipment Scale-Up Study",
+      "revision": "V1.8",
+      "docType": "MDL",
+      "control": "controlled",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\FEED-PE-MDL-001_Equipment-Scale-Up-Study_V1.8.xlsx",
+      "valueRows": "110"
+    },
+    {
+      "documentId": "FEED-PE-MAT-002",
+      "title": "MOC Selection Matrix",
+      "revision": "V1.1",
+      "docType": "MAT",
+      "control": "controlled",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.1.xlsx",
+      "valueRows": "22"
+    },
+    {
+      "documentId": "FEED-PE-DBM-001",
+      "title": "Design Basis Memorandum",
+      "revision": "V2.0",
+      "docType": "DBM",
+      "control": "controlled (approved)",
+      "tier": "B",
+      "file": "3 Design Basis Memorandum (DBM)\\FEED-PE-DBM-001_Design-Basis-Memorandum_V2.0.docx",
+      "valueRows": "1"
+    },
+    {
+      "documentId": "MODEL",
+      "title": "rGO Process Explorer model and semantic core",
+      "revision": "semantic v1",
+      "docType": "MODEL",
+      "control": "model evidence only",
+      "tier": "A",
+      "file": "dist/semantic/v1 (scripts/generate-reactor-semantic.mjs, scripts/expand-*-semantic.mjs)",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-REP-023",
+      "title": "RC-901 Roll Compactor Assessment (first principles)",
+      "revision": "V1.0",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-023_RC-901-Roll-Compactor-Assessment_V1.0.docx",
+      "valueRows": "8"
+    },
+    {
+      "documentId": "FEED-PE-REP-019",
+      "title": "PY-801 Pyrolysis and Hopper Design Closure (A-800 product rate)",
+      "revision": "V1.0",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-019_PY-801-Pyrolysis-and-Hopper-Design-Closure_V1.0.docx",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-QA-SPC-001",
+      "title": "rGO-BCK Product Specification (Stream 804)",
+      "revision": "V0.1",
+      "docType": "SPC",
+      "control": "controlled (draft)",
+      "tier": "B",
+      "file": "E. Quality Assurance\\FEED-QA-SPC-001_rGO-BCK-Product-Specification-Stream-804_V0.1.docx",
+      "valueRows": "1"
+    },
+    {
+      "documentId": "FEED-PE-CAL-019",
+      "title": "A-900 Product Buffer and Feeder Sizing",
+      "revision": "V1.0",
+      "docType": "CAL",
+      "control": "controlled (preliminary)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\4 - Equipment Calculation (CAL) Sheets\\FEED-PE-CAL-019_A-900-Product-Buffer-and-Feeder-Sizing_V1.0.xlsx",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-DAT-042",
+      "title": "T-901 Argon-Blanketed Product Tank Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-042_T-901-Argon-Blanketed-Product-Tank-Datasheet_V1.0.xlsx",
+      "valueRows": "20"
+    },
+    {
+      "documentId": "FEED-PE-DAT-043",
+      "title": "C-901 Product Screw Feeder Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-043_C-901-Product-Screw-Feeder-Datasheet_V1.0.xlsx",
+      "valueRows": "15"
+    }
+  ],
+  "images": [
+    {
+      "key": "overview",
+      "title": "01 | A-900 contained pelletization line as modelled (V162 / V163) — proposed, technology hold",
+      "owners": [
+        "TR-901",
+        "H-901",
+        "F-901",
+        "PG-901",
+        "SC-901",
+        "PK-901",
+        "RB-901",
+        "DC-901",
+        "CP-901"
+      ],
+      "direction": [
+        1,
+        0.8,
+        1
+      ],
+      "alt": "the nine proposed model items of the compact pelletization line in assembled position"
+    },
+    {
+      "key": "line",
+      "title": "02 | Receipt to pellet formation: TR-901 transfer, H-901 surge / weigh hopper (identity hold), F-901 feeder, PG-901 pellet-formation module",
+      "owners": [
+        "TR-901",
+        "H-901",
+        "F-901",
+        "PG-901"
+      ],
+      "direction": [
+        -1,
+        0.5,
+        1
+      ],
+      "alt": "short contained transfer, inerted hopper, metering feeder and the pellet-formation envelope"
+    },
+    {
+      "key": "finish",
+      "title": "03 | Finishing: SC-901 cooling / classification (identity hold), PK-901 collection (identity hold), RB-901 reject receiver, CP-901 panel",
+      "owners": [
+        "SC-901",
+        "PK-901",
+        "RB-901",
+        "CP-901",
+        "PG-901"
+      ],
+      "frame": [
+        "SC-901",
+        "PK-901",
+        "RB-901",
+        "CP-901"
+      ],
+      "zoom": 1.1,
+      "direction": [
+        1,
+        0.5,
+        -1
+      ],
+      "alt": "cooling and classification module, product collection package, reject receiver and control panel"
+    },
+    {
+      "key": "dust",
+      "title": "04 | DC-901 local dust capture on PG-901 (identity hold) — register DC-901 / FN-901 is the area extraction",
+      "owners": [
+        "DC-901",
+        "PG-901",
+        "SC-901"
+      ],
+      "frame": [
+        "DC-901"
+      ],
+      "zoom": 1.4,
+      "direction": [
+        -1,
+        0.5,
+        -1
+      ],
+      "alt": "the modelled local dust filter envelope beside the pellet-formation module"
+    },
+    {
+      "key": "access",
+      "title": "05 | Fire point FE-901 at the future filling / dispatch approach and the line footprint",
+      "owners": [
+        "FE-901",
+        "TR-901",
+        "H-901",
+        "F-901",
+        "PG-901",
+        "SC-901",
+        "PK-901",
+        "RB-901",
+        "DC-901",
+        "CP-901"
+      ],
+      "direction": [
+        0.35,
+        1,
+        0.3
+      ],
+      "percentiles": [
+        2,
+        97
+      ],
+      "alt": "plan-like view of the pelletization line with the fire point at the dispatch approach"
+    }
+  ],
+  "related": [
+    {
+      "href": "./a800-review.html",
+      "label": "A-800 doping pyrolysis (upstream)"
+    },
+    {
+      "href": "./a3000-review.html",
+      "label": "Vent-gas assembly review (A-3000)"
+    },
+    {
+      "href": "./semantic-core.html",
+      "label": "Semantic Plant Core — identity holds"
+    }
+  ],
+  "counts": {
+    "assets": 23,
+    "propertyRows": 243,
+    "approved": 20,
+    "openConflicts": 0,
+    "decisions": 3,
+    "holds": 4,
+    "gapsOpen": 6,
+    "gapsClosed": 11
+  }
+}
