@@ -1,7 +1,7 @@
 {
- "version": "fc0afa4",
+ "version": "78b5b2a",
  "date": "2026-09-23",
- "generated": "2026-09-23T03:13:15.877Z",
+ "generated": "2026-09-23T03:34:07.322Z",
  "revision": "r2",
  "reviewer": {
   "initials": "QFL",
@@ -457,7 +457,7 @@
    "reservedSpaceFindings": 0,
    "review": {
     "href": "./a140-review.html",
-    "revision": "r2",
+    "revision": "r3",
     "reviewer": "QFL"
    }
   },
@@ -4437,7 +4437,7 @@
     {
      "kind": "finding",
      "id": "A140-05",
-     "label": "A140-05 · Independent containment and access — Model provision — retention unverified (A-140 review r2 · QFL)",
+     "label": "A140-05 · Independent containment and access — Model provision — retention unverified (A-140 review r3 · QFL)",
      "href": "./a140-review.html#A140-05"
     },
     {

@@ -1,5 +1,5 @@
 {
- "version": "03f33d1",
+ "version": "335fdd8",
  "date": "2026-09-23",
  "items": {
   "L01": {
@@ -19,7 +19,7 @@
      "id": "A140-05",
      "area": "A-140",
      "href": "./a140-review.html#A140-05",
-     "revision": "r2",
+     "revision": "r3",
      "reviewer": "QFL",
      "topic": "Independent containment and access",
      "status": "Model provision — retention unverified"
