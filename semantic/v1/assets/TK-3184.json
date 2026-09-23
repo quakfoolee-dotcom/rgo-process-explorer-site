@@ -28,5 +28,16 @@
     "Model 5000 Nm3/h, 40 C, 3500 Pa drop, 2 m tower diameter and 12 m stack height are screening/layout inputs, not ratings or approved limits. KO separation is not a fine-mist guarantee or cooling duty. ME-3150 fiber-bed duty, removal efficiency, pressure budget, corrosion/materials and stack dispersion/emission acceptance remain unqualified.",
     "Acidic KO condensate and alkaline high-salt blowdown have distinct normally isolated A-1000 returns. Neutralization does not remove dissolved salts before A-2000. Sealed liquid returns and dedicated dirty-side pressure balances require verification at minimum liquid level and maximum differential pressure. Fan/stack low drains remain separately blinded with no continuous drainage credit.",
     "Makeup water uses a proposed physical air gap and buffer/pump; supply is blinded, overflow goes to an unqualified local catch tray. NaOH breathing stays independent. T-3180 is retained despite TK-3180 wording in the original notes. P01 uses AIT-3180 for pH while the model uses pHT-3180 for pH and AIT-3180 for conductivity: no instrument tag is selected. pH, flow, level, pressure and other trip limits remain null; no live control or SIS is validated."
-  ]
+  ],
+  "dataLayer": {
+    "area": "A-3000",
+    "source": "data/semantic/A-3000",
+    "approvedRows": 0,
+    "heldRows": 0,
+    "pendingRows": 12,
+    "identityHold": null,
+    "applied": "2026-09-23",
+    "baseline": {},
+    "baselineAbsent": []
+  }
 }
