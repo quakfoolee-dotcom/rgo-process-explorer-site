@@ -27,5 +27,16 @@
     "Three modeled cells, energy dose, residence time, flow, backpressure, cooling duty and product quality require trials/vendor selection. Draft 1-2 wt% and 30-40 degC targets are not approved setpoints or equipment ratings.",
     "Available sheet is Draft - Not for Use with revision XXX. Bypass is mentioned conceptually and degassing is suggested; neither is asserted as an installed or connected package. Draft says no added water or DMF for sonication.",
     "Pressure/vacuum and relief sizing, cooling-loss response, acoustic protection, CIP isolation, sampling criteria, vent compatibility and drain receiving conditions remain unqualified."
-  ]
+  ],
+  "dataLayer": {
+    "area": "A-500",
+    "source": "data/semantic/A-500",
+    "approvedRows": 0,
+    "heldRows": 0,
+    "pendingRows": 27,
+    "identityHold": null,
+    "applied": "2026-09-24",
+    "baseline": {},
+    "baselineAbsent": []
+  }
 }

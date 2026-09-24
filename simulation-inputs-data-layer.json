@@ -5,8 +5,8 @@
  "counts": {
   "approved": 30,
   "withdrawn": 20,
-  "documented": 1,
-  "none": 97
+  "documented": 2,
+  "none": 96
  },
  "matches": [
   {
@@ -1512,7 +1512,17 @@
    "asset": "T-501",
    "area": "A-500",
    "parameter": "Working liquid inventory",
-   "status": "none"
+   "status": "documented",
+   "property": "design.workingVolumeM3",
+   "alternatives": [
+    {
+     "value": "16.4",
+     "unit": "m³",
+     "source": "FEED-PE-DAT-058",
+     "location": "'T-501 Datasheet'!row 20 (item 3.1)",
+     "status": "candidate"
+    }
+   ]
   },
   {
    "rowId": "T-501-density",
