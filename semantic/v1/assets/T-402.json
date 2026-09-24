@@ -17,7 +17,7 @@
     "capacityM3": null,
     "designPressure": "+50 / −5 mbarg",
     "designTemperature": null,
-    "materialOfConstruction": "PVDF- or PFA-lined carbon-steel pressure vessel"
+    "materialOfConstruction": "PVDF- or PFA-lined carbon-steel tank, atmospheric (+50 / −5 mbarg)"
   },
   "operatingEnvelope": {
     "feedPH": 1,

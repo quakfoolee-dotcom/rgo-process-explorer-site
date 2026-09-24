@@ -57,7 +57,7 @@
       "value": "Ti Grade 5 (Ti-6Al-4V), defined tip replacement interval",
       "unit": null,
       "source": "FEED-PE-MAT-002",
-      "revision": "V1.1",
+      "revision": "V1.2",
       "location": "'Selection Matrix'!row 39 (M-035)",
       "status": "approved",
       "confidence": "documented",

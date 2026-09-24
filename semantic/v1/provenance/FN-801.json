@@ -57,7 +57,7 @@
       "value": "Alloy 601 or Ni 200/201 in hot/alkali-condensing sections; 316L minimum after controlled cooling",
       "unit": null,
       "source": "FEED-PE-MAT-002",
-      "revision": "V1.1",
+      "revision": "V1.2",
       "location": "'Selection Matrix'!row 56 (M-052)",
       "status": "approved",
       "confidence": "documented",

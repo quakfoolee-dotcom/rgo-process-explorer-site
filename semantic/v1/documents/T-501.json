@@ -51,12 +51,12 @@
     {
       "documentId": "FEED-PE-MAT-002",
       "title": "MOC Selection Matrix",
-      "revision": "V1.1",
+      "revision": "V1.2",
       "page": null,
       "status": "controlled",
       "availability": "indexed by data layer",
       "dataLayer": true,
-      "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.1.xlsx"
+      "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.2.xlsx"
     },
     {
       "documentId": "FEED-PE-PFD-001",
