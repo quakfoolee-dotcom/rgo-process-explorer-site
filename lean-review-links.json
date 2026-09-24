@@ -1,6 +1,6 @@
 {
- "version": "4753fb0",
- "date": "2026-09-23",
+ "version": "8833812",
+ "date": "2026-09-24",
  "items": {
   "L01": {
    "kind": "engineering",
@@ -73,7 +73,7 @@
      "id": "A800-07",
      "area": "A-800",
      "href": "./a800-review.html#A800-07",
-     "revision": "r2",
+     "revision": "r3",
      "reviewer": "QFL",
      "topic": "Access, reactive inventory and fire points",
      "status": "Model access provided — qualification open"
@@ -227,7 +227,7 @@
      "id": "A800-07",
      "area": "A-800",
      "href": "./a800-review.html#A800-07",
-     "revision": "r2",
+     "revision": "r3",
      "reviewer": "QFL",
      "topic": "Access, reactive inventory and fire points",
      "status": "Model access provided — qualification open"
@@ -289,7 +289,7 @@
      "id": "A800-01",
      "area": "A-800",
      "href": "./a800-review.html#A800-01",
-     "revision": "r2",
+     "revision": "r3",
      "reviewer": "QFL",
      "topic": "KBH₄ : rGO ratio and feed-rate basis",
      "status": "Ratio ruled 1 : 1 — rates withdrawn"
@@ -485,7 +485,7 @@
      "id": "A800-03",
      "area": "A-800",
      "href": "./a800-review.html#A800-03",
-     "revision": "r2",
+     "revision": "r3",
      "reviewer": "QFL",
      "topic": "Inert atmosphere, hydrolysis hazard and hazardous area",
      "status": "Approved from DAT-008 — HAC to confirm"
