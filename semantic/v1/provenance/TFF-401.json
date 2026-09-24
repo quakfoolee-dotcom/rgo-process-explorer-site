@@ -68,22 +68,6 @@
       "reviewDate": "2026-09-20"
     },
     {
-      "valueId": "PV-A-400-0136",
-      "property": "operatingEnvelope.washEndpoint",
-      "value": "Wash until permeate conductivity < 100–200 µS/cm and pH ≈ 5 meet downstream spec; multiple diafiltration cycles may be required",
-      "unit": null,
-      "source": "FEED-PE-PFD-001",
-      "revision": "V5.1.1",
-      "location": "FEED-PFD-0400, PDF p.9 Process Notes / TFF-401 Design Notes",
-      "status": "approved",
-      "confidence": "review required",
-      "tier": "B",
-      "conflictGroup": null,
-      "note": "D-A400-02: PFD sheet 0400 process notes: wash until permeate conductivity < 100–200 µS/cm and pH ≈ 5 — technology-independent endpoint.",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-20"
-    },
-    {
       "valueId": "PV-A-400-0137",
       "property": "design.operatingPhilosophy",
       "value": "Low transmembrane pressure operation to avoid compressible cake formation; CIP / flush connections; skid includes CIP capability",
@@ -118,7 +102,7 @@
     {
       "valueId": "PV-A-400-0141",
       "property": "operatingEnvelope.washLiquorTargets",
-      "value": "pH 5.0 ± 0.2; SO₄²⁻ ≤ 1 mg/L; Mn non-detect; conductivity < 10 µS/cm on the wash liquor",
+      "value": "SO₄²⁻ ≤ 1 mg/L, Mn non-detect, conductivity < 10 µS/cm on the wash liquor; slurry pH monitored, not a pass/fail criterion (FEED-PE-NTE-013 H2)",
       "unit": null,
       "source": "FEED-PE-REP-001",
       "revision": "V1.1",
@@ -127,9 +111,9 @@
       "confidence": "review required",
       "tier": "B",
       "conflictGroup": null,
-      "note": "REP-036 notes pH 5 and SO₄ 1 mg/L are not the same condition once the surface buffer dominates | D-A400-02: REP-001 V1.1 Table 5: pH 5.0 ± 0.2, SO₄²⁻ ≤ 1 mg/L, Mn non-detect, conductivity < 10 µS/cm on the wash liquor. REP-036 caveat (pH 5 ≠ SO₄ 1 mg/L once the surface buffer dominates) carried in the note.",
+      "note": "REP-036 notes pH 5 and SO₄ 1 mg/L are not the same condition once the surface buffer dominates | D-A400-02: REP-001 V1.1 Table 5: pH 5.0 ± 0.2, SO₄²⁻ ≤ 1 mg/L, Mn non-detect, conductivity < 10 µS/cm on the wash liquor. REP-036 caveat (pH 5 ≠ SO₄ 1 mg/L once the surface buffer dominates) carried in the note. | D-A400-03: REP-001 V1.1 Table 5 contaminant targets kept; the pH 5.0 ± 0.2 element becomes a monitored variable (NTE-013 H2, REP-036 §11).",
       "reviewer": "QFL",
-      "reviewDate": "2026-09-20"
+      "reviewDate": "2026-09-23"
     },
     {
       "valueId": "PV-A-400-0146",
@@ -146,6 +130,38 @@
       "note": "D-A400-02: Synder V0.2 limits 25 °C at pH < 2, 50 °C above (REP-036 citing REP-007) — applies to the polymeric options; ceramic option unaffected.",
       "reviewer": "QFL",
       "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-400-0153",
+      "property": "identity.technologyBaseline",
+      "value": "Hybrid (provisional; H-01 open): counter-current displacement wash of a filterable TLGO cake at pH < 3 to Mn / K non-detect, re-slurry, membrane polish (TFF-401; spiral or VSEP format open) and RO-401 permeate recovery; bulk-separator type open (M4). Standalone TFF rejected.",
+      "unit": null,
+      "source": "FEED-PE-NTE-013",
+      "revision": "V1.0",
+      "location": "§5 H1",
+      "status": "approved",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": "CF-technologyBaseline-TFF-401",
+      "note": "D-A400-03: Provisional baseline H1 (FEED-PE-NTE-013): hybrid — cake displacement wash at pH < 3 + membrane polish + RO recovery; standalone TFF (O2) rejected, VSEP (O1) retained only as a polish-membrane format. H-01 stays open (M1, M3, M4, M8).",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-23"
+    },
+    {
+      "valueId": "PV-A-400-0154",
+      "property": "operatingEnvelope.washEndpoint",
+      "value": "Contaminant endpoint: SO₄²⁻ ≤ 1 mg/L, Mn non-detect, K⁺ / Cl⁻ per product specification, permeate-conductivity trend and buffer signature (permeate pH = tank pH for three cycles); slurry pH monitored (3.5–4.2 expected), not specified; pH ≈ 5 only by controlled neutralisation if A-500 requires it",
+      "unit": null,
+      "source": "FEED-PE-NTE-013",
+      "revision": "V1.0",
+      "location": "§5 H2",
+      "status": "approved",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": "CF-washEndpoint-TFF-401",
+      "note": "D-A400-03: H2: endpoint on contaminants with the buffer-signature stop rule; slurry pH monitored (3.5–4.2 expected); pH 5 only by neutralisation if A-500 requires it (REP-036 §11). Supersedes the PFD pH ≈ 5 endpoint approved in D-A400-02.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-23"
     }
   ]
 }

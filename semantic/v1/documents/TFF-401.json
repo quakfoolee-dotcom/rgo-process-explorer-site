@@ -72,6 +72,16 @@
       "availability": "indexed by data layer",
       "dataLayer": true,
       "file": "B. Technical Reports\\FEED-PE-REP-036_A-400-TLGO-Washing-Optimization_V1.0.docx"
+    },
+    {
+      "documentId": "FEED-PE-NTE-013",
+      "title": "A-400 Washing Technology — Hold H-01 Options and Provisional Baseline",
+      "revision": "V1.0",
+      "page": null,
+      "status": "controlled",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "B. Technical Reports\\FEED-PE-NTE-013_A-400-H-01-Options-and-Provisional-Baseline_V1.0.docx"
     }
   ]
 }

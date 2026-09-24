@@ -21,10 +21,10 @@
     "operatingPhilosophy": "Low transmembrane pressure operation to avoid compressible cake formation; CIP / flush connections; skid includes CIP capability"
   },
   "operatingEnvelope": {
-    "washEndpoint": "Wash until permeate conductivity < 100–200 µS/cm and pH ≈ 5 meet downstream spec; multiple diafiltration cycles may be required",
     "operatingMode": "A-400 onward continuous or semi-continuous at the design rates of Table 3.3-1, with surge/hold at the batch-to-continuous boundary (T-501)",
-    "washLiquorTargets": "pH 5.0 ± 0.2; SO₄²⁻ ≤ 1 mg/L; Mn non-detect; conductivity < 10 µS/cm on the wash liquor",
-    "membraneTemperatureLimits": "Synder V0.2: 25 °C at pH < 2, 50 °C above pH 2"
+    "washLiquorTargets": "SO₄²⁻ ≤ 1 mg/L, Mn non-detect, conductivity < 10 µS/cm on the wash liquor; slurry pH monitored, not a pass/fail criterion (FEED-PE-NTE-013 H2)",
+    "membraneTemperatureLimits": "Synder V0.2: 25 °C at pH < 2, 50 °C above pH 2",
+    "washEndpoint": "Contaminant endpoint: SO₄²⁻ ≤ 1 mg/L, Mn non-detect, K⁺ / Cl⁻ per product specification, permeate-conductivity trend and buffer signature (permeate pH = tank pH for three cycles); slurry pH monitored (3.5–4.2 expected), not specified; pH ≈ 5 only by controlled neutralisation if A-500 requires it"
   },
   "processBasis": [],
   "reviewStatus": "open",
@@ -35,12 +35,15 @@
     "Cleaning chemistry, product isolation, vent compatibility, drain receiving pressure/invert, instrument tags and protective settings remain unqualified.",
     "Dimensions, model screening inputs and package layouts do not establish approved engineering values."
   ],
+  "identity": {
+    "technologyBaseline": "Hybrid (provisional; H-01 open): counter-current displacement wash of a filterable TLGO cake at pH < 3 to Mn / K non-detect, re-slurry, membrane polish (TFF-401; spiral or VSEP format open) and RO-401 permeate recovery; bulk-separator type open (M4). Standalone TFF rejected."
+  },
   "dataLayer": {
     "area": "A-400",
     "source": "data/semantic/A-400",
-    "approvedRows": 6,
+    "approvedRows": 7,
     "heldRows": 0,
-    "pendingRows": 57,
+    "pendingRows": 60,
     "identityHold": null,
     "applied": "2026-09-24",
     "baseline": {
@@ -50,8 +53,11 @@
         "designTemperature": null,
         "materialOfConstruction": null
       },
-      "operatingEnvelope": null
+      "operatingEnvelope": null,
+      "identity": null
     },
-    "baselineAbsent": []
+    "baselineAbsent": [
+      "identity"
+    ]
   }
 }
