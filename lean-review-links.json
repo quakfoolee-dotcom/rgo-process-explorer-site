@@ -1,5 +1,5 @@
 {
- "version": "c60a0af",
+ "version": "694b1e7",
  "date": "2026-09-24",
  "items": {
   "L01": {
@@ -262,7 +262,7 @@
      "id": "A500-01",
      "area": "A-500",
      "href": "./a500-review.html#A500-01",
-     "revision": "r3",
+     "revision": "r4",
      "reviewer": "QFL",
      "topic": "Sonication acceptance criterion and dose window",
      "status": "Not defined — gating item for A-500"
@@ -367,7 +367,7 @@
      "id": "A500-03",
      "area": "A-500",
      "href": "./a500-review.html#A500-03",
-     "revision": "r3",
+     "revision": "r4",
      "reviewer": "QFL",
      "topic": "Solids concentration and commercial design basis",
      "status": "PFD basis approved — MDL-001 basis withdrawn"
