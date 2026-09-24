@@ -73,6 +73,16 @@
       "availability": "indexed by data layer",
       "dataLayer": true,
       "file": "3 Design Basis Memorandum (DBM)\\FEED-PE-DBM-001_Design-Basis-Memorandum_V2.0.docx"
+    },
+    {
+      "documentId": "FEED-PE-DAT-053",
+      "title": "T-402 Re-slurry / Diafiltration Tank Datasheet (Options A / B)",
+      "revision": "V1.0",
+      "page": null,
+      "status": "controlled (preliminary - budget enquiry)",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-053_T-402-Reslurry-Diafiltration-Tank-Datasheet_V1.0.xlsx"
     }
   ]
 }

@@ -15,7 +15,7 @@
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
-    "designPressure": null,
+    "designPressure": "+50 / −5 mbarg",
     "designTemperature": null,
     "materialOfConstruction": "PVDF- or PFA-lined carbon-steel pressure vessel"
   },
@@ -34,9 +34,9 @@
   "dataLayer": {
     "area": "A-400",
     "source": "data/semantic/A-400",
-    "approvedRows": 4,
+    "approvedRows": 5,
     "heldRows": 0,
-    "pendingRows": 54,
+    "pendingRows": 53,
     "identityHold": null,
     "applied": "2026-09-24",
     "baseline": {
