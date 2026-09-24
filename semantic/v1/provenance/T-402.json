@@ -121,13 +121,13 @@
       "value": "+50 / −5 mbarg",
       "unit": null,
       "source": "FEED-PE-DAT-053",
-      "revision": "V1.0",
+      "revision": "V1.1",
       "location": "'T-402 Datasheet'!row 25 (item 4.1)",
       "status": "approved",
       "confidence": "documented (preliminary datasheet, budget enquiry)",
       "tier": "A",
       "conflictGroup": "CF-designPressure-T-402",
-      "note": "Closed vent IF-A400-T402-VENT with P/V relief | D-A400-04: T-402 Option A selected: atmospheric closed-vented tank, +50 / −5 mbarg, pump-driven loop with TMP set by the retentate back-pressure valve. FEED-PE-CAL-022 'T-402 options': steel mass similar (≈ 1.6 vs 1.9 t); Option B (item 5.1, 5.0 barg / FV) adds ASME VIII certification, a PSV, a vacuum-rated liner, compressed air and ≈ 42 m on the feed / make-up pumps. Option B not selected.",
+      "note": "Closed vent IF-A400-T402-VENT with P/V relief — selected by D-A400-04 (QFL 2026-09-24) | D-A400-04: T-402 Option A selected: atmospheric closed-vented tank, +50 / −5 mbarg, pump-driven loop with TMP set by the retentate back-pressure valve. FEED-PE-CAL-022 'T-402 options': steel mass similar (≈ 1.6 vs 1.9 t); Option B (item 5.1, 5.0 barg / FV) adds ASME VIII certification, a PSV, a vacuum-rated liner, compressed air and ≈ 42 m on the feed / make-up pumps. Option B not selected.",
       "reviewer": "QFL",
       "reviewDate": "2026-09-24"
     }
