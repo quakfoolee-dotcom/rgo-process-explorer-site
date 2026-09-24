@@ -1,0 +1,2309 @@
+{
+  "area": "A-400",
+  "title": "A-400 assembly & design review",
+  "revision": "r4",
+  "date": "2026-09-24",
+  "sourceCommit": "5ebe3c9",
+  "semanticCoreVersion": "1.19.0-foundation",
+  "registerRevision": "2026-09-10 · Physical equipment ownership and complete Explore assemblies",
+  "modelConfig": {
+    "scope": "feed",
+    "a160": "baseline",
+    "argonSource": "bulk"
+  },
+  "lead": "TLGO washing and diafiltration: diafiltration tank T-402, membrane package TFF-401 (modelled as a VSEP with eight 84-inch packs), permeate buffer T-403, circulation / permeate / CIP pumps P-402 / P-403 / P-405, the CIP-401 cleaning package and the washing-utility battery limit BL-A400.",
+  "reviewer": {
+    "initials": "QFL",
+    "date": "2026-09-24"
+  },
+  "representedParts": 8785,
+  "ownedEquipment": 17,
+  "findings": [
+    {
+      "id": "A400-01",
+      "topic": "Membrane technology — hold H-01",
+      "status": "Technology hold — model shows one candidate",
+      "reason": "Every sizing value in the area (flux, area, module count, pumps, vessels, water) follows the membrane technology; none can be frozen before it.",
+      "observation": "Three configurations are on record: VSEP i84 vibratory-shear (REP-001 V1.1, the MEB-007 model and the 3D geometry — eight 84-inch packs), a standalone spiral-wound TFF reference case (REP-007: 238 Synder elements, 981 m², rejected as procurement basis) and a hybrid bulk mechanical separation + TFF polishing (REP-017, provisional). MAT-002 M-029 (ceramic) and CAL-010 (PES/PVDF hollow fibre) assume different membranes again. D-A400-01 approves none and keeps the model class generic; the modelled VSEP is a candidate, not a selection.",
+      "action": "Run the H-01 bench program on actual A-300 quench cake at pH 2–4 (flux, c_max, fouling), select the configuration, then re-issue FEED-PE-MEB-007 (V18) on the DBM V2.0 basis and re-tag the model package accordingly.",
+      "discipline": "Process / R&D",
+      "evidence": [
+        {
+          "ref": "D-A400-01",
+          "kind": "decision"
+        },
+        {
+          "ref": "CF-technologyBaseline-TFF-401",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "GAP-A-400-DF-6550fa",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-400-ID-c86523",
+          "kind": "gap"
+        },
+        {
+          "ref": "FEED-PE-REP-001",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-REP-007",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-REP-017",
+          "kind": "document"
+        }
+      ],
+      "image": "membrane"
+    },
+    {
+      "id": "A400-02",
+      "topic": "Graphite and wash-water basis",
+      "status": "Basis withdrawn — 8× spread in wash water",
+      "reason": "Diafiltration duty scales with graphite rate and with the wash-water ratio; both must be single-valued before the package is sized.",
+      "observation": "MEB-007 runs on 50 kg/h graphite (CAL-010 is a 10 kg pilot batch) against the DBM V2.0 design rate of 63.5 kg/h; wash water is 887.5 kg/kg graphite as equivalent diavolumes (MEB-007), 7,088 kg/kg in the pilot (CAL-010) and 7,691 kg/kg in the cost model (REP-017). REP-036 shows the pilot excess is cycle geometry and surface buffer, not chemistry. D-A400-01 withdrew flux (72 / 78 LMH), diavolumes (36.8 / 37.0 / 284), module count (8 / 1), permeate duty and the T-402 / T-403 volumes; the 20 m³ and 98.6 m³ figures are screening or pilot inputs.",
+      "action": "Fix one graphite rate (DBM V2.0 Table 3.3-1) and one wash-water basis from the H-01 bench results; then size TFF-401, T-402, T-403 and the wastewater case with A-1000 / A-2000 (REP-038).",
+      "discipline": "Process",
+      "evidence": [
+        {
+          "ref": "D-A400-01",
+          "kind": "decision"
+        },
+        {
+          "ref": "CF-washWaterKgPerKgGr-TFF-401",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "CF-designFluxLMH-TFF-401",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "CF-equivalentDiavolum-TFF-401",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "CF-installedModules-TFF-401",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "GAP-A-400-ID-416fcd",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-400-ID-e6f5d3",
+          "kind": "gap"
+        },
+        {
+          "ref": "FEED-PE-MEB-007",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-CAL-010",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-REP-036",
+          "kind": "document"
+        }
+      ],
+      "image": "overview"
+    },
+    {
+      "id": "A400-03",
+      "topic": "Wash endpoint and product-release criterion",
+      "status": "Approved endpoints — two targets to reconcile",
+      "reason": "The wash endpoint decides batch time, water consumption and the interface to QA release.",
+      "observation": "Approved: feed pH 1 from the A-300 acid wash and target pH 5 washed product (D-A400-02, MEB-007; all documents agree); PFD-0400 endpoint \"permeate conductivity < 100–200 µS/cm and pH ≈ 5\"; REP-001 Table 5 wash-liquor target pH 5.0 ± 0.2, SO₄²⁻ ≤ 1 mg/L, Mn non-detect, conductivity < 10 µS/cm; low-TMP operating philosophy; membrane limits 25 °C at pH < 2 / 50 °C above (polymeric options). The two conductivity targets differ by an order of magnitude and REP-036 shows pH 5 and SO₄ ≤ 1 mg/L are not equivalent once the surface buffer dominates.",
+      "action": "Decide whether pH, conductivity or sulphate is the release criterion, reconcile PFD-0400 with REP-001 and link the result to FEED-QA-SPC-001; carry the chosen endpoint into the LST-007 loops and the C&E matrix.",
+      "discipline": "Process / quality",
+      "evidence": [
+        {
+          "ref": "D-A400-02",
+          "kind": "decision"
+        },
+        {
+          "ref": "GAP-A-400-DF-6c25b2",
+          "kind": "gap"
+        },
+        {
+          "ref": "FEED-PE-PFD-001",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-REP-001",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-REP-036",
+          "kind": "document"
+        }
+      ],
+      "image": "permeate"
+    },
+    {
+      "id": "A400-04",
+      "topic": "Pump duties P-402 / P-403 / P-405",
+      "status": "Duties withdrawn — configuration-dependent",
+      "reason": "Circulation and permeate pump duties are set by the membrane configuration and the wash-water basis.",
+      "observation": "P-402 2,838 m³/h and 363.8 kW belong to the standalone-TFF reference case (REP-007), rejected as procurement basis by REP-017; MEB-007 gives 229.5 kW shaft on the 50 / 80 kg/h basis. In MEB-007 P-405 is an RO concentrate pump, whereas the model P-405 is the CIP circulation pump of CIP-401 with tank TK-405 — same tag, different service. D-A400-01 withdrew all three duties.",
+      "action": "Re-derive pump duties from the re-issued MEB-007; resolve the P-405 identity (RO concentrate vs CIP circulation) on PFD-0400 and LST-001 before datasheets.",
+      "discipline": "Process / mechanical",
+      "evidence": [
+        {
+          "ref": "D-A400-01",
+          "kind": "decision"
+        },
+        {
+          "ref": "GAP-A-400-ID-7ff24d",
+          "kind": "gap"
+        },
+        {
+          "ref": "P-402",
+          "kind": "asset"
+        },
+        {
+          "ref": "P-403",
+          "kind": "asset"
+        },
+        {
+          "ref": "P-405",
+          "kind": "asset"
+        },
+        {
+          "ref": "FEED-PE-REP-007",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-MEB-007",
+          "kind": "document"
+        }
+      ],
+      "image": "overview"
+    },
+    {
+      "id": "A400-05",
+      "topic": "Materials of construction",
+      "status": "Ruled — confirm with the H-01 selection",
+      "reason": "Wetted materials for pH 0–5 sulphate / manganese liquor with residual oxidiser govern vessel, pump and membrane-housing selection.",
+      "observation": "D-A400-MOC applies the plant-wide ruling that FEED-PE-MAT-002 governs: T-402 PVDF- or PFA-lined carbon-steel pressure vessel (M-031), TFF-401 PVDF / PP-lined or dual-laminate FRP, P-402 PVDF / ETFE-lined sealless with SiC bearings, T-403 / P-403 HDPE / PP / PVDF / dual-laminate FRP. MDL-001 (vinyl-ester FRP, PVDF pump) is superseded, not deleted. The membrane material itself stays unapproved under H-01 (MAT-002 M-029 ceramic vs polymeric options).",
+      "action": "Issue A-400 datasheets on the MAT-002 base case; confirm the T-402 pressure-vessel duty (pressure-assisted to 60 °C per M-031) against the H-01 configuration before purchase.",
+      "discipline": "Materials / mechanical",
+      "evidence": [
+        {
+          "ref": "D-A400-MOC",
+          "kind": "decision"
+        },
+        {
+          "ref": "CF-materialOfConstruc-T-402",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "CF-materialOfConstruc-P-403",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "GAP-A-400-ID-bebb70",
+          "kind": "gap"
+        },
+        {
+          "ref": "FEED-PE-MAT-002",
+          "kind": "document"
+        }
+      ],
+      "image": "overview"
+    },
+    {
+      "id": "A400-06",
+      "topic": "Register and model reconciliation",
+      "status": "Register reconciliation required",
+      "reason": "Every equipment item in the area must have one identity in the register, the model and the data layer.",
+      "observation": "The five LST-001 tags (T-402, TFF-401, T-403, P-402, P-403) are bound to model geometry. The model additionally owns CIP-401 with TK-405 and P-405, the battery limit BL-A400, three containment bunds BND-401 / BND-403 / BND-404 (50.6 / 86.2 / 10.3 m³ retention), two fire points FE-401 / FE-402 and four emergency stations — none with a register identity. Five items named in design notes are absent from PFD-0400, LST-001 and the model: F-402, RO-401, T-404, P-404 and T-405 (the REP-001 permeate-recycle train). CAL-010 tags the package TFF-301.",
+      "action": "Either add the F-402 / RO-401 / T-404 / P-404 / T-405 train to PFD-0400 and the model or remove it from the design notes with the H-01 decision; register CIP-401 / TK-405 / P-405 and BL-A400 on LST-001; assign identities to bunds, fire points and stations or record them as model-side safety assets by decision; align the CAL-010 tag.",
+      "discipline": "Process / layout",
+      "evidence": [
+        {
+          "ref": "GAP-A-400-ID-2e83c3",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-400-ID-7ff24d",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-400-ID-95d241",
+          "kind": "gap"
+        },
+        {
+          "ref": "CIP-401",
+          "kind": "asset"
+        },
+        {
+          "ref": "TK-405",
+          "kind": "asset"
+        },
+        {
+          "ref": "BL-A400",
+          "kind": "asset"
+        },
+        {
+          "ref": "F-402",
+          "kind": "asset"
+        },
+        {
+          "ref": "RO-401",
+          "kind": "asset"
+        }
+      ],
+      "image": "containment"
+    },
+    {
+      "id": "A400-07",
+      "topic": "Vents, drains and CIP interfaces",
+      "status": "Destinations open",
+      "reason": "Each vent and drain needs an identified destination compatible with the liquor it carries.",
+      "observation": "The model carries five interface records — IF-A400-T402-VENT, IF-A400-T403-VENT, IF-A400-TFF-VENT, IF-A400-DRAIN, IF-A400-TFF-DRAIN — without register identities or destinations. The permeate bund BND-403 is annotated \"acidity and residual oxidizer unverified\"; the CIP bund BND-404 is kept separate from process. Vent routing to A-3000 follows the S1 / S2 / S3 segregation ruled under D-A3000-01; the A-400 vents are wet, acidic and may carry residual oxidiser.",
+      "action": "Assign destinations for the five interfaces on PFD-0400 (A-3000 S1 for vents; A-1000 for drains), confirm permeate acidity / oxidiser for the BND-403 basis, and define the CIP chemistry and spent-liquor route before the containment review.",
+      "discipline": "Process safety / civil",
+      "evidence": [
+        {
+          "ref": "IF-A400-T402-VENT",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A400-T403-VENT",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A400-TFF-VENT",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A400-DRAIN",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A400-TFF-DRAIN",
+          "kind": "asset"
+        },
+        {
+          "ref": "CIP-401",
+          "kind": "asset"
+        }
+      ],
+      "image": "cip"
+    },
+    {
+      "id": "A400-08",
+      "topic": "Provisional H-01 baseline — hybrid washing and contaminant endpoint",
+      "status": "Provisional baseline approved (D-A400-03) — H-01 open",
+      "reason": "FEED-PE-REP-036 showed that the basis every A-400 size was derived from — slurry pH 5 reached by water — needs 500–2,000 m³/h commercially and is not feasible; without a provisional basis A-400 could carry no sizing values or budget datasheets.",
+      "observation": "FEED-PE-NTE-013 V1.0 assesses the three configurations of A400-01 against REP-001, REP-007, REP-017 and REP-036 and records the baseline approved in review (H1–H5). H1: hybrid — counter-current displacement wash of a filterable cake at pH < 3 to Mn / K non-detect, re-slurry, membrane polish (TFF-401) and RO-401 recovery; standalone TFF rejected, VSEP retained only as a polish-membrane format; separator type open. H2: endpoint on contaminants with the buffer-signature stop rule, slurry pH monitored (3.5–4.2 expected), pH ≈ 5 only by neutralisation if A-500 needs it. H3: DBM V2.0 63.5 kg/h graphite, 91.7 kg/h TLGO. H4: 2.6–6.9 m³/h wash water (41–109 kg/kg graphite) against 71 m³/h in REP-001 / 007. D-A400-03 approves the technology baseline and the wash endpoint from NTE-013 — closing the technology-baseline and wash-endpoint conflicts and superseding the PFD pH ≈ 5 endpoint of D-A400-02 — and keeps the REP-001 contaminant targets with the pH element monitored. The water basis and rate enter as candidates; the D-A400-01 withdrawals stand. This answers the endpoint question of A400-03 (its D-A400-02 follow-up can be closed at the next data-layer ruling) and gives A400-01 / A400-02 a provisional basis, not a selection.",
+      "action": "Run M1 (titration), M3 (IC / ICP), M4 (cake displacement test) and M8 (flux) with the re-ruling triggers of NTE-013 §8; raise the MoC for the DBM A-400 requirement; re-issue REP-001 / REP-007 and MEB-007 V18; reconcile the A-300 separator (C-301 decanter vs the filter press assumed by REP-036); then issue the A-400 budget datasheets on H3 / H4.",
+      "discipline": "Process / R&D",
+      "evidence": [
+        {
+          "ref": "D-A400-03",
+          "kind": "decision"
+        },
+        {
+          "ref": "D-A400-01",
+          "kind": "decision"
+        },
+        {
+          "ref": "D-A400-02",
+          "kind": "decision"
+        },
+        {
+          "ref": "CF-technologyBaseline-TFF-401",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "CF-washEndpoint-TFF-401",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "GAP-A-400-DF-6550fax",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-400-DF-6c25b2",
+          "kind": "gap"
+        },
+        {
+          "ref": "PV-A-400-0153",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-400-0154",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-400-0155",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-400-0141",
+          "kind": "value"
+        },
+        {
+          "ref": "FEED-PE-NTE-013",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-REP-036",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-REP-017",
+          "kind": "document"
+        },
+        {
+          "ref": "TFF-401",
+          "kind": "asset"
+        }
+      ],
+      "image": "membrane"
+    },
+    {
+      "id": "A400-09",
+      "topic": "Equipment datasheets on the provisional baseline — T-402 in two options",
+      "status": "Preliminary datasheets issued — T-402 pressure mode open",
+      "reason": "With the provisional H-01 baseline (A400-08) the polish loop could be sized; T-402 had no design conditions, P-402 / P-403 no type or head, and MAT-002 M-031 writes T-402 as a 60 psi pressure-assisted vessel while the model shows a closed-vented tank.",
+      "observation": "FEED-PE-CAL-022 V1.0 sizes the loop on the bases approved in review (T1–T6): 91.7 kg/h TLGO → 82.5 kg/h at 1 wt % = 8.2 m³/h to T-501 (D-A500-02), continuous constant-level loop. FEED-PE-DAT-053: T-402 8.2 m³ working / 11 m³ in two options for comparison — A atmospheric closed-vented (+50 / −5 mbarg, ≈ 1.6 t, pump-set TMP) and B 60 psi pressure-assisted per MAT-002 M-031 (5.0 barg / full vacuum, ASME VIII, 8 mm governed by vacuum, ≈ 1.9 t, PSV, ≈ 11 Nm³ air per pressurisation, feed and make-up pumped against ≈ 42 m); steel mass is similar, the difference is code, relief, liner vacuum rating and the loop around it. FEED-PE-DAT-054: TFF-401 6.9 m³/h permeate, 173 m² required at 40 LMH, 220 m² installed, format open. FEED-PE-DAT-055: T-403 18 m³. FEED-PE-DAT-056 / 057: P-402 9 m³/h × 18 m at 1,000 mPa·s (low-shear), P-403 7.6 m³/h × 13 m. 114 candidate rows, none approved; nine A-400 missing-value gaps close. The two T-402 design pressures are carried as an open conflict so the choice is visible; datasheet values whose only contenders were values withdrawn by D-A400-01 are not counted as conflicts (opt-in harvester rule, no other area affected). RO-401, T-404 / P-404 / T-405 and the CIP-401 items remain unsized (identity holds).",
+      "action": "Select the T-402 pressure mode by decision (hold W6; Option A needs an MoC on the MAT-002 M-031 wording); measure slurry rheology (W2) and flux (W1, M8); register RO-401 and resolve the CIP-401 / MEB-007 tag conflict (W4) before sizing them.",
+      "discipline": "Process / mechanical",
+      "evidence": [
+        {
+          "ref": "FEED-PE-CAL-022",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-053",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-054",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-055",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-056",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-057",
+          "kind": "document"
+        },
+        {
+          "ref": "CF-designPressure-T-402",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "PV-A-400-0165",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-400-0167",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-400-0174",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-400-0197",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-400-0228",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-400-0255",
+          "kind": "value"
+        },
+        {
+          "ref": "D-A400-03",
+          "kind": "decision"
+        },
+        {
+          "ref": "T-402",
+          "kind": "asset"
+        },
+        {
+          "ref": "TFF-401",
+          "kind": "asset"
+        },
+        {
+          "ref": "T-403",
+          "kind": "asset"
+        },
+        {
+          "ref": "P-402",
+          "kind": "asset"
+        },
+        {
+          "ref": "P-403",
+          "kind": "asset"
+        }
+      ],
+      "image": "membrane"
+    }
+  ],
+  "checks": [
+    {
+      "command": "node tests/validate-a400-semantic.mjs",
+      "purpose": "A-400 record contract: populated design / operating fields carry approved, reviewer-initialled provenance",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "PASS: A-400 handoff, washing loop, product/CIP modes, distinct boundaries, missing-source evidence, unknown ratings and source-change guard.",
+      "ranAt": "2026-09-24T16:15:24.909Z"
+    },
+    {
+      "command": "node tests/validate-semantic-data.mjs",
+      "purpose": "data-layer invariants (registered sources, reviewer on approvals, conflict groups, identity holds)",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "{\"passed\":true,\"areas\":[{\"area\":\"A-100\",\"assets\":10,\"holds\":0,\"values\":310,\"approved\":10,\"conflicts\":2,\"variants\":12,\"gaps\":8},{\"area\":\"A-1000\",\"assets\":60,\"holds\":0,\"values\":293,\"approved\":22,\"conflicts\":3,\"variants\":19,\"gaps\":93},{\"area\":\"A-140\",\"assets\":17,\"holds\":0,\"values\":518,\"approved\":57,\"conflicts\":20,\"variants\":14,\"gaps\":32},{\"area\":\"A-160\",\"assets\":22,\"holds\":0,\"values\":319,\"approved\":13,\"conflicts\":6,\"variants\":11,\"gaps\":16},{\"area\":\"A-200\",\"assets\":67,\"holds\":0,\"values\":834,\"approved\":78,\"conflicts\":69,\"variants\":37,\"gaps\":145},{\"area\":\"A-2000\",\"assets\":49,\"holds\":0,\"values\":268,\"approved\":17,\"conflicts\":10,\"variants\":18,\"gaps\":76},{\"area\":\"A-300\",\"assets\":20,\"holds\":0,\"values\":302,\"approved\":25,\"conflicts\":13,\"variants\":17,\"gaps\":62},{\"area\":\"A-3000\",\"assets\":51,\"holds\":0,\"values\":337,\"approved\":13,\"conflicts\":3,\"variants\":11,\"gaps\":6},{\"area\":\"A-400\",\"assets\":23,\"holds\":0,\"values\":270,\"approved\":14,\"conflicts\":9,\"variants\":8,\"gaps\":39},{\"area\":\"A-4000\",\"assets\":11,\"holds\":0,\"values\":293,\"approved\":13,\"conflicts\":11,\"variants\":11,\"gaps\":13},{\"area\":\"A-500\",\"assets\":12,\"holds\":0,\"values\":102,\"approved\":18,\"conflicts\":5,\"variants\":5,\"gaps\":24},{\"area\":\"A-5000\",\"assets\":47,\"holds\":0,\"values\":476,\"approved\":16,\"conflicts\":10,\"variants\":10,\"gaps\":22},{\"area\":\"A-600\",\"assets\":31,\"holds\":0,\"values\":194,\"approved\":18,\"conflicts\":5,\"variants\":12,\"gaps\":22},{\"area\":\"A-6000\",\"assets\":6,\"holds\":0,\"values\":38,\"approved\":3,\"conflicts\":2,\"variants\":2,\"gaps\":5},{\"area\":\"A-700\",\"assets\":17,\"holds\":0,\"values\":433,\"approved\":39,\"conflicts\":5,\"variants\":7,\"gaps\":70},{\"area\":\"A-800\",\"assets\":25,\"holds\":0,\"values\":388,\"approved\":29,\"conflicts\":9,\"variants\":14,\"gaps\":32},{\"area\":\"A-900\",\"assets\":23,\"holds\":4,\"values\":243,\"approved\":20,\"conflicts\":11,\"variants\":11,\"gaps\":17}]}",
+      "ranAt": "2026-09-24T16:15:27.700Z"
+    },
+    {
+      "command": "node tests/validate-semantic-fields.mjs",
+      "purpose": "inspector field rendering of documented and applied values",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "PASS: documented pending and superseded values, alternatives, mixed units, missing values and identity holds.",
+      "ranAt": "2026-09-24T16:15:46.359Z"
+    }
+  ],
+  "decisions": [
+    {
+      "decisionId": "D-A400-MOC",
+      "assetPattern": "P-402|P-403|T-402|T-403|TFF-401",
+      "property": "design.materialOfConstruction",
+      "approvedSourceDocId": "FEED-PE-MAT-002",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-01",
+      "assetPattern": "TFF-401",
+      "property": "identity.technologyBaseline",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "FEED technology hold H-01 is active: VSEP i84 (REP-001 V1.1 / MEB-007), standalone spiral TFF (REP-007, reference only) and hybrid bulk separation + TFF polishing (REP-017, provisional) are all on record; MAT-002 M-029 (ceramic elements) and CAL-010 (PES/PVDF hollow fibre) assume different membranes. No technology approved; the model's MembranePackage class stays generic.",
+      "gapNote": "Hold H-01: bench tests of flux, c_max and fouling on actual A-300 quench cake at pH 2–4 (REP-007 / REP-017), then select the configuration; re-issue FEED-PE-MEB-007 (V18) on the DBM V2.0 basis (63.5 kg/h design) with one graphite rate, one wash-water basis and the F-402 / RO-401 / T-404 / P-404 / T-405 train either added to PFD-0400 and the model or removed; align CAL-010 tag (TFF-301) and MAT-002 M-029 membrane material with the selection."
+    },
+    {
+      "decisionId": "D-A400-01",
+      "assetPattern": "TFF-401",
+      "property": "design.membraneMaterial",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "See D-A400-01: membrane material follows the H-01 selection.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-01",
+      "assetPattern": "TFF-401",
+      "property": "design.designFluxLMH",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "72 LMH (MEB-007, REP-007) vs 78 LMH (CAL-010 pilot derating) — both technology- and basis-dependent under H-01.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-01",
+      "assetPattern": "TFF-401",
+      "property": "design.sustainedNetFluxLMH",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "See D-A400-01.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-01",
+      "assetPattern": "TFF-401",
+      "property": "operatingEnvelope.equivalentDiavolumes",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "36.84 (MEB-007) / 36.97 (REP-036 Batch002) / 284 (CAL-010 empirical) — REP-036 shows the pilot excess is cycle geometry and surface buffer, so the commercial DV depends on the H-01 configuration.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-01",
+      "assetPattern": "TFF-401",
+      "property": "operatingEnvelope.washWaterKgPerKgGraphite",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "887.5 (equivalent-DV) vs 7,088 (pilot) vs 7,691 (cost model): 8× spread; water basis unresolved (REP-017).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-01",
+      "assetPattern": "TFF-401",
+      "property": "design.installedModules",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "8 VSEP modules (MEB-007) vs 1 pilot module (CAL-010) vs 238 elements (REP-007): equipment count is frozen by H-01, not approved.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-01",
+      "assetPattern": "TFF-401",
+      "property": "design.modulesOnlineNPlus1",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "See D-A400-01.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-01",
+      "assetPattern": "TFF-401",
+      "property": "design.membraneAreaPerModuleM2",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "See D-A400-01.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-01",
+      "assetPattern": "TFF-401",
+      "property": "design.installedMembraneAreaM2",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "CAL-010 16.5 m² is a 10 kg pilot batch value.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-01",
+      "assetPattern": "TFF-401",
+      "property": "design.permeateDutyKgh",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "See D-A400-01: 50 / 80 kg/h basis conflict.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-01",
+      "assetPattern": "TFF-401",
+      "property": "design.recirculationFlowM3h",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "CAL-010 pilot basis.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-01",
+      "assetPattern": "TFF-401",
+      "property": "design.motorPowerKw",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "CAL-010 pilot basis.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-01",
+      "assetPattern": "TFF-401",
+      "property": "operatingEnvelope.filtrationHoursPerBatch",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "CAL-010 pilot basis.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-01",
+      "assetPattern": "P-402",
+      "property": "design.ratedFlowM3h",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "2,838 m³/h is the standalone-TFF reference case (REP-007), rejected as procurement basis by REP-017.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-01",
+      "assetPattern": "P-402",
+      "property": "design.motorPowerKw",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "363.8 kW (REP-007 reference case) vs 229.5 kW shaft (MEB-007) — configuration- and basis-dependent.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-01",
+      "assetPattern": "P-402|P-403|P-405",
+      "property": "design.shaftPowerKw",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "MEB-007 duties on the 50 / 80 kg/h basis; P-405 in MEB-007 is an RO concentrate pump, not the model's CIP pump.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-01",
+      "assetPattern": "T-402",
+      "property": "design.workingVolumeM3",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "V_R = 20 m³ is a screening input (MEB-007 VSEP model); CAL-010 3.2 m³ is a pilot batch value.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-01",
+      "assetPattern": "T-402",
+      "property": "design.totalVolumeM3",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "CAL-010 pilot basis; no commercial volume exists.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-01",
+      "assetPattern": "T-402",
+      "property": "design.insideDiameterM",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "CAL-010 pilot basis.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-01",
+      "assetPattern": "T-403",
+      "property": "design.totalVolumeM3",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "CAL-010 98.6 m³ is a pilot-batch permeate tank; no commercial volume exists.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-01",
+      "assetPattern": "T-403",
+      "property": "design.insideDiameterM",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "CAL-010 pilot basis.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-02",
+      "assetPattern": "TFF-401",
+      "property": "operatingEnvelope.washEndpoint",
+      "approvedSourceDocId": "FEED-PE-PFD-001",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "PFD sheet 0400 process notes: wash until permeate conductivity < 100–200 µS/cm and pH ≈ 5 — technology-independent endpoint.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-02",
+      "assetPattern": "TFF-401",
+      "property": "operatingEnvelope.washLiquorTargets",
+      "approvedSourceDocId": "FEED-PE-REP-001",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "REP-001 V1.1 Table 5: pH 5.0 ± 0.2, SO₄²⁻ ≤ 1 mg/L, Mn non-detect, conductivity < 10 µS/cm on the wash liquor. REP-036 caveat (pH 5 ≠ SO₄ 1 mg/L once the surface buffer dominates) carried in the note.",
+      "gapNote": "Reconcile the PFD endpoint (100–200 µS/cm) with the REP-001 wash-liquor target (< 10 µS/cm) and the REP-036 surface-buffer finding; decide whether pH 5 or sulphate is the release criterion (link to FEED-QA-SPC-001)."
+    },
+    {
+      "decisionId": "D-A400-02",
+      "assetPattern": "T-402",
+      "property": "operatingEnvelope.feedPH",
+      "approvedSourceDocId": "FEED-PE-MEB-007",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "pH 1 feed from the A-300 acid wash (MEB-007; REP-007; PP-NTE-001). REP-036 carries pH 0–1 as the range.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-02",
+      "assetPattern": "T-402",
+      "property": "operatingEnvelope.targetPH",
+      "approvedSourceDocId": "FEED-PE-MEB-007",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "pH 5 washed product (MEB-007 AGEIAS DB §2.1; all documents agree).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-02",
+      "assetPattern": "TFF-401",
+      "property": "operatingEnvelope.membraneTemperatureLimits",
+      "approvedSourceDocId": "FEED-PE-REP-036",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Synder V0.2 limits 25 °C at pH < 2, 50 °C above (REP-036 citing REP-007) — applies to the polymeric options; ceramic option unaffected.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-02",
+      "assetPattern": "TFF-401",
+      "property": "design.operatingPhilosophy",
+      "approvedSourceDocId": "FEED-PE-PFD-001",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "PFD TFF-401 design notes: low-TMP operation to avoid compressible cake; CIP / flush connections.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-02",
+      "assetPattern": "T-402|TFF-401",
+      "property": "operatingEnvelope.operatingMode",
+      "approvedSourceDocId": "FEED-PE-DBM-001",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "DBM V2.0 §3.4: A-400 onward continuous / semi-continuous at design rates with surge at T-501.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-03",
+      "assetPattern": "TFF-401",
+      "property": "identity.technologyBaseline",
+      "approvedSourceDocId": "FEED-PE-NTE-013",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-23",
+      "rationale": "Provisional baseline H1 (FEED-PE-NTE-013): hybrid — cake displacement wash at pH < 3 + membrane polish + RO recovery; standalone TFF (O2) rejected, VSEP (O1) retained only as a polish-membrane format. H-01 stays open (M1, M3, M4, M8).",
+      "gapNote": "MoC per FEED-GV-SOP-010: rewrite the DBM A-400 requirement on contaminants; re-issue FEED-PE-REP-001 / REP-007 on the H1–H4 basis and FEED-PE-MEB-007 V18 on DBM V2.0 after M1–M4 (NTE-013 §7–8)."
+    },
+    {
+      "decisionId": "D-A400-03",
+      "assetPattern": "TFF-401",
+      "property": "operatingEnvelope.washEndpoint",
+      "approvedSourceDocId": "FEED-PE-NTE-013",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-23",
+      "rationale": "H2: endpoint on contaminants with the buffer-signature stop rule; slurry pH monitored (3.5–4.2 expected); pH 5 only by neutralisation if A-500 requires it (REP-036 §11). Supersedes the PFD pH ≈ 5 endpoint approved in D-A400-02.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A400-03",
+      "assetPattern": "TFF-401",
+      "property": "operatingEnvelope.washLiquorTargets",
+      "approvedSourceDocId": "FEED-PE-REP-001",
+      "approvedValue": "SO₄²⁻ ≤ 1 mg/L, Mn non-detect, conductivity < 10 µS/cm on the wash liquor; slurry pH monitored, not a pass/fail criterion (FEED-PE-NTE-013 H2)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-23",
+      "rationale": "REP-001 V1.1 Table 5 contaminant targets kept; the pH 5.0 ± 0.2 element becomes a monitored variable (NTE-013 H2, REP-036 §11).",
+      "gapNote": ""
+    }
+  ],
+  "approvedValues": [
+    {
+      "valueId": "PV-A-400-0083",
+      "assetId": "TFF-401",
+      "property": "design.materialOfConstruction",
+      "value": "PVDF- or PP-lined construction, or dual-laminate FRP",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 34 (M-030)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "WV-materialOfConstruc-TFF-401",
+      "resolves": [
+        "FEED-PE-MDL-001: PVDF/PP membrane housings/manifolds and pressure-rated thermoplastic piping where allowed; PTFE/EPDM seals. Use 316L SS only for high-pressure/structural sections; upgrade to duplex/904L only if chloride/pitting assessment requires."
+      ]
+    },
+    {
+      "valueId": "PV-A-400-0085",
+      "assetId": "T-402",
+      "property": "design.materialOfConstruction",
+      "value": "PVDF- or PFA-lined carbon-steel pressure vessel",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 35 (M-031)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-T-402",
+      "resolves": [
+        "FEED-PE-MDL-001: Vinyl-ester FRP vessel/tank with abrasion-resistant corrosion barrier and PVDF/PTFE wetted trim; if the tank can be kept atmospheric, XLPE/HDPE is the lower-cost option. Use 904L only if pressure, temperature or nozzle loads rule out nonmetallic construction."
+      ]
+    },
+    {
+      "valueId": "PV-A-400-0087",
+      "assetId": "P-402",
+      "property": "design.materialOfConstruction",
+      "value": "PVDF- or ETFE-lined sealless centrifugal, or all-PVDF; SiC bearings",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 36 (M-032)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "WV-materialOfConstruc-P-402",
+      "resolves": [
+        "FEED-PE-MDL-001: PVDF/PFA-lined crossflow slurry pump; SiC seal faces/bearings; PTFE seals and abrasion-resistant wear components. Use C-276 only if corrosion testing/vendor data demonstrates it is required."
+      ]
+    },
+    {
+      "valueId": "PV-A-400-0093",
+      "assetId": "T-403",
+      "property": "design.materialOfConstruction",
+      "value": "HDPE, PP, PVDF or dual-laminate FRP tank; all-PVDF or PVDF-lined pump",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 38 (M-034)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "WV-materialOfConstruc-T-403",
+      "resolves": [
+        "FEED-PE-MDL-001: XLPE/HDPE tank preferred for ambient atmospheric permeate equalization; PP/PVDF fittings and EPDM/PTFE seals. Use FRP only if size/temperature/structural requirements exceed molded-PE limits."
+      ]
+    },
+    {
+      "valueId": "PV-A-400-0095",
+      "assetId": "P-403",
+      "property": "design.materialOfConstruction",
+      "value": "HDPE, PP, PVDF or dual-laminate FRP tank; all-PVDF or PVDF-lined pump",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "'Selection Matrix'!row 38 (M-034)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-P-403",
+      "resolves": [
+        "FEED-PE-MDL-001: PVDF wetted pump; SiC seal faces; PTFE gaskets."
+      ]
+    },
+    {
+      "valueId": "PV-A-400-0116",
+      "assetId": "T-402",
+      "property": "operatingEnvelope.feedPH",
+      "value": "1.0",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MEB-007",
+      "sourceRevision": "V17.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 25 (pH_start)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-400-0117",
+      "assetId": "T-402",
+      "property": "operatingEnvelope.targetPH",
+      "value": "5.0",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MEB-007",
+      "sourceRevision": "V17.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 26 (pH_target)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-400-0137",
+      "assetId": "TFF-401",
+      "property": "design.operatingPhilosophy",
+      "value": "Low transmembrane pressure operation to avoid compressible cake formation; CIP / flush connections; skid includes CIP capability",
+      "unit": "",
+      "sourceDocId": "FEED-PE-PFD-001",
+      "sourceRevision": "V5.1.1",
+      "sourceLocation": "FEED-PFD-0400, PDF p.9 TFF-401 Design Notes / General Note 2",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-400-0138",
+      "assetId": "T-402",
+      "property": "operatingEnvelope.operatingMode",
+      "value": "A-400 onward continuous or semi-continuous at the design rates of Table 3.3-1, with surge/hold at the batch-to-continuous boundary (T-501)",
+      "unit": "",
+      "sourceDocId": "FEED-PE-DBM-001",
+      "sourceRevision": "V2.0",
+      "sourceLocation": "§3.4 batch structure",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-400-0139",
+      "assetId": "TFF-401",
+      "property": "operatingEnvelope.operatingMode",
+      "value": "A-400 onward continuous or semi-continuous at the design rates of Table 3.3-1, with surge/hold at the batch-to-continuous boundary (T-501)",
+      "unit": "",
+      "sourceDocId": "FEED-PE-DBM-001",
+      "sourceRevision": "V2.0",
+      "sourceLocation": "§3.4 batch structure",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-400-0141",
+      "assetId": "TFF-401",
+      "property": "operatingEnvelope.washLiquorTargets",
+      "value": "SO₄²⁻ ≤ 1 mg/L, Mn non-detect, conductivity < 10 µS/cm on the wash liquor; slurry pH monitored, not a pass/fail criterion (FEED-PE-NTE-013 H2)",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-001",
+      "sourceRevision": "V1.1",
+      "sourceLocation": "Table 5 ionic impurity balance (V1.1 addition)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-23",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-400-0146",
+      "assetId": "TFF-401",
+      "property": "operatingEnvelope.membraneTemperatureLimits",
+      "value": "Synder V0.2: 25 °C at pH < 2, 50 °C above pH 2",
+      "unit": "°C",
+      "sourceDocId": "FEED-PE-REP-036",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Membrane basis row (citing REP-007)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-400-0153",
+      "assetId": "TFF-401",
+      "property": "identity.technologyBaseline",
+      "value": "Hybrid (provisional; H-01 open): counter-current displacement wash of a filterable TLGO cake at pH < 3 to Mn / K non-detect, re-slurry, membrane polish (TFF-401; spiral or VSEP format open) and RO-401 permeate recovery; bulk-separator type open (M4). Standalone TFF rejected.",
+      "unit": "",
+      "sourceDocId": "FEED-PE-NTE-013",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "§5 H1",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-23",
+      "held": false,
+      "conflictGroup": "CF-technologyBaseline-TFF-401",
+      "resolves": [
+        "FEED-PE-REP-001: New Logic Research VSEP i84 vibratory-shear membrane for the GO-containing wash / diafiltration section; spiral RO (RO-401) only for permeate recycle / polishing after prefiltration",
+        "FEED-PE-REP-007: Standalone spiral-wound TFF reference case: 238 Synder V0.2-5-8040HF elements (16.54 m² each, A_eff 981 m²) in 119 dual-element housings; technically buildable but uncompetitive; hold H-01 remains active",
+        "FEED-PE-REP-017: Hybrid: low-pH bulk mechanical separation (decanter / disc-stack or filter press — not frozen) followed by TFF polishing and controlled water recovery — ADOPT as provisional FEED basis; standalone TFF REJECTED as procurement basis"
+      ]
+    },
+    {
+      "valueId": "PV-A-400-0154",
+      "assetId": "TFF-401",
+      "property": "operatingEnvelope.washEndpoint",
+      "value": "Contaminant endpoint: SO₄²⁻ ≤ 1 mg/L, Mn non-detect, K⁺ / Cl⁻ per product specification, permeate-conductivity trend and buffer signature (permeate pH = tank pH for three cycles); slurry pH monitored (3.5–4.2 expected), not specified; pH ≈ 5 only by controlled neutralisation if A-500 requires it",
+      "unit": "",
+      "sourceDocId": "FEED-PE-NTE-013",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "§5 H2",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-23",
+      "held": false,
+      "conflictGroup": "CF-washEndpoint-TFF-401",
+      "resolves": [
+        "FEED-PE-PFD-001: Wash until permeate conductivity < 100–200 µS/cm and pH ≈ 5 meet downstream spec; multiple diafiltration cycles may be required"
+      ]
+    }
+  ],
+  "openConflicts": [
+    {
+      "conflictGroup": "CF-designFluxLMH-TFF-401",
+      "assetId": "TFF-401",
+      "property": "design.designFluxLMH",
+      "alternatives": [
+        {
+          "valueId": "PV-A-400-0097",
+          "value": "72.0",
+          "unit": "LMH",
+          "sourceDocId": "FEED-PE-MEB-007",
+          "sourceLocation": "'Design Basis & Inputs'!row 24 (J_TFF)"
+        },
+        {
+          "valueId": "PV-A-400-0126",
+          "value": "78.0",
+          "unit": "LMH",
+          "sourceDocId": "FEED-PE-CAL-010",
+          "sourceLocation": "'Results_Summary'!row 16 (J_des)"
+        },
+        {
+          "valueId": "PV-A-400-0145",
+          "value": "72 (PTM V34 reconciliation; up from the pilot-anchored 36 LMH)",
+          "unit": "LMH",
+          "sourceDocId": "FEED-PE-REP-007",
+          "sourceLocation": "§ diafiltration basis"
+        },
+        {
+          "valueId": "PV-A-400-0195",
+          "value": "40",
+          "unit": "LMH",
+          "sourceDocId": "FEED-PE-DAT-054",
+          "sourceLocation": "'TFF-401 Datasheet'!row 21 (item 3.1)"
+        }
+      ]
+    },
+    {
+      "conflictGroup": "CF-equivalentDiavolum-TFF-401",
+      "assetId": "TFF-401",
+      "property": "operatingEnvelope.equivalentDiavolumes",
+      "alternatives": [
+        {
+          "valueId": "PV-A-400-0099",
+          "value": "36.84",
+          "unit": "DV",
+          "sourceDocId": "FEED-PE-MEB-007",
+          "sourceLocation": "'Design Basis & Inputs'!row 29 (N_actual)"
+        },
+        {
+          "valueId": "PV-A-400-0127",
+          "value": "284.088",
+          "unit": "DV",
+          "sourceDocId": "FEED-PE-CAL-010",
+          "sourceLocation": "'Results_Summary'!row 18 (DV_eq)"
+        },
+        {
+          "valueId": "PV-A-400-0151",
+          "value": "36.97 back-calculated from Batch002 (≈ 20–25× cycle geometry, 2–4× Donnan, 1.5–2× fouling, 1.2–1.5× mixing); φ_DF = 4 assumed in REP-001/007 for continuous commercial",
+          "unit": "DV",
+          "sourceDocId": "FEED-PE-REP-036",
+          "sourceLocation": "basis table"
+        }
+      ]
+    },
+    {
+      "conflictGroup": "CF-washWaterKgPerKgGr-TFF-401",
+      "assetId": "TFF-401",
+      "property": "operatingEnvelope.washWaterKgPerKgGraphite",
+      "alternatives": [
+        {
+          "valueId": "PV-A-400-0100",
+          "value": "887.5",
+          "unit": "kg/kg graphite",
+          "sourceDocId": "FEED-PE-MEB-007",
+          "sourceLocation": "'Design Basis & Inputs'!row 32 (R_wash)"
+        },
+        {
+          "valueId": "PV-A-400-0128",
+          "value": "7088.0",
+          "unit": "kg/kg graphite",
+          "sourceDocId": "FEED-PE-CAL-010",
+          "sourceLocation": "'Results_Summary'!row 19 (R_wash)"
+        },
+        {
+          "valueId": "PV-A-400-0149",
+          "value": "7,691 (master cost model, several washing stages) ≈ 7,088 pilot ratio — water basis unresolved",
+          "unit": "kg/kg graphite",
+          "sourceDocId": "FEED-PE-REP-017",
+          "sourceLocation": "Findings (water basis)"
+        }
+      ]
+    },
+    {
+      "conflictGroup": "CF-installedModules-TFF-401",
+      "assetId": "TFF-401",
+      "property": "design.installedModules",
+      "alternatives": [
+        {
+          "valueId": "PV-A-400-0103",
+          "value": "8.0",
+          "unit": "modules",
+          "sourceDocId": "FEED-PE-MEB-007",
+          "sourceLocation": "'VSEP 84 Model'!row 31 (n_inst)"
+        },
+        {
+          "valueId": "PV-A-400-0125",
+          "value": "1.0",
+          "unit": "modules",
+          "sourceDocId": "FEED-PE-CAL-010",
+          "sourceLocation": "'Results_Summary'!row 14 (N_mod)"
+        }
+      ]
+    },
+    {
+      "conflictGroup": "CF-designPressure-T-402",
+      "assetId": "T-402",
+      "property": "design.designPressure",
+      "alternatives": [
+        {
+          "valueId": "PV-A-400-0167",
+          "value": "+50 / −5 mbarg",
+          "unit": "",
+          "sourceDocId": "FEED-PE-DAT-053",
+          "sourceLocation": "'T-402 Datasheet'!row 25 (item 4.1)"
+        },
+        {
+          "valueId": "PV-A-400-0174",
+          "value": "5.0 barg / full vacuum",
+          "unit": "",
+          "sourceDocId": "FEED-PE-DAT-053",
+          "sourceLocation": "'T-402 Datasheet'!row 33 (item 5.1)"
+        }
+      ]
+    }
+  ],
+  "identityHolds": [],
+  "gaps": [
+    {
+      "gapId": "GAP-A-400-MV-114d2b",
+      "assetId": "TK-405",
+      "kind": "missing value",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-400-MV-1eeb0c",
+      "assetId": "TK-405",
+      "kind": "missing value",
+      "subject": "design.designPressure",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-400-MV-6c811f",
+      "assetId": "TK-405",
+      "kind": "missing value",
+      "subject": "design.designTemperature",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-400-MV-f8f30d",
+      "assetId": "TK-405",
+      "kind": "missing value",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-400-MV-0b6ef4",
+      "assetId": "P-405",
+      "kind": "missing value",
+      "subject": "design.pumpType",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-400-MV-23d29f",
+      "assetId": "P-405",
+      "kind": "missing value",
+      "subject": "design.ratedFlowM3h",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-400-MV-201032",
+      "assetId": "P-405",
+      "kind": "missing value",
+      "subject": "design.differentialHead",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-400-MV-d410d5",
+      "assetId": "P-405",
+      "kind": "missing value",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-400-MV-b0edc5",
+      "assetId": "T-404",
+      "kind": "missing value",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-400-MV-bc149b",
+      "assetId": "T-404",
+      "kind": "missing value",
+      "subject": "design.designPressure",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-400-MV-c2504e",
+      "assetId": "T-404",
+      "kind": "missing value",
+      "subject": "design.designTemperature",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-400-MV-b4712a",
+      "assetId": "T-404",
+      "kind": "missing value",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-400-MV-936d89",
+      "assetId": "P-404",
+      "kind": "missing value",
+      "subject": "design.pumpType",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-400-MV-a87260",
+      "assetId": "P-404",
+      "kind": "missing value",
+      "subject": "design.ratedFlowM3h",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-400-MV-635cdc",
+      "assetId": "P-404",
+      "kind": "missing value",
+      "subject": "design.differentialHead",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-400-MV-5cd5ab",
+      "assetId": "P-404",
+      "kind": "missing value",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-400-MV-8d45ca",
+      "assetId": "T-405",
+      "kind": "missing value",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-400-MV-2a4879",
+      "assetId": "T-405",
+      "kind": "missing value",
+      "subject": "design.designPressure",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-400-MV-70d08c",
+      "assetId": "T-405",
+      "kind": "missing value",
+      "subject": "design.designTemperature",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-400-MV-22df8a",
+      "assetId": "T-405",
+      "kind": "missing value",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-400-CF-398caa",
+      "assetId": "T-402",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-T-402"
+    },
+    {
+      "gapId": "GAP-A-400-CF-a00f9b",
+      "assetId": "P-403",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-P-403"
+    },
+    {
+      "gapId": "GAP-A-400-CF-350858",
+      "assetId": "TFF-401",
+      "kind": "conflict",
+      "subject": "design.designFluxLMH",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-CAL-010, FEED-PE-DAT-054, FEED-PE-MEB-007, FEED-PE-REP-007",
+      "status": "open",
+      "note": "CF-designFluxLMH-TFF-401"
+    },
+    {
+      "gapId": "GAP-A-400-CF-d20eb2",
+      "assetId": "TFF-401",
+      "kind": "conflict",
+      "subject": "operatingEnvelope.equivalentDiavolumes",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-CAL-010, FEED-PE-MEB-007, FEED-PE-REP-036",
+      "status": "open",
+      "note": "CF-equivalentDiavolum-TFF-401"
+    },
+    {
+      "gapId": "GAP-A-400-CF-08bb0f",
+      "assetId": "TFF-401",
+      "kind": "conflict",
+      "subject": "operatingEnvelope.washWaterKgPerKgGraphite",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-CAL-010, FEED-PE-MEB-007, FEED-PE-REP-017",
+      "status": "open",
+      "note": "CF-washWaterKgPerKgGr-TFF-401"
+    },
+    {
+      "gapId": "GAP-A-400-CF-f7cb92",
+      "assetId": "TFF-401",
+      "kind": "conflict",
+      "subject": "design.installedModules",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-CAL-010, FEED-PE-MEB-007",
+      "status": "open",
+      "note": "CF-installedModules-TFF-401"
+    },
+    {
+      "gapId": "GAP-A-400-CF-19b9de",
+      "assetId": "TFF-401",
+      "kind": "conflict",
+      "subject": "operatingEnvelope.washEndpoint",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-NTE-013, FEED-PE-PFD-001",
+      "status": "closed — FEED-PE-NTE-013 approved by QFL 2026-09-23",
+      "note": "CF-washEndpoint-TFF-401"
+    },
+    {
+      "gapId": "GAP-A-400-CF-6abc04",
+      "assetId": "TFF-401",
+      "kind": "conflict",
+      "subject": "identity.technologyBaseline",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-NTE-013, FEED-PE-REP-001, FEED-PE-REP-007, FEED-PE-REP-017",
+      "status": "closed — FEED-PE-NTE-013 approved by QFL 2026-09-23",
+      "note": "CF-technologyBaseline-TFF-401"
+    },
+    {
+      "gapId": "GAP-A-400-CF-3ac46c",
+      "assetId": "T-402",
+      "kind": "conflict",
+      "subject": "design.designPressure",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-DAT-053",
+      "status": "open",
+      "note": "CF-designPressure-T-402"
+    },
+    {
+      "gapId": "GAP-A-400-DF-6550fa",
+      "assetId": "TFF-401",
+      "kind": "decision follow-up",
+      "subject": "identity.technologyBaseline",
+      "requiredSource": "Hold H-01: bench tests of flux, c_max and fouling on actual A-300 quench cake at pH 2–4 (REP-007 / REP-017), then select the configuration; re-issue FEED-PE-MEB-007 (V18) on the DBM V2.0 basis (63.5 kg/h design) with one graphite rate, one wash-water basis and the F-402 / RO-401 / T-404 / P-404 / T-405 train either added to PFD-0400 and the model or removed; align CAL-010 tag (TFF-301) and MAT-002 M-029 membrane material with the selection.",
+      "status": "open",
+      "note": "D-A400-01"
+    },
+    {
+      "gapId": "GAP-A-400-DF-6c25b2",
+      "assetId": "TFF-401",
+      "kind": "decision follow-up",
+      "subject": "operatingEnvelope.washLiquorTargets",
+      "requiredSource": "Reconcile the PFD endpoint (100–200 µS/cm) with the REP-001 wash-liquor target (< 10 µS/cm) and the REP-036 surface-buffer finding; decide whether pH 5 or sulphate is the release criterion (link to FEED-QA-SPC-001).",
+      "status": "open",
+      "note": "D-A400-02"
+    },
+    {
+      "gapId": "GAP-A-400-DF-6550fax",
+      "assetId": "TFF-401",
+      "kind": "decision follow-up",
+      "subject": "identity.technologyBaseline",
+      "requiredSource": "MoC per FEED-GV-SOP-010: rewrite the DBM A-400 requirement on contaminants; re-issue FEED-PE-REP-001 / REP-007 on the H1–H4 basis and FEED-PE-MEB-007 V18 on DBM V2.0 after M1–M4 (NTE-013 §7–8).",
+      "status": "open",
+      "note": "D-A400-03"
+    },
+    {
+      "gapId": "GAP-A-400-ID-c86523",
+      "assetId": "A-400 technology (hold H-01)",
+      "kind": "identity / naming conflict",
+      "subject": "VSEP i84 baseline, 8 × 120 m² modules, 6 operating + 1 standby (REP-001 V1.1, MEB-007 VSEP model)",
+      "requiredSource": "Standalone spiral TFF 238 Synder elements (REP-007, reference only) / hybrid bulk separation + TFF polishing (REP-017 ADOPT provisional); MAT-002 M-029 specifies ceramic TiO₂/ZrO₂ elements; CAL-010 assumes PES/PVDF hollow fibre",
+      "status": "open",
+      "note": "Four technology statements across five controlled documents; FEED hold H-01 active — no equipment count or purchase freeze"
+    },
+    {
+      "gapId": "GAP-A-400-ID-416fcd",
+      "assetId": "A-400 graphite basis",
+      "kind": "identity / naming conflict",
+      "subject": "50 kg/h (MEB-007 Design Basis C5; CAL-010 is a 10 kg pilot batch)",
+      "requiredSource": "80 kg/h 'selected live case' (MEB-007 Decision Summary, REP-001, REP-007); DBM V2.0 design 63.5 kg/h",
+      "status": "open",
+      "note": "Three rates; MOC-001 requires realignment to DBM V2.0"
+    },
+    {
+      "gapId": "GAP-A-400-ID-e6f5d3",
+      "assetId": "Wash water basis",
+      "kind": "identity / naming conflict",
+      "subject": "887.5 kg/kg graphite equivalent-DV (MEB-007 DB C32)",
+      "requiredSource": "7,088 pilot ratio (MEB-007 VSEP C23, CAL-010); 7,691 master cost model (REP-017); 36.97 equivalent DV (PP-NTE-001 / REP-036)",
+      "status": "open",
+      "note": "8× spread; REP-036 attributes most of the pilot excess to cycle geometry and surface buffer, not to membrane area"
+    },
+    {
+      "gapId": "GAP-A-400-ID-7ff24d",
+      "assetId": "P-405 / TK-405 identity",
+      "kind": "identity / naming conflict",
+      "subject": "Model: CIP-401 cleaning package with TK-405 cleaning solution tank and P-405 cleaning circulation pump",
+      "requiredSource": "MEB-007: T-405 RO concentrate tank and P-405 RO concentrate pump to WWT",
+      "status": "open",
+      "note": "Same tag numbers, different equipment"
+    },
+    {
+      "gapId": "GAP-A-400-ID-2e83c3",
+      "assetId": "F-402 / RO-401 / T-404 / P-404",
+      "kind": "identity / naming conflict",
+      "subject": "Not on FEED-PFD-0400 / LST-001 and not in the model",
+      "requiredSource": "MEB-007 mass and energy tables carry F-402 (RO pretreatment filter), RO-401, T-404, P-404 (recycled water)",
+      "status": "open",
+      "note": "Permeate polishing / recycle train exists only in the stream table"
+    },
+    {
+      "gapId": "GAP-A-400-ID-95d241",
+      "assetId": "TFF-401 tag",
+      "kind": "identity / naming conflict",
+      "subject": "TFF-401 (PFD, LST-001, model)",
+      "requiredSource": "TFF-301 (TBD) in FEED-PE-CAL-010 Inputs",
+      "status": "open",
+      "note": "Calc sheet tag not aligned"
+    },
+    {
+      "gapId": "GAP-A-400-ID-bebb70",
+      "assetId": "T-402 duty",
+      "kind": "identity / naming conflict",
+      "subject": "TLGO Diafiltration Tank (LST-001); pressure-assisted to 60 … PVDF/PFA-lined CS pressure vessel (MAT-002 M-031)",
+      "requiredSource": "Retentate tank 3.2 m³ on a 10 kg pilot batch (CAL-010); V_R 20 m³ screening input (MEB-007 VSEP C25)",
+      "status": "open",
+      "note": "No commercial-basis volume exists; pressure-vessel status per MAT-002 not reflected on PFD"
+    }
+  ],
+  "inventory": [
+    {
+      "tag": "T-402",
+      "name": "Diafiltration tank · 30 m³ nominal",
+      "modelEquipmentId": 32,
+      "operation": "tff",
+      "parts": 953,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 4,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "TFF-401",
+      "name": "VSEP · eight 84-inch filter packs",
+      "modelEquipmentId": 33,
+      "operation": "tff",
+      "parts": 4849,
+      "designStatus": "proposed",
+      "inRegister": "yes",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 6,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "T-403",
+      "name": "Permeate buffer · 65 m³ nominal",
+      "modelEquipmentId": 34,
+      "operation": "tff",
+      "parts": 371,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "BL-A400",
+      "name": "Washing utilities / wastewater interface",
+      "modelEquipmentId": 35,
+      "operation": "tff",
+      "parts": 228,
+      "designStatus": "interface",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "CIP-401",
+      "name": "VSEP cleaning package",
+      "modelEquipmentId": 124,
+      "operation": "tff",
+      "parts": 289,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "BND-401",
+      "name": "T-402 / VSEP connected washing loop · 50.6 m³ retention",
+      "modelEquipmentId": 176,
+      "operation": "containment-A-400",
+      "parts": 651,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "BND-403",
+      "name": "Permeate · acidity and residual oxidizer unverified · 86.2 m³ retention",
+      "modelEquipmentId": 178,
+      "operation": "containment-A-400",
+      "parts": 308,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "BND-404",
+      "name": "CIP chemicals / spent cleaning liquor · separate from process · 10.3 m³ retention",
+      "modelEquipmentId": 179,
+      "operation": "containment-A-400",
+      "parts": 243,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "ES-401",
+      "name": "Proposed emergency shower / eyewash",
+      "modelEquipmentId": 197,
+      "operation": "containment-A-400",
+      "parts": 17,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model station tag; plant tag approval open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "FE-401",
+      "name": "Washing rear access · fire point",
+      "modelEquipmentId": 120401,
+      "operation": "fire-safety",
+      "parts": 41,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "FE-402",
+      "name": "Washing front access · fire point",
+      "modelEquipmentId": 120402,
+      "operation": "fire-safety",
+      "parts": 41,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "ES-400-09",
+      "name": "Proposed emergency shower / eyewash",
+      "modelEquipmentId": 122009,
+      "operation": "containment-A-400",
+      "parts": 17,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model station tag; plant tag approval open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "ES-400-14",
+      "name": "Proposed emergency shower / eyewash",
+      "modelEquipmentId": 122014,
+      "operation": "containment-A-400",
+      "parts": 17,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model station tag; plant tag approval open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "ES-400-18",
+      "name": "Proposed emergency shower / eyewash",
+      "modelEquipmentId": 122018,
+      "operation": "containment-A-400",
+      "parts": 17,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model station tag; plant tag approval open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "P-402",
+      "name": "TFF circulation / product transfer",
+      "modelEquipmentId": 1126940496,
+      "operation": "tff",
+      "parts": 259,
+      "designStatus": "proposed",
+      "inRegister": "yes",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "P-403",
+      "name": "Permeate disposal",
+      "modelEquipmentId": 1143718115,
+      "operation": "tff",
+      "parts": 242,
+      "designStatus": "proposed",
+      "inRegister": "yes",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "P-405",
+      "name": "CIP circulation",
+      "modelEquipmentId": 1244383829,
+      "operation": "tff",
+      "parts": 242,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "TK-405",
+      "name": "Cleaning solution tank within CIP-401",
+      "modelEquipmentId": "124",
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A400-DRAIN",
+      "name": "Washing low-point closed drain boundary",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A400-TFF-DRAIN",
+      "name": "Membrane module drain boundary",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A400-T402-VENT",
+      "name": "Washing tank closed vent boundary",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A400-T403-VENT",
+      "name": "Permeate tank closed vent boundary",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A400-TFF-VENT",
+      "name": "Membrane package vent boundary",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "F-402",
+      "name": "TFF permeate dry-solids capture / RO pretreatment filter (MEB-007; not on PFD or in model)",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "candidate-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    },
+    {
+      "tag": "RO-401",
+      "name": "Spiral RO for VSEP/TFF permeate recycle and polishing (REP-001 baseline; MEB-007)",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "candidate-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    },
+    {
+      "tag": "T-404",
+      "name": "Recycled water tank feeding T-402 (MEB-007 P-404 basis)",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "candidate-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    },
+    {
+      "tag": "P-404",
+      "name": "Recycled water pump T-404 → T-402 (MEB-007)",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "candidate-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    },
+    {
+      "tag": "T-405",
+      "name": "RO concentrate tank to WWT (MEB-007) — model TK-405 is a CIP solution tank",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "candidate-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    }
+  ],
+  "documents": [
+    {
+      "documentId": "FEED-PE-LST-001",
+      "title": "Equipment and Stream Register",
+      "revision": "V5.1",
+      "docType": "LST",
+      "control": "controlled",
+      "tier": "A",
+      "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-LST-001_Equipment-and-Stream-Register_V5.1.xlsx",
+      "valueRows": "10"
+    },
+    {
+      "documentId": "FEED-PE-PFD-001",
+      "title": "Process Flow Diagram",
+      "revision": "V5.1.1",
+      "docType": "PFD",
+      "control": "controlled (Draft - IFR)",
+      "tier": "A",
+      "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-PFD-001_Process-Flow-Diagram_V5.1.1.pdf",
+      "valueRows": "2"
+    },
+    {
+      "documentId": "FEED-PE-LST-007",
+      "title": "Control and Instrumentation Loop Register",
+      "revision": "V1.0",
+      "docType": "LST",
+      "control": "controlled (conceptual)",
+      "tier": "A",
+      "file": "7 Piping and Instrumentation Diagrams (P&IDs)\\FEED-PE-LST-007_Control-and-Instrumentation-Loop-Register_V1.0.xlsx",
+      "valueRows": "20"
+    },
+    {
+      "documentId": "FEED-PE-MDL-001",
+      "title": "Equipment Scale-Up Study",
+      "revision": "V1.8",
+      "docType": "MDL",
+      "control": "controlled",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\FEED-PE-MDL-001_Equipment-Scale-Up-Study_V1.8.xlsx",
+      "valueRows": "50"
+    },
+    {
+      "documentId": "FEED-PE-MAT-002",
+      "title": "MOC Selection Matrix",
+      "revision": "V1.1",
+      "docType": "MAT",
+      "control": "controlled",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.1.xlsx",
+      "valueRows": "16"
+    },
+    {
+      "documentId": "FEED-PE-DBM-001",
+      "title": "Design Basis Memorandum",
+      "revision": "V2.0",
+      "docType": "DBM",
+      "control": "controlled (approved)",
+      "tier": "B",
+      "file": "3 Design Basis Memorandum (DBM)\\FEED-PE-DBM-001_Design-Basis-Memorandum_V2.0.docx",
+      "valueRows": "2"
+    },
+    {
+      "documentId": "MODEL",
+      "title": "rGO Process Explorer model and semantic core",
+      "revision": "semantic v1",
+      "docType": "MODEL",
+      "control": "model evidence only",
+      "tier": "A",
+      "file": "dist/semantic/v1 (scripts/generate-reactor-semantic.mjs, scripts/expand-*-semantic.mjs)",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-MEB-007",
+      "title": "A-400 TLGO Washing Stream Table (design basis, VSEP 84 model, energy table, decision summary)",
+      "revision": "V17.0",
+      "docType": "MEB",
+      "control": "controlled",
+      "tier": "A",
+      "file": "5 Mass and Energy Balances\\3 - FEED MEB Calculations\\FEED-PE-MEB-007_A-400-TLGO-Washing-Stream-Table_V17.0.xlsx",
+      "valueRows": "27"
+    },
+    {
+      "documentId": "FEED-PE-CAL-010",
+      "title": "TFF-401 Design Calculations (pilot 10 kg graphite batch basis)",
+      "revision": "V11.0",
+      "docType": "CAL",
+      "control": "controlled",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\4 - Equipment Calculation (CAL) Sheets\\FEED-PE-CAL-010_TFF-401-Design-Calculations_V11.0.xlsx",
+      "valueRows": "12"
+    },
+    {
+      "documentId": "FEED-PE-REP-001",
+      "title": "A-400 Membrane Washing System Selection Report",
+      "revision": "V1.1",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-001_A-400-Membrane-Washing-System-Selection-Report_V1.1.docx",
+      "valueRows": "2"
+    },
+    {
+      "documentId": "FEED-PE-REP-007",
+      "title": "TFF-401 TFF Technical Report (standalone TFF reference case)",
+      "revision": "V1.0",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-007_TFF-401-TFF-Technical-Report_V1.0.docx",
+      "valueRows": "5"
+    },
+    {
+      "documentId": "FEED-PE-REP-017",
+      "title": "TFF-401 Washing CAPEX-OPEX Reconciliation (hybrid configuration recommendation)",
+      "revision": "V1.0",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-017_TFF-401-TFF-Washing-CAPEX-OPEX-Reconciliation_V1.0.docx",
+      "valueRows": "2"
+    },
+    {
+      "documentId": "FEED-PE-REP-036",
+      "title": "A-400 TLGO Washing Optimization — governing chemical and transport phenomena",
+      "revision": "V1.0",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-036_A-400-TLGO-Washing-Optimization_V1.0.docx",
+      "valueRows": "3"
+    },
+    {
+      "documentId": "FEED-PP-NTE-001",
+      "title": "TFF Diafiltration Model (pilot calibration, Batch002)",
+      "revision": "V2.0",
+      "docType": "NTE",
+      "control": "controlled (pilot)",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PP-NTE-001_TFF-Diafiltration-Model_V2.0.docx",
+      "valueRows": "1"
+    },
+    {
+      "documentId": "FEED-PE-NTE-013",
+      "title": "A-400 Washing Technology — Hold H-01 Options and Provisional Baseline",
+      "revision": "V1.0",
+      "docType": "NTE",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-NTE-013_A-400-H-01-Options-and-Provisional-Baseline_V1.0.docx",
+      "valueRows": "4"
+    },
+    {
+      "documentId": "FEED-PE-CAL-022",
+      "title": "A-400 Polish Loop, T-402 Options and Pump Sizing",
+      "revision": "V1.0",
+      "docType": "CAL",
+      "control": "controlled (preliminary)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\4 - Equipment Calculation (CAL) Sheets\\FEED-PE-CAL-022_A-400-Polish-Loop-T-402-Options-and-Pump-Sizing_V1.0.xlsx",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-DAT-053",
+      "title": "T-402 Re-slurry / Diafiltration Tank Datasheet (Options A / B)",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-053_T-402-Reslurry-Diafiltration-Tank-Datasheet_V1.0.xlsx",
+      "valueRows": "30"
+    },
+    {
+      "documentId": "FEED-PE-DAT-054",
+      "title": "TFF-401 Membrane Polish Package Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-054_TFF-401-Membrane-Polish-Package-Datasheet_V1.0.xlsx",
+      "valueRows": "18"
+    },
+    {
+      "documentId": "FEED-PE-DAT-055",
+      "title": "T-403 Permeate Equalisation Tank Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-055_T-403-Permeate-Equalisation-Tank-Datasheet_V1.0.xlsx",
+      "valueRows": "12"
+    },
+    {
+      "documentId": "FEED-PE-DAT-056",
+      "title": "P-402 Product Transfer Pump Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-056_P-402-Product-Transfer-Pump-Datasheet_V1.0.xlsx",
+      "valueRows": "27"
+    },
+    {
+      "documentId": "FEED-PE-DAT-057",
+      "title": "P-403 Permeate Transfer Pump Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-057_P-403-Permeate-Transfer-Pump-Datasheet_V1.0.xlsx",
+      "valueRows": "27"
+    }
+  ],
+  "images": [
+    {
+      "key": "overview",
+      "title": "01 | A-400 washing and diafiltration — all register equipment, assembled",
+      "owners": [
+        "T-402",
+        "TFF-401",
+        "T-403",
+        "P-402",
+        "P-403",
+        "P-405",
+        "CIP-401",
+        "BL-A400"
+      ],
+      "direction": [
+        1,
+        0.8,
+        1
+      ],
+      "alt": "diafiltration tank, membrane package, permeate buffer, pumps, CIP package and utility battery limit in assembled position"
+    },
+    {
+      "key": "membrane",
+      "title": "02 | TFF-401 membrane package (VSEP configuration as modelled) with diafiltration tank T-402 and circulation pump P-402",
+      "owners": [
+        "TFF-401",
+        "T-402",
+        "P-402"
+      ],
+      "direction": [
+        1,
+        0.5,
+        -1
+      ],
+      "alt": "the eight-pack VSEP arrangement beside the diafiltration tank and its circulation pump"
+    },
+    {
+      "key": "permeate",
+      "title": "03 | Permeate buffer T-403, permeate pump P-403 and washing-utility battery limit BL-A400",
+      "owners": [
+        "T-403",
+        "P-403",
+        "BL-A400"
+      ],
+      "direction": [
+        -1,
+        0.5,
+        1
+      ],
+      "alt": "permeate buffer tank with its disposal pump and the utility / wastewater interface"
+    },
+    {
+      "key": "cip",
+      "title": "04 | CIP-401 cleaning package with circulation pump P-405 and the TFF-401 it serves",
+      "owners": [
+        "CIP-401",
+        "P-405",
+        "TFF-401"
+      ],
+      "frame": [
+        "CIP-401",
+        "P-405"
+      ],
+      "zoom": 1.6,
+      "direction": [
+        1,
+        0.5,
+        1
+      ],
+      "alt": "cleaning package, CIP pump and membrane package"
+    },
+    {
+      "key": "containment",
+      "title": "05 | A-400 containment bunds BND-401 / BND-403 / BND-404, emergency stations and fire points",
+      "owners": [
+        "BND-401",
+        "BND-403",
+        "BND-404",
+        "T-402",
+        "TFF-401",
+        "T-403",
+        "CIP-401",
+        "ES-401",
+        "ES-400-09",
+        "ES-400-14",
+        "ES-400-18",
+        "FE-401",
+        "FE-402"
+      ],
+      "direction": [
+        0.35,
+        1,
+        0.3
+      ],
+      "percentiles": [
+        2,
+        96
+      ],
+      "alt": "plan-like view of the three retention bunds with the equipment they serve, the emergency showers and the two fire points"
+    }
+  ],
+  "related": [
+    {
+      "href": "./a300-review.html",
+      "label": "A-300 fixing and acid wash (upstream)"
+    },
+    {
+      "href": "./a5000-review.html",
+      "label": "A-5000 thermal interfaces"
+    },
+    {
+      "href": "./a3000-review.html",
+      "label": "Vent-gas assembly review (A-3000)"
+    }
+  ],
+  "counts": {
+    "assets": 23,
+    "propertyRows": 270,
+    "approved": 14,
+    "openConflicts": 5,
+    "decisions": 4,
+    "holds": 0,
+    "gapsOpen": 35,
+    "gapsClosed": 4
+  }
+}

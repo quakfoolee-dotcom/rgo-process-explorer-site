@@ -1443,6 +1443,13 @@
      "source": "FEED-PE-MEB-007",
      "location": "'VSEP 84 Model'!row 25 (V_R)",
      "status": "superseded"
+    },
+    {
+     "value": "8.2",
+     "unit": "m³",
+     "source": "FEED-PE-DAT-053",
+     "location": "'T-402 Datasheet'!row 21 (item 3.1)",
+     "status": "candidate"
     }
    ]
   },
@@ -1469,6 +1476,13 @@
      "source": "FEED-PE-MEB-007",
      "location": "'VSEP 84 Model'!row 25 (V_R)",
      "status": "superseded"
+    },
+    {
+     "value": "8.2",
+     "unit": "m³",
+     "source": "FEED-PE-DAT-053",
+     "location": "'T-402 Datasheet'!row 21 (item 3.1)",
+     "status": "candidate"
     }
    ]
   },
