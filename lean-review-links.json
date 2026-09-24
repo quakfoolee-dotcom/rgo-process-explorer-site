@@ -1,5 +1,5 @@
 {
- "version": "8833812",
+ "version": "1e6bd47",
  "date": "2026-09-24",
  "items": {
   "L01": {
@@ -236,7 +236,7 @@
      "id": "A700-08",
      "area": "A-700",
      "href": "./a700-review.html#A700-08",
-     "revision": "r2",
+     "revision": "r3",
      "reviewer": "QFL",
      "topic": "Datasheet completeness",
      "status": "55 blank items across four unsigned datasheets"
@@ -280,7 +280,7 @@
      "id": "A700-02",
      "area": "A-700",
      "href": "./a700-review.html#A700-02",
-     "revision": "r2",
+     "revision": "r3",
      "reviewer": "QFL",
      "topic": "Feed-rate basis",
      "status": "Basis withdrawn — four rates on record"

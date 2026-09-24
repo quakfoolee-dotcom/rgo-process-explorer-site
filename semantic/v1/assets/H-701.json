@@ -28,5 +28,16 @@
     "Draft considers KO/dust trap upstream of E-701; model KO-701 is downstream. Draft internal cooling zone differs from model-added E-702. Draft prior-to-cyclone note has no identified drawn/model cyclone; no cyclone is invented.",
     "Normal gas connects to AB-3701 candidate only; treatment performance and permitted discharge remain unqualified. Model RV-701 differs from draft PSV-701. Relief destination, sizing and backpressure remain open and separate from normal treatment.",
     "Draft is Not for Use with XXX revision. AR701/AR702 are draft stream identifiers, not confirmed equipment aliases for model AR-701. Air-fill dust vent and inert purge exhaust are distinct modes; purge, equalization, sampling and solids release sequences remain unqualified."
-  ]
+  ],
+  "dataLayer": {
+    "area": "A-700",
+    "source": "data/semantic/A-700",
+    "approvedRows": 0,
+    "heldRows": 0,
+    "pendingRows": 13,
+    "identityHold": null,
+    "applied": "2026-09-24",
+    "baseline": {},
+    "baselineAbsent": []
+  }
 }
