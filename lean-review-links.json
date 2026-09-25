@@ -1,5 +1,5 @@
 {
- "version": "fdcd497",
+ "version": "58cd99b",
  "date": "2026-09-25",
  "items": {
   "L01": {
@@ -168,7 +168,7 @@
      "id": "A3000-05",
      "area": "A-3000",
      "href": "./a3000-review.html#A3000-05",
-     "revision": "r3",
+     "revision": "r4",
      "reviewer": "QFL",
      "topic": "Assembled wet train — connections, air gap and liquor handling",
      "status": "Geometry checks pass — six interfaces unresolved"
@@ -177,7 +177,7 @@
      "id": "A3000-02",
      "area": "A-3000",
      "href": "./a3000-review.html#A3000-02",
-     "revision": "r3",
+     "revision": "r4",
      "reviewer": "QFL",
      "topic": "S1 wet-vent source register and sizing basis",
      "status": "Basis approved — no source register, nothing sized"
