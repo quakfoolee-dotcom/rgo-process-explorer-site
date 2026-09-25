@@ -24,5 +24,16 @@
   "reviewFindings": [
     "Model identity and geometry context only; capacities, ratings and exact connectivity require approved source reconciliation.",
     "Approved source gaps tracked under A200-001."
-  ]
+  ],
+  "dataLayer": {
+    "area": "A-200",
+    "source": "data/semantic/A-200",
+    "approvedRows": 0,
+    "heldRows": 0,
+    "pendingRows": 13,
+    "identityHold": null,
+    "applied": "2026-09-25",
+    "baseline": {},
+    "baselineAbsent": []
+  }
 }

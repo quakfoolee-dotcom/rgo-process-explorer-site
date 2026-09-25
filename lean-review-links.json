@@ -1,5 +1,5 @@
 {
- "version": "71c93c7",
+ "version": "74ecc1e",
  "date": "2026-09-25",
  "items": {
   "L01": {
@@ -37,7 +37,7 @@
      "id": "A200-06",
      "area": "A-200",
      "href": "./a200-review.html#A200-06",
-     "revision": "r3",
+     "revision": "r4",
      "reviewer": "QFL",
      "topic": "Drainage and containment",
      "status": "Receiving and retention basis open"
@@ -403,7 +403,7 @@
      "id": "A200-08",
      "area": "A-200",
      "href": "./a200-review.html#A200-08",
-     "revision": "r3",
+     "revision": "r4",
      "reviewer": "QFL",
      "topic": "Vessel sizing basis — the cascading decision",
      "status": "Sizing withdrawn — CAL-011 V8 required"
