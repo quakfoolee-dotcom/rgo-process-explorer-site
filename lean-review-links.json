@@ -1,6 +1,6 @@
 {
- "version": "694b1e7",
- "date": "2026-09-24",
+ "version": "19f1cd9",
+ "date": "2026-09-25",
  "items": {
   "L01": {
    "kind": "engineering",
@@ -64,7 +64,7 @@
      "id": "A600-06",
      "area": "A-600",
      "href": "./a600-review.html#A600-06",
-     "revision": "r2",
+     "revision": "r3",
      "reviewer": "QFL",
      "topic": "Access, maintenance and fire points",
      "status": "Model access provided — qualification open"
@@ -141,7 +141,7 @@
      "id": "A600-05",
      "area": "A-600",
      "href": "./a600-review.html#A600-05",
-     "revision": "r2",
+     "revision": "r3",
      "reviewer": "QFL",
      "topic": "Register and model reconciliation",
      "status": "Register reconciliation required"
@@ -218,7 +218,7 @@
      "id": "A600-06",
      "area": "A-600",
      "href": "./a600-review.html#A600-06",
-     "revision": "r2",
+     "revision": "r3",
      "reviewer": "QFL",
      "topic": "Access, maintenance and fire points",
      "status": "Model access provided — qualification open"
@@ -271,7 +271,7 @@
      "id": "A600-01",
      "area": "A-600",
      "href": "./a600-review.html#A600-01",
-     "revision": "r2",
+     "revision": "r3",
      "reviewer": "QFL",
      "topic": "Dryer readiness — twelve REP-016 holds",
      "status": "NOT READY for vendor inquiry"
@@ -494,7 +494,7 @@
      "id": "A600-02",
      "area": "A-600",
      "href": "./a600-review.html#A600-02",
-     "revision": "r2",
+     "revision": "r3",
      "reviewer": "QFL",
      "topic": "Drying envelope and feed solids",
      "status": "Targets approved — subject to HOLD-4 / HOLD-1"

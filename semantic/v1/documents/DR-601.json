@@ -31,22 +31,22 @@
     {
       "documentId": "FEED-PE-MAT-002",
       "title": "MOC Selection Matrix",
-      "revision": "V1.1",
+      "revision": "V1.2",
       "page": null,
       "status": "controlled",
       "availability": "indexed by data layer",
       "dataLayer": true,
-      "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.1.xlsx"
+      "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.2.xlsx"
     },
     {
       "documentId": "FEED-PE-MEB-008",
       "title": "A-600 TLGO Spray Drying Stream Table",
-      "revision": "V6.0",
+      "revision": "V8.0",
       "page": null,
       "status": "controlled",
       "availability": "indexed by data layer",
       "dataLayer": true,
-      "file": "5 Mass and Energy Balances\\3 - FEED MEB Calculations\\FEED-PE-MEB-008_A-600-TLGO-Spray-Drying-Stream-Table_V6.0.xlsx"
+      "file": "5 Mass and Energy Balances\\3 - FEED MEB Calculations\\FEED-PE-MEB-008_A-600-TLGO-Spray-Drying-Stream-Table_V8.0.xlsx"
     },
     {
       "documentId": "FEED-PE-REP-016",
