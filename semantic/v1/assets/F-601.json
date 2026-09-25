@@ -40,7 +40,7 @@
     "source": "data/semantic/A-600",
     "approvedRows": 2,
     "heldRows": 0,
-    "pendingRows": 20,
+    "pendingRows": 28,
     "identityHold": null,
     "applied": "2026-09-25",
     "baseline": {

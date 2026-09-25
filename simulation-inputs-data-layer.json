@@ -5,8 +5,8 @@
  "counts": {
   "approved": 30,
   "withdrawn": 20,
-  "documented": 2,
-  "none": 96
+  "documented": 3,
+  "none": 95
  },
  "matches": [
   {
@@ -1576,7 +1576,17 @@
    "asset": "T-601",
    "area": "A-600",
    "parameter": "Working liquid inventory",
-   "status": "none"
+   "status": "documented",
+   "property": "design.workingVolumeM3",
+   "alternatives": [
+    {
+     "value": "32.8",
+     "unit": "m³",
+     "source": "FEED-PE-DAT-063",
+     "location": "'T-601 Datasheet'!row 20 (item 3.1)",
+     "status": "candidate"
+    }
+   ]
   },
   {
    "rowId": "T-601-density",
