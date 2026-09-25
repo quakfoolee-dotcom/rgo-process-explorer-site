@@ -1316,6 +1316,13 @@
      "source": "FEED-PE-REP-037",
      "location": "§3 / §7 Table",
      "status": "superseded"
+    },
+    {
+     "value": "79341",
+     "unit": "kg",
+     "source": "FEED-PE-DAT-097",
+     "location": "'T-303 Datasheet'!row 19 (item 2.4)",
+     "status": "conflict"
     }
    ]
   },
@@ -1361,6 +1368,13 @@
      "source": "FEED-PE-MEB-006",
      "location": "'Batch Cycle Design'!row 21 (V_w_303)",
      "status": "superseded"
+    },
+    {
+     "value": "59.7",
+     "unit": "m³",
+     "source": "FEED-PE-DAT-097",
+     "location": "'T-303 Datasheet'!row 23 (item 3.1)",
+     "status": "candidate"
     }
    ]
   },

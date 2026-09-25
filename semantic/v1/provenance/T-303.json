@@ -194,6 +194,22 @@
       "note": "D-A300-04: 310–340 Nm³ O₂ per batch, ≈160 Nm³/h peak; segregate from the A-3000 header carrying H₂ (F-46 Critical). Adopted as safeguard intent; resolves the model note 'IF-A300-PEROXIDE-VENT destination unqualified' to 'dedicated wet scrubber, segregated from H₂-bearing header'.",
       "reviewer": "QFL",
       "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-300-0303",
+      "property": "identity.designConcept",
+      "value": "Option B — cooled in-line dilution loop (E-303) to ≈ 45 wt % H₂SO₄, designed to become the first stage of Option C (partial dilution, separation and acid recovery, REP-039) if test M5 proves filterability; Option A (full dilution with ≥ 220 t water) not adopted",
+      "unit": null,
+      "source": "FEED-PE-REP-037",
+      "revision": "V1.0",
+      "location": "Recommendation (§7 options table)",
+      "status": "approved",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": null,
+      "note": "REP-037 grades Option B GREEN; basis of FEED-PE-CAL-032 | D-A300-05: REP-037 Option B adopted as the A-300 base case: the heat of dilution of the R-201 acid is removed by a cooled in-line dilution loop (E-303, ≈ 2.0 MW on cooling water) instead of ≥ 220 t of dilution water; T-303 liquor ≈ 45 wt % H₂SO₄ (35 t water per batch, 75 m³ T-303), C-301 on 12 m³/h. Designed to become the first stage of Option C (REP-039 acid recovery) if the filterability test M5 succeeds. Option A (as drawn) not adopted. Bases QB1–QB8 approved in review by QFL 2026-09-25 (FEED-PE-CAL-032).",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-25"
     }
   ]
 }

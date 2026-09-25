@@ -1,5 +1,5 @@
 {
- "version": "74ecc1e",
+ "version": "b66eb5e",
  "date": "2026-09-25",
  "items": {
   "L01": {
@@ -46,7 +46,7 @@
      "id": "A300-07",
      "area": "A-300",
      "href": "./a300-review.html#A300-07",
-     "revision": "r2",
+     "revision": "r3",
      "reviewer": "QFL",
      "topic": "Register and model reconciliation",
      "status": "Register reconciliation required"
@@ -376,7 +376,7 @@
      "id": "A300-01",
      "area": "A-300",
      "href": "./a300-review.html#A300-01",
-     "revision": "r2",
+     "revision": "r3",
      "reviewer": "QFL",
      "topic": "Fixing tank T-303 sizing basis",
      "status": "Sizing basis withdrawn — re-issue required"
@@ -385,7 +385,7 @@
      "id": "A300-02",
      "area": "A-300",
      "href": "./a300-review.html#A300-02",
-     "revision": "r2",
+     "revision": "r3",
      "reviewer": "QFL",
      "topic": "Acid-wash vessels T-305 — count and marination hold point",
      "status": "Hold point — vessel count is not a design decision"

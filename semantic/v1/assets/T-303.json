@@ -37,12 +37,15 @@
     "dosingInterlock": "HCl and H₂O₂ dosing interlocked with agitator operation; H₂O₂ dosing reduced or stopped on high temperature",
     "oxygenEvolution": "310–340 Nm³ O₂ per batch, ≈ 160 Nm³/h peak over a 2 h dose; segregate from the common A-3000 header carrying H₂ (F-46 Critical) — wet scrubber only"
   },
+  "identity": {
+    "designConcept": "Option B — cooled in-line dilution loop (E-303) to ≈ 45 wt % H₂SO₄, designed to become the first stage of Option C (partial dilution, separation and acid recovery, REP-039) if test M5 proves filterability; Option A (full dilution with ≥ 220 t water) not adopted"
+  },
   "dataLayer": {
     "area": "A-300",
     "source": "data/semantic/A-300",
-    "approvedRows": 9,
+    "approvedRows": 10,
     "heldRows": 0,
-    "pendingRows": 49,
+    "pendingRows": 66,
     "identityHold": null,
     "applied": "2026-09-25",
     "baseline": {
@@ -53,10 +56,12 @@
         "materialOfConstruction": null
       },
       "operatingEnvelope": null,
-      "safeguards": null
+      "safeguards": null,
+      "identity": null
     },
     "baselineAbsent": [
-      "safeguards"
+      "safeguards",
+      "identity"
     ]
   }
 }

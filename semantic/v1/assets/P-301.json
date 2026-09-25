@@ -31,7 +31,7 @@
     "source": "data/semantic/A-300",
     "approvedRows": 1,
     "heldRows": 0,
-    "pendingRows": 18,
+    "pendingRows": 28,
     "identityHold": null,
     "applied": "2026-09-25",
     "baseline": {
