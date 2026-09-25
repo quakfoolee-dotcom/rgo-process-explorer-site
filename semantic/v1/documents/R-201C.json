@@ -91,12 +91,12 @@
     {
       "documentId": "FEED-PE-DAT-003",
       "title": "R-201 Oxidation Reactor Datasheet",
-      "revision": "V1.1",
+      "revision": "V1.2",
       "page": null,
       "status": "controlled (unsigned)",
       "availability": "indexed by data layer",
       "dataLayer": true,
-      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-003_R-201-Oxidation-Reactor-Datasheet_V1.1.xlsx"
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-003_R-201-Oxidation-Reactor-Datasheet_V1.2.xlsx"
     },
     {
       "documentId": "FEED-PE-PFD-001",

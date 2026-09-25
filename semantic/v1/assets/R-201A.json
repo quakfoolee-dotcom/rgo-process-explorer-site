@@ -22,7 +22,10 @@
     "designPressure": "+50 mbarg internal / full vacuum external (screening)",
     "designTemperature": 80,
     "materialOfConstruction": "Glass-lined carbon steel; glass-lined agitator, baffles, dip pipes and thermowell",
-    "designPressureExternal": "Full vacuum"
+    "designPressureExternal": "Full vacuum",
+    "workingVolumeM3": 22.6,
+    "totalVolumeM3": 32,
+    "fillRatio": 0.71
   },
   "operatingEnvelope": {
     "reactionTemperatureTargetC": 47.5,
@@ -39,7 +42,11 @@
     "status": "Draft PFD basis; temperature envelope reconciled by data-layer decision D-A200-03 (50 °C = upper allowable limit and SIS trip, 49 °C = TAH; see provenance)",
     "feedRatioBasis": "Per kg PRE-G: 66.24 kg H₂SO₄, 6.75 kg H₃PO₄, 4 kg KMnO₄ (feed-rate labels on sheet)",
     "preGPerBatchKg": 550,
-    "batchCycleHours": 24
+    "batchCycleHours": 24,
+    "h2so4PerBatchKg": 36432,
+    "h3po4PerBatchKg": 3712.5,
+    "kmno4PerBatchKg": 2200,
+    "batchVolumeM3": 22.6
   },
   "reviewStatus": "open",
   "reviewFindings": [
@@ -58,9 +65,9 @@
   "dataLayer": {
     "area": "A-200",
     "source": "data/semantic/A-200",
-    "approvedRows": 15,
+    "approvedRows": 22,
     "heldRows": 0,
-    "pendingRows": 122,
+    "pendingRows": 125,
     "identityHold": null,
     "applied": "2026-09-25",
     "baseline": {
