@@ -45,5 +45,16 @@
     "Wash endpoint, filtration cycle, cake moisture and dryer endpoint are unresolved.",
     "Only the baseline FEED arrangement is promoted; dryer, enclosed and integrated layouts remain mutually exclusive design studies.",
     "RO water, wastewater, vent, condensate, thermal and dry-product battery limits require approved sources."
-  ]
+  ],
+  "dataLayer": {
+    "area": "A-160",
+    "source": "data/semantic/A-160",
+    "approvedRows": 0,
+    "heldRows": 0,
+    "pendingRows": 10,
+    "identityHold": null,
+    "applied": "2026-09-25",
+    "baseline": {},
+    "baselineAbsent": []
+  }
 }

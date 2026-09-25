@@ -62,22 +62,6 @@
       "reviewDate": "2026-09-20"
     },
     {
-      "valueId": "PV-A-160-0169",
-      "property": "operatingEnvelope.cakeMoistureWtFrac",
-      "value": 0.5,
-      "unit": "wt frac",
-      "source": "FEED-PE-MEB-004",
-      "revision": "V5.0",
-      "location": "'Design Basis & Inputs'!row 31 (w_cake)",
-      "status": "approved",
-      "confidence": "documented",
-      "tier": "A",
-      "conflictGroup": null,
-      "note": "C29 | D-A160-02: 50 wt% cake moisture (MEB-004); REP-042 states about 80 wt% solids after press; difference noted for the follow-up.",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-20"
-    },
-    {
       "valueId": "PV-A-160-0183",
       "property": "operatingEnvelope.cycleBasis",
       "value": "3 wash / press cycles, cake ≈ 80 wt% solids, 6 h cycle; cake 0.57 m³/batch; filtration ≈ 2 min — cake-volume-limited, correctly sized (F-10); displacement wash ≈ 2 m³/batch",
@@ -92,6 +76,22 @@
       "note": "GREEN | D-A160-02: F-161 correctly sized and cake-volume-limited (GREEN, F-10): 3 wash/press cycles, 6 h cycle, cake 0.57 m³/batch, displacement wash about 2 m³.",
       "reviewer": "QFL",
       "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-160-0330",
+      "property": "operatingEnvelope.cakeMoistureWtFrac",
+      "value": 0.25,
+      "unit": "wt frac",
+      "source": "FEED-PE-DAT-067",
+      "revision": "V1.0",
+      "location": "'F-161 Datasheet'!row 22 (item 2.7)",
+      "status": "approved",
+      "confidence": "documented (preliminary datasheet, budget enquiry)",
+      "tier": "A",
+      "conflictGroup": "CF-cakeMoistureWtFrac-F-161",
+      "note": "≤ 25 wt % — vendor guarantee after squeeze and air blow (G2, D-A160-03; HOLD J2) | D-A160-03: Basis G2: two-stage displacement wash, membrane squeeze and air blow; cake ≤ 25 wt % moisture as a vendor guarantee (FEED-PE-DAT-067 item 2.7). Supersedes the MEB-004 50 wt % approval in D-A160-02 — MEB-004's figure is a saturated cake that is not blown, REP-042's ≈ 80 wt % solids a squeezed and blown one. A cake that is not blown dries in ≈ 8.9 h (degraded mode). Bases G1–G7 approved in review by QFL 2026-09-24 (FEED-PE-CAL-026).",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-24"
     }
   ]
 }

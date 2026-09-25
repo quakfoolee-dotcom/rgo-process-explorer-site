@@ -630,16 +630,24 @@
    "parameter": "Release / transfer condition",
    "status": "approved",
    "property": "operatingEnvelope.cakeMoistureWtFrac",
-   "valueId": "PV-A-160-0169",
+   "valueId": "PV-A-160-0330",
    "prefill": true,
-   "value": "cake moisture wt frac: 0.5 wt frac",
+   "value": "cake moisture wt frac: 0.25 wt frac",
    "unit": "text",
-   "documented": "0.5 wt frac",
-   "source": "FEED-PE-MEB-004 V5.0 · 'Design Basis & Inputs'!row 31 (w_cake)",
+   "documented": "0.25 wt frac",
+   "source": "FEED-PE-DAT-067 V1.0 · 'F-161 Datasheet'!row 22 (item 2.7)",
    "reviewer": "QFL",
-   "reviewDate": "2026-09-20",
+   "reviewDate": "2026-09-24",
    "conversion": null,
-   "alternatives": []
+   "alternatives": [
+    {
+     "value": "0.5",
+     "unit": "wt frac",
+     "source": "FEED-PE-MEB-004",
+     "location": "'Design Basis & Inputs'!row 31 (w_cake)",
+     "status": "superseded"
+    }
+   ]
   },
   {
    "rowId": "D-164-charge",

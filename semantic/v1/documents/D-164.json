@@ -64,6 +64,16 @@
       "availability": "indexed by data layer",
       "dataLayer": true,
       "file": "5 Mass and Energy Balances\\3 - FEED MEB Calculations\\FEED-PE-MEB-004_A-160-Pre-G-Washing-and-Drying-Stream-Table_V5.0.xlsx"
+    },
+    {
+      "documentId": "FEED-PE-REP-042",
+      "title": "A-160 Pre-G Washing and Drying Assessment (heat of dilution, decant, filter press, dryer)",
+      "revision": "V1.0",
+      "page": null,
+      "status": "controlled",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "B. Technical Reports\\FEED-PE-REP-042_A-160-Pre-G-Washing-and-Drying-Assessment_V1.0.docx"
     }
   ]
 }

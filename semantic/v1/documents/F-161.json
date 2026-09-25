@@ -56,16 +56,6 @@
       "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.2.xlsx"
     },
     {
-      "documentId": "FEED-PE-MEB-004",
-      "title": "A-160 Pre-G Washing and Drying Stream Table",
-      "revision": "V5.0",
-      "page": null,
-      "status": "controlled",
-      "availability": "indexed by data layer",
-      "dataLayer": true,
-      "file": "5 Mass and Energy Balances\\3 - FEED MEB Calculations\\FEED-PE-MEB-004_A-160-Pre-G-Washing-and-Drying-Stream-Table_V5.0.xlsx"
-    },
-    {
       "documentId": "FEED-PE-REP-042",
       "title": "A-160 Pre-G Washing and Drying Assessment (heat of dilution, decant, filter press, dryer)",
       "revision": "V1.0",
@@ -74,6 +64,16 @@
       "availability": "indexed by data layer",
       "dataLayer": true,
       "file": "B. Technical Reports\\FEED-PE-REP-042_A-160-Pre-G-Washing-and-Drying-Assessment_V1.0.docx"
+    },
+    {
+      "documentId": "FEED-PE-DAT-067",
+      "title": "F-161 Membrane Filter Press Datasheet",
+      "revision": "V1.0",
+      "page": null,
+      "status": "controlled (preliminary - budget enquiry)",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-067_F-161-Membrane-Filter-Press-Datasheet_V1.0.xlsx"
     }
   ]
 }

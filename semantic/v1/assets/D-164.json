@@ -49,12 +49,15 @@
     "Only the baseline FEED arrangement is promoted; dryer, enclosed and integrated layouts remain mutually exclusive design studies.",
     "RO water, wastewater, vent, condensate, thermal and dry-product battery limits require approved sources."
   ],
+  "identity": {
+    "designConcept": "Option E dryer change applies in either option (see REP-042 §7)"
+  },
   "dataLayer": {
     "area": "A-160",
     "source": "data/semantic/A-160",
-    "approvedRows": 3,
+    "approvedRows": 4,
     "heldRows": 0,
-    "pendingRows": 19,
+    "pendingRows": 46,
     "identityHold": null,
     "applied": "2026-09-25",
     "baseline": {
@@ -64,8 +67,11 @@
         "designTemperature": null,
         "materialOfConstruction": null
       },
-      "operatingEnvelope": null
+      "operatingEnvelope": null,
+      "identity": null
     },
-    "baselineAbsent": []
+    "baselineAbsent": [
+      "identity"
+    ]
   }
 }

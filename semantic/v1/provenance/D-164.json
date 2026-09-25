@@ -92,6 +92,22 @@
       "note": "C33 | D-A160-02: 2 wt% dried Pre-G residual moisture (MEB-004).",
       "reviewer": "QFL",
       "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-160-0184",
+      "property": "identity.designConcept",
+      "value": "Option E dryer change applies in either option (see REP-042 §7)",
+      "unit": null,
+      "source": "FEED-PE-REP-042",
+      "revision": "V1.0",
+      "location": "Recommendation",
+      "status": "approved",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": null,
+      "note": "D-A160-03: Basis G3: REP-042 Option E adopted — D-164 is a batch agitated vacuum paddle dryer (FEED-PE-DAT-068), replacing the 12 h static tray oven; TR-164 tray handling deleted (press above dryer, gravity chute; basis G6). Bases G1–G7 approved in review by QFL 2026-09-24 (FEED-PE-CAL-026).",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-24"
     }
   ]
 }
