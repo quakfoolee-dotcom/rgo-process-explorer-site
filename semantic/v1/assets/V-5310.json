@@ -60,5 +60,16 @@
     "HX-601 remains isolated and unassigned; draft hot water cannot provide the cited 140–145 °C dryer inlet by ordinary heat exchange.",
     "Spray-water makeup, treatment, blowdown and winterization remain separate unresolved systems.",
     "CP-5000 is indication intent only; I/O, trips, setpoints and validated live data are absent."
-  ]
+  ],
+  "dataLayer": {
+    "area": "A-5000",
+    "source": "data/semantic/A-5000",
+    "approvedRows": 0,
+    "heldRows": 0,
+    "pendingRows": 2,
+    "identityHold": null,
+    "applied": "2026-09-25",
+    "baseline": {},
+    "baselineAbsent": []
+  }
 }

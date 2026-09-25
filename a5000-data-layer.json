@@ -1,17 +1,17 @@
 {
  "area": "A-5000",
- "version": "2c0c148",
- "date": "2026-09-23",
- "revision": "r4",
+ "version": "3291963",
+ "date": "2026-09-25",
+ "revision": "r5",
  "reviewer": {
   "initials": "QFL",
-  "date": "2026-09-22"
+  "date": "2026-09-25"
  },
  "lead": "The engineering content of this page — the thermal projections, the PFD temperature register, the fluid-separation and consumer tables and the heat balance — is the model engineer’s and is unchanged. This section adds the data-layer record for A-5000: what is approved, what is in conflict, what is withdrawn and what is still missing, on the same basis as the other fifteen area reviews.",
  "semanticCoreVersion": "1.19.0-foundation",
  "counts": {
   "assets": 47,
-  "values": 476,
+  "values": 530,
   "approved": 16,
   "superseded": 12,
   "conflictsOpen": 10,
@@ -20,7 +20,7 @@
   "gapsOpen": 12,
   "gapsClosed": 10,
   "holds": 0,
-  "documents": 16
+  "documents": 21
  },
  "approved": [
   {
@@ -29,7 +29,7 @@
    "property": "design.materialOfConstruction",
    "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
    "unit": null,
-   "source": "FEED-PE-MAT-002 V1.1",
+   "source": "FEED-PE-MAT-002 V1.2",
    "location": "'Selection Matrix'!row 69 (M-065)",
    "reviewer": "QFL",
    "reviewDate": "2026-09-20"
@@ -40,7 +40,7 @@
    "property": "design.materialOfConstruction",
    "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
    "unit": null,
-   "source": "FEED-PE-MAT-002 V1.1",
+   "source": "FEED-PE-MAT-002 V1.2",
    "location": "'Selection Matrix'!row 69 (M-065)",
    "reviewer": "QFL",
    "reviewDate": "2026-09-20"
@@ -51,7 +51,7 @@
    "property": "design.materialOfConstruction",
    "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
    "unit": null,
-   "source": "FEED-PE-MAT-002 V1.1",
+   "source": "FEED-PE-MAT-002 V1.2",
    "location": "'Selection Matrix'!row 69 (M-065)",
    "reviewer": "QFL",
    "reviewDate": "2026-09-20"
@@ -62,7 +62,7 @@
    "property": "design.materialOfConstruction",
    "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
    "unit": null,
-   "source": "FEED-PE-MAT-002 V1.1",
+   "source": "FEED-PE-MAT-002 V1.2",
    "location": "'Selection Matrix'!row 69 (M-065)",
    "reviewer": "QFL",
    "reviewDate": "2026-09-20"
@@ -73,7 +73,7 @@
    "property": "design.materialOfConstruction",
    "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
    "unit": null,
-   "source": "FEED-PE-MAT-002 V1.1",
+   "source": "FEED-PE-MAT-002 V1.2",
    "location": "'Selection Matrix'!row 69 (M-065)",
    "reviewer": "QFL",
    "reviewDate": "2026-09-20"
@@ -84,7 +84,7 @@
    "property": "design.materialOfConstruction",
    "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
    "unit": null,
-   "source": "FEED-PE-MAT-002 V1.1",
+   "source": "FEED-PE-MAT-002 V1.2",
    "location": "'Selection Matrix'!row 69 (M-065)",
    "reviewer": "QFL",
    "reviewDate": "2026-09-20"
@@ -95,7 +95,7 @@
    "property": "design.materialOfConstruction",
    "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
    "unit": null,
-   "source": "FEED-PE-MAT-002 V1.1",
+   "source": "FEED-PE-MAT-002 V1.2",
    "location": "'Selection Matrix'!row 69 (M-065)",
    "reviewer": "QFL",
    "reviewDate": "2026-09-20"
@@ -106,7 +106,7 @@
    "property": "design.materialOfConstruction",
    "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
    "unit": null,
-   "source": "FEED-PE-MAT-002 V1.1",
+   "source": "FEED-PE-MAT-002 V1.2",
    "location": "'Selection Matrix'!row 69 (M-065)",
    "reviewer": "QFL",
    "reviewDate": "2026-09-20"
@@ -117,7 +117,7 @@
    "property": "design.materialOfConstruction",
    "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
    "unit": null,
-   "source": "FEED-PE-MAT-002 V1.1",
+   "source": "FEED-PE-MAT-002 V1.2",
    "location": "'Selection Matrix'!row 69 (M-065)",
    "reviewer": "QFL",
    "reviewDate": "2026-09-20"
@@ -128,7 +128,7 @@
    "property": "design.materialOfConstruction",
    "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
    "unit": null,
-   "source": "FEED-PE-MAT-002 V1.1",
+   "source": "FEED-PE-MAT-002 V1.2",
    "location": "'Selection Matrix'!row 69 (M-065)",
    "reviewer": "QFL",
    "reviewDate": "2026-09-20"
@@ -452,7 +452,7 @@
       "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
       "unit": null,
       "status": "approved",
-      "source": "FEED-PE-MAT-002 V1.1",
+      "source": "FEED-PE-MAT-002 V1.2",
       "location": "'Selection Matrix'!row 69 (M-065)"
      }
     ]
@@ -475,7 +475,7 @@
       "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
       "unit": null,
       "status": "approved",
-      "source": "FEED-PE-MAT-002 V1.1",
+      "source": "FEED-PE-MAT-002 V1.2",
       "location": "'Selection Matrix'!row 69 (M-065)"
      }
     ]
@@ -498,7 +498,7 @@
       "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
       "unit": null,
       "status": "approved",
-      "source": "FEED-PE-MAT-002 V1.1",
+      "source": "FEED-PE-MAT-002 V1.2",
       "location": "'Selection Matrix'!row 69 (M-065)"
      }
     ]
@@ -521,7 +521,7 @@
       "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
       "unit": null,
       "status": "approved",
-      "source": "FEED-PE-MAT-002 V1.1",
+      "source": "FEED-PE-MAT-002 V1.2",
       "location": "'Selection Matrix'!row 69 (M-065)"
      }
     ]
@@ -544,7 +544,7 @@
       "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
       "unit": null,
       "status": "approved",
-      "source": "FEED-PE-MAT-002 V1.1",
+      "source": "FEED-PE-MAT-002 V1.2",
       "location": "'Selection Matrix'!row 69 (M-065)"
      }
     ]
@@ -567,7 +567,7 @@
       "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
       "unit": null,
       "status": "approved",
-      "source": "FEED-PE-MAT-002 V1.1",
+      "source": "FEED-PE-MAT-002 V1.2",
       "location": "'Selection Matrix'!row 69 (M-065)"
      }
     ]
@@ -590,7 +590,7 @@
       "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
       "unit": null,
       "status": "approved",
-      "source": "FEED-PE-MAT-002 V1.1",
+      "source": "FEED-PE-MAT-002 V1.2",
       "location": "'Selection Matrix'!row 69 (M-065)"
      }
     ]
@@ -613,7 +613,7 @@
       "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
       "unit": null,
       "status": "approved",
-      "source": "FEED-PE-MAT-002 V1.1",
+      "source": "FEED-PE-MAT-002 V1.2",
       "location": "'Selection Matrix'!row 69 (M-065)"
      }
     ]
@@ -636,7 +636,7 @@
       "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
       "unit": null,
       "status": "approved",
-      "source": "FEED-PE-MAT-002 V1.1",
+      "source": "FEED-PE-MAT-002 V1.2",
       "location": "'Selection Matrix'!row 69 (M-065)"
      }
     ]
@@ -659,7 +659,7 @@
       "value": "Carbon steel with inhibitor/oxygen control in closed loops; 316L where open/chloride-elevated; Ti Grade 2 heat-transfer surfaces where required",
       "unit": null,
       "status": "approved",
-      "source": "FEED-PE-MAT-002 V1.1",
+      "source": "FEED-PE-MAT-002 V1.2",
       "location": "'Selection Matrix'!row 69 (M-065)"
      }
     ]
@@ -1395,7 +1395,7 @@
    "modelEquipmentId": "800",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 20,
+   "values": 35,
    "approved": 3,
    "gaps": 0
   },
@@ -1431,7 +1431,7 @@
    "modelEquipmentId": "803",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 18,
+   "values": 20,
    "approved": 1,
    "gaps": 0
   },
@@ -1455,7 +1455,7 @@
    "modelEquipmentId": "810",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 20,
+   "values": 37,
    "approved": 3,
    "gaps": 0
   },
@@ -1491,7 +1491,7 @@
    "modelEquipmentId": "813",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 0,
+   "values": 2,
    "approved": 0,
    "gaps": 0
   },
@@ -1515,7 +1515,7 @@
    "modelEquipmentId": "820",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 20,
+   "values": 36,
    "approved": 3,
    "gaps": 0
   },
@@ -1551,7 +1551,7 @@
    "modelEquipmentId": "823",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 0,
+   "values": 2,
    "approved": 0,
    "gaps": 0
   },
@@ -1657,7 +1657,7 @@
   "bound": 23,
   "unbound": 24,
   "interfaces": 23,
-  "withValues": 12
+  "withValues": 14
  },
  "documents": [
   {
@@ -1703,11 +1703,11 @@
   {
    "documentId": "FEED-PE-MAT-002",
    "title": "MOC Selection Matrix",
-   "revision": "V1.1",
+   "revision": "V1.2",
    "docType": "MAT",
    "control": "controlled",
    "tier": "A",
-   "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.1.xlsx",
+   "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.2.xlsx",
    "valueRows": "20"
   },
   {
@@ -1819,11 +1819,61 @@
    "tier": "A",
    "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-011_A-5310AB-Chilled-Water-Circulation-Pumps-Datasheet_V1.1.xlsx",
    "valueRows": "96"
+  },
+  {
+   "documentId": "FEED-PE-CAL-029",
+   "title": "A-5000 Utility Packages and Expansion Vessels",
+   "revision": "V1.0",
+   "docType": "CAL",
+   "control": "controlled (preliminary)",
+   "tier": "A",
+   "file": "8 Equipment Design and Specifications\\4 - Equipment Calculation (CAL) Sheets\\FEED-PE-CAL-029_A-5000-Utility-Packages-and-Expansion-Vessels_V1.0.xlsx",
+   "valueRows": "0"
+  },
+  {
+   "documentId": "FEED-PE-DAT-081",
+   "title": "A-5100 Hot-Water Generation Package Datasheet",
+   "revision": "V1.0",
+   "docType": "DAT",
+   "control": "controlled (preliminary - budget enquiry)",
+   "tier": "A",
+   "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-081_A-5100-Hot-Water-Generation-Package-Datasheet_V1.0.xlsx",
+   "valueRows": "15"
+  },
+  {
+   "documentId": "FEED-PE-DAT-082",
+   "title": "V-5110 / V-5210 / V-5310 Loop Expansion Vessels Datasheet",
+   "revision": "V1.0",
+   "docType": "DAT",
+   "control": "controlled (preliminary - budget enquiry)",
+   "tier": "A",
+   "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-082_V-5110-V-5210-V-5310-Loop-Expansion-Vessels-Datasheet_V1.0.xlsx",
+   "valueRows": "6"
+  },
+  {
+   "documentId": "FEED-PE-DAT-083",
+   "title": "A-5200 Closed-Circuit Fluid Cooler Package Datasheet",
+   "revision": "V1.0",
+   "docType": "DAT",
+   "control": "controlled (preliminary - budget enquiry)",
+   "tier": "A",
+   "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-083_A-5200-Closed-Circuit-Fluid-Cooler-Package-Datasheet_V1.0.xlsx",
+   "valueRows": "17"
+  },
+  {
+   "documentId": "FEED-PE-DAT-084",
+   "title": "A-5300 Water-Cooled Chiller Package Datasheet",
+   "revision": "V1.0",
+   "docType": "DAT",
+   "control": "controlled (preliminary - budget enquiry)",
+   "tier": "A",
+   "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-084_A-5300-Water-Cooled-Chiller-Package-Datasheet_V1.0.xlsx",
+   "valueRows": "16"
   }
  ],
  "layout": {
-  "version": "c4e9ad2",
-  "date": "2026-09-23",
+  "version": "23aabe4",
+  "date": "2026-09-25",
   "revision": "r2",
   "reviewer": "QFL",
   "supports": 973,
@@ -1845,7 +1895,7 @@
    "status": "Design concept approved — MoC FEED-PE-MOC-002 raised, pending review and decision; model and PFD not yet updated",
    "priority": "high",
    "discipline": "Process / utilities",
-   "observation": "D-A5000-01 approves FEED-PE-REP-043 F-51: a fourth loop — ≥ 200 °C steam or thermal oil — is required for HX-601, the acid concentrator and R-141, and the exotherm control belongs on chilled water. The model and FEED-PFD-5000 still show three water circuits (HW 80–95 °C, CW 25–30 °C, CHW 5–7 °C), so the page sections below describe the as-drawn arrangement, not the approved concept. The change is now recorded as FEED-PE-MOC-002 V1.0 (raised 2026-09-22 against FEED-PE-PFD-001 V5.1.1 sheet PFD-5000; Parts A–C complete, review and decision open), so nothing in it is approved yet. 16 approved values are applied on 12 assets.",
+   "observation": "D-A5000-01 approves FEED-PE-REP-043 F-51: a fourth loop — ≥ 200 °C steam or thermal oil — is required for HX-601, the acid concentrator and R-141, and the exotherm control belongs on chilled water. The model and FEED-PFD-5000 still show three water circuits (HW 80–95 °C, CW 25–30 °C, CHW 5–7 °C), so the page sections below describe the as-drawn arrangement, not the approved concept. The change is now recorded as FEED-PE-MOC-002 V1.0 (raised 2026-09-22 against FEED-PE-PFD-001 V5.1.1 sheet PFD-5000; Parts A–C complete, review and decision open), so nothing in it is approved yet. 16 approved values are applied on 14 assets.",
    "action": "Take FEED-PE-MOC-002 through review (Part D, with the HAZOP / What-If of the new loop and the chilled-water exotherm service) and decision (Part F); then revise PFD-5000 and the user sheets to add the ≥ 200 °C loop (A-5400 placeholder) and move the R-201 / T-303 exotherm control to chilled water, and re-issue the thermal balance as REP-043 V1.1. Until Part F is signed no heating duty above 95 °C may be shown as served.",
    "evidence": [
     {
@@ -1969,7 +2019,7 @@
     {
      "kind": "value",
      "id": "PV-A-5000-0163",
-     "label": "PV-A-5000-0163 · A-5110A design.materialOfConstruction = Carbon steel with inhibitor/oxygen control in closed loops; 316L where (FEED-PE-MAT-002 V1.1)",
+     "label": "PV-A-5000-0163 · A-5110A design.materialOfConstruction = Carbon steel with inhibitor/oxygen control in closed loops; 316L where (FEED-PE-MAT-002 V1.2)",
      "href": "#a5000-approved"
     }
    ]
@@ -2068,13 +2118,13 @@
     {
      "kind": "document",
      "id": "FEED-PE-MAT-002",
-     "label": "FEED-PE-MAT-002 V1.1 · MOC Selection Matrix (controlled)",
+     "label": "FEED-PE-MAT-002 V1.2 · MOC Selection Matrix (controlled)",
      "href": "#a5000-documents"
     },
     {
      "kind": "value",
      "id": "PV-A-5000-0161",
-     "label": "PV-A-5000-0161 · A-5100 design.materialOfConstruction = Carbon steel with inhibitor/oxygen control in closed loops; 316L where (FEED-PE-MAT-002 V1.1)",
+     "label": "PV-A-5000-0161 · A-5100 design.materialOfConstruction = Carbon steel with inhibitor/oxygen control in closed loops; 316L where (FEED-PE-MAT-002 V1.2)",
      "href": "#a5000-approved"
     },
     {
@@ -2103,7 +2153,7 @@
     {
      "kind": "asset",
      "id": "A-5100",
-     "label": "A-5100 · Hot-water generation · electric-heater concept (Package) — 20 rows, 3 approved, 0 open gaps",
+     "label": "A-5100 · Hot-water generation · electric-heater concept (Package) — 35 rows, 3 approved, 0 open gaps",
      "href": "#a5000-assets"
     },
     {
@@ -2152,6 +2202,101 @@
      "id": "layout",
      "label": "Transport, racks and layout review",
      "href": "./layout-review.html"
+    }
+   ]
+  },
+  {
+   "id": "A5000-09",
+   "topic": "Utility packages — budget envelopes issued; A-5400 duty exceeds the MOC-002 provision",
+   "status": "Datasheets issued for budget enquiry — candidate values, none approved; A-5400 not issued",
+   "priority": "high",
+   "discipline": "Process / utilities",
+   "observation": "The equipment sweep of 2026-09-24 found the A-5000 packages without datasheets: the 2026-09-22 set (A5000-03) covered the pumps only. FEED-PE-CAL-029 and FEED-PE-DAT-081…084 (register V5.3), on bases Y1–Y6 approved by QFL 2026-09-25, carry them as budget envelopes on the same REP-043 V1.0 Case P duties as the pumps: A-5100 0.5 MW at 90 / 70 °C, generator priced electric (2 × 250 kW) or steam / water (≈ 3 m² plate exchanger off A-5400) until MOC-002 Part F; diaphragm expansion vessels V-5110 0.25 m³, V-5210 1.0 m³ and V-5310 0.3 m³ (the last two proposed tags); A-5200 a closed-circuit evaporative fluid cooler, 14 MW in 4 × 3.5 MW cells at an assumed 24 °C wet bulb, 28 m³/h make-up (an A-2000 load); A-5300 3 × 1.5 MW water-cooled chillers, 818 kW electrical, 5.3 MW rejected into A-5200, modules 2–3 not to be ordered before calorimetry A-059. That is 54 candidate rows, 0 approved. No A-5400 datasheet: MOC-002 allows no enquiry before Part F. The CAL-029 screen puts A-5400 at 14.1–18.3 MW — HX-601 12.5 / 13.8 MW at the 1 wt % dryer feed (FEED-PE-DAT-065) plus the concentrator 1.5–4.4 MW and R-141 0.14 MW — against the MOC-002 basis of 5–8 MW with provision to 10 MW, which assumed a 5 wt % feed.",
+   "action": "Record the A-5400 duty screen as a MOC-002 Part D comment and restate the fourth loop at 14–18 MW (or reduce HX-601 — dryer-exhaust recuperation, REP-043 §6); issue REP-043 V1.1 on DBM V2.0; order chiller module 1 only, modules 2–3 after calorimetry; settle the cooling-water type (tower vs closed cooler) and register V-5210 / V-5310 in the PFD-5000 MoC.",
+   "evidence": [
+    {
+     "kind": "document",
+     "id": "FEED-PE-CAL-029",
+     "label": "FEED-PE-CAL-029 V1.0 · A-5000 Utility Packages and Expansion Vessels (controlled (preliminary))",
+     "href": "#a5000-documents"
+    },
+    {
+     "kind": "document",
+     "id": "FEED-PE-DAT-081",
+     "label": "FEED-PE-DAT-081 V1.0 · A-5100 Hot-Water Generation Package Datasheet (controlled (preliminary - budget enquiry))",
+     "href": "#a5000-documents"
+    },
+    {
+     "kind": "document",
+     "id": "FEED-PE-DAT-082",
+     "label": "FEED-PE-DAT-082 V1.0 · V-5110 / V-5210 / V-5310 Loop Expansion Vessels Datasheet (controlled (preliminary - budget enquiry))",
+     "href": "#a5000-documents"
+    },
+    {
+     "kind": "document",
+     "id": "FEED-PE-DAT-083",
+     "label": "FEED-PE-DAT-083 V1.0 · A-5200 Closed-Circuit Fluid Cooler Package Datasheet (controlled (preliminary - budget enquiry))",
+     "href": "#a5000-documents"
+    },
+    {
+     "kind": "document",
+     "id": "FEED-PE-DAT-084",
+     "label": "FEED-PE-DAT-084 V1.0 · A-5300 Water-Cooled Chiller Package Datasheet (controlled (preliminary - budget enquiry))",
+     "href": "#a5000-documents"
+    },
+    {
+     "kind": "document",
+     "id": "FEED-PE-MOC-002",
+     "label": "FEED-PE-MOC-002 V1.0 · MOC Request: A-5000 Fourth Utility Loop and Exotherm Control (PFD-5000) (controlled (raised 2026-09-22 - pending review and decision))",
+     "href": "#a5000-documents"
+    },
+    {
+     "kind": "value",
+     "id": "PV-A-5000-0482",
+     "label": "PV-A-5000-0482 · A-5100 design.ratedDutyKw = 500 kW (FEED-PE-DAT-081)",
+     "href": "#a5000-approved"
+    },
+    {
+     "kind": "value",
+     "id": "PV-A-5000-0503",
+     "label": "PV-A-5000-0503 · A-5200 design.ratedDutyKw = 14000 kW (FEED-PE-DAT-083)",
+     "href": "#a5000-approved"
+    },
+    {
+     "kind": "value",
+     "id": "PV-A-5000-0520",
+     "label": "PV-A-5000-0520 · A-5300 design.ratedDutyKw = 4500 kW (FEED-PE-DAT-084)",
+     "href": "#a5000-approved"
+    },
+    {
+     "kind": "value",
+     "id": "PV-A-5000-0492",
+     "label": "PV-A-5000-0492 · V-5110 design.totalVolumeM3 = 0.25 m³ (FEED-PE-DAT-082)",
+     "href": "#a5000-approved"
+    },
+    {
+     "kind": "asset",
+     "id": "A-5400",
+     "label": "A-5400 · Missing ≥ 200 °C steam / thermal-oil loop (REP-043 F-51: HX-601 2.9–15 MW, acid concentrator 1.5–4.4 MW, R-141 fast heat-up) (UtilityPackage) — 0 rows, 0 approved, 0 open gaps",
+     "href": "#a5000-assets"
+    },
+    {
+     "kind": "asset",
+     "id": "A-5300",
+     "label": "A-5300 · Air-cooled chiller package (Package) — 36 rows, 3 approved, 0 open gaps",
+     "href": "#a5000-assets"
+    },
+    {
+     "kind": "decision",
+     "id": "D-A5000-01",
+     "label": "D-A5000-01 (QFL 2026-09-20, FEED-PE-REP-043): Four utility loops, not three (REP-043): add a ≥ 200 °C steam / thermal-oil loop for HX-601, the acid concentrator and R-141 heat-up; keep hot water, …",
+     "href": "#a5000-decisions"
+    },
+    {
+     "kind": "finding",
+     "id": "A600-08",
+     "label": "A600-08 · A-600 equipment datasheets — T-601, P-601, DR-601 package (design envelope), T-602 — Preliminary datasheets issued — DR-601 package a budget envelope, D-A600-01 open (A-600 review r4 · QFL)",
+     "href": "./a600-review.html#A600-08"
     }
    ]
   }
