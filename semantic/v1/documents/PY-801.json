@@ -88,6 +88,16 @@
       "availability": "indexed by data layer",
       "dataLayer": true,
       "file": "B. Technical Reports\\FEED-PE-REP-041_Furnace-Off-Gas-and-Vent-Gas-Assessment_V1.0.docx"
+    },
+    {
+      "documentId": "FEED-PE-DAT-072",
+      "title": "PY-801 Doping Pyrolysis Screw Furnace Datasheet",
+      "revision": "V1.0",
+      "page": null,
+      "status": "controlled (preliminary - budget enquiry)",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-072_PY-801-Doping-Pyrolysis-Screw-Furnace-Datasheet_V1.0.xlsx"
     }
   ]
 }

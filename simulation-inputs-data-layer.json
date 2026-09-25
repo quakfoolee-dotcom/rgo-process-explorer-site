@@ -635,7 +635,7 @@
    "value": "cake moisture wt frac: 0.25 wt frac",
    "unit": "text",
    "documented": "0.25 wt frac",
-   "source": "FEED-PE-DAT-067 V1.0 · 'F-161 Datasheet'!row 22 (item 2.7)",
+   "source": "FEED-PE-DAT-067 V1.1 · 'F-161 Datasheet'!row 22 (item 2.7)",
    "reviewer": "QFL",
    "reviewDate": "2026-09-24",
    "conversion": null,

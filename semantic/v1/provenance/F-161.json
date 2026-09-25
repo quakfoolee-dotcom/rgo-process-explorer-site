@@ -83,7 +83,7 @@
       "value": 0.25,
       "unit": "wt frac",
       "source": "FEED-PE-DAT-067",
-      "revision": "V1.0",
+      "revision": "V1.1",
       "location": "'F-161 Datasheet'!row 22 (item 2.7)",
       "status": "approved",
       "confidence": "documented (preliminary datasheet, budget enquiry)",

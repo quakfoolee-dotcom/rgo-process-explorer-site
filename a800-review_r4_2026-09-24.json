@@ -1,0 +1,2396 @@
+{
+  "area": "A-800",
+  "title": "A-800 assembly & design review",
+  "revision": "r4",
+  "date": "2026-09-24",
+  "sourceCommit": "ca59f3b",
+  "semanticCoreVersion": "1.19.0-foundation",
+  "registerRevision": "2026-09-10 · Physical equipment ownership and complete Explore assemblies",
+  "modelConfig": {
+    "scope": "feed",
+    "a160": "baseline",
+    "argonSource": "bulk"
+  },
+  "lead": "KBH₄ doping pyrolysis of rGO: contained rGO elevator TR-801, rGO and dry-KBH₄ hoppers H-801 / H-802 with reagent charge lock LK-802, weighing feeders F-801 / F-802, inerted ploughshare mixer MX-801, surge hopper H-803, rotary valve RV-801, doping pyrolysis and cooling furnace PY-801 with PSV-801, off-gas cooler E-801, pressure-control fan FN-801, dry-argon regulation AR-801, O₂ / moisture / H₂ verification AIT-801, feeder access structure PL-801 and the utilities / A-900 battery limit BL-800-UTIL.",
+  "reviewer": {
+    "initials": "QFL",
+    "date": "2026-09-24"
+  },
+  "representedParts": 10714,
+  "ownedEquipment": 20,
+  "findings": [
+    {
+      "id": "A800-01",
+      "topic": "KBH₄ : rGO ratio and feed-rate basis",
+      "status": "Ratio ruled 1 : 1 — rates withdrawn",
+      "reason": "The reagent ratio and the rGO rate set reagent flow, hydrogen evolution, potassium vapour, furnace duty and every feeder rating in the area.",
+      "observation": "D-A800-01 applies the DBM V2.0 / MOC-001 ruling of 1 : 1 KBH₄ : rGO (PFD V5.1.1, REP-019 and REP-022 agree); DAT-008 item 2.6 and the MEB-010 R_KBH4 of 1.5 are superseded, not deleted. The rGO rate is withdrawn: 15.75 kg/h (MEB-010, on 50 kg/h graphite), 25.2 / 37.8 kg/h (DAT-008), 28.07 kg/h (REP-019 / 022) against the DBM V2.0 17 / 22 kg/h rGO (411 / 535 kg/d). With them go the KBH₄ feed rate (37.8 kg/h on the old ratio), hydrogen evolved, the F-801 / F-802 / PY-801 powers and the MEB-010 21.8 kW duty, which omits the ≈ 44 kW reaction heat.",
+      "action": "Revise FEED-PE-DAT-008 (V1.1), FEED-PE-MEB-010 (V9) and Narrative §4.13 / capacity tables to 1 : 1 at the DBM V2.0 rate; restate H₂ evolution, K vapour, off-gas and reagent flows and the feeder ratings.",
+      "discipline": "Process",
+      "evidence": [
+        {
+          "ref": "D-A800-01",
+          "kind": "decision"
+        },
+        {
+          "ref": "CF-kbh4RatioKgPerKgRG-PY-801",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "GAP-A-800-DF-795e1c",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-800-ID-71a2ed",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-800-ID-1766ce",
+          "kind": "gap"
+        },
+        {
+          "ref": "FEED-PE-DBM-001",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-008",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-MEB-010",
+          "kind": "document"
+        }
+      ],
+      "image": "mixer"
+    },
+    {
+      "id": "A800-02",
+      "topic": "PY-801 design closure and REP-022 thermal correction",
+      "status": "Design basis approved — five RED items open",
+      "reason": "A driven endothermic reactor is sized on reaction heat and residence, not on the heater allowance of a screening balance.",
+      "observation": "D-A800-02 adopts the REP-019 closure as the design-basis statement: one continuous indirectly electrically heated screw-furnace train, 1.10 m ID × 10 m retort, 1.05 m screw at ≈ 0.285 rpm, five zones, 120 kW installed, 2 h at 750 °C under argon; H-803 as a 3.75 m³ mass-flow wedge hopper with a 120 kg reactive-inventory cap; RV-801 not accepted as both metering device and airlock. REP-022 supersedes the thermal basis: ≈ 44 kW endothermic reaction heat at 1 : 1 (five times the 8 kW allowance), so the 120 kW installed duty must be re-checked. Five RED items: ratio (closed), 5 °C/min ramp vs 2 h residence (≈ 4.5 h needed), pressure \"a few mbar\" vs the +2 psig / −3 mbarg statements, the 585–700 °C molten-salt window, and ≈ 20 kg/h potassium vapour.",
+      "action": "Close the four remaining REP-022 RED items and re-check the installed duty against the reaction heat before freezing the PY-801 package; reconcile the pressure sign and value in the P&ID basis.",
+      "discipline": "Process / mechanical",
+      "evidence": [
+        {
+          "ref": "D-A800-02",
+          "kind": "decision"
+        },
+        {
+          "ref": "GAP-A-800-DF-b6dd98",
+          "kind": "gap"
+        },
+        {
+          "ref": "PY-801",
+          "kind": "asset"
+        },
+        {
+          "ref": "H-803",
+          "kind": "asset"
+        },
+        {
+          "ref": "RV-801",
+          "kind": "asset"
+        },
+        {
+          "ref": "FEED-PE-REP-019",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-REP-022",
+          "kind": "document"
+        }
+      ],
+      "image": "furnace"
+    },
+    {
+      "id": "A800-03",
+      "topic": "Inert atmosphere, hydrolysis hazard and hazardous area",
+      "status": "Approved from DAT-008 — HAC to confirm",
+      "reason": "KBH₄ hydrolyses with moisture and the furnace evolves hydrogen; the inert envelope and the area classification follow.",
+      "observation": "Approved (D-A800-02, DAT-008): ≤ 200 ppm O₂ in the mixer envelope, ≤ 100 ppm H₂O in feed streams and inert gas (KBH₄ hydrolysis hazard), argon ≥ 99.999 % (≤ 2 ppm O₂ at source), Zone 1 / 2 gas plus Zone 21 / 22 dust internal. The model provides the dry-argon regulation manifold AR-801 (2,229 parts), the O₂ / moisture / H₂ verification assembly AIT-801 and the reagent charge lock LK-802 — none on LST-001.",
+      "action": "Confirm the hazardous-area classification on the HAC drawing; define the argon demand of AR-801 with the A-6000 inert-gas ruling (D-A6000-01) and the moisture-control basis of the KBH₄ supply chain (LK-802, H-802).",
+      "discipline": "Process safety / controls",
+      "evidence": [
+        {
+          "ref": "D-A800-02",
+          "kind": "decision"
+        },
+        {
+          "ref": "MX-801",
+          "kind": "asset"
+        },
+        {
+          "ref": "AR-801",
+          "kind": "asset"
+        },
+        {
+          "ref": "AIT-801",
+          "kind": "asset"
+        },
+        {
+          "ref": "LK-802",
+          "kind": "asset"
+        },
+        {
+          "ref": "FEED-PE-DAT-008",
+          "kind": "document"
+        }
+      ],
+      "image": "atmosphere"
+    },
+    {
+      "id": "A800-04",
+      "topic": "Off-gas basis: hydrogen and potassium vapour — S3 segregation",
+      "status": "Segregation required — S3 header, K condenser",
+      "reason": "A hydrogen-rich argon stream carrying potassium vapour must be treated as a continuous process stream with a hot-end condenser, never combined with wet or CO-bearing vents.",
+      "observation": "D-A800-02 adopts REP-041: H₂ 12–35 Nm³/h (30–55 vol % in Ar) with 10–20 kg/h potassium vapour — treat H₂ as a continuous process stream and the K / B aerosol as fouling and materials exposure; segregate as system S3 with a hot-end K condenser; PSV-801 and the vent branch to ASME B31.12 (MAT-002 M-054). PSV-801 shares model equipment 109 with PY-801; the relief and residue interfaces have no destinations.",
+      "action": "Confirm S3 segregation and the K condenser on FEED-PFD-3000 and the A-800 P&ID; give PSV-801 its own register identity and set-pressure basis; assign the relief and residue destinations.",
+      "discipline": "Process safety / mechanical",
+      "evidence": [
+        {
+          "ref": "D-A800-02",
+          "kind": "decision"
+        },
+        {
+          "ref": "GAP-A-800-DF-95870e",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-800-ID-602f13",
+          "kind": "gap"
+        },
+        {
+          "ref": "PSV-801",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A800-RELIEF",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A800-RESIDUE",
+          "kind": "asset"
+        },
+        {
+          "ref": "FEED-PE-REP-041",
+          "kind": "document"
+        }
+      ],
+      "image": "atmosphere"
+    },
+    {
+      "id": "A800-05",
+      "topic": "Materials of construction",
+      "status": "Ruled — RV-801 not yet covered",
+      "reason": "Dry KBH₄ and rGO powders demand grounded, electropolished contact surfaces; the furnace and off-gas train see potassium and alkali condensate at temperature.",
+      "observation": "D-A800-MOC applies MAT-002: 316L electropolished, grounded and bonded with hard-faced wear locations for H-801 / F-801 / MX-801 / H-803; 316L dry-contact with PTFE / PFA / PVDF for the KBH₄ side H-802 / F-802; Alloy 602 CA or 601 for PY-801; Alloy 601 or Ni 200 / 201 in the hot / alkali-condensing sections of E-801 and FN-801; PSV-801 316 / 316L welded to ASME B31.12. MDL-001 (304L, high-purity alumina retort) superseded. RV-801 has an MDL-001 material only.",
+      "action": "Extend MAT-002 to RV-801; issue the A-800 datasheets on the MAT-002 base case once the ratio / rate revision (A800-01) is in.",
+      "discipline": "Materials",
+      "evidence": [
+        {
+          "ref": "D-A800-MOC",
+          "kind": "decision"
+        },
+        {
+          "ref": "CF-materialOfConstruc-PY-801",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "CF-materialOfConstruc-FN-801",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "CF-materialOfConstruc-MX-801",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "GAP-A-800-DF-308b8f",
+          "kind": "gap"
+        },
+        {
+          "ref": "FEED-PE-MAT-002",
+          "kind": "document"
+        }
+      ],
+      "image": "feed"
+    },
+    {
+      "id": "A800-06",
+      "topic": "Register and model reconciliation",
+      "status": "Register reconciliation required",
+      "reason": "Every equipment item in the area must have one identity in the register, the model and the data layer.",
+      "observation": "Nine LST-001 tags (H-801, H-802, F-801, F-802, MX-801, H-803, RV-801, PY-801, E-801, FN-801) are bound to model geometry. The model additionally owns TR-801, LK-802, AR-801, AIT-801, PL-801, BL-800-UTIL, two fire points and two emergency stations without register identities. Design notes name C-801 / C-802 screw feeders where the register, PFD-0800 and the model have the loss-in-weight feeders F-801 / F-802, and an E-802 that is on neither. DAT-008 is unsigned with 14 blank items.",
+      "action": "Register TR-801, LK-802, AR-801, AIT-801, PL-801 and BL-800-UTIL on LST-001; retire the C-801 / C-802 names or map them to F-801 / F-802; rule E-802 in or out; complete and sign DAT-008 on the revised basis.",
+      "discipline": "Process / layout",
+      "evidence": [
+        {
+          "ref": "GAP-A-800-ID-d05f48",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-800-ID-4434a2",
+          "kind": "gap"
+        },
+        {
+          "ref": "TR-801",
+          "kind": "asset"
+        },
+        {
+          "ref": "LK-802",
+          "kind": "asset"
+        },
+        {
+          "ref": "AR-801",
+          "kind": "asset"
+        },
+        {
+          "ref": "PL-801",
+          "kind": "asset"
+        },
+        {
+          "ref": "BL-800-UTIL",
+          "kind": "asset"
+        },
+        {
+          "ref": "E-802",
+          "kind": "asset"
+        },
+        {
+          "ref": "C-801",
+          "kind": "asset"
+        },
+        {
+          "ref": "FEED-PE-DAT-008",
+          "kind": "document"
+        }
+      ],
+      "image": "overview"
+    },
+    {
+      "id": "A800-07",
+      "topic": "Access, reactive inventory and fire points",
+      "status": "Model access provided — qualification open",
+      "reason": "Dry-reagent handling on an elevated feed structure needs rated access, a capped reactive inventory and fire points at the approaches.",
+      "observation": "The model provides the feeder access and equipment-support structure PL-801 (1,080 parts), fire points at the dry-reagent stair approach (FE-801) and the doping service frontage (FE-802), and two emergency stations. REP-019 caps the H-803 reactive inventory at 120 kg; the KBH₄ charging route through LK-802 and the reagent interface IF-A800-REAGENT are records without a defined supply chain.",
+      "action": "Qualify PL-801 against the reagent charging, feeder and mixer maintenance tasks; define the KBH₄ supply, container handling and charge-lock procedure; confirm fire-point and station positions in the plant-wide access and fire-safety reviews.",
+      "discipline": "Mechanical / layout / fire safety",
+      "evidence": [
+        {
+          "ref": "H-803",
+          "kind": "asset"
+        },
+        {
+          "ref": "LK-802",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A800-REAGENT",
+          "kind": "asset"
+        },
+        {
+          "ref": "ES-801",
+          "kind": "asset"
+        },
+        {
+          "ref": "ES-802",
+          "kind": "asset"
+        },
+        {
+          "ref": "FEED-PE-REP-019",
+          "kind": "document"
+        }
+      ],
+      "image": "access"
+    },
+    {
+      "id": "A800-08",
+      "topic": "Equipment datasheets — hoppers H-801 / H-802 / H-803 and coolers E-801 / E-802",
+      "status": "Preliminary datasheets issued — candidate values, none approved",
+      "reason": "The three hoppers had no volume and E-801 / E-802 no duty; REP-019 had sized them on the 28.07 kg/h rGO rate that D-A800-01 withdrew, so its criteria — not its numbers — carry over.",
+      "observation": "FEED-PE-CAL-020 V1.0 re-applies the REP-019 criteria on the DBM V2.0 design rate (535 kg/d = 22.3 kg/h rGO, KBH₄ 1 : 1, product 35.7 kg/h; 0.794 × the REP-019 basis) under the bases approved in review (N1 rate, N2 REP-019 criteria, N3 E-802 300 °C design inlet). FEED-PE-DAT-044: H-801 3 h at 20 kg/m³ = 3.34 m³ working, 4.2 m³ gross. FEED-PE-DAT-045: H-802 0.25 m³ gross with the 80 kg reactive-inventory cap. FEED-PE-DAT-046: H-803 3.75 m³ gross / 3.0 m³ working, 120 kg cap (the D-A800-02 capacity basis). FEED-PE-DAT-047: E-801 screening 23.6 kW (argon 8.63 kW unchanged, H₂, other and K condensation scaled) → 35 kW normal / 65 kW installed by the REP-019 margin ratios, 750 → 80 °C, Alloy 601 / 602 CA hot section and Ni 200 / 201 condensation surfaces. FEED-PE-DAT-048: E-802 2 kW design (1.82 kW at 300 → 70 °C; 0.44 kW at the MEB-010 125 °C inlet), jacketed screw on cooling water, 316L EP proposed — E-802 remains a placeholder tag. They enter as 69 candidate rows — none approved; every A-800 missing-value gap now has a source; throughputs are quoted, not re-harvested, and hopper / E-801 materials do not contest the MAT-002 ruling.",
+      "action": "Close the holds — bulk-density, flow-function and wall-friction tests (P1), the open REP-022 PY-801 items that set the E-801 inlet and potassium load (P2, A800-02), the E-802 identity (P3, A800-06), routing and the electrical basis (P4) and S3 segregation with the K condenser (P5, A800-04) — add E-802 to MAT-002, then approve the sizing values by decision.",
+      "discipline": "Process / mechanical",
+      "evidence": [
+        {
+          "ref": "FEED-PE-CAL-020",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-044",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-045",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-046",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-047",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-048",
+          "kind": "document"
+        },
+        {
+          "ref": "PV-A-800-0327",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-800-0341",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-800-0355",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-800-0367",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-800-0382",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-800-0388",
+          "kind": "value"
+        },
+        {
+          "ref": "D-A800-01",
+          "kind": "decision"
+        },
+        {
+          "ref": "D-A800-02",
+          "kind": "decision"
+        },
+        {
+          "ref": "H-801",
+          "kind": "asset"
+        },
+        {
+          "ref": "H-802",
+          "kind": "asset"
+        },
+        {
+          "ref": "H-803",
+          "kind": "asset"
+        },
+        {
+          "ref": "E-801",
+          "kind": "asset"
+        },
+        {
+          "ref": "E-802",
+          "kind": "asset"
+        }
+      ],
+      "image": "overview"
+    },
+    {
+      "id": "A800-09",
+      "topic": "PY-801 furnace train datasheets — PY-801, FN-801, F-801 / F-802, RV-801A/B",
+      "status": "Preliminary datasheets issued — pressure and ramp / residence ruled (D-A800-03)",
+      "reason": "The equipment sweep of 2026-09-24 found the furnace train without datasheets: CAL-020 held PY-801 on the REP-022 open items (hold P2) and the fan, feeders and lock followed it; PY-801 is the A-800 cost and hazard driver.",
+      "observation": "FEED-PE-CAL-027 and FEED-PE-DAT-072…076 (register V5.0) on bases Q1–Q8 approved by QFL 2026-09-24. PY-801 keeps the REP-019 closure (1.10 m × 10 m retort, 0.285 rpm, 2 h, 750 °C, 120 kW installed) on the CAL-020 N1 rate (22.29 kg/h rGO, 1 : 1 — 0.794 × REP-019): 89 kg inventory, 25 % fill; the REP-022 reaction heat on N1 (34.9 kW) replaces the 8 kW allowance, so the load is 73.3 kW calculated, 91.6 kW design, and the 120 kW is re-zoned 18 / 18 / 48 / 18 / 18 because Z3 alone needs 44 kW. H₂ 18.5 Nm³/h normal, 37 upset; K + B 20.6 kg/h. FN-801: hydrogen-rated booster E-801 / K condenser → S2 oxidiser, 150 m³/h (100 m³/h design at 40 °C), 50 mbar screening, 1.1 kW, 1 + 1. F-801 / F-802: loss-in-weight, 22.3 kg/h design, 10–40 kg/h. RV-801A/B: double inert lock, not a meter. PSV-801: CAL screening only (≈ 9 cm² at 200 mbar(g), DN80 class) — relief cases from the HAZOP. D-A800-03 rules the operating pressure at +1 to +3 mbar(g) (set point +2; mechanical envelope +250 / −50) in place of the MEB-010 −3 mbar(g) approval, and defines the approved 2 h (solids time in Z1–Z5) and 5 °C/min (maximum solids heating rate through 550–700 °C, ≥ 2.5 m of heated length). 91 rows harvested late; only the pressure approved.",
+      "action": "Measure the blend reaction enthalpy by TGA-DSC (REP-041 M2) before the heater package is frozen; qualify the hot-zone material; run the HAZOP relief cases and issue PSV-801; design the potassium condenser and the S2 oxidiser (AB-3801) and replace the fan screening pressure; raise the PFD-0800 / Narrative MoC (+2 psig → +2 mbar(g), 1 : 1, ramp definition).",
+      "discipline": "Process / mechanical",
+      "evidence": [
+        {
+          "ref": "FEED-PE-CAL-027",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-072",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-073",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-074",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-075",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-076",
+          "kind": "document"
+        },
+        {
+          "ref": "D-A800-03",
+          "kind": "decision"
+        },
+        {
+          "ref": "D-A800-02",
+          "kind": "decision"
+        },
+        {
+          "ref": "D-A800-01",
+          "kind": "decision"
+        },
+        {
+          "ref": "GAP-A-800-DF-bc42a3",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-800-DF-fc6e69",
+          "kind": "gap"
+        },
+        {
+          "ref": "PV-A-800-0407",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-800-0409",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-800-0411",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-800-0436",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-800-0448",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-800-0460",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-800-0473",
+          "kind": "value"
+        },
+        {
+          "ref": "PY-801",
+          "kind": "asset"
+        },
+        {
+          "ref": "FN-801",
+          "kind": "asset"
+        },
+        {
+          "ref": "F-801",
+          "kind": "asset"
+        },
+        {
+          "ref": "F-802",
+          "kind": "asset"
+        },
+        {
+          "ref": "RV-801",
+          "kind": "asset"
+        },
+        {
+          "ref": "PSV-801",
+          "kind": "asset"
+        }
+      ],
+      "image": "furnace"
+    }
+  ],
+  "checks": [
+    {
+      "command": "node tests/validate-a800-semantic.mjs",
+      "purpose": "A-800 record contract: populated design / operating fields carry approved, reviewer-initialled provenance",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "PASS: A-800 dry charging, dosing, furnace handoff, separate exhaust/relief/residue, argon, source qualification and guards.",
+      "ranAt": "2026-09-25T06:35:58.895Z"
+    },
+    {
+      "command": "node tests/validate-semantic-data.mjs",
+      "purpose": "data-layer invariants (registered sources, reviewer on approvals, conflict groups, identity holds)",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "{\"passed\":true,\"areas\":[{\"area\":\"A-100\",\"assets\":10,\"holds\":0,\"values\":310,\"approved\":10,\"conflicts\":2,\"variants\":12,\"gaps\":8},{\"area\":\"A-1000\",\"assets\":60,\"holds\":0,\"values\":293,\"approved\":22,\"conflicts\":3,\"variants\":19,\"gaps\":93},{\"area\":\"A-140\",\"assets\":17,\"holds\":0,\"values\":518,\"approved\":57,\"conflicts\":20,\"variants\":14,\"gaps\":32},{\"area\":\"A-160\",\"assets\":22,\"holds\":0,\"values\":431,\"approved\":14,\"conflicts\":7,\"variants\":12,\"gaps\":19},{\"area\":\"A-200\",\"assets\":67,\"holds\":0,\"values\":834,\"approved\":78,\"conflicts\":69,\"variants\":37,\"gaps\":145},{\"area\":\"A-2000\",\"assets\":49,\"holds\":0,\"values\":268,\"approved\":17,\"conflicts\":10,\"variants\":18,\"gaps\":76},{\"area\":\"A-300\",\"assets\":20,\"holds\":0,\"values\":302,\"approved\":25,\"conflicts\":13,\"variants\":17,\"gaps\":62},{\"area\":\"A-3000\",\"assets\":51,\"holds\":0,\"values\":337,\"approved\":13,\"conflicts\":3,\"variants\":11,\"gaps\":6},{\"area\":\"A-400\",\"assets\":23,\"holds\":0,\"values\":270,\"approved\":15,\"conflicts\":9,\"variants\":8,\"gaps\":40},{\"area\":\"A-4000\",\"assets\":11,\"holds\":0,\"values\":293,\"approved\":13,\"conflicts\":11,\"variants\":11,\"gaps\":13},{\"area\":\"A-500\",\"assets\":12,\"holds\":0,\"values\":213,\"approved\":18,\"conflicts\":5,\"variants\":5,\"gaps\":14},{\"area\":\"A-5000\",\"assets\":47,\"holds\":0,\"values\":476,\"approved\":16,\"conflicts\":10,\"variants\":10,\"gaps\":22},{\"area\":\"A-600\",\"assets\":31,\"holds\":0,\"values\":326,\"approved\":18,\"conflicts\":5,\"variants\":12,\"gaps\":17},{\"area\":\"A-6000\",\"assets\":6,\"holds\":0,\"values\":38,\"approved\":3,\"conflicts\":2,\"variants\":2,\"gaps\":5},{\"area\":\"A-700\",\"assets\":17,\"holds\":0,\"values\":433,\"approved\":39,\"conflicts\":5,\"variants\":7,\"gaps\":70},{\"area\":\"A-800\",\"assets\":25,\"holds\":0,\"values\":479,\"approved\":29,\"conflicts\":10,\"variants\":14,\"gaps\":35},{\"area\":\"A-900\",\"assets\":23,\"holds\":4,\"values\":243,\"approved\":20,\"conflicts\":11,\"variants\":11,\"gaps\":17}]}",
+      "ranAt": "2026-09-25T06:36:11.241Z"
+    },
+    {
+      "command": "node tests/validate-semantic-fields.mjs",
+      "purpose": "inspector field rendering of documented and applied values",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "PASS: documented pending and superseded values, alternatives, mixed units, missing values and identity holds.",
+      "ranAt": "2026-09-25T06:37:10.022Z"
+    }
+  ],
+  "decisions": [
+    {
+      "decisionId": "D-A800-MOC",
+      "assetPattern": "E-801|F-801|F-802|FN-801|H-801|H-802|H-803|MX-801|PSV-801|PY-801",
+      "property": "design.materialOfConstruction",
+      "approvedSourceDocId": "FEED-PE-MAT-002",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "gapNote": "MAT-002 does not cover 1 item(s) with an MDL-001 material only (RV-801): extend MAT-002 before those MoCs are approved."
+    },
+    {
+      "decisionId": "D-A800-01",
+      "assetPattern": "PY-801|MX-801",
+      "property": "operatingEnvelope.kbh4RatioKgPerKgRGO",
+      "approvedSourceDocId": "FEED-PE-DBM-001",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "DBM V2.0 / MOC-001 rule 1 : 1 KBH₄ : rGO (PFD V5.1.1, REP-019, REP-022 agree); DAT-008 item 2.6 (1.5) and MEB-010 R_KBH4 (1.5) superseded.",
+      "gapNote": "MoC: revise FEED-PE-DAT-008 (V1.1), FEED-PE-MEB-010 (V9) and Narrative §4.13 / capacity tables to 1 : 1 at the DBM V2.0 rate (411 / 535 kg/d rGO); restate H₂ evolution, K vapour, off-gas and reagent flows."
+    },
+    {
+      "decisionId": "D-A800-01",
+      "assetPattern": "PY-801|MX-801|F-802",
+      "property": "design.feedRateKgh",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "15.75 kg/h rGO (MEB-010), 25.2 / 37.8 kg/h (DAT-008), 28.07 kg/h (REP-019/022) vs DBM V2.0 17 / 22 kg/h rGO — basis withdrawn.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A800-01",
+      "assetPattern": "MX-801",
+      "property": "design.kbh4FeedRateKgh",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "37.8 kg/h is on the superseded 1.5 ratio.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A800-01",
+      "assetPattern": "PY-801",
+      "property": "operatingEnvelope.hydrogenEvolvedKgh",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Scales with the ratio and rate.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A800-01",
+      "assetPattern": "PY-801|F-801|F-802",
+      "property": "design.shaftPowerKw",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "MEB-010 duties on the withdrawn basis.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A800-01",
+      "assetPattern": "PY-801",
+      "property": "design.dutyKw",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "MEB-010 21.8 kW omits the ≈ 44 kW endothermic reaction heat (REP-022).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A800-02",
+      "assetPattern": "PY-801",
+      "property": "identity.designConcept",
+      "approvedSourceDocId": "FEED-PE-REP-019",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "REP-019 design closure: one continuous indirectly electrically heated screw-furnace train, 2 h at 750 °C under argon — adopted as the design-basis statement; REP-022's thermal correction carried below.",
+      "gapNote": "Close REP-022's five RED items before freezing the PY-801 package: (1) ratio (done, D-A800-01), (2) ramp vs 2 h residence, (3) pressure a few mbar not +2 psig, (4) molten-salt window 585–700 °C, (5) K vapour ≈ 20 kg/h — hot-end condenser; add E-802 product cooler identity (MEB-010) and a PSV-801 datasheet."
+    },
+    {
+      "decisionId": "D-A800-02",
+      "assetPattern": "PY-801",
+      "property": "design.retortGeometry",
+      "approvedSourceDocId": "FEED-PE-REP-019",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "1.10 m ID × 10 m retort, 1.05 m screw ≈ 0.285 rpm, five zones (REP-019).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A800-02",
+      "assetPattern": "PY-801",
+      "property": "design.installedHeatingDutyKw",
+      "approvedSourceDocId": "FEED-PE-REP-019",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "120 kW installed (REP-019) — to be re-checked against REP-022's 44 kW reaction heat (five times the 8 kW allowance).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A800-02",
+      "assetPattern": "PY-801",
+      "property": "operatingEnvelope.reactionHeatKw",
+      "approvedSourceDocId": "FEED-PE-REP-022",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "≈ 44 kW endothermic at 1:1 and 28.07 kg/h — adopted as the superseding thermal basis; PY-801 is a driven reactor, not a heater.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A800-02",
+      "assetPattern": "PY-801",
+      "property": "operatingEnvelope.reactionTemperatureC",
+      "approvedSourceDocId": "FEED-PE-MEB-010",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "750 °C (MEB-010, REP-019, REP-022 agree).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A800-02",
+      "assetPattern": "PY-801",
+      "property": "operatingEnvelope.residenceTimeHours",
+      "approvedSourceDocId": "FEED-PE-MEB-010",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "2 h (MEB-010, REP-019); REP-022 ramp inconsistency carried as follow-up.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A800-02",
+      "assetPattern": "PY-801",
+      "property": "operatingEnvelope.rampRateCPerMin",
+      "approvedSourceDocId": "FEED-PE-MEB-010",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "5 °C/min stated basis; REP-022 shows ≈ 4.5 h needed for heat-up plus cool-down — resolve.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A800-02",
+      "assetPattern": "PY-801",
+      "property": "operatingEnvelope.operatingPressureMbarg",
+      "approvedSourceDocId": "FEED-PE-MEB-010",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "−3 mbar(g) (MEB-010); REP-022: a few mbar positive suffices — reconcile sign and value in the P&ID basis.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A800-02",
+      "assetPattern": "PY-801",
+      "property": "operatingEnvelope.designInconsistencies",
+      "approvedSourceDocId": "FEED-PE-REP-022",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Recorded as open design-basis items (RED).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A800-02",
+      "assetPattern": "H-803",
+      "property": "design.capacityBasis",
+      "approvedSourceDocId": "FEED-PE-REP-019",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "3.75 m³ mass-flow wedge hopper, 120 kg reactive-inventory cap, live-bottom twin screws, load cells.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A800-02",
+      "assetPattern": "RV-801",
+      "property": "identity.designConcept",
+      "approvedSourceDocId": "FEED-PE-REP-019",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Rotary valve not accepted as both metering device and airlock.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A800-02",
+      "assetPattern": "MX-801",
+      "property": "operatingEnvelope.oxygenLimitPpm",
+      "approvedSourceDocId": "FEED-PE-DAT-008",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "≤ 200 ppm O₂ in mixer envelope (DAT-008).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A800-02",
+      "assetPattern": "MX-801",
+      "property": "operatingEnvelope.moistureLimitPpm",
+      "approvedSourceDocId": "FEED-PE-DAT-008",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "≤ 100 ppm H₂O in feed streams and inert gas (DAT-008) — KBH₄ hydrolysis hazard.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A800-02",
+      "assetPattern": "MX-801",
+      "property": "operatingEnvelope.argonPurity",
+      "approvedSourceDocId": "FEED-PE-DAT-008",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "≥ 99.999 % (DAT-008).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A800-02",
+      "assetPattern": "MX-801",
+      "property": "safety.hazardousClass",
+      "approvedSourceDocId": "FEED-PE-DAT-008",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Zone 1/2 gas + Zone 21/22 dust internal (DAT-008).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A800-02",
+      "assetPattern": "PY-801|E-801|FN-801",
+      "property": "safeguards.offGasBasis",
+      "approvedSourceDocId": "FEED-PE-REP-041",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "H₂/K-in-argon furnace gas: treat H₂ as a continuous process stream and K/B aerosol as fouling/materials exposure; segregate (S3); hot-end K condenser required.",
+      "gapNote": "Confirm S3 segregation and the K condenser on FEED-PFD-3000 / A-800 P&ID; PSV-801 and vent branch to ASME B31.12 (MAT-002 M-054)."
+    },
+    {
+      "decisionId": "D-A800-03",
+      "assetPattern": "PY-801",
+      "property": "operatingEnvelope.operatingPressureMbarg",
+      "approvedSourceDocId": "FEED-PE-DAT-072",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-24",
+      "rationale": "Basis Q5: +1 to +3 mbar(g), set point +2 mbar(g), argon pressure control with the fan decoupled downstream (REP-019 §11, REP-022 §9, REP-041 agree); mechanical envelope +250 / −50 mbar(g) stated separately. Supersedes the MEB-010 −3 mbar(g) approval in D-A800-02. Bases Q1–Q8 approved in review by QFL 2026-09-24 (FEED-PE-CAL-027).",
+      "gapNote": "PFD-0800 / Narrative correction (+2 psig → +2 mbar(g)); HOLD K6"
+    },
+    {
+      "decisionId": "D-A800-03",
+      "assetPattern": "PY-801",
+      "property": "operatingEnvelope.residenceTimeHours",
+      "approvedSourceDocId": "FEED-PE-MEB-010",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-24",
+      "rationale": "Basis Q4 (REP-022 RED item 2): the approved 2 h is the solids time in heated zones Z1–Z5 (REP-019 active heated zone), not total residence. Bases Q1–Q8 approved in review by QFL 2026-09-24 (FEED-PE-CAL-027).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A800-03",
+      "assetPattern": "PY-801",
+      "property": "operatingEnvelope.rampRateCPerMin",
+      "approvedSourceDocId": "FEED-PE-MEB-010",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-24",
+      "rationale": "Basis Q4 (REP-022 RED item 2): the approved 5 °C/min is the maximum solids heating rate through the 550–700 °C decomposition window, which must span ≥ 30 min (≥ 2.5 m of the 10 m heated length; vendor sets the zone profile) — not a whole-trajectory ramp. Bases Q1–Q8 approved in review by QFL 2026-09-24 (FEED-PE-CAL-027).",
+      "gapNote": "Vendor zone profile; TGA-DSC (HOLD K1)"
+    }
+  ],
+  "approvedValues": [
+    {
+      "valueId": "PV-A-800-0171",
+      "assetId": "H-802",
+      "property": "design.materialOfConstruction",
+      "value": "316L dry-contact surfaces, electropolished and grounded; PTFE/PFA/PVDF ancillary parts where qualified",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 52 (M-048)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-H-802",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS product-contact hopper with smooth dry-service finish; PTFE gaskets; airtight inert-service construction with strict moisture exclusion."
+      ]
+    },
+    {
+      "valueId": "PV-A-800-0173",
+      "assetId": "F-802",
+      "property": "design.materialOfConstruction",
+      "value": "316L dry-contact surfaces, electropolished and grounded; PTFE/PFA/PVDF ancillary parts where qualified",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 52 (M-048)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-F-802",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS feeder hopper/screws/product-contact parts; PTFE seals; airtight dry inert-service construction."
+      ]
+    },
+    {
+      "valueId": "PV-A-800-0175",
+      "assetId": "H-801",
+      "property": "design.materialOfConstruction",
+      "value": "316L electropolished, grounded and bonded; hardfaced wear locations",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 53 (M-049)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-H-801",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS product-contact hopper; grounded/bonded; airtight inert-service construction; PTFE seals."
+      ]
+    },
+    {
+      "valueId": "PV-A-800-0177",
+      "assetId": "F-801",
+      "property": "design.materialOfConstruction",
+      "value": "316L electropolished, grounded and bonded; hardfaced wear locations",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 53 (M-049)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-F-801",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS feeder hopper/screws/product-contact parts; PTFE seals; grounded/bonded inert-service construction."
+      ]
+    },
+    {
+      "valueId": "PV-A-800-0179",
+      "assetId": "MX-801",
+      "property": "design.materialOfConstruction",
+      "value": "316L electropolished, grounded and bonded; hardfaced wear locations",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 53 (M-049)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-MX-801",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS product-contact mixer and internals; PTFE/graphite-compatible dry-service seals; fully grounded and gas-tight for inert service. Use 316L only if corrosion testing requires."
+      ]
+    },
+    {
+      "valueId": "PV-A-800-0181",
+      "assetId": "H-803",
+      "property": "design.materialOfConstruction",
+      "value": "316L electropolished, grounded and bonded; hardfaced wear locations",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 53 (M-049)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-H-803",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS product-contact hopper; PTFE seals; grounded, gas-tight inert-service construction."
+      ]
+    },
+    {
+      "valueId": "PV-A-800-0183",
+      "assetId": "PY-801",
+      "property": "design.materialOfConstruction",
+      "value": "Alloy 602 CA or Alloy 601",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 54 (M-050)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-PY-801",
+      "resolves": [
+        "FEED-PE-MDL-001: High-purity alumina process-contact liner/retort; Inconel 601 hot-zone support; 316L SS cold-end piping."
+      ]
+    },
+    {
+      "valueId": "PV-A-800-0187",
+      "assetId": "E-801",
+      "property": "design.materialOfConstruction",
+      "value": "Alloy 601 or Ni 200/201 in hot/alkali-condensing sections; 316L minimum after controlled cooling",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 56 (M-052)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "WV-materialOfConstruc-E-801",
+      "resolves": [
+        "FEED-PE-MDL-001: 316L SS gas-side tubes/wetted parts; metal-seated/high-temperature compatible seals."
+      ]
+    },
+    {
+      "valueId": "PV-A-800-0189",
+      "assetId": "FN-801",
+      "property": "design.materialOfConstruction",
+      "value": "Alloy 601 or Ni 200/201 in hot/alkali-condensing sections; 316L minimum after controlled cooling",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 56 (M-052)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-FN-801",
+      "resolves": [
+        "FEED-PE-MDL-001: 304L SS gas-wetted casing/impeller; grounded, spark-resistant construction suitable for H₂-containing service. Use 316L only if condensate chemistry requires."
+      ]
+    },
+    {
+      "valueId": "PV-A-800-0193",
+      "assetId": "PSV-801",
+      "property": "design.materialOfConstruction",
+      "value": "316/316L austenitic welded construction to ASME B31.12",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 58 (M-054)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "WV-materialOfConstruc-PSV-801",
+      "resolves": [
+        "FEED-PE-MDL-001: 316L SS body/trim with high-temperature compatible seat/seals; 316L SS relief discharge piping."
+      ]
+    },
+    {
+      "valueId": "PV-A-800-0198",
+      "assetId": "PY-801",
+      "property": "operatingEnvelope.reactionTemperatureC",
+      "value": "750.0",
+      "unit": "°C",
+      "sourceDocId": "FEED-PE-MEB-010",
+      "sourceRevision": "V8.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 27 (T_rxn)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-800-0199",
+      "assetId": "PY-801",
+      "property": "operatingEnvelope.rampRateCPerMin",
+      "value": "5.0",
+      "unit": "°C/min",
+      "sourceDocId": "FEED-PE-MEB-010",
+      "sourceRevision": "V8.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 28 (dT/dt)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-24",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-800-0200",
+      "assetId": "PY-801",
+      "property": "operatingEnvelope.residenceTimeHours",
+      "value": "2.0",
+      "unit": "h",
+      "sourceDocId": "FEED-PE-MEB-010",
+      "sourceRevision": "V8.0",
+      "sourceLocation": "'Design Basis & Inputs'!row 29 (t_res)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-24",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-800-0218",
+      "assetId": "MX-801",
+      "property": "operatingEnvelope.oxygenLimitPpm",
+      "value": "≤ 200 ppm in mixer envelope",
+      "unit": "ppm",
+      "sourceDocId": "FEED-PE-DAT-008",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'MX-801 Datasheet'!row 28 (item 2.7)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-800-0219",
+      "assetId": "MX-801",
+      "property": "operatingEnvelope.moistureLimitPpm",
+      "value": "≤ 100 ppm in feed streams & inert gas",
+      "unit": "ppm",
+      "sourceDocId": "FEED-PE-DAT-008",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'MX-801 Datasheet'!row 29 (item 2.8)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-800-0223",
+      "assetId": "MX-801",
+      "property": "safety.hazardousClass",
+      "value": "Zone 1/2 gas (G) + Zone 21/22 dust (D) internal — confirm on HAC",
+      "unit": "",
+      "sourceDocId": "FEED-PE-DAT-008",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'MX-801 Datasheet'!row 33 (item 2.12)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "WV-hazardousClass-MX-801",
+      "resolves": [
+        "FEED-PE-MDL-001: Water-Reactive / Combustible Dust / Flammable Gas Evolution / Asphyxiant"
+      ]
+    },
+    {
+      "valueId": "PV-A-800-0232",
+      "assetId": "MX-801",
+      "property": "operatingEnvelope.argonPurity",
+      "value": "≥ 99.999 % (≤ 2 ppm O₂ at source)",
+      "unit": "",
+      "sourceDocId": "FEED-PE-DAT-008",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'MX-801 Datasheet'!row 55 (item 3.16)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-800-0308",
+      "assetId": "PY-801",
+      "property": "identity.designConcept",
+      "value": "One continuous, indirectly electrically heated screw-furnace train rated 28.07 kg/h rGO + 28.07 kg/h KBH₄, 2 h active-zone residence at 750 °C under high-purity argon",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-019",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive design conclusion",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-800-0309",
+      "assetId": "PY-801",
+      "property": "design.retortGeometry",
+      "value": "1.10 m ID × 10 m heated retort; 1.05 m screw at ≈ 0.285 rpm; five heater zones",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-019",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive design conclusion",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-800-0310",
+      "assetId": "PY-801",
+      "property": "design.installedHeatingDutyKw",
+      "value": "120",
+      "unit": "kW",
+      "sourceDocId": "FEED-PE-REP-019",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive design conclusion",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-800-0312",
+      "assetId": "PY-801",
+      "property": "operatingEnvelope.kbh4RatioKgPerKgRGO",
+      "value": "1 : 1 KBH₄ : rGO ruled (Narrative 1.5 : 1 superseded)",
+      "unit": "kg/kg rGO",
+      "sourceDocId": "FEED-PE-DBM-001",
+      "sourceRevision": "V2.0",
+      "sourceLocation": "§3.3 / MOC-001 change title",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-kbh4RatioKgPerKgRG-PY-801",
+      "resolves": [
+        "FEED-PE-MEB-010: 1.5 kg/kg rGO",
+        "FEED-PE-REP-019: 1.0 (PFD V5.1.1; DBM V2.0 ruling; 28.07 kg/h each); legacy 1.5:1 not used for PY-801 sizing kg/kg rGO"
+      ]
+    },
+    {
+      "valueId": "PV-A-800-0313",
+      "assetId": "PY-801",
+      "property": "operatingEnvelope.reactionHeatKw",
+      "value": "≈ +44 kW endothermic (KBH₄ → K(g) + B + 2 H₂, ≈ +307 kJ/mol) at 1:1 and 28.07 kg/h — five times the REP-019 allowance and three times the solids sensible heat",
+      "unit": "kW",
+      "sourceDocId": "FEED-PE-REP-022",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive conclusion",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-800-0314",
+      "assetId": "PY-801",
+      "property": "operatingEnvelope.designInconsistencies",
+      "value": "(1) dosing ratio 1:1 (PFD) vs 1.5 (Narrative V1.10 / MEB / DAT-008); (2) 5 °C/min over the whole trajectory needs ≈ 4.5 h — incompatible with 2 h residence; (3) +2 psig on a hydrogen vessel forces leaks outward — a few mbar suffices; (4) molten-salt window 585–700 °C; (5) K vapour ≈ 20 kg/h condensing below ≈ 570 °C",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-022",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive conclusion / reconciliation table",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-800-0315",
+      "assetId": "H-803",
+      "property": "design.capacityBasis",
+      "value": "3.75 m³ gross mass-flow wedge hopper, 1.20 m × 0.35 m slot outlet, twin live-bottom extraction screws, 120 kg reactive-inventory cap (≈ 2 h hold-up), load cells, closed inert vent filtration, no air-pulse",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-019",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive design conclusion / Recommendations",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-800-0316",
+      "assetId": "RV-801",
+      "property": "identity.designConcept",
+      "value": "A rotary valve alone is not accepted as both primary metering device and airlock (REP-019)",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-019",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Recommendations",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-800-0317",
+      "assetId": "PY-801",
+      "property": "safeguards.offGasBasis",
+      "value": "H₂ 12–35 Nm³/h (30–55 vol % in Ar) with 10–20 kg/h potassium vapour condensing below ≈ 570 °C into a pyrophoric, water-reactive liquid — treat H₂ as a continuous process stream and K/B aerosol as fouling/materials exposure; segregate (S3) from wet vents and from PY-701 CO gas; hot-end K condenser required",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-041",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive conclusion / §4",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-800-0318",
+      "assetId": "E-801",
+      "property": "safeguards.offGasBasis",
+      "value": "H₂ 12–35 Nm³/h (30–55 vol % in Ar) with 10–20 kg/h potassium vapour condensing below ≈ 570 °C into a pyrophoric, water-reactive liquid — treat H₂ as a continuous process stream and K/B aerosol as fouling/materials exposure; segregate (S3) from wet vents and from PY-701 CO gas; hot-end K condenser required",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-041",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive conclusion / §4",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-800-0319",
+      "assetId": "FN-801",
+      "property": "safeguards.offGasBasis",
+      "value": "H₂ 12–35 Nm³/h (30–55 vol % in Ar) with 10–20 kg/h potassium vapour condensing below ≈ 570 °C into a pyrophoric, water-reactive liquid — treat H₂ as a continuous process stream and K/B aerosol as fouling/materials exposure; segregate (S3) from wet vents and from PY-701 CO gas; hot-end K condenser required",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-041",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive conclusion / §4",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-800-0411",
+      "assetId": "PY-801",
+      "property": "operatingEnvelope.operatingPressureMbarg",
+      "value": "2",
+      "unit": "mbar(g)",
+      "sourceDocId": "FEED-PE-DAT-072",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'PY-801 Datasheet'!row 36 (item 4.1)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-24",
+      "held": false,
+      "conflictGroup": "CF-operatingPressureM-PY-801",
+      "resolves": [
+        "FEED-PE-MEB-010: -3.0 mbar(g)"
+      ]
+    }
+  ],
+  "openConflicts": [],
+  "identityHolds": [],
+  "gaps": [
+    {
+      "gapId": "GAP-A-800-CF-21a37c",
+      "assetId": "H-801",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-H-801"
+    },
+    {
+      "gapId": "GAP-A-800-CF-3c8dd0",
+      "assetId": "H-802",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-H-802"
+    },
+    {
+      "gapId": "GAP-A-800-CF-1b610c",
+      "assetId": "F-801",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-F-801"
+    },
+    {
+      "gapId": "GAP-A-800-CF-811a91",
+      "assetId": "F-802",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-F-802"
+    },
+    {
+      "gapId": "GAP-A-800-CF-a60e15",
+      "assetId": "MX-801",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-MX-801"
+    },
+    {
+      "gapId": "GAP-A-800-CF-35c0bf",
+      "assetId": "H-803",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-H-803"
+    },
+    {
+      "gapId": "GAP-A-800-CF-e5bc35",
+      "assetId": "PY-801",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-PY-801"
+    },
+    {
+      "gapId": "GAP-A-800-CF-7225dd",
+      "assetId": "FN-801",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-FN-801"
+    },
+    {
+      "gapId": "GAP-A-800-CF-cf7314",
+      "assetId": "PY-801",
+      "kind": "conflict",
+      "subject": "operatingEnvelope.kbh4RatioKgPerKgRGO",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-DBM-001, FEED-PE-MEB-010, FEED-PE-REP-019",
+      "status": "closed — FEED-PE-DBM-001 approved by QFL 2026-09-20",
+      "note": "CF-kbh4RatioKgPerKgRG-PY-801"
+    },
+    {
+      "gapId": "GAP-A-800-CF-29ffb9",
+      "assetId": "PY-801",
+      "kind": "conflict",
+      "subject": "operatingEnvelope.operatingPressureMbarg",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-DAT-072, FEED-PE-MEB-010",
+      "status": "closed — FEED-PE-DAT-072 approved by QFL 2026-09-24",
+      "note": "CF-operatingPressureM-PY-801"
+    },
+    {
+      "gapId": "GAP-A-800-DF-308b8f",
+      "assetId": "E-801|F-801|F-802|FN-801|H-801|H-802|H-803|MX-801|PSV-801|PY-801",
+      "kind": "decision follow-up",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "MAT-002 does not cover 1 item(s) with an MDL-001 material only (RV-801): extend MAT-002 before those MoCs are approved.",
+      "status": "open",
+      "note": "D-A800-MOC"
+    },
+    {
+      "gapId": "GAP-A-800-DF-795e1c",
+      "assetId": "PY-801|MX-801",
+      "kind": "decision follow-up",
+      "subject": "operatingEnvelope.kbh4RatioKgPerKgRGO",
+      "requiredSource": "MoC: revise FEED-PE-DAT-008 (V1.1), FEED-PE-MEB-010 (V9) and Narrative §4.13 / capacity tables to 1 : 1 at the DBM V2.0 rate (411 / 535 kg/d rGO); restate H₂ evolution, K vapour, off-gas and reagent flows.",
+      "status": "open",
+      "note": "D-A800-01"
+    },
+    {
+      "gapId": "GAP-A-800-DF-b6dd98",
+      "assetId": "PY-801",
+      "kind": "decision follow-up",
+      "subject": "identity.designConcept",
+      "requiredSource": "Close REP-022's five RED items before freezing the PY-801 package: (1) ratio (done, D-A800-01), (2) ramp vs 2 h residence, (3) pressure a few mbar not +2 psig, (4) molten-salt window 585–700 °C, (5) K vapour ≈ 20 kg/h — hot-end condenser; add E-802 product cooler identity (MEB-010) and a PSV-801 datasheet.",
+      "status": "open",
+      "note": "D-A800-02"
+    },
+    {
+      "gapId": "GAP-A-800-DF-95870e",
+      "assetId": "PY-801|E-801|FN-801",
+      "kind": "decision follow-up",
+      "subject": "safeguards.offGasBasis",
+      "requiredSource": "Confirm S3 segregation and the K condenser on FEED-PFD-3000 / A-800 P&ID; PSV-801 and vent branch to ASME B31.12 (MAT-002 M-054).",
+      "status": "open",
+      "note": "D-A800-02"
+    },
+    {
+      "gapId": "GAP-A-800-DF-bc42a3",
+      "assetId": "PY-801",
+      "kind": "decision follow-up",
+      "subject": "operatingEnvelope.operatingPressureMbarg",
+      "requiredSource": "PFD-0800 / Narrative correction (+2 psig → +2 mbar(g)); HOLD K6",
+      "status": "open",
+      "note": "D-A800-03"
+    },
+    {
+      "gapId": "GAP-A-800-DF-fc6e69",
+      "assetId": "PY-801",
+      "kind": "decision follow-up",
+      "subject": "operatingEnvelope.rampRateCPerMin",
+      "requiredSource": "Vendor zone profile; TGA-DSC (HOLD K1)",
+      "status": "open",
+      "note": "D-A800-03"
+    },
+    {
+      "gapId": "GAP-A-800-DB-9e42ea",
+      "assetId": "A-800 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.massFlowRateDesign10 (FEED-PE-DAT-008 item 3.2: Mass flow rate, design (+10 %))",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-800-DB-7c3509",
+      "assetId": "A-800 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.massFlowRateDesign10 (FEED-PE-DAT-008 item 3.8: Mass flow rate, design (+10 %))",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-800-DB-75358f",
+      "assetId": "A-800 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.designTemperatureProcessMinMdmt (FEED-PE-DAT-008 item 4.3: Design temperature (process, min / MDMT))",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-800-DB-6e412d",
+      "assetId": "A-800 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.mainShaftMotorRating (FEED-PE-DAT-008 item 5.13: Main shaft motor rating)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-800-DB-1b3c53",
+      "assetId": "A-800 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.totalInternalVolume (FEED-PE-DAT-008 item 6.4: Total internal volume)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-800-DB-c0c489",
+      "assetId": "A-800 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.workingVolumeAt50Fill (FEED-PE-DAT-008 item 6.5: Working volume (at 50 % fill))",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-800-DB-3f89c1",
+      "assetId": "A-800 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.operatingWeight (FEED-PE-DAT-008 item 6.10: Operating weight)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-800-DB-816813",
+      "assetId": "A-800 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.sealFaceMaterials (FEED-PE-DAT-008 item 7.10: Seal face materials)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-800-DB-baaddc",
+      "assetId": "A-800 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.kbhSdsMaterialCompatibilityLetter (FEED-PE-DAT-008 item 15.11: KBH₄ SDS + material compatibility letter)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-800-DB-566310",
+      "assetId": "A-800 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.prohibitedMaterialsNoAluminiumCopperBrassBronzeOrZincGalvanisedComponentsInAnyWettedPartKbhReactsWithTheseMetalsReleasingHThisExtendsToBoltsGasketsNameplateScrewsSightGlassFramesSmallFittingsEveryWettedItemRequiresVendorMaterialCertificationStainlessSteelSs316lSs304IsCompatibleTitaniumIsCompatibleInconelIsCompatible (FEED-PE-DAT-008 item 16.2: PROHIBITED MATERIALS — no aluminium, copper, brass, bronze, or zinc-galvanised components in any wetted part. KBH₄ reacts with these metals releasing H₂. This extends to bolts, gaskets, nameplate screws, sight-glass frames, small fittings — every wetted item requires vendor material certification. Stainless steel (SS316L, SS304) is compatible; titanium is compatible; Inconel is compatible.)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-800-DB-10ea33",
+      "assetId": "A-800 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.scaleConsideration63KgHThroughputIsAtTheLowerEndOfCommercialContinuousPloughshareCapacityTheSmallestLDigeKmContinuousUnitsKm300AndBelowMayBeAdequateButWillOperateAtHighTurndownAlternativesToEvaluateDuringVendorSelectionABatchPloughshareLDigeFkm50OrSimilarInCycledBatchModeWithIntermediateSurgeBContinuousPaddleMixerCContinuousRibbonBlenderVendorEnquiryShouldClarifyMinimumContinuousThroughputAtRequiredCv (FEED-PE-DAT-008 item 16.3: SCALE CONSIDERATION — 63 kg/h throughput is at the lower end of commercial continuous ploughshare capacity. The smallest Lödige KM continuous units (KM-300 and below) may be adequate but will operate at high turndown. Alternatives to evaluate during vendor selection: (a) batch ploughshare (Lödige FKM-50 or similar) in cycled batch mode with intermediate surge, (b) continuous paddle mixer, (c) continuous ribbon blender. Vendor enquiry should clarify minimum continuous throughput at required CV.)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-800-DB-89423a",
+      "assetId": "A-800 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.combustibleDustHazardRgoIsACombustibleCarbonaceousDustPerNfpa654AndProjectDhaAMixerEarthingBondingMandatoryBNoSoftSealMaterialsThatAccumulateStaticCVentRoutingMustAvoidDustTrapDeadLegsDDustFilterOnVentIfFittedMustBeCleanableAndAtexCertifiedForCombustibleDust (FEED-PE-DAT-008 item 16.6: COMBUSTIBLE DUST HAZARD — rGO is a combustible carbonaceous dust. Per NFPA 654 and project DHA: (a) mixer earthing / bonding mandatory, (b) no soft-seal materials that accumulate static, (c) vent routing must avoid dust-trap dead legs, (d) dust filter on vent (if fitted) must be cleanable and ATEX-certified for combustible dust.)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-800-DB-0cc0c3",
+      "assetId": "A-800 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.homogeneityValidationFatAtVendorWorksMustDemonstrateCv5ForKbhContentAcrossARepresentativeSampleGridAtTheDesignThroughputResidenceTimeAndBladeSpeedUseAnInertSurrogatePowderOfSimilarDensityAndParticleSizeIfKbhIsNotSuitableForFatHandlingInSituValidationDuringCommissioningViaStream805SamplingPerPIdSamplePoint (FEED-PE-DAT-008 item 16.7: HOMOGENEITY VALIDATION — FAT at vendor works must demonstrate CV < 5 % for KBH₄ content across a representative sample grid at the design throughput, residence time, and blade speed. Use an inert surrogate powder of similar density and particle size if KBH₄ is not suitable for FAT handling. In-situ validation during commissioning via stream 805 sampling per P&ID sample point.)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-800-DB-09041e",
+      "assetId": "A-800 datasheet",
+      "kind": "datasheet blank",
+      "subject": "datasheet.turndownDesignFor50100OfNominalThroughputViaUpstreamF801F802LiwFeederVfdsAtReducedThroughputResidenceTimeIncreasesProportionallyHoldUpRemainsApproximatelyConstantAtFillLevelSetpointVerifyMixingCvDoesNotDegradeAtMinimumThroughputCondition (FEED-PE-DAT-008 item 16.10: TURNDOWN — design for 50–100 % of nominal throughput via upstream F-801/F-802 LIW feeder VFDs. At reduced throughput, residence time increases proportionally (hold-up remains approximately constant at fill-level setpoint) — verify mixing CV does not degrade at minimum throughput condition.)",
+      "requiredSource": "Complete the datasheet",
+      "status": "open",
+      "note": ""
+    },
+    {
+      "gapId": "GAP-A-800-ID-71a2ed",
+      "assetId": "KBH₄ : rGO ratio",
+      "kind": "identity / naming conflict",
+      "subject": "1.0 kg/kg (PFD V5.1.1, DBM V2.0 MOC-001, REP-019, REP-022)",
+      "requiredSource": "1.5 kg/kg (FEED-PE-DAT-008 item 2.6, MEB-010 R_KBH4, Narrative V1.10 §4.13)",
+      "status": "open",
+      "note": "Datasheet and stream table still carry the superseded ratio — sets H₂ rate, K vapour, duty and reagent cost"
+    },
+    {
+      "gapId": "GAP-A-800-ID-d05f48",
+      "assetId": "C-801 / C-802 vs F-801 / F-802",
+      "kind": "identity / naming conflict",
+      "subject": "F-801 / F-802 loss-in-weight feeders (LST-001, PFD-0800, model)",
+      "requiredSource": "C-801 / C-802 screw feeders (MEB-010 energy table)",
+      "status": "open",
+      "note": "Tag mismatch"
+    },
+    {
+      "gapId": "GAP-A-800-ID-4434a2",
+      "assetId": "E-802",
+      "kind": "identity / naming conflict",
+      "subject": "Not on PFD-0800 / LST-001 / model",
+      "requiredSource": "MEB-010 indirect screw cooler for rGO-BCK solids; REP-023: A-800 discharge temperature and cooling responsibility must be assigned",
+      "status": "open",
+      "note": "Product cooling equipment undefined"
+    },
+    {
+      "gapId": "GAP-A-800-ID-1766ce",
+      "assetId": "A-800 rGO rate",
+      "kind": "identity / naming conflict",
+      "subject": "15.75 kg/h (MEB-010, 50 kg/h graphite); 25.2 kg/h (DAT-008)",
+      "requiredSource": "28.07 kg/h (REP-019/022, MEB V2.0 governing); DBM V2.0 rGO to A-800 411 / 535 kg/d (17 / 22 kg/h)",
+      "status": "open",
+      "note": "Four rates — realign to DBM V2.0"
+    },
+    {
+      "gapId": "GAP-A-800-ID-602f13",
+      "assetId": "PSV-801 / relief",
+      "kind": "identity / naming conflict",
+      "subject": "PSV-801 in model (equipmentId 109 shared with PY-801) and MAT-002 M-054",
+      "requiredSource": "No datasheet (PSV-701 has DAT-007; PSV-801 does not)",
+      "status": "open",
+      "note": "Datasheet missing"
+    }
+  ],
+  "inventory": [
+    {
+      "tag": "TR-801",
+      "name": "Contained rGO elevator",
+      "modelEquipmentId": 101,
+      "operation": "a800feed",
+      "parts": 586,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "H-801",
+      "name": "rGO feed hopper",
+      "modelEquipmentId": 102,
+      "operation": "a800feed",
+      "parts": 325,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "H-802",
+      "name": "Dry KBH₄ feed hopper",
+      "modelEquipmentId": 103,
+      "operation": "a800feed",
+      "parts": 331,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "F-801",
+      "name": "rGO weighing feeder",
+      "modelEquipmentId": 104,
+      "operation": "a800feed",
+      "parts": 362,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "F-802",
+      "name": "KBH₄ weighing feeder",
+      "modelEquipmentId": 105,
+      "operation": "a800feed",
+      "parts": 450,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "MX-801",
+      "name": "Inerted ploughshare mixer",
+      "modelEquipmentId": 106,
+      "operation": "a800feed",
+      "parts": 530,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 5,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "H-803",
+      "name": "Mixed solids surge hopper",
+      "modelEquipmentId": 107,
+      "operation": "a800feed",
+      "parts": 313,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 2,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "RV-801",
+      "name": "Furnace feed rotary valve",
+      "modelEquipmentId": 108,
+      "operation": "a800feed",
+      "parts": 77,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "PY-801",
+      "name": "Doping pyrolysis and cooling furnace",
+      "modelEquipmentId": 109,
+      "operation": "a800thermal",
+      "parts": 2163,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 12,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "E-801",
+      "name": "A-800 off-gas cooler",
+      "modelEquipmentId": 110,
+      "operation": "a800atmosphere",
+      "parts": 1040,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 2,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "FN-801",
+      "name": "A-800 pressure-control fan",
+      "modelEquipmentId": 111,
+      "operation": "a800atmosphere",
+      "parts": 246,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 2,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "AR-801",
+      "name": "Dry argon regulation and branches",
+      "modelEquipmentId": 112,
+      "operation": "a800atmosphere",
+      "parts": 2229,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "AIT-801",
+      "name": "O₂ / moisture / H₂ verification",
+      "modelEquipmentId": 113,
+      "operation": "a800atmosphere",
+      "parts": 270,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "PL-801",
+      "name": "Feeder access and equipment supports",
+      "modelEquipmentId": 114,
+      "operation": "a800feed",
+      "parts": 1080,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "LK-802",
+      "name": "Dry reagent charge lock",
+      "modelEquipmentId": 115,
+      "operation": "a800feed",
+      "parts": 461,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "BL-800-UTIL",
+      "name": "A-800 utilities and A-900 interface",
+      "modelEquipmentId": 116,
+      "operation": "a800atmosphere",
+      "parts": 135,
+      "designStatus": "interface",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "FE-801",
+      "name": "Dry reagent stair approach · fire point",
+      "modelEquipmentId": 120801,
+      "operation": "fire-safety",
+      "parts": 41,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "FE-802",
+      "name": "Doping service frontage · fire point",
+      "modelEquipmentId": 120802,
+      "operation": "fire-safety",
+      "parts": 41,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "ES-801",
+      "name": "Proposed emergency shower / eyewash",
+      "modelEquipmentId": 122022,
+      "operation": "containment-A-800",
+      "parts": 17,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model station tag; plant tag approval open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "ES-802",
+      "name": "Proposed emergency shower / eyewash",
+      "modelEquipmentId": 122023,
+      "operation": "containment-A-800",
+      "parts": 17,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model station tag; plant tag approval open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "PSV-801",
+      "name": "Dedicated furnace relief device; sizing unresolved",
+      "modelEquipmentId": "109",
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A800-REAGENT",
+      "name": "Sealed dry reagent-container supply",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A800-RELIEF",
+      "name": "Dedicated emergency relief destination unresolved",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A800-RESIDUE",
+      "name": "Segregated reactive residue receiver unresolved",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "E-802",
+      "name": "Indirect screw cooler for rGO-BCK solids (MEB-010 energy table) — not on PFD-0800 / LST-001 / model",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "candidate-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    },
+    {
+      "tag": "C-801",
+      "name": "MEB-010 tag for the rGO feeder (register / model: F-801)",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "candidate-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    },
+    {
+      "tag": "C-802",
+      "name": "MEB-010 tag for the KBH₄ feeder (register / model: F-802)",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "candidate-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    }
+  ],
+  "documents": [
+    {
+      "documentId": "FEED-PE-LST-001",
+      "title": "Equipment and Stream Register",
+      "revision": "V5.1",
+      "docType": "LST",
+      "control": "controlled",
+      "tier": "A",
+      "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-LST-001_Equipment-and-Stream-Register_V5.1.xlsx",
+      "valueRows": "20"
+    },
+    {
+      "documentId": "FEED-PE-PFD-001",
+      "title": "Process Flow Diagram",
+      "revision": "V5.1.1",
+      "docType": "PFD",
+      "control": "controlled (Draft - IFR)",
+      "tier": "A",
+      "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-PFD-001_Process-Flow-Diagram_V5.1.1.pdf",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-LST-007",
+      "title": "Control and Instrumentation Loop Register",
+      "revision": "V1.0",
+      "docType": "LST",
+      "control": "controlled (conceptual)",
+      "tier": "A",
+      "file": "7 Piping and Instrumentation Diagrams (P&IDs)\\FEED-PE-LST-007_Control-and-Instrumentation-Loop-Register_V1.0.xlsx",
+      "valueRows": "40"
+    },
+    {
+      "documentId": "FEED-PE-MDL-001",
+      "title": "Equipment Scale-Up Study",
+      "revision": "V1.8",
+      "docType": "MDL",
+      "control": "controlled",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\FEED-PE-MDL-001_Equipment-Scale-Up-Study_V1.8.xlsx",
+      "valueRows": "110"
+    },
+    {
+      "documentId": "FEED-PE-MAT-002",
+      "title": "MOC Selection Matrix",
+      "revision": "V1.2",
+      "docType": "MAT",
+      "control": "controlled",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.2.xlsx",
+      "valueRows": "24"
+    },
+    {
+      "documentId": "FEED-PE-DBM-001",
+      "title": "Design Basis Memorandum",
+      "revision": "V2.0",
+      "docType": "DBM",
+      "control": "controlled (approved)",
+      "tier": "B",
+      "file": "3 Design Basis Memorandum (DBM)\\FEED-PE-DBM-001_Design-Basis-Memorandum_V2.0.docx",
+      "valueRows": "1"
+    },
+    {
+      "documentId": "MODEL",
+      "title": "rGO Process Explorer model and semantic core",
+      "revision": "semantic v1",
+      "docType": "MODEL",
+      "control": "model evidence only",
+      "tier": "A",
+      "file": "dist/semantic/v1 (scripts/generate-reactor-semantic.mjs, scripts/expand-*-semantic.mjs)",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-MEB-010",
+      "title": "A-800 rGO Doping Pyrolysis Stream Table",
+      "revision": "V8.0",
+      "docType": "MEB",
+      "control": "controlled",
+      "tier": "A",
+      "file": "5 Mass and Energy Balances\\3 - FEED MEB Calculations\\FEED-PE-MEB-010_A-800-rGO-Doping-Pyrolysis-Stream-Table_V8.0.xlsx",
+      "valueRows": "13"
+    },
+    {
+      "documentId": "FEED-PE-DAT-008",
+      "title": "MX-801 Continuous Ploughshare Mixer Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (unsigned)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-008_MX-801-Continuous-Ploughshare-Mixer-Datasheet_V1.0.xlsx",
+      "valueRows": "100"
+    },
+    {
+      "documentId": "FEED-PE-REP-019",
+      "title": "PY-801 Pyrolysis and Hopper Design Closure",
+      "revision": "V1.0",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-019_PY-801-Pyrolysis-and-Hopper-Design-Closure_V1.0.docx",
+      "valueRows": "6"
+    },
+    {
+      "documentId": "FEED-PE-REP-022",
+      "title": "PY-801 KBH4 Doping Pyrolysis Furnace Assessment (first principles)",
+      "revision": "V1.0",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-022_PY-801-KBH4-Doping-Pyrolysis-Furnace-Assessment_V1.0.docx",
+      "valueRows": "2"
+    },
+    {
+      "documentId": "FEED-PE-REP-041",
+      "title": "Furnace Off-Gas and Vent Gas Assessment",
+      "revision": "V1.0",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-041_Furnace-Off-Gas-and-Vent-Gas-Assessment_V1.0.docx",
+      "valueRows": "3"
+    },
+    {
+      "documentId": "FEED-PE-CAL-020",
+      "title": "A-800 Hopper and Cooler Sizing on DBM V2.0",
+      "revision": "V1.0",
+      "docType": "CAL",
+      "control": "controlled (preliminary)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\4 - Equipment Calculation (CAL) Sheets\\FEED-PE-CAL-020_A-800-Hopper-and-Cooler-Sizing_V1.0.xlsx",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-DAT-044",
+      "title": "H-801 rGO Feed Hopper Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-044_H-801-rGO-Feed-Hopper-Datasheet_V1.0.xlsx",
+      "valueRows": "14"
+    },
+    {
+      "documentId": "FEED-PE-DAT-045",
+      "title": "H-802 KBH4 Day Hopper Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-045_H-802-KBH4-Day-Hopper-Datasheet_V1.0.xlsx",
+      "valueRows": "14"
+    },
+    {
+      "documentId": "FEED-PE-DAT-046",
+      "title": "H-803 Mixed-Solids Surge Hopper Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-046_H-803-Mixed-Solids-Surge-Hopper-Datasheet_V1.0.xlsx",
+      "valueRows": "15"
+    },
+    {
+      "documentId": "FEED-PE-DAT-047",
+      "title": "E-801 Off-Gas Cooler Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-047_E-801-Off-Gas-Cooler-Datasheet_V1.0.xlsx",
+      "valueRows": "14"
+    },
+    {
+      "documentId": "FEED-PE-DAT-048",
+      "title": "E-802 Indirect Screw Cooler Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-048_E-802-Indirect-Screw-Cooler-Datasheet_V1.0.xlsx",
+      "valueRows": "12"
+    },
+    {
+      "documentId": "FEED-PE-CAL-027",
+      "title": "A-800 PY-801 Thermal Basis, Off-Gas, Fan, Feeders and Inert Lock",
+      "revision": "V1.0",
+      "docType": "CAL",
+      "control": "controlled (preliminary)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\4 - Equipment Calculation (CAL) Sheets\\FEED-PE-CAL-027_A-800-PY-801-Thermal-Basis-Off-Gas-Fan-Feeders-and-Inert-Lock_V1.0.xlsx",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-DAT-072",
+      "title": "PY-801 Doping Pyrolysis Screw Furnace Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-072_PY-801-Doping-Pyrolysis-Screw-Furnace-Datasheet_V1.0.xlsx",
+      "valueRows": "38"
+    },
+    {
+      "documentId": "FEED-PE-DAT-073",
+      "title": "FN-801 Hydrogen Off-Gas Booster Fan Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-073_FN-801-Hydrogen-Off-Gas-Booster-Fan-Datasheet_V1.0.xlsx",
+      "valueRows": "17"
+    },
+    {
+      "documentId": "FEED-PE-DAT-074",
+      "title": "F-801 rGO Loss-in-Weight Feeder Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-074_F-801-rGO-Loss-in-Weight-Feeder-Datasheet_V1.0.xlsx",
+      "valueRows": "12"
+    },
+    {
+      "documentId": "FEED-PE-DAT-075",
+      "title": "F-802 KBH4 Loss-in-Weight Feeder Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-075_F-802-KBH4-Loss-in-Weight-Feeder-Datasheet_V1.0.xlsx",
+      "valueRows": "12"
+    },
+    {
+      "documentId": "FEED-PE-DAT-076",
+      "title": "RV-801A/B Furnace Feed Inert Lock Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-076_RV-801AB-Furnace-Feed-Inert-Lock-Datasheet_V1.0.xlsx",
+      "valueRows": "12"
+    }
+  ],
+  "images": [
+    {
+      "key": "overview",
+      "title": "01 | A-800 doping train — all register equipment, assembled",
+      "owners": [
+        "TR-801",
+        "H-801",
+        "H-802",
+        "LK-802",
+        "F-801",
+        "F-802",
+        "MX-801",
+        "H-803",
+        "RV-801",
+        "PY-801",
+        "E-801",
+        "FN-801",
+        "AR-801",
+        "AIT-801"
+      ],
+      "direction": [
+        1,
+        0.8,
+        1
+      ],
+      "alt": "elevator, hoppers, charge lock, feeders, mixer, surge hopper, rotary valve, furnace, off-gas cooler, fan, argon regulation and instrument assembly in assembled position"
+    },
+    {
+      "key": "feed",
+      "title": "02 | Solids feed: TR-801 elevator, H-801 / H-802 hoppers, LK-802 charge lock and F-801 / F-802 weighing feeders",
+      "owners": [
+        "TR-801",
+        "H-801",
+        "H-802",
+        "LK-802",
+        "F-801",
+        "F-802",
+        "PL-801"
+      ],
+      "frame": [
+        "H-801",
+        "H-802",
+        "LK-802",
+        "F-801",
+        "F-802"
+      ],
+      "zoom": 1.1,
+      "direction": [
+        -1,
+        0.55,
+        1
+      ],
+      "alt": "the two feed hoppers with the reagent charge lock and the loss-in-weight feeders on their access structure"
+    },
+    {
+      "key": "mixer",
+      "title": "03 | MX-801 inerted mixer, H-803 surge hopper and RV-801 rotary valve into PY-801",
+      "owners": [
+        "MX-801",
+        "H-803",
+        "RV-801",
+        "PY-801"
+      ],
+      "frame": [
+        "MX-801",
+        "H-803",
+        "RV-801"
+      ],
+      "zoom": 1.15,
+      "direction": [
+        1,
+        0.5,
+        -1
+      ],
+      "alt": "mixer discharging to the surge hopper and rotary valve at the furnace inlet"
+    },
+    {
+      "key": "furnace",
+      "title": "04 | PY-801 doping pyrolysis and cooling furnace with off-gas cooler E-801",
+      "owners": [
+        "PY-801",
+        "E-801",
+        "RV-801"
+      ],
+      "direction": [
+        1,
+        0.45,
+        1
+      ],
+      "alt": "the modelled furnace train with the off-gas cooler on its hot end"
+    },
+    {
+      "key": "atmosphere",
+      "title": "05 | Atmosphere control: AR-801 argon regulation, AIT-801 verification, FN-801 pressure-control fan and E-801",
+      "owners": [
+        "AR-801",
+        "AIT-801",
+        "FN-801",
+        "E-801",
+        "PY-801"
+      ],
+      "frame": [
+        "AR-801",
+        "AIT-801",
+        "FN-801",
+        "E-801"
+      ],
+      "zoom": 1.1,
+      "direction": [
+        -1,
+        0.5,
+        -1
+      ],
+      "alt": "dry-argon regulation branches, the gas verification assembly, the pressure-control fan and the off-gas cooler with the furnace behind"
+    },
+    {
+      "key": "access",
+      "title": "06 | Feeder access structure PL-801, fire points FE-801 / FE-802 and emergency stations ES-801 / ES-802",
+      "owners": [
+        "PL-801",
+        "FE-801",
+        "FE-802",
+        "ES-801",
+        "ES-802",
+        "H-801",
+        "H-802",
+        "F-801",
+        "F-802",
+        "MX-801",
+        "PY-801"
+      ],
+      "direction": [
+        0.35,
+        1,
+        0.3
+      ],
+      "percentiles": [
+        2,
+        97
+      ],
+      "alt": "plan-like view of the feed structure and furnace with the two fire points and two emergency stations"
+    }
+  ],
+  "related": [
+    {
+      "href": "./a700-review.html",
+      "label": "A-700 pyrolysis (upstream)"
+    },
+    {
+      "href": "./a3000-review.html",
+      "label": "Vent-gas assembly review (A-3000 S3 header)"
+    },
+    {
+      "href": "./a5000-review.html",
+      "label": "A-5000 thermal interfaces"
+    }
+  ],
+  "counts": {
+    "assets": 25,
+    "propertyRows": 479,
+    "approved": 29,
+    "openConflicts": 0,
+    "decisions": 4,
+    "holds": 0,
+    "gapsOpen": 25,
+    "gapsClosed": 10
+  }
+}

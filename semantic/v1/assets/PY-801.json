@@ -25,10 +25,10 @@
     "reactionTemperatureC": 750,
     "rampRateCPerMin": 5,
     "residenceTimeHours": 2,
-    "operatingPressureMbarg": -3,
     "kbh4RatioKgPerKgRGO": "1 : 1 KBH₄ : rGO ruled (Narrative 1.5 : 1 superseded)",
     "reactionHeatKw": "≈ +44 kW endothermic (KBH₄ → K(g) + B + 2 H₂, ≈ +307 kJ/mol) at 1:1 and 28.07 kg/h — five times the REP-019 allowance and three times the solids sensible heat",
-    "designInconsistencies": "(1) dosing ratio 1:1 (PFD) vs 1.5 (Narrative V1.10 / MEB / DAT-008); (2) 5 °C/min over the whole trajectory needs ≈ 4.5 h — incompatible with 2 h residence; (3) +2 psig on a hydrogen vessel forces leaks outward — a few mbar suffices; (4) molten-salt window 585–700 °C; (5) K vapour ≈ 20 kg/h condensing below ≈ 570 °C"
+    "designInconsistencies": "(1) dosing ratio 1:1 (PFD) vs 1.5 (Narrative V1.10 / MEB / DAT-008); (2) 5 °C/min over the whole trajectory needs ≈ 4.5 h — incompatible with 2 h residence; (3) +2 psig on a hydrogen vessel forces leaks outward — a few mbar suffices; (4) molten-salt window 585–700 °C; (5) K vapour ≈ 20 kg/h condensing below ≈ 570 °C",
+    "operatingPressureMbarg": 2
   },
   "processBasis": [
     {
@@ -111,7 +111,7 @@
     "source": "data/semantic/A-800",
     "approvedRows": 12,
     "heldRows": 0,
-    "pendingRows": 28,
+    "pendingRows": 66,
     "identityHold": null,
     "applied": "2026-09-25",
     "baseline": {

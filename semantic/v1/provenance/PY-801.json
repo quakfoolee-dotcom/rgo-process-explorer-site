@@ -95,9 +95,9 @@
       "confidence": "documented",
       "tier": "A",
       "conflictGroup": null,
-      "note": "From PFD note | D-A800-02: 5 °C/min stated basis; REP-022 shows ≈ 4.5 h needed for heat-up plus cool-down — resolve.",
+      "note": "From PFD note | D-A800-02: 5 °C/min stated basis; REP-022 shows ≈ 4.5 h needed for heat-up plus cool-down — resolve. | D-A800-03: Basis Q4 (REP-022 RED item 2): the approved 5 °C/min is the maximum solids heating rate through the 550–700 °C decomposition window, which must span ≥ 30 min (≥ 2.5 m of the 10 m heated length; vendor sets the zone profile) — not a whole-trajectory ramp. Bases Q1–Q8 approved in review by QFL 2026-09-24 (FEED-PE-CAL-027).",
       "reviewer": "QFL",
-      "reviewDate": "2026-09-20"
+      "reviewDate": "2026-09-24"
     },
     {
       "valueId": "PV-A-800-0200",
@@ -111,25 +111,9 @@
       "confidence": "documented",
       "tier": "A",
       "conflictGroup": null,
-      "note": "Based on screw speed and fill factor | D-A800-02: 2 h (MEB-010, REP-019); REP-022 ramp inconsistency carried as follow-up.",
+      "note": "Based on screw speed and fill factor | D-A800-02: 2 h (MEB-010, REP-019); REP-022 ramp inconsistency carried as follow-up. | D-A800-03: Basis Q4 (REP-022 RED item 2): the approved 2 h is the solids time in heated zones Z1–Z5 (REP-019 active heated zone), not total residence. Bases Q1–Q8 approved in review by QFL 2026-09-24 (FEED-PE-CAL-027).",
       "reviewer": "QFL",
-      "reviewDate": "2026-09-20"
-    },
-    {
-      "valueId": "PV-A-800-0201",
-      "property": "operatingEnvelope.operatingPressureMbarg",
-      "value": -3,
-      "unit": "mbar(g)",
-      "source": "FEED-PE-MEB-010",
-      "revision": "V8.0",
-      "location": "'Design Basis & Inputs'!row 30 (P_furn)",
-      "status": "approved",
-      "confidence": "documented",
-      "tier": "A",
-      "conflictGroup": null,
-      "note": "Slight negative — −1 to −5 mbar range | D-A800-02: −3 mbar(g) (MEB-010); REP-022: a few mbar positive suffices — reconcile sign and value in the P&ID basis.",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-20"
+      "reviewDate": "2026-09-24"
     },
     {
       "valueId": "PV-A-800-0308",
@@ -242,6 +226,22 @@
       "note": "PFD-3000 common header rated RED | D-A800-02: H₂/K-in-argon furnace gas: treat H₂ as a continuous process stream and K/B aerosol as fouling/materials exposure; segregate (S3); hot-end K condenser required.",
       "reviewer": "QFL",
       "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-800-0411",
+      "property": "operatingEnvelope.operatingPressureMbarg",
+      "value": 2,
+      "unit": "mbar(g)",
+      "source": "FEED-PE-DAT-072",
+      "revision": "V1.0",
+      "location": "'PY-801 Datasheet'!row 36 (item 4.1)",
+      "status": "approved",
+      "confidence": "documented (preliminary datasheet, budget enquiry)",
+      "tier": "A",
+      "conflictGroup": "CF-operatingPressureM-PY-801",
+      "note": "+1 to +3 mbar(g) range; argon pressure control, fan decoupled — D-A800-03 | D-A800-03: Basis Q5: +1 to +3 mbar(g), set point +2 mbar(g), argon pressure control with the fan decoupled downstream (REP-019 §11, REP-022 §9, REP-041 agree); mechanical envelope +250 / −50 mbar(g) stated separately. Supersedes the MEB-010 −3 mbar(g) approval in D-A800-02. Bases Q1–Q8 approved in review by QFL 2026-09-24 (FEED-PE-CAL-027).",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-24"
     }
   ]
 }
