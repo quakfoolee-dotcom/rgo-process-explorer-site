@@ -21,10 +21,12 @@ async function inflate(buffer,encoding="gzip"){
 function buildInWorker(selection,onProgress,signal){
  return new Promise((resolve,reject)=>{
   if(!globalThis.Worker){reject(Error('This configuration needs browser worker support. Please use an up-to-date browser.'));return;}
-  const worker=new Worker(new URL('./prepared-model-worker.js',import.meta.url),{type:'module'}),timer=setTimeout(()=>finish(Error('Preparing this configuration took too long. Please retry.')),120000);
+  // A full source build takes minutes on slower machines (≈ 3–4 min for any A-160 option); fail only on silence or an overall cap.
+  const worker=new Worker(new URL('./prepared-model-worker.js',import.meta.url),{type:'module'}),tooLong=()=>finish(Error('Preparing this configuration took too long. Please retry.'));
+  let timer=setTimeout(tooLong,300000);const cap=setTimeout(tooLong,1200000),alive=()=>{clearTimeout(timer);timer=setTimeout(tooLong,300000);};
   const abort=()=>finish(new DOMException('Loading cancelled','AbortError'));
-  function finish(error,bytes){clearTimeout(timer);signal?.removeEventListener('abort',abort);worker.terminate();error?reject(error):resolve(bytes);}
-  worker.onmessage=({data})=>{if(data.error)finish(Error(data.error));else if(data.bytes)finish(null,data.bytes);else onProgress(data.progress);};
+  function finish(error,bytes){clearTimeout(timer);clearTimeout(cap);signal?.removeEventListener('abort',abort);worker.terminate();error?reject(error):resolve(bytes);}
+  worker.onmessage=({data})=>{if(data.error)finish(Error(data.error));else if(data.bytes)finish(null,data.bytes);else{alive();onProgress(data.progress);}};
   worker.onerror=e=>finish(Error(e.message||'Could not prepare this configuration. Please retry.'));
   signal?.addEventListener('abort',abort,{once:true});if(signal?.aborted){abort();return;}worker.postMessage({selection});
  });
@@ -48,7 +50,7 @@ export async function loadPreparedModel(selection,{onProgress=()=>{},signal,forc
   onProgress({phase:'Loading selected configuration',progress:0});
   if(!force)bytes=await cache('get',cacheKey);
   if(bytes){source='cached configuration';try{const model=await decodePreparedModel(await inflate(bytes),{onProgress});if(configurationKey(model.preparedSelection)!==key)throw Error('Configuration mismatch');return {model,timing:{source,totalMs:performance.now()-started}};}catch{bytes=null;}}
-  onProgress({phase:'Preparing selected configuration',progress:0});bytes=await buildInWorker(selection,onProgress,signal);source='background build';
+  onProgress({phase:'Preparing selected configuration (first open takes a few minutes; later opens use the browser cache)',progress:0});bytes=await buildInWorker(selection,onProgress,signal);source='background build';
   void cache('put',cacheKey,bytes);
  }
  onProgress({phase:'Opening plant geometry',progress:0});const decodeStart=performance.now(),inflated=await inflate(bytes,encoding),inflateMs=performance.now()-decodeStart,reconstructStart=performance.now(),model=await decodePreparedModel(inflated,{onProgress}),reconstructMs=performance.now()-reconstructStart;
