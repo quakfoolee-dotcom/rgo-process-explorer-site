@@ -59,6 +59,11 @@ export function journeyDefinition(model,{pregBranch='A',reactorBranch='A',pump='
    move('recovery','Transfer cake to D-164',port('D-164 material inlet'),[], 'Selected conical dryer alternative.',[46,97,47]);
    process('recovery','Dry, cool and equalize D-164',47,port('D-164 dry product outlet'),'Illustrative isolated batch.',6);
   }
+ }else if(design==='elevated'){
+  move('recovery','Feed F-161 on the PL-161 deck through P-164',routeEnd('F-161 cake release'),[], 'Product remains as retained cake; filtrate returns to T-163 by a separate route.',[45,98,46]);
+  process('recovery','Filter and wash retained cake',46,routeEnd('F-161 cake release'),'The drip trays open only after washing; no product animation through the filtrate outlet.');
+  move('recovery','Drop washed cake by chute into D-164',port('D-164 material inlet'),[], 'Gravity chute through SDV-164-IN; TR-164 deleted.',[46,99,47]);
+  process('recovery','Dry, cool and equalize D-164',47,port('D-164 dry product outlet'),'Illustrative isolated batch in the paddle dryer.',6);
  }else{
   const integrated=design==='integrated',tag=integrated?'FD-166':'F-161',owner=integrated?92:46;
   move('recovery','Feed '+tag,port(tag+' material inlet'),[], 'Selected A-160 design configuration.',[45,98,owner]);

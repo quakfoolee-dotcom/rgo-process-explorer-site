@@ -51,7 +51,7 @@ export function accessKit(h,register){
  return{deck,flight,tower,beam,guardDeck,supportColumn,structural:s,mark};
 }
 
-export function buildPlantAccess(h,{a160}={}){
+export function buildPlantAccess(h,{a160,deck:optionDeck=null}={}){
  const register={basis:ACCESS_DESIGN,partIds:[],decks:[],flights:[],towers:[],links:[],tasks:[],lifting:[],findings:[]},k=accessKit(h,register),s=k.structural,{b,c,parts,setContext}=h;
  for(const [tag,cfg]of Object.entries(ACCESS_DESIGN.towers)){if(cfg.scenario&&cfg.scenario!==a160)continue;setContext(cfg.owner,tag+' permanent access');const t=k.tower(tag,cfg);
   if(tag==='PL-601'){
@@ -74,6 +74,13 @@ export function buildPlantAccess(h,{a160}={}){
    s.join(d1.part,t.landings.at(-1).part,[89.9,7.02,17.44],'PL-801 tower / approach bridge');const d2=k.deck('PL-801 platform entry bridge',[91.25,21.0],[92,22.25],7.08,{columns:false,openings:[{side:'west',min:21,max:22.25},{side:'east',min:21,max:22.25}]});s.join(d1.part,d2.part,[91.25,7.02,21.6],'PL-801 approach / entry bridge');const base=parts.find(p=>p.name==='PL-801 service deck');s.join(d2.part,base,[92,7.02,21.6],'PL-801 entry / existing platform');register.links.push([t.landings.at(-1).record.id,d1.record.id],[d1.record.id,d2.record.id],[d2.record.id,'PL-801 service platform']);
    const d={id:'PL-801 service platform',partId:base.id,min:[92,7.08,20.85],max:[96.2,7.08,22.35],guardParts:[],gates:[],openings:[{side:'west',min:21,max:22.25},{side:'north',min:93.6,max:94.8}]};register.decks.push(d);k.guardDeck(d,base);
    const walk=parts.find(p=>p.name==='PL-801 feeder service walkway'),wd={id:'PL-801 feeder walkway',partId:walk.id,min:[93.6,7.08,22.35],max:[94.8,7.08,30.45],guardParts:[],gates:[],openings:[{side:'south',min:93.6,max:94.8},{side:'west',min:24.4,max:25.6,kind:'service-gate'},{side:'west',min:28.9,max:30.1,kind:'service-gate'}]};register.decks.push(wd);k.guardDeck(wd,walk);register.links.push([d.id,wd.id]);
+  } else if(tag==='PL-161'){
+   // Bridge beside the tower from its south top landing to the gate in the deck's south guardrail.
+   const deck=optionDeck,[gx0,gx1]=deck.gate,top=t.landings.at(-1),z0=cfg.z,z1=deck.min[2],y=cfg.levels.at(-1);
+   const bridge=k.deck('PL-161 stair bridge',[gx0,z0],[gx1,z1],y,{supportX:[gx0-.16,gx1+.16],supportZ:[z0-.16,z1-1.2],openings:[{side:'west',min:z0,max:z0+ACCESS_DESIGN.criteria.landingDepth},{side:'north',min:gx0,max:gx1}]});
+   s.join(bridge.part,top.part,[gx0,y-.06,z0+.6],'PL-161 bridge / top landing');const south=parts.find(p=>p.id===deck.southPanel);s.join(bridge.part,south,[(gx0+gx1)/2,y-.015,z1],'PL-161 bridge / operating deck');
+   register.decks.push({id:'PL-161 operating deck',partId:deck.southPanel,min:deck.min,max:deck.max,guardParts:deck.guardIds,openings:[{side:'south',min:gx0,max:gx1}],routeScreen:false,qualification:'Deck +4.4 m over D-164 (Option E). Plate-shifting, cloth-change and lifting envelopes are vendor data (hold J9).'});
+   register.links.push([top.record.id,bridge.record.id],[bridge.record.id,'PL-161 operating deck']);
   } else {
    const d1=k.deck('PL-166 stair return bridge',[-14.3,-30],[-13.05,-21.75],5.9,{supportX:[-14.32,-12.89],openings:[{side:'west',min:-30,max:-28.8},{side:'north',min:-14.3,max:-13.05}]});const link=k.deck('PL-166 top landing link',[-14.5,-30],[-14.3,-28.8],5.9,{columns:false,openings:[{side:'west',min:-30,max:-28.8},{side:'east',min:-30,max:-28.8}]});s.join(link.part,d1.part,[-14.3,5.84,-29.4],'PL-166 landing / return bridge');s.join(link.part,t.landings.at(-1).part,[-14.3,5.84,-29.4],'PL-166 stair / return bridge');register.links.push([t.landings.at(-1).record.id,d1.record.id]);const floor=parts.find(p=>p.name==='PL-166 grating strip'),girder=parts.find(p=>p.name==='PL-166 edge girder'&&Math.abs(p.position.z+21.75)<.01);s.join(d1.part,girder,[-13.675,5.84,-21.75],'PL-166 bridge / filter platform');register.decks.push({id:'PL-166 filter platform',partId:floor.id,min:[-16.25,5.9,-21.75],max:[-12.6,5.9,-18.25],guardParts:parts.filter(p=>/^PL-166 (perimeter guardrail|guardrail post|toe plate)$/.test(p.name)).map(p=>p.id),openings:[{side:'south',min:-14.3,max:-13.05}],routeScreen:false,qualification:'Stair entry is connected; task routes around the filter footprint require vendor working-envelope review.'});register.links.push([d1.record.id,'PL-166 filter platform']);
   }

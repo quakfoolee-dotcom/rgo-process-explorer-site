@@ -125,12 +125,15 @@ export function buildThermalUtilities(h,{design='baseline',routePlanner=thermalR
  if(design==='baseline'){
   setContext(47,'D-164 closed shelf thermal circuit');const a=edges.find(e=>e.name==='D-164 shelf heat SUP neck'),z=edges.find(e=>e.name==='D-164 shelf heat RET neck');const pipe=h.tube(a.a,z.a,.035,'D-164 internal shelf utility riser');edges.pop();P(pipe,[a.a,z.a],'D-164 conceptual shelf utility passage','hw','consumer');
   addConsumer('D-164',47,'A-160','hw','BL-TH164-SUP','BL-TH164-RET','D-164 conceptual shelf utility passage',null,'Hot water is a proposed shelf-heating allocation; drying temperature / vacuum / duty require qualification');
+ }else if(design==='elevated'){
+  addConsumer('D-164',47,'A-160','hw','BL-TH164-SUP','BL-TH164-RET','D-164 jacket thermal passage',null,'Tempered water ≤ 70 °C to the paddle-dryer jacket through a local tempering loop (FEED-PE-DAT-068 3.3); the loop itself is not modeled');
+  addConsumer('KO-164',53,'A-160','cw','BL-CS164','BL-CR164','KO-164 condenser cooling passage',null,'Cooling water 32 / 37 °C; 9 K approach to the 46 °C condensing temperature (FEED-PE-DAT-069, hold J5)');
  }else{
   addConsumer('E-166',94,'A-160','cw','BL-XV-166-CS','BL-XV-166-CR','E-166 cooling jacket passage');
  }
  // Unselected thermal media remain closed, grey, and available for local tracing.
  const unresolved=[{id:'HX-601',tag:'HX-601',owner:73,area:'A-600',service:'unresolved',inTag:'BL-HT601-IN',outTag:'BL-HT601-RET',passageName:'HX-601 separate thermal passage',note:'PFD typical dryer air inlet 140–145 °C; outlet 80–90 °C. Final values, heating medium and evaporation duty remain unselected. 90 °C hot water alone cannot provide this inlet-air target; no connection is assumed'}];
- if(design!=='baseline')unresolved.push({id:EQUIPMENT[design==='integrated'?92:47].tag,tag:EQUIPMENT[design==='integrated'?92:47].tag,owner:design==='integrated'?92:47,area:'A-160',service:'unresolved',inTag:'BL-166-HEAT',outTag:'BL-166-HRET',passageName:'A-160 dryer thermal jacket passage',otherPorts:['BL-166-COOL','BL-166-CRET'],note:'Alternative dryer hot/cold selection needs isolated TCU and qualified temperatures; all four primary interfaces remain blinded'});
+ if(!['baseline','elevated'].includes(design))unresolved.push({id:EQUIPMENT[design==='integrated'?92:47].tag,tag:EQUIPMENT[design==='integrated'?92:47].tag,owner:design==='integrated'?92:47,area:'A-160',service:'unresolved',inTag:'BL-166-HEAT',outTag:'BL-166-HRET',passageName:'A-160 dryer thermal jacket passage',otherPorts:['BL-166-COOL','BL-166-CRET'],note:'Alternative dryer hot/cold selection needs isolated TCU and qualified temperatures; all four primary interfaces remain blinded'});
  for(const row of unresolved){row.status='unresolved';row.circuit='unresolved-'+row.id;row.supplyPoint=port(row.inTag).point;row.returnPoint=port(row.outTag).point;row.dutyKW=null;row.flowM3H=null;consumers.push(row);for(const tag of[row.inTag,row.outTag,...row.otherPorts||[]]){const p=port(tag);setContext(p.reactor,row.tag+' unresolved utility boundary');blind(p.point,p.axis,tag,row.circuit,row.note,p.radius);p.role='blinded';}}
 
  // Explicitly resolve existing utility-only geometry before adding distribution.

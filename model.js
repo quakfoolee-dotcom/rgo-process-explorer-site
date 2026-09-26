@@ -299,7 +299,7 @@ const drying=buildDrying({...helpers,filtration});
 onPhase?.('drying');
 const cakeTransfer=buildCakeTransfer({...helpers,filtration,drying});
 onPhase?.('cakeTransfer');
-const accessSystem=buildPlantAccess(helpers,{a160});
+const accessSystem=buildPlantAccess(helpers,{a160,deck:preg.alternative?.deck||null});
 onPhase?.('accessSystem');
 buildAccessPipeSupports({...helpers,furnace,doping});
 const accessIndications=buildAccessIndications(helpers,a160);
