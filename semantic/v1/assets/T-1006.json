@@ -32,12 +32,13 @@
     "Sheet is Draft - Not for Use with XXX revision. Cooling is a separate utility; duties and limits are unqualified. pH, temperature, level and mixing checks are functional concepts only. Legacy spare return connections remain capped; the modeled normal A-2000 backwash return is distinct. Aeration/oxidation remains future provision and is not invented as installed equipment."
   ],
   "identity": {
-    "designConcept": "Acid recovery (150–200 t/d spent-acid reconcentration, 1.5–4.4 MW at 150–200 °C) removes ≈ 95 % of the A-1000 load — 'largest single design lever in the project' (REP-026 F-39); A-1000/A-2000 not to be frozen before the recovery decision"
+    "designConcept": "Acid recovery (150–200 t/d spent-acid reconcentration, 1.5–4.4 MW at 150–200 °C) removes ≈ 95 % of the A-1000 load — 'largest single design lever in the project' (REP-026 F-39); A-1000/A-2000 not to be frozen before the recovery decision",
+    "acidRoute": "Spent-acid recovery, REP-039 Route 2 + 6: TLGO separated from 50–60 wt % acid in A-300 (Route 2) and the GIC from the A-160 acid before washing (Route 6); the filtrates are reconcentrated and recycled, so A-1000 treats only the residual (≈ 6–15 t/d acid). Gated on M1 (filterability at 50–60 wt %), M2 (recycled-acid quality) and M3 (Mn(VII) = 0 before heating); Route 0 (neutralise everything in A-1000) is the fallback"
   },
   "dataLayer": {
     "area": "A-1000",
     "source": "data/semantic/A-1000",
-    "approvedRows": 3,
+    "approvedRows": 4,
     "heldRows": 0,
     "pendingRows": 18,
     "identityHold": null,

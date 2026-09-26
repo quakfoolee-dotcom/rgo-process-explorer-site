@@ -98,6 +98,22 @@
       "note": "D-A1000-01: Acid recovery is the governing design lever for A-1000 / A-2000 (REP-026 F-39, REP-039); A-1000 not to be frozen before it.",
       "reviewer": "QFL",
       "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-1000-0294",
+      "property": "identity.acidRoute",
+      "value": "Spent-acid recovery, REP-039 Route 2 + 6: TLGO separated from 50–60 wt % acid in A-300 (Route 2) and the GIC from the A-160 acid before washing (Route 6); the filtrates are reconcentrated and recycled, so A-1000 treats only the residual (≈ 6–15 t/d acid). Gated on M1 (filterability at 50–60 wt %), M2 (recycled-acid quality) and M3 (Mn(VII) = 0 before heating); Route 0 (neutralise everything in A-1000) is the fallback",
+      "unit": null,
+      "source": "FEED-PE-REP-039",
+      "revision": "V1.0",
+      "location": "Routes 2 and 6; tests M1–M3",
+      "status": "approved",
+      "confidence": "review required",
+      "tier": "B",
+      "conflictGroup": null,
+      "note": "Basis of the A-300 V1.1 revision (FEED-PE-CAL-032 V1.1) | D-A1000-03: Spent-acid recovery (REP-039 Route 2 + 6) is the FEED base case for the wet train, gated on M1 (filterability at 50–60 wt %), M2 (recycled-acid quality) and M3 (Mn(VII) = 0 before heating); Route 0 (neutralise) stays as the fallback envelope. Answers the acid-recovery decision D-A1000-01 left open. Applied first to A-300 (bases RA1–RA6, FEED-PE-CAL-032 V1.1); A-160 (Route 6), the concentrator package and the residual A-1000 sizing follow.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-25"
     }
   ]
 }

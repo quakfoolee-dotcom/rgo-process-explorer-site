@@ -1,7 +1,7 @@
 {
- "version": "002edd7",
- "date": "2026-09-25",
- "generated": "2026-09-25T23:14:05.387Z",
+ "version": "e6d7c7c",
+ "date": "2026-09-26",
+ "generated": "2026-09-26T10:37:24.170Z",
  "revision": "r2",
  "reviewer": {
   "initials": "QFL",
@@ -496,7 +496,7 @@
    "reservedSpaceFindings": 0,
    "review": {
     "href": "./a300-review.html",
-    "revision": "r3",
+    "revision": "r4",
     "reviewer": "QFL"
    }
   },
@@ -587,7 +587,7 @@
    "reservedSpaceFindings": 0,
    "review": {
     "href": "./a1000-review.html",
-    "revision": "r2",
+    "revision": "r3",
     "reviewer": "QFL"
    }
   },
@@ -4431,7 +4431,7 @@
     {
      "kind": "finding",
      "id": "A1000-05",
-     "label": "A1000-05 · Containment, access and inbound interfaces — Model provision — retention unverified (A-1000 review r2 · QFL)",
+     "label": "A1000-05 · Containment, access and inbound interfaces — Model provision — retention unverified (A-1000 review r3 · QFL)",
      "href": "./a1000-review.html#A1000-05"
     },
     {

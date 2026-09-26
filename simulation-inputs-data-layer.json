@@ -1322,6 +1322,13 @@
      "unit": "kg",
      "source": "FEED-PE-DAT-097",
      "location": "'T-303 Datasheet'!row 19 (item 2.4)",
+     "status": "superseded"
+    },
+    {
+     "value": "64915",
+     "unit": "kg",
+     "source": "FEED-PE-DAT-097",
+     "location": "'T-303 Datasheet V1.1'!row 19 (item 2.4)",
      "status": "conflict"
     }
    ]
@@ -1374,6 +1381,13 @@
      "unit": "m³",
      "source": "FEED-PE-DAT-097",
      "location": "'T-303 Datasheet'!row 23 (item 3.1)",
+     "status": "superseded"
+    },
+    {
+     "value": "44.8",
+     "unit": "m³",
+     "source": "FEED-PE-DAT-097",
+     "location": "'T-303 Datasheet V1.1'!row 23 (item 3.1)",
      "status": "candidate"
     }
    ]

@@ -71,6 +71,16 @@
       "availability": "indexed by data layer",
       "dataLayer": true,
       "file": "B. Technical Reports\\FEED-PE-REP-037_A-300-Fixing-and-Quench-Assessment_V1.0.docx"
+    },
+    {
+      "documentId": "FEED-PE-REP-039",
+      "title": "Sulphuric Acid Recovery vs Neutralisation (cross-area)",
+      "revision": "V1.0",
+      "page": null,
+      "status": "controlled",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "B. Technical Reports\\FEED-PE-REP-039_Sulphuric-Acid-Recovery-vs-Neutralisation_V1.0.docx"
     }
   ]
 }

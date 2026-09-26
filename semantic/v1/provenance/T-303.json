@@ -196,18 +196,18 @@
       "reviewDate": "2026-09-20"
     },
     {
-      "valueId": "PV-A-300-0303",
+      "valueId": "PV-A-300-0431",
       "property": "identity.designConcept",
-      "value": "Option B — cooled in-line dilution loop (E-303) to ≈ 45 wt % H₂SO₄, designed to become the first stage of Option C (partial dilution, separation and acid recovery, REP-039) if test M5 proves filterability; Option A (full dilution with ≥ 220 t water) not adopted",
+      "value": "Option B to 55 wt % H₂SO₄ (REP-039 Route 2): cooled in-line dilution loop (E-303), whole batch quenched with H₂O₂ before separation (M3 interlock), TLGO separated from the 55 wt % acid (C-301 envelope; M1 decides decanter or PTFE-cloth pressure filter) and the filtrate sent to the spent-acid concentrator; Route 0 (neutralise in A-1000) is the fallback",
       "unit": null,
-      "source": "FEED-PE-REP-037",
+      "source": "FEED-PE-REP-039",
       "revision": "V1.0",
-      "location": "Recommendation (§7 options table)",
+      "location": "Route 2 (separation at 50–60 wt %)",
       "status": "approved",
       "confidence": "review required",
       "tier": "B",
-      "conflictGroup": null,
-      "note": "REP-037 grades Option B GREEN; basis of FEED-PE-CAL-032 | D-A300-05: REP-037 Option B adopted as the A-300 base case: the heat of dilution of the R-201 acid is removed by a cooled in-line dilution loop (E-303, ≈ 2.0 MW on cooling water) instead of ≥ 220 t of dilution water; T-303 liquor ≈ 45 wt % H₂SO₄ (35 t water per batch, 75 m³ T-303), C-301 on 12 m³/h. Designed to become the first stage of Option C (REP-039 acid recovery) if the filterability test M5 succeeds. Option A (as drawn) not adopted. Bases QB1–QB8 approved in review by QFL 2026-09-25 (FEED-PE-CAL-032).",
+      "conflictGroup": "CF-designConcept-T-303",
+      "note": "Adopted by D-A1000-03 (Route 2 + 6); basis of FEED-PE-CAL-032 V1.1 | D-A300-05: REP-037 Option B adopted as the A-300 base case: the heat of dilution of the R-201 acid is removed by a cooled in-line dilution loop (E-303, ≈ 2.0 MW on cooling water) instead of ≥ 220 t of dilution water; T-303 liquor ≈ 45 wt % H₂SO₄ (35 t water per batch, 75 m³ T-303), C-301 on 12 m³/h. Designed to become the first stage of Option C (REP-039 acid recovery) if the filterability test M5 succeeds. Option A (as drawn) not adopted. Bases QB1–QB8 approved in review by QFL 2026-09-25 (FEED-PE-CAL-032). | D-A300-06: Route 2 (decision D-A1000-03): the Option B loop now dilutes to 55 wt % H₂SO₄ (21.0 t water, 44.8 m³ in a 60 m³ T-303; E-303 1.7 MW / 310 m²; P-307 220 m³/h), the whole batch is quenched with H₂O₂ before separation (M3 interlock), TLGO is separated from the 55 wt % acid and the 38.4 m³ filtrate per batch goes to the spent-acid concentrator (T-304 50 m³, P-306 11 m³/h). Supersedes the 45 wt % statement of D-A300-05. Bases RA1–RA6 approved in review by QFL 2026-09-25 (FEED-PE-CAL-032 V1.1).",
       "reviewer": "QFL",
       "reviewDate": "2026-09-25"
     }

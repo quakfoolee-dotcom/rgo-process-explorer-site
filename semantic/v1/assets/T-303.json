@@ -38,14 +38,14 @@
     "oxygenEvolution": "310–340 Nm³ O₂ per batch, ≈ 160 Nm³/h peak over a 2 h dose; segregate from the common A-3000 header carrying H₂ (F-46 Critical) — wet scrubber only"
   },
   "identity": {
-    "designConcept": "Option B — cooled in-line dilution loop (E-303) to ≈ 45 wt % H₂SO₄, designed to become the first stage of Option C (partial dilution, separation and acid recovery, REP-039) if test M5 proves filterability; Option A (full dilution with ≥ 220 t water) not adopted"
+    "designConcept": "Option B to 55 wt % H₂SO₄ (REP-039 Route 2): cooled in-line dilution loop (E-303), whole batch quenched with H₂O₂ before separation (M3 interlock), TLGO separated from the 55 wt % acid (C-301 envelope; M1 decides decanter or PTFE-cloth pressure filter) and the filtrate sent to the spent-acid concentrator; Route 0 (neutralise in A-1000) is the fallback"
   },
   "dataLayer": {
     "area": "A-300",
     "source": "data/semantic/A-300",
     "approvedRows": 10,
     "heldRows": 0,
-    "pendingRows": 66,
+    "pendingRows": 84,
     "identityHold": null,
     "applied": "2026-09-26",
     "baseline": {
