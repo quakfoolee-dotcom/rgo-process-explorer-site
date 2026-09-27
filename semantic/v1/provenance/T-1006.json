@@ -114,6 +114,22 @@
       "note": "Basis of the A-300 V1.1 revision (FEED-PE-CAL-032 V1.1) | D-A1000-03: Spent-acid recovery (REP-039 Route 2 + 6) is the FEED base case for the wet train, gated on M1 (filterability at 50–60 wt %), M2 (recycled-acid quality) and M3 (Mn(VII) = 0 before heating); Route 0 (neutralise) stays as the fallback envelope. Answers the acid-recovery decision D-A1000-01 left open. Applied first to A-300 (bases RA1–RA6, FEED-PE-CAL-032 V1.1); A-160 (Route 6), the concentrator package and the residual A-1000 sizing follow.",
       "reviewer": "QFL",
       "reviewDate": "2026-09-25"
+    },
+    {
+      "valueId": "PV-A-1000-0408",
+      "property": "design.feedBasis",
+      "value": "Route 2 + 6 residual: 615 m³/d design (25.6 m³/h), ≈ 495 m³/d normal; 24.3 t/d H₂SO₄ design (18.6 firm + 5.8 organics-bleed allowance), HCl 3 t/d (M3) to 18.2 t/d (PFD dose, bounding)",
+      "unit": "m³/d",
+      "source": "FEED-PE-CAL-034",
+      "revision": "V1.0",
+      "location": "'Residual balance' (RS1)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "CF-feedBasis-T-1006",
+      "note": "D-A1000-05; replaces the undecided basis of D-A1000-01 | D-A1000-05: A-1000 sized for the REP-039 Route 2 + 6 residual on bases RS1–RS9 (FEED-PE-CAL-034): 615 m³/d and 24.3 t/d H₂SO₄ design, HCl bounding at the PFD dose; lime-only HDS (R-1001 pH 5–6, R-1002 pH 9.8–10, R-1004, new thickener CL-1001, DC-1001); Ca(OH)₂ 20.7–40.5 t/d; gypsum 35.8–45.6 t/d; 0.34 MW, no cooler. Route 0 (REP-038) stays the fallback envelope. Approved in review by QFL 2026-09-27.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-27"
     }
   ]
 }

@@ -17,7 +17,8 @@
     "capacityM3": null,
     "designPressure": null,
     "designTemperature": null,
-    "materialOfConstruction": "Dual-laminate FRP/HDPE/rubber-lined CS on raw-acid stages; 316L or coated CS only after pH is reliably ≥6.5"
+    "materialOfConstruction": "Dual-laminate FRP/HDPE/rubber-lined CS on raw-acid stages; 316L or coated CS only after pH is reliably ≥6.5",
+    "feedBasis": "Route 2 + 6 residual: 615 m³/d design (25.6 m³/h), ≈ 495 m³/d normal; 24.3 t/d H₂SO₄ design (18.6 firm + 5.8 organics-bleed allowance), HCl 3 t/d (M3) to 18.2 t/d (PFD dose, bounding)"
   },
   "operatingEnvelope": {
     "feedComposition": "0.64 mol/L H₂SO₄ + 0.23 mol/L HCl: 179 t/d H₂SO₄, 24 t/d HCl, 129 kmol/d H₃PO₄; 1,070 mg/L Mn, 760 mg/L K, 1,400 mg/L P — dilute acid, not wastewater"
@@ -38,9 +39,9 @@
   "dataLayer": {
     "area": "A-1000",
     "source": "data/semantic/A-1000",
-    "approvedRows": 4,
+    "approvedRows": 5,
     "heldRows": 0,
-    "pendingRows": 18,
+    "pendingRows": 35,
     "identityHold": null,
     "applied": "2026-09-27",
     "baseline": {

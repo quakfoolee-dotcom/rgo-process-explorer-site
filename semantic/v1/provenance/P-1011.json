@@ -50,6 +50,22 @@
       "status": "unresolved",
       "confidence": "unknown",
       "gapId": "A1000-003"
+    },
+    {
+      "valueId": "PV-A-1000-0414",
+      "property": "identity.status",
+      "value": "Retired — Pre-G decant lift pump — the A-160 decant no longer exists (RS7)",
+      "unit": null,
+      "source": "FEED-PE-CAL-034",
+      "revision": "V1.0",
+      "location": "Cover — Area / tags",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": null,
+      "note": "D-A1000-05 | D-A1000-05: Retired (RS6 / RS7): NaOH service deleted by the lime-first flowsheet (D-A1000-02); the Pre-G decant receiver and lift pump have no service after A-160 Option B / Route 6. Model geometry to be removed.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-27"
     }
   ]
 }

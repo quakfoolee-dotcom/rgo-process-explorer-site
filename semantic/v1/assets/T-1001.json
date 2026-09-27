@@ -29,10 +29,13 @@
     "Selected wet vents are candidate connections to HD-3100 only; chemical-storage vents remain separate by service. A-3000 condensate and blowdown returns are normally isolated. Low process drains are positively blinded; no common chemical drain or dry A-800 waste route is inferred. Sludge classification and receiving disposal acceptance require testing, not the draft non-hazardous wording.",
     "Sheet is Draft - Not for Use with XXX revision. Cooling is a separate utility; duties and limits are unqualified. pH, temperature, level and mixing checks are functional concepts only. Legacy spare return connections remain capped; the modeled normal A-2000 backwash return is distinct. Aeration/oxidation remains future provision and is not invented as installed equipment."
   ],
+  "identity": {
+    "status": "Retired — NaOH storage — service deleted (lime-first, D-A1000-02; RS6)"
+  },
   "dataLayer": {
     "area": "A-1000",
     "source": "data/semantic/A-1000",
-    "approvedRows": 1,
+    "approvedRows": 2,
     "heldRows": 0,
     "pendingRows": 17,
     "identityHold": null,
@@ -43,8 +46,11 @@
         "designPressure": null,
         "designTemperature": null,
         "materialOfConstruction": null
-      }
+      },
+      "identity": null
     },
-    "baselineAbsent": []
+    "baselineAbsent": [
+      "identity"
+    ]
   }
 }

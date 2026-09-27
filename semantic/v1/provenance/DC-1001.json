@@ -66,6 +66,22 @@
       "note": "scope: DC-1001 decanter; P-1009/P-1010; neutralised effluent and dewatered sludge; alt: Duplex 2205 where chloride and strength duty warrant; status FIRM | D-A1000-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
       "reviewer": "QFL",
       "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-1000-0409",
+      "property": "design.feedBasis",
+      "value": "≈ 52 t/d dry solids design (gypsum 45.6, Ca₃(PO₄)₂ 2.3, Mn(OH)₂ 2.3, inerts 2.0) from CL-1001 underflow at 25 wt %, 7.3 m³/h; cake ≈ 87 t/d at 60 wt %",
+      "unit": "t/d",
+      "source": "FEED-PE-CAL-034",
+      "revision": "V1.0",
+      "location": "'Equipment' (RS5)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "CF-feedBasis-DC-1001",
+      "note": "D-A1000-05; replaces the Case 0 basis withdrawn by D-A1000-02 | D-A1000-05: Solids basis from the residual balance (RS5): ≈ 52 t/d dry design, cake ≈ 87 t/d at 60 wt %.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-27"
     }
   ]
 }

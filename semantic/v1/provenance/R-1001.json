@@ -98,6 +98,22 @@
       "note": "RED | D-A1000-02: NaOH rapid stage to pH 3–4 is not viable at 0.64 mol/L (≈ 166 t/d NaOH; sulphate stays soluble; RO unworkable) — lime-first flowsheet adopted as intent; PFD-1000 R-1001 duty to be redefined by MoC.",
       "reviewer": "QFL",
       "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-1000-0410",
+      "property": "design.dutyBasis",
+      "value": "Neutralisation heat 0.26 MW normal / 0.34 MW design (120 kJ/mol H₂SO₄) absorbed by the flow (< 3 K); no cooler",
+      "unit": "MW",
+      "source": "FEED-PE-CAL-034",
+      "revision": "V1.0",
+      "location": "'Residual balance' (RS1)",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "CF-dutyBasis-R-1001",
+      "note": "D-A1000-05; Case 0 was ≈ 2.5 MW | D-A1000-05: Neutralisation heat 0.26–0.34 MW absorbed by the flow; no cooler (RS1).",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-27"
     }
   ]
 }

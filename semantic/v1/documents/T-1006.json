@@ -59,6 +59,16 @@
       "availability": "indexed by data layer",
       "dataLayer": true,
       "file": "B. Technical Reports\\FEED-PE-REP-039_Sulphuric-Acid-Recovery-vs-Neutralisation_V1.0.docx"
+    },
+    {
+      "documentId": "FEED-PE-CAL-034",
+      "title": "A-1000 Residual Neutralisation Sizing",
+      "revision": "V1.0",
+      "page": null,
+      "status": "controlled (preliminary)",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "8 Equipment Design and Specifications\\4 - Equipment Calculation (CAL) Sheets\\FEED-PE-CAL-034_A-1000-Residual-Neutralisation-Sizing_V1.0.xlsx"
     }
   ]
 }
