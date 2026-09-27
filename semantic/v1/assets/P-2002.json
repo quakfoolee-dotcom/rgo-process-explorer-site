@@ -18,7 +18,7 @@
     "designPressure": null,
     "designTemperature": null,
     "materialOfConstruction": "TFC polyamide RO; FRP pressure vessels; 316L/duplex HP pump; PVC/PP/PVDF/316L-EP distribution as service requires",
-    "operatingPressureBar": "12–16 bar high-pressure pump (MAT-002 service register)"
+    "operatingPressureBar": "10 bar RO feed on low-TDS condensate (rated 113 m head)"
   },
   "operatingEnvelope": null,
   "processBasis": [
@@ -59,7 +59,7 @@
     "source": "data/semantic/A-2000",
     "approvedRows": 2,
     "heldRows": 0,
-    "pendingRows": 17,
+    "pendingRows": 29,
     "identityHold": null,
     "applied": "2026-09-27",
     "baseline": {

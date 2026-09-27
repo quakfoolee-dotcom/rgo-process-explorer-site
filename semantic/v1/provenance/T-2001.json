@@ -68,20 +68,20 @@
       "reviewDate": "2026-09-20"
     },
     {
-      "valueId": "PV-A-2000-0268",
+      "valueId": "PV-A-2000-0270",
       "property": "identity.designConcept",
-      "value": "A-2000 sizing follows the acid-recovery decision (REP-039) and the A-1000 discharge route (MOC-001) — do not freeze",
+      "value": "A-2000 on clean sources only: condensate polishing plus ≈ 15.8 m³/h municipal make-up into T-2002 for an 18 m³/h process-water demand; reclaim of the A-1000 effluent (W1) is a noted option, gated on M3 and a water-reuse requirement",
       "unit": null,
-      "source": "FEED-PE-REP-039",
+      "source": "FEED-PE-CAL-036",
       "revision": "V1.0",
-      "location": "Executive conclusion",
+      "location": "Cover — Why not reclaim (W1)",
       "status": "approved",
-      "confidence": "review required",
-      "tier": "B",
-      "conflictGroup": null,
-      "note": "D-A2000-01: A-2000 sizing follows the acid-recovery decision and the A-1000 discharge route — do not freeze.",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "WV-designConcept-T-2001",
+      "note": "D-A2000-03 | D-A2000-03: Supersedes the D-A2000-01 statement: A-2000 no longer follows the A-1000 discharge — it treats clean sources only.",
       "reviewer": "QFL",
-      "reviewDate": "2026-09-20"
+      "reviewDate": "2026-09-27"
     }
   ]
 }

@@ -37,6 +37,16 @@
       "availability": "indexed by data layer",
       "dataLayer": true,
       "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.2.xlsx"
+    },
+    {
+      "documentId": "FEED-PE-CAL-036",
+      "title": "A-2000 Process Water Balance",
+      "revision": "V1.0",
+      "page": null,
+      "status": "controlled (preliminary)",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "8 Equipment Design and Specifications\\4 - Equipment Calculation (CAL) Sheets\\FEED-PE-CAL-036_A-2000-Process-Water-Balance_V1.0.xlsx"
     }
   ]
 }

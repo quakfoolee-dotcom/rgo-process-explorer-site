@@ -17,7 +17,8 @@
     "capacityM3": null,
     "designPressure": null,
     "designTemperature": null,
-    "materialOfConstruction": "TFC polyamide RO; FRP pressure vessels; 316L/duplex HP pump; PVC/PP/PVDF/316L-EP distribution as service requires"
+    "materialOfConstruction": "TFC polyamide RO; FRP pressure vessels; 316L/duplex HP pump; PVC/PP/PVDF/316L-EP distribution as service requires",
+    "feedBasis": "Clean sources only (W3): RO-2001A/B polish the A-1100 concentrator condensate — 2.6 m³/h normal, 3.0 m³/h at the 150 t/d rating, 85 % recovery, ≈ 2.2 m³/h permeate; the A-1000 effluent (≈ 6–29 g/L chloride by HCl case) goes to sewer and is not reclaimed"
   },
   "operatingEnvelope": {
     "feedCondition": "RO feed must be oxidiser-free and within scaling limits (BaSO₄ / CaSO₄); lime-stage gypsum saturation ≈ 1,480 mg/L sulphate governs recovery; NaOH upstream makes RO unworkable (Na₂SO₄ 61 g/L)"
@@ -55,9 +56,9 @@
   "dataLayer": {
     "area": "A-2000",
     "source": "data/semantic/A-2000",
-    "approvedRows": 2,
+    "approvedRows": 3,
     "heldRows": 0,
-    "pendingRows": 18,
+    "pendingRows": 31,
     "identityHold": null,
     "applied": "2026-09-27",
     "baseline": {

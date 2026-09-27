@@ -47,6 +47,16 @@
       "availability": "indexed by data layer",
       "dataLayer": true,
       "file": "B. Technical Reports\\FEED-PE-REP-038_A-1000-A-2000-Wastewater-and-Water-Reclaim_V1.0.docx"
+    },
+    {
+      "documentId": "FEED-PE-CAL-036",
+      "title": "A-2000 Process Water Balance",
+      "revision": "V1.0",
+      "page": null,
+      "status": "controlled (preliminary)",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "8 Equipment Design and Specifications\\4 - Equipment Calculation (CAL) Sheets\\FEED-PE-CAL-036_A-2000-Process-Water-Balance_V1.0.xlsx"
     }
   ]
 }

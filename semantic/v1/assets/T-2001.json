@@ -54,14 +54,14 @@
     "Model off-spec permeate and stored water recycle to T-2001; no active off-spec drain is added from draft wording. Train C is modeled standby, not live state. Relief capacity/backpressure, tank vent qualification, pressure ratings and hygienic turnover remain open. Reclaimed water is not a potable emergency supply."
   ],
   "identity": {
-    "designConcept": "A-2000 sizing follows the acid-recovery decision (REP-039) and the A-1000 discharge route (MOC-001) — do not freeze"
+    "designConcept": "A-2000 on clean sources only: condensate polishing plus ≈ 15.8 m³/h municipal make-up into T-2002 for an 18 m³/h process-water demand; reclaim of the A-1000 effluent (W1) is a noted option, gated on M3 and a water-reuse requirement"
   },
   "dataLayer": {
     "area": "A-2000",
     "source": "data/semantic/A-2000",
     "approvedRows": 2,
     "heldRows": 0,
-    "pendingRows": 17,
+    "pendingRows": 32,
     "identityHold": null,
     "applied": "2026-09-27",
     "baseline": {

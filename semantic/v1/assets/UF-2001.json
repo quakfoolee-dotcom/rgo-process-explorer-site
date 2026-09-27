@@ -53,10 +53,13 @@
     "Normal media/UF backwash returns to A-1000. Brine and spent CIP have separate positively blinded boundaries with destinations unassigned. Sequential acid/alkaline CIP isolates one train from product and brine export. Low CIP drain needs contained pump-out; UF chemical CEB is an unmodeled hold with no active pipe.",
     "Model off-spec permeate and stored water recycle to T-2001; no active off-spec drain is added from draft wording. Train C is modeled standby, not live state. Relief capacity/backpressure, tank vent qualification, pressure ratings and hygienic turnover remain open. Reclaimed water is not a potable emergency supply."
   ],
+  "identity": {
+    "status": "Retired — no service when A-2000 treats only the A-1100 condensate and municipal make-up (D-A2000-03, basis A2-7)"
+  },
   "dataLayer": {
     "area": "A-2000",
     "source": "data/semantic/A-2000",
-    "approvedRows": 1,
+    "approvedRows": 2,
     "heldRows": 0,
     "pendingRows": 17,
     "identityHold": null,
@@ -67,8 +70,11 @@
         "designPressure": null,
         "designTemperature": null,
         "materialOfConstruction": null
-      }
+      },
+      "identity": null
     },
-    "baselineAbsent": []
+    "baselineAbsent": [
+      "identity"
+    ]
   }
 }

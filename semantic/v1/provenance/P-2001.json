@@ -66,6 +66,22 @@
       "note": "scope: T-2001/P-2001/MMF-2001/GF-2001/CF-2001/UF-2001/P-2002/RO-2001/T-2002/P-2005/CF-2002/T-2003/P-2003/CIP-2001; alt: Ti Grade 2 wetted parts where chloride drives the HP-pump/tube selection; status FIRM | D-A2000-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
       "reviewer": "QFL",
       "reviewDate": "2026-09-20"
+    },
+    {
+      "valueId": "PV-A-2000-0275",
+      "property": "identity.status",
+      "value": "Retired — no service when A-2000 treats only the A-1100 condensate and municipal make-up (D-A2000-03, basis A2-7)",
+      "unit": null,
+      "source": "FEED-PE-CAL-036",
+      "revision": "V1.0",
+      "location": "Cover — Area / tags",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": null,
+      "note": "D-A2000-03 | D-A2000-03: Retired (A2-7): the media / greensand / UF train, the backwash and brine handling and the third RO train have no service in W3.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-27"
     }
   ]
 }

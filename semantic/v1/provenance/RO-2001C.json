@@ -50,6 +50,22 @@
       "status": "unresolved",
       "confidence": "unknown",
       "gapId": "A2000-003"
+    },
+    {
+      "valueId": "PV-A-2000-0282",
+      "property": "identity.status",
+      "value": "Retired — no service when A-2000 treats only the A-1100 condensate and municipal make-up (D-A2000-03, basis A2-7)",
+      "unit": null,
+      "source": "FEED-PE-CAL-036",
+      "revision": "V1.0",
+      "location": "Cover — Area / tags",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": null,
+      "note": "D-A2000-03 | D-A2000-03: Retired (A2-7): the media / greensand / UF train, the backwash and brine handling and the third RO train have no service in W3.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-27"
     }
   ]
 }

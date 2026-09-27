@@ -1,5 +1,5 @@
 {
- "version": "8b277fd",
+ "version": "d35bff9",
  "date": "2026-09-27",
  "items": {
   "L01": {
@@ -421,7 +421,7 @@
      "id": "A2000-01",
      "area": "A-2000",
      "href": "./a2000-review.html#A2000-01",
-     "revision": "r2",
+     "revision": "r3",
      "reviewer": "QFL",
      "topic": "Feed and product basis",
      "status": "No basis approved — follows the A-1000 case"
