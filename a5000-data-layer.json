@@ -1,11 +1,11 @@
 {
  "area": "A-5000",
- "version": "5401137",
+ "version": "ee5893b",
  "date": "2026-09-27",
  "revision": "r6",
  "reviewer": {
-  "initials": null,
-  "date": null
+  "initials": "QFL",
+  "date": "2026-09-27"
  },
  "lead": "The engineering content of this page — the thermal projections, the PFD temperature register, the fluid-separation and consumer tables and the heat balance — is the model engineer’s and is unchanged. This section adds the data-layer record for A-5000: what is approved, what is in conflict, what is withdrawn and what is still missing, on the same basis as the other fifteen area reviews.",
  "semanticCoreVersion": "1.19.0-foundation",
@@ -1872,7 +1872,7 @@
   }
  ],
  "layout": {
-  "version": "801e83a",
+  "version": "5401137",
   "date": "2026-09-27",
   "revision": "r2",
   "reviewer": "QFL",

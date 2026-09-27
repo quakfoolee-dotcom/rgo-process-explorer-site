@@ -3,7 +3,7 @@
   "title": "A-1000 assembly & design review",
   "revision": "r4",
   "date": "2026-09-26",
-  "sourceCommit": "5401137",
+  "sourceCommit": "ee5893b",
   "semanticCoreVersion": "1.19.0-foundation",
   "registerRevision": "2026-09-10 · Physical equipment ownership and complete Explore assemblies",
   "modelConfig": {
@@ -13,8 +13,8 @@
   },
   "lead": "Wastewater treatment: equalization T-1006, neutralization / precipitation / polishing / flocculation reactors R-1001 … R-1004, decanter centrifuge DC-1001, reagent storage and dosing (NaOH, lime, BaCl₂, HCl, floc aid: T-1001 … T-1005 with P-1001 … P-1004 and M-1001), transfer pumps P-1005 … P-1010, the model-side Pre-G decant sump T-1007 / P-1011, centrate receiver T-1008 / P-1012, sludge bin BIN-1001 and control station CP-1001, with twelve bunds, three fire points and seven emergency stations.",
   "reviewer": {
-    "initials": null,
-    "date": null
+    "initials": "QFL",
+    "date": "2026-09-27"
   },
   "representedParts": 12063,
   "ownedEquipment": 51,
@@ -359,7 +359,7 @@
       "exitCode": 0,
       "passed": true,
       "lastLine": "PASS: A-1000 source continuity, staged treatment, conditional chemistry/bypass, separate vents/drains, draft gaps and source guards.",
-      "ranAt": "2026-09-27T06:07:51.714Z"
+      "ranAt": "2026-09-27T06:34:12.113Z"
     },
     {
       "command": "node tests/validate-semantic-data.mjs",
@@ -367,7 +367,7 @@
       "exitCode": 0,
       "passed": true,
       "lastLine": "{\"passed\":true,\"areas\":[{\"area\":\"A-100\",\"assets\":10,\"holds\":0,\"values\":310,\"approved\":10,\"conflicts\":2,\"variants\":12,\"gaps\":8},{\"area\":\"A-1000\",\"assets\":65,\"holds\":0,\"values\":407,\"approved\":24,\"conflicts\":3,\"variants\":19,\"gaps\":95},{\"area\":\"A-140\",\"assets\":17,\"holds\":0,\"values\":518,\"approved\":57,\"conflicts\":20,\"variants\":14,\"gaps\":32},{\"area\":\"A-160\",\"assets\":25,\"holds\":0,\"values\":589,\"approved\":14,\"conflicts\":5,\"variants\":12,\"gaps\":18},{\"area\":\"A-200\",\"assets\":68,\"holds\":0,\"values\":1221,\"approved\":106,\"conflicts\":85,\"variants\":37,\"gaps\":136},{\"area\":\"A-2000\",\"assets\":49,\"holds\":0,\"values\":268,\"approved\":17,\"conflicts\":10,\"variants\":18,\"gaps\":76},{\"area\":\"A-300\",\"assets\":21,\"holds\":0,\"values\":536,\"approved\":26,\"conflicts\":14,\"variants\":17,\"gaps\":47},{\"area\":\"A-3000\",\"assets\":51,\"holds\":0,\"values\":407,\"approved\":13,\"conflicts\":3,\"variants\":11,\"gaps\":6},{\"area\":\"A-400\",\"assets\":23,\"holds\":0,\"values\":270,\"approved\":15,\"conflicts\":9,\"variants\":8,\"gaps\":40},{\"area\":\"A-4000\",\"assets\":11,\"holds\":0,\"values\":293,\"approved\":13,\"conflicts\":11,\"variants\":11,\"gaps\":13},{\"area\":\"A-500\",\"assets\":12,\"holds\":0,\"values\":213,\"approved\":18,\"conflicts\":5,\"variants\":5,\"gaps\":14},{\"area\":\"A-5000\",\"assets\":47,\"holds\":0,\"values\":530,\"approved\":16,\"conflicts\":10,\"variants\":10,\"gaps\":22},{\"area\":\"A-600\",\"assets\":31,\"holds\":0,\"values\":326,\"approved\":18,\"conflicts\":5,\"variants\":12,\"gaps\":17},{\"area\":\"A-6000\",\"assets\":6,\"holds\":0,\"values\":38,\"approved\":3,\"conflicts\":2,\"variants\":2,\"gaps\":5},{\"area\":\"A-700\",\"assets\":17,\"holds\":0,\"values\":433,\"approved\":39,\"conflicts\":5,\"variants\":7,\"gaps\":70},{\"area\":\"A-800\",\"assets\":25,\"holds\":0,\"values\":479,\"approved\":29,\"conflicts\":10,\"variants\":14,\"gaps\":35},{\"area\":\"A-900\",\"assets\":23,\"holds\":4,\"values\":243,\"approved\":20,\"conflicts\":11,\"variants\":11,\"gaps\":17}]}",
-      "ranAt": "2026-09-27T06:08:00.327Z"
+      "ranAt": "2026-09-27T06:34:16.456Z"
     },
     {
       "command": "node tests/validate-semantic-fields.mjs",
@@ -375,7 +375,7 @@
       "exitCode": 0,
       "passed": true,
       "lastLine": "PASS: documented pending and superseded values, alternatives, mixed units, missing values and identity holds.",
-      "ranAt": "2026-09-27T06:08:31.547Z"
+      "ranAt": "2026-09-27T06:34:30.753Z"
     }
   ],
   "decisions": [

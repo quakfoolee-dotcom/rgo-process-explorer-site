@@ -1,5 +1,5 @@
 {
- "version": "fff70c8",
+ "version": "216bc2c",
  "date": "2026-09-27",
  "items": {
   "L01": {
@@ -83,7 +83,7 @@
      "area": "A-1000",
      "href": "./a1000-review.html#A1000-05",
      "revision": "r4",
-     "reviewer": null,
+     "reviewer": "QFL",
      "topic": "Containment, access and inbound interfaces",
      "status": "Model provision — retention unverified"
     }
@@ -160,7 +160,7 @@
      "area": "A-1000",
      "href": "./a1000-review.html#A1000-05",
      "revision": "r4",
-     "reviewer": null,
+     "reviewer": "QFL",
      "topic": "Containment, access and inbound interfaces",
      "status": "Model provision — retention unverified"
     },
@@ -413,7 +413,7 @@
      "area": "A-1000",
      "href": "./a1000-review.html#A1000-01",
      "revision": "r4",
-     "reviewer": null,
+     "reviewer": "QFL",
      "topic": "Discharge route and acid recovery — the governing decision",
      "status": "Design lever identified — no flow approved"
     },
