@@ -126,20 +126,20 @@
       "reviewDate": "2026-09-20"
     },
     {
-      "valueId": "PV-A-160-0185",
+      "valueId": "PV-A-160-0432",
       "property": "identity.designConcept",
-      "value": "Option B now, designed so that its filter and rinse become Option C's when REP-039 M4 confirms GIC filterability",
+      "value": "Route 6 (REP-039; REP-042 Option C): the Pre-G GIC is filtered from the ≈ 90 wt % R-141 acid in F-160 before any water and the acid goes to recovery; T-161 hydrolyses and holds the reslurried cake in 8 t of water with no cooled loop (E-161, P-162 and T-162 deleted); gated on M4, with Option B (FEED-PE-CAL-016 V1.1) as the fallback",
       "unit": null,
-      "source": "FEED-PE-REP-042",
+      "source": "FEED-PE-REP-039",
       "revision": "V1.0",
-      "location": "Recommendation",
+      "location": "Route 6 (GIC separation from ≈ 90 % acid); test M4",
       "status": "approved",
       "confidence": "review required",
       "tier": "B",
-      "conflictGroup": null,
-      "note": "recommended | D-A160-02: Option B now, designed to become Option C.",
+      "conflictGroup": "CF-designConcept-T-161",
+      "note": "Adopted by D-A160-04 under D-A1000-03; basis of FEED-PE-CAL-016 V1.2 | D-A160-04: Route 6 (REP-039; REP-042 Option C) is the A-160 base case under D-A1000-03: F-160 filters the Pre-G GIC from the ≈ 90 wt % R-141 acid at up to 80 °C (2.5 m², cake liquor 0.60) and returns ≈ 8.8 t of acid per batch (24.2 t/d H₂SO₄, 91.5 %) via T-160 / P-160A/B to the spent-acid concentrator; the cake is hydrolysed in T-161 with 8 t of water (0.41 GJ, +11 K, ≤ 43 °C) — no cooled loop, so E-161 and P-162 are deleted, and the hold moves into T-161, so T-162 is deleted; ≈ 2.3 t/d acid and 31 m³/d water to A-1000. Gated on M4; Option B (FEED-PE-CAL-016 V1.1) is the fallback. Supersedes the Option B design concept of D-A160-02. Bases R6-1…R6-9 approved in review by QFL 2026-09-26 (FEED-PE-CAL-016 V1.2).",
       "reviewer": "QFL",
-      "reviewDate": "2026-09-20"
+      "reviewDate": "2026-09-26"
     }
   ]
 }

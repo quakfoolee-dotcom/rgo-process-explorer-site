@@ -51,9 +51,9 @@
     "source": "data/semantic/A-160",
     "approvedRows": 0,
     "heldRows": 0,
-    "pendingRows": 34,
+    "pendingRows": 52,
     "identityHold": null,
-    "applied": "2026-09-26",
+    "applied": "2026-09-27",
     "baseline": {},
     "baselineAbsent": []
   }

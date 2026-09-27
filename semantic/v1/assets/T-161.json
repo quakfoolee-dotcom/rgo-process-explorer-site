@@ -52,16 +52,16 @@
     "RO water, wastewater, vent, condensate, thermal and dry-product battery limits require approved sources."
   ],
   "identity": {
-    "designConcept": "Option B now, designed so that its filter and rinse become Option C's when REP-039 M4 confirms GIC filterability"
+    "designConcept": "Route 6 (REP-039; REP-042 Option C): the Pre-G GIC is filtered from the ≈ 90 wt % R-141 acid in F-160 before any water and the acid goes to recovery; T-161 hydrolyses and holds the reslurried cake in 8 t of water with no cooled loop (E-161, P-162 and T-162 deleted); gated on M4, with Option B (FEED-PE-CAL-016 V1.1) as the fallback"
   },
   "dataLayer": {
     "area": "A-160",
     "source": "data/semantic/A-160",
     "approvedRows": 6,
     "heldRows": 0,
-    "pendingRows": 57,
+    "pendingRows": 83,
     "identityHold": null,
-    "applied": "2026-09-26",
+    "applied": "2026-09-27",
     "baseline": {
       "design": {
         "capacityM3": null,
