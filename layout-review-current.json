@@ -1,7 +1,7 @@
 {
- "version": "53822d3",
+ "version": "981eb94",
  "date": "2026-09-27",
- "generated": "2026-09-27T18:18:04.657Z",
+ "generated": "2026-09-27T19:34:22.405Z",
  "revision": "r2",
  "reviewer": {
   "initials": "QFL",
@@ -587,7 +587,7 @@
    "reservedSpaceFindings": 0,
    "review": {
     "href": "./a1000-review.html",
-    "revision": "r6",
+    "revision": "r7",
     "reviewer": "QFL"
    }
   },
@@ -4431,7 +4431,7 @@
     {
      "kind": "finding",
      "id": "A1000-05",
-     "label": "A1000-05 · Containment, access and inbound interfaces — Model provision — retention unverified (A-1000 review r6 · QFL)",
+     "label": "A1000-05 · Containment, access and inbound interfaces — Model provision — retention unverified (A-1000 review r7 · QFL)",
      "href": "./a1000-review.html#A1000-05"
     },
     {
