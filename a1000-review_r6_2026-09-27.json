@@ -1,0 +1,3588 @@
+{
+  "area": "A-1000",
+  "title": "A-1000 assembly & design review",
+  "revision": "r6",
+  "date": "2026-09-27",
+  "sourceCommit": "53822d3",
+  "semanticCoreVersion": "1.19.0-foundation",
+  "registerRevision": "2026-09-10 · Physical equipment ownership and complete Explore assemblies",
+  "modelConfig": {
+    "scope": "feed",
+    "a160": "baseline",
+    "argonSource": "bulk"
+  },
+  "lead": "Wastewater treatment: equalization T-1006, neutralization / precipitation / polishing / flocculation reactors R-1001 … R-1004, decanter centrifuge DC-1001, reagent storage and dosing (NaOH, lime, BaCl₂, HCl, floc aid: T-1001 … T-1005 with P-1001 … P-1004 and M-1001), transfer pumps P-1005 … P-1010, the model-side Pre-G decant sump T-1007 / P-1011, centrate receiver T-1008 / P-1012, sludge bin BIN-1001 and control station CP-1001, with twelve bunds, three fire points and seven emergency stations.",
+  "reviewer": {
+    "initials": "QFL",
+    "date": "2026-09-27"
+  },
+  "representedParts": 12063,
+  "ownedEquipment": 51,
+  "findings": [
+    {
+      "id": "A1000-01",
+      "topic": "Discharge route and acid recovery — the governing decision",
+      "status": "Design lever identified — no flow approved",
+      "reason": "The wastewater flow, its acid load and therefore every reactor, reagent and sludge quantity depend on whether spent acid is recovered before A-1000.",
+      "observation": "D-A1000-01 approves the REP-038 first-principles load as the design statement — 0.64 mol/L H₂SO₄ + 0.23 mol/L HCl (179 t/d H₂SO₄, 24 t/d HCl, 129 kmol/d H₃PO₄) with Mn / K / P: the feed is dilute acid, not wastewater — and REP-039's acid recovery (150–200 t/d spent-acid reconcentration, 1.5–4.4 MW at 150–200 °C) as the governing design lever. No flow is approved: 2,850 m³/d as drawn, 400–600 m³/d with acid recovery, or the DBM 30–75 m³/d corrected by MOC-001 to a range by case. No A-1000 stream table exists; the model volumes (T-1006 200 m³, R-1001 35 m³, R-1002 65 m³, R-1003 / R-1004 45 m³) are screening allowances.",
+      "action": "Decide the A-1000 discharge route and the spent-acid recovery case (REP-039; MOC-001 Part D.1) before any A-1000 / A-2000 sizing; then issue the first A-1000 / A-2000 stream tables on DBM V2.0 with the wastewater range by case (REP-038).",
+      "discipline": "Process",
+      "evidence": [
+        {
+          "ref": "D-A1000-01",
+          "kind": "decision"
+        },
+        {
+          "ref": "GAP-A-1000-DF-329a40",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-1000-ID-e02f06",
+          "kind": "gap"
+        },
+        {
+          "ref": "T-1006",
+          "kind": "asset"
+        },
+        {
+          "ref": "FEED-PE-REP-038",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-REP-039",
+          "kind": "document"
+        }
+      ],
+      "image": "treatment"
+    },
+    {
+      "id": "A1000-02",
+      "topic": "Treatment chemistry — NaOH stage not viable, lime-first flowsheet",
+      "status": "Intent adopted — MoC on PFD-1000 required",
+      "reason": "At 0.64 mol/L the drawn rapid NaOH neutralisation would consume ≈ 166 t/d NaOH and leave sulphate soluble, making downstream RO unworkable.",
+      "observation": "D-A1000-02 adopts REP-038: the NaOH \"rapid\" stage to pH 3–4 is not viable (≈ 166 t/d NaOH, ≈ $22 M/y; sulphate stays soluble; Na₂SO₄ at 61 g/L makes RO unworkable) — lime-first flowsheet adopted as intent, with R-1001's duty to be redefined; the lime stage to pH 8.5–10.5 at ≈ 149 t/d Ca(OH)₂ producing ≈ 314 t/d gypsum + 20 t/d Ca₃(PO₄)₂ + 5 t/d Mn sludge (Case 0) as the chemistry basis; BaCl₂ polishing (R-1003) conditional on the local sewer sulphate limit vs gypsum saturation (≈ 1,480 mg/L). The ≈ 2 MW neutralisation heat and the ≈ 340 t/d sludge rate are withdrawn as case-dependent. The model still carries the NaOH tank T-1001 and dosing pump P-1004 as drawn.",
+      "action": "Raise the MoC on FEED-PFD-1000: remove the NaOH rapid-neutralisation stage or re-purpose R-1001 (lime / limestone-then-lime high-density sludge); restate T-1001 / T-1002 and the dosing pumps; fix the sulphate limit with the receiving authority.",
+      "discipline": "Process / environmental",
+      "evidence": [
+        {
+          "ref": "D-A1000-02",
+          "kind": "decision"
+        },
+        {
+          "ref": "GAP-A-1000-DF-21a95a",
+          "kind": "gap"
+        },
+        {
+          "ref": "GAP-A-1000-ID-e796a7",
+          "kind": "gap"
+        },
+        {
+          "ref": "R-1001",
+          "kind": "asset"
+        },
+        {
+          "ref": "R-1002",
+          "kind": "asset"
+        },
+        {
+          "ref": "R-1003",
+          "kind": "asset"
+        },
+        {
+          "ref": "T-1001",
+          "kind": "asset"
+        },
+        {
+          "ref": "P-1004",
+          "kind": "asset"
+        },
+        {
+          "ref": "FEED-PE-REP-038",
+          "kind": "document"
+        }
+      ],
+      "image": "reagents"
+    },
+    {
+      "id": "A1000-03",
+      "topic": "Sludge, decanter and centrate",
+      "status": "Case-dependent — no rate approved",
+      "reason": "Gypsum-dominated sludge at hundreds of tonnes per day decides the decanter, the bin and the truck movements; all follow the acid-recovery case.",
+      "observation": "D-A1000-02 withdrew the DC-1001 feed basis (≈ 340 t/d sludge in Case 0). The model provides the decanter with feed pump P-1009 and a conditional bypass pump P-1010, a covered sludge bin BIN-1001 whose classification is pending, an 8 m³ centrate receiver T-1008 with transfer / recycle pump P-1012, and the Pre-G gravity-decant sump T-1007 / P-1011 — the last five are model-only tags without register identity.",
+      "action": "Size DC-1001, BIN-1001 and the sludge handling on the chosen case; classify the sludge (gypsum with Mn / P) for disposal; register the model-only tags or record them by decision.",
+      "discipline": "Process / mechanical / environmental",
+      "evidence": [
+        {
+          "ref": "D-A1000-02",
+          "kind": "decision"
+        },
+        {
+          "ref": "GAP-A-1000-ID-79e3fe",
+          "kind": "gap"
+        },
+        {
+          "ref": "DC-1001",
+          "kind": "asset"
+        },
+        {
+          "ref": "BIN-1001",
+          "kind": "asset"
+        },
+        {
+          "ref": "T-1008",
+          "kind": "asset"
+        },
+        {
+          "ref": "T-1007",
+          "kind": "asset"
+        },
+        {
+          "ref": "P-1011",
+          "kind": "asset"
+        },
+        {
+          "ref": "P-1012",
+          "kind": "asset"
+        }
+      ],
+      "image": "separation"
+    },
+    {
+      "id": "A1000-04",
+      "topic": "Materials of construction",
+      "status": "Ruled — M-1001 and T-1005 not yet covered",
+      "reason": "Dilute mixed acid, lime slurry, BaCl₂, HCl and gypsum slurry each set their own wetted materials.",
+      "observation": "D-A1000-MOC applies MAT-002 to sixteen items: dual-laminate FRP / HDPE / rubber-lined carbon steel for the acid-side tanks and reactors (T-1006, R-1001 … R-1004), HDPE or rubber-lined carbon steel for lime storage (T-1002), and the matching pump and centrifuge selections; MDL-001 (XLPE / HDPE, rubber-lined CS) superseded. M-1001 and T-1005 (floc aid) keep an MDL-001 material only.",
+      "action": "Extend MAT-002 to M-1001 and T-1005; issue datasheets once the flowsheet (A1000-02) and the case (A1000-01) are fixed.",
+      "discipline": "Materials",
+      "evidence": [
+        {
+          "ref": "D-A1000-MOC",
+          "kind": "decision"
+        },
+        {
+          "ref": "CF-materialOfConstruc-T-1006",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "CF-materialOfConstruc-T-1002",
+          "kind": "conflictGroup"
+        },
+        {
+          "ref": "GAP-A-1000-DF-f06416",
+          "kind": "gap"
+        },
+        {
+          "ref": "FEED-PE-MAT-002",
+          "kind": "document"
+        }
+      ],
+      "image": "overview"
+    },
+    {
+      "id": "A1000-05",
+      "topic": "Containment, access and inbound interfaces",
+      "status": "Model provision — retention unverified",
+      "reason": "A reagent farm with NaOH, lime, BaCl₂, HCl and 200 m³ of acidic equalization needs retention, access and emergency provision sized to the real inventories.",
+      "observation": "The model owns twelve bunds (from 4.6 m³ under floc-aid storage to 265 m³ under the equalization tank — all retention figures scale from screening volumes), the access / containment structure PL-1001, control station CP-1001, three fire points and seven emergency stations, none on LST-001. The inbound streams from A-300 (acidic centrate) and A-400 (wash water) are model interfaces without a stated flow; the A-160 wastewater and decant interfaces have no A-1000 destination.",
+      "action": "Re-derive retention from the case-based inventories; assign the inbound interface flows in the stream tables; register bunds, stations, fire points and PL-1001 / CP-1001 or record them by decision.",
+      "discipline": "Civil / fire safety / process",
+      "evidence": [
+        {
+          "ref": "IF-A300-WASTE",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A400-WASTE",
+          "kind": "asset"
+        },
+        {
+          "ref": "PL-1001",
+          "kind": "asset"
+        },
+        {
+          "ref": "CP-1001",
+          "kind": "asset"
+        },
+        {
+          "ref": "MODEL",
+          "kind": "document"
+        }
+      ],
+      "image": "containment"
+    },
+    {
+      "id": "A1000-06",
+      "topic": "Acid route decided (D-A1000-03): spent-acid recovery, REP-039 Route 2 + 6",
+      "status": "Base case approved — gated on M1–M3; A-1000 to be sized for the residual",
+      "reason": "D-A1000-01 left A-1000 unfrozen until the acid-recovery decision: recovery removes ≈ 95 % of the A-1000 load and sets its size, reagents and sludge.",
+      "observation": "D-A1000-03 makes spent-acid recovery (REP-039 Route 2 + 6) the FEED base case for the wet train: TLGO is separated from 50–60 wt % acid in A-300 (Route 2) and the GIC from the A-160 acid before washing (Route 6); the filtrates are reconcentrated and recycled, leaving A-1000 the residual (≈ 6–15 t/d acid, gypsum ≈ 10–25 t/d instead of ≈ 314 t/d). The route is gated on M1 (filterability at 50–60 wt %), M2 (recycled-acid quality) and M3 (Mn(VII) = 0 before heating); Route 0 (neutralise everything in A-1000) stays as the fallback envelope. The first rework is issued: A-300 moves to a 55 wt % endpoint with its filtrate to the concentrator (FEED-PE-CAL-032 V1.1, D-A300-06). The A-1000 feed, duty and sludge bases stay unapproved (D-A1000-01 / -02) until the residual is sized.",
+      "action": "Revise A-160 for Route 6 (CAL-016, T-161 / T-162 / F-161); draft the spent-acid concentrator package (≈ 135 + 36 t/d, A-5400 duty); then size A-1000 for the residual with the Route 0 envelope noted; run M1–M3.",
+      "discipline": "Process",
+      "evidence": [
+        {
+          "ref": "D-A1000-03",
+          "kind": "decision"
+        },
+        {
+          "ref": "D-A1000-01",
+          "kind": "decision"
+        },
+        {
+          "ref": "FEED-PE-REP-039",
+          "kind": "document"
+        },
+        {
+          "ref": "GAP-A-1000-DF-63e5b1",
+          "kind": "gap"
+        },
+        {
+          "ref": "PV-A-1000-0294",
+          "kind": "value"
+        },
+        {
+          "ref": "T-1006",
+          "kind": "asset"
+        },
+        {
+          "ref": "IF-A300-WASTE",
+          "kind": "asset"
+        }
+      ],
+      "image": "overview"
+    },
+    {
+      "id": "A1000-07",
+      "topic": "Spent-acid concentrator package (D-A1000-04): new area A-1100 — PK-1101, T-1101, T-1102, P-1101A/B, P-1102A/B",
+      "status": "Budget envelope issued — design concept approved; gated on the M5 vendor enquiry, heat supply on MOC-002 Part F",
+      "reason": "Route 2 + 6 (D-A1000-03) sends the A-300 filtrate and the A-160 acid to recovery instead of A-1000; the plant needs the concentrator that closes the loop, and its heat and vent loads land on A-5400 and A-3000.",
+      "observation": "D-A1000-04 carries the concentrator on bases CN1–CN9 approved by QFL 2026-09-26, as FEED-PE-CAL-033 and FEED-PE-DAT-109…113 (register V7.4) in a new area A-1100 (REP-039 §9), recorded in the A-1000 data layer until the model has that area. Feed on the current basis: 170 t/d of A-300 filtrate at 55 wt % and 26.9 t/d of A-160 acid at 90 wt % — 117.6 t/d H₂SO₄ (REP-039 quoted 135–175 t/d on the older basis), with ≈ 9.7 t/d H₃PO₄ and 5.8 t/d Mn / K salts. PK-1101, a two-stage vacuum package (55 → ≈ 75 wt %, MVR option; 75 → 93 wt % at 150–180 °C, 50–100 mbar), is rated 140 t/d and returns ≈ 134 t/d of 93 wt % acid with its H₃PO₄ — 115.5 t/d H₂SO₄ recovered after the salt-cake loss — so purchased acid falls from ≈ 135 to ≈ 18 t/d. It evaporates ≈ 55 t/d of water: 2.26 MW normal, 2.69 MW rated, 3.5 MW design on A-5400 (1.66 GJ / t), condensers 2.0 MW on A-5200; the MVR option ≈ 0.9 MW thermal plus 0.8–1.2 MW electrical. T-1101 (100 m³ FRP) holds two A-300 batches and one A-160 batch behind the Mn(VII) = 0 ORP interlock; T-1102 (200 m³ carbon steel) holds two days of product for the M2 quality release — CN9’s 150 m³ did not hold two days, and P-1101 went from 6 to 7 m³/h to cover the rated feed. Budget ≈ $15–30 M. Heat above 95 °C is not shown as served until MOC-002 Part F; the A-5400 screen rises to ≈ 17.6–21.8 MW against the 10 MW provision.",
+      "action": "Issue the M5 vendor enquiry (stage split, MVR, materials, footprint, CAPEX); resolve the A-5400 heat supply in MOC-002 Part F; check the A-3000 S1 load for the concentrator vent (SO₂ / CO₂); classify the salt cake; run M2 on reconcentrated filtrate; add A-1100 to the PFD, LST-001, MAT-002 and the model; then size A-1000 for the residual.",
+      "discipline": "Process / utilities",
+      "evidence": [
+        {
+          "ref": "D-A1000-04",
+          "kind": "decision"
+        },
+        {
+          "ref": "D-A1000-03",
+          "kind": "decision"
+        },
+        {
+          "ref": "FEED-PE-REP-039",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-CAL-033",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-109",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-110",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-111",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-112",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-113",
+          "kind": "document"
+        },
+        {
+          "ref": "GAP-A-1000-DF-9f2e4c",
+          "kind": "gap"
+        },
+        {
+          "ref": "PV-A-1000-0295",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-1000-0301",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-1000-0304",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-1000-0305",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-1000-0309",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-1000-0331",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-1000-0348",
+          "kind": "value"
+        },
+        {
+          "ref": "PK-1101",
+          "kind": "asset"
+        },
+        {
+          "ref": "T-1101",
+          "kind": "asset"
+        },
+        {
+          "ref": "T-1102",
+          "kind": "asset"
+        },
+        {
+          "ref": "P-1101",
+          "kind": "asset"
+        },
+        {
+          "ref": "P-1102",
+          "kind": "asset"
+        }
+      ],
+      "image": "overview"
+    },
+    {
+      "id": "A1000-08",
+      "topic": "A-1000 sized for the Route 2 + 6 residual (D-A1000-05): lime-only HDS — phase 1 datasheets; NaOH and Pre-G decant items retired",
+      "status": "Feed, solids and duty bases approved; phase 1 datasheets issued as candidates; sewer limit, HCl dose and A-400 flows held",
+      "reason": "D-A1000-01 left A-1000 unfrozen until the acid route was decided; with D-A1000-03 / -04 the load is the residual, 5–10 × smaller than the as-drawn 2,850 m³/d and 179 t/d.",
+      "observation": "D-A1000-05 on bases RS1–RS9 approved by QFL 2026-09-27 (FEED-PE-CAL-034, FEED-PE-DAT-114…122, register V7.7). The residual on the current basis: A-160 T-163 32 m³/d with 2.3 t/d H₂SO₄; the A-300 cake liquor 14.2 t/d H₂SO₄ through A-300 phase 2 / A-400 (the largest load, 60–75 %); the A-1100 salt-cake liquor 2.1 t/d; a 5.8 t/d organics-bleed allowance (M2) — 18.6 t/d firm, 24.3 t/d design, against REP-039 / REP-038’s 6–15 t/d. HCl from A-300 phase 2 is 3 t/d at the M3 estimate and 18.2 t/d at the PFD dose; reagent systems are sized for the bounding dose. Flow 495 m³/d normal, 615 m³/d design (25.6 m³/h). Lime-only HDS: Ca(OH)₂ 20.7–40.5 t/d, gypsum 35.8–45.6 t/d (REP-038 Case 4: 10–25), 52 t/d dry solids, 0.34 MW absorbed (no cooler). T-1006 400 m³ (12 h), R-1001 25 m³ (pH 5–6, 45 min), R-1002 30 m³ (pH 9.8–10, 40 min with 30 % recycle), R-1004 10 m³, new thickener CL-1001 Ø 6.5 m (RS5 quoted Ø 6 m; the solids need 29 m²), DC-1001 8 m³/h → 87 t/d cake, T-1002 an 80 m³ lime slurry day tank fed from a hydrated-lime silo (two days of slurry would have been ≈ 410 m³), P-1003A/B 10 m³/h ring main, P-1005A/B 30 m³/h. The CAL-034 feed, solids and duty rows close the three properties D-A1000-01 / -02 left unapproved; T-1001 / P-1004 (NaOH) and T-1007 / P-1011 (Pre-G decant) are recorded as retired; 24 missing-value gaps close.",
+      "action": "Settle the sewer sulphate limit (BaCl₂ stage R-1003 held); re-derive the A-300 phase 2 HCl dose (REP-037 M3) and consider a C-301 cake wash to send the cake liquor to the concentrator instead; confirm the A-400 flows (hold H-01); run settling / dewatering tests; classify the sludge; raise the PFD-1000 MoC (CL-1001, lime silo, NaOH deleted); remove the retired tags from the model; issue the phase 2 datasheets.",
+      "discipline": "Process / environmental",
+      "evidence": [
+        {
+          "ref": "D-A1000-05",
+          "kind": "decision"
+        },
+        {
+          "ref": "D-A1000-01",
+          "kind": "decision"
+        },
+        {
+          "ref": "D-A1000-02",
+          "kind": "decision"
+        },
+        {
+          "ref": "FEED-PE-CAL-034",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-114",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-115",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-116",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-118",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-119",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-120",
+          "kind": "document"
+        },
+        {
+          "ref": "GAP-A-1000-DF-f68cb9",
+          "kind": "gap"
+        },
+        {
+          "ref": "PV-A-1000-0408",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-1000-0409",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-1000-0410",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-1000-0411",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-1000-0413",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-1000-0424",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-1000-0441",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-1000-0459",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-1000-0494",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-1000-0505",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-1000-0521",
+          "kind": "value"
+        },
+        {
+          "ref": "T-1006",
+          "kind": "asset"
+        },
+        {
+          "ref": "R-1001",
+          "kind": "asset"
+        },
+        {
+          "ref": "R-1002",
+          "kind": "asset"
+        },
+        {
+          "ref": "R-1004",
+          "kind": "asset"
+        },
+        {
+          "ref": "CL-1001",
+          "kind": "asset"
+        },
+        {
+          "ref": "DC-1001",
+          "kind": "asset"
+        },
+        {
+          "ref": "T-1002",
+          "kind": "asset"
+        },
+        {
+          "ref": "T-1001",
+          "kind": "asset"
+        },
+        {
+          "ref": "T-1007",
+          "kind": "asset"
+        }
+      ],
+      "image": "treatment"
+    },
+    {
+      "id": "A1000-09",
+      "topic": "A-300 cake wash (D-A300-07): A-1100 revised to V1.1; A-1000 residual falls, not re-balanced",
+      "status": "A-1100 V1.1 issued as candidates; A-1000 sizes kept as margin (basis CW8)",
+      "reason": "Moving the A-300 cake-liquor acid to the concentrator changes both the A-1100 load and the A-1000 residual carried in A1000-07 / A1000-08.",
+      "observation": "A-1100 (basis CW7): FEED-PE-CAL-033 and FEED-PE-DAT-109…113 V1.1 (register V8.6) — 132.3 t/d H₂SO₄ to PK-1101 (was 117.6), 129.8 t/d recovered, 62.8 t/d water evaporated, 2.59 MW normal and 2.93 MW at the new 150 t/d rating (was 140) — the 3.5 MW design still covers rated × 1.1, but the 150 t/d rating leaves 13 % over normal, not 15 %; T-1101 100 → 125 m³ (two A-300 batches are now 89 m³), P-1101 7 → 8 m³/h, T-1102 two-day volume 165 m³ in 200 m³. A-1000 (basis CW8): the residual H₂SO₄ falls from 24.3 to ≈ 10.8 t/d design (18.6 → ≈ 5.1 firm), lime from 40.5 to ≈ 30 t/d, gypsum from 45.6 to ≈ 22 t/d; FEED-PE-CAL-034 and DAT-114…122 are not revised — the spare capacity is margin for the unresolved A-300 phase 2 HCl dose (M3) and organics bleed (M2), to be re-balanced at phase 2. The data layer reads the A-1100 V1.0 sheets from the archive and lets V1.1 supersede them in full; no existing valueId changed.",
+      "action": "Re-balance CAL-034 when M2 / M3 are settled (phase 2), and consider a 160 t/d PK-1101 rating in the vendor enquiry (M5) to restore a 15 % margin.",
+      "discipline": "Process",
+      "evidence": [
+        {
+          "ref": "D-A1000-05",
+          "kind": "decision"
+        },
+        {
+          "ref": "D-A1000-04",
+          "kind": "decision"
+        },
+        {
+          "ref": "FEED-PE-CAL-033",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-109",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-110",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-DAT-112",
+          "kind": "document"
+        },
+        {
+          "ref": "FEED-PE-CAL-034",
+          "kind": "document"
+        },
+        {
+          "ref": "PV-A-1000-0581",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-1000-0582",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-1000-0611",
+          "kind": "value"
+        },
+        {
+          "ref": "PV-A-1000-0645",
+          "kind": "value"
+        },
+        {
+          "ref": "PK-1101",
+          "kind": "asset"
+        },
+        {
+          "ref": "T-1101",
+          "kind": "asset"
+        },
+        {
+          "ref": "P-1101",
+          "kind": "asset"
+        }
+      ],
+      "image": "overview"
+    }
+  ],
+  "checks": [
+    {
+      "command": "node tests/validate-a1000-semantic.mjs",
+      "purpose": "A-1000 record contract: populated design / operating fields carry approved, reviewer-initialled provenance",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "PASS: A-1000 source continuity, staged treatment, conditional chemistry/bypass, separate vents/drains, draft gaps and source guards.",
+      "ranAt": "2026-09-27T18:12:14.693Z"
+    },
+    {
+      "command": "node tests/validate-semantic-data.mjs",
+      "purpose": "data-layer invariants (registered sources, reviewer on approvals, conflict groups, identity holds)",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "{\"passed\":true,\"areas\":[{\"area\":\"A-100\",\"assets\":10,\"holds\":0,\"values\":310,\"approved\":10,\"conflicts\":2,\"variants\":12,\"gaps\":8},{\"area\":\"A-1000\",\"assets\":66,\"holds\":0,\"values\":687,\"approved\":31,\"conflicts\":6,\"variants\":19,\"gaps\":75},{\"area\":\"A-140\",\"assets\":17,\"holds\":0,\"values\":518,\"approved\":57,\"conflicts\":20,\"variants\":14,\"gaps\":32},{\"area\":\"A-160\",\"assets\":25,\"holds\":0,\"values\":589,\"approved\":14,\"conflicts\":5,\"variants\":12,\"gaps\":18},{\"area\":\"A-200\",\"assets\":68,\"holds\":0,\"values\":1221,\"approved\":106,\"conflicts\":85,\"variants\":37,\"gaps\":136},{\"area\":\"A-2000\",\"assets\":49,\"holds\":0,\"values\":268,\"approved\":17,\"conflicts\":10,\"variants\":18,\"gaps\":76},{\"area\":\"A-300\",\"assets\":21,\"holds\":0,\"values\":599,\"approved\":27,\"conflicts\":14,\"variants\":17,\"gaps\":48},{\"area\":\"A-3000\",\"assets\":51,\"holds\":0,\"values\":407,\"approved\":13,\"conflicts\":3,\"variants\":11,\"gaps\":6},{\"area\":\"A-400\",\"assets\":23,\"holds\":0,\"values\":270,\"approved\":15,\"conflicts\":9,\"variants\":8,\"gaps\":40},{\"area\":\"A-4000\",\"assets\":11,\"holds\":0,\"values\":293,\"approved\":13,\"conflicts\":11,\"variants\":11,\"gaps\":13},{\"area\":\"A-500\",\"assets\":12,\"holds\":0,\"values\":213,\"approved\":18,\"conflicts\":5,\"variants\":5,\"gaps\":14},{\"area\":\"A-5000\",\"assets\":47,\"holds\":0,\"values\":530,\"approved\":16,\"conflicts\":10,\"variants\":10,\"gaps\":22},{\"area\":\"A-600\",\"assets\":31,\"holds\":0,\"values\":326,\"approved\":18,\"conflicts\":5,\"variants\":12,\"gaps\":17},{\"area\":\"A-6000\",\"assets\":6,\"holds\":0,\"values\":38,\"approved\":3,\"conflicts\":2,\"variants\":2,\"gaps\":5},{\"area\":\"A-700\",\"assets\":17,\"holds\":0,\"values\":433,\"approved\":39,\"conflicts\":5,\"variants\":7,\"gaps\":70},{\"area\":\"A-800\",\"assets\":25,\"holds\":0,\"values\":479,\"approved\":29,\"conflicts\":10,\"variants\":14,\"gaps\":35},{\"area\":\"A-900\",\"assets\":23,\"holds\":4,\"values\":243,\"approved\":20,\"conflicts\":11,\"variants\":11,\"gaps\":17}]}",
+      "ranAt": "2026-09-27T18:12:16.376Z"
+    },
+    {
+      "command": "node tests/validate-semantic-fields.mjs",
+      "purpose": "inspector field rendering of documented and applied values",
+      "exitCode": 0,
+      "passed": true,
+      "lastLine": "PASS: documented pending and superseded values, alternatives, mixed units, missing values and identity holds.",
+      "ranAt": "2026-09-27T18:12:28.578Z"
+    }
+  ],
+  "decisions": [
+    {
+      "decisionId": "D-A1000-MOC",
+      "assetPattern": "DC-1001|P-1001|P-1002|P-1003|P-1004|P-1009|P-1010|R-1001|R-1002|R-1003|R-1004|T-1001|T-1002|T-1003|T-1004|T-1006",
+      "property": "design.materialOfConstruction",
+      "approvedSourceDocId": "FEED-PE-MAT-002",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "gapNote": "MAT-002 does not cover 2 item(s) with an MDL-001 material only (M-1001, T-1005): extend MAT-002 before those MoCs are approved."
+    },
+    {
+      "decisionId": "D-A1000-01",
+      "assetPattern": "T-1006|R-1001",
+      "property": "operatingEnvelope.feedComposition",
+      "approvedSourceDocId": "FEED-PE-REP-038",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "REP-038 first-principles load adopted as the design statement: 0.64 mol/L H₂SO₄ + 0.23 mol/L HCl (179 t/d H₂SO₄, 24 t/d HCl) with Mn / K / P — the feed is dilute acid, not wastewater.",
+      "gapNote": "Decide the A-1000 discharge route and the spent-acid recovery case (REP-039: 150–200 t/d reconcentration; MOC-001 Part D.1) before any A-1000 / A-2000 sizing; then issue the first A-1000 / A-2000 stream tables (none exist) on DBM V2.0 with the wastewater range by case (REP-038)."
+    },
+    {
+      "decisionId": "D-A1000-01",
+      "assetPattern": "T-1006",
+      "property": "design.feedBasis",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "2,850 m³/d as drawn vs 400–600 m³/d with acid recovery vs DBM 30–75 m³/d (corrected by MOC-001 to a range by case): no flow approved until the acid-recovery decision.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A1000-01",
+      "assetPattern": "T-1006",
+      "property": "identity.designConcept",
+      "approvedSourceDocId": "FEED-PE-REP-039",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Acid recovery is the governing design lever for A-1000 / A-2000 (REP-026 F-39, REP-039); A-1000 not to be frozen before it.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A1000-02",
+      "assetPattern": "R-1001",
+      "property": "identity.designConcept",
+      "approvedSourceDocId": "FEED-PE-REP-038",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "NaOH rapid stage to pH 3–4 is not viable at 0.64 mol/L (≈ 166 t/d NaOH; sulphate stays soluble; RO unworkable) — lime-first flowsheet adopted as intent; PFD-1000 R-1001 duty to be redefined by MoC.",
+      "gapNote": "MoC on FEED-PFD-1000: remove the NaOH rapid-neutralisation stage or re-purpose R-1001 (lime / limestone-then-lime high-density-sludge); restate reagent tanks T-1001 / T-1002 and dosing pumps accordingly."
+    },
+    {
+      "decisionId": "D-A1000-02",
+      "assetPattern": "R-1002",
+      "property": "operatingEnvelope.reagentBasis",
+      "approvedSourceDocId": "FEED-PE-REP-038",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Lime stage stoichiometry (≈ 149 t/d Ca(OH)₂, 314 t/d gypsum, Case 0) adopted as the chemistry basis; quantities scale with the acid-recovery case.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A1000-02",
+      "assetPattern": "R-1003",
+      "property": "operatingEnvelope.reagentBasis",
+      "approvedSourceDocId": "FEED-PE-REP-038",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "BaCl₂ polishing conditional on the local sewer sulphate limit vs gypsum saturation (≈ 1,480 mg/L).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A1000-02",
+      "assetPattern": "R-1001",
+      "property": "design.dutyBasis",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "≈ 2 MW neutralisation heat (REP-026 F-42) is deleted under acid recovery — duty follows D-A1000-01.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A1000-02",
+      "assetPattern": "DC-1001",
+      "property": "design.feedBasis",
+      "approvedSourceDocId": "NONE",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "rationale": "Sludge rate (≈ 340 t/d Case 0) follows the acid-recovery case.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A1000-03",
+      "assetPattern": "T-1006",
+      "property": "identity.acidRoute",
+      "approvedSourceDocId": "FEED-PE-REP-039",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-25",
+      "rationale": "Spent-acid recovery (REP-039 Route 2 + 6) is the FEED base case for the wet train, gated on M1 (filterability at 50–60 wt %), M2 (recycled-acid quality) and M3 (Mn(VII) = 0 before heating); Route 0 (neutralise) stays as the fallback envelope. Answers the acid-recovery decision D-A1000-01 left open. Applied first to A-300 (bases RA1–RA6, FEED-PE-CAL-032 V1.1); A-160 (Route 6), the concentrator package and the residual A-1000 sizing follow.",
+      "gapNote": "Tests M1–M3 (REP-039); spent-acid concentrator package (new tag, A-5400 duty); A-160 Route 6 revision (CAL-016); A-1000 sized for the residual"
+    },
+    {
+      "decisionId": "D-A1000-04",
+      "assetPattern": "PK-1101",
+      "property": "identity.designConcept",
+      "approvedSourceDocId": "FEED-PE-REP-039",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-26",
+      "rationale": "Spent-acid concentrator package carried on bases CN1–CN9 as a budget envelope in a new area A-1100: two-stage vacuum concentration of the A-300 filtrate (55 wt %) and the A-160 acid (90 wt %) to 93 wt % — 117.6 t/d H₂SO₄ normal, 140 t/d rated, 115.5 t/d recovered, ≈ 55 t/d water evaporated; 2.26 MW normal / 3.5 MW design heat on A-5400, condensers on A-5200; ≈ 5.8 t/d Mn / K salts purged; Mn(VII) = 0 interlock at T-1101; vent to S1; T-1101 100 m³, T-1102 200 m³ (two-day quality hold), P-1101A/B 7 m³/h, P-1102A/B 10 m³/h. Budget ≈ $15–30 M. Approved in review by QFL 2026-09-26 (FEED-PE-CAL-033).",
+      "gapNote": "REP-039 M5 vendor enquiry (stage split, MVR, materials, CAPEX); A-5400 heat supply pending MOC-002 Part F (screen ≈ 17.6–21.8 MW vs 10 MW provision); M2 recycled-acid quality and organics purge; A-3000 S1 load check for the vent; salt-cake classification; MAT-002 A-1100 rows; PFD / LST-001 entries; model area A-1100"
+    },
+    {
+      "decisionId": "D-A1000-05",
+      "assetPattern": "T-1006",
+      "property": "design.feedBasis",
+      "approvedSourceDocId": "FEED-PE-CAL-034",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-27",
+      "rationale": "A-1000 sized for the REP-039 Route 2 + 6 residual on bases RS1–RS9 (FEED-PE-CAL-034): 615 m³/d and 24.3 t/d H₂SO₄ design, HCl bounding at the PFD dose; lime-only HDS (R-1001 pH 5–6, R-1002 pH 9.8–10, R-1004, new thickener CL-1001, DC-1001); Ca(OH)₂ 20.7–40.5 t/d; gypsum 35.8–45.6 t/d; 0.34 MW, no cooler. Route 0 (REP-038) stays the fallback envelope. Approved in review by QFL 2026-09-27.",
+      "gapNote": "Sewer sulphate limit (BaCl₂ stage R-1003 held); A-300 phase 2 HCl dose (REP-037 M3); organics bleed (REP-039 M2); A-400 flows (hold H-01); settling / dewatering tests; sludge classification; PFD-1000 MoC and LST-001 (CL-1001, lime silo); phase 2 datasheets"
+    },
+    {
+      "decisionId": "D-A1000-05",
+      "assetPattern": "DC-1001",
+      "property": "design.feedBasis",
+      "approvedSourceDocId": "FEED-PE-CAL-034",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-27",
+      "rationale": "Solids basis from the residual balance (RS5): ≈ 52 t/d dry design, cake ≈ 87 t/d at 60 wt %.",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A1000-05",
+      "assetPattern": "R-1001",
+      "property": "design.dutyBasis",
+      "approvedSourceDocId": "FEED-PE-CAL-034",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-27",
+      "rationale": "Neutralisation heat 0.26–0.34 MW absorbed by the flow; no cooler (RS1).",
+      "gapNote": ""
+    },
+    {
+      "decisionId": "D-A1000-05",
+      "assetPattern": "T-1001|P-1004|T-1007|P-1011",
+      "property": "identity.status",
+      "approvedSourceDocId": "FEED-PE-CAL-034",
+      "approvedValue": "",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-27",
+      "rationale": "Retired (RS6 / RS7): NaOH service deleted by the lime-first flowsheet (D-A1000-02); the Pre-G decant receiver and lift pump have no service after A-160 Option B / Route 6. Model geometry to be removed.",
+      "gapNote": ""
+    }
+  ],
+  "approvedValues": [
+    {
+      "valueId": "PV-A-1000-0253",
+      "assetId": "T-1006",
+      "property": "design.materialOfConstruction",
+      "value": "Dual-laminate FRP/HDPE/rubber-lined CS on raw-acid stages; 316L or coated CS only after pH is reliably ≥6.5",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 61 (M-057)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-T-1006",
+      "resolves": [
+        "FEED-PE-MDL-001: XLPE/HDPE chemical-service tank preferred for ambient atmospheric acidic/metal-bearing wastewater; PP/PVDF fittings and PTFE/EPDM seals. Use vinyl-ester FRP for large/agitated service beyond molded-PE limits."
+      ]
+    },
+    {
+      "valueId": "PV-A-1000-0255",
+      "assetId": "R-1001",
+      "property": "design.materialOfConstruction",
+      "value": "Dual-laminate FRP/HDPE/rubber-lined CS on raw-acid stages; 316L or coated CS only after pH is reliably ≥6.5",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 61 (M-057)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "WV-materialOfConstruc-R-1001",
+      "resolves": [
+        "FEED-PE-MDL-001: FRP (vinyl-ester resin) reactor with abrasion-resistant corrosion barrier; PVDF/PTFE wetted trim and agitator coating."
+      ]
+    },
+    {
+      "valueId": "PV-A-1000-0257",
+      "assetId": "R-1002",
+      "property": "design.materialOfConstruction",
+      "value": "Dual-laminate FRP/HDPE/rubber-lined CS on raw-acid stages; 316L or coated CS only after pH is reliably ≥6.5",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 61 (M-057)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "WV-materialOfConstruc-R-1002",
+      "resolves": [
+        "FEED-PE-MDL-001: FRP (vinyl-ester resin) reactor with abrasion-resistant corrosion barrier; PVDF/PTFE wetted trim."
+      ]
+    },
+    {
+      "valueId": "PV-A-1000-0259",
+      "assetId": "R-1003",
+      "property": "design.materialOfConstruction",
+      "value": "Dual-laminate FRP/HDPE/rubber-lined CS on raw-acid stages; 316L or coated CS only after pH is reliably ≥6.5",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 61 (M-057)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "WV-materialOfConstruc-R-1003",
+      "resolves": [
+        "FEED-PE-MDL-001: FRP (vinyl-ester resin) reactor with abrasion-resistant corrosion barrier; PVDF/PTFE wetted trim."
+      ]
+    },
+    {
+      "valueId": "PV-A-1000-0261",
+      "assetId": "R-1004",
+      "property": "design.materialOfConstruction",
+      "value": "Dual-laminate FRP/HDPE/rubber-lined CS on raw-acid stages; 316L or coated CS only after pH is reliably ≥6.5",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 61 (M-057)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-R-1004",
+      "resolves": [
+        "FEED-PE-MDL-001: HDPE/XLPE tank for low-pressure flocculation service; 304L SS or FRP-coated agitator as required; PP fittings and EPDM/PTFE seals."
+      ]
+    },
+    {
+      "valueId": "PV-A-1000-0263",
+      "assetId": "T-1002",
+      "property": "design.materialOfConstruction",
+      "value": "HDPE or rubber-lined carbon steel; rubber-lined or 28 % Cr white-iron pump wear parts",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 62 (M-058)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "CF-materialOfConstruc-T-1002",
+      "resolves": [
+        "FEED-PE-MDL-001: Rubber-lined carbon steel tank/hopper with abrasion-resistant liner; 316L SS agitator shaft where wetted."
+      ]
+    },
+    {
+      "valueId": "PV-A-1000-0265",
+      "assetId": "P-1003",
+      "property": "design.materialOfConstruction",
+      "value": "HDPE or rubber-lined carbon steel; rubber-lined or 28 % Cr white-iron pump wear parts",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 62 (M-058)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-1000-0267",
+      "assetId": "T-1001",
+      "property": "design.materialOfConstruction",
+      "value": "Chemical-specific HDPE/PP/PVC/CPVC/PVDF/PTFE or vinyl-ester FRP; passivated 316L only where individually compatible",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 63 (M-059)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "WV-materialOfConstruc-T-1001",
+      "resolves": [
+        "FEED-PE-MDL-001: XLPE/HDPE chemical-storage tank, approximately 1.65–1.9 SG as required by NaOH concentration; PVC/PP fittings and EPDM seals. Heat tracing/insulation only within the tank vendor's temperature limits."
+      ]
+    },
+    {
+      "valueId": "PV-A-1000-0269",
+      "assetId": "P-1004",
+      "property": "design.materialOfConstruction",
+      "value": "Chemical-specific HDPE/PP/PVC/CPVC/PVDF/PTFE or vinyl-ester FRP; passivated 316L only where individually compatible",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 63 (M-059)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-1000-0271",
+      "assetId": "T-1003",
+      "property": "design.materialOfConstruction",
+      "value": "Chemical-specific HDPE/PP/PVC/CPVC/PVDF/PTFE or vinyl-ester FRP; passivated 316L only where individually compatible",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 63 (M-059)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "WV-materialOfConstruc-T-1003",
+      "resolves": [
+        "FEED-PE-MDL-001: HDPE tank with PP/PVDF fittings and PTFE gaskets."
+      ]
+    },
+    {
+      "valueId": "PV-A-1000-0273",
+      "assetId": "P-1002",
+      "property": "design.materialOfConstruction",
+      "value": "Chemical-specific HDPE/PP/PVC/CPVC/PVDF/PTFE or vinyl-ester FRP; passivated 316L only where individually compatible",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 63 (M-059)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-1000-0275",
+      "assetId": "T-1004",
+      "property": "design.materialOfConstruction",
+      "value": "Chemical-specific HDPE/PP/PVC/CPVC/PVDF/PTFE or vinyl-ester FRP; passivated 316L only where individually compatible",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 63 (M-059)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "WV-materialOfConstruc-T-1004",
+      "resolves": [
+        "FEED-PE-MDL-001: XLPE/HDPE chemical-storage tank, approximately 1.9 SG rating, with oxidation-resistant inner surface where specified; PVC/CPVC/PVDF fittings and EPDM/PTFE seals; closed vent to scrubber."
+      ]
+    },
+    {
+      "valueId": "PV-A-1000-0277",
+      "assetId": "P-1001",
+      "property": "design.materialOfConstruction",
+      "value": "Chemical-specific HDPE/PP/PVC/CPVC/PVDF/PTFE or vinyl-ester FRP; passivated 316L only where individually compatible",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 63 (M-059)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-1000-0279",
+      "assetId": "DC-1001",
+      "property": "design.materialOfConstruction",
+      "value": "316L or coated carbon steel; HDPE/rubber lining where abrasion is significant; hardfaced centrifuge wear zones",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 64 (M-060)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": "WV-materialOfConstruc-DC-1001",
+      "resolves": [
+        "FEED-PE-MDL-001: 316L SS wetted bowl/scroll with tungsten-carbide wear protection and PTFE process seals. Upgrade to duplex 2205 only if chloride/pitting assessment of the neutralized sludge service requires it."
+      ]
+    },
+    {
+      "valueId": "PV-A-1000-0281",
+      "assetId": "P-1009",
+      "property": "design.materialOfConstruction",
+      "value": "316L or coated carbon steel; HDPE/rubber lining where abrasion is significant; hardfaced centrifuge wear zones",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 64 (M-060)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-1000-0283",
+      "assetId": "P-1010",
+      "property": "design.materialOfConstruction",
+      "value": "316L or coated carbon steel; HDPE/rubber lining where abrasion is significant; hardfaced centrifuge wear zones",
+      "unit": "",
+      "sourceDocId": "FEED-PE-MAT-002",
+      "sourceRevision": "V1.2",
+      "sourceLocation": "'Selection Matrix'!row 64 (M-060)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-1000-0286",
+      "assetId": "T-1006",
+      "property": "operatingEnvelope.feedComposition",
+      "value": "0.64 mol/L H₂SO₄ + 0.23 mol/L HCl: 179 t/d H₂SO₄, 24 t/d HCl, 129 kmol/d H₃PO₄; 1,070 mg/L Mn, 760 mg/L K, 1,400 mg/L P — dilute acid, not wastewater",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-038",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive conclusion",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-1000-0287",
+      "assetId": "R-1001",
+      "property": "operatingEnvelope.feedComposition",
+      "value": "0.64 mol/L H₂SO₄ + 0.23 mol/L HCl: 179 t/d H₂SO₄, 24 t/d HCl, 129 kmol/d H₃PO₄; 1,070 mg/L Mn, 760 mg/L K, 1,400 mg/L P — dilute acid, not wastewater",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-038",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive conclusion",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-1000-0288",
+      "assetId": "R-1001",
+      "property": "identity.designConcept",
+      "value": "NaOH 'rapid' stage to pH 3–4 is not viable at 0.64 mol/L: ≈ 166 t/d NaOH (≈ $22 M/y), sulphate stays soluble as Na₂SO₄, doubles gypsum solubility, makes RO unworkable — NaOH has no place upstream of lime",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-038",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive conclusion / basis table",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-1000-0289",
+      "assetId": "R-1002",
+      "property": "operatingEnvelope.reagentBasis",
+      "value": "Lime stage to pH 8.5–10.5: ≈ 149 t/d Ca(OH)₂; 314 t/d gypsum + 20 t/d Ca₃(PO₄)₂ + 5 t/d Mn(OH)₂ (≈ 100 kt/y sludge, 500 kg per kg product); DBM A-2 (46 kt/y lime, 98 kt/y sludge) confirmed within 10 %",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-038",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "basis table",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-1000-0290",
+      "assetId": "R-1003",
+      "property": "operatingEnvelope.reagentBasis",
+      "value": "BaCl₂ sulphate polishing only where the local sewer sulphate limit is below gypsum saturation (≈ 1,480 mg/L); barium $2–4 M/y if required",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-038",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive conclusion / REP-039 chain",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-1000-0292",
+      "assetId": "T-1006",
+      "property": "identity.designConcept",
+      "value": "Acid recovery (150–200 t/d spent-acid reconcentration, 1.5–4.4 MW at 150–200 °C) removes ≈ 95 % of the A-1000 load — 'largest single design lever in the project' (REP-026 F-39); A-1000/A-2000 not to be frozen before the recovery decision",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-039",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Executive conclusion",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-20",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-1000-0294",
+      "assetId": "T-1006",
+      "property": "identity.acidRoute",
+      "value": "Spent-acid recovery, REP-039 Route 2 + 6: TLGO separated from 50–60 wt % acid in A-300 (Route 2) and the GIC from the A-160 acid before washing (Route 6); the filtrates are reconcentrated and recycled, so A-1000 treats only the residual (≈ 6–15 t/d acid). Gated on M1 (filterability at 50–60 wt %), M2 (recycled-acid quality) and M3 (Mn(VII) = 0 before heating); Route 0 (neutralise everything in A-1000) is the fallback",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-039",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Routes 2 and 6; tests M1–M3",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-25",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-1000-0295",
+      "assetId": "PK-1101",
+      "property": "identity.designConcept",
+      "value": "Two-stage vacuum reconcentration of the Route 2 + 6 spent acid to 93 wt % (REP-039 §3, §9): 117.6 t/d H₂SO₄ normal, 140 t/d rated, ≈ 55 t/d water evaporated, 3.5 MW design heat on A-5400 (MVR option), Mn / K salt separator, Mn(VII) interlock at T-1101; budget envelope gated on the M5 vendor enquiry",
+      "unit": "",
+      "sourceDocId": "FEED-PE-REP-039",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "§3 reconcentration energy; §9 recommendation (A-1100)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-26",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-1000-0408",
+      "assetId": "T-1006",
+      "property": "design.feedBasis",
+      "value": "Route 2 + 6 residual: 615 m³/d design (25.6 m³/h), ≈ 495 m³/d normal; 24.3 t/d H₂SO₄ design (18.6 firm + 5.8 organics-bleed allowance), HCl 3 t/d (M3) to 18.2 t/d (PFD dose, bounding)",
+      "unit": "m³/d",
+      "sourceDocId": "FEED-PE-CAL-034",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'Residual balance' (RS1)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-27",
+      "held": false,
+      "conflictGroup": "CF-feedBasis-T-1006",
+      "resolves": [
+        "FEED-PE-REP-038: 2,850 m³/d as drawn (A-160 340 + A-300 850 + A-400 1,658, REP-026); 1,000–1,800 m³/d with REP-036/037 source reductions; ≈ 400–600 m³/d with acid recovery — DBM §3.7.3 30–75 m³/d is 40–100× too low (MOC-001 corrected the basis to a range by case) m³/d"
+      ]
+    },
+    {
+      "valueId": "PV-A-1000-0409",
+      "assetId": "DC-1001",
+      "property": "design.feedBasis",
+      "value": "≈ 52 t/d dry solids design (gypsum 45.6, Ca₃(PO₄)₂ 2.3, Mn(OH)₂ 2.3, inerts 2.0) from CL-1001 underflow at 25 wt %, 7.3 m³/h; cake ≈ 87 t/d at 60 wt %",
+      "unit": "t/d",
+      "sourceDocId": "FEED-PE-CAL-034",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'Equipment' (RS5)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-27",
+      "held": false,
+      "conflictGroup": "CF-feedBasis-DC-1001",
+      "resolves": [
+        "FEED-PE-REP-038: Gypsum / Mn(OH)₂ / Ca₃(PO₄)₂ sludge ≈ 340 t/d dry (Case 0) — decanter duty follows the acid-recovery decision"
+      ]
+    },
+    {
+      "valueId": "PV-A-1000-0410",
+      "assetId": "R-1001",
+      "property": "design.dutyBasis",
+      "value": "Neutralisation heat 0.26 MW normal / 0.34 MW design (120 kJ/mol H₂SO₄) absorbed by the flow (< 3 K); no cooler",
+      "unit": "MW",
+      "sourceDocId": "FEED-PE-CAL-034",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "'Residual balance' (RS1)",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-27",
+      "held": false,
+      "conflictGroup": "CF-dutyBasis-R-1001",
+      "resolves": [
+        "FEED-PE-REP-043: ≈ 2 MW neutralisation heat at R-1001 on cooling water (REP-026 F-42) — absorbed by the water (+18 K) in Case 0; deleted under acid recovery kW"
+      ]
+    },
+    {
+      "valueId": "PV-A-1000-0411",
+      "assetId": "T-1001",
+      "property": "identity.status",
+      "value": "Retired — NaOH storage — service deleted (lime-first, D-A1000-02; RS6)",
+      "unit": "",
+      "sourceDocId": "FEED-PE-CAL-034",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Cover — Area / tags",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-27",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-1000-0412",
+      "assetId": "P-1004",
+      "property": "identity.status",
+      "value": "Retired — NaOH metering pump — service deleted (lime-first, D-A1000-02; RS6)",
+      "unit": "",
+      "sourceDocId": "FEED-PE-CAL-034",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Cover — Area / tags",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-27",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-1000-0413",
+      "assetId": "T-1007",
+      "property": "identity.status",
+      "value": "Retired — Pre-G decant receiver — the A-160 decant no longer exists (Option B / Route 6, D-A160-04; RS7)",
+      "unit": "",
+      "sourceDocId": "FEED-PE-CAL-034",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Cover — Area / tags",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-27",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    },
+    {
+      "valueId": "PV-A-1000-0414",
+      "assetId": "P-1011",
+      "property": "identity.status",
+      "value": "Retired — Pre-G decant lift pump — the A-160 decant no longer exists (RS7)",
+      "unit": "",
+      "sourceDocId": "FEED-PE-CAL-034",
+      "sourceRevision": "V1.0",
+      "sourceLocation": "Cover — Area / tags",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-27",
+      "held": false,
+      "conflictGroup": null,
+      "resolves": []
+    }
+  ],
+  "openConflicts": [],
+  "identityHolds": [],
+  "gaps": [
+    {
+      "gapId": "GAP-A-1000-MV-371acd",
+      "assetId": "R-1003",
+      "kind": "missing value",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-0fc23f",
+      "assetId": "R-1003",
+      "kind": "missing value",
+      "subject": "design.workingVolumeM3",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-62a29a",
+      "assetId": "R-1003",
+      "kind": "missing value",
+      "subject": "design.designPressure",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-1a610e",
+      "assetId": "R-1003",
+      "kind": "missing value",
+      "subject": "design.designTemperature",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-0540b3",
+      "assetId": "T-1001",
+      "kind": "missing value",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-c73f23",
+      "assetId": "T-1001",
+      "kind": "missing value",
+      "subject": "design.designPressure",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-304ee5",
+      "assetId": "T-1001",
+      "kind": "missing value",
+      "subject": "design.designTemperature",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-edd6b1",
+      "assetId": "T-1003",
+      "kind": "missing value",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-edf521",
+      "assetId": "T-1003",
+      "kind": "missing value",
+      "subject": "design.designPressure",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-39e0ba",
+      "assetId": "T-1003",
+      "kind": "missing value",
+      "subject": "design.designTemperature",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-e8bd38",
+      "assetId": "T-1004",
+      "kind": "missing value",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-efe42f",
+      "assetId": "T-1004",
+      "kind": "missing value",
+      "subject": "design.designPressure",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-9104f4",
+      "assetId": "T-1004",
+      "kind": "missing value",
+      "subject": "design.designTemperature",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-bcff29",
+      "assetId": "T-1005",
+      "kind": "missing value",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-f2092b",
+      "assetId": "T-1005",
+      "kind": "missing value",
+      "subject": "design.designPressure",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-3a5d3b",
+      "assetId": "T-1005",
+      "kind": "missing value",
+      "subject": "design.designTemperature",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-e7c798",
+      "assetId": "P-1004",
+      "kind": "missing value",
+      "subject": "design.pumpType",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-724bb4",
+      "assetId": "P-1004",
+      "kind": "missing value",
+      "subject": "design.ratedFlowM3h",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-9349f9",
+      "assetId": "P-1004",
+      "kind": "missing value",
+      "subject": "design.differentialHead",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-3eae7b",
+      "assetId": "P-1002",
+      "kind": "missing value",
+      "subject": "design.pumpType",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-6cd772",
+      "assetId": "P-1002",
+      "kind": "missing value",
+      "subject": "design.ratedFlowM3h",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-7aaaa7",
+      "assetId": "P-1002",
+      "kind": "missing value",
+      "subject": "design.differentialHead",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-237692",
+      "assetId": "P-1001",
+      "kind": "missing value",
+      "subject": "design.pumpType",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-6ea25c",
+      "assetId": "P-1001",
+      "kind": "missing value",
+      "subject": "design.ratedFlowM3h",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-82b70c",
+      "assetId": "P-1001",
+      "kind": "missing value",
+      "subject": "design.differentialHead",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-6282ca",
+      "assetId": "P-1005",
+      "kind": "missing value",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-bcf1e3",
+      "assetId": "P-1006",
+      "kind": "missing value",
+      "subject": "design.pumpType",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-43edf1",
+      "assetId": "P-1006",
+      "kind": "missing value",
+      "subject": "design.ratedFlowM3h",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-b22fb6",
+      "assetId": "P-1006",
+      "kind": "missing value",
+      "subject": "design.differentialHead",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-119b8c",
+      "assetId": "P-1006",
+      "kind": "missing value",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-4f6018",
+      "assetId": "P-1007",
+      "kind": "missing value",
+      "subject": "design.pumpType",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-8de97a",
+      "assetId": "P-1007",
+      "kind": "missing value",
+      "subject": "design.ratedFlowM3h",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-e44c51",
+      "assetId": "P-1007",
+      "kind": "missing value",
+      "subject": "design.differentialHead",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-3ad44b",
+      "assetId": "P-1007",
+      "kind": "missing value",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-8dacdd",
+      "assetId": "P-1008",
+      "kind": "missing value",
+      "subject": "design.pumpType",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-ea6331",
+      "assetId": "P-1008",
+      "kind": "missing value",
+      "subject": "design.ratedFlowM3h",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-35b651",
+      "assetId": "P-1008",
+      "kind": "missing value",
+      "subject": "design.differentialHead",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-d02117",
+      "assetId": "P-1008",
+      "kind": "missing value",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-d56666",
+      "assetId": "P-1009",
+      "kind": "missing value",
+      "subject": "design.pumpType",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-8ef042",
+      "assetId": "P-1009",
+      "kind": "missing value",
+      "subject": "design.ratedFlowM3h",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-36b4ae",
+      "assetId": "P-1009",
+      "kind": "missing value",
+      "subject": "design.differentialHead",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-b3bad8",
+      "assetId": "P-1010",
+      "kind": "missing value",
+      "subject": "design.pumpType",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-703a81",
+      "assetId": "P-1010",
+      "kind": "missing value",
+      "subject": "design.ratedFlowM3h",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-e7f827",
+      "assetId": "P-1010",
+      "kind": "missing value",
+      "subject": "design.differentialHead",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-174269",
+      "assetId": "T-1007",
+      "kind": "missing value",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-8b61ce",
+      "assetId": "T-1007",
+      "kind": "missing value",
+      "subject": "design.designPressure",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-c3220e",
+      "assetId": "T-1007",
+      "kind": "missing value",
+      "subject": "design.designTemperature",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-fa931c",
+      "assetId": "T-1007",
+      "kind": "missing value",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-df99ee",
+      "assetId": "P-1011",
+      "kind": "missing value",
+      "subject": "design.pumpType",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-76c38c",
+      "assetId": "P-1011",
+      "kind": "missing value",
+      "subject": "design.ratedFlowM3h",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-0f5635",
+      "assetId": "P-1011",
+      "kind": "missing value",
+      "subject": "design.differentialHead",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-839b52",
+      "assetId": "P-1011",
+      "kind": "missing value",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-3af7b3",
+      "assetId": "T-1008",
+      "kind": "missing value",
+      "subject": "design.totalVolumeM3",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-772a6b",
+      "assetId": "T-1008",
+      "kind": "missing value",
+      "subject": "design.designPressure",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-cec462",
+      "assetId": "T-1008",
+      "kind": "missing value",
+      "subject": "design.designTemperature",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-126eb5",
+      "assetId": "T-1008",
+      "kind": "missing value",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Equipment datasheet",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-cfafce",
+      "assetId": "P-1012",
+      "kind": "missing value",
+      "subject": "design.pumpType",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-f6afba",
+      "assetId": "P-1012",
+      "kind": "missing value",
+      "subject": "design.ratedFlowM3h",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-4c586c",
+      "assetId": "P-1012",
+      "kind": "missing value",
+      "subject": "design.differentialHead",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-MV-0c6717",
+      "assetId": "P-1012",
+      "kind": "missing value",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Pump datasheet / hydraulic calculation",
+      "status": "open",
+      "note": "no source row harvested"
+    },
+    {
+      "gapId": "GAP-A-1000-CF-c7bacf",
+      "assetId": "T-1006",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-T-1006"
+    },
+    {
+      "gapId": "GAP-A-1000-CF-d82126",
+      "assetId": "R-1004",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-R-1004"
+    },
+    {
+      "gapId": "GAP-A-1000-CF-d23fdc",
+      "assetId": "T-1002",
+      "kind": "conflict",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
+      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
+      "note": "CF-materialOfConstruc-T-1002"
+    },
+    {
+      "gapId": "GAP-A-1000-CF-ba88ec",
+      "assetId": "T-1006",
+      "kind": "conflict",
+      "subject": "design.feedBasis",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-CAL-034, FEED-PE-REP-038",
+      "status": "closed — FEED-PE-CAL-034 approved by QFL 2026-09-27",
+      "note": "CF-feedBasis-T-1006"
+    },
+    {
+      "gapId": "GAP-A-1000-CF-bf703f",
+      "assetId": "R-1001",
+      "kind": "conflict",
+      "subject": "design.dutyBasis",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-CAL-034, FEED-PE-REP-043",
+      "status": "closed — FEED-PE-CAL-034 approved by QFL 2026-09-27",
+      "note": "CF-dutyBasis-R-1001"
+    },
+    {
+      "gapId": "GAP-A-1000-CF-f2b0b2",
+      "assetId": "DC-1001",
+      "kind": "conflict",
+      "subject": "design.feedBasis",
+      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-CAL-034, FEED-PE-REP-038",
+      "status": "closed — FEED-PE-CAL-034 approved by QFL 2026-09-27",
+      "note": "CF-feedBasis-DC-1001"
+    },
+    {
+      "gapId": "GAP-A-1000-DF-f06416",
+      "assetId": "DC-1001|P-1001|P-1002|P-1003|P-1004|P-1009|P-1010|R-1001|R-1002|R-1003|R-1004|T-1001|T-1002|T-1003|T-1004|T-1006",
+      "kind": "decision follow-up",
+      "subject": "design.materialOfConstruction",
+      "requiredSource": "MAT-002 does not cover 2 item(s) with an MDL-001 material only (M-1001, T-1005): extend MAT-002 before those MoCs are approved.",
+      "status": "open",
+      "note": "D-A1000-MOC"
+    },
+    {
+      "gapId": "GAP-A-1000-DF-329a40",
+      "assetId": "T-1006|R-1001",
+      "kind": "decision follow-up",
+      "subject": "operatingEnvelope.feedComposition",
+      "requiredSource": "Decide the A-1000 discharge route and the spent-acid recovery case (REP-039: 150–200 t/d reconcentration; MOC-001 Part D.1) before any A-1000 / A-2000 sizing; then issue the first A-1000 / A-2000 stream tables (none exist) on DBM V2.0 with the wastewater range by case (REP-038).",
+      "status": "open",
+      "note": "D-A1000-01"
+    },
+    {
+      "gapId": "GAP-A-1000-DF-21a95a",
+      "assetId": "R-1001",
+      "kind": "decision follow-up",
+      "subject": "identity.designConcept",
+      "requiredSource": "MoC on FEED-PFD-1000: remove the NaOH rapid-neutralisation stage or re-purpose R-1001 (lime / limestone-then-lime high-density-sludge); restate reagent tanks T-1001 / T-1002 and dosing pumps accordingly.",
+      "status": "open",
+      "note": "D-A1000-02"
+    },
+    {
+      "gapId": "GAP-A-1000-DF-63e5b1",
+      "assetId": "T-1006",
+      "kind": "decision follow-up",
+      "subject": "identity.acidRoute",
+      "requiredSource": "Tests M1–M3 (REP-039); spent-acid concentrator package (new tag, A-5400 duty); A-160 Route 6 revision (CAL-016); A-1000 sized for the residual",
+      "status": "open",
+      "note": "D-A1000-03"
+    },
+    {
+      "gapId": "GAP-A-1000-DF-9f2e4c",
+      "assetId": "PK-1101",
+      "kind": "decision follow-up",
+      "subject": "identity.designConcept",
+      "requiredSource": "REP-039 M5 vendor enquiry (stage split, MVR, materials, CAPEX); A-5400 heat supply pending MOC-002 Part F (screen ≈ 17.6–21.8 MW vs 10 MW provision); M2 recycled-acid quality and organics purge; A-3000 S1 load check for the vent; salt-cake classification; MAT-002 A-1100 rows; PFD / LST-001 entries; model area A-1100",
+      "status": "open",
+      "note": "D-A1000-04"
+    },
+    {
+      "gapId": "GAP-A-1000-DF-f68cb9",
+      "assetId": "T-1006",
+      "kind": "decision follow-up",
+      "subject": "design.feedBasis",
+      "requiredSource": "Sewer sulphate limit (BaCl₂ stage R-1003 held); A-300 phase 2 HCl dose (REP-037 M3); organics bleed (REP-039 M2); A-400 flows (hold H-01); settling / dewatering tests; sludge classification; PFD-1000 MoC and LST-001 (CL-1001, lime silo); phase 2 datasheets",
+      "status": "open",
+      "note": "D-A1000-05"
+    },
+    {
+      "gapId": "GAP-A-1000-ID-e02f06",
+      "assetId": "A-1000 wastewater basis",
+      "kind": "identity / naming conflict",
+      "subject": "DBM V1.4 §3.7.3 30–75 m³/d (corrected to a range by case in DBM V2.0 / MOC-001)",
+      "requiredSource": "2,850 m³/d as drawn (REP-026 / REP-038); 400–600 m³/d with acid recovery",
+      "status": "open",
+      "note": "Basis spans 40–100×; MOC-001 requires a discharge-route decision before A-1000 sizing"
+    },
+    {
+      "gapId": "GAP-A-1000-ID-e796a7",
+      "assetId": "R-1001 NaOH stage",
+      "kind": "identity / naming conflict",
+      "subject": "PFD-1000: rapid NaOH neutralisation to pH 3–4",
+      "requiredSource": "REP-038: not viable (166 t/d NaOH); lime-first flowsheet",
+      "status": "open",
+      "note": "Flowsheet decision pending"
+    },
+    {
+      "gapId": "GAP-A-1000-ID-79e3fe",
+      "assetId": "Model-only tags",
+      "kind": "identity / naming conflict",
+      "subject": "PL-1001, BIN-1001, CP-1001, T-1007, T-1008, P-1011, P-1012 (semantic core)",
+      "requiredSource": "Not on LST-001 (register ends at P-1010)",
+      "status": "open",
+      "note": "Register lags the model"
+    }
+  ],
+  "inventory": [
+    {
+      "tag": "T-1006",
+      "name": "Wastewater equalization · 200 m³ screening",
+      "modelEquipmentId": 125,
+      "operation": "wwcollect",
+      "parts": 1222,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 3,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "R-1001",
+      "name": "Initial neutralization · 35 m³ screening",
+      "modelEquipmentId": 126,
+      "operation": "wwtreat",
+      "parts": 648,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 3,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "R-1002",
+      "name": "Lime precipitation · 65 m³ screening",
+      "modelEquipmentId": 127,
+      "operation": "wwtreat",
+      "parts": 329,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 2,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "R-1003",
+      "name": "Conditional sulfate polishing · 45 m³ screening",
+      "modelEquipmentId": 128,
+      "operation": "wwtreat",
+      "parts": 329,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 2,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "R-1004",
+      "name": "Conditioning / flocculation · 45 m³ screening",
+      "modelEquipmentId": 129,
+      "operation": "wwtreat",
+      "parts": 447,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "DC-1001",
+      "name": "Wastewater decanter centrifuge",
+      "modelEquipmentId": 130,
+      "operation": "wwseparate",
+      "parts": 246,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "T-1001",
+      "name": "NaOH storage · provisional inventory",
+      "modelEquipmentId": 131,
+      "operation": "wwchem",
+      "parts": 392,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "T-1002",
+      "name": "Lime slurry storage · provisional inventory",
+      "modelEquipmentId": 132,
+      "operation": "wwchem",
+      "parts": 395,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "T-1003",
+      "name": "BaCl₂ storage · conditional duty",
+      "modelEquipmentId": 133,
+      "operation": "wwchem",
+      "parts": 377,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "T-1004",
+      "name": "HCl storage · provisional inventory",
+      "modelEquipmentId": 134,
+      "operation": "wwchem",
+      "parts": 378,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "T-1005",
+      "name": "Floc aid preparation / storage",
+      "modelEquipmentId": 135,
+      "operation": "wwchem",
+      "parts": 387,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "P-1004",
+      "name": "NaOH dosing pump",
+      "modelEquipmentId": 136,
+      "operation": "wwchem",
+      "parts": 162,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "P-1003",
+      "name": "Lime slurry dosing pump",
+      "modelEquipmentId": 137,
+      "operation": "wwchem",
+      "parts": 144,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "P-1002",
+      "name": "Conditional BaCl₂ dosing pump",
+      "modelEquipmentId": 138,
+      "operation": "wwchem",
+      "parts": 173,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "P-1001",
+      "name": "HCl dosing pump",
+      "modelEquipmentId": 139,
+      "operation": "wwchem",
+      "parts": 170,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "M-1001",
+      "name": "Floc aid metering feeder",
+      "modelEquipmentId": 140,
+      "operation": "wwchem",
+      "parts": 151,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "P-1005",
+      "name": "Equalization transfer pump",
+      "modelEquipmentId": 141,
+      "operation": "wwcollect",
+      "parts": 337,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "P-1006",
+      "name": "Stage 1 transfer pump",
+      "modelEquipmentId": 142,
+      "operation": "wwtreat",
+      "parts": 317,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "P-1007",
+      "name": "Stage 2 transfer pump",
+      "modelEquipmentId": 143,
+      "operation": "wwtreat",
+      "parts": 318,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "P-1008",
+      "name": "Stage 3 transfer pump",
+      "modelEquipmentId": 144,
+      "operation": "wwtreat",
+      "parts": 318,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "P-1009",
+      "name": "Flocculated slurry feed pump",
+      "modelEquipmentId": 145,
+      "operation": "wwseparate",
+      "parts": 379,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "P-1010",
+      "name": "Conditional centrifuge-bypass pump",
+      "modelEquipmentId": 146,
+      "operation": "wwseparate",
+      "parts": 242,
+      "designStatus": "listed",
+      "inRegister": "yes",
+      "identityStatus": "draft-pfd-tag",
+      "identityHold": false,
+      "approvedRows": 1,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "PL-1001",
+      "name": "A-1000 containment and access",
+      "modelEquipmentId": 148,
+      "operation": "wwcollect",
+      "parts": 4,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "BIN-1001",
+      "name": "Covered sludge collection · classification pending",
+      "modelEquipmentId": 149,
+      "operation": "wwseparate",
+      "parts": 11,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "T-1007",
+      "name": "Pre-G gravity-decant receiving sump",
+      "modelEquipmentId": 150,
+      "operation": "wwcollect",
+      "parts": 244,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "P-1011",
+      "name": "Pre-G decant lift pump",
+      "modelEquipmentId": 151,
+      "operation": "wwcollect",
+      "parts": 314,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "CP-1001",
+      "name": "Wastewater control and sample station",
+      "modelEquipmentId": 152,
+      "operation": "wwtreat",
+      "parts": 3,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "T-1008",
+      "name": "Low centrate receiver · 8 m³ allowance",
+      "modelEquipmentId": 153,
+      "operation": "wwseparate",
+      "parts": 406,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "P-1012",
+      "name": "Centrate transfer / recycle pump",
+      "modelEquipmentId": 154,
+      "operation": "wwseparate",
+      "parts": 258,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "BND-1001",
+      "name": "Wastewater equalization · 200 m³ screening · 265.1 m³ retention",
+      "modelEquipmentId": 180,
+      "operation": "containment-A-1000",
+      "parts": 440,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "BND-1002",
+      "name": "Initial neutralization · 35 m³ screening · 46.6 m³ retention",
+      "modelEquipmentId": 181,
+      "operation": "containment-A-1000",
+      "parts": 194,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "BND-1003",
+      "name": "Lime precipitation · 65 m³ screening · 86.2 m³ retention",
+      "modelEquipmentId": 182,
+      "operation": "containment-A-1000",
+      "parts": 218,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "BND-1004",
+      "name": "Conditional sulfate polishing · 45 m³ screening · 59.8 m³ retention",
+      "modelEquipmentId": 183,
+      "operation": "containment-A-1000",
+      "parts": 234,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "BND-1005",
+      "name": "Conditioning / flocculation · 45 m³ screening · 59.8 m³ retention",
+      "modelEquipmentId": 184,
+      "operation": "containment-A-1000",
+      "parts": 215,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "BND-1006",
+      "name": "NaOH storage · provisional inventory · 26.6 m³ retention",
+      "modelEquipmentId": 185,
+      "operation": "containment-A-1000",
+      "parts": 188,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "BND-1007",
+      "name": "Lime slurry storage · provisional inventory · 26.6 m³ retention",
+      "modelEquipmentId": 186,
+      "operation": "containment-A-1000",
+      "parts": 187,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "BND-1008",
+      "name": "BaCl₂ storage · conditional duty · 8.1 m³ retention",
+      "modelEquipmentId": 187,
+      "operation": "containment-A-1000",
+      "parts": 121,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "BND-1009",
+      "name": "HCl storage · provisional inventory · 8.1 m³ retention",
+      "modelEquipmentId": 188,
+      "operation": "containment-A-1000",
+      "parts": 102,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "BND-1010",
+      "name": "Floc aid preparation / storage · 4.6 m³ retention",
+      "modelEquipmentId": 189,
+      "operation": "containment-A-1000",
+      "parts": 95,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "BND-1011",
+      "name": "Pre-G gravity-decant receiving sump · 8.1 m³ retention",
+      "modelEquipmentId": 190,
+      "operation": "containment-A-1000",
+      "parts": 292,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "BND-1012",
+      "name": "Low centrate receiver · 8 m³ allowance · 11.5 m³ retention",
+      "modelEquipmentId": 191,
+      "operation": "containment-A-1000",
+      "parts": 434,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "FE-1001",
+      "name": "Under-rack aisle west side bay · fire point",
+      "modelEquipmentId": 121001,
+      "operation": "fire-safety",
+      "parts": 41,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "FE-1002",
+      "name": "Wastewater central aisle · fire point",
+      "modelEquipmentId": 121002,
+      "operation": "fire-safety",
+      "parts": 41,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "FE-1003",
+      "name": "Wastewater east approach · fire point",
+      "modelEquipmentId": 121003,
+      "operation": "fire-safety",
+      "parts": 41,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "ES-1000-10",
+      "name": "Proposed emergency shower / eyewash",
+      "modelEquipmentId": 122010,
+      "operation": "containment-A-1000",
+      "parts": 17,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model station tag; plant tag approval open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "ES-1000-11",
+      "name": "Proposed emergency shower / eyewash",
+      "modelEquipmentId": 122011,
+      "operation": "containment-A-1000",
+      "parts": 17,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model station tag; plant tag approval open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "ES-1000-13",
+      "name": "Proposed emergency shower / eyewash",
+      "modelEquipmentId": 122013,
+      "operation": "containment-A-1000",
+      "parts": 17,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model station tag; plant tag approval open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "ES-1001",
+      "name": "Proposed emergency shower / eyewash",
+      "modelEquipmentId": 122024,
+      "operation": "containment-A-1000",
+      "parts": 17,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model station tag; plant tag approval open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "ES-1002",
+      "name": "Proposed emergency shower / eyewash",
+      "modelEquipmentId": 122025,
+      "operation": "containment-A-1000",
+      "parts": 17,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model station tag; plant tag approval open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "ES-1003",
+      "name": "Proposed emergency shower / eyewash",
+      "modelEquipmentId": 122026,
+      "operation": "containment-A-1000",
+      "parts": 17,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model station tag; plant tag approval open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "ES-1004",
+      "name": "Proposed emergency shower / eyewash",
+      "modelEquipmentId": 122029,
+      "operation": "containment-A-1000",
+      "parts": 17,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model station tag; plant tag approval open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true
+    },
+    {
+      "tag": "IF-A300-WASTE",
+      "name": "Wastewater-treatment boundary",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-interface-reference",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A400-WASTE",
+      "name": "Permeate wastewater boundary; recycle unresolved",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A1000-FILL-T-1001",
+      "name": "T-1001 closed chemical delivery boundary",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A1000-FILL-T-1002",
+      "name": "T-1002 closed chemical delivery boundary",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A1000-FILL-T-1003",
+      "name": "T-1003 closed chemical delivery boundary",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A1000-FILL-T-1004",
+      "name": "T-1004 closed chemical delivery boundary",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A1000-FILL-T-1005",
+      "name": "T-1005 closed chemical delivery boundary",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A1000-VENT-T-1001",
+      "name": "T-1001 segregated storage breathing boundary",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A1000-VENT-T-1002",
+      "name": "T-1002 segregated storage breathing boundary",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A1000-VENT-T-1003",
+      "name": "T-1003 segregated storage breathing boundary",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A1000-VENT-T-1005",
+      "name": "T-1005 segregated storage breathing boundary",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A1000-DRAIN-T-1006",
+      "name": "T-1006 blinded contained drain; receiver unqualified",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A1000-DRAIN-R-1001",
+      "name": "R-1001 blinded contained drain; receiver unqualified",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A1000-DRAIN-R-1002",
+      "name": "R-1002 blinded contained drain; receiver unqualified",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A1000-DRAIN-R-1003",
+      "name": "R-1003 blinded contained drain; receiver unqualified",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A1000-DRAIN-R-1004",
+      "name": "R-1004 blinded contained drain; receiver unqualified",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A1000-DRAIN-T-1001",
+      "name": "T-1001 blinded contained drain; receiver unqualified",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A1000-DRAIN-T-1002",
+      "name": "T-1002 blinded contained drain; receiver unqualified",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A1000-DRAIN-T-1003",
+      "name": "T-1003 blinded contained drain; receiver unqualified",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A1000-DRAIN-T-1004",
+      "name": "T-1004 blinded contained drain; receiver unqualified",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A1000-DRAIN-T-1005",
+      "name": "T-1005 blinded contained drain; receiver unqualified",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A1000-SPARE-UF-RETURN",
+      "name": "Capped legacy UF-RETURN reservation; no connected receiving route",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A1000-SPARE-CIP-RETURN",
+      "name": "Capped legacy CIP-RETURN reservation; no connected receiving route",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "IF-A1000-SPARE-SCRUBBER-RETURN",
+      "name": "Capped legacy SCRUBBER-RETURN reservation; no connected receiving route",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
+    },
+    {
+      "tag": "PK-1101",
+      "name": "A-1100 spent-acid vacuum concentrator package (new tag, FEED-PE-DAT-109)",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "candidate-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    },
+    {
+      "tag": "T-1101",
+      "name": "A-1100 concentrator feed tank (new tag, FEED-PE-DAT-110)",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "candidate-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    },
+    {
+      "tag": "T-1102",
+      "name": "A-1100 recovered acid tank (new tag, FEED-PE-DAT-111)",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "candidate-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    },
+    {
+      "tag": "CL-1001",
+      "name": "A-1000 HDS thickener (new tag, D-A1000-05, FEED-PE-DAT-118)",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "candidate-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    },
+    {
+      "tag": "P-1101",
+      "name": "A-1100 concentrator feed pumps A/B (new tag, FEED-PE-DAT-112)",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "candidate-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    },
+    {
+      "tag": "P-1102",
+      "name": "A-1100 recovered acid return pumps A/B (new tag, FEED-PE-DAT-113)",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "candidate-not-in-model",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false,
+      "modelOwned": false
+    }
+  ],
+  "documents": [
+    {
+      "documentId": "FEED-PE-LST-001",
+      "title": "Equipment and Stream Register",
+      "revision": "V5.1",
+      "docType": "LST",
+      "control": "controlled",
+      "tier": "A",
+      "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-LST-001_Equipment-and-Stream-Register_V5.1.xlsx",
+      "valueRows": "44"
+    },
+    {
+      "documentId": "FEED-PE-PFD-001",
+      "title": "Process Flow Diagram",
+      "revision": "V5.1.1",
+      "docType": "PFD",
+      "control": "controlled (Draft - IFR)",
+      "tier": "A",
+      "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-PFD-001_Process-Flow-Diagram_V5.1.1.pdf",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-LST-007",
+      "title": "Control and Instrumentation Loop Register",
+      "revision": "V1.0",
+      "docType": "LST",
+      "control": "controlled (conceptual)",
+      "tier": "A",
+      "file": "7 Piping and Instrumentation Diagrams (P&IDs)\\FEED-PE-LST-007_Control-and-Instrumentation-Loop-Register_V1.0.xlsx",
+      "valueRows": "88"
+    },
+    {
+      "documentId": "FEED-PE-MDL-001",
+      "title": "Equipment Scale-Up Study",
+      "revision": "V1.8",
+      "docType": "MDL",
+      "control": "controlled",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\FEED-PE-MDL-001_Equipment-Scale-Up-Study_V1.8.xlsx",
+      "valueRows": "120"
+    },
+    {
+      "documentId": "FEED-PE-MAT-002",
+      "title": "MOC Selection Matrix",
+      "revision": "V1.2",
+      "docType": "MAT",
+      "control": "controlled",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.2.xlsx",
+      "valueRows": "32"
+    },
+    {
+      "documentId": "FEED-PE-DBM-001",
+      "title": "Design Basis Memorandum",
+      "revision": "V2.0",
+      "docType": "DBM",
+      "control": "controlled (approved)",
+      "tier": "B",
+      "file": "3 Design Basis Memorandum (DBM)\\FEED-PE-DBM-001_Design-Basis-Memorandum_V2.0.docx",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "MODEL",
+      "title": "rGO Process Explorer model and semantic core",
+      "revision": "semantic v1",
+      "docType": "MODEL",
+      "control": "model evidence only",
+      "tier": "A",
+      "file": "dist/semantic/v1 (scripts/generate-reactor-semantic.mjs, scripts/expand-*-semantic.mjs)",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-REP-038",
+      "title": "A-1000 / A-2000 Wastewater and Water Reclaim (first principles)",
+      "revision": "V1.0",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-038_A-1000-A-2000-Wastewater-and-Water-Reclaim_V1.0.docx",
+      "valueRows": "7"
+    },
+    {
+      "documentId": "FEED-PE-REP-039",
+      "title": "Sulphuric Acid Recovery vs Neutralisation (cross-area)",
+      "revision": "V1.0",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-039_Sulphuric-Acid-Recovery-vs-Neutralisation_V1.0.docx",
+      "valueRows": "3"
+    },
+    {
+      "documentId": "FEED-PE-REP-043",
+      "title": "Plant Utilities and Thermal Balance (A-5000 / A-6000 / A-4000)",
+      "revision": "V1.0",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-043_Plant-Utilities-and-Thermal-Balance_V1.0.docx",
+      "valueRows": "1"
+    },
+    {
+      "documentId": "FEED-PE-REP-041",
+      "title": "Furnace Off-Gas and Vent Gas Assessment",
+      "revision": "V1.0",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-041_Furnace-Off-Gas-and-Vent-Gas-Assessment_V1.0.docx",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-REP-008",
+      "title": "A-2000 Reclaimed Water RO System CAPEX (PFD-2000 Rev XD1 basis)",
+      "revision": "V1.0",
+      "docType": "REP",
+      "control": "controlled",
+      "tier": "B",
+      "file": "B. Technical Reports\\FEED-PE-REP-008_A-2000-Reclaimed-Water-RO-System-CAPEX_V1.0.docx",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PP-SOP-002",
+      "title": "Jar Test — Lime Dose for Wastewater Neutralization (pilot)",
+      "revision": "V2.0",
+      "docType": "SOP",
+      "control": "controlled (pilot)",
+      "tier": "B",
+      "file": "A. SOPs\\FEED-PP-SOP-002_Jar-Test-Lime-Dose-Wastewater-Neutralization_V2.0.docx",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-CAL-033",
+      "title": "A-1100 Spent-Acid Concentration Balance",
+      "revision": "V1.1",
+      "docType": "CAL",
+      "control": "controlled (preliminary)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\4 - Equipment Calculation (CAL) Sheets\\FEED-PE-CAL-033_A-1100-Spent-Acid-Concentration-Balance_V1.1.xlsx",
+      "valueRows": "0"
+    },
+    {
+      "documentId": "FEED-PE-DAT-109",
+      "title": "PK-1101 Spent-Acid Concentrator Package Datasheet",
+      "revision": "V1.1",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-109_PK-1101-Spent-Acid-Concentrator-Package-Datasheet_V1.1.xlsx",
+      "valueRows": "52"
+    },
+    {
+      "documentId": "FEED-PE-DAT-110",
+      "title": "T-1101 Concentrator Feed Tank Datasheet",
+      "revision": "V1.1",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-110_T-1101-Concentrator-Feed-Tank-Datasheet_V1.1.xlsx",
+      "valueRows": "34"
+    },
+    {
+      "documentId": "FEED-PE-DAT-111",
+      "title": "T-1102 Recovered Acid Tank Datasheet",
+      "revision": "V1.1",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-111_T-1102-Recovered-Acid-Tank-Datasheet_V1.1.xlsx",
+      "valueRows": "34"
+    },
+    {
+      "documentId": "FEED-PE-DAT-112",
+      "title": "P-1101A/B Concentrator Feed Pumps Datasheet",
+      "revision": "V1.1",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-112_P-1101AB-Concentrator-Feed-Pumps-Datasheet_V1.1.xlsx",
+      "valueRows": "52"
+    },
+    {
+      "documentId": "FEED-PE-DAT-113",
+      "title": "P-1102A/B Recovered Acid Return Pumps Datasheet",
+      "revision": "V1.1",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-113_P-1102AB-Recovered-Acid-Return-Pumps-Datasheet_V1.1.xlsx",
+      "valueRows": "52"
+    },
+    {
+      "documentId": "FEED-PE-CAL-034",
+      "title": "A-1000 Residual Neutralisation Sizing",
+      "revision": "V1.0",
+      "docType": "CAL",
+      "control": "controlled (preliminary)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\4 - Equipment Calculation (CAL) Sheets\\FEED-PE-CAL-034_A-1000-Residual-Neutralisation-Sizing_V1.0.xlsx",
+      "valueRows": "7"
+    },
+    {
+      "documentId": "FEED-PE-DAT-114",
+      "title": "T-1006 Wastewater Equalisation Tank Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-114_T-1006-Wastewater-Equalisation-Tank-Datasheet_V1.0.xlsx",
+      "valueRows": "17"
+    },
+    {
+      "documentId": "FEED-PE-DAT-115",
+      "title": "R-1001 Stage 1 Neutralisation Reactor Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-115_R-1001-Stage-1-Neutralisation-Reactor-Datasheet_V1.0.xlsx",
+      "valueRows": "18"
+    },
+    {
+      "documentId": "FEED-PE-DAT-116",
+      "title": "R-1002 Stage 2 Lime Precipitation Reactor Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-116_R-1002-Stage-2-Lime-Precipitation-Reactor-Datasheet_V1.0.xlsx",
+      "valueRows": "17"
+    },
+    {
+      "documentId": "FEED-PE-DAT-117",
+      "title": "R-1004 Flocculation Tank Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-117_R-1004-Flocculation-Tank-Datasheet_V1.0.xlsx",
+      "valueRows": "17"
+    },
+    {
+      "documentId": "FEED-PE-DAT-118",
+      "title": "CL-1001 HDS Thickener Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-118_CL-1001-HDS-Thickener-Datasheet_V1.0.xlsx",
+      "valueRows": "17"
+    },
+    {
+      "documentId": "FEED-PE-DAT-119",
+      "title": "DC-1001 Sludge Decanter Centrifuge Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-119_DC-1001-Sludge-Decanter-Centrifuge-Datasheet_V1.0.xlsx",
+      "valueRows": "11"
+    },
+    {
+      "documentId": "FEED-PE-DAT-120",
+      "title": "T-1002 Lime Slurry Day Tank Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-120_T-1002-Lime-Slurry-Day-Tank-Datasheet_V1.0.xlsx",
+      "valueRows": "18"
+    },
+    {
+      "documentId": "FEED-PE-DAT-121",
+      "title": "P-1003A/B Lime Slurry Pumps Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-121_P-1003AB-Lime-Slurry-Pumps-Datasheet_V1.0.xlsx",
+      "valueRows": "23"
+    },
+    {
+      "documentId": "FEED-PE-DAT-122",
+      "title": "P-1005A/B Equalisation Transfer Pumps Datasheet",
+      "revision": "V1.0",
+      "docType": "DAT",
+      "control": "controlled (preliminary - budget enquiry)",
+      "tier": "A",
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-122_P-1005AB-Equalisation-Transfer-Pumps-Datasheet_V1.0.xlsx",
+      "valueRows": "23"
+    }
+  ],
+  "images": [
+    {
+      "key": "overview",
+      "title": "01 | A-1000 wastewater treatment — all register equipment, assembled",
+      "owners": [
+        "T-1006",
+        "R-1001",
+        "R-1002",
+        "R-1003",
+        "R-1004",
+        "DC-1001",
+        "T-1001",
+        "T-1002",
+        "T-1003",
+        "T-1004",
+        "T-1005",
+        "P-1001",
+        "P-1002",
+        "P-1003",
+        "P-1004",
+        "M-1001",
+        "P-1005",
+        "P-1006",
+        "P-1007",
+        "P-1008",
+        "P-1009",
+        "P-1010"
+      ],
+      "frame": [
+        "T-1006",
+        "R-1001",
+        "R-1002",
+        "R-1003",
+        "R-1004",
+        "DC-1001",
+        "T-1001",
+        "T-1002",
+        "T-1003",
+        "T-1004",
+        "T-1005"
+      ],
+      "direction": [
+        1,
+        0.8,
+        1
+      ],
+      "alt": "equalization tank, four treatment reactors, decanter, five reagent tanks with their dosing pumps and feeder, and six transfer pumps in assembled position"
+    },
+    {
+      "key": "treatment",
+      "title": "02 | Treatment train: T-1006 equalization → R-1001 → R-1002 → R-1003 → R-1004 with transfer pumps P-1005 … P-1008",
+      "owners": [
+        "T-1006",
+        "R-1001",
+        "R-1002",
+        "R-1003",
+        "R-1004",
+        "P-1005",
+        "P-1006",
+        "P-1007",
+        "P-1008"
+      ],
+      "frame": [
+        "T-1006",
+        "R-1001",
+        "R-1002",
+        "R-1003",
+        "R-1004"
+      ],
+      "direction": [
+        -1,
+        0.5,
+        1
+      ],
+      "alt": "the equalization tank and the four staged reactors with their stage transfer pumps"
+    },
+    {
+      "key": "reagents",
+      "title": "03 | Reagent storage and dosing: T-1001 NaOH, T-1002 lime, T-1003 BaCl₂, T-1004 HCl, T-1005 floc aid with P-1001 … P-1004 and M-1001",
+      "owners": [
+        "T-1001",
+        "T-1002",
+        "T-1003",
+        "T-1004",
+        "T-1005",
+        "P-1001",
+        "P-1002",
+        "P-1003",
+        "P-1004",
+        "M-1001"
+      ],
+      "direction": [
+        1,
+        0.5,
+        -1
+      ],
+      "alt": "the five reagent tanks with their dosing pumps and the floc-aid feeder"
+    },
+    {
+      "key": "separation",
+      "title": "04 | Solids separation: DC-1001 decanter with feed pump P-1009, bypass P-1010, centrate receiver T-1008 / P-1012 and sludge bin BIN-1001",
+      "owners": [
+        "DC-1001",
+        "P-1009",
+        "P-1010",
+        "T-1008",
+        "P-1012",
+        "BIN-1001"
+      ],
+      "direction": [
+        -1,
+        0.5,
+        -1
+      ],
+      "alt": "decanter centrifuge with its feed and bypass pumps, the centrate receiver and the covered sludge bin"
+    },
+    {
+      "key": "containment",
+      "title": "05 | Twelve bunds BND-1001 … BND-1012, three fire points and seven emergency stations",
+      "owners": [
+        "BND-1001",
+        "BND-1002",
+        "BND-1003",
+        "BND-1004",
+        "BND-1005",
+        "BND-1006",
+        "BND-1007",
+        "BND-1008",
+        "BND-1009",
+        "BND-1010",
+        "BND-1011",
+        "BND-1012",
+        "T-1006",
+        "R-1001",
+        "R-1002",
+        "R-1003",
+        "R-1004",
+        "T-1001",
+        "T-1002",
+        "T-1003",
+        "T-1004",
+        "T-1005",
+        "T-1007",
+        "T-1008",
+        "FE-1001",
+        "FE-1002",
+        "FE-1003",
+        "ES-1000-10",
+        "ES-1000-11",
+        "ES-1000-13",
+        "ES-1001",
+        "ES-1002",
+        "ES-1003",
+        "ES-1004"
+      ],
+      "frame": [
+        "BND-1001",
+        "BND-1002",
+        "BND-1003",
+        "BND-1004",
+        "BND-1005",
+        "BND-1006",
+        "BND-1007",
+        "BND-1008",
+        "BND-1009",
+        "BND-1010",
+        "BND-1011",
+        "BND-1012"
+      ],
+      "direction": [
+        0.35,
+        1,
+        0.3
+      ],
+      "percentiles": [
+        2,
+        98
+      ],
+      "labels": false,
+      "alt": "plan-like view of the whole wastewater area with its twelve retention bunds, fire points and emergency stations (unlabelled)"
+    }
+  ],
+  "related": [
+    {
+      "href": "./a2000-review.html",
+      "label": "A-2000 water recovery (downstream)"
+    },
+    {
+      "href": "./a300-review.html",
+      "label": "A-300 fixing and acid wash (acidic centrate source)"
+    },
+    {
+      "href": "./a160-review.html",
+      "label": "A-160 Pre-G fixing (wastewater and decant source)"
+    }
+  ],
+  "counts": {
+    "assets": 66,
+    "propertyRows": 687,
+    "approved": 31,
+    "openConflicts": 0,
+    "decisions": 6,
+    "holds": 0,
+    "gapsOpen": 69,
+    "gapsClosed": 6
+  }
+}

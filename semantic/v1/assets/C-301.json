@@ -26,12 +26,15 @@
     "Model route alignment and destination qualification remain open under A300-001."
   ],
   "processBasis": [],
+  "identity": {
+    "designConcept": "Automatic membrane filter press (PP plates, PTFE cloth, ≈ 70 chambers of 1,500 mm) with a 1.5 pore-volume displacement cake wash: 90 % of the cake liquor to T-304 and the concentrator, ≈ 0.65 t/d H₂SO₄ left in the washed cake (decanter V1.1: 14.2 t/d); gated on M1, decanter with repulp wash the fallback"
+  },
   "dataLayer": {
     "area": "A-300",
     "source": "data/semantic/A-300",
-    "approvedRows": 1,
+    "approvedRows": 2,
     "heldRows": 0,
-    "pendingRows": 50,
+    "pendingRows": 67,
     "identityHold": null,
     "applied": "2026-09-27",
     "baseline": {
@@ -40,8 +43,11 @@
         "designPressure": null,
         "designTemperature": null,
         "materialOfConstruction": null
-      }
+      },
+      "identity": null
     },
-    "baselineAbsent": []
+    "baselineAbsent": [
+      "identity"
+    ]
   }
 }

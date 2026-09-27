@@ -31,6 +31,16 @@
       "availability": "indexed by data layer",
       "dataLayer": true,
       "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.2.xlsx"
+    },
+    {
+      "documentId": "FEED-PE-CAL-032",
+      "title": "A-300 Phase 1 — Option B Quench Loop, Filter Press and Filtrate",
+      "revision": "V1.2",
+      "page": null,
+      "status": "controlled (preliminary)",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "8 Equipment Design and Specifications\\4 - Equipment Calculation (CAL) Sheets\\FEED-PE-CAL-032_A-300-Phase-1-Option-B-Quench-Loop-Filter-Press-and-Filtrate_V1.2.xlsx"
     }
   ]
 }
