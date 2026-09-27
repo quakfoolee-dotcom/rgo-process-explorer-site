@@ -1,8 +1,8 @@
 {
  "area": "A-5000",
- "version": "ee5893b",
+ "version": "d35bff9",
  "date": "2026-09-27",
- "revision": "r6",
+ "revision": "r7",
  "reviewer": {
   "initials": "QFL",
   "date": "2026-09-27"
@@ -11,16 +11,16 @@
  "semanticCoreVersion": "1.19.0-foundation",
  "counts": {
   "assets": 47,
-  "values": 530,
-  "approved": 16,
+  "values": 549,
+  "approved": 17,
   "superseded": 12,
   "conflictsOpen": 10,
   "conflictsClosed": 10,
-  "decisions": 6,
-  "gapsOpen": 12,
+  "decisions": 7,
+  "gapsOpen": 13,
   "gapsClosed": 10,
   "holds": 0,
-  "documents": 21
+  "documents": 24
  },
  "approved": [
   {
@@ -198,6 +198,17 @@
    "location": "Executive conclusion",
    "reviewer": "QFL",
    "reviewDate": "2026-09-20"
+  },
+  {
+   "valueId": "PV-A-5000-0531",
+   "assetId": "A-5400",
+   "property": "identity.designConcept",
+   "value": "20 barg saturated steam (≈ 212 °C) from 2 × 7 MW gas-fired fire-tube boilers, 14 MW rated, sized on the issued 1 wt % dryer feed with HR-601 recuperation and MVR on concentrator stage 1: users 12.9 MW (HX-601 10.8 MW rated, PK-1101 stage 2 2.0 MW design, R-141 0.14 MW), + 5 % → 13.6 MW; ≈ 24.6 t/h steam, 90 % condensate return; A-5100 hot water kept for the ≤ 95 °C users. At a 2 wt % feed (HS-8) one 7 MW boiler would carry the plant",
+   "unit": null,
+   "source": "FEED-PE-CAL-037 V1.0",
+   "location": "Cover — Basis (HS-1…HS-8)",
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-27"
   }
  ],
  "conflicts": {
@@ -818,6 +829,17 @@
    "reviewDate": "2026-09-20",
    "rationale": "Jacket-service duties follow D-A200-01 (R-201 basis) and D-A300-01 (T-303 Option B) — not approved here.",
    "gapNote": null
+  },
+  {
+   "decisionId": "D-A5000-02",
+   "assetPattern": "A-5400",
+   "property": "identity.designConcept",
+   "approvedSourceDocId": "FEED-PE-CAL-037",
+   "approvedValue": null,
+   "reviewer": "QFL",
+   "reviewDate": "2026-09-27",
+   "rationale": "A-5400 heat supply basis (bases HS-1–HS-8, FEED-PE-NTE-014 / CAL-037): on the issued 1 wt % dryer feed HX-601 needs 13.8 MW rated and the A-1100 concentrator 3.5 MW — ≈ 17.4 MW against the 5–8 MW (10 MW provision) of MOC-002. With the HR-601 exhaust recuperator (air 25 → 50 °C, 2.7 MW) and MVR on concentrator stage 1, the users are 12.9 MW; A-5400 is 20 barg saturated steam from 2 × 7 MW gas-fired fire-tube boilers, 14 MW rated (≈ 24.6 t/h, 90 % condensate return, ≈ 2.5 t/h make-up). Thermal oil is the alternative; direct firing and electric heating are rejected. A FEED sizing basis for MOC-002 Part D — Part F (the decision on the change) is for the Approving Authority and is not signed. Approved in review by QFL 2026-09-27.",
+   "gapNote": "MOC-002 Part F; air-emissions authorisation and boiler registration (HS-7); HR-601 exhaust condition (dryer vendor); MVR offer (REP-039 M5); dryer feed solids (HS-8); PFD-5000 / PFD-0600 and LST-001 entries for A-5400 and HR-601; REP-043 V1.1; CST-002 re-estimate"
   }
  ],
  "gaps": {
@@ -902,6 +924,15 @@
     "requiredSource": "MoC on FEED-PFD-5000: add the ≥ 200 °C loop (A-5400 placeholder), move R-201 / R-303 exotherm control to chilled water, and derive all duties from the DBM V2.0 re-issued stream tables (D-A200-01, D-A300-01, D-A600-01); model the A-5000 packages (only TCU-201 / TCU-303 interfaces exist).",
     "status": "open",
     "note": "D-A5000-01"
+   },
+   {
+    "gapId": "GAP-A-5000-DF-494ad8",
+    "assetId": "A-5400",
+    "kind": "decision follow-up",
+    "subject": "identity.designConcept",
+    "requiredSource": "MOC-002 Part F; air-emissions authorisation and boiler registration (HS-7); HR-601 exhaust condition (dryer vendor); MVR offer (REP-039 M5); dryer feed solids (HS-8); PFD-5000 / PFD-0600 and LST-001 entries for A-5400 and HR-601; REP-043 V1.1; CST-002 re-estimate",
+    "status": "open",
+    "note": "D-A5000-02"
    },
    {
     "gapId": "GAP-A-5000-ID-c1cac2",
@@ -1066,6 +1097,13 @@
   },
   {
    "assetId": "A-5100|A-5200|A-5300",
+   "gaps": 1,
+   "subjects": [
+    "identity.designConcept"
+   ]
+  },
+  {
+   "assetId": "A-5400",
    "gaps": 1,
    "subjects": [
     "identity.designConcept"
@@ -1647,9 +1685,9 @@
    "modelEquipmentId": null,
    "bound": false,
    "identityStatus": "candidate-not-in-model",
-   "values": 0,
-   "approved": 0,
-   "gaps": 0
+   "values": 19,
+   "approved": 1,
+   "gaps": 1
   }
  ],
  "binding": {
@@ -1657,7 +1695,7 @@
   "bound": 23,
   "unbound": 24,
   "interfaces": 23,
-  "withValues": 14
+  "withValues": 15
  },
  "documents": [
   {
@@ -1869,10 +1907,40 @@
    "tier": "A",
    "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-084_A-5300-Water-Cooled-Chiller-Package-Datasheet_V1.0.xlsx",
    "valueRows": "16"
+  },
+  {
+   "documentId": "FEED-PE-NTE-014",
+   "title": "A-5400 High-Temperature Heat Supply — Options and Basis",
+   "revision": "V1.0",
+   "docType": "NTE",
+   "control": "controlled (draft - issued for review)",
+   "tier": "B",
+   "file": "B. Technical Reports\\FEED-PE-NTE-014_A-5400-Heat-Supply-Options-and-Basis_V1.0.docx",
+   "valueRows": "0"
+  },
+  {
+   "documentId": "FEED-PE-CAL-037",
+   "title": "A-5400 Heat Supply Balance",
+   "revision": "V1.0",
+   "docType": "CAL",
+   "control": "controlled (preliminary)",
+   "tier": "A",
+   "file": "8 Equipment Design and Specifications\\4 - Equipment Calculation (CAL) Sheets\\FEED-PE-CAL-037_A-5400-Heat-Supply-Balance_V1.0.xlsx",
+   "valueRows": "1"
+  },
+  {
+   "documentId": "FEED-PE-DAT-140",
+   "title": "A-5400 Steam Boiler Package Datasheet",
+   "revision": "V1.0",
+   "docType": "DAT",
+   "control": "controlled (preliminary - budget enquiry)",
+   "tier": "A",
+   "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-140_A-5400-Steam-Boiler-Package-Datasheet_V1.0.xlsx",
+   "valueRows": "18"
   }
  ],
  "layout": {
-  "version": "5401137",
+  "version": "d35bff9",
   "date": "2026-09-27",
   "revision": "r2",
   "reviewer": "QFL",
@@ -1895,7 +1963,7 @@
    "status": "Design concept approved — MoC FEED-PE-MOC-002 raised, pending review and decision; model and PFD not yet updated",
    "priority": "high",
    "discipline": "Process / utilities",
-   "observation": "D-A5000-01 approves FEED-PE-REP-043 F-51: a fourth loop — ≥ 200 °C steam or thermal oil — is required for HX-601, the acid concentrator and R-141, and the exotherm control belongs on chilled water. The model and FEED-PFD-5000 still show three water circuits (HW 80–95 °C, CW 25–30 °C, CHW 5–7 °C), so the page sections below describe the as-drawn arrangement, not the approved concept. The change is now recorded as FEED-PE-MOC-002 V1.0 (raised 2026-09-22 against FEED-PE-PFD-001 V5.1.1 sheet PFD-5000; Parts A–C complete, review and decision open), so nothing in it is approved yet. 16 approved values are applied on 14 assets.",
+   "observation": "D-A5000-01 approves FEED-PE-REP-043 F-51: a fourth loop — ≥ 200 °C steam or thermal oil — is required for HX-601, the acid concentrator and R-141, and the exotherm control belongs on chilled water. The model and FEED-PFD-5000 still show three water circuits (HW 80–95 °C, CW 25–30 °C, CHW 5–7 °C), so the page sections below describe the as-drawn arrangement, not the approved concept. The change is now recorded as FEED-PE-MOC-002 V1.0 (raised 2026-09-22 against FEED-PE-PFD-001 V5.1.1 sheet PFD-5000; Parts A–C complete, review and decision open), so nothing in it is approved yet. 17 approved values are applied on 15 assets.",
    "action": "Take FEED-PE-MOC-002 through review (Part D, with the HAZOP / What-If of the new loop and the chilled-water exotherm service) and decision (Part F); then revise PFD-5000 and the user sheets to add the ≥ 200 °C loop (A-5400 placeholder) and move the R-201 / T-303 exotherm control to chilled water, and re-issue the thermal balance as REP-043 V1.1. Until Part F is signed no heating duty above 95 °C may be shown as served.",
    "evidence": [
     {
@@ -2054,13 +2122,13 @@
     {
      "kind": "finding",
      "id": "A300-01",
-     "label": "A300-01 · Fixing tank T-303 sizing basis — Sizing basis withdrawn — re-issue required (A-300 review r4 · QFL)",
+     "label": "A300-01 · Fixing tank T-303 sizing basis — Sizing basis withdrawn — re-issue required (A-300 review r5 · QFL)",
      "href": "./a300-review.html#A300-01"
     },
     {
      "kind": "page",
      "id": "A-300",
-     "label": "A-300 review r4 · QFL",
+     "label": "A-300 review r5 · QFL",
      "href": "./a300-review.html"
     }
    ]
@@ -2277,7 +2345,7 @@
     {
      "kind": "asset",
      "id": "A-5400",
-     "label": "A-5400 · Missing ≥ 200 °C steam / thermal-oil loop (REP-043 F-51: HX-601 2.9–15 MW, acid concentrator 1.5–4.4 MW, R-141 fast heat-up) (UtilityPackage) — 0 rows, 0 approved, 0 open gaps",
+     "label": "A-5400 · Missing ≥ 200 °C steam / thermal-oil loop (REP-043 F-51: HX-601 2.9–15 MW, acid concentrator 1.5–4.4 MW, R-141 fast heat-up) (UtilityPackage) — 19 rows, 1 approved, 1 open gaps",
      "href": "#a5000-assets"
     },
     {
@@ -2295,7 +2363,7 @@
     {
      "kind": "finding",
      "id": "A600-08",
-     "label": "A600-08 · A-600 equipment datasheets — T-601, P-601, DR-601 package (design envelope), T-602 — Preliminary datasheets issued — DR-601 package a budget envelope, D-A600-01 open (A-600 review r4 · QFL)",
+     "label": "A600-08 · A-600 equipment datasheets — T-601, P-601, DR-601 package (design envelope), T-602 — Preliminary datasheets issued — DR-601 package a budget envelope, D-A600-01 open (A-600 review r5 · QFL)",
      "href": "./a600-review.html#A600-08"
     }
    ]
@@ -2318,7 +2386,7 @@
     {
      "kind": "asset",
      "id": "A-5400",
-     "label": "A-5400 · Missing ≥ 200 °C steam / thermal-oil loop (REP-043 F-51: HX-601 2.9–15 MW, acid concentrator 1.5–4.4 MW, R-141 fast heat-up) (UtilityPackage) — 0 rows, 0 approved, 0 open gaps",
+     "label": "A-5400 · Missing ≥ 200 °C steam / thermal-oil loop (REP-043 F-51: HX-601 2.9–15 MW, acid concentrator 1.5–4.4 MW, R-141 fast heat-up) (UtilityPackage) — 19 rows, 1 approved, 1 open gaps",
      "href": "#a5000-assets"
     },
     {
@@ -2336,7 +2404,78 @@
     {
      "kind": "finding",
      "id": "A600-08",
-     "label": "A600-08 · A-600 equipment datasheets — T-601, P-601, DR-601 package (design envelope), T-602 — Preliminary datasheets issued — DR-601 package a budget envelope, D-A600-01 open (A-600 review r4 · QFL)",
+     "label": "A600-08 · A-600 equipment datasheets — T-601, P-601, DR-601 package (design envelope), T-602 — Preliminary datasheets issued — DR-601 package a budget envelope, D-A600-01 open (A-600 review r5 · QFL)",
+     "href": "./a600-review.html#A600-08"
+    }
+   ]
+  },
+  {
+   "id": "A5000-11",
+   "topic": "A-5400 basis approved — 20 barg steam, 2 × 7 MW, with HR-601 and MVR (D-A5000-02)",
+   "status": "FEED sizing basis approved; datasheets issued as candidates; MOC-002 Part F not signed — no duty above 95 °C shown as served",
+   "priority": "high",
+   "discipline": "Process / utilities",
+   "observation": "A5000-09 and A5000-10 left the fourth loop at ≈ 17.6–21.8 MW against the 10 MW MOC-002 provision. D-A5000-02 on bases HS-1–HS-8, approved in review by QFL 2026-09-27 (FEED-PE-NTE-014, FEED-PE-CAL-037, FEED-PE-DAT-140, register V9.1), sizes A-5400 on the issued 1 wt % dryer feed with two levers applied: a new exhaust recuperator HR-601 preheats the drying air 25 → 50 °C (2.7 MW, FEED-PE-DAT-141), so HX-601 falls to 9.8 MW design / 10.8 MW rated (DAT-065 V1.2); PK-1101 stage 1 moves to MVR (≈ 0.8 MW electrical), so stage 2 needs 1.65 MW rated, 2.0 MW design on steam (DAT-109 / CAL-033 V1.2). With R-141 (0.14 MW) the users are 12.9 MW, + 5 % → 13.6 MW: A-5400 is 20 barg saturated steam from 2 × 7 MW gas-fired fire-tube boilers, 14 MW rated, ≈ 24.6 t/h (≈ 12.3 t/h per boiler — the draft's ≈ 11 t/h was corrected at issue), 90 % condensate return, ≈ 2.5 t/h make-up, ≈ 15.9 MW of gas. Thermal oil is the alternative; direct firing of the drying air and electric heating are rejected. The A-5400 design concept is approved; the 19 rows from CAL-037 / DAT-140 include 1 approved, the rest candidates. At a 2 wt % dryer feed (HS-8, a process decision outside this sizing) one 7 MW boiler would carry the plant. D-A5000-02 answers MOC-002 Part D condition 2; Part F — the decision on the change — is for the Approving Authority and is not signed, so A5000-01 stands.",
+   "action": "Put D-A5000-02 to the MOC-002 Approving Authority for Part F; start the air-emissions authorisation and boiler registration (HS-7); confirm the dryer exhaust condition for HR-601 and the MVR offer (REP-039 M5); raise the PFD-5000 / PFD-0600 revision and LST-001 entries for A-5400 and HR-601; issue REP-043 V1.1 and re-estimate CST-002; add the ≈ 2.5 t/h make-up to the A-2000 demand.",
+   "evidence": [
+    {
+     "kind": "decision",
+     "id": "D-A5000-02",
+     "label": "D-A5000-02 (QFL 2026-09-27, FEED-PE-CAL-037): A-5400 heat supply basis (bases HS-1–HS-8, FEED-PE-NTE-014 / CAL-037): on the issued 1 wt % dryer feed HX-601 needs 13.8 MW rated and the A-1100 conce…",
+     "href": "#a5000-decisions"
+    },
+    {
+     "kind": "decision",
+     "id": "D-A5000-01",
+     "label": "D-A5000-01 (QFL 2026-09-20, FEED-PE-REP-043): Four utility loops, not three (REP-043): add a ≥ 200 °C steam / thermal-oil loop for HX-601, the acid concentrator and R-141 heat-up; keep hot water, …",
+     "href": "#a5000-decisions"
+    },
+    {
+     "kind": "document",
+     "id": "FEED-PE-NTE-014",
+     "label": "FEED-PE-NTE-014 V1.0 · A-5400 High-Temperature Heat Supply — Options and Basis (controlled (draft - issued for review))",
+     "href": "#a5000-documents"
+    },
+    {
+     "kind": "document",
+     "id": "FEED-PE-CAL-037",
+     "label": "FEED-PE-CAL-037 V1.0 · A-5400 Heat Supply Balance (controlled (preliminary))",
+     "href": "#a5000-documents"
+    },
+    {
+     "kind": "document",
+     "id": "FEED-PE-DAT-140",
+     "label": "FEED-PE-DAT-140 V1.0 · A-5400 Steam Boiler Package Datasheet (controlled (preliminary - budget enquiry))",
+     "href": "#a5000-documents"
+    },
+    {
+     "kind": "document",
+     "id": "FEED-PE-MOC-002",
+     "label": "FEED-PE-MOC-002 V1.0 · MOC Request: A-5000 Fourth Utility Loop and Exotherm Control (PFD-5000) (controlled (raised 2026-09-22 - pending review and decision))",
+     "href": "#a5000-documents"
+    },
+    {
+     "kind": "value",
+     "id": "PV-A-5000-0531",
+     "label": "PV-A-5000-0531 · A-5400 identity.designConcept = 20 barg saturated steam (≈ 212 °C) from 2 × 7 MW gas-fired fire-tube b (FEED-PE-CAL-037 V1.0)",
+     "href": "#a5000-approved"
+    },
+    {
+     "kind": "value",
+     "id": "PV-A-5000-0537",
+     "label": "PV-A-5000-0537 · A-5400 design.ratedDutyMw = 14 MW (FEED-PE-DAT-140)",
+     "href": "#a5000-approved"
+    },
+    {
+     "kind": "asset",
+     "id": "A-5400",
+     "label": "A-5400 · Missing ≥ 200 °C steam / thermal-oil loop (REP-043 F-51: HX-601 2.9–15 MW, acid concentrator 1.5–4.4 MW, R-141 fast heat-up) (UtilityPackage) — 19 rows, 1 approved, 1 open gaps",
+     "href": "#a5000-assets"
+    },
+    {
+     "kind": "finding",
+     "id": "A600-08",
+     "label": "A600-08 · A-600 equipment datasheets — T-601, P-601, DR-601 package (design envelope), T-602 — Preliminary datasheets issued — DR-601 package a budget envelope, D-A600-01 open (A-600 review r5 · QFL)",
      "href": "./a600-review.html#A600-08"
     }
    ]

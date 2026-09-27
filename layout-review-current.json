@@ -1,7 +1,7 @@
 {
- "version": "d810ef3",
+ "version": "d35bff9",
  "date": "2026-09-27",
- "generated": "2026-09-27T20:34:18.042Z",
+ "generated": "2026-09-27T22:15:29.422Z",
  "revision": "r2",
  "reviewer": {
   "initials": "QFL",
@@ -535,7 +535,7 @@
    "reservedSpaceFindings": 0,
    "review": {
     "href": "./a600-review.html",
-    "revision": "r4",
+    "revision": "r5",
     "reviewer": "QFL"
    }
   },
@@ -587,7 +587,7 @@
    "reservedSpaceFindings": 0,
    "review": {
     "href": "./a1000-review.html",
-    "revision": "r7",
+    "revision": "r8",
     "reviewer": "QFL"
    }
   },
@@ -4291,7 +4291,7 @@
     {
      "kind": "finding",
      "id": "A600-06",
-     "label": "A600-06 · Access, maintenance and fire points — Model access provided — qualification open (A-600 review r4 · QFL)",
+     "label": "A600-06 · Access, maintenance and fire points — Model access provided — qualification open (A-600 review r5 · QFL)",
      "href": "./a600-review.html#A600-06"
     },
     {
@@ -4390,7 +4390,7 @@
     {
      "kind": "finding",
      "id": "A600-01",
-     "label": "A600-01 · Dryer readiness — twelve REP-016 holds — NOT READY for vendor inquiry (A-600 review r4 · QFL)",
+     "label": "A600-01 · Dryer readiness — twelve REP-016 holds — NOT READY for vendor inquiry (A-600 review r5 · QFL)",
      "href": "./a600-review.html#A600-01"
     },
     {
@@ -4419,7 +4419,7 @@
     {
      "kind": "finding",
      "id": "A600-06",
-     "label": "A600-06 · Access, maintenance and fire points — Model access provided — qualification open (A-600 review r4 · QFL)",
+     "label": "A600-06 · Access, maintenance and fire points — Model access provided — qualification open (A-600 review r5 · QFL)",
      "href": "./a600-review.html#A600-06"
     },
     {
@@ -4431,7 +4431,7 @@
     {
      "kind": "finding",
      "id": "A1000-05",
-     "label": "A1000-05 · Containment, access and inbound interfaces — Model provision — retention unverified (A-1000 review r7 · QFL)",
+     "label": "A1000-05 · Containment, access and inbound interfaces — Model provision — retention unverified (A-1000 review r8 · QFL)",
      "href": "./a1000-review.html#A1000-05"
     },
     {

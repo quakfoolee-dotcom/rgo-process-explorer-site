@@ -1,5 +1,5 @@
 {
- "version": "d35bff9",
+ "version": "42e2576",
  "date": "2026-09-27",
  "items": {
   "L01": {
@@ -64,7 +64,7 @@
      "id": "A600-06",
      "area": "A-600",
      "href": "./a600-review.html#A600-06",
-     "revision": "r4",
+     "revision": "r5",
      "reviewer": "QFL",
      "topic": "Access, maintenance and fire points",
      "status": "Model access provided — qualification open"
@@ -82,7 +82,7 @@
      "id": "A1000-05",
      "area": "A-1000",
      "href": "./a1000-review.html#A1000-05",
-     "revision": "r7",
+     "revision": "r8",
      "reviewer": "QFL",
      "topic": "Containment, access and inbound interfaces",
      "status": "Model provision — retention unverified"
@@ -141,7 +141,7 @@
      "id": "A600-05",
      "area": "A-600",
      "href": "./a600-review.html#A600-05",
-     "revision": "r4",
+     "revision": "r5",
      "reviewer": "QFL",
      "topic": "Register and model reconciliation",
      "status": "Register reconciliation required"
@@ -159,7 +159,7 @@
      "id": "A1000-05",
      "area": "A-1000",
      "href": "./a1000-review.html#A1000-05",
-     "revision": "r7",
+     "revision": "r8",
      "reviewer": "QFL",
      "topic": "Containment, access and inbound interfaces",
      "status": "Model provision — retention unverified"
@@ -218,7 +218,7 @@
      "id": "A600-06",
      "area": "A-600",
      "href": "./a600-review.html#A600-06",
-     "revision": "r4",
+     "revision": "r5",
      "reviewer": "QFL",
      "topic": "Access, maintenance and fire points",
      "status": "Model access provided — qualification open"
@@ -271,7 +271,7 @@
      "id": "A600-01",
      "area": "A-600",
      "href": "./a600-review.html#A600-01",
-     "revision": "r4",
+     "revision": "r5",
      "reviewer": "QFL",
      "topic": "Dryer readiness — twelve REP-016 holds",
      "status": "NOT READY for vendor inquiry"
@@ -412,7 +412,7 @@
      "id": "A1000-01",
      "area": "A-1000",
      "href": "./a1000-review.html#A1000-01",
-     "revision": "r7",
+     "revision": "r8",
      "reviewer": "QFL",
      "topic": "Discharge route and acid recovery — the governing decision",
      "status": "Design lever identified — no flow approved"
@@ -494,7 +494,7 @@
      "id": "A600-02",
      "area": "A-600",
      "href": "./a600-review.html#A600-02",
-     "revision": "r4",
+     "revision": "r5",
      "reviewer": "QFL",
      "topic": "Drying envelope and feed solids",
      "status": "Targets approved — subject to HOLD-4 / HOLD-1"
