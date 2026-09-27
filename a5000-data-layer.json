@@ -1,11 +1,11 @@
 {
  "area": "A-5000",
- "version": "3291963",
- "date": "2026-09-25",
- "revision": "r5",
+ "version": "5401137",
+ "date": "2026-09-27",
+ "revision": "r6",
  "reviewer": {
-  "initials": "QFL",
-  "date": "2026-09-25"
+  "initials": null,
+  "date": null
  },
  "lead": "The engineering content of this page — the thermal projections, the PFD temperature register, the fluid-separation and consumer tables and the heat balance — is the model engineer’s and is unchanged. This section adds the data-layer record for A-5000: what is approved, what is in conflict, what is withdrawn and what is still missing, on the same basis as the other fifteen area reviews.",
  "semanticCoreVersion": "1.19.0-foundation",
@@ -1872,8 +1872,8 @@
   }
  ],
  "layout": {
-  "version": "23aabe4",
-  "date": "2026-09-25",
+  "version": "801e83a",
+  "date": "2026-09-27",
   "revision": "r2",
   "reviewer": "QFL",
   "supports": 973,
@@ -1966,13 +1966,13 @@
     {
      "kind": "finding",
      "id": "A200-05",
-     "label": "A200-05 · Top drive, impeller and maintenance — Impeller type in conflict — disassembly basis open (A-200 review r2 · QFL)",
+     "label": "A200-05 · Top drive, impeller and maintenance — Impeller type in conflict — disassembly basis open (A-200 review r4 · QFL)",
      "href": "./a200-review.html#A200-05"
     },
     {
      "kind": "page",
      "id": "A-200",
-     "label": "A-200 review r2 · QFL",
+     "label": "A-200 review r4 · QFL",
      "href": "./a200-review.html"
     }
    ]
@@ -2054,13 +2054,13 @@
     {
      "kind": "finding",
      "id": "A300-01",
-     "label": "A300-01 · Fixing tank T-303 sizing basis — Sizing basis withdrawn — re-issue required (A-300 review r2 · QFL)",
+     "label": "A300-01 · Fixing tank T-303 sizing basis — Sizing basis withdrawn — re-issue required (A-300 review r4 · QFL)",
      "href": "./a300-review.html#A300-01"
     },
     {
      "kind": "page",
      "id": "A-300",
-     "label": "A-300 review r2 · QFL",
+     "label": "A-300 review r4 · QFL",
      "href": "./a300-review.html"
     }
    ]
@@ -2284,6 +2284,47 @@
      "kind": "asset",
      "id": "A-5300",
      "label": "A-5300 · Air-cooled chiller package (Package) — 36 rows, 3 approved, 0 open gaps",
+     "href": "#a5000-assets"
+    },
+    {
+     "kind": "decision",
+     "id": "D-A5000-01",
+     "label": "D-A5000-01 (QFL 2026-09-20, FEED-PE-REP-043): Four utility loops, not three (REP-043): add a ≥ 200 °C steam / thermal-oil loop for HX-601, the acid concentrator and R-141 heat-up; keep hot water, …",
+     "href": "#a5000-decisions"
+    },
+    {
+     "kind": "finding",
+     "id": "A600-08",
+     "label": "A600-08 · A-600 equipment datasheets — T-601, P-601, DR-601 package (design envelope), T-602 — Preliminary datasheets issued — DR-601 package a budget envelope, D-A600-01 open (A-600 review r4 · QFL)",
+     "href": "./a600-review.html#A600-08"
+    }
+   ]
+  },
+  {
+   "id": "A5000-10",
+   "topic": "A-5400 gains a second user — the A-1100 spent-acid concentrator (D-A1000-04)",
+   "status": "Heat duty added to the A-5400 screen — not served until MOC-002 Part F",
+   "priority": "high",
+   "discipline": "Process / utilities",
+   "observation": "D-A1000-04 (A-1000 data layer) carries the A-1100 spent-acid concentrator PK-1101 on FEED-PE-CAL-033 / DAT-109: stage 2 needs steam at ≈ 16 bar or thermal oil at ≥ 200 °C, 2.26 MW normal and 2.69 MW rated, 3.5 MW design. REP-039 §3.1 and REP-026 F-51 foresee one ≥ 160 °C system serving the dryer air heater HX-601 and the concentrator. Added to the A5000-09 screen (14.1–18.3 MW) the fourth loop becomes ≈ 17.6–21.8 MW against the 10 MW MOC-002 provision; the concentrator condensers add ≈ 2.0 MW to A-5200. The MVR option would cut the A-5400 share to ≈ 0.9 MW for 0.8–1.2 MW of electrical load.",
+   "action": "Restate the fourth loop in MOC-002 Part D / F with both users (HX-601 and PK-1101) and decide steam versus thermal oil; ask the concentrator vendors for the MVR option first (M5); add the 2.0 MW condenser load to the A-5200 fluid-cooler basis at REP-043 V1.1.",
+   "evidence": [
+    {
+     "kind": "document",
+     "id": "FEED-PE-MOC-002",
+     "label": "FEED-PE-MOC-002 V1.0 · MOC Request: A-5000 Fourth Utility Loop and Exotherm Control (PFD-5000) (controlled (raised 2026-09-22 - pending review and decision))",
+     "href": "#a5000-documents"
+    },
+    {
+     "kind": "asset",
+     "id": "A-5400",
+     "label": "A-5400 · Missing ≥ 200 °C steam / thermal-oil loop (REP-043 F-51: HX-601 2.9–15 MW, acid concentrator 1.5–4.4 MW, R-141 fast heat-up) (UtilityPackage) — 0 rows, 0 approved, 0 open gaps",
+     "href": "#a5000-assets"
+    },
+    {
+     "kind": "asset",
+     "id": "A-5200",
+     "label": "A-5200 · Closed-circuit evaporative fluid cooler (Package) — 37 rows, 3 approved, 0 open gaps",
      "href": "#a5000-assets"
     },
     {
