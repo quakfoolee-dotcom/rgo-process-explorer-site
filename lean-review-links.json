@@ -1,6 +1,6 @@
 {
- "version": "42e2576",
- "date": "2026-09-27",
+ "version": "3bcdde6",
+ "date": "2026-09-28",
  "items": {
   "L01": {
    "kind": "engineering",
@@ -82,7 +82,7 @@
      "id": "A1000-05",
      "area": "A-1000",
      "href": "./a1000-review.html#A1000-05",
-     "revision": "r8",
+     "revision": "r9",
      "reviewer": "QFL",
      "topic": "Containment, access and inbound interfaces",
      "status": "Model provision — retention unverified"
@@ -159,7 +159,7 @@
      "id": "A1000-05",
      "area": "A-1000",
      "href": "./a1000-review.html#A1000-05",
-     "revision": "r8",
+     "revision": "r9",
      "reviewer": "QFL",
      "topic": "Containment, access and inbound interfaces",
      "status": "Model provision — retention unverified"
@@ -412,7 +412,7 @@
      "id": "A1000-01",
      "area": "A-1000",
      "href": "./a1000-review.html#A1000-01",
-     "revision": "r8",
+     "revision": "r9",
      "reviewer": "QFL",
      "topic": "Discharge route and acid recovery — the governing decision",
      "status": "Design lever identified — no flow approved"
@@ -421,7 +421,7 @@
      "id": "A2000-01",
      "area": "A-2000",
      "href": "./a2000-review.html#A2000-01",
-     "revision": "r3",
+     "revision": "r4",
      "reviewer": "QFL",
      "topic": "Feed and product basis",
      "status": "No basis approved — follows the A-1000 case"

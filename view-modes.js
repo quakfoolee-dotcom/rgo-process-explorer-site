@@ -9,6 +9,7 @@ export function viewAppearance(mode,record,{selected=false,clash=false,route=fal
  // Selection uses a separate white outline. Closed-valve markers do not recolor the fluid.
  if(clash)return {color:'#ff6692',reason:'Interference'};
  if(firePoint||walkProtection)return {color:mode==='material'?'#ffffff':physicalColor,reason:'Fire-point physical identification'};
+ if(record?.retired&&mode!=='flow')return {color:'#5c6570',reason:`Retired — ${record.retired.decisionId}: ${record.retired.reason}`};   // D-MDL-01 MC-1
  if(mode==='status')return {color:DESIGN_STATUSES[record.designStatus].color,reason:DESIGN_STATUSES[record.designStatus].label};
  if(mode==='flow'&&emergencyRole)return {color:emergencyPartColour(emergencyRole)||'#ffd000',reason:'Emergency equipment identification; separate from process route palette'};
  if(mode==='flow')return {color:route?flowColor:context?'#c6d4df':'#43546b',reason:route?'Service route':'Context'};

@@ -14,15 +14,15 @@ const common={areaId:'A-2000',designStatus:'listed',geometryBasis:'A2000-40',geo
 const eq=(tag,label,x,z,op,extra={})=>({...common,tag,label,x,z,primaryOperation:op,labelY:3.7,...extra});
 const tank=(tag,label,x,z,r,capacityM3,op,extra={})=>eq(tag,label,x,z,op,{radius:r,bottom:.26,top:.26+capacityM3/(Math.PI*(r-.04)**2),capacityM3,...extra});
 export const A2000_EQUIPMENT={
- 500:tank('T-2001','RO feed equalization · 1,000 m³ nominal screening',67,-20,6,calc.feedTankNominalM3,'ropretreat'),
+ 500:tank('T-2001','Condensate receiver · 15 m³ (FEED-PE-DAT-132, D-A2000-03)',67,-20,1.5,15,'ropretreat',{geometryStatus:'Re-purposed as the A-1100 condensate receiver, 15 m³ nominal (FEED-PE-DAT-132, D-A2000-03); diameter is a model choice; the PFD-2000 feed-tank connections are kept for continuity (D-MDL-01 MC-2)'}),
  501:eq('P-2001','Feed / media backwash pump',74,-13.7,'ropretreat'),
  502:eq('MMF-2001','Multimedia filtration · parallel vessel allowance',64,-6.7,'ropretreat'),
  503:eq('GF-2001','Greensand Fe / Mn filtration · parallel allowance',70,-6.7,'ropretreat'),
  504:eq('CF-2001','Carbon filtration · oxidant / organic reduction',76,-6.7,'ropretreat'),
  505:eq('UF-2001','Dead-end ultrafiltration · two backwash banks',79,-21,'ropretreat',{reviewNote:'Conceptual supported feed and filtrate manifolds with separate bank waste isolation. Welded tees/elbows and removable clamped module joints are illustrative; material, pressure rating, hydraulic sizing and vendor connection specification remain open. Disconnect upper branch spools before vertical module removal. BL-UF2001-CEB is a design hold with no modeled pipe connection.'}),
- 506:eq('P-2002','RO high-pressure pump package · A/B duty, C standby',85.5,-15.2,'rorecover'),
- 507:eq('RO-2001','Single-pass RO · A/B duty, C standby',85.5,-9,'rorecover'),
- 508:tank('T-2002','RO permeate storage · 140 m³ screening',97,-6,3.2,calc.productTankNominalM3,'rodistribute'),
+ 506:eq('P-2002','RO high-pressure pump package · A/B duty (C standby retired, D-A2000-03)',85.5,-15.2,'rorecover'),
+ 507:eq('RO-2001','Condensate polishing RO · A/B, 1 + 1 (FEED-PE-DAT-134; train C retired, D-A2000-03)',85.5,-9,'rorecover'),
+ 508:tank('T-2002','Process water tank · 100 m³ (FEED-PE-DAT-136)',97,-6,3.2,100,'rodistribute',{geometryStatus:'100 m³ nominal from FEED-PE-DAT-136 (D-A2000-03); diameter is a model choice (D-MDL-01 MC-2)'}),
  509:eq('P-2005','RO permeate distribution pump',97,-1.7,'rodistribute'),
  510:eq('CF-2002','Final cartridge polishing · 0.2–1 µm PFD range',100,-2,'rodistribute'),
  511:tank('T-2003','RO concentrate storage · 95 m³ screening',97,-21,2.7,calc.brineTankNominalM3,'rowaste'),
@@ -38,6 +38,10 @@ export const A2000_EQUIPMENT={
  521:tank('TK-CIP2001-W','Segregated spent CIP hold · 5 m³ allowance',90.4,-25.6,.95,5,'roclean',{designStatus:'proposed'}),
 };
 for(const [i,x] of [81,85.5,90].entries()) A2000_EQUIPMENT[522+i]=eq('GF-RO2001'+String.fromCharCode(65+i),'Guard cartridge filter housing',x-1.3,-16.3,'ropretreat',{radius:.23,labelY:2.1,designStatus:'proposed',packageParentId:506,processAssociation:'P-2002'+String.fromCharCode(65+i),reviewNote:'Conceptual cartridge, seals, closure and supports; vendor selection, pressure rating, filtration duty and removal clearance require confirmation.'});
+// D-MDL-01 MC-1: A-2000 on clean sources only (D-A2000-03, basis A2-7) retires the media / UF train, backwash, brine handling and the third RO
+// train. Kept in place for PFD-2000 continuity, shown as retired and left out of equipment counts; removal is handed to the model owner.
+export const A2000_RETIRED=['MMF-2001','GF-2001','UF-2001','P-2001','TK-UF2001','P-UF2001','TK-BW2001','P-BW2001','T-2003','P-2003','GF-RO2001C'];   // P-2002C / RO-2001C are trains of the P-2002 / RO-2001 packages: noted on their labels
+for(const e of Object.values(A2000_EQUIPMENT))if(A2000_RETIRED.includes(e.tag)){e.retired={decisionId:'D-A2000-03',reason:'No service on clean sources only (basis A2-7)',basis:'D-MDL-01 MC-1'};e.label+=' · RETIRED (D-A2000-03)';}
 export const A2000_IDS=Object.keys(A2000_EQUIPMENT).map(Number);
 const zone=(id,kind,min,max,note)=>({id,kind,areaIds:['A-2000'],min,max,note,designStatus:'proposed'});
 export const A2000_ACCESS_ZONES=[

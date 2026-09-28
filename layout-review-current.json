@@ -1,11 +1,11 @@
 {
- "version": "d35bff9",
- "date": "2026-09-27",
- "generated": "2026-09-27T22:15:29.422Z",
- "revision": "r2",
+ "version": "42e2576",
+ "date": "2026-09-28",
+ "generated": "2026-09-28T05:57:18.681Z",
+ "revision": "r3",
  "reviewer": {
   "initials": "QFL",
-  "date": "2026-09-22"
+  "date": "2026-09-28"
  },
  "lead": "The published gate report (bc-corridors-85, 2026-09-12) is retained below as the coordinated baseline; the sections above it are measured on the current model on every refresh. Nothing here qualifies structure, slabs, vehicles or traffic.",
  "basis": {
@@ -17,18 +17,18 @@
  },
  "summary": {
   "externalElements": 7642,
-  "directAttachmentElements": 1139,
-  "supports": 3802,
+  "directAttachmentElements": 1140,
+  "supports": 3822,
   "rackFrames": 243,
   "existingSteelAttachmentGroups": 20,
-  "columns": 590,
+  "columns": 589,
   "sharedStructures": 106,
-  "placementHolds": 271,
-  "shortConnections": 6187,
+  "placementHolds": 273,
+  "shortConnections": 6186,
   "vendorFlexible": 132,
   "structurallyQualified": false,
-  "memberLengthM": 14005.124790832027,
-  "parts": 154299
+  "memberLengthM": 14075.407928593448,
+  "parts": 154510
  },
  "published": {
   "revision": "bc-corridors-85",
@@ -78,7 +78,7 @@
   },
   {
    "area": "A-3000",
-   "holds": 2
+   "holds": 3
   },
   {
    "area": "A-200",
@@ -89,6 +89,10 @@
    "holds": 1
   },
   {
+   "area": "A-1000",
+   "holds": 1
+  },
+  {
    "area": "A-6000",
    "holds": 1
   }
@@ -96,11 +100,11 @@
  "holdsByReason": [
   {
    "reason": "Support rod conflicts with another service; local bracket / rack tier review required",
-   "holds": 200
+   "holds": 218
   },
   {
    "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment",
-   "holds": 44
+   "holds": 28
   },
   {
    "reason": "Local bearing requires shared-column bracket or single-post exception",
@@ -110,15 +114,15 @@
  "inventory": [
   {
    "status": "short spool / fitting",
-   "count": 6187
+   "count": 6186
   },
   {
    "status": "attached — calculation hold",
-   "count": 1094
+   "count": 1098
   },
   {
    "status": "placement review",
-   "count": 187
+   "count": 184
   },
   {
    "status": "vendor flexible connection",
@@ -297,7 +301,7 @@
   }
  ],
  "reservedSpaces": {
-  "checked": 496,
+  "checked": 497,
   "zones": [
    "REMOVE-R201C",
    "REMOVE-PY801",
@@ -308,38 +312,38 @@
    {
     "zone": "REMOVE-R201C",
     "zoneKind": "maintenance",
-    "partId": 152315,
-    "name": "PS-A200-3370 bearing collar",
+    "partId": 152418,
+    "name": "PS-A200-3386 bearing collar",
     "area": "A-200",
     "kind": "Pipe support"
    },
    {
     "zone": "REMOVE-PY801",
     "zoneKind": "removal",
-    "partId": 150946,
-    "name": "PS-A900-3018 bearing collar",
+    "partId": 151051,
+    "name": "PS-A900-3034 bearing collar",
     "area": "A-900",
     "kind": "Pipe support"
    },
    {
     "zone": "PIPE-standing-access-613-CP-3000 / CP-3000 control display",
     "zoneKind": "standing",
-    "partId": 153364,
-    "name": "PS-A3000-3622 local bracket",
+    "partId": 153479,
+    "name": "PS-A3000-3641 local bracket",
     "area": "A-3000",
     "kind": "Pipe support"
    },
    {
     "zone": "HEADROOM-PL-801 feeder walkway",
     "zoneKind": "platform-access",
-    "partId": 148159,
-    "name": "PS-A5000-2238 insulation insert bearing collar",
+    "partId": 148372,
+    "name": "PS-A5000-2265 insulation insert bearing collar",
     "area": "A-5000",
     "kind": "Pipe support"
    }
   ],
   "newSincePublished": [
-   "REMOVE-PY801 · PS-A900-3018 bearing collar"
+   "REMOVE-PY801 · PS-A900-3034 bearing collar"
   ],
   "resolvedSincePublished": [
    "REMOVE-R201D · bearing collar"
@@ -405,16 +409,16 @@
   }
  ],
  "delta": {
-  "supports": 19,
-  "columns": -3,
+  "supports": 39,
+  "columns": -4,
   "rackFrames": -4,
   "sharedStructures": -1,
-  "placementHolds": -45,
-  "directAttachmentElements": 17,
+  "placementHolds": -43,
+  "directAttachmentElements": 18,
   "externalElements": 116,
-  "memberLengthM": 24.808748526334966,
-  "holdsNew": 3,
-  "holdsResolved": 48,
+  "memberLengthM": 95.09188628775519,
+  "holdsNew": 20,
+  "holdsResolved": 63,
   "areasAdded": [
    "A-900"
   ]
@@ -431,7 +435,7 @@
   ],
   "bearings": 973,
   "placementElements": 11,
-  "memberLengthM": 3843.7382467876414,
+  "memberLengthM": 3837.033613852517,
   "coordinatedRacks": 10
  },
  "areas": [
@@ -580,35 +584,35 @@
   },
   {
    "area": "A-1000",
-   "supports": 310,
-   "placementElements": 0,
-   "holds": 0,
+   "supports": 317,
+   "placementElements": 1,
+   "holds": 1,
    "transportFindings": 0,
    "reservedSpaceFindings": 0,
    "review": {
     "href": "./a1000-review.html",
-    "revision": "r8",
+    "revision": "r9",
     "reviewer": "QFL"
    }
   },
   {
    "area": "A-2000",
-   "supports": 518,
-   "placementElements": 163,
+   "supports": 533,
+   "placementElements": 158,
    "holds": 229,
    "transportFindings": 0,
    "reservedSpaceFindings": 0,
    "review": {
     "href": "./a2000-review.html",
-    "revision": "r3",
+    "revision": "r4",
     "reviewer": "QFL"
    }
   },
   {
    "area": "A-3000",
-   "supports": 554,
-   "placementElements": 1,
-   "holds": 2,
+   "supports": 552,
+   "placementElements": 2,
+   "holds": 3,
    "transportFindings": 0,
    "reservedSpaceFindings": 1,
    "review": {
@@ -681,30 +685,69 @@
    "reason": "Local bearing requires shared-column bracket or single-post exception"
   },
   {
+   "area": "A-1000",
+   "equipment": "T-1006",
+   "line": "Combined wastewater to T-1006",
+   "lineId": "LINE-1253",
+   "partId": 94214,
+   "point": [
+    19.5,
+    7.6,
+    -4.8
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
    "area": "A-2000",
    "equipment": "T-2001",
    "line": "A-1000 centrate to T-2001",
    "lineId": "LINE-1580",
-   "partId": 106758,
+   "partId": 106759,
    "point": [
     66.55,
-    10.6,
-    -19.2
+    9.482,
+    -20
    ],
-   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
   },
   {
    "area": "A-2000",
-   "equipment": "P-BW2001",
-   "line": "A-2000 backwash to T-1006",
-   "lineId": "LINE-1798",
-   "partId": 109406,
+   "equipment": "T-2001",
+   "line": "A-1000 centrate to T-2001",
+   "lineId": "LINE-1580",
+   "partId": 106759,
    "point": [
-    19.2,
-    8.9,
-    -6
+    66.55,
+    7.567,
+    -20
    ],
-   "reason": "Local bearing requires shared-column bracket or single-post exception"
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "T-2001",
+   "line": "A-1000 centrate to T-2001",
+   "lineId": "LINE-1580",
+   "partId": 106759,
+   "point": [
+    66.55,
+    5.652,
+    -20
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "T-2001",
+   "line": "A-1000 centrate to T-2001",
+   "lineId": "LINE-1580",
+   "partId": 106759,
+   "point": [
+    66.55,
+    3.737,
+    -20
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
   },
   {
    "area": "A-2000",
@@ -718,6 +761,19 @@
     -7.2
    ],
    "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "Accepted RO permeate to T-2002",
+   "lineId": "LINE-2047",
+   "partId": 115526,
+   "point": [
+    96.55,
+    4.784,
+    -6
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
   },
   {
    "area": "A-2000",
@@ -886,7 +942,7 @@
     5.2,
     -9.9
    ],
-   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
   },
   {
    "area": "A-2000",
@@ -912,7 +968,7 @@
     5.2,
     -9.9
    ],
-   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
   },
   {
    "area": "A-2000",
@@ -977,7 +1033,7 @@
     5.2,
     -9.9
    ],
-   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
   },
   {
    "area": "A-2000",
@@ -1003,7 +1059,7 @@
     5.2,
     -9.9
    ],
-   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
   },
   {
    "area": "A-2000",
@@ -1016,7 +1072,7 @@
     5.2,
     -9.9
    ],
-   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
   },
   {
    "area": "A-2000",
@@ -1029,7 +1085,7 @@
     5.2,
     -9.9
    ],
-   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
   },
   {
    "area": "A-2000",
@@ -1055,7 +1111,7 @@
     5.2,
     -9.9
    ],
-   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
   },
   {
    "area": "A-2000",
@@ -1068,7 +1124,7 @@
     5.2,
     -9.9
    ],
-   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
   },
   {
    "area": "A-2000",
@@ -1106,45 +1162,6 @@
     65.6,
     3.78,
     -6.7
-   ],
-   "reason": "Local bearing requires shared-column bracket or single-post exception"
-  },
-  {
-   "area": "A-2000",
-   "equipment": "T-2001",
-   "line": "R-1004 conditional bypass to T-2001",
-   "lineId": "LINE-1582",
-   "partId": 106792,
-   "point": [
-    67,
-    10.9,
-    -19.2
-   ],
-   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
-  },
-  {
-   "area": "A-2000",
-   "equipment": "T-2001",
-   "line": "R-1004 conditional bypass to T-2001",
-   "lineId": "LINE-1582",
-   "partId": 106792,
-   "point": [
-    67,
-    10.9,
-    -16.8
-   ],
-   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
-  },
-  {
-   "area": "A-2000",
-   "equipment": "T-2001",
-   "line": "R-1004 conditional bypass to T-2001",
-   "lineId": "LINE-1582",
-   "partId": 106793,
-   "point": [
-    67,
-    10.121,
-    -20
    ],
    "reason": "Local bearing requires shared-column bracket or single-post exception"
   },
@@ -1296,65 +1313,13 @@
    "equipment": "RO-2001",
    "line": "RO off-spec recycle to T-2001",
    "lineId": "LINE-2048",
-   "partId": 115576,
-   "point": [
-    72,
-    11.2,
-    -16
-   ],
-   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
-  },
-  {
-   "area": "A-2000",
-   "equipment": "RO-2001",
-   "line": "RO off-spec recycle to T-2001",
-   "lineId": "LINE-2048",
-   "partId": 115577,
+   "partId": 115578,
    "point": [
     66.55,
-    11.2,
-    -19.2
+    10.007,
+    -20
    ],
-   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
-  },
-  {
-   "area": "A-2000",
-   "equipment": "RO-2001",
-   "line": "RO off-spec recycle to T-2001",
-   "lineId": "LINE-2048",
-   "partId": 115577,
-   "point": [
-    66.55,
-    11.2,
-    -16.8
-   ],
-   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
-  },
-  {
-   "area": "A-2000",
-   "equipment": "RO-2001",
-   "line": "RO off-spec recycle to T-2001",
-   "lineId": "LINE-2048",
-   "partId": 115576,
-   "point": [
-    67.2,
-    11.2,
-    -16
-   ],
-   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
-  },
-  {
-   "area": "A-2000",
-   "equipment": "RO-2001",
-   "line": "RO off-spec recycle to T-2001",
-   "lineId": "LINE-2048",
-   "partId": 115576,
-   "point": [
-    69.6,
-    11.2,
-    -16
-   ],
-   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
   },
   {
    "area": "A-2000",
@@ -1364,10 +1329,36 @@
    "partId": 115578,
    "point": [
     66.55,
-    10.271,
+    7.942,
     -20
    ],
-   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO off-spec recycle to T-2001",
+   "lineId": "LINE-2048",
+   "partId": 115578,
+   "point": [
+    66.55,
+    5.877,
+    -20
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "RO-2001",
+   "line": "RO off-spec recycle to T-2001",
+   "lineId": "LINE-2048",
+   "partId": 115578,
+   "point": [
+    66.55,
+    3.812,
+    -20
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
   },
   {
    "area": "A-2000",
@@ -3584,13 +3575,13 @@
    "equipment": "CF-2002",
    "line": "Stored off-spec water to T-2001",
    "lineId": "LINE-2056",
-   "partId": 115803,
+   "partId": 115804,
    "point": [
     66.55,
-    11.5,
-    -19.2
+    10.27,
+    -20
    ],
-   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
   },
   {
    "area": "A-2000",
@@ -3600,10 +3591,36 @@
    "partId": 115804,
    "point": [
     66.55,
-    10.421,
+    8.13,
     -20
    ],
-   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "CF-2002",
+   "line": "Stored off-spec water to T-2001",
+   "lineId": "LINE-2056",
+   "partId": 115804,
+   "point": [
+    66.55,
+    5.99,
+    -20
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "CF-2002",
+   "line": "Stored off-spec water to T-2001",
+   "lineId": "LINE-2056",
+   "partId": 115804,
+   "point": [
+    66.55,
+    3.85,
+    -20
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
   },
   {
    "area": "A-2000",
@@ -3665,23 +3682,36 @@
    "partId": 101290,
    "point": [
     20.6,
-    9.714,
+    8.598,
     -5.7
    ],
-   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
   },
   {
    "area": "A-3000",
-   "equipment": "P-3111",
-   "line": "P-3111 qualified return to T-1006",
-   "lineId": "LINE-1412",
-   "partId": 101290,
+   "equipment": "P-3183",
+   "line": "P-3183 qualified return to T-1006",
+   "lineId": "LINE-1415",
+   "partId": 101426,
    "point": [
-    20.6,
-    7.862,
+    20.9,
+    10.259,
     -5.7
    ],
-   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-3000",
+   "equipment": "P-3183",
+   "line": "P-3183 qualified return to T-1006",
+   "lineId": "LINE-1415",
+   "partId": 101426,
+   "point": [
+    20.9,
+    8.698,
+    -5.7
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
   },
   {
    "area": "A-4000",
@@ -4180,9 +4210,9 @@
  ],
  "structuralAttachments": {
   "passes": true,
-  "loads": 2602,
-  "contacts": 21079,
-  "foundations": 5249,
+  "loads": 2605,
+  "contacts": 21170,
+  "foundations": 5320,
   "failures": 0,
   "method": "Declared mounting points checked against part geometry and assembled transforms, with graph reachability to foundations. Structural strength is not calculated."
  },
@@ -4197,7 +4227,7 @@
    "status": "Open — layout revision required",
    "priority": "high",
    "discipline": "Piping / structural",
-   "observation": "271 candidate support positions remain unresolved on the current model (published report: 316); A-2000 229, A-4000 26, A-5000 11. Leading reasons: \"Support rod conflicts with another service\" (200), \"No clear rack foundation / beam corridor\" (44).",
+   "observation": "273 candidate support positions remain unresolved on the current model (published report: 316); A-2000 229, A-4000 26, A-5000 11. Leading reasons: \"Support rod conflicts with another service\" (218), \"No clear rack foundation / beam corridor\" (28).",
    "action": "Revise the A-2000 RO / UF permeate rack tiers and the A-4000 header brackets so each held line has a bearing corridor; record the rack revision in the model before support calculations start.",
    "evidence": [
     {
@@ -4215,13 +4245,13 @@
     {
      "kind": "page",
      "id": "A-2000",
-     "label": "A-2000 review r3 · QFL",
+     "label": "A-2000 review r4 · QFL",
      "href": "./a2000-review.html"
     },
     {
      "kind": "finding",
      "id": "A2000-03",
-     "label": "A2000-03 · Pretreatment and backwash — Configuration as modelled — duties open (A-2000 review r3 · QFL)",
+     "label": "A2000-03 · Pretreatment and backwash — Configuration as modelled — duties open (A-2000 review r4 · QFL)",
      "href": "./a2000-review.html#A2000-03"
     }
    ]
@@ -4232,7 +4262,7 @@
    "status": "Open — model correction",
    "priority": "high",
    "discipline": "Layout",
-   "observation": "4 support element(s) intrude into 4 reserved vehicle, maintenance or standing space(s) on the current model: PS-A200-3370 bearing collar in REMOVE-R201C; PS-A900-3018 bearing collar in REMOVE-PY801; PS-A3000-3622 local bracket in PIPE-standing-access-613-CP-3000 / CP-3000 control display; PS-A5000-2238 insulation insert bearing collar in HEADROOM-PL-801 feeder walkway. 1 new since the published report (REMOVE-PY801 · PS-A900-3018 bearing collar); 1 resolved (REMOVE-R201D · bearing collar). The A-3000 bracket position also moved with the A-3000 rebuild.",
+   "observation": "4 support element(s) intrude into 4 reserved vehicle, maintenance or standing space(s) on the current model: PS-A200-3386 bearing collar in REMOVE-R201C; PS-A900-3034 bearing collar in REMOVE-PY801; PS-A3000-3641 local bracket in PIPE-standing-access-613-CP-3000 / CP-3000 control display; PS-A5000-2265 insulation insert bearing collar in HEADROOM-PL-801 feeder walkway. 1 new since the published report (REMOVE-PY801 · PS-A900-3034 bearing collar); 1 resolved (REMOVE-R201D · bearing collar). The A-3000 bracket position also moved with the A-3000 rebuild.",
    "action": "Relocate or re-tier the intruding supports (A-900 collar in the PY-801 removal space, A-3000 bracket in the CP-3000 standing space) and re-run the corridor gate; the ES-3000 shower-head overlap stays an open access finding.",
    "evidence": [
     {
@@ -4407,7 +4437,7 @@
    "status": "Provisional geometry — vendor loads unverified",
    "priority": "low",
    "discipline": "Structural",
-   "observation": "3802 modelled bearings, 590 support columns and 14.01 km of member envelope on the current model; 1094 pipe elements are attached on calculation hold and none is structurally qualified. Skids, frames and towers added since the published report (A-900 V163, A-3000 rebuild) carry the same provisional status.",
+   "observation": "3822 modelled bearings, 589 support columns and 14.08 km of member envelope on the current model; 1098 pipe elements are attached on calculation hold and none is structurally qualified. Skids, frames and towers added since the published report (A-900 V163, A-3000 rebuild) carry the same provisional status.",
    "action": "Collect vendor loads and anchor patterns; calculate spans, pipe stress, guide / anchor reactions, steel, bracing, connections and foundations (WorkSafeBC 4.2 / 4.3, BC Building Code).",
    "evidence": [
     {
@@ -4431,7 +4461,7 @@
     {
      "kind": "finding",
      "id": "A1000-05",
-     "label": "A1000-05 · Containment, access and inbound interfaces — Model provision — retention unverified (A-1000 review r8 · QFL)",
+     "label": "A1000-05 · Containment, access and inbound interfaces — Model provision — retention unverified (A-1000 review r9 · QFL)",
      "href": "./a1000-review.html#A1000-05"
     },
     {
@@ -4454,7 +4484,7 @@
    "status": "Open — model engineer",
    "priority": "high",
    "discipline": "Model management",
-   "observation": "tests/validate-corridors.mjs fails on the current model against the corridors-v84 fixture (pipe-geometry and component signatures, previously attached elements, reserved-space intrusions and undeclared pedestrian overlaps), so dist/layout-review.json stays at bc-corridors-85 (2026-09-12) and is not refreshed by the release checks. Current-model figures differ: supports 3783 → 3802, holds 316 → 271, columns 593 → 590.",
+   "observation": "tests/validate-corridors.mjs fails on the current model against the corridors-v84 fixture (pipe-geometry and component signatures, previously attached elements, reserved-space intrusions and undeclared pedestrian overlaps), so dist/layout-review.json stays at bc-corridors-85 (2026-09-12) and is not refreshed by the release checks. Current-model figures differ: supports 3783 → 3822, holds 316 → 273, columns 593 → 589.",
    "action": "Model engineer to rebaseline tests/fixtures/corridors-v84.json to the current model once LAY-02 and LAY-03 are corrected, then regenerate the gate report; this refresh remains the interim record.",
    "evidence": [
     {
@@ -4474,6 +4504,77 @@
      "id": "docs/bc-forklift-corridor-handoff.md",
      "label": "docs/bc-forklift-corridor-handoff.md",
      "href": "https://github.com/quakfoolee-dotcom/rGO_3D_Plant_Model/blob/main/docs/bc-forklift-corridor-handoff.md"
+    }
+   ]
+  },
+  {
+   "id": "LAY-09",
+   "topic": "Model catch-up release 1 (D-MDL-01): retired tags kept in place, A-1000 / A-2000 tanks at datasheet volumes",
+   "status": "Applied to the model — removal handed to the model engineer",
+   "priority": "medium",
+   "discipline": "Model management / layout",
+   "observation": "D-MDL-01 (bases MC-1–MC-10, approved by QFL 2026-09-28) brings the model in line with the V219–V227 data-layer decisions. Release 1 keeps the 21 retired A-1000 / A-2000 tags in place — shown grey and labelled RETIRED with their decision — because the model engineer's validators still assert their streams, and resizes the A-1000 / A-2000 tanks to the issued datasheets (T-1006 400 m³ at Ø 8.4 m, R-1001 25, R-1002 30, R-1003 16, R-1004 10, T-1002 80, T-1003 30, T-1008 12, T-2001 15, T-2002 100 m³). Against main, on A-1000 / A-2000: pipe-support holds 229 → 230, structure passes, no headroom conflict, and two more reserved-space entries on an existing class in the containment yard (BND-1004 / TR-perimeter-85); R-1002 / R-1003 / R-1004 keep their footprints because new diameters re-flowed rack supports into emergency walkways PW-ES-030 / 031. Current model: 273 holds plant-wide. C-301 and T-304 (release 2) sit behind the pipe-racks-v31 fixture, which already fails on main.",
+   "action": "Model engineer: remove the retired tags and rebaseline the validators and the pipe-racks-v31 fixture (docs/model-catchup-handoff.md); then release 2 (C-301 filter press, new equipment in existing areas) and release 3 (A-1100, A-5400 envelope).",
+   "evidence": [
+    {
+     "kind": "decision",
+     "id": "D-A1000-05",
+     "label": "D-A1000-05 (A-1000, QFL 2026-09-27): A-1000 sized for the REP-039 Route 2 + 6 residual on bases RS1–RS9 (FEED-PE-CAL-034): 615 m³/d and 24.3 t/d H₂SO₄ design, HCl bounding at the PFD dose; lime-onl…",
+     "href": "./semantic-core.html#area-A-1000"
+    },
+    {
+     "kind": "decision",
+     "id": "D-A1000-06",
+     "label": "D-A1000-06 (A-1000, QFL 2026-09-27): A-1000 phase 2 on bases P2-1–P2-9 (FEED-PE-CAL-035): gravity cascade R-1001 → R-1002 → R-1003 → R-1004 → CL-1001 retires the stage-transfer pumps P-1006 / P-100…",
+     "href": "./semantic-core.html#area-A-1000"
+    },
+    {
+     "kind": "decision",
+     "id": "D-A2000-03",
+     "label": "D-A2000-03 (A-2000, QFL 2026-09-27): A-2000 on clean sources only (W3, bases A2-1–A2-8, FEED-PE-CAL-036): on the Case 4 volumes the A-300 phase 2 HCl leaves ≈ 5.9–29 g/L chloride (≈ 12–48 g/L TDS) …",
+     "href": "./semantic-core.html#area-A-2000"
+    },
+    {
+     "kind": "doc",
+     "id": "docs/model-catchup-handoff.md",
+     "label": "docs/model-catchup-handoff.md",
+     "href": "https://github.com/quakfoolee-dotcom/rGO_3D_Plant_Model/blob/main/docs/model-catchup-handoff.md"
+    },
+    {
+     "kind": "doc",
+     "id": "dist/a1000-basis.js",
+     "label": "dist/a1000-basis.js",
+     "href": "https://github.com/quakfoolee-dotcom/rGO_3D_Plant_Model/blob/main/dist/a1000-basis.js"
+    },
+    {
+     "kind": "doc",
+     "id": "dist/a2000-basis.js",
+     "label": "dist/a2000-basis.js",
+     "href": "https://github.com/quakfoolee-dotcom/rGO_3D_Plant_Model/blob/main/dist/a2000-basis.js"
+    },
+    {
+     "kind": "holds",
+     "id": "A-1000",
+     "label": "A-1000 · 1 placement holds",
+     "href": "#holds"
+    },
+    {
+     "kind": "holds",
+     "id": "A-2000",
+     "label": "A-2000 · 229 placement holds",
+     "href": "#holds"
+    },
+    {
+     "kind": "page",
+     "id": "A-1000",
+     "label": "A-1000 review r9 · QFL",
+     "href": "./a1000-review.html"
+    },
+    {
+     "kind": "page",
+     "id": "A-2000",
+     "label": "A-2000 review r4 · QFL",
+     "href": "./a2000-review.html"
     }
    ]
   }

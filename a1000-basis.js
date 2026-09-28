@@ -12,15 +12,15 @@ export function calculateA1000(i=A1000_INPUTS){
 const calc=calculateA1000(),tank=(tag,label,x,z,radius,capacityM3,operation,extra={})=>({tag,label,x,z,radius,bottom:.26,top:.26+capacityM3/(Math.PI*(radius-.04)**2),capacityM3,areaId:'A-1000',primaryOperation:operation,designStatus:'listed',geometryStatus:'Calculated layout envelope from explicit screening inputs; process sizing and materials unqualified',geometryBasis:'A1000-34',reviewNote:'Concept only. Wastewater characterization, titration, kinetics, mixing, metallurgy, containment, venting and vendor design require confirmation.',...extra});
 const pump=(tag,label,x,z,operation,extra={})=>({tag,label,x,z,labelY:2.15,areaId:'A-1000',primaryOperation:operation,designStatus:'listed',geometryStatus:'Illustrative pump envelope; flow, head, NPSH, wetted materials and duty/standby selection HOLD',...extra});
 export const A1000_EQUIPMENT={
- 125:tank('T-1006',`Wastewater equalization · ${calc.equalizationNominalM3} m³ screening`,20,-6,3.2,calc.equalizationNominalM3,'wwcollect'),
- 126:tank('R-1001',`Initial neutralization · ${calc.reactors.R1001.nominalM3} m³ screening`,29,-8,1.6,calc.reactors.R1001.nominalM3,'wwtreat'),
- 127:tank('R-1002',`Lime precipitation · ${calc.reactors.R1002.nominalM3} m³ screening`,36,-8,2.05,calc.reactors.R1002.nominalM3,'wwtreat'),
- 128:tank('R-1003',`Conditional sulfate polishing · ${calc.reactors.R1003.nominalM3} m³ screening`,43,-8,1.8,calc.reactors.R1003.nominalM3,'wwtreat'),
- 129:tank('R-1004',`Conditioning / flocculation · ${calc.reactors.R1004.nominalM3} m³ screening`,50,-8,1.8,calc.reactors.R1004.nominalM3,'wwtreat'),
+ 125:tank('T-1006','Wastewater equalization · 400 m³ (FEED-PE-DAT-114)',20,-6,4.2,400,'wwcollect',{geometryStatus:'Volume from FEED-PE-DAT-114 (D-A1000-05); diameter and height are model choices — vendor dimensions unqualified (D-MDL-01 MC-2)'}),
+ 126:tank('R-1001','Stage 1 lime neutralization · 25 m³ (FEED-PE-DAT-115)',29,-8,1.6,25,'wwtreat',{geometryStatus:'Volume from FEED-PE-DAT-115 (D-A1000-05); diameter and height are model choices — vendor dimensions unqualified (D-MDL-01 MC-2)'}),
+ 127:tank('R-1002','Stage 2 lime precipitation · 30 m³ (FEED-PE-DAT-116)',36,-8,2.05,30,'wwtreat',{geometryStatus:'Volume from FEED-PE-DAT-116 (D-A1000-05); diameter and height are model choices — vendor dimensions unqualified (D-MDL-01 MC-2)'}),
+ 128:tank('R-1003','BaCl₂ sulfate polishing · 16 m³ priced option (FEED-PE-DAT-129)',43,-8,1.8,16,'wwtreat',{geometryStatus:'Volume from FEED-PE-DAT-129 (D-A1000-06); diameter and height are model choices — vendor dimensions unqualified (D-MDL-01 MC-2)'}),
+ 129:tank('R-1004','Flocculation · 10 m³ (FEED-PE-DAT-117)',50,-8,1.8,10,'wwtreat',{geometryStatus:'Volume from FEED-PE-DAT-117 (D-A1000-05); diameter and height are model choices — vendor dimensions unqualified (D-MDL-01 MC-2)'}),
  130:pump('DC-1001','Wastewater decanter centrifuge',48,-18,'wwseparate',{labelY:3.8}),
  131:tank('T-1001','NaOH storage · provisional inventory',19,-24,1.25,20,'wwchem'),
- 132:tank('T-1002','Lime slurry storage · provisional inventory',27,-24,1.25,20,'wwchem'),
- 133:tank('T-1003','BaCl₂ storage · conditional duty',35,-24,.85,5,'wwchem'),
+ 132:tank('T-1002','Lime slurry day tank · 80 m³ (FEED-PE-DAT-120)',27,-24,2.0,80,'wwchem',{geometryStatus:'Volume from FEED-PE-DAT-120 (D-A1000-05); diameter and height are model choices — vendor dimensions unqualified (D-MDL-01 MC-2)'}),
+ 133:tank('T-1003','BaCl₂ storage · 30 m³ priced option (FEED-PE-DAT-130)',35,-24,1.5,30,'wwchem',{geometryStatus:'Volume from FEED-PE-DAT-130 (D-A1000-06); diameter and height are model choices — vendor dimensions unqualified (D-MDL-01 MC-2)'}),
  134:tank('T-1004','HCl storage · provisional inventory',41,-24,.85,5,'wwchem'),
  135:tank('T-1005','Floc aid preparation / storage',47,-24,.65,2,'wwchem'),
  136:pump('P-1004','NaOH dosing pump',20.9,-21.6,'wwchem'),137:pump('P-1003','Lime slurry dosing pump',28.9,-21.6,'wwchem'),
@@ -31,13 +31,20 @@ export const A1000_EQUIPMENT={
  145:pump('P-1009','Flocculated slurry feed pump',52.5,-4,'wwseparate'),146:pump('P-1010','Conditional centrifuge-bypass pump',55,-8,'wwseparate'),
  147:{tag:'BL-A2000',label:'A-2000 interarea tie-in station',x:62,z:-12,labelY:2.7,areaId:'A-2000',primaryOperation:'ropretreat',designStatus:'interface',geometryStatus:'Interarea transfer and isolated spare return interfaces; full RO train modeled separately',reviewNote:'T-2001, pretreatment, RO, product, concentrate and CIP are modeled in the A-2000 package. Footprint, inventory and site access remain provisional.'},
  148:{tag:'PL-1001',label:'A-1000 containment and access',x:15,z:-16,labelY:2.5,areaId:'A-1000',primaryOperation:'wwcollect',designStatus:'proposed',geometryStatus:'Proposed containment and access envelopes; civil design unqualified'},
- 149:{tag:'BIN-1001',label:'Covered sludge collection · classification pending',x:50.4,z:-19.5,labelY:2.2,areaId:'A-1000',primaryOperation:'wwseparate',designStatus:'proposed',geometryStatus:'Proposed removable sludge container; waste classification and capacity HOLD'},
+ 149:{tag:'BIN-1001',label:'Sludge roll-off containers · 2 × 40 m³ (FEED-PE-DAT-126)',x:50.4,z:-19.5,labelY:2.2,areaId:'A-1000',primaryOperation:'wwseparate',designStatus:'proposed',geometryStatus:'Proposed removable sludge container; waste classification and capacity HOLD'},
  150:tank('T-1007','Pre-G gravity-decant receiving sump',-25.5,-29.2,1.15,5,'wwcollect',{designStatus:'proposed',geometryStatus:'Proposed low receiver preserves descending Pre-G decant; capacity and vent compatibility HOLD'}),
  151:pump('P-1011','Pre-G decant lift pump',-27.2,-29.2,'wwcollect',{designStatus:'proposed'}),
- 153:tank('T-1008','Low centrate receiver · 8 m³ allowance',54,-18,1.6,8,'wwseparate',{designStatus:'proposed',geometryStatus:'Proposed shallow gravity receiver. Pump control volume, flood level and required surge inventory HOLD'}),
+ 153:tank('T-1008','Low centrate receiver · 12 m³ (FEED-PE-DAT-124)',54,-18,1.6,12,'wwseparate',{designStatus:'proposed',geometryStatus:'Proposed shallow gravity receiver; 12 m³ nominal from FEED-PE-DAT-124 (D-A1000-06); diameter is a model choice (D-MDL-01 MC-2)'}),
  154:pump('P-1012','Centrate transfer / recycle pump',55.9,-20.2,'wwseparate',{designStatus:'proposed'}),
  152:{tag:'CP-1001',label:'Wastewater control and sample station',x:36,z:-1.6,labelY:2.1,areaId:'A-1000',primaryOperation:'wwtreat',designStatus:'proposed',geometryStatus:'Proposed accessible indication; no live data or approved interlocks'},
 };
+// D-MDL-01 MC-1: tags retired by the A-1000 decisions are kept in place for PFD-1000 continuity (streams, vents and drains unchanged),
+// shown as retired and left out of equipment counts. Physical removal is handed to the model owner with the validator updates.
+export const A1000_RETIRED={'T-1001':['D-A1000-05','NaOH storage — lime-first, no NaOH service (RS6)'],'P-1004':['D-A1000-05','NaOH metering — lime-first (RS6)'],
+ 'T-1007':['D-A1000-05','Pre-G decant receiver — the A-160 decant no longer exists (RS7)'],'P-1011':['D-A1000-05','Pre-G decant lift — no decant (RS7)'],
+ 'P-1006':['D-A1000-06','Stage 1 transfer — gravity cascade (P2-1)'],'P-1007':['D-A1000-06','Stage 2 transfer — gravity cascade (P2-1)'],'P-1008':['D-A1000-06','Stage 3 transfer — gravity cascade (P2-1)'],
+ 'P-1010':['D-A1000-06','Centrifuge bypass — covered by P-1009A/B (P2-3)'],'T-1004':['D-A1000-06','HCl storage — no acid trim (P2-8)'],'P-1001':['D-A1000-06','HCl metering — no acid trim (P2-8)']};
+for(const e of Object.values(A1000_EQUIPMENT)){const r=A1000_RETIRED[e.tag];if(r){e.retired={decisionId:r[0],reason:r[1],basis:'D-MDL-01 MC-1'};e.label+=` · RETIRED (${r[0]})`;}}
 export const A1000_IDS=Object.keys(A1000_EQUIPMENT).map(Number);
 export const WATER_AREA_LAYOUT={units:'m',wastewater:{min:[14,0,-28],max:[58,10,2]},reclaimed:{min:[60,0,-28],max:[103,10,2]},futureExpansion:{min:[105,0,-28],max:[116,10,2]},note:'Approved relative location only. Block dimensions are provisional reservations; no surveyed building, road, wind or site boundary supplied.'};
 const zone=(id,kind,min,max,note,areaIds=['A-1000'])=>({id,kind,areaIds,min,max,note,designStatus:'proposed'});
