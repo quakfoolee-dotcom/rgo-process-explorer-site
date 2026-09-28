@@ -1,8 +1,8 @@
 {
- "version": "42e2576",
+ "version": "685dcaa",
  "date": "2026-09-28",
- "generated": "2026-09-28T05:57:18.681Z",
- "revision": "r3",
+ "generated": "2026-09-28T07:14:51.400Z",
+ "revision": "r4",
  "reviewer": {
   "initials": "QFL",
   "date": "2026-09-28"
@@ -28,7 +28,7 @@
   "vendorFlexible": 132,
   "structurallyQualified": false,
   "memberLengthM": 14075.407928593448,
-  "parts": 154510
+  "parts": 155194
  },
  "published": {
   "revision": "bc-corridors-85",
@@ -474,7 +474,7 @@
    "reservedSpaceFindings": 0,
    "review": {
     "href": "./a160-review.html",
-    "revision": "r5",
+    "revision": "r6",
     "reviewer": "QFL"
    }
   },
@@ -539,7 +539,7 @@
    "reservedSpaceFindings": 0,
    "review": {
     "href": "./a600-review.html",
-    "revision": "r5",
+    "revision": "r6",
     "reviewer": "QFL"
    }
   },
@@ -591,7 +591,7 @@
    "reservedSpaceFindings": 0,
    "review": {
     "href": "./a1000-review.html",
-    "revision": "r9",
+    "revision": "r10",
     "reviewer": "QFL"
    }
   },
@@ -604,7 +604,7 @@
    "reservedSpaceFindings": 0,
    "review": {
     "href": "./a2000-review.html",
-    "revision": "r4",
+    "revision": "r5",
     "reviewer": "QFL"
    }
   },
@@ -4210,9 +4210,9 @@
  ],
  "structuralAttachments": {
   "passes": true,
-  "loads": 2605,
-  "contacts": 21170,
-  "foundations": 5320,
+  "loads": 2609,
+  "contacts": 21179,
+  "foundations": 5324,
   "failures": 0,
   "method": "Declared mounting points checked against part geometry and assembled transforms, with graph reachability to foundations. Structural strength is not calculated."
  },
@@ -4245,13 +4245,13 @@
     {
      "kind": "page",
      "id": "A-2000",
-     "label": "A-2000 review r4 · QFL",
+     "label": "A-2000 review r5 · QFL",
      "href": "./a2000-review.html"
     },
     {
      "kind": "finding",
      "id": "A2000-03",
-     "label": "A2000-03 · Pretreatment and backwash — Configuration as modelled — duties open (A-2000 review r4 · QFL)",
+     "label": "A2000-03 · Pretreatment and backwash — Configuration as modelled — duties open (A-2000 review r5 · QFL)",
      "href": "./a2000-review.html#A2000-03"
     }
    ]
@@ -4321,7 +4321,7 @@
     {
      "kind": "finding",
      "id": "A600-06",
-     "label": "A600-06 · Access, maintenance and fire points — Model access provided — qualification open (A-600 review r5 · QFL)",
+     "label": "A600-06 · Access, maintenance and fire points — Model access provided — qualification open (A-600 review r6 · QFL)",
      "href": "./a600-review.html#A600-06"
     },
     {
@@ -4420,7 +4420,7 @@
     {
      "kind": "finding",
      "id": "A600-01",
-     "label": "A600-01 · Dryer readiness — twelve REP-016 holds — NOT READY for vendor inquiry (A-600 review r5 · QFL)",
+     "label": "A600-01 · Dryer readiness — twelve REP-016 holds — NOT READY for vendor inquiry (A-600 review r6 · QFL)",
      "href": "./a600-review.html#A600-01"
     },
     {
@@ -4449,7 +4449,7 @@
     {
      "kind": "finding",
      "id": "A600-06",
-     "label": "A600-06 · Access, maintenance and fire points — Model access provided — qualification open (A-600 review r5 · QFL)",
+     "label": "A600-06 · Access, maintenance and fire points — Model access provided — qualification open (A-600 review r6 · QFL)",
      "href": "./a600-review.html#A600-06"
     },
     {
@@ -4567,13 +4567,78 @@
     {
      "kind": "page",
      "id": "A-1000",
-     "label": "A-1000 review r9 · QFL",
+     "label": "A-1000 review r10 · QFL",
      "href": "./a1000-review.html"
     },
     {
      "kind": "page",
      "id": "A-2000",
-     "label": "A-2000 review r4 · QFL",
+     "label": "A-2000 review r5 · QFL",
+     "href": "./a2000-review.html"
+    }
+   ]
+  },
+  {
+   "id": "LAY-10",
+   "topic": "Model catch-up release 2 (D-MDL-01): new equipment placed by clear-space search; CL-1001 / SL-1001 do not fit A-1000",
+   "status": "Applied — A-1000 layout decision pending",
+   "priority": "high",
+   "discipline": "Model management / layout",
+   "observation": "Release 2 (bases R2-1–R2-8, approved by QFL 2026-09-28) adds standalone envelopes with nozzle stubs and no routes, built after the pipe supports so the racks do not re-flow, each placed by a clear-space search against every existing part: F-160 (−14.5, −24.5) and T-160 (−14.5, −27.6) south of F-161, P-160A/B beside T-160, HR-601 (66, 7.8) south of the dryer train, and an IF-A2000-CITY battery-limit marker beside CF-2002. Against V228: pipe-support holds, reserved-space conflicts and headroom unchanged, structure passes, walkways clear, no interference. CL-1001 (Ø 6.5 m thickener) and SL-1001 (200 m³ silo) are not placed: A-1000 has no clear space for them at datasheet size even ignoring the retired tags — the nearest clear spots are x ≈ 107 (the future-expansion block kept for A-5400) and (62, −19.5) inside the A-2000 block. F-160 could not go beside T-161, so its R-141 feed and cake transfer need a re-layout. Current model: 273 holds plant-wide.",
+   "action": "QFL to rule the A-1000 layout: extend A-1000 into the west of the A-2000 block (freed by W3 once the retired tags are removed), or use the future-expansion block and move the A-5400 envelope, or wait for the removal; model engineer to add the tie-ins with the W3 / cascade re-routing.",
+   "evidence": [
+    {
+     "kind": "decision",
+     "id": "D-A1000-06",
+     "label": "D-A1000-06 (A-1000, QFL 2026-09-27): A-1000 phase 2 on bases P2-1–P2-9 (FEED-PE-CAL-035): gravity cascade R-1001 → R-1002 → R-1003 → R-1004 → CL-1001 retires the stage-transfer pumps P-1006 / P-100…",
+     "href": "./semantic-core.html#area-A-1000"
+    },
+    {
+     "kind": "decision",
+     "id": "D-A160-04",
+     "label": "D-A160-04 (A-160, QFL 2026-09-26): Route 6 (REP-039; REP-042 Option C) is the A-160 base case under D-A1000-03: F-160 filters the Pre-G GIC from the ≈ 90 wt % R-141 acid at up to 80 °C (2.5 m², c…",
+     "href": "./semantic-core.html#area-A-160"
+    },
+    {
+     "kind": "decision",
+     "id": "D-A2000-03",
+     "label": "D-A2000-03 (A-2000, QFL 2026-09-27): A-2000 on clean sources only (W3, bases A2-1–A2-8, FEED-PE-CAL-036): on the Case 4 volumes the A-300 phase 2 HCl leaves ≈ 5.9–29 g/L chloride (≈ 12–48 g/L TDS) …",
+     "href": "./semantic-core.html#area-A-2000"
+    },
+    {
+     "kind": "doc",
+     "id": "docs/model-catchup-handoff.md",
+     "label": "docs/model-catchup-handoff.md",
+     "href": "https://github.com/quakfoolee-dotcom/rGO_3D_Plant_Model/blob/main/docs/model-catchup-handoff.md"
+    },
+    {
+     "kind": "doc",
+     "id": "dist/model-catchup.js",
+     "label": "dist/model-catchup.js",
+     "href": "https://github.com/quakfoolee-dotcom/rGO_3D_Plant_Model/blob/main/dist/model-catchup.js"
+    },
+    {
+     "kind": "page",
+     "id": "A-1000",
+     "label": "A-1000 review r10 · QFL",
+     "href": "./a1000-review.html"
+    },
+    {
+     "kind": "page",
+     "id": "A-160",
+     "label": "A-160 review r6 · QFL",
+     "href": "./a160-review.html"
+    },
+    {
+     "kind": "page",
+     "id": "A-600",
+     "label": "A-600 review r6 · QFL",
+     "href": "./a600-review.html"
+    },
+    {
+     "kind": "page",
+     "id": "A-2000",
+     "label": "A-2000 review r5 · QFL",
      "href": "./a2000-review.html"
     }
    ]

@@ -21,6 +21,7 @@ import {A1000_EQUIPMENT} from './a1000-basis.js';
 import {CONTAINMENT_EQUIPMENT} from './containment-basis.js';
 import {buildContainment} from './containment.js';
 import {buildWastewater} from './wastewater.js';
+import {CATCHUP_EQUIPMENT,buildCatchup} from './model-catchup.js';
 import {A400_EQUIPMENT} from './a400-basis.js';
 import {buildPipeSupportSystem} from './pipe-support-system.js';
 import {ACCESS_EQUIPMENT} from './access-design.js';
@@ -107,7 +108,7 @@ Object.assign(EQUIPMENT,{
 90:{tag:'AIT-701',label:'Oxygen verification / pressure control',x:73,z:29.5,labelY:3.2,provisional:true},
 91:{tag:'BL-700-UTIL',label:'Argon, cooling and gas treatment interfaces',x:91,z:28,labelY:6,provisional:true}
 });
-Object.assign(EQUIPMENT,A5000_EQUIPMENT,A4000_EQUIPMENT,A800_EQUIPMENT,A900_EQUIPMENT,ARGON_EQUIPMENT,ACCESS_EQUIPMENT,A1000_EQUIPMENT,A2000_EQUIPMENT,A3000_EQUIPMENT,EXHAUST_EQUIPMENT,CONTAINMENT_EQUIPMENT);
+Object.assign(EQUIPMENT,A5000_EQUIPMENT,A4000_EQUIPMENT,A800_EQUIPMENT,A900_EQUIPMENT,ARGON_EQUIPMENT,ACCESS_EQUIPMENT,A1000_EQUIPMENT,A2000_EQUIPMENT,A3000_EQUIPMENT,EXHAUST_EQUIPMENT,CONTAINMENT_EQUIPMENT,CATCHUP_EQUIPMENT);
 const BASE_EQUIPMENT=structuredClone(EQUIPMENT);
 export const EQUIPMENT_ORDER=[37,38,36,39,40,41,42,43,44,45,51,46,48,47,49,50,53,52,3,19,20,21,22,23,24,25,1,2,54,55,56,57,58,59,60,61,62,26,4,30,31,27,28,32,33,34,35,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,123,79,80,81,82,83,84,85,86,87,88,89,90,91,...Object.keys(A800_EQUIPMENT).map(Number),...Object.keys(A900_EQUIPMENT).map(Number),29,5,6,7,8,16,10,11,12,13,14,15,18,9,17,0];
 const Y=new T.Vector3(0,1,0),Z=new T.Vector3(0,0,1),TAU=Math.PI*2,V=a=>new T.Vector3(...a),A=v=>v.toArray();
@@ -325,6 +326,8 @@ const register=equipmentRegister(EQUIPMENT);for(const [id,e] of Object.entries(r
 const pipeSupportSystem=scope==='future'||!pipeRacks?null:buildPipeSupportSystem(helpers,{thermalUtilities,reactorAir,compressedAir,parts,edges,routes,valves,accessSystem,designScenario:a160,equipment:EQUIPMENT});
 reactorAir.localSupports=completeReactorAirSupports(helpers,reactorAir,pipeSupportSystem);
 onPhase?.('pipeSupportSystem');
+// D-MDL-01 release 2: standalone catch-up equipment, built after the pipe supports so existing rack supports do not re-flow.
+const catchup=scope==='future'?null:buildCatchup(helpers);
 // Fit new lined floors around the established foundations; do not relocate pipe supports for a floor finish.
 const containment=scope==='future'?null:buildContainment(helpers,{a160});
 if(containment)separations.drainChannel.penetration=completeA400DrainPenetration(helpers,containment);
