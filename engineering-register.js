@@ -1,3 +1,4 @@
+import {EQUIPMENT_NAMES} from './equipment-names.js';
 import {A5000_BASIS} from './a5000-basis.js';
 import {A4000_BASIS} from './a4000-basis.js';
 import {A3000_BASIS} from './a3000-basis.js';
@@ -79,7 +80,7 @@ export function equipmentRecord(id,equipment){
  if(!e||!areaId)throw Error('Equipment missing an explicit engineering record: '+id);
  const a=areaById(areaId),designStatus=e.designStatus||(interfaces.has(Number(id))?'interface':listed.has(Number(id))?'listed':'proposed');
  const operationIds=Object.keys(OPERATION_AREAS).filter(op=>OPERATION_AREAS[op]===areaId);
- return {id:`equipment-${id}`,modelId:Number(id),tag:e.tag,name:formatAreaText(e.label),areaId,subArea:e.subArea||null,primaryOperation:e.primaryOperation||primaryOperations[id]||operationIds[0]||null,operationIds,designStatus,retired:e.retired||null,designScenario:e.designScenario||'baseline',replaces:e.replaces||[],reviewStatus:(e.reviewNote||REVIEW_ITEMS[id])?'open':'no-open-item',reviewNote:e.reviewNote||REVIEW_ITEMS[id]||'',source:designStatus==='listed'?{...SOURCE,page:a.page}:null,basisReference:a.page?{...SOURCE,page:a.page}:null,geometryStatus:e.geometryStatus||'Conceptual arrangement; dimensions and ratings unverified',geometryBasis:e.geometryBasis||null,capacityM3:e.capacityM3||null};
+ return {id:`equipment-${id}`,modelId:Number(id),tag:e.tag,name:formatAreaText(e.label),areaId,subArea:e.subArea||null,primaryOperation:e.primaryOperation||primaryOperations[id]||operationIds[0]||null,operationIds,designStatus,retired:e.retired||null,datasheetName:EQUIPMENT_NAMES[e.tag]?EQUIPMENT_NAMES[e.tag].name+(e.retired?` · RETIRED (${e.retired.decisionId})`:''):null,nameSource:EQUIPMENT_NAMES[e.tag]?{documentId:EQUIPMENT_NAMES[e.tag].doc,revision:EQUIPMENT_NAMES[e.tag].revision}:null,designScenario:e.designScenario||'baseline',replaces:e.replaces||[],reviewStatus:(e.reviewNote||REVIEW_ITEMS[id])?'open':'no-open-item',reviewNote:e.reviewNote||REVIEW_ITEMS[id]||'',source:designStatus==='listed'?{...SOURCE,page:a.page}:null,basisReference:a.page?{...SOURCE,page:a.page}:null,geometryStatus:e.geometryStatus||'Conceptual arrangement; dimensions and ratings unverified',geometryBasis:e.geometryBasis||null,capacityM3:e.capacityM3||null};
 }
 export function equipmentRegister(equipment){return Object.fromEntries(Object.keys(equipment).map(id=>[id,equipmentRecord(id,equipment)]));}
 export function operationTitle(stage){return `${areaTitle(OPERATION_AREAS[stage.id])} → ${stage.title}`;}

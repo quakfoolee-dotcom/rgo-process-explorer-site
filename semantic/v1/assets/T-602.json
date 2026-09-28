@@ -1,6 +1,6 @@
 {
   "assetId": "T-602",
-  "name": "Contained dried-GO receiver",
+  "name": "Dried TLGO Receiving Tank / Hopper",
   "assetClassId": "PowderReceiver",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-600 drying process context",
     "parentAsset": null
   },
-  "processFunction": "Contained dried-GO receiver",
+  "processFunction": "Receive dried TLGO from F-601 (605) and hold a controlled inventory for the first furnace (606) — NTE-011",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -70,5 +70,12 @@
     "baselineAbsent": [
       "safeguards"
     ]
+  },
+  "identitySource": {
+    "modelName": "Contained dried-GO receiver",
+    "modelFunction": "Contained dried-GO receiver",
+    "name": "Dried TLGO Receiving Tank / Hopper",
+    "sourceDocId": "FEED-PE-DAT-066",
+    "revision": "V1.1"
   }
 }

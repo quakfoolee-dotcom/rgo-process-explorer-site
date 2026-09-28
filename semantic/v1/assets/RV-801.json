@@ -1,6 +1,6 @@
 {
   "assetId": "RV-801",
-  "name": "Furnace feed rotary valve; isolation unqualified",
+  "name": "Furnace Feed Inert Lock",
   "assetClassId": "RotaryValve",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-800 doping and pyrolysis process context",
     "parentAsset": null
   },
-  "processFunction": "Furnace feed rotary valve; isolation unqualified",
+  "processFunction": "Atmospheric isolation between C-803 and PY-801; not a metering device (D-A800-02) — C-803 meters",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -46,5 +46,12 @@
     "baselineAbsent": [
       "identity"
     ]
+  },
+  "identitySource": {
+    "modelName": "Furnace feed rotary valve; isolation unqualified",
+    "modelFunction": "Furnace feed rotary valve; isolation unqualified",
+    "name": "Furnace Feed Inert Lock",
+    "sourceDocId": "FEED-PE-DAT-076",
+    "revision": "V1.0"
   }
 }

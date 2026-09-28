@@ -1,6 +1,6 @@
 {
   "assetId": "T-303",
-  "name": "Quench / fixing tank",
+  "name": "Quench Tank",
   "assetClassId": "Tank",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-300 fixing process context",
     "parentAsset": null
   },
-  "processFunction": "Quench / fixing tank",
+  "processFunction": "Receive one R-201 batch into a cooled recirculating dilution loop (REP-037 Option B, D-A300-05), dilute to ≈ 55 wt % H₂SO₄ and quench Mn(VII) / MnO₂ with H₂O₂",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -63,5 +63,12 @@
       "safeguards",
       "identity"
     ]
+  },
+  "identitySource": {
+    "modelName": "Quench / fixing tank",
+    "modelFunction": "Quench / fixing tank",
+    "name": "Quench Tank",
+    "sourceDocId": "FEED-PE-DAT-097",
+    "revision": "V1.1"
   }
 }

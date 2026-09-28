@@ -1,6 +1,6 @@
 {
   "assetId": "H-801",
-  "name": "Pyrolyzed rGO feed hopper",
+  "name": "rGO Feed Hopper",
   "assetClassId": "Hopper",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-800 doping and pyrolysis process context",
     "parentAsset": null
   },
-  "processFunction": "Pyrolyzed rGO feed hopper",
+  "processFunction": "Receives rGO from A-700 and feeds the F-801 loss-in-weight feeder",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -46,5 +46,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Pyrolyzed rGO feed hopper",
+    "modelFunction": "Pyrolyzed rGO feed hopper",
+    "name": "rGO Feed Hopper",
+    "sourceDocId": "FEED-PE-DAT-044",
+    "revision": "V1.0"
   }
 }

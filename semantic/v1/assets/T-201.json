@@ -1,6 +1,6 @@
 {
   "assetId": "T-201",
-  "name": "Sulfuric acid day tank",
+  "name": "H₂SO₄ Day Tank",
   "assetClassId": "Tank",
   "status": "listed",
   "identityStatus": "inherited-register-tag",
@@ -11,7 +11,7 @@
     "system": "A-200 connected process context",
     "parentAsset": null
   },
-  "processFunction": "Sulfuric acid day tank",
+  "processFunction": "Day storage of 98 wt % H₂SO₄ for the R-201 A–D batch charges",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -35,5 +35,12 @@
     "applied": "2026-09-28",
     "baseline": {},
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Sulfuric acid day tank",
+    "modelFunction": "Sulfuric acid day tank",
+    "name": "H₂SO₄ Day Tank",
+    "sourceDocId": "FEED-PE-DAT-085",
+    "revision": "V1.0"
   }
 }

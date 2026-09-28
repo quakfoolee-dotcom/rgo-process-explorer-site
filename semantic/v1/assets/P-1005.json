@@ -1,6 +1,6 @@
 {
   "assetId": "P-1005",
-  "name": "Equalization transfer pump",
+  "name": "Equalisation Transfer Pumps",
   "assetClassId": "Pump",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-1000 wastewater treatment context",
     "parentAsset": null
   },
-  "processFunction": "Equalization transfer pump",
+  "processFunction": "Transfer equalised wastewater from T-1006 to R-1001 on flow control",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -39,5 +39,12 @@
     "applied": "2026-09-28",
     "baseline": {},
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Equalization transfer pump",
+    "modelFunction": "Equalization transfer pump",
+    "name": "Equalisation Transfer Pumps",
+    "sourceDocId": "FEED-PE-DAT-122",
+    "revision": "V1.0"
   }
 }

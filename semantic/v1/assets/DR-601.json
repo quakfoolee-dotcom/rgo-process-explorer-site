@@ -1,6 +1,6 @@
 {
   "assetId": "DR-601",
-  "name": "Aqueous GO spray dryer",
+  "name": "Spray Drying Package",
   "assetClassId": "SprayDryer",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-600 drying process context",
     "parentAsset": null
   },
-  "processFunction": "Aqueous GO spray dryer",
+  "processFunction": "Dry 1 wt % TLGO slurry in a co-current total carry-over spray dryer; collect powder in F-601; hold the train at slight negative pressure (FN-601); scrub exhaust (SC-601) — PFD-0600",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -110,5 +110,12 @@
       "identity",
       "safeguards"
     ]
+  },
+  "identitySource": {
+    "modelName": "Aqueous GO spray dryer",
+    "modelFunction": "Aqueous GO spray dryer",
+    "name": "Spray Drying Package",
+    "sourceDocId": "FEED-PE-DAT-065",
+    "revision": "V1.2"
   }
 }

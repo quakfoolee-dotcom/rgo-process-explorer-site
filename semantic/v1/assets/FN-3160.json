@@ -1,6 +1,6 @@
 {
   "assetId": "FN-3160",
-  "name": "Induced-draft fan",
+  "name": "S1 Induced-Draft Fan",
   "assetClassId": "Fan",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-3000 compatible wet-acid vent treatment context",
     "parentAsset": null
   },
-  "processFunction": "Induced-draft fan",
+  "processFunction": "Hold the S1 headers slightly negative and move the scrubbed gas to ST-3170",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -47,5 +47,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Induced-draft fan",
+    "modelFunction": "Induced-draft fan",
+    "name": "S1 Induced-Draft Fan",
+    "sourceDocId": "FEED-PE-DAT-079",
+    "revision": "V1.0"
   }
 }

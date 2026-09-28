@@ -1,6 +1,6 @@
 {
   "assetId": "T-601",
-  "name": "Aqueous dryer-feed buffer",
+  "name": "TLGO Receiving Tank",
   "assetClassId": "Tank",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-600 drying process context",
     "parentAsset": null
   },
-  "processFunction": "Aqueous dryer-feed buffer",
+  "processFunction": "Surge and feed conditioning ahead of DR-601: receives A-500 product (508) and P-601 recirculation (602), feeds P-601 (601) — FEED-PE-NTE-011",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -46,5 +46,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Aqueous dryer-feed buffer",
+    "modelFunction": "Aqueous dryer-feed buffer",
+    "name": "TLGO Receiving Tank",
+    "sourceDocId": "FEED-PE-DAT-063",
+    "revision": "V1.1"
   }
 }

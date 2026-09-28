@@ -1,6 +1,6 @@
 {
   "assetId": "R-141A",
-  "name": "Pre-G synthesis A",
+  "name": "Pre-G Synthesis Reactors — A",
   "assetClassId": "Reactor",
   "status": "listed",
   "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
@@ -11,7 +11,7 @@
     "system": "Pre-G Synthesis",
     "parentAsset": null
   },
-  "processFunction": "Pre-G synthesis A",
+  "processFunction": "Batch pre-oxidation of the graphite / H₂SO₄ premix with K₂S₂O₈ and P₂O₅ at 80 °C; hot transfer to T-161",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -86,5 +86,12 @@
       "identity",
       "safeguards"
     ]
+  },
+  "identitySource": {
+    "modelName": "Pre-G synthesis A",
+    "modelFunction": "Pre-G synthesis A",
+    "name": "Pre-G Synthesis Reactors — A",
+    "sourceDocId": "FEED-PE-DAT-018",
+    "revision": "V1.0"
   }
 }

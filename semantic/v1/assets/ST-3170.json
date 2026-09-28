@@ -1,6 +1,6 @@
 {
   "assetId": "ST-3170",
-  "name": "Wet vent stack; permit basis unresolved",
+  "name": "S1 Vent Stack",
   "assetClassId": "Stack",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-3000 compatible wet-acid vent treatment context",
     "parentAsset": null
   },
-  "processFunction": "Wet vent stack; permit basis unresolved",
+  "processFunction": "Permitted atmospheric discharge of the scrubbed S1 gas",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -46,5 +46,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Wet vent stack; permit basis unresolved",
+    "modelFunction": "Wet vent stack; permit basis unresolved",
+    "name": "S1 Vent Stack",
+    "sourceDocId": "FEED-PE-DAT-080",
+    "revision": "V1.0"
   }
 }

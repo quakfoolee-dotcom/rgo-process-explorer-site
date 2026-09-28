@@ -1,6 +1,6 @@
 {
   "assetId": "V-5110",
-  "name": "Hot-water diaphragm expansion vessel",
+  "name": "Loop Expansion Vessels",
   "assetClassId": "Vessel",
   "status": "listed",
   "identityStatus": "model tag; equipment-register reconciliation open",
@@ -11,7 +11,7 @@
     "system": "Thermal Utility System",
     "parentAsset": null
   },
-  "processFunction": "Hot-water diaphragm expansion vessel",
+  "processFunction": "Absorb thermal expansion and hold the pressurisation point of the three closed water loops",
   "handledMaterials": [
     "Closed-loop hot water"
   ],
@@ -78,5 +78,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Hot-water diaphragm expansion vessel",
+    "modelFunction": "Hot-water diaphragm expansion vessel",
+    "name": "Loop Expansion Vessels",
+    "sourceDocId": "FEED-PE-DAT-082",
+    "revision": "V1.0"
   }
 }

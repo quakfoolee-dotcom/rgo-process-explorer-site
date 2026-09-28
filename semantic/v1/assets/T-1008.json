@@ -1,6 +1,6 @@
 {
   "assetId": "T-1008",
-  "name": "Proposed low centrate receiver",
+  "name": "Centrate Receiver",
   "assetClassId": "Tank",
   "status": "proposed",
   "identityStatus": "model-derived; tag qualification open",
@@ -11,7 +11,7 @@
     "system": "A-1000 wastewater treatment context",
     "parentAsset": null
   },
-  "processFunction": "Proposed low centrate receiver",
+  "processFunction": "Receive the DC-1001 centrate and return it to the CL-1001 feedwell (P2-4)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -39,5 +39,12 @@
     "applied": "2026-09-28",
     "baseline": {},
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Proposed low centrate receiver",
+    "modelFunction": "Proposed low centrate receiver",
+    "name": "Centrate Receiver",
+    "sourceDocId": "FEED-PE-DAT-124",
+    "revision": "V1.0"
   }
 }

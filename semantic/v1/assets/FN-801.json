@@ -1,6 +1,6 @@
 {
   "assetId": "FN-801",
-  "name": "Reactive off-gas pressure-control fan",
+  "name": "Doping Furnace Off-Gas Fan",
   "assetClassId": "Fan",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-800 doping and pyrolysis process context",
     "parentAsset": null
   },
-  "processFunction": "Reactive off-gas pressure-control fan",
+  "processFunction": "Move the cooled PY-801 off-gas from E-801 / the potassium condenser to the S2 oxidiser (REP-041); furnace pressure is held by argon control, so a fan trip cannot pull PY-801 negative",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -52,5 +52,12 @@
     "baselineAbsent": [
       "safeguards"
     ]
+  },
+  "identitySource": {
+    "modelName": "Reactive off-gas pressure-control fan",
+    "modelFunction": "Reactive off-gas pressure-control fan",
+    "name": "Doping Furnace Off-Gas Fan",
+    "sourceDocId": "FEED-PE-DAT-073",
+    "revision": "V1.0"
   }
 }

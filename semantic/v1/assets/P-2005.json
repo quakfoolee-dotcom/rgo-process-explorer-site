@@ -1,6 +1,6 @@
 {
   "assetId": "P-2005",
-  "name": "Permeate distribution",
+  "name": "Process Water Distribution Pumps",
   "assetClassId": "Pump",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-2000 reclaimed-water treatment context",
     "parentAsset": null
   },
-  "processFunction": "Permeate distribution",
+  "processFunction": "Distribute process water from T-2002 to the plant users on pressure control (A2-5)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -46,5 +46,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Permeate distribution",
+    "modelFunction": "Permeate distribution",
+    "name": "Process Water Distribution Pumps",
+    "sourceDocId": "FEED-PE-DAT-137",
+    "revision": "V1.0"
   }
 }

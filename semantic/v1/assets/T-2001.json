@@ -1,6 +1,6 @@
 {
   "assetId": "T-2001",
-  "name": "RO feed equalization",
+  "name": "Condensate Receiver",
   "assetClassId": "Tank",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-2000 reclaimed-water treatment context",
     "parentAsset": null
   },
-  "processFunction": "RO feed equalization",
+  "processFunction": "Re-purposed (A2-2): receive the A-1100 concentrator condensate for pH trim and polishing (was RO feed equalisation)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -76,5 +76,12 @@
     "baselineAbsent": [
       "identity"
     ]
+  },
+  "identitySource": {
+    "modelName": "RO feed equalization",
+    "modelFunction": "RO feed equalization",
+    "name": "Condensate Receiver",
+    "sourceDocId": "FEED-PE-DAT-132",
+    "revision": "V1.0"
   }
 }

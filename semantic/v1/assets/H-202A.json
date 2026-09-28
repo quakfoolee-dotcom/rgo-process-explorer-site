@@ -1,6 +1,6 @@
 {
   "assetId": "H-202A",
-  "name": "Oxidizer hopper A",
+  "name": "KMnO₄ Hoppers — A",
   "assetClassId": "Hopper",
   "status": "proposed",
   "identityStatus": "provisional-model-tag",
@@ -11,7 +11,7 @@
     "system": "A-200 connected process context",
     "parentAsset": null
   },
-  "processFunction": "Oxidizer hopper A",
+  "processFunction": "Hold one batch of KMnO₄, filled from 1 t bulk bags at a contained bag-tip station vented to DC-201",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -42,5 +42,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Oxidizer hopper A",
+    "modelFunction": "Oxidizer hopper A",
+    "name": "KMnO₄ Hoppers — A",
+    "sourceDocId": "FEED-PE-DAT-092",
+    "revision": "V1.0"
   }
 }

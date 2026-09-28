@@ -1,6 +1,6 @@
 {
   "assetId": "R-1004",
-  "name": "Final conditioning and flocculation tank",
+  "name": "Final Conditioning and Flocculation Tank",
   "assetClassId": "Tank",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-1000 wastewater treatment context",
     "parentAsset": null
   },
-  "processFunction": "Final conditioning and flocculation tank",
+  "processFunction": "Flocculant contact ahead of CL-1001 (RS2 / RS4)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -46,5 +46,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Final conditioning and flocculation tank",
+    "modelFunction": "Final conditioning and flocculation tank",
+    "name": "Final Conditioning and Flocculation Tank",
+    "sourceDocId": "FEED-PE-DAT-117",
+    "revision": "V1.0"
   }
 }

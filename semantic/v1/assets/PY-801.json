@@ -1,6 +1,6 @@
 {
   "assetId": "PY-801",
-  "name": "Doping pyrolysis furnace with integral cooling",
+  "name": "Doping Pyrolysis Screw Furnace",
   "assetClassId": "Furnace",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-800 doping and pyrolysis process context",
     "parentAsset": null
   },
-  "processFunction": "Doping pyrolysis furnace with integral cooling",
+  "processFunction": "Drive the endothermic KBH₄ → K(g) + B + 2 H₂ doping of rGO at 750 °C under argon; deliver doped product to E-802 and a hydrogen / potassium off-gas to E-801 (REP-022: a driven reactor, not a heater)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -129,5 +129,12 @@
       "identity",
       "safeguards"
     ]
+  },
+  "identitySource": {
+    "modelName": "Doping pyrolysis furnace with integral cooling",
+    "modelFunction": "Doping pyrolysis furnace with integral cooling",
+    "name": "Doping Pyrolysis Screw Furnace",
+    "sourceDocId": "FEED-PE-DAT-072",
+    "revision": "V1.0"
   }
 }

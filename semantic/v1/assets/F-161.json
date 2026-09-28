@@ -1,6 +1,6 @@
 {
   "assetId": "F-161",
-  "name": "Membrane filter press",
+  "name": "Pre-G Membrane Filter Press",
   "assetClassId": "Filter",
   "status": "listed",
   "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
@@ -11,7 +11,7 @@
     "system": "Pre-G Washing and Drying",
     "parentAsset": null
   },
-  "processFunction": "Membrane filter press",
+  "processFunction": "Filter the T-162 batch, displacement-wash the cake (the acid-removal step of Option B), squeeze and air-blow; discharge the cake by chute to D-164",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -67,5 +67,12 @@
       "operatingEnvelope": null
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Membrane filter press",
+    "modelFunction": "Membrane filter press",
+    "name": "Pre-G Membrane Filter Press",
+    "sourceDocId": "FEED-PE-DAT-067",
+    "revision": "V1.2"
   }
 }

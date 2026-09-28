@@ -1,6 +1,6 @@
 {
   "assetId": "H-701",
-  "name": "Feed buffer",
+  "name": "TLGO Local Feed Hopper",
   "assetClassId": "Hopper",
   "status": "proposed",
   "identityStatus": "model-derived; tag qualification open",
@@ -11,7 +11,7 @@
     "system": "A-700 thermal-treatment process context",
     "parentAsset": null
   },
-  "processFunction": "Feed buffer",
+  "processFunction": "Two-hour local buffer of dried TLGO at the C-701 gravimetric feeder inlet, ahead of the LK-701 vacuum / argon lock hopper",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -39,5 +39,12 @@
     "applied": "2026-09-28",
     "baseline": {},
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Feed buffer",
+    "modelFunction": "Feed buffer",
+    "name": "TLGO Local Feed Hopper",
+    "sourceDocId": "FEED-PE-DAT-049",
+    "revision": "V1.0"
   }
 }

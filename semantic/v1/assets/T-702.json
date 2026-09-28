@@ -1,6 +1,6 @@
 {
   "assetId": "T-702",
-  "name": "Cooled pyrolysis product receiver",
+  "name": "rGO Product Receiver",
   "assetClassId": "PowderReceiver",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-700 thermal-treatment process context",
     "parentAsset": null
   },
-  "processFunction": "Cooled pyrolysis product receiver",
+  "processFunction": "Receives cooled rGO from the three PY-701 modules and holds it under argon for transfer to A-800 (H-801)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -70,5 +70,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Cooled pyrolysis product receiver",
+    "modelFunction": "Cooled pyrolysis product receiver",
+    "name": "rGO Product Receiver",
+    "sourceDocId": "FEED-PE-DAT-052",
+    "revision": "V1.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "assetId": "R-201A",
-  "name": "GO oxidation reactor A",
+  "name": "Oxidation Reactor (batch, stirred, jacketed, glass-lined) — A",
   "assetClassId": "Reactor",
   "status": "listed",
   "hierarchy": {
@@ -9,7 +9,7 @@
     "system": "GO Oxidation System",
     "parentAsset": null
   },
-  "processFunction": "Batch oxidation of dried Pre-G in sulfuric/phosphoric acid with staged potassium permanganate addition, agitation, external recirculation and temperature control.",
+  "processFunction": "Oxidation of dried Pre-G to Thin-Layer Graphene Oxide (TLGO)",
   "handledMaterials": [
     "Sulfuric acid",
     "Phosphoric acid",
@@ -96,5 +96,12 @@
     "baselineAbsent": [
       "safeguards"
     ]
+  },
+  "identitySource": {
+    "modelName": "GO oxidation reactor A",
+    "modelFunction": "Batch oxidation of dried Pre-G in sulfuric/phosphoric acid with staged potassium permanganate addition, agitation, external recirculation and temperature control.",
+    "name": "Oxidation Reactor (batch, stirred, jacketed, glass-lined) — A",
+    "sourceDocId": "FEED-PE-DAT-003",
+    "revision": "V1.3"
   }
 }

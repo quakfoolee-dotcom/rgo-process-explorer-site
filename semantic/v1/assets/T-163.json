@@ -1,6 +1,6 @@
 {
   "assetId": "T-163",
-  "name": "Pre-G filtrate holding tank",
+  "name": "Pre-G Filtrate Tank",
   "assetClassId": "Tank",
   "status": "listed",
   "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
@@ -11,7 +11,7 @@
     "system": "Pre-G Washing and Drying",
     "parentAsset": null
   },
-  "processFunction": "Pre-G filtrate holding tank",
+  "processFunction": "Collects F-161 filtrate and displacement wash (the residual acid after Route 6) for transfer to A-1000 by P-165",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -56,5 +56,12 @@
     "applied": "2026-09-28",
     "baseline": {},
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Pre-G filtrate holding tank",
+    "modelFunction": "Pre-G filtrate holding tank",
+    "name": "Pre-G Filtrate Tank",
+    "sourceDocId": "FEED-PE-DAT-026",
+    "revision": "V1.1"
   }
 }

@@ -321,7 +321,8 @@ onPhase?.('compressedAir');
 for(const r of routes){r.service=r.service||(/Supply|T-201|Top feed/i.test(r.label)?'Supply':/receive|product|collection|T-303|P-206/i.test(r.label)?'Receive':/utility|jacket|central/i.test(r.label)?'Utility':'Local');}
 
 // Duty/source status is separate from physical material appearance.
-const register=equipmentRegister(EQUIPMENT);for(const [id,e] of Object.entries(register)){Object.assign(EQUIPMENT[id],{tag:e.tag,label:e.name,areaId:e.areaId,designStatus:e.designStatus,reviewStatus:e.reviewStatus,provisional:e.designStatus==='proposed'});}
+// Display names follow the issued datasheets (dist/equipment-names.js); the register keeps the model name in e.name.
+const register=equipmentRegister(EQUIPMENT);for(const [id,e] of Object.entries(register)){Object.assign(EQUIPMENT[id],{tag:e.tag,label:e.datasheetName||e.name,areaId:e.areaId,designStatus:e.designStatus,reviewStatus:e.reviewStatus,provisional:e.designStatus==='proposed'});}
 // Material names and identifiers are explorer labels, not manufacturer specifications.
 const pipeSupportSystem=scope==='future'||!pipeRacks?null:buildPipeSupportSystem(helpers,{thermalUtilities,reactorAir,compressedAir,parts,edges,routes,valves,accessSystem,designScenario:a160,equipment:EQUIPMENT});
 reactorAir.localSupports=completeReactorAirSupports(helpers,reactorAir,pipeSupportSystem);

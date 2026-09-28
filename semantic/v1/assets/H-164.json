@@ -1,6 +1,6 @@
 {
   "assetId": "H-164",
-  "name": "Contained dry tray unloading",
+  "name": "Dry Pre-G Receiver",
   "assetClassId": "BulkSolidsReceiver",
   "status": "listed",
   "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
@@ -11,7 +11,7 @@
     "system": "Pre-G Washing and Drying",
     "parentAsset": null
   },
-  "processFunction": "Contained dry tray unloading",
+  "processFunction": "Receive one dried batch from D-164 and feed EL-164 / SC-164; replaces the tray unloading station (G6)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -56,5 +56,12 @@
     "applied": "2026-09-28",
     "baseline": {},
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Contained dry tray unloading",
+    "modelFunction": "Contained dry tray unloading",
+    "name": "Dry Pre-G Receiver",
+    "sourceDocId": "FEED-PE-DAT-070",
+    "revision": "V1.0"
   }
 }

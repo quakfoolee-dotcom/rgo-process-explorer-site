@@ -1,6 +1,6 @@
 {
   "assetId": "P-303",
-  "name": "Quenched slurry feed pump",
+  "name": "Filter Press Feed Pump",
   "assetClassId": "Pump",
   "status": "proposed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-300 fixing process context",
     "parentAsset": null
   },
-  "processFunction": "Quenched slurry feed pump",
+  "processFunction": "Feed C-301 from T-303 after the whole batch is quenched (ORP endpoint, M3 interlock — basis RA3), against rising cake pressure up to 7 bar",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -43,5 +43,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Quenched slurry feed pump",
+    "modelFunction": "Quenched slurry feed pump",
+    "name": "Filter Press Feed Pump",
+    "sourceDocId": "FEED-PE-DAT-103",
+    "revision": "V1.2"
   }
 }

@@ -1,6 +1,6 @@
 {
   "assetId": "P-301",
-  "name": "Peroxide dosing pump",
+  "name": "H₂O₂ Dosing Pumps",
   "assetClassId": "Pump",
   "status": "proposed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-300 fixing process context",
     "parentAsset": null
   },
-  "processFunction": "Peroxide dosing pump",
+  "processFunction": "Dose H₂O₂ into T-303 on ORP control, rate-limited by temperature (≤ 40 °C) and O₂ evolution",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -43,5 +43,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Peroxide dosing pump",
+    "modelFunction": "Peroxide dosing pump",
+    "name": "H₂O₂ Dosing Pumps",
+    "sourceDocId": "FEED-PE-DAT-101",
+    "revision": "V1.0"
   }
 }

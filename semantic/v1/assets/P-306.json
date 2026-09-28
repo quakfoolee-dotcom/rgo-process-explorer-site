@@ -1,6 +1,6 @@
 {
   "assetId": "P-306",
-  "name": "Acidic centrate transfer pump",
+  "name": "Centrate Transfer Pumps",
   "assetClassId": "Pump",
   "status": "proposed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-300 fixing process context",
     "parentAsset": null
   },
-  "processFunction": "Acidic centrate transfer pump",
+  "processFunction": "Transfer the spent-acid filtrate from T-304 to the acid concentrator (REP-039 Route 2, D-A1000-03)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -43,5 +43,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Acidic centrate transfer pump",
+    "modelFunction": "Acidic centrate transfer pump",
+    "name": "Centrate Transfer Pumps",
+    "sourceDocId": "FEED-PE-DAT-105",
+    "revision": "V1.2"
   }
 }

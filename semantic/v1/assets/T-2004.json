@@ -1,6 +1,6 @@
 {
   "assetId": "T-2004",
-  "name": "Antiscalant day tank",
+  "name": "RO Chemical Dosing Skid",
   "assetClassId": "Tank",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-2000 reclaimed-water treatment context",
     "parentAsset": null
   },
-  "processFunction": "Antiscalant day tank",
+  "processFunction": "Dose antiscalant ahead of RO-2001 and NaOH for the condensate pH trim in T-2001 (A2-6)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -39,5 +39,12 @@
     "applied": "2026-09-28",
     "baseline": {},
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Antiscalant day tank",
+    "modelFunction": "Antiscalant day tank",
+    "name": "RO Chemical Dosing Skid",
+    "sourceDocId": "FEED-PE-DAT-139",
+    "revision": "V1.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "assetId": "H-201B",
-  "name": "Pre-G hopper B",
+  "name": "Pre-G Hoppers — B",
   "assetClassId": "Hopper",
   "status": "proposed",
   "identityStatus": "provisional-model-tag",
@@ -11,7 +11,7 @@
     "system": "A-200 connected process context",
     "parentAsset": null
   },
-  "processFunction": "Pre-G hopper B",
+  "processFunction": "Hold one R-201 batch of dried Pre-G, filled by EL-164 / SC-164 (FEED-PE-DAT-071) between batches",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -35,5 +35,12 @@
     "applied": "2026-09-28",
     "baseline": {},
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Pre-G hopper B",
+    "modelFunction": "Pre-G hopper B",
+    "name": "Pre-G Hoppers — B",
+    "sourceDocId": "FEED-PE-DAT-090",
+    "revision": "V1.0"
   }
 }

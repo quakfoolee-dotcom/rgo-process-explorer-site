@@ -1,6 +1,6 @@
 {
   "assetId": "A-5310A",
-  "name": "Chilled-water circulation pump A",
+  "name": "Chilled-Water Circulation Pumps (Duty / Standby) — A",
   "assetClassId": "Pump",
   "status": "listed",
   "identityStatus": "model tag; equipment-register reconciliation open",
@@ -11,7 +11,7 @@
     "system": "Thermal Utility System",
     "parentAsset": null
   },
-  "processFunction": "Chilled-water circulation pump A",
+  "processFunction": "Circulate chilled water (CHWS / CHWR) from the A-5300 chiller to the exotherm-control and process-cooling users",
   "handledMaterials": [
     "Closed-loop chilled water"
   ],
@@ -78,5 +78,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Chilled-water circulation pump A",
+    "modelFunction": "Chilled-water circulation pump A",
+    "name": "Chilled-Water Circulation Pumps (Duty / Standby) — A",
+    "sourceDocId": "FEED-PE-DAT-011",
+    "revision": "V1.1"
   }
 }

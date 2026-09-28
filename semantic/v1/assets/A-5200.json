@@ -1,6 +1,6 @@
 {
   "assetId": "A-5200",
-  "name": "Closed-circuit evaporative fluid cooler",
+  "name": "Cooling-Water Package",
   "assetClassId": "Package",
   "status": "listed",
   "identityStatus": "model tag; equipment-register reconciliation open",
@@ -11,7 +11,7 @@
     "system": "Thermal Utility System",
     "parentAsset": null
   },
-  "processFunction": "Closed-circuit evaporative fluid cooler",
+  "processFunction": "Reject the cooling-water duty (dilution loops, concentrator condenser, chiller condensers, off-gas, sonication) from a closed loop",
   "handledMaterials": [
     "Closed-loop cooling water"
   ],
@@ -96,5 +96,12 @@
     "baselineAbsent": [
       "identity"
     ]
+  },
+  "identitySource": {
+    "modelName": "Closed-circuit evaporative fluid cooler",
+    "modelFunction": "Closed-circuit evaporative fluid cooler",
+    "name": "Cooling-Water Package",
+    "sourceDocId": "FEED-PE-DAT-083",
+    "revision": "V1.0"
   }
 }

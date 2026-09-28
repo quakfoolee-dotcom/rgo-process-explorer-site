@@ -1,6 +1,6 @@
 {
   "assetId": "RO-2001",
-  "name": "Single-pass N+1 RO package",
+  "name": "Condensate Polishing RO",
   "assetClassId": "MembraneSystem",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-2000 reclaimed-water treatment context",
     "parentAsset": null
   },
-  "processFunction": "Single-pass N+1 RO package",
+  "processFunction": "Polish the condensate to the process-water specification (A2-3); trains A / B, 1 duty + 1 standby (third train retired)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -71,5 +71,12 @@
       "operatingEnvelope": null
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Single-pass N+1 RO package",
+    "modelFunction": "Single-pass N+1 RO package",
+    "name": "Condensate Polishing RO",
+    "sourceDocId": "FEED-PE-DAT-134",
+    "revision": "V1.0"
   }
 }

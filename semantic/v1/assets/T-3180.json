@@ -1,6 +1,6 @@
 {
   "assetId": "T-3180",
-  "name": "Scrubber liquor inventory",
+  "name": "Scrubber Liquor Tank",
   "assetClassId": "Tank",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-3000 compatible wet-acid vent treatment context",
     "parentAsset": null
   },
-  "processFunction": "Scrubber liquor inventory",
+  "processFunction": "Holds recirculating liquor, receives make-up water and caustic, drains the column",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -46,5 +46,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Scrubber liquor inventory",
+    "modelFunction": "Scrubber liquor inventory",
+    "name": "Scrubber Liquor Tank",
+    "sourceDocId": "FEED-PE-DAT-031",
+    "revision": "V1.0"
   }
 }

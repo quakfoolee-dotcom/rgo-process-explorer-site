@@ -1,6 +1,6 @@
 {
   "assetId": "P-502",
-  "name": "Proposed accepted-product transfer pump",
+  "name": "Accepted-Product Transfer Pump",
   "assetClassId": "Pump",
   "status": "proposed",
   "identityStatus": "model-derived; tag qualification open",
@@ -11,7 +11,7 @@
     "system": "A-500 sonication process context",
     "parentAsset": null
   },
-  "processFunction": "Proposed accepted-product transfer pump",
+  "processFunction": "Forward transfer of accepted slurry (line 505) from the A-500 loop to A-600, gated on dose accounting or the inline proxy (D-A500-03)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -38,5 +38,12 @@
     "applied": "2026-09-28",
     "baseline": {},
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Proposed accepted-product transfer pump",
+    "modelFunction": "Proposed accepted-product transfer pump",
+    "name": "Accepted-Product Transfer Pump",
+    "sourceDocId": "FEED-PE-DAT-060",
+    "revision": "V1.0"
   }
 }

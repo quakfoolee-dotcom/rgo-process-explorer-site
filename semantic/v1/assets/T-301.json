@@ -1,6 +1,6 @@
 {
   "assetId": "T-301",
-  "name": "Hydrogen peroxide supply",
+  "name": "H₂O₂ Supply Tank",
   "assetClassId": "Tank",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-300 fixing process context",
     "parentAsset": null
   },
-  "processFunction": "Hydrogen peroxide supply",
+  "processFunction": "Store 50 wt % H₂O₂ for the T-303 quench",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -43,5 +43,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Hydrogen peroxide supply",
+    "modelFunction": "Hydrogen peroxide supply",
+    "name": "H₂O₂ Supply Tank",
+    "sourceDocId": "FEED-PE-DAT-100",
+    "revision": "V1.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "assetId": "T-1003",
-  "name": "Conditional BaCl2 storage",
+  "name": "BaCl₂ Solution Tank (option)",
   "assetClassId": "Tank",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-1000 wastewater treatment context",
     "parentAsset": null
   },
-  "processFunction": "Conditional BaCl2 storage",
+  "processFunction": "Conditional (P2-9): store 10 wt % BaCl₂ solution for R-1003",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -46,5 +46,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Conditional BaCl2 storage",
+    "modelFunction": "Conditional BaCl2 storage",
+    "name": "BaCl₂ Solution Tank (option)",
+    "sourceDocId": "FEED-PE-DAT-130",
+    "revision": "V1.0"
   }
 }

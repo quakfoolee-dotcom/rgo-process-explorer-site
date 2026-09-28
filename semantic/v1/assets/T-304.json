@@ -1,6 +1,6 @@
 {
   "assetId": "T-304",
-  "name": "Acidic centrate collection",
+  "name": "Acidic Centrate Tank",
   "assetClassId": "Tank",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-300 fixing process context",
     "parentAsset": null
   },
-  "processFunction": "Acidic centrate collection",
+  "processFunction": "Collect one batch of Mn(VII)-free filtrate and cake-wash filtrate for the acid concentrator (REP-039 Route 2)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -43,5 +43,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Acidic centrate collection",
+    "modelFunction": "Acidic centrate collection",
+    "name": "Acidic Centrate Tank",
+    "sourceDocId": "FEED-PE-DAT-104",
+    "revision": "V1.2"
   }
 }

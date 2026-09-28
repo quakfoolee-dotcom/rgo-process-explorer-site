@@ -1,6 +1,6 @@
 {
   "assetId": "T-501",
-  "name": "Sonication feed / conditioning tank",
+  "name": "Sonication Feed / Conditioning Tank",
   "assetClassId": "Tank",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-500 sonication process context",
     "parentAsset": null
   },
-  "processFunction": "Sonication feed / conditioning tank",
+  "processFunction": "Surge / hold at the batch-to-continuous boundary (DBM V2.0 §3.4) and the mixing volume of the sonication loop: receives A-400 product and loop return 507, feeds P-501 and P-502",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -74,5 +74,12 @@
       "operatingEnvelope": null
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Sonication feed / conditioning tank",
+    "modelFunction": "Sonication feed / conditioning tank",
+    "name": "Sonication Feed / Conditioning Tank",
+    "sourceDocId": "FEED-PE-DAT-058",
+    "revision": "V1.0"
   }
 }

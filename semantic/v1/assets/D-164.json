@@ -1,6 +1,6 @@
 {
   "assetId": "D-164",
-  "name": "Vacuum tray dryer",
+  "name": "Pre-G Dryer",
   "assetClassId": "Dryer",
   "status": "listed",
   "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
@@ -11,7 +11,7 @@
     "system": "Pre-G Washing and Drying",
     "parentAsset": null
   },
-  "processFunction": "Vacuum tray dryer",
+  "processFunction": "Dry the washed Pre-G cake to a free-flowing, meterable solid for SF-201 (A-200); one press batch per charge (REP-042 Option E)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -73,5 +73,12 @@
     "baselineAbsent": [
       "identity"
     ]
+  },
+  "identitySource": {
+    "modelName": "Vacuum tray dryer",
+    "modelFunction": "Vacuum tray dryer",
+    "name": "Pre-G Dryer",
+    "sourceDocId": "FEED-PE-DAT-068",
+    "revision": "V1.0"
   }
 }

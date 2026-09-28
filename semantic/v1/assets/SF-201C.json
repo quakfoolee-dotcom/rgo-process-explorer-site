@@ -1,6 +1,6 @@
 {
   "assetId": "SF-201C",
-  "name": "Pre-G feeder C",
+  "name": "Pre-G Feeders — C",
   "assetClassId": "Feeder",
   "status": "proposed",
   "identityStatus": "provisional-model-tag",
@@ -11,7 +11,7 @@
     "system": "A-200 connected process context",
     "parentAsset": null
   },
-  "processFunction": "Pre-G feeder C",
+  "processFunction": "Charge the Pre-G batch into R-201 via the engineered glass-safe chute (DAT-003 3.23)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -35,5 +35,12 @@
     "applied": "2026-09-28",
     "baseline": {},
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Pre-G feeder C",
+    "modelFunction": "Pre-G feeder C",
+    "name": "Pre-G Feeders — C",
+    "sourceDocId": "FEED-PE-DAT-091",
+    "revision": "V1.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "assetId": "A-5110A",
-  "name": "Hot-water circulation pump A",
+  "name": "Hot-Water Circulation Pumps (Duty / Standby) — A",
   "assetClassId": "Pump",
   "status": "listed",
   "identityStatus": "model tag; equipment-register reconciliation open",
@@ -11,7 +11,7 @@
     "system": "Thermal Utility System",
     "parentAsset": null
   },
-  "processFunction": "Hot-water circulation pump A",
+  "processFunction": "Circulate hot water (HWS / HWR) from the A-5100 generator to the plant heating users",
   "handledMaterials": [
     "Closed-loop hot water"
   ],
@@ -78,5 +78,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Hot-water circulation pump A",
+    "modelFunction": "Hot-water circulation pump A",
+    "name": "Hot-Water Circulation Pumps (Duty / Standby) — A",
+    "sourceDocId": "FEED-PE-DAT-009",
+    "revision": "V1.1"
   }
 }

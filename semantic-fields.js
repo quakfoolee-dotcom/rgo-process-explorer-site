@@ -5,6 +5,7 @@ export function fieldLabel(path){
  return known[key]||key.replace(/([a-z0-9])([A-Z])/g,'$1 $2').replace(/^./,s=>s.toUpperCase());
 }
 export function propertyFields(asset,rows=[],section='design'){
+ rows=rows.filter(r=>r.status!=='superseded');   // superseded evidence is never displayed (QFL 2026-09-28)
  const block=asset[section]||{}, paths=new Set(Object.keys(block).filter(k=>k!=='status').map(k=>section+'.'+k));
  for(const r of rows)if(r.property.startsWith(section+'.'))paths.add(r.property);
  // An unspecified generic capacity must not obscure explicit working / total volumes.

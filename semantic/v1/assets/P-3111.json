@@ -1,6 +1,6 @@
 {
   "assetId": "P-3111",
-  "name": "Acidic condensate export",
+  "name": "Acidic Condensate Export Pump",
   "assetClassId": "Pump",
   "status": "proposed",
   "identityStatus": "model-derived; tag qualification open",
@@ -11,7 +11,7 @@
     "system": "A-3000 compatible wet-acid vent treatment context",
     "parentAsset": null
   },
-  "processFunction": "Acidic condensate export",
+  "processFunction": "Batch export of V-3110 knock-out condensate from TK-3111 to A-1000 on level",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -39,5 +39,12 @@
     "applied": "2026-09-28",
     "baseline": {},
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Acidic condensate export",
+    "modelFunction": "Acidic condensate export",
+    "name": "Acidic Condensate Export Pump",
+    "sourceDocId": "FEED-PE-DAT-036",
+    "revision": "V1.0"
   }
 }

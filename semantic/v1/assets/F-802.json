@@ -1,6 +1,6 @@
 {
   "assetId": "F-802",
-  "name": "KBH4 loss-in-weight feeder",
+  "name": "KBH₄ Loss-in-Weight Feeder",
   "assetClassId": "WeighFeeder",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-800 doping and pyrolysis process context",
     "parentAsset": null
   },
-  "processFunction": "KBH4 loss-in-weight feeder",
+  "processFunction": "Ratio-controlled gravimetric feed to MX-801 (F-802 follows F-801, 1 : 1)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -46,5 +46,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "KBH4 loss-in-weight feeder",
+    "modelFunction": "KBH4 loss-in-weight feeder",
+    "name": "KBH₄ Loss-in-Weight Feeder",
+    "sourceDocId": "FEED-PE-DAT-075",
+    "revision": "V1.0"
   }
 }

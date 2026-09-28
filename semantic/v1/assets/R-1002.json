@@ -1,6 +1,6 @@
 {
   "assetId": "R-1002",
-  "name": "Lime neutralization and precipitation reactor",
+  "name": "Stage 2 Lime Precipitation Reactor",
   "assetClassId": "Reactor",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-1000 wastewater treatment context",
     "parentAsset": null
   },
-  "processFunction": "Lime neutralization and precipitation reactor",
+  "processFunction": "Lime to pH 9.8–10 for Mn(OH)₂ (Mn ≤ 5 mg/L) and phosphate precipitation, with 30 % sludge recycle (RS2 / RS4)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -49,5 +49,12 @@
       "operatingEnvelope": null
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Lime neutralization and precipitation reactor",
+    "modelFunction": "Lime neutralization and precipitation reactor",
+    "name": "Stage 2 Lime Precipitation Reactor",
+    "sourceDocId": "FEED-PE-DAT-116",
+    "revision": "V1.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "assetId": "P-501",
-  "name": "Sonication circulation pump",
+  "name": "Sonication Loop Circulation Pump",
   "assetClassId": "Pump",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-500 sonication process context",
     "parentAsset": null
   },
-  "processFunction": "Sonication circulation pump",
+  "processFunction": "Circulate T-501 → US-501 cells → HX-501 → T-501 at N turnovers and hold the cell backpressure for stable cavitation (D-A500-03)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -45,5 +45,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Sonication circulation pump",
+    "modelFunction": "Sonication circulation pump",
+    "name": "Sonication Loop Circulation Pump",
+    "sourceDocId": "FEED-PE-DAT-059",
+    "revision": "V1.0"
   }
 }

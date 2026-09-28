@@ -1,6 +1,6 @@
 {
   "assetId": "P-3184",
-  "name": "Proposed makeup / mist wash pump",
+  "name": "Make-up and Mist-Eliminator Wash Pump",
   "assetClassId": "Pump",
   "status": "proposed",
   "identityStatus": "model-derived; tag qualification open",
@@ -11,7 +11,7 @@
     "system": "A-3000 compatible wet-acid vent treatment context",
     "parentAsset": null
   },
-  "processFunction": "Proposed makeup / mist wash pump",
+  "processFunction": "Supply make-up water to T-3180 and intermittent wash water to ME-3150 (100 kPa at the nozzles)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -39,5 +39,12 @@
     "applied": "2026-09-28",
     "baseline": {},
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Proposed makeup / mist wash pump",
+    "modelFunction": "Proposed makeup / mist wash pump",
+    "name": "Make-up and Mist-Eliminator Wash Pump",
+    "sourceDocId": "FEED-PE-DAT-038",
+    "revision": "V1.0"
   }
 }

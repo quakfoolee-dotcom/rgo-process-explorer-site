@@ -1,6 +1,6 @@
 {
   "assetId": "H-802",
-  "name": "Dry KBH4 feed hopper",
+  "name": "KBH₄ Day Hopper",
   "assetClassId": "Hopper",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-800 doping and pyrolysis process context",
     "parentAsset": null
   },
-  "processFunction": "Dry KBH4 feed hopper",
+  "processFunction": "Holds dry KBH₄ for the F-802 loss-in-weight feeder; sealed drum docking",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -46,5 +46,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Dry KBH4 feed hopper",
+    "modelFunction": "Dry KBH4 feed hopper",
+    "name": "KBH₄ Day Hopper",
+    "sourceDocId": "FEED-PE-DAT-045",
+    "revision": "V1.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "assetId": "US-501",
-  "name": "Inline sonication package; three cells proposed",
+  "name": "Inline Ultrasonic Sonication Package",
   "assetClassId": "SonicationPackage",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-500 sonication process context",
     "parentAsset": null
   },
-  "processFunction": "Inline sonication package; three cells proposed",
+  "processFunction": "Dose-controlled cavitation loop (D-A500-03): deliver the cumulative dose over N passes of the T-501 / P-501 / HX-501 loop; forward transfer gated on dose accounting or the inline proxy",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -65,5 +65,12 @@
       "identity",
       "safeguards"
     ]
+  },
+  "identitySource": {
+    "modelName": "Inline sonication package; three cells proposed",
+    "modelFunction": "Inline sonication package; three cells proposed",
+    "name": "Inline Ultrasonic Sonication Package",
+    "sourceDocId": "FEED-PE-DAT-061",
+    "revision": "V1.0"
   }
 }

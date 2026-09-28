@@ -1,6 +1,6 @@
 {
   "assetId": "R-1003",
-  "name": "Conditional sulfate-polishing reactor",
+  "name": "Sulphate Polishing Reactor (option)",
   "assetClassId": "Reactor",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-1000 wastewater treatment context",
     "parentAsset": null
   },
-  "processFunction": "Conditional sulfate-polishing reactor",
+  "processFunction": "Conditional (P2-9): precipitate sulphate as BaSO₄ down to the sewer limit; priced as an option, built only if the permit requires it",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -49,5 +49,12 @@
       "operatingEnvelope": null
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Conditional sulfate-polishing reactor",
+    "modelFunction": "Conditional sulfate-polishing reactor",
+    "name": "Sulphate Polishing Reactor (option)",
+    "sourceDocId": "FEED-PE-DAT-129",
+    "revision": "V1.0"
   }
 }

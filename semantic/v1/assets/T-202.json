@@ -1,6 +1,6 @@
 {
   "assetId": "T-202",
-  "name": "Phosphoric acid day tank",
+  "name": "H₃PO₄ Day Tank",
   "assetClassId": "Tank",
   "status": "listed",
   "identityStatus": "inherited-register-tag",
@@ -11,7 +11,7 @@
     "system": "A-200 connected process context",
     "parentAsset": null
   },
-  "processFunction": "Phosphoric acid day tank",
+  "processFunction": "Day storage of 85 wt % H₃PO₄ for the R-201 A–D batch charges",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -42,5 +42,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Phosphoric acid day tank",
+    "modelFunction": "Phosphoric acid day tank",
+    "name": "H₃PO₄ Day Tank",
+    "sourceDocId": "FEED-PE-DAT-086",
+    "revision": "V1.0"
   }
 }

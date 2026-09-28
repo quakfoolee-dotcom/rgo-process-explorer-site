@@ -1,6 +1,6 @@
 {
   "assetId": "V-5310",
-  "name": "Chilled-water diaphragm expansion vessel",
+  "name": "Loop Expansion Vessels",
   "assetClassId": "Vessel",
   "status": "proposed",
   "identityStatus": "model tag; equipment-register reconciliation open",
@@ -11,7 +11,7 @@
     "system": "Thermal Utility System",
     "parentAsset": null
   },
-  "processFunction": "Chilled-water diaphragm expansion vessel",
+  "processFunction": "Absorb thermal expansion and hold the pressurisation point of the three closed water loops",
   "handledMaterials": [
     "Closed-loop chilled water"
   ],
@@ -71,5 +71,12 @@
     "applied": "2026-09-28",
     "baseline": {},
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Chilled-water diaphragm expansion vessel",
+    "modelFunction": "Chilled-water diaphragm expansion vessel",
+    "name": "Loop Expansion Vessels",
+    "sourceDocId": "FEED-PE-DAT-082",
+    "revision": "V1.0"
   }
 }

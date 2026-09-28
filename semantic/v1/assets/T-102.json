@@ -1,6 +1,6 @@
 {
   "assetId": "T-102",
-  "name": "Premix sulfuric acid supply",
+  "name": "H₂SO₄ Day Tank (Premix Supply)",
   "assetClassId": "Tank",
   "status": "listed",
   "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
@@ -11,7 +11,7 @@
     "system": "Pre-Mix Graphite with Acid",
     "parentAsset": null
   },
-  "processFunction": "Premix sulfuric acid supply",
+  "processFunction": "A-100 day tank: holds one day of premix acid at design and feeds P-101 (basis B2)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -63,5 +63,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Premix sulfuric acid supply",
+    "modelFunction": "Premix sulfuric acid supply",
+    "name": "H₂SO₄ Day Tank (Premix Supply)",
+    "sourceDocId": "FEED-PE-DAT-015",
+    "revision": "V1.0"
   }
 }

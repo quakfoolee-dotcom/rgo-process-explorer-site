@@ -1,6 +1,6 @@
 {
   "assetId": "E-801",
-  "name": "Reactive off-gas cooler",
+  "name": "Off-Gas Cooler / Controlled Condenser",
   "assetClassId": "HeatExchanger",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-800 doping and pyrolysis process context",
     "parentAsset": null
   },
-  "processFunction": "Reactive off-gas cooler",
+  "processFunction": "Cools PY-801 H₂ / K-in-argon off-gas in a staged, cleanable section so alkali deposits form where they can be removed",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -76,5 +76,12 @@
     "baselineAbsent": [
       "safeguards"
     ]
+  },
+  "identitySource": {
+    "modelName": "Reactive off-gas cooler",
+    "modelFunction": "Reactive off-gas cooler",
+    "name": "Off-Gas Cooler / Controlled Condenser",
+    "sourceDocId": "FEED-PE-DAT-047",
+    "revision": "V1.0"
   }
 }

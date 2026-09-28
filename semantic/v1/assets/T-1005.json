@@ -1,6 +1,6 @@
 {
   "assetId": "T-1005",
-  "name": "Floc aid preparation and storage",
+  "name": "Polymer Make-Down Package",
   "assetClassId": "Tank",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-1000 wastewater treatment context",
     "parentAsset": null
   },
-  "processFunction": "Floc aid preparation and storage",
+  "processFunction": "Make down dry flocculant to 0.25 wt % and dose CL-1001 and DC-1001 (P2-7)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -39,5 +39,12 @@
     "applied": "2026-09-28",
     "baseline": {},
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Floc aid preparation and storage",
+    "modelFunction": "Floc aid preparation and storage",
+    "name": "Polymer Make-Down Package",
+    "sourceDocId": "FEED-PE-DAT-128",
+    "revision": "V1.0"
   }
 }

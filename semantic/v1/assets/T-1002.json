@@ -1,6 +1,6 @@
 {
   "assetId": "T-1002",
-  "name": "Lime slurry storage",
+  "name": "Lime Slurry Day Tank",
   "assetClassId": "Tank",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-1000 wastewater treatment context",
     "parentAsset": null
   },
-  "processFunction": "Lime slurry storage",
+  "processFunction": "Hold 20 wt % Ca(OH)₂ slurry for R-1001 / R-1002, made up from a hydrated-lime silo (phase 2 new tag, HOLD W9)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -46,5 +46,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Lime slurry storage",
+    "modelFunction": "Lime slurry storage",
+    "name": "Lime Slurry Day Tank",
+    "sourceDocId": "FEED-PE-DAT-120",
+    "revision": "V1.0"
   }
 }

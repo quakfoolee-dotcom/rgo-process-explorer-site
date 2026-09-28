@@ -1,6 +1,6 @@
 {
   "assetId": "T-3182",
-  "name": "Proposed closed NaOH day tank",
+  "name": "NaOH Day Tank",
   "assetClassId": "Tank",
   "status": "proposed",
   "identityStatus": "model-derived; tag qualification open",
@@ -11,7 +11,7 @@
     "system": "A-3000 compatible wet-acid vent treatment context",
     "parentAsset": null
   },
-  "processFunction": "Proposed closed NaOH day tank",
+  "processFunction": "Holds 25 wt % NaOH for P-3182 metering; filled from 1 m³ IBCs",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -39,5 +39,12 @@
     "applied": "2026-09-28",
     "baseline": {},
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Proposed closed NaOH day tank",
+    "modelFunction": "Proposed closed NaOH day tank",
+    "name": "NaOH Day Tank",
+    "sourceDocId": "FEED-PE-DAT-033",
+    "revision": "V1.0"
   }
 }

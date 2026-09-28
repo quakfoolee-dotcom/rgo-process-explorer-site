@@ -1,6 +1,6 @@
 {
   "assetId": "H-803",
-  "name": "Mixed-solids surge hopper",
+  "name": "Mixed-Solids Surge Hopper",
   "assetClassId": "Hopper",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-800 doping and pyrolysis process context",
     "parentAsset": null
   },
-  "processFunction": "Mixed-solids surge hopper",
+  "processFunction": "Decouples MX-801 from the PY-801 feed; limited, load-cell-controlled surge — not bulk storage",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -47,5 +47,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Mixed-solids surge hopper",
+    "modelFunction": "Mixed-solids surge hopper",
+    "name": "Mixed-Solids Surge Hopper",
+    "sourceDocId": "FEED-PE-DAT-046",
+    "revision": "V1.0"
   }
 }

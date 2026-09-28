@@ -1,6 +1,6 @@
 {
   "assetId": "A-5100",
-  "name": "Hot-water generation · electric-heater concept",
+  "name": "Hot-Water Generation Package",
   "assetClassId": "Package",
   "status": "listed",
   "identityStatus": "model tag; equipment-register reconciliation open",
@@ -11,7 +11,7 @@
     "system": "Thermal Utility System",
     "parentAsset": null
   },
-  "processFunction": "Hot-water generation · electric-heater concept",
+  "processFunction": "Closed hot-water loop for tracing, tank heating and R-141 heat-up (REP-043: ≈ 0.3–0.5 MW once the ≥ 200 °C duties move to A-5400)",
   "handledMaterials": [
     "Closed-loop hot water"
   ],
@@ -96,5 +96,12 @@
     "baselineAbsent": [
       "identity"
     ]
+  },
+  "identitySource": {
+    "modelName": "Hot-water generation · electric-heater concept",
+    "modelFunction": "Hot-water generation · electric-heater concept",
+    "name": "Hot-Water Generation Package",
+    "sourceDocId": "FEED-PE-DAT-081",
+    "revision": "V1.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "assetId": "T-2002",
-  "name": "Permeate storage",
+  "name": "Process Water Tank",
   "assetClassId": "Tank",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-2000 reclaimed-water treatment context",
     "parentAsset": null
   },
-  "processFunction": "Permeate storage",
+  "processFunction": "Store RO permeate and municipal make-up for distribution to A-160, A-300, A-400 and A-1000 users (A2-5)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -70,5 +70,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Permeate storage",
+    "modelFunction": "Permeate storage",
+    "name": "Process Water Tank",
+    "sourceDocId": "FEED-PE-DAT-136",
+    "revision": "V1.0"
   }
 }

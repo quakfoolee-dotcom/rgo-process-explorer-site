@@ -1,6 +1,6 @@
 {
   "assetId": "P-3181A",
-  "name": "Recirculation pump; modeled duty",
+  "name": "Scrubber Liquor Recirculation Pumps (Duty / Standby) — A",
   "assetClassId": "Pump",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-3000 compatible wet-acid vent treatment context",
     "parentAsset": null
   },
-  "processFunction": "Recirculation pump; modeled duty",
+  "processFunction": "Circulate liquor from T-3180 to the T-3140 packed-column distributor",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -46,5 +46,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Recirculation pump; modeled duty",
+    "modelFunction": "Recirculation pump; modeled duty",
+    "name": "Scrubber Liquor Recirculation Pumps (Duty / Standby) — A",
+    "sourceDocId": "FEED-PE-DAT-030",
+    "revision": "V1.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "assetId": "P-601",
-  "name": "Metered dryer feed / recycle pump",
+  "name": "Dryer Feed Pump",
   "assetClassId": "Pump",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-600 drying process context",
     "parentAsset": null
   },
-  "processFunction": "Metered dryer feed / recycle pump",
+  "processFunction": "Feed TLGO slurry from T-601 to the DR-601 atomiser (603) under flow control, with a recirculation branch to T-601 (602) — NTE-011",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -46,5 +46,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Metered dryer feed / recycle pump",
+    "modelFunction": "Metered dryer feed / recycle pump",
+    "name": "Dryer Feed Pump",
+    "sourceDocId": "FEED-PE-DAT-064",
+    "revision": "V1.1"
   }
 }

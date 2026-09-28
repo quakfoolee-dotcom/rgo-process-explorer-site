@@ -1,6 +1,6 @@
 {
   "assetId": "T-1006",
-  "name": "Wastewater equalization tank",
+  "name": "Wastewater Equalisation Tank",
   "assetClassId": "Tank",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-1000 wastewater treatment context",
     "parentAsset": null
   },
-  "processFunction": "Wastewater equalization tank",
+  "processFunction": "Equalise the A-160 residual, A-300 phase 2 / A-400 wash liquors and the A-1100 bleed ahead of neutralisation",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -57,5 +57,12 @@
     "baselineAbsent": [
       "identity"
     ]
+  },
+  "identitySource": {
+    "modelName": "Wastewater equalization tank",
+    "modelFunction": "Wastewater equalization tank",
+    "name": "Wastewater Equalisation Tank",
+    "sourceDocId": "FEED-PE-DAT-114",
+    "revision": "V1.0"
   }
 }

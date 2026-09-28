@@ -1,6 +1,6 @@
 {
   "assetId": "V-3110",
-  "name": "Wet acid vent knock-out drum",
+  "name": "S1 Vent Knock-Out Drum",
   "assetClassId": "Vessel",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-3000 compatible wet-acid vent treatment context",
     "parentAsset": null
   },
-  "processFunction": "Wet acid vent knock-out drum",
+  "processFunction": "Remove acid mist and flash liquid from the S1 wet-vent header ahead of T-3140; wet vents only (D-A3000-01)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -52,5 +52,12 @@
     "baselineAbsent": [
       "identity"
     ]
+  },
+  "identitySource": {
+    "modelName": "Wet acid vent knock-out drum",
+    "modelFunction": "Wet acid vent knock-out drum",
+    "name": "S1 Vent Knock-Out Drum",
+    "sourceDocId": "FEED-PE-DAT-077",
+    "revision": "V1.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "assetId": "C-301",
-  "name": "Decanter centrifuge",
+  "name": "TLGO Filter Press",
   "assetClassId": "Centrifuge",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-300 fixing process context",
     "parentAsset": null
   },
-  "processFunction": "Decanter centrifuge",
+  "processFunction": "Separate the quenched TLGO from the ≈ 55 wt % acid (REP-039 Route 2) and wash the cake by displacement so that the cake-liquor acid goes to T-304 and the concentrator; washed cake to T-305 (phase 2)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -49,5 +49,12 @@
     "baselineAbsent": [
       "identity"
     ]
+  },
+  "identitySource": {
+    "modelName": "Decanter centrifuge",
+    "modelFunction": "Decanter centrifuge",
+    "name": "TLGO Filter Press",
+    "sourceDocId": "FEED-PE-DAT-102",
+    "revision": "V1.2"
   }
 }

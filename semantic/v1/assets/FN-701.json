@@ -1,6 +1,6 @@
 {
   "assetId": "FN-701",
-  "name": "Thermal off-gas draft fan",
+  "name": "Off-Gas Induced-Draft Fan",
   "assetClassId": "Fan",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-700 thermal-treatment process context",
     "parentAsset": null
   },
-  "processFunction": "Thermal off-gas draft fan",
+  "processFunction": "Draws the cooled module off-gas through E-701 / KO-701 and delivers it to the common header and controlled oxidation; holds furnace pressure 5–15 mbarg",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -46,5 +46,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Thermal off-gas draft fan",
+    "modelFunction": "Thermal off-gas draft fan",
+    "name": "Off-Gas Induced-Draft Fan",
+    "sourceDocId": "FEED-PE-DAT-051",
+    "revision": "V1.0"
   }
 }

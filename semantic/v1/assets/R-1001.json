@@ -1,6 +1,6 @@
 {
   "assetId": "R-1001",
-  "name": "Initial neutralization reactor",
+  "name": "Stage 1 Neutralisation Reactor",
   "assetClassId": "Reactor",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-1000 wastewater treatment context",
     "parentAsset": null
   },
-  "processFunction": "Initial neutralization reactor",
+  "processFunction": "Lime to pH 5–6 with HDS sludge recycle for gypsum growth; the A-1100 salt cake is repulped here (RS2 / RS5)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -80,5 +80,12 @@
     "baselineAbsent": [
       "identity"
     ]
+  },
+  "identitySource": {
+    "modelName": "Initial neutralization reactor",
+    "modelFunction": "Initial neutralization reactor",
+    "name": "Stage 1 Neutralisation Reactor",
+    "sourceDocId": "FEED-PE-DAT-115",
+    "revision": "V1.0"
   }
 }

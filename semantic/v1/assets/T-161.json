@@ -1,6 +1,6 @@
 {
   "assetId": "T-161",
-  "name": "Pre-G fixing tank",
+  "name": "Pre-G Fixing / Hydrolysis Tank",
   "assetClassId": "Tank",
   "status": "listed",
   "identityStatus": "PFD-listed tag/group mapped to modeled equipment identity",
@@ -11,7 +11,7 @@
     "system": "Pre-G Washing and Drying",
     "parentAsset": null
   },
-  "processFunction": "Pre-G fixing tank",
+  "processFunction": "Receives the F-160 cake (≈ 1.38 t, 60% acid liquor) and 8 t of water; reslurry and 1–2 h hold for gallery release (Route 6, R6-3 / R6-5); feeds F-161 via P-164",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -75,5 +75,12 @@
     "baselineAbsent": [
       "identity"
     ]
+  },
+  "identitySource": {
+    "modelName": "Pre-G fixing tank",
+    "modelFunction": "Pre-G fixing tank",
+    "name": "Pre-G Fixing / Hydrolysis Tank",
+    "sourceDocId": "FEED-PE-DAT-024",
+    "revision": "V1.2"
   }
 }

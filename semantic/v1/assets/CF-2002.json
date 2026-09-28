@@ -1,6 +1,6 @@
 {
   "assetId": "CF-2002",
-  "name": "Final polishing cartridge",
+  "name": "Municipal Make-Up Cartridge Filter",
   "assetClassId": "Filter",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-2000 reclaimed-water treatment context",
     "parentAsset": null
   },
-  "processFunction": "Final polishing cartridge",
+  "processFunction": "Re-purposed (A2-4): filter the municipal make-up (≈ 16 m³/h) into T-2002",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -70,5 +70,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Final polishing cartridge",
+    "modelFunction": "Final polishing cartridge",
+    "name": "Municipal Make-Up Cartridge Filter",
+    "sourceDocId": "FEED-PE-DAT-138",
+    "revision": "V1.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "assetId": "KO-701",
-  "name": "Proposed downstream condensate knockout",
+  "name": "Off-Gas Knock-Out Drum",
   "assetClassId": "KnockoutPot",
   "status": "proposed",
   "identityStatus": "model-derived; tag qualification open",
@@ -11,7 +11,7 @@
     "system": "A-700 thermal-treatment process context",
     "parentAsset": null
   },
-  "processFunction": "Proposed downstream condensate knockout",
+  "processFunction": "Gravity separation of carryover fines; protects E-701 from fouling",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -51,5 +51,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Proposed downstream condensate knockout",
+    "modelFunction": "Proposed downstream condensate knockout",
+    "name": "Off-Gas Knock-Out Drum",
+    "sourceDocId": "FEED-PE-DAT-006",
+    "revision": "V1.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "assetId": "MX-801",
-  "name": "Inerted continuous ploughshare mixer",
+  "name": "Continuous Ploughshare Mixer (Inerted)",
   "assetClassId": "Mixer",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-800 doping and pyrolysis process context",
     "parentAsset": null
   },
-  "processFunction": "Inerted continuous ploughshare mixer",
+  "processFunction": "Continuous homogeneous blending of rGO with KBH₄ dopant powder",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -78,5 +78,12 @@
     "baselineAbsent": [
       "safety"
     ]
+  },
+  "identitySource": {
+    "modelName": "Inerted continuous ploughshare mixer",
+    "modelFunction": "Inerted continuous ploughshare mixer",
+    "name": "Continuous Ploughshare Mixer (Inerted)",
+    "sourceDocId": "FEED-PE-DAT-008",
+    "revision": "V1.0"
   }
 }

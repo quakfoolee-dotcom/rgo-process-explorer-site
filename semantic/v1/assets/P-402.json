@@ -1,6 +1,6 @@
 {
   "assetId": "P-402",
-  "name": "Washing circulation / product transfer pump",
+  "name": "Washed Slurry Product Transfer Pump",
   "assetClassId": "Pump",
   "status": "proposed",
   "identityStatus": "model-derived; tag qualification open",
@@ -11,7 +11,7 @@
     "system": "A-400 washing process context",
     "parentAsset": null
   },
-  "processFunction": "Washing circulation / product transfer pump",
+  "processFunction": "Transfer washed TLGO slurry from T-402 to T-501 (A-500) at the loop concentration on T-402 level",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -44,5 +44,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Washing circulation / product transfer pump",
+    "modelFunction": "Washing circulation / product transfer pump",
+    "name": "Washed Slurry Product Transfer Pump",
+    "sourceDocId": "FEED-PE-DAT-056",
+    "revision": "V1.0"
   }
 }

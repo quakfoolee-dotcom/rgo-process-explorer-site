@@ -1,6 +1,6 @@
 {
   "assetId": "A-5210A",
-  "name": "Cooling-water circulation pump A",
+  "name": "Cooling-Water Circulation Pumps (Duty / Standby) — A",
   "assetClassId": "Pump",
   "status": "listed",
   "identityStatus": "model tag; equipment-register reconciliation open",
@@ -11,7 +11,7 @@
     "system": "Thermal Utility System",
     "parentAsset": null
   },
-  "processFunction": "Cooling-water circulation pump A",
+  "processFunction": "Circulate cooling water (CWS / CWR) from the A-5200 heat-rejection unit to the plant cooling users",
   "handledMaterials": [
     "Closed-loop cooling water"
   ],
@@ -78,5 +78,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Cooling-water circulation pump A",
+    "modelFunction": "Cooling-water circulation pump A",
+    "name": "Cooling-Water Circulation Pumps (Duty / Standby) — A",
+    "sourceDocId": "FEED-PE-DAT-010",
+    "revision": "V1.1"
   }
 }

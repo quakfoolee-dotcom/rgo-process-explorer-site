@@ -1,6 +1,6 @@
 {
   "assetId": "E-701",
-  "name": "Off-gas cooler",
+  "name": "Off-Gas Cooler",
   "assetClassId": "HeatExchanger",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-700 thermal-treatment process context",
     "parentAsset": null
   },
-  "processFunction": "Off-gas cooler",
+  "processFunction": "Cools the PY-701 module off-gas (H₂O / CO / CO₂ / H₂ in argon, with fines) from 1,100 °C to ≤ 80 °C ahead of KO-701 and FN-701",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -70,5 +70,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Off-gas cooler",
+    "modelFunction": "Off-gas cooler",
+    "name": "Off-Gas Cooler",
+    "sourceDocId": "FEED-PE-DAT-050",
+    "revision": "V1.0"
   }
 }

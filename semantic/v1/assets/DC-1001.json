@@ -1,6 +1,6 @@
 {
   "assetId": "DC-1001",
-  "name": "Wastewater decanter centrifuge",
+  "name": "Sludge Decanter Centrifuge",
   "assetClassId": "Centrifuge",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-1000 wastewater treatment context",
     "parentAsset": null
   },
-  "processFunction": "Wastewater decanter centrifuge",
+  "processFunction": "Dewater the CL-1001 underflow to a landfill cake; centrate to T-1008 / recycle",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -47,5 +47,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Wastewater decanter centrifuge",
+    "modelFunction": "Wastewater decanter centrifuge",
+    "name": "Sludge Decanter Centrifuge",
+    "sourceDocId": "FEED-PE-DAT-119",
+    "revision": "V1.0"
   }
 }

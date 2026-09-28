@@ -1,6 +1,6 @@
 {
   "assetId": "A-5300",
-  "name": "Air-cooled chiller package",
+  "name": "Chilled-Water Package",
   "assetClassId": "Package",
   "status": "listed",
   "identityStatus": "model tag; equipment-register reconciliation open",
@@ -11,7 +11,7 @@
     "system": "Thermal Utility System",
     "parentAsset": null
   },
-  "processFunction": "Air-cooled chiller package",
+  "processFunction": "Chilled water for the R-201 / T-303 exotherm control (TCU-201 / TCU-303), R-201 chill-down and A-400 feed cooling (REP-043; MOC-002)",
   "handledMaterials": [
     "Closed-loop chilled water"
   ],
@@ -96,5 +96,12 @@
     "baselineAbsent": [
       "identity"
     ]
+  },
+  "identitySource": {
+    "modelName": "Air-cooled chiller package",
+    "modelFunction": "Air-cooled chiller package",
+    "name": "Chilled-Water Package",
+    "sourceDocId": "FEED-PE-DAT-084",
+    "revision": "V1.0"
   }
 }

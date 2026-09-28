@@ -1,6 +1,6 @@
 {
   "assetId": "CF-2001",
-  "name": "Carbon filtration",
+  "name": "Condensate Carbon Filter",
   "assetClassId": "Filter",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-2000 reclaimed-water treatment context",
     "parentAsset": null
   },
-  "processFunction": "Carbon filtration",
+  "processFunction": "Re-purposed (A2-2): remove volatile organics from the pH-trimmed condensate ahead of RO-2001",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -46,5 +46,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Carbon filtration",
+    "modelFunction": "Carbon filtration",
+    "name": "Condensate Carbon Filter",
+    "sourceDocId": "FEED-PE-DAT-133",
+    "revision": "V1.0"
   }
 }

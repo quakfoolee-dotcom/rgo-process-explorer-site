@@ -1,6 +1,6 @@
 {
   "assetId": "P-1003",
-  "name": "Lime slurry metering pump",
+  "name": "Lime Slurry Ring-Main Pumps",
   "assetClassId": "Pump",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-1000 wastewater treatment context",
     "parentAsset": null
   },
-  "processFunction": "Lime slurry metering pump",
+  "processFunction": "Circulate lime slurry from T-1002 round a ring main with control valves to R-1001 / R-1002 (RS6)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -46,5 +46,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Lime slurry metering pump",
+    "modelFunction": "Lime slurry metering pump",
+    "name": "Lime Slurry Ring-Main Pumps",
+    "sourceDocId": "FEED-PE-DAT-121",
+    "revision": "V1.0"
   }
 }

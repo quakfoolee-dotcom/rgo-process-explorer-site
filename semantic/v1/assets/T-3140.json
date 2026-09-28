@@ -1,6 +1,6 @@
 {
   "assetId": "T-3140",
-  "name": "Counter-current packed wet scrubber",
+  "name": "S1 Packed Caustic Scrubber",
   "assetClassId": "Scrubber",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-3000 compatible wet-acid vent treatment context",
     "parentAsset": null
   },
-  "processFunction": "Counter-current packed wet scrubber",
+  "processFunction": "Absorb HCl, SO₂, Cl₂ and acid mist from the S1 wet vents into caustic liquor; does not treat CO or H₂ (REP-041)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -57,5 +57,12 @@
       "identity",
       "safeguards"
     ]
+  },
+  "identitySource": {
+    "modelName": "Counter-current packed wet scrubber",
+    "modelFunction": "Counter-current packed wet scrubber",
+    "name": "S1 Packed Caustic Scrubber",
+    "sourceDocId": "FEED-PE-DAT-078",
+    "revision": "V1.0"
   }
 }

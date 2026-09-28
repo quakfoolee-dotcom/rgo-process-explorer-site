@@ -1,6 +1,6 @@
 {
   "assetId": "P-1009",
-  "name": "Flocculated slurry feed pump",
+  "name": "Thickener Underflow Pumps",
   "assetClassId": "Pump",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-1000 wastewater treatment context",
     "parentAsset": null
   },
-  "processFunction": "Flocculated slurry feed pump",
+  "processFunction": "Re-purposed (P2-2): pump the CL-1001 underflow to DC-1001 (7.3 m³/h) and the 30 % HDS recycle to R-1001 (7.7 m³/h)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -46,5 +46,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Flocculated slurry feed pump",
+    "modelFunction": "Flocculated slurry feed pump",
+    "name": "Thickener Underflow Pumps",
+    "sourceDocId": "FEED-PE-DAT-123",
+    "revision": "V1.0"
   }
 }

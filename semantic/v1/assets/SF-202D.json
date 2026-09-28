@@ -1,6 +1,6 @@
 {
   "assetId": "SF-202D",
-  "name": "Oxidizer feeder D",
+  "name": "KMnO₄ Feeders — D",
   "assetClassId": "Feeder",
   "status": "proposed",
   "identityStatus": "provisional-model-tag",
@@ -11,7 +11,7 @@
     "system": "A-200 connected process context",
     "parentAsset": null
   },
-  "processFunction": "Oxidizer feeder D",
+  "processFunction": "Meter KMnO₄ into the SI-201 pneumatic transport line, staged 70 % / 30 % (NTE-004)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -42,5 +42,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Oxidizer feeder D",
+    "modelFunction": "Oxidizer feeder D",
+    "name": "KMnO₄ Feeders — D",
+    "sourceDocId": "FEED-PE-DAT-093",
+    "revision": "V1.0"
   }
 }

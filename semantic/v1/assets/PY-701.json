@@ -1,6 +1,6 @@
 {
   "assetId": "PY-701",
-  "name": "High-temperature pyrolysis furnace",
+  "name": "High Temperature Pyrolysis Furnace",
   "assetClassId": "Furnace",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-700 thermal-treatment process context",
     "parentAsset": null
   },
-  "processFunction": "High-temperature pyrolysis furnace",
+  "processFunction": "Continuous thermal reduction of TLGO → rGO under inert atmosphere",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -136,5 +136,12 @@
       "identity",
       "safeguards"
     ]
+  },
+  "identitySource": {
+    "modelName": "High-temperature pyrolysis furnace",
+    "modelFunction": "High-temperature pyrolysis furnace",
+    "name": "High Temperature Pyrolysis Furnace",
+    "sourceDocId": "FEED-PE-DAT-004",
+    "revision": "V1.0"
   }
 }

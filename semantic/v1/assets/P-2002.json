@@ -1,6 +1,6 @@
 {
   "assetId": "P-2002",
-  "name": "RO high-pressure pump package",
+  "name": "RO Feed Pumps",
   "assetClassId": "Pump",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-2000 reclaimed-water treatment context",
     "parentAsset": null
   },
-  "processFunction": "RO high-pressure pump package",
+  "processFunction": "Pressurise the polished condensate into RO-2001A / B (trains A / B; P-2002C retired)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -71,5 +71,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "RO high-pressure pump package",
+    "modelFunction": "RO high-pressure pump package",
+    "name": "RO Feed Pumps",
+    "sourceDocId": "FEED-PE-DAT-135",
+    "revision": "V1.0"
   }
 }

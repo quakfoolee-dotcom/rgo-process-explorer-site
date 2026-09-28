@@ -1,6 +1,6 @@
 {
   "assetId": "P-2002A",
-  "name": "RO train A high-pressure pump",
+  "name": "RO Feed Pumps — A",
   "assetClassId": "Pump",
   "status": "proposed",
   "identityStatus": "model-derived; tag qualification open",
@@ -11,7 +11,7 @@
     "system": "A-2000 reclaimed-water treatment context",
     "parentAsset": "P-2002"
   },
-  "processFunction": "RO train A high-pressure pump",
+  "processFunction": "Pressurise the polished condensate into RO-2001A / B (trains A / B; P-2002C retired)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -28,5 +28,12 @@
     "Draft N+1 does not specify N; the model selects A/B duty and C standby with 72 elements per train and 8:4 staging in a single pass. Draft 70-75% higher recovery requires a scaling study. Residual Ba/Ca/sulfate, silica, oxidant breakthrough, greensand regeneration and antiscalant dose remain unqualified.",
     "Normal media/UF backwash returns to A-1000. Brine and spent CIP have separate positively blinded boundaries with destinations unassigned. Sequential acid/alkaline CIP isolates one train from product and brine export. Low CIP drain needs contained pump-out; UF chemical CEB is an unmodeled hold with no active pipe.",
     "Model off-spec permeate and stored water recycle to T-2001; no active off-spec drain is added from draft wording. Train C is modeled standby, not live state. Relief capacity/backpressure, tank vent qualification, pressure ratings and hygienic turnover remain open. Reclaimed water is not a potable emergency supply."
-  ]
+  ],
+  "identitySource": {
+    "modelName": "RO train A high-pressure pump",
+    "modelFunction": "RO train A high-pressure pump",
+    "name": "RO Feed Pumps — A",
+    "sourceDocId": "FEED-PE-DAT-135",
+    "revision": "V1.0"
+  }
 }

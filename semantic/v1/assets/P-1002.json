@@ -1,6 +1,6 @@
 {
   "assetId": "P-1002",
-  "name": "Conditional BaCl2 metering pump",
+  "name": "BaCl₂ Metering Pumps (option)",
   "assetClassId": "Pump",
   "status": "listed",
   "identityStatus": "draft-pfd-tag",
@@ -11,7 +11,7 @@
     "system": "A-1000 wastewater treatment context",
     "parentAsset": null
   },
-  "processFunction": "Conditional BaCl2 metering pump",
+  "processFunction": "Conditional (P2-9): dose 10 wt % BaCl₂ into R-1003 on flow / sulphate control",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
@@ -46,5 +46,12 @@
       }
     },
     "baselineAbsent": []
+  },
+  "identitySource": {
+    "modelName": "Conditional BaCl2 metering pump",
+    "modelFunction": "Conditional BaCl2 metering pump",
+    "name": "BaCl₂ Metering Pumps (option)",
+    "sourceDocId": "FEED-PE-DAT-131",
+    "revision": "V1.0"
   }
 }
