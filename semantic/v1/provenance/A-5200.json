@@ -87,7 +87,7 @@
       "value": "Cooling water 25–30 °C as drawn; R-1001 ≈ 2 MW (Case 0) and E-701/E-801/E-702 loads",
       "unit": "°C",
       "source": "FEED-PE-REP-043",
-      "revision": "V1.1",
+      "revision": "V1.2",
       "location": "basis table",
       "status": "approved",
       "confidence": "review required",

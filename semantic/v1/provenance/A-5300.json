@@ -87,7 +87,7 @@
       "value": "Chilled water 5–7 °C as drawn; the plant's exotherm control lives here — coincident load 2–3 of 4 R-201 reactors dosing (0.3–1 MW per reactor bounded, not known; calorimetry A-059 is the gating measurement) plus jacket chill-downs",
       "unit": "°C",
       "source": "FEED-PE-REP-043",
-      "revision": "V1.1",
+      "revision": "V1.2",
       "location": "Executive conclusion / basis table",
       "status": "approved",
       "confidence": "review required",
