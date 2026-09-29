@@ -1,11 +1,11 @@
 {
- "version": "4720eba",
+ "version": "a603e53",
  "date": "2026-09-29",
- "generated": "2026-09-29T15:37:02.066Z",
- "revision": "r4",
+ "generated": "2026-09-29T20:10:44.746Z",
+ "revision": "r5",
  "reviewer": {
   "initials": "QFL",
-  "date": "2026-09-28"
+  "date": "2026-09-29"
  },
  "lead": "The published gate report (bc-corridors-85, 2026-09-12) is retained below as the coordinated baseline; the sections above it are measured on the current model on every refresh. Nothing here qualifies structure, slabs, vehicles or traffic.",
  "basis": {
@@ -28,7 +28,7 @@
   "vendorFlexible": 132,
   "structurallyQualified": false,
   "memberLengthM": 14075.407928593448,
-  "parts": 155194
+  "parts": 157128
  },
  "published": {
   "revision": "bc-corridors-85",
@@ -591,7 +591,7 @@
    "reservedSpaceFindings": 0,
    "review": {
     "href": "./a1000-review.html",
-    "revision": "r13",
+    "revision": "r14",
     "reviewer": "QFL"
    }
   },
@@ -4210,9 +4210,9 @@
  ],
  "structuralAttachments": {
   "passes": true,
-  "loads": 2609,
-  "contacts": 21179,
-  "foundations": 5324,
+  "loads": 2618,
+  "contacts": 21211,
+  "foundations": 5332,
   "failures": 0,
   "method": "Declared mounting points checked against part geometry and assembled transforms, with graph reachability to foundations. Structural strength is not calculated."
  },
@@ -4567,7 +4567,7 @@
     {
      "kind": "page",
      "id": "A-1000",
-     "label": "A-1000 review r13 · QFL",
+     "label": "A-1000 review r14 · QFL",
      "href": "./a1000-review.html"
     },
     {
@@ -4581,7 +4581,7 @@
   {
    "id": "LAY-10",
    "topic": "Model catch-up release 2 (D-MDL-01): new equipment placed by clear-space search; CL-1001 / SL-1001 do not fit A-1000",
-   "status": "Applied — A-1000 layout decision pending",
+   "status": "Ruled by QFL 2026-09-29 (L1) — applied in release 3 (LAY-11)",
    "priority": "high",
    "discipline": "Model management / layout",
    "observation": "Release 2 (bases R2-1–R2-8, approved by QFL 2026-09-28) adds standalone envelopes with nozzle stubs and no routes, built after the pipe supports so the racks do not re-flow, each placed by a clear-space search against every existing part: F-160 (−14.5, −24.5) and T-160 (−14.5, −27.6) south of F-161, P-160A/B beside T-160, HR-601 (66, 7.8) south of the dryer train, and an IF-A2000-CITY battery-limit marker beside CF-2002. Against V228: pipe-support holds, reserved-space conflicts and headroom unchanged, structure passes, walkways clear, no interference. CL-1001 (Ø 6.5 m thickener) and SL-1001 (200 m³ silo) are not placed: A-1000 has no clear space for them at datasheet size even ignoring the retired tags — the nearest clear spots are x ≈ 107 (the future-expansion block kept for A-5400) and (62, −19.5) inside the A-2000 block. F-160 could not go beside T-161, so its R-141 feed and cake transfer need a re-layout. Current model: 273 holds plant-wide.",
@@ -4620,7 +4620,7 @@
     {
      "kind": "page",
      "id": "A-1000",
-     "label": "A-1000 review r13 · QFL",
+     "label": "A-1000 review r14 · QFL",
      "href": "./a1000-review.html"
     },
     {
@@ -4628,6 +4628,65 @@
      "id": "A-160",
      "label": "A-160 review r7 · QFL",
      "href": "./a160-review.html"
+    },
+    {
+     "kind": "page",
+     "id": "A-600",
+     "label": "A-600 review r9 · QFL",
+     "href": "./a600-review.html"
+    },
+    {
+     "kind": "page",
+     "id": "A-2000",
+     "label": "A-2000 review r7 · QFL",
+     "href": "./a2000-review.html"
+    }
+   ]
+  },
+  {
+   "id": "LAY-11",
+   "topic": "Model catch-up release 3 (LAY-10 ruled L1): A-1100, A-5400, CL-1001 and SL-1001 placed",
+   "status": "Applied — tie-ins and floor allocation with the model engineer",
+   "priority": "high",
+   "discipline": "Model management / layout",
+   "observation": "LAY-10 was ruled by QFL on 2026-09-29 (option L1, bases R3-1–R3-9) after a clear-space search of the current model (ground-level parts and walkways, 1 m clearance): A-1000 and A-2000 hold no 9 × 9 m pad even without the 20 retired tags, whose pipework and supports stay; the future-expansion block (x 105–116) and a south-east yard between the south pipe rack and the perimeter road (x 71–119, z −48…−34) are clear. Release 3 adds standalone envelopes (no routes, nozzle stubs marked tie-in deferred, built after the pipe supports): CL-1001 (76.5, −42.5); the A-1100 acid bund 20 × 11 m with T-1101 (Ø 5.5 × 5.4 m), T-1102 (Ø 6.0 × 7.2 m), P-1101A/B and P-1102A/B; PK-1101 as a 14 × 10 m screening envelope (hold K1); A-5400 on a 10 × 18 m curbed pad with H-5400 and its stack, P-5401A/B, V-5401 on the heater structure and T-5401 (hold U8); SL-1001 (110.5, −25). HAZOP inputs (U8): A-5400 is ≈ 27 m from the A-600 edge (DR-601), ≈ 14 m from the A-800 block edge (PY-801 hydrogen off-gas) and ≈ 17 m from the A-1100 bund. Current model: 273 holds plant-wide.",
+   "action": "Model engineer: floor-allocation polygons for the south-east yard and the future-expansion block, tie-ins (thermal-oil mains ≈ 60 m to HX-601 and ≈ 20 m to PK-1101; acid lines on the south rack; the CL-1001 gravity feed from R-1004 with the cascade step check W7; lime to T-1002); rethink the 0.14 MW R-141 heat-up through A-5100 (≈ 135 m). Vendors: PK-1101 (K1) and A-5400 (U8) footprints.",
+   "evidence": [
+    {
+     "kind": "decision",
+     "id": "D-A1000-04",
+     "label": "D-A1000-04 (A-1000, QFL 2026-09-26): Spent-acid concentrator package carried on bases CN1–CN9 as a budget envelope in a new area A-1100: two-stage vacuum concentration of the A-300 filtrate (55 wt …",
+     "href": "./semantic-core.html#area-A-1000"
+    },
+    {
+     "kind": "decision",
+     "id": "D-A1000-06",
+     "label": "D-A1000-06 (A-1000, QFL 2026-09-27): A-1000 phase 2 on bases P2-1–P2-9 (FEED-PE-CAL-035): gravity cascade R-1001 → R-1002 → R-1003 → R-1004 → CL-1001 retires the stage-transfer pumps P-1006 / P-100…",
+     "href": "./semantic-core.html#area-A-1000"
+    },
+    {
+     "kind": "decision",
+     "id": "D-A5000-04",
+     "label": "D-A5000-04 (A-5000, QFL 2026-09-29): A-5400 medium: two QFL rulings of 2026-09-27 disagreed — D-A5000-02 (20 barg steam, 2 × 7 MW, with HR-601 and MVR) and the plant-wide balance stream (thermal oi…",
+     "href": "./semantic-core.html#area-A-5000"
+    },
+    {
+     "kind": "doc",
+     "id": "docs/model-catchup-handoff.md",
+     "label": "docs/model-catchup-handoff.md",
+     "href": "https://github.com/quakfoolee-dotcom/rGO_3D_Plant_Model/blob/main/docs/model-catchup-handoff.md"
+    },
+    {
+     "kind": "doc",
+     "id": "dist/model-catchup.js",
+     "label": "dist/model-catchup.js",
+     "href": "https://github.com/quakfoolee-dotcom/rGO_3D_Plant_Model/blob/main/dist/model-catchup.js"
+    },
+    {
+     "kind": "page",
+     "id": "A-1000",
+     "label": "A-1000 review r14 · QFL",
+     "href": "./a1000-review.html"
     },
     {
      "kind": "page",

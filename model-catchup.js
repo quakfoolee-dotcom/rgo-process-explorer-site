@@ -6,13 +6,31 @@ import {structuralKit} from './structural-kit.js';
 // re-routing, docs/model-catchup-handoff.md). Built after the pipe-support system so existing rack supports do not re-flow. Positions come
 // from a clear-space search against every existing part. CL-1001 and SL-1001 are not placed: A-1000 has no clear space for them at datasheet
 // size (decision pending with QFL).
+// Release 3 (LAY-10 ruled by QFL 2026-09-29, option L1, bases R3-1…R3-9): CL-1001 and the A-1100 set (T-1101 / T-1102 in a common acid
+// bund with P-1101A/B and P-1102A/B, PK-1101) in a new south-east yard between the south pipe rack and the perimeter road (x 71–119,
+// z −48…−34); A-5400 (H-5400, P-5401A/B, V-5401, T-5401) and SL-1001 in the future-expansion block (x 105–116). Every rectangle was checked
+// clear against every ground-level part and walkway with 1 m clearance. PK-1101 and A-5400 are screening envelopes (vendor holds K1 / U8).
 const note=(doc,extra='')=>`Envelope from ${doc} (D-MDL-01 release 2). Standalone — tie-ins deferred to the model engineer. Diameters and heights are model choices; vendor geometry unqualified.${extra}`;
 const eq=(tag,label,areaId,primaryOperation,x,z,extra={})=>({tag,label,x,z,areaId,primaryOperation,designStatus:'proposed',labelY:3,geometryBasis:'D-MDL-01 R2',...extra});
+const note3=(doc,extra='')=>`Envelope from ${doc} (D-MDL-01 release 3, LAY-10 ruling L1). Standalone — tie-ins deferred to the model engineer. Screening size; vendor geometry unqualified.${extra}`;
+const r3=(tag,label,areaId,op,x,z,extra={})=>eq(tag,label,areaId,op,x,z,{geometryBasis:'D-MDL-01 R3',...extra});
 export const CATCHUP_EQUIPMENT={
  652:eq('F-160','Pre-G acid filter · 2.54 m² (FEED-PE-DAT-106)','A-160','fixing',-14.5,-24.5,{radius:.9,bottom:1.4,top:3.4,labelY:4.6,geometryStatus:note('FEED-PE-DAT-106',' Agitated pressure filter; placed south of F-161 (no clear space beside T-161), so the R-141 feed and the cake transfer to T-161 need a re-layout — deferred.')}),
  653:eq('T-160','Recovered-acid receiver · 10 m³ (FEED-PE-DAT-107)','A-160','pregpress',-14.5,-27.6,{radius:1.1,bottom:.26,top:.26+10/(Math.PI*1.06**2),labelY:4.2,geometryStatus:note('FEED-PE-DAT-107')}),
  654:eq('P-160','Recovered-acid transfer pumps A/B · 5 m³/h × 22 m (FEED-PE-DAT-108)','A-160','pregpress',-12.4,-28.6,{labelY:2.1,geometryStatus:note('FEED-PE-DAT-108',' 1 + 1 sealless pumps.')}),
  655:eq('HR-601','Dryer exhaust heat recuperator · 2.7 MW (FEED-PE-DAT-141)','A-600','a600',66,7.8,{labelY:6.9,geometryStatus:note('FEED-PE-DAT-141',' Air-to-air envelope for ≈ 408,000 m³/h exhaust; ducting to the F-601 exhaust and the BL-601 intake deferred.')}),
+ 657:r3('CL-1001','HDS thickener · Ø 6.5 m (FEED-PE-DAT-118)','A-1000','wwseparate',76.5,-42.5,{radius:3.25,bottom:.26,top:3.8,labelY:6,geometryStatus:note3('FEED-PE-DAT-118',' South-east yard, south of A-1000 across the south pipe rack; the gravity feed from R-1004 (≈ 20–30 m) needs the cascade step check (W7).')}),
+ 658:r3('T-1101','Concentrator feed tank · 125 m³ (FEED-PE-DAT-110)','A-1000','wwtreat',88,-41.5,{radius:2.75,bottom:.26,top:.26+5.4,labelY:7.2,geometryStatus:note3('FEED-PE-DAT-110',' A-1100 acid bund, south-east yard (Sheet 2 geometry Ø 5.5 × 5.4 m).')}),
+ 659:r3('T-1102','Recovered acid tank · 200 m³ (FEED-PE-DAT-111)','A-1000','wwtreat',96.5,-41.5,{radius:3,bottom:.26,top:.26+7.2,labelY:9,geometryStatus:note3('FEED-PE-DAT-111',' A-1100 acid bund, south-east yard (Sheet 2 geometry Ø 6.0 × 7.2 m).')}),
+ 660:r3('P-1101','Concentrator feed pumps A/B (FEED-PE-DAT-112)','A-1000','wwtreat',101.2,-44.8,{labelY:2.1,geometryStatus:note3('FEED-PE-DAT-112',' 1 + 1 inside the A-1100 bund.')}),
+ 661:r3('P-1102','Recovered acid return pumps A/B (FEED-PE-DAT-113)','A-1000','wwtreat',101.2,-39.6,{labelY:2.1,geometryStatus:note3('FEED-PE-DAT-113',' 1 + 1 inside the A-1100 bund; return to T-201 / T-102 on the south rack.')}),
+ 662:r3('PK-1101','Spent-acid concentrator package · screening 14 × 10 m (FEED-PE-DAT-109)','A-1000','wwtreat',112,-42,{labelY:19,geometryStatus:note3('FEED-PE-DAT-109',' Footprint, height and evaporator arrangement are vendor data (hold K1, REP-039 M5).')}),
+ 663:r3('A-5400','Thermal-oil heater package · 14 MW · screening 10 × 18 m (FEED-PE-DAT-140)','A-5000','a5000',111,-11,{labelY:3,geometryStatus:note3('FEED-PE-DAT-140',' Future-expansion block; ≈ 27 m from the A-600 edge (DR-601), ≈ 14 m from the A-800 block edge and ≈ 17 m from the A-1100 bund — HAZOP inputs (U8), not a spacing ruling.')}),
+ 664:r3('H-5400','Thermal-oil heater (gas-fired) · 14 MW rated (FEED-PE-DAT-140)','A-5000','a5000',108.8,-13,{labelY:6.4,geometryStatus:note3('FEED-PE-DAT-140',' Horizontal-coil heater with a ≈ 20 m stack; vendor geometry (U8).')}),
+ 665:r3('P-5401','Thermal-oil circulation pumps A/B · 900 m³/h (FEED-PE-DAT-140)','A-5000','a5000',114.2,-13.5,{labelY:2.1,geometryStatus:note3('FEED-PE-DAT-140',' 1 + 1 beside the heater.')}),
+ 666:r3('V-5401','Thermal-oil expansion vessel (FEED-PE-DAT-140)','A-5000','a5000',108.8,-18.2,{radius:.9,bottom:5.6,top:8.4,labelY:9.4,geometryStatus:note3('FEED-PE-DAT-140',' Inert-gas blanketed, on the heater structure at the loop high point; vendor sizes (U8).')}),
+ 667:r3('T-5401','Thermal-oil drain / storage tank (FEED-PE-DAT-140)','A-5000','a5000',113.8,-5.2,{radius:1.6,bottom:.26,top:.26+3.7,labelY:5.2,geometryStatus:note3('FEED-PE-DAT-140',' Full-inventory drain tank on a curbed pad (≈ 30 m³ screening); vendor sizes (U8).')}),
+ 668:r3('SL-1001','Hydrated lime silo · 200 m³ (FEED-PE-DAT-127)','A-1000','wwtreat',110.5,-25,{radius:2.5,bottom:3,top:3+200/(Math.PI*2.5**2),labelY:14.4,geometryStatus:note3('FEED-PE-DAT-127',' Future-expansion block; tanker stands on the adjacent access road; lime to T-1002 in A-1000 (≈ 50 m) is a tie-in item.')}),
  656:eq('IF-A2000-CITY','Municipal make-up battery limit (D-A2000-03)','A-2000','rodistribute',103.4,-2,{designStatus:'interface',labelY:2.2,geometryStatus:'Battery-limit marker only (D-MDL-01 release 2); municipal supply pressure, hardness and connection are site data.'}),
 };
 export const CATCHUP_IDS=Object.keys(CATCHUP_EQUIPMENT).map(Number);
@@ -45,5 +63,41 @@ export function buildCatchup(h){
  // IF-A2000-CITY — battery-limit marker.
  const ci=EQUIPMENT[656];setContext(656,ci.label);
  const post=base(b('IF-A2000-CITY battery-limit post','frame',[.12,1.6,.12],[ci.x,.8,ci.z],'steel'),[ci.x,0,ci.z]);const plate=b('IF-A2000-CITY battery-limit plate','valve',[.5,.3,.04],[ci.x,1.45,ci.z],'blue');s.join(post,plate,[ci.x,1.45,ci.z],'IF-A2000-CITY plate / post');
+ // ---- Release 3 (LAY-10 ruling L1).
+ // CL-1001 — thickener with bridge and drive.
+ const cl=vessel(657);const bridge=b('CL-1001 bridge','frame',[cl.r*2,.35,.9],[cl.x,cl.y1+.08+.175,cl.z],'steel');s.join(cl.roof,bridge,[cl.x,cl.y1+.08,cl.z],'CL-1001 bridge / wall');
+ const drive=c('CL-1001 rake drive','pump',.45,.7,[cl.x,cl.y1+.43+.35,cl.z],'blue');s.join(bridge,drive,[cl.x,cl.y1+.43,cl.z],'CL-1001 drive / bridge');s.load(drive,'CL-1001 drive');
+ stub('CL-1001 feedwell inlet from R-1004',[cl.x-cl.r,cl.y1-.4,cl.z],[-1,0,0],.12);stub('CL-1001 underflow to P-1009',[cl.x,.35,cl.z+cl.r],[0,0,1],.08);stub('CL-1001 overflow',[cl.x+cl.r,cl.y1-.3,cl.z],[1,0,0],.12);
+ // A-1100 acid bund with T-1101 / T-1102 and the pumps.
+ setContext(658,EQUIPMENT[658].label);
+ const bund=base(b('A-1100 acid bund floor','frame',[20,.2,11],[93,.1,-41.5],'dark'),[93,0,-41.5]);
+ for(const [lab,size,pos] of [['north',[20,1.2,.25],[93,.8,-36.125]],['south',[20,1.2,.25],[93,.8,-46.875]],['west',[.25,1.2,11],[83.125,.8,-41.5]],['east',[.25,1.2,11],[102.875,.8,-41.5]]]){const w=b('A-1100 bund wall '+lab,'frame',size,pos,'dark');s.join(bund,w,[pos[0],.2,pos[2]],'A-1100 bund wall '+lab+' / floor');}
+ const t1=vessel(658);stub('T-1101 filtrate / recovered-acid inlet',[t1.x,t1.y1+.08,t1.z],[0,1,0],.05);stub('T-1101 outlet to P-1101',[t1.x+t1.r,.6,t1.z],[1,0,0],.05);
+ const t2=vessel(659);stub('T-1102 product inlet from PK-1101',[t2.x,t2.y1+.08,t2.z],[0,1,0],.05);stub('T-1102 outlet to P-1102',[t2.x+t2.r,.6,t2.z],[1,0,0],.05);
+ for(const id of [660,661]){const e=EQUIPMENT[id];setContext(id,e.label);for(const [i,dz] of [0,1.3].entries()){const p=k.transferPump(e.x,e.tag+'AB'[i],e.label,{z:e.z+dz});stub(e.tag+'AB'[i]+' discharge',p.outlet,[0,1,0],.04);}}
+ // PK-1101 — screening envelope: slab, package enclosure and evaporator column.
+ const pk=EQUIPMENT[662];setContext(662,pk.label);
+ const pslab=base(b('PK-1101 foundation slab','frame',[14,.2,10],[pk.x,.1,pk.z],'dark'),[pk.x,0,pk.z]);
+ const encl=b('PK-1101 package envelope (screening)','shell',[13,10,9],[pk.x,.2+5,pk.z],'steel');s.join(pslab,encl,[pk.x,.2,pk.z],'PK-1101 envelope / slab');s.load(encl,'PK-1101 envelope');
+ const col=c('PK-1101 stage 2 evaporator (screening)','shell',1.1,8,[pk.x+3.5,10.2+4,pk.z-2],'steel');s.join(encl,col,[pk.x+3.5,10.2,pk.z-2],'PK-1101 evaporator / envelope');
+ for(const [lab,dx,dz] of [['feed from P-1101',-6.5,-3],['product to T-1102',-6.5,-1],['thermal oil supply / return',-6.5,1.5],['condensate',-6.5,3.5]])stub('PK-1101 '+lab,[pk.x+dx,1.4,pk.z+dz],[-1,0,0],.08);
+ // A-5400 — package pad with curb, H-5400 heater and stack, P-5401A/B, V-5401 on the heater structure, T-5401 drain tank.
+ const ap=EQUIPMENT[663];setContext(663,ap.label);
+ const apad=base(b('A-5400 package pad','frame',[10,.2,18],[ap.x,.1,ap.z],'dark'),[ap.x,0,ap.z]);
+ for(const [lab,size,pos] of [['north',[10,.3,.2],[ap.x,.35,ap.z+8.9]],['south',[10,.3,.2],[ap.x,.35,ap.z-8.9]],['west',[.2,.3,18],[ap.x-4.9,.35,ap.z]],['east',[.2,.3,18],[ap.x+4.9,.35,ap.z]]]){const w=b('A-5400 spill curb '+lab,'frame',size,pos,'dark');s.join(apad,w,[pos[0],.2,pos[2]],'A-5400 curb '+lab+' / pad');}
+ const he=EQUIPMENT[664];setContext(664,he.label);
+ const heater=b('H-5400 heater casing','shell',[3.6,4.6,10],[he.x,.2+2.3,he.z],'steel');s.join(apad,heater,[he.x,.2,he.z],'H-5400 casing / pad');s.load(heater,'H-5400 casing');
+ const stack=c('H-5400 stack','shell',.7,15.2,[he.x,4.8+7.6,he.z+4.2],'steel');s.join(heater,stack,[he.x,4.8,he.z+4.2],'H-5400 stack / casing');
+ const burner=c('H-5400 burner','pump',.6,1.2,[he.x,2.4,he.z-5.6],'blue');s.join(heater,burner,[he.x,2.4,he.z-5],'H-5400 burner / casing');
+ stub('H-5400 oil outlet 280 °C',[he.x+1.8,3.8,he.z-3],[1,0,0],.18);stub('H-5400 oil inlet 250 °C',[he.x+1.8,1.2,he.z-3],[1,0,0],.18);stub('H-5400 natural gas',[he.x-1.8,1.5,he.z-4.5],[-1,0,0],.06);
+ const pp=EQUIPMENT[665];setContext(665,pp.label);for(const [i,dz] of [0,2].entries()){const p=k.transferPump(pp.x,'P-5401'+'AB'[i],pp.label,{z:pp.z+dz});stub('P-5401'+'AB'[i]+' discharge',p.outlet,[0,1,0],.12);}
+ const ve=EQUIPMENT[666];setContext(666,ve.label);
+ const frame=b('V-5401 support frame','frame',[2.2,ve.bottom-.2,2.2],[ve.x,.2+(ve.bottom-.2)/2,ve.z],'steel');s.join(apad,frame,[ve.x,.2,ve.z],'V-5401 frame / pad');
+ const vb=band('V-5401 shell','shell',ve.radius,ve.radius-.04,ve.top-ve.bottom,[ve.x,(ve.bottom+ve.top)/2,ve.z],'steel');s.join(frame,vb,[ve.x,ve.bottom,ve.z],'V-5401 shell / frame');s.load(vb,'V-5401 shell');
+ stub('V-5401 inert-gas blanket',[ve.x,ve.top+.05,ve.z],[0,1,0],.04);stub('V-5401 expansion line',[ve.x+ve.radius,ve.bottom+.45,ve.z],[1,0,0],.1);
+ const t5=vessel(667);stub('T-5401 drain inlet',[t5.x,t5.y1+.08,t5.z],[0,1,0],.1);stub('T-5401 refill outlet',[t5.x-t5.r,.6,t5.z],[-1,0,0],.08);
+ // SL-1001 — silo on a skirt.
+ const sl=vessel(668);
+ stub('SL-1001 pneumatic fill',[sl.x,sl.y1+.08,sl.z],[0,1,0],.05);stub('SL-1001 lime discharge to T-1002',[sl.x+sl.r,sl.y0+.4,sl.z],[1,0,0],.1);
  return {partIds:parts.slice(first).map(p=>p.id),equipment:CATCHUP_IDS,tieIns:'deferred'};
 }
