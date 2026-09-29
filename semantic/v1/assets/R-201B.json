@@ -25,7 +25,8 @@
     "designPressureExternal": "Full vacuum",
     "workingVolumeM3": 22.6,
     "totalVolumeM3": 32,
-    "fillRatio": 0.71
+    "fillRatio": 0.71,
+    "impellerType": "Anchor, glass-lined (D_i/D_v ≈ 0.95), unbaffled — FEED base case"
   },
   "operatingEnvelope": {
     "reactionTemperatureTargetC": 47.5,
@@ -65,9 +66,9 @@
   "dataLayer": {
     "area": "A-200",
     "source": "data/semantic/A-200",
-    "approvedRows": 22,
+    "approvedRows": 23,
     "heldRows": 0,
-    "pendingRows": 125,
+    "pendingRows": 127,
     "identityHold": null,
     "applied": "2026-09-29",
     "baseline": {

@@ -471,6 +471,22 @@
       "note": "22.6 / 32 — headspace for splashing, agitation, off-gas | D-A200-08: Batch on DBM V2.0: 550 kg Pre-G × PFD recipe (D-A200-02) = 42,895 kg, 22.6 m³ at 1.9 kg/L; 32 m³ standard glass-lined vessel at 71 % fill. Approves the batch quantities and vessel volume of DAT-003 V1.2 only — the R-201 thermal items (peak duty, jacket, adequacy, reaction heat) stay withdrawn under D-A200-01 pending calorimetry, rheology and wall coefficient (REP-035). Bases L1–L7 approved in review by QFL 2026-09-25 (FEED-PE-CAL-030; FEED-PE-DAT-003 V1.2).",
       "reviewer": "QFL",
       "reviewDate": "2026-09-25"
+    },
+    {
+      "valueId": "PV-A-200-1224",
+      "property": "design.impellerType",
+      "value": "Anchor, glass-lined (D_i/D_v ≈ 0.95), unbaffled — FEED base case",
+      "unit": null,
+      "source": "FEED-PE-DAT-003",
+      "revision": "V1.3",
+      "location": "V1.3 'R-201 Datasheet'!row 135 (item 7.2)",
+      "status": "approved",
+      "confidence": "documented (datasheet unsigned)",
+      "tier": "A",
+      "conflictGroup": "CF-impellerType-R-201C",
+      "note": "V1.3 per FEED-PE-CFD-001 V2.2 C-01/C-03/C-10 (LST-008 flag F-02): the retreat curve is not acceptable for this service at ~50 Pa·s (43 % of the batch stagnant; KMnO₄ not drawn down). Alternate: double helical ribbon (alloy vessel), flights to ≈ 0.95·H_L, only if DR-1 confirms ≥ ~50 Pa·s AND the MOC  | D-A200-09: R-201 primary impeller is a single glass-lined anchor, unbaffled (D_i/D_v ≈ 0.95), per FEED-PE-DAT-003 V1.3 (register V11.8): one of the close-clearance options in FEED-PE-NTE-008, which is superseded for this property; the retreat-curve impeller with beaver-tail baffle of V1.1 / V1.2 no longer applies. Approved by QFL 2026-09-29.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-29"
     }
   ]
 }
