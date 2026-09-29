@@ -23,7 +23,7 @@ export function mountWorkspaceNavigation({root=document,onPanel,onArea,onResize=
   $('inspection-active-title').textContent=TOOL_LABELS[name]||'';
   $('inspection-floating-note').hidden=!floating.has(name);$('inspection-reopen').hidden=!floating.has(name);
   $('inspection-scope-controls').hidden=!['routes','clashes'].includes(name)||toolsVisible;
-  $('nav-area-help').textContent=workspace==='safety'?'Safety routes use the work position in their panel.':'Filters browsing lists. Model visibility stays separate.';
+  $('nav-area-help').textContent=workspace==='safety'?'Routes use the work position in their panel.':'Filters lists only, not the model view.';
   for(const b of buttons)b.classList.toggle('selected-tool',b.dataset.tool===name);
   const accessButton=$('access-maintenance-open');if(accessButton)accessButton.setAttribute('aria-pressed',String(name==='access'));
   $('sidebar-content').scrollTop=scroll[name]||0;syncLaunches();
