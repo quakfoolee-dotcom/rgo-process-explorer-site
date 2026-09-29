@@ -1,0 +1,35 @@
+/* Compact interface density. Sizes only; no layout or behaviour changes.
+   html[data-ui-size] = s | m | l (default m). Touch devices keep the 44px
+   targets from the base styles (pointer:coarse is excluded below). */
+:root{--u:1;--f:13px;--side-w:300px}
+html[data-ui-size="s"]{--u:.88;--f:12px;--side-w:270px}
+html[data-ui-size="l"]{--u:1.3;--f:14px;--side-w:360px}
+@media (pointer:fine){
+ header,html header{min-height:calc(56px*var(--u));height:auto;padding:calc(6px*var(--u)) calc(20px*var(--u));gap:6px}
+ header .brand{font-size:calc(17px*var(--u));gap:10px;letter-spacing:1px}
+ header .brand-icon{font-size:calc(26px*var(--u))}
+ header button{min-height:calc(30px*var(--u));padding:4px 11px;font-size:var(--f)}
+ .workspace,.inspection-mode .workspace{grid-template-columns:var(--side-w) minmax(0,1fr)}
+ .view-dock .dock-group button{min-height:calc(34px*var(--u));padding:calc(4px*var(--u)) 8px;font-size:var(--f);gap:5px}
+ #stage-toolbar{padding:6px 12px 8px}
+ #stage-toolbar button,#view-settings-open{min-height:calc(34px*var(--u))}
+ #workspace-tabs button{min-height:calc(34px*var(--u));font-size:var(--f);padding:4px}
+ .browse-context select{min-height:calc(36px*var(--u));font-size:var(--f)}
+ .task-list button{min-height:calc(38px*var(--u));padding:8px 10px;font-size:calc(var(--f) + 1px);line-height:1.35}
+ .explore-view-buttons button{min-height:calc(34px*var(--u));font-size:var(--f)}
+ .stage-title{line-height:1.2}
+ .stage-title #projection-label{font-size:calc(11px*var(--u))}
+ .stage-title #stage-context{font-size:var(--f)}
+ .stage .views{padding:3px}
+ .stage .views button{min-height:calc(30px*var(--u));padding:3px 11px;font-size:var(--f)}
+ .sidebar-head{padding:calc(9px*var(--u)) 12px calc(8px*var(--u));gap:calc(8px*var(--u))}
+ .sidebar-identity{gap:8px}
+ .sidebar-identity button{min-height:calc(30px*var(--u));padding:3px 10px;font-size:var(--f)}
+ #workspace-tabs{padding:2px}
+ .browse-context{gap:calc(4px*var(--u))}
+ .browse-context label{font-size:calc(var(--f) - 1px);margin:0}
+ .browse-context .small-note,.browse-context p{font-size:calc(var(--f) - 1.5px);line-height:1.3;margin:0}
+ .sidebar-content{padding:calc(12px*var(--u)) 14px}
+ .sidebar-footer{padding:calc(8px*var(--u)) 12px}
+ .sidebar-footer button{min-height:calc(32px*var(--u));padding:4px 10px;font-size:var(--f)}
+}
