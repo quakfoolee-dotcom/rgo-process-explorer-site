@@ -46,7 +46,10 @@ html[data-ui-size="l"]{--u:1.3;--f:14px;--side-w:360px}
  .task-list h3{font-size:calc(var(--f) - 1px);margin:calc(12px*var(--u)) 0 2px}
  .process-io-summary{font-size:var(--f);margin:calc(10px*var(--u)) 0}
  #inspection-active .back-link,.sidebar-content .back-link{font-size:var(--f);min-height:calc(30px*var(--u));padding:4px 0}
- #workspace-tabs button{font-size:calc(var(--f) - .5px);padding:4px 2px}
+ #workspace-tabs button{font-size:calc(var(--f) - .5px);padding:4px 4px;white-space:nowrap}
+}
+@media (pointer:fine) and (min-width:391px){
+ #workspace-tabs{grid-template-columns:repeat(4,minmax(max-content,1fr))}
 }
 /* Focus mode (see focus-mode.js) */
 #focus-bar{display:none}
