@@ -1,7 +1,7 @@
 {
- "version": "0e94877",
+ "version": "3970e67",
  "date": "2026-09-29",
- "generated": "2026-09-29T05:40:01.421Z",
+ "generated": "2026-09-29T07:44:10.252Z",
  "revision": "r4",
  "reviewer": {
   "initials": "QFL",
@@ -539,7 +539,7 @@
    "reservedSpaceFindings": 0,
    "review": {
     "href": "./a600-review.html",
-    "revision": "r7",
+    "revision": "r8",
     "reviewer": "QFL"
    }
   },
@@ -591,7 +591,7 @@
    "reservedSpaceFindings": 0,
    "review": {
     "href": "./a1000-review.html",
-    "revision": "r11",
+    "revision": "r12",
     "reviewer": "QFL"
    }
   },
@@ -4321,7 +4321,7 @@
     {
      "kind": "finding",
      "id": "A600-06",
-     "label": "A600-06 · Access, maintenance and fire points — Model access provided — qualification open (A-600 review r7 · QFL)",
+     "label": "A600-06 · Access, maintenance and fire points — Model access provided — qualification open (A-600 review r8 · QFL)",
      "href": "./a600-review.html#A600-06"
     },
     {
@@ -4420,7 +4420,7 @@
     {
      "kind": "finding",
      "id": "A600-01",
-     "label": "A600-01 · Dryer readiness — twelve REP-016 holds — NOT READY for vendor inquiry (A-600 review r7 · QFL)",
+     "label": "A600-01 · Dryer readiness — twelve REP-016 holds — NOT READY for vendor inquiry (A-600 review r8 · QFL)",
      "href": "./a600-review.html#A600-01"
     },
     {
@@ -4449,7 +4449,7 @@
     {
      "kind": "finding",
      "id": "A600-06",
-     "label": "A600-06 · Access, maintenance and fire points — Model access provided — qualification open (A-600 review r7 · QFL)",
+     "label": "A600-06 · Access, maintenance and fire points — Model access provided — qualification open (A-600 review r8 · QFL)",
      "href": "./a600-review.html#A600-06"
     },
     {
@@ -4567,7 +4567,7 @@
     {
      "kind": "page",
      "id": "A-1000",
-     "label": "A-1000 review r11 · QFL",
+     "label": "A-1000 review r12 · QFL",
      "href": "./a1000-review.html"
     },
     {
@@ -4620,7 +4620,7 @@
     {
      "kind": "page",
      "id": "A-1000",
-     "label": "A-1000 review r11 · QFL",
+     "label": "A-1000 review r12 · QFL",
      "href": "./a1000-review.html"
     },
     {
@@ -4632,7 +4632,7 @@
     {
      "kind": "page",
      "id": "A-600",
-     "label": "A-600 review r7 · QFL",
+     "label": "A-600 review r8 · QFL",
      "href": "./a600-review.html"
     },
     {
