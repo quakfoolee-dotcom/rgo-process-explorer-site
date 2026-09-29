@@ -2,7 +2,7 @@ import * as T from './vendor/three.module.js';
 import {buildAreaAllocations} from './area-allocation.js';
 import {inRect,feetInches} from './floor-geometry.js';
 import {placeAreaLabels,rectanglesOverlap,overlayVisibility} from './area-label-layout.js';
-export function createAreaOverlay({model,viewport,getCamera,getState,hitAt,frameArea,onSelect=()=>{}}){
+export function createAreaOverlay({model,viewport,getCamera,getState,hitAt,frameArea,onSelect=()=>{},onClear=()=>{}}){
  const allocation=buildAreaAllocations(model);model.floorAllocation=allocation;
  const state={boundaries:true,labels:false,allDimensions:false,selected:null,hover:null};
  const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');svg.id='area-overlay';svg.setAttribute('aria-hidden','true');viewport.append(svg);
@@ -28,7 +28,7 @@ export function createAreaOverlay({model,viewport,getCamera,getState,hitAt,frame
   if(candidate===id)return;cancelHover();candidate=id;
   hoverTimer=setTimeout(()=>{if(candidate===id&&!pointerDown&&performance.now()>=movingUntil&&visibility().interaction){state.hover=id;draw(true);}},320);
  }
- function inspect(id){cancelHover();suppressHover=id;if(id)onSelect(id);state.selected=id||null;select.value=id||'';detail.replaceChildren();const a=current();
+ function inspect(id){cancelHover();suppressHover=id;if(id)onSelect(id);else onClear();state.selected=id||null;select.value=id||'';detail.replaceChildren();const a=current();
   if(a){for(const line of[text(a),`${a.dimensions.rectangular?'Rectangular allocation':'Irregular allocation; gross area uses the actual polygon, not the enclosing rectangle'} · ${a.status}`,`Shared-space deduction: ${areaText(a.sharedExcludedM2)}.`, `Net area after shared-space deduction: ${areaText(a.netM2)}.`,a.platformBasis,`Linked remote retention: ${a.retention.map(c=>c.tag).join(', ')||'None'}.`,...(a.satelliteCapture.length?[`Separate capture locations: ${[...new Set(a.satelliteCapture.map(c=>c.tag))].join(', ')}; excluded from this main floor allocation.`]:[]),a.basis]){const p=document.createElement('p');p.textContent=line;p.className='small-note';p.style.whiteSpace='pre-line';detail.append(p);}card.open=false;card.scrollIntoView({block:'nearest'});}else detail.textContent='Pause over a floor marking, or select an area.';
   draw(true);
  }
