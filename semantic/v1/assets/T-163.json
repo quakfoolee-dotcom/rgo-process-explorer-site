@@ -51,7 +51,7 @@
     "source": "data/semantic/A-160",
     "approvedRows": 0,
     "heldRows": 0,
-    "pendingRows": 52,
+    "pendingRows": 54,
     "identityHold": null,
     "applied": "2026-09-29",
     "baseline": {},
@@ -62,6 +62,6 @@
     "modelFunction": "Pre-G filtrate holding tank",
     "name": "Pre-G Filtrate Tank",
     "sourceDocId": "FEED-PE-DAT-026",
-    "revision": "V1.1"
+    "revision": "V1.2"
   }
 }

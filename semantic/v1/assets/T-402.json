@@ -36,7 +36,7 @@
     "source": "data/semantic/A-400",
     "approvedRows": 5,
     "heldRows": 0,
-    "pendingRows": 53,
+    "pendingRows": 55,
     "identityHold": null,
     "applied": "2026-09-29",
     "baseline": {
@@ -55,6 +55,6 @@
     "modelFunction": "Diafiltration / washing tank",
     "name": "Re-slurry / Diafiltration Tank",
     "sourceDocId": "FEED-PE-DAT-053",
-    "revision": "V1.1"
+    "revision": "V1.2"
   }
 }

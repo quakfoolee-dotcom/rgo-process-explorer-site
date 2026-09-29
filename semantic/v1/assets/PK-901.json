@@ -44,7 +44,7 @@
     "source": "data/semantic/A-900",
     "approvedRows": 0,
     "heldRows": 3,
-    "pendingRows": 17,
+    "pendingRows": 19,
     "identityHold": {
       "reason": "Same tag, different equipment: model PK-901 is a technology-neutral collection envelope, not the register cartridge filler; register approvals (inerting basis, product specification) held until FEED-PFD-0900 identities are reconciled with the V162 pelletization line",
       "reviewer": "QFL",

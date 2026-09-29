@@ -34,7 +34,7 @@
     "source": "data/semantic/A-600",
     "approvedRows": 1,
     "heldRows": 0,
-    "pendingRows": 31,
+    "pendingRows": 33,
     "identityHold": null,
     "applied": "2026-09-29",
     "baseline": {
@@ -52,6 +52,6 @@
     "modelFunction": "Aqueous dryer-feed buffer",
     "name": "TLGO Receiving Tank",
     "sourceDocId": "FEED-PE-DAT-063",
-    "revision": "V1.1"
+    "revision": "V1.2"
   }
 }

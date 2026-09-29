@@ -92,7 +92,7 @@
     "source": "data/semantic/A-600",
     "approvedRows": 7,
     "heldRows": 0,
-    "pendingRows": 129,
+    "pendingRows": 131,
     "identityHold": null,
     "applied": "2026-09-29",
     "baseline": {
@@ -116,6 +116,6 @@
     "modelFunction": "Aqueous GO spray dryer",
     "name": "Spray Drying Package",
     "sourceDocId": "FEED-PE-DAT-065",
-    "revision": "V1.2"
+    "revision": "V1.3"
   }
 }

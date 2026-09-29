@@ -44,7 +44,7 @@
     "source": "data/semantic/A-900",
     "approvedRows": 0,
     "heldRows": 1,
-    "pendingRows": 17,
+    "pendingRows": 19,
     "identityHold": {
       "reason": "Function similar but the model has no T-901 upstream and no RC-901 / M-901 downstream; identity held until the PFD-0900 train is reconciled",
       "reviewer": "QFL",

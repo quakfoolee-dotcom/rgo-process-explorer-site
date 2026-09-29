@@ -59,7 +59,7 @@
     "source": "data/semantic/A-1000",
     "approvedRows": 2,
     "heldRows": 0,
-    "pendingRows": 38,
+    "pendingRows": 40,
     "identityHold": null,
     "applied": "2026-09-29",
     "baseline": {

@@ -33,7 +33,7 @@
     "source": "data/semantic/A-400",
     "approvedRows": 1,
     "heldRows": 0,
-    "pendingRows": 30,
+    "pendingRows": 32,
     "identityHold": null,
     "applied": "2026-09-29",
     "baseline": {
@@ -51,6 +51,6 @@
     "modelFunction": "Permeate collection tank",
     "name": "Permeate Equalisation Tank",
     "sourceDocId": "FEED-PE-DAT-055",
-    "revision": "V1.0"
+    "revision": "V1.1"
   }
 }

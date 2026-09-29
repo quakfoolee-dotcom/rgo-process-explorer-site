@@ -44,7 +44,7 @@
     "source": "data/semantic/A-900",
     "approvedRows": 0,
     "heldRows": 1,
-    "pendingRows": 17,
+    "pendingRows": 19,
     "identityHold": {
       "reason": "Model DC-901 serves PG-901 only and has no FN-901; register DC-901 is the enclosed-handling extraction for the whole area",
       "reviewer": "QFL",

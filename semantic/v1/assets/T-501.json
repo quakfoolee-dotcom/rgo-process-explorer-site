@@ -61,7 +61,7 @@
     "source": "data/semantic/A-500",
     "approvedRows": 4,
     "heldRows": 0,
-    "pendingRows": 34,
+    "pendingRows": 36,
     "identityHold": null,
     "applied": "2026-09-29",
     "baseline": {
@@ -80,6 +80,6 @@
     "modelFunction": "Sonication feed / conditioning tank",
     "name": "Sonication Feed / Conditioning Tank",
     "sourceDocId": "FEED-PE-DAT-058",
-    "revision": "V1.0"
+    "revision": "V1.1"
   }
 }

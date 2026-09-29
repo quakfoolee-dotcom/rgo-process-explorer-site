@@ -34,7 +34,7 @@
     "source": "data/semantic/A-3000",
     "approvedRows": 1,
     "heldRows": 0,
-    "pendingRows": 29,
+    "pendingRows": 31,
     "identityHold": null,
     "applied": "2026-09-29",
     "baseline": {
@@ -52,6 +52,6 @@
     "modelFunction": "Scrubber liquor inventory",
     "name": "Scrubber Liquor Tank",
     "sourceDocId": "FEED-PE-DAT-031",
-    "revision": "V1.0"
+    "revision": "V1.1"
   }
 }

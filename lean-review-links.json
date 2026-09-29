@@ -1,5 +1,5 @@
 {
- "version": "5043899",
+ "version": "e2e911a",
  "date": "2026-09-29",
  "items": {
   "L01": {
@@ -28,7 +28,7 @@
      "id": "A160-05",
      "area": "A-160",
      "href": "./a160-review.html#A160-05",
-     "revision": "r6",
+     "revision": "r7",
      "reviewer": "QFL",
      "topic": "Register and model reconciliation, containment and interfaces",
      "status": "Register reconciliation required"
@@ -37,7 +37,7 @@
      "id": "A200-06",
      "area": "A-200",
      "href": "./a200-review.html#A200-06",
-     "revision": "r5",
+     "revision": "r6",
      "reviewer": "QFL",
      "topic": "Drainage and containment",
      "status": "Receiving and retention basis open"
@@ -46,7 +46,7 @@
      "id": "A300-07",
      "area": "A-300",
      "href": "./a300-review.html#A300-07",
-     "revision": "r6",
+     "revision": "r7",
      "reviewer": "QFL",
      "topic": "Register and model reconciliation",
      "status": "Register reconciliation required"
@@ -64,7 +64,7 @@
      "id": "A600-06",
      "area": "A-600",
      "href": "./a600-review.html#A600-06",
-     "revision": "r8",
+     "revision": "r9",
      "reviewer": "QFL",
      "topic": "Access, maintenance and fire points",
      "status": "Model access provided — qualification open"
@@ -73,7 +73,7 @@
      "id": "A800-07",
      "area": "A-800",
      "href": "./a800-review.html#A800-07",
-     "revision": "r4",
+     "revision": "r5",
      "reviewer": "QFL",
      "topic": "Access, reactive inventory and fire points",
      "status": "Model access provided — qualification open"
@@ -141,7 +141,7 @@
      "id": "A600-05",
      "area": "A-600",
      "href": "./a600-review.html#A600-05",
-     "revision": "r8",
+     "revision": "r9",
      "reviewer": "QFL",
      "topic": "Register and model reconciliation",
      "status": "Register reconciliation required"
@@ -150,7 +150,7 @@
      "id": "A160-05",
      "area": "A-160",
      "href": "./a160-review.html#A160-05",
-     "revision": "r6",
+     "revision": "r7",
      "reviewer": "QFL",
      "topic": "Register and model reconciliation, containment and interfaces",
      "status": "Register reconciliation required"
@@ -168,7 +168,7 @@
      "id": "A3000-05",
      "area": "A-3000",
      "href": "./a3000-review.html#A3000-05",
-     "revision": "r4",
+     "revision": "r5",
      "reviewer": "QFL",
      "topic": "Assembled wet train — connections, air gap and liquor handling",
      "status": "Geometry checks pass — six interfaces unresolved"
@@ -177,7 +177,7 @@
      "id": "A3000-02",
      "area": "A-3000",
      "href": "./a3000-review.html#A3000-02",
-     "revision": "r4",
+     "revision": "r5",
      "reviewer": "QFL",
      "topic": "S1 wet-vent source register and sizing basis",
      "status": "Basis approved — no source register, nothing sized"
@@ -218,7 +218,7 @@
      "id": "A600-06",
      "area": "A-600",
      "href": "./a600-review.html#A600-06",
-     "revision": "r8",
+     "revision": "r9",
      "reviewer": "QFL",
      "topic": "Access, maintenance and fire points",
      "status": "Model access provided — qualification open"
@@ -227,7 +227,7 @@
      "id": "A800-07",
      "area": "A-800",
      "href": "./a800-review.html#A800-07",
-     "revision": "r4",
+     "revision": "r5",
      "reviewer": "QFL",
      "topic": "Access, reactive inventory and fire points",
      "status": "Model access provided — qualification open"
@@ -236,7 +236,7 @@
      "id": "A700-08",
      "area": "A-700",
      "href": "./a700-review.html#A700-08",
-     "revision": "r3",
+     "revision": "r4",
      "reviewer": "QFL",
      "topic": "Datasheet completeness",
      "status": "55 blank items across four unsigned datasheets"
@@ -262,7 +262,7 @@
      "id": "A500-01",
      "area": "A-500",
      "href": "./a500-review.html#A500-01",
-     "revision": "r4",
+     "revision": "r5",
      "reviewer": "QFL",
      "topic": "Sonication acceptance criterion and dose window",
      "status": "Not defined — gating item for A-500"
@@ -271,7 +271,7 @@
      "id": "A600-01",
      "area": "A-600",
      "href": "./a600-review.html#A600-01",
-     "revision": "r8",
+     "revision": "r9",
      "reviewer": "QFL",
      "topic": "Dryer readiness — twelve REP-016 holds",
      "status": "NOT READY for vendor inquiry"
@@ -280,7 +280,7 @@
      "id": "A700-02",
      "area": "A-700",
      "href": "./a700-review.html#A700-02",
-     "revision": "r3",
+     "revision": "r4",
      "reviewer": "QFL",
      "topic": "Feed-rate basis",
      "status": "Basis withdrawn — four rates on record"
@@ -289,7 +289,7 @@
      "id": "A800-01",
      "area": "A-800",
      "href": "./a800-review.html#A800-01",
-     "revision": "r4",
+     "revision": "r5",
      "reviewer": "QFL",
      "topic": "KBH₄ : rGO ratio and feed-rate basis",
      "status": "Ratio ruled 1 : 1 — rates withdrawn"
@@ -367,7 +367,7 @@
      "id": "A500-03",
      "area": "A-500",
      "href": "./a500-review.html#A500-03",
-     "revision": "r4",
+     "revision": "r5",
      "reviewer": "QFL",
      "topic": "Solids concentration and commercial design basis",
      "status": "PFD basis approved — MDL-001 basis withdrawn"
@@ -376,7 +376,7 @@
      "id": "A300-01",
      "area": "A-300",
      "href": "./a300-review.html#A300-01",
-     "revision": "r6",
+     "revision": "r7",
      "reviewer": "QFL",
      "topic": "Fixing tank T-303 sizing basis",
      "status": "Sizing basis withdrawn — re-issue required"
@@ -385,7 +385,7 @@
      "id": "A300-02",
      "area": "A-300",
      "href": "./a300-review.html#A300-02",
-     "revision": "r6",
+     "revision": "r7",
      "reviewer": "QFL",
      "topic": "Acid-wash vessels T-305 — count and marination hold point",
      "status": "Hold point — vessel count is not a design decision"
@@ -394,7 +394,7 @@
      "id": "A160-01",
      "area": "A-160",
      "href": "./a160-review.html#A160-01",
-     "revision": "r6",
+     "revision": "r7",
      "reviewer": "QFL",
      "topic": "Dilution basis — Option B now, Option C later",
      "status": "Design concept approved — sizing withdrawn"
@@ -403,7 +403,7 @@
      "id": "A200-08",
      "area": "A-200",
      "href": "./a200-review.html#A200-08",
-     "revision": "r5",
+     "revision": "r6",
      "reviewer": "QFL",
      "topic": "Vessel sizing basis — the cascading decision",
      "status": "Sizing withdrawn — CAL-011 V8 required"
@@ -421,7 +421,7 @@
      "id": "A2000-01",
      "area": "A-2000",
      "href": "./a2000-review.html#A2000-01",
-     "revision": "r6",
+     "revision": "r7",
      "reviewer": "QFL",
      "topic": "Feed and product basis",
      "status": "No basis approved — follows the A-1000 case"
@@ -485,7 +485,7 @@
      "id": "A800-03",
      "area": "A-800",
      "href": "./a800-review.html#A800-03",
-     "revision": "r4",
+     "revision": "r5",
      "reviewer": "QFL",
      "topic": "Inert atmosphere, hydrolysis hazard and hazardous area",
      "status": "Approved from DAT-008 — HAC to confirm"
@@ -494,7 +494,7 @@
      "id": "A600-02",
      "area": "A-600",
      "href": "./a600-review.html#A600-02",
-     "revision": "r8",
+     "revision": "r9",
      "reviewer": "QFL",
      "topic": "Drying envelope and feed solids",
      "status": "Targets approved — subject to HOLD-4 / HOLD-1"

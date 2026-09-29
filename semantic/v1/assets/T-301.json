@@ -31,7 +31,7 @@
     "source": "data/semantic/A-300",
     "approvedRows": 1,
     "heldRows": 0,
-    "pendingRows": 28,
+    "pendingRows": 30,
     "identityHold": null,
     "applied": "2026-09-29",
     "baseline": {
@@ -49,6 +49,6 @@
     "modelFunction": "Hydrogen peroxide supply",
     "name": "H₂O₂ Supply Tank",
     "sourceDocId": "FEED-PE-DAT-100",
-    "revision": "V1.0"
+    "revision": "V1.1"
   }
 }

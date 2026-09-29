@@ -34,7 +34,7 @@
     "source": "data/semantic/A-3000",
     "approvedRows": 0,
     "heldRows": 0,
-    "pendingRows": 12,
+    "pendingRows": 15,
     "identityHold": null,
     "applied": "2026-09-29",
     "baseline": {},
@@ -45,6 +45,6 @@
     "modelFunction": "Sealed acidic condensate receiver",
     "name": "Acidic Condensate Receiver",
     "sourceDocId": "FEED-PE-DAT-035",
-    "revision": "V1.0"
+    "revision": "V1.1"
   }
 }

@@ -45,7 +45,7 @@
     "source": "data/semantic/A-300",
     "approvedRows": 10,
     "heldRows": 0,
-    "pendingRows": 84,
+    "pendingRows": 86,
     "identityHold": null,
     "applied": "2026-09-29",
     "baseline": {
@@ -69,6 +69,6 @@
     "modelFunction": "Quench / fixing tank",
     "name": "Quench Tank",
     "sourceDocId": "FEED-PE-DAT-097",
-    "revision": "V1.1"
+    "revision": "V1.2"
   }
 }

@@ -1,8 +1,8 @@
 {
  "area": "A-5000",
- "version": "3970e67",
+ "version": "4720eba",
  "date": "2026-09-29",
- "revision": "r9",
+ "revision": "r10",
  "reviewer": {
   "initials": "QFL",
   "date": "2026-09-29"
@@ -10,14 +10,14 @@
  "lead": "The engineering content of this page — the thermal projections, the PFD temperature register, the fluid-separation and consumer tables and the heat balance — is the model engineer’s and is unchanged. This section adds the data-layer record for A-5000: what is approved, what is in conflict, what is withdrawn and what is still missing, on the same basis as the other fifteen area reviews.",
  "semanticCoreVersion": "1.19.0-foundation",
  "counts": {
-  "assets": 47,
-  "values": 574,
+  "assets": 52,
+  "values": 618,
   "approved": 17,
-  "superseded": 37,
+  "superseded": 57,
   "conflictsOpen": 10,
   "conflictsClosed": 14,
   "decisions": 10,
-  "gapsOpen": 14,
+  "gapsOpen": 28,
   "gapsClosed": 14,
   "holds": 0,
   "documents": 24
@@ -795,6 +795,146 @@
  },
  "superseded": [
   {
+   "valueId": "PV-A-5000-0001",
+   "assetId": "V-5110",
+   "property": "identity.esrName",
+   "value": "Expansion Tank",
+   "source": "FEED-PE-LST-001 V5.1"
+  },
+  {
+   "valueId": "PV-A-5000-0002",
+   "assetId": "V-5110",
+   "property": "processFunction",
+   "value": "Provides thermal expansion volume and pressure stabilization for the closed hot-water loop.",
+   "source": "FEED-PE-LST-001 V5.1"
+  },
+  {
+   "valueId": "PV-A-5000-0003",
+   "assetId": "A-5100",
+   "property": "identity.esrName",
+   "value": "Hot Water Generation & Circulation System",
+   "source": "FEED-PE-LST-001 V5.1"
+  },
+  {
+   "valueId": "PV-A-5000-0004",
+   "assetId": "A-5100",
+   "property": "processFunction",
+   "value": "Generates and conditions plant hot water before circulation to process users.",
+   "source": "FEED-PE-LST-001 V5.1"
+  },
+  {
+   "valueId": "PV-A-5000-0005",
+   "assetId": "A-5110A",
+   "property": "identity.esrName",
+   "value": "Hot Water Circulation Pumps (Duty/Standby)",
+   "source": "FEED-PE-LST-001 V5.1"
+  },
+  {
+   "valueId": "PV-A-5000-0006",
+   "assetId": "A-5110A",
+   "property": "processFunction",
+   "value": "Duty/standby pumps circulating hot water to the plant supply header.",
+   "source": "FEED-PE-LST-001 V5.1"
+  },
+  {
+   "valueId": "PV-A-5000-0007",
+   "assetId": "A-5110B",
+   "property": "identity.esrName",
+   "value": "Hot Water Circulation Pumps (Duty/Standby)",
+   "source": "FEED-PE-LST-001 V5.1"
+  },
+  {
+   "valueId": "PV-A-5000-0008",
+   "assetId": "A-5110B",
+   "property": "processFunction",
+   "value": "Duty/standby pumps circulating hot water to the plant supply header.",
+   "source": "FEED-PE-LST-001 V5.1"
+  },
+  {
+   "valueId": "PV-A-5000-0009",
+   "assetId": "A-5200",
+   "property": "identity.esrName",
+   "value": "Cooling Water System (Cooling Tower)",
+   "source": "FEED-PE-LST-001 V5.1"
+  },
+  {
+   "valueId": "PV-A-5000-0010",
+   "assetId": "A-5200",
+   "property": "processFunction",
+   "value": "Removes process heat via the cooling-water/cooling-tower system.",
+   "source": "FEED-PE-LST-001 V5.1"
+  },
+  {
+   "valueId": "PV-A-5000-0011",
+   "assetId": "A-5210A",
+   "property": "identity.esrName",
+   "value": "Cooling Water Circulation Pumps (Duty/Standby)",
+   "source": "FEED-PE-LST-001 V5.1"
+  },
+  {
+   "valueId": "PV-A-5000-0012",
+   "assetId": "A-5210A",
+   "property": "processFunction",
+   "value": "Duty/standby pumps circulating cooling water to plant users.",
+   "source": "FEED-PE-LST-001 V5.1"
+  },
+  {
+   "valueId": "PV-A-5000-0013",
+   "assetId": "A-5210B",
+   "property": "identity.esrName",
+   "value": "Cooling Water Circulation Pumps (Duty/Standby)",
+   "source": "FEED-PE-LST-001 V5.1"
+  },
+  {
+   "valueId": "PV-A-5000-0014",
+   "assetId": "A-5210B",
+   "property": "processFunction",
+   "value": "Duty/standby pumps circulating cooling water to plant users.",
+   "source": "FEED-PE-LST-001 V5.1"
+  },
+  {
+   "valueId": "PV-A-5000-0015",
+   "assetId": "A-5300",
+   "property": "identity.esrName",
+   "value": "Chilled Water Generation & Circulation System",
+   "source": "FEED-PE-LST-001 V5.1"
+  },
+  {
+   "valueId": "PV-A-5000-0016",
+   "assetId": "A-5300",
+   "property": "processFunction",
+   "value": "Generates chilled water for lower-temperature process cooling duties.",
+   "source": "FEED-PE-LST-001 V5.1"
+  },
+  {
+   "valueId": "PV-A-5000-0017",
+   "assetId": "A-5310A",
+   "property": "identity.esrName",
+   "value": "Chilled Water Circulation Pumps (Duty/Standby)",
+   "source": "FEED-PE-LST-001 V5.1"
+  },
+  {
+   "valueId": "PV-A-5000-0018",
+   "assetId": "A-5310A",
+   "property": "processFunction",
+   "value": "Duty/standby pumps circulating chilled water to plant users.",
+   "source": "FEED-PE-LST-001 V5.1"
+  },
+  {
+   "valueId": "PV-A-5000-0019",
+   "assetId": "A-5310B",
+   "property": "identity.esrName",
+   "value": "Chilled Water Circulation Pumps (Duty/Standby)",
+   "source": "FEED-PE-LST-001 V5.1"
+  },
+  {
+   "valueId": "PV-A-5000-0020",
+   "assetId": "A-5310B",
+   "property": "processFunction",
+   "value": "Duty/standby pumps circulating chilled water to plant users.",
+   "source": "FEED-PE-LST-001 V5.1"
+  },
+  {
    "valueId": "PV-A-5000-0063",
    "assetId": "A-5100",
    "property": "design.materialOfConstruction",
@@ -1241,6 +1381,132 @@
     "note": "no source row harvested"
    },
    {
+    "gapId": "GAP-A-5000-MV-dd6b6d",
+    "assetId": "H-5400",
+    "kind": "missing value",
+    "subject": "design.totalVolumeM3",
+    "requiredSource": "Equipment datasheet",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-946073",
+    "assetId": "H-5400",
+    "kind": "missing value",
+    "subject": "design.materialOfConstruction",
+    "requiredSource": "Equipment datasheet",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-6adc39",
+    "assetId": "P-5401A",
+    "kind": "missing value",
+    "subject": "design.pumpType",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-50d9da",
+    "assetId": "P-5401A",
+    "kind": "missing value",
+    "subject": "design.ratedFlowM3h",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-86ba72",
+    "assetId": "P-5401A",
+    "kind": "missing value",
+    "subject": "design.differentialHead",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-ac340a",
+    "assetId": "P-5401A",
+    "kind": "missing value",
+    "subject": "design.materialOfConstruction",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-19fb1f",
+    "assetId": "P-5401B",
+    "kind": "missing value",
+    "subject": "design.pumpType",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-94029b",
+    "assetId": "P-5401B",
+    "kind": "missing value",
+    "subject": "design.ratedFlowM3h",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-ae1111",
+    "assetId": "P-5401B",
+    "kind": "missing value",
+    "subject": "design.differentialHead",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-6d0108",
+    "assetId": "P-5401B",
+    "kind": "missing value",
+    "subject": "design.materialOfConstruction",
+    "requiredSource": "Pump datasheet / hydraulic calculation",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-e9536a",
+    "assetId": "T-5401",
+    "kind": "missing value",
+    "subject": "design.totalVolumeM3",
+    "requiredSource": "Equipment datasheet",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-6c114b",
+    "assetId": "T-5401",
+    "kind": "missing value",
+    "subject": "design.designPressure",
+    "requiredSource": "Equipment datasheet",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-74425c",
+    "assetId": "T-5401",
+    "kind": "missing value",
+    "subject": "design.designTemperature",
+    "requiredSource": "Equipment datasheet",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
+    "gapId": "GAP-A-5000-MV-8da975",
+    "assetId": "T-5401",
+    "kind": "missing value",
+    "subject": "design.materialOfConstruction",
+    "requiredSource": "Equipment datasheet",
+    "status": "open",
+    "note": "no source row harvested"
+   },
+   {
     "gapId": "GAP-A-5000-DF-a52501",
     "assetId": "A-5100|A-5200|A-5300",
     "kind": "decision follow-up",
@@ -1426,11 +1692,49 @@
  },
  "gapsByAsset": [
   {
+   "assetId": "P-5401A",
+   "gaps": 4,
+   "subjects": [
+    "design.pumpType",
+    "design.ratedFlowM3h",
+    "design.differentialHead",
+    "design.materialOfConstruction"
+   ]
+  },
+  {
+   "assetId": "P-5401B",
+   "gaps": 4,
+   "subjects": [
+    "design.pumpType",
+    "design.ratedFlowM3h",
+    "design.differentialHead",
+    "design.materialOfConstruction"
+   ]
+  },
+  {
+   "assetId": "T-5401",
+   "gaps": 4,
+   "subjects": [
+    "design.totalVolumeM3",
+    "design.designPressure",
+    "design.designTemperature",
+    "design.materialOfConstruction"
+   ]
+  },
+  {
    "assetId": "A-5400",
    "gaps": 2,
    "subjects": [
     "identity.designConcept",
     "identity.designConcept"
+   ]
+  },
+  {
+   "assetId": "H-5400",
+   "gaps": 2,
+   "subjects": [
+    "design.totalVolumeM3",
+    "design.materialOfConstruction"
    ]
   },
   {
@@ -1803,7 +2107,7 @@
    "modelEquipmentId": "800",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 37,
+   "values": 39,
    "approved": 3,
    "gaps": 0
   },
@@ -1815,7 +2119,7 @@
    "modelEquipmentId": "801",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 66,
+   "values": 68,
    "approved": 1,
    "gaps": 0
   },
@@ -1827,7 +2131,7 @@
    "modelEquipmentId": "802",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 66,
+   "values": 68,
    "approved": 1,
    "gaps": 0
   },
@@ -1839,7 +2143,7 @@
    "modelEquipmentId": "803",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 20,
+   "values": 22,
    "approved": 1,
    "gaps": 0
   },
@@ -1863,7 +2167,7 @@
    "modelEquipmentId": "810",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 39,
+   "values": 41,
    "approved": 3,
    "gaps": 0
   },
@@ -1875,7 +2179,7 @@
    "modelEquipmentId": "811",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 66,
+   "values": 68,
    "approved": 1,
    "gaps": 0
   },
@@ -1887,7 +2191,7 @@
    "modelEquipmentId": "812",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 66,
+   "values": 68,
    "approved": 1,
    "gaps": 0
   },
@@ -1899,7 +2203,7 @@
    "modelEquipmentId": "813",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 2,
+   "values": 5,
    "approved": 0,
    "gaps": 0
   },
@@ -1923,7 +2227,7 @@
    "modelEquipmentId": "820",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 38,
+   "values": 40,
    "approved": 3,
    "gaps": 0
   },
@@ -1935,7 +2239,7 @@
    "modelEquipmentId": "821",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 66,
+   "values": 68,
    "approved": 1,
    "gaps": 0
   },
@@ -1947,7 +2251,7 @@
    "modelEquipmentId": "822",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 66,
+   "values": 68,
    "approved": 1,
    "gaps": 0
   },
@@ -1959,7 +2263,7 @@
    "modelEquipmentId": "823",
    "bound": true,
    "identityStatus": "model tag; equipment-register reconciliation open",
-   "values": 2,
+   "values": 5,
    "approved": 0,
    "gaps": 0
   },
@@ -2055,28 +2359,88 @@
    "modelEquipmentId": null,
    "bound": false,
    "identityStatus": "candidate-not-in-model",
-   "values": 38,
+   "values": 41,
    "approved": 1,
    "gaps": 2
+  },
+  {
+   "assetId": "H-5400",
+   "name": "Thermal-Oil Heater (gas-fired)",
+   "assetClassId": "Hopper",
+   "system": null,
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "register-tag-not-in-model",
+   "values": 3,
+   "approved": 0,
+   "gaps": 2
+  },
+  {
+   "assetId": "P-5401A",
+   "name": "Thermal-Oil Circulation Pumps",
+   "assetClassId": "Pump",
+   "system": null,
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "register-tag-not-in-model",
+   "values": 3,
+   "approved": 0,
+   "gaps": 4
+  },
+  {
+   "assetId": "P-5401B",
+   "name": "Thermal-Oil Circulation Pumps",
+   "assetClassId": "Pump",
+   "system": null,
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "register-tag-not-in-model",
+   "values": 3,
+   "approved": 0,
+   "gaps": 4
+  },
+  {
+   "assetId": "V-5401",
+   "name": "Thermal-Oil Expansion Vessel",
+   "assetClassId": "Unclassified",
+   "system": null,
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "register-tag-not-in-model",
+   "values": 3,
+   "approved": 0,
+   "gaps": 0
+  },
+  {
+   "assetId": "T-5401",
+   "name": "Thermal-Oil Drain / Storage Tank",
+   "assetClassId": "Tank",
+   "system": null,
+   "modelEquipmentId": null,
+   "bound": false,
+   "identityStatus": "register-tag-not-in-model",
+   "values": 3,
+   "approved": 0,
+   "gaps": 4
   }
  ],
  "binding": {
-  "assets": 47,
+  "assets": 52,
   "bound": 23,
-  "unbound": 24,
+  "unbound": 29,
   "interfaces": 23,
-  "withValues": 15
+  "withValues": 20
  },
  "documents": [
   {
    "documentId": "FEED-PE-LST-001",
    "title": "Equipment and Stream Register",
-   "revision": "V5.1",
+   "revision": "V5.2",
    "docType": "LST",
    "control": "controlled",
    "tier": "A",
-   "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-LST-001_Equipment-and-Stream-Register_V5.1.xlsx",
-   "valueRows": "20"
+   "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-LST-001_Equipment-and-Stream-Register_V5.2.xlsx",
+   "valueRows": "64"
   },
   {
    "documentId": "FEED-PE-PFD-001",
@@ -2310,7 +2674,7 @@
   }
  ],
  "layout": {
-  "version": "89388ed",
+  "version": "28c5c74",
   "date": "2026-09-29",
   "revision": "r4",
   "reviewer": "QFL",
@@ -2333,7 +2697,7 @@
    "status": "Design concept approved — MoC FEED-PE-MOC-002 raised, pending review and decision; model and PFD not yet updated",
    "priority": "high",
    "discipline": "Process / utilities",
-   "observation": "D-A5000-01 approves FEED-PE-REP-043 F-51: a fourth loop — ≥ 200 °C steam or thermal oil — is required for HX-601, the acid concentrator and R-141, and the exotherm control belongs on chilled water. The model and FEED-PFD-5000 still show three water circuits (HW 80–95 °C, CW 25–30 °C, CHW 5–7 °C), so the page sections below describe the as-drawn arrangement, not the approved concept. The change is now recorded as FEED-PE-MOC-002 V1.0 (raised 2026-09-22 against FEED-PE-PFD-001 V5.1.1 sheet PFD-5000; Parts A–C complete, review and decision open), so nothing in it is approved yet. 17 approved values are applied on 15 assets.",
+   "observation": "D-A5000-01 approves FEED-PE-REP-043 F-51: a fourth loop — ≥ 200 °C steam or thermal oil — is required for HX-601, the acid concentrator and R-141, and the exotherm control belongs on chilled water. The model and FEED-PFD-5000 still show three water circuits (HW 80–95 °C, CW 25–30 °C, CHW 5–7 °C), so the page sections below describe the as-drawn arrangement, not the approved concept. The change is now recorded as FEED-PE-MOC-002 V1.0 (raised 2026-09-22 against FEED-PE-PFD-001 V5.1.1 sheet PFD-5000; Parts A–C complete, review and decision open), so nothing in it is approved yet. 17 approved values are applied on 20 assets.",
    "action": "Take FEED-PE-MOC-002 through review (Part D, with the HAZOP / What-If of the new loop and the chilled-water exotherm service) and decision (Part F); then revise PFD-5000 and the user sheets to add the ≥ 200 °C loop (A-5400 placeholder) and move the R-201 / T-303 exotherm control to chilled water, and re-issue the thermal balance as REP-043 V1.1. Until Part F is signed no heating duty above 95 °C may be shown as served.",
    "evidence": [
     {
@@ -2404,13 +2768,13 @@
     {
      "kind": "finding",
      "id": "A200-05",
-     "label": "A200-05 · Top drive, impeller and maintenance — Impeller type in conflict — disassembly basis open (A-200 review r5 · QFL)",
+     "label": "A200-05 · Top drive, impeller and maintenance — Impeller type in conflict — disassembly basis open (A-200 review r6 · QFL)",
      "href": "./a200-review.html#A200-05"
     },
     {
      "kind": "page",
      "id": "A-200",
-     "label": "A-200 review r5 · QFL",
+     "label": "A-200 review r6 · QFL",
      "href": "./a200-review.html"
     }
    ]
@@ -2451,7 +2815,7 @@
     {
      "kind": "asset",
      "id": "A-5110A",
-     "label": "A-5110A · Hot-Water Circulation Pumps (Duty / Standby) — A (Pump) — 66 rows, 1 approved, 0 open gaps",
+     "label": "A-5110A · Hot-Water Circulation Pumps (Duty / Standby) — A (Pump) — 68 rows, 1 approved, 0 open gaps",
      "href": "#a5000-assets"
     },
     {
@@ -2492,13 +2856,13 @@
     {
      "kind": "finding",
      "id": "A300-01",
-     "label": "A300-01 · Fixing tank T-303 sizing basis — Sizing basis withdrawn — re-issue required (A-300 review r6 · QFL)",
+     "label": "A300-01 · Fixing tank T-303 sizing basis — Sizing basis withdrawn — re-issue required (A-300 review r7 · QFL)",
      "href": "./a300-review.html#A300-01"
     },
     {
      "kind": "page",
      "id": "A-300",
-     "label": "A-300 review r6 · QFL",
+     "label": "A-300 review r7 · QFL",
      "href": "./a300-review.html"
     }
    ]
@@ -2544,7 +2908,7 @@
    "status": "Ruled — TCU train and buffers not yet covered",
    "priority": "medium",
    "discipline": "Materials",
-   "observation": "10 assets carry the plant-wide ruling (D-A5000-MOC, FEED-PE-MAT-002 V1.1: carbon steel with inhibitor and oxygen control in closed loops, 316L where required). Still uncovered in this area: TCU-201, TCU-303, HD-5100, V-5210, HD-5200, V-5310, HD-5300, TCU-141, TCU-1001, CP-5000, TK-5111, TK-5211, TK-5311, A-5400.",
+   "observation": "10 assets carry the plant-wide ruling (D-A5000-MOC, FEED-PE-MAT-002 V1.1: carbon steel with inhibitor and oxygen control in closed loops, 316L where required). Still uncovered in this area: TCU-201, TCU-303, HD-5100, V-5210, HD-5200, V-5310, HD-5300, TCU-141, TCU-1001, CP-5000, TK-5111, TK-5211, TK-5311, A-5400, H-5400, P-5401A, P-5401B, V-5401, T-5401.",
    "action": "Extend the MAT-002 ruling to the secondary exchangers, the buffer tanks and the headers, and state the tower-side water treatment separately — the open evaporative circuit is not a closed-loop duty.",
    "evidence": [
     {
@@ -2579,7 +2943,7 @@
    "status": "Identity conflict recorded — no register value applied to the model packages",
    "priority": "medium",
    "discipline": "Model management",
-   "observation": "47 A-5000 semantic records exist; 23 are bound to model equipment and 24 are unbound, of which 23 are IF-* boundary records. GAP-A-5000-ID-c1cac2 records the naming conflict: the register packages (A-5100, A-5110A/B, A-5200, A-5210A/B, A-5300, A-5310A/B) do not appear under those tags on the model side, where the A-5000 records are TCU jacket-service interfaces and IF-* boundaries.",
+   "observation": "52 A-5000 semantic records exist; 23 are bound to model equipment and 29 are unbound, of which 23 are IF-* boundary records. GAP-A-5000-ID-c1cac2 records the naming conflict: the register packages (A-5100, A-5110A/B, A-5200, A-5210A/B, A-5300, A-5310A/B) do not appear under those tags on the model side, where the A-5000 records are TCU jacket-service interfaces and IF-* boundaries.",
    "action": "Reconcile the package tags between FEED-PE-LST-001 and the model register in the next harvest, so approved package values can be applied to the model items instead of stopping at the interface records.",
    "evidence": [
     {
@@ -2591,7 +2955,7 @@
     {
      "kind": "asset",
      "id": "A-5100",
-     "label": "A-5100 · Hot-Water Generation Package (Package) — 37 rows, 3 approved, 0 open gaps",
+     "label": "A-5100 · Hot-Water Generation Package (Package) — 39 rows, 3 approved, 0 open gaps",
      "href": "#a5000-assets"
     },
     {
@@ -2715,13 +3079,13 @@
     {
      "kind": "asset",
      "id": "A-5400",
-     "label": "A-5400 · Missing ≥ 200 °C steam / thermal-oil loop (REP-043 F-51: HX-601 2.9–15 MW, acid concentrator 1.5–4.4 MW, R-141 fast heat-up) (UtilityPackage) — 38 rows, 1 approved, 2 open gaps",
+     "label": "A-5400 · Missing ≥ 200 °C steam / thermal-oil loop (REP-043 F-51: HX-601 2.9–15 MW, acid concentrator 1.5–4.4 MW, R-141 fast heat-up) (UtilityPackage) — 41 rows, 1 approved, 2 open gaps",
      "href": "#a5000-assets"
     },
     {
      "kind": "asset",
      "id": "A-5300",
-     "label": "A-5300 · Chilled-Water Package (Package) — 38 rows, 3 approved, 0 open gaps",
+     "label": "A-5300 · Chilled-Water Package (Package) — 40 rows, 3 approved, 0 open gaps",
      "href": "#a5000-assets"
     },
     {
@@ -2733,7 +3097,7 @@
     {
      "kind": "finding",
      "id": "A600-08",
-     "label": "A600-08 · A-600 equipment datasheets — T-601, P-601, DR-601 package (design envelope), T-602 — Preliminary datasheets issued — DR-601 package a budget envelope, D-A600-01 open (A-600 review r8 · QFL)",
+     "label": "A600-08 · A-600 equipment datasheets — T-601, P-601, DR-601 package (design envelope), T-602 — Preliminary datasheets issued — DR-601 package a budget envelope, D-A600-01 open (A-600 review r9 · QFL)",
      "href": "./a600-review.html#A600-08"
     }
    ]
@@ -2756,13 +3120,13 @@
     {
      "kind": "asset",
      "id": "A-5400",
-     "label": "A-5400 · Missing ≥ 200 °C steam / thermal-oil loop (REP-043 F-51: HX-601 2.9–15 MW, acid concentrator 1.5–4.4 MW, R-141 fast heat-up) (UtilityPackage) — 38 rows, 1 approved, 2 open gaps",
+     "label": "A-5400 · Missing ≥ 200 °C steam / thermal-oil loop (REP-043 F-51: HX-601 2.9–15 MW, acid concentrator 1.5–4.4 MW, R-141 fast heat-up) (UtilityPackage) — 41 rows, 1 approved, 2 open gaps",
      "href": "#a5000-assets"
     },
     {
      "kind": "asset",
      "id": "A-5200",
-     "label": "A-5200 · Cooling-Water Package (Package) — 39 rows, 3 approved, 0 open gaps",
+     "label": "A-5200 · Cooling-Water Package (Package) — 41 rows, 3 approved, 0 open gaps",
      "href": "#a5000-assets"
     },
     {
@@ -2774,7 +3138,7 @@
     {
      "kind": "finding",
      "id": "A600-08",
-     "label": "A600-08 · A-600 equipment datasheets — T-601, P-601, DR-601 package (design envelope), T-602 — Preliminary datasheets issued — DR-601 package a budget envelope, D-A600-01 open (A-600 review r8 · QFL)",
+     "label": "A600-08 · A-600 equipment datasheets — T-601, P-601, DR-601 package (design envelope), T-602 — Preliminary datasheets issued — DR-601 package a budget envelope, D-A600-01 open (A-600 review r9 · QFL)",
      "href": "./a600-review.html#A600-08"
     }
    ]
@@ -2839,13 +3203,13 @@
     {
      "kind": "asset",
      "id": "A-5400",
-     "label": "A-5400 · Missing ≥ 200 °C steam / thermal-oil loop (REP-043 F-51: HX-601 2.9–15 MW, acid concentrator 1.5–4.4 MW, R-141 fast heat-up) (UtilityPackage) — 38 rows, 1 approved, 2 open gaps",
+     "label": "A-5400 · Missing ≥ 200 °C steam / thermal-oil loop (REP-043 F-51: HX-601 2.9–15 MW, acid concentrator 1.5–4.4 MW, R-141 fast heat-up) (UtilityPackage) — 41 rows, 1 approved, 2 open gaps",
      "href": "#a5000-assets"
     },
     {
      "kind": "finding",
      "id": "A600-08",
-     "label": "A600-08 · A-600 equipment datasheets — T-601, P-601, DR-601 package (design envelope), T-602 — Preliminary datasheets issued — DR-601 package a budget envelope, D-A600-01 open (A-600 review r8 · QFL)",
+     "label": "A600-08 · A-600 equipment datasheets — T-601, P-601, DR-601 package (design envelope), T-602 — Preliminary datasheets issued — DR-601 package a budget envelope, D-A600-01 open (A-600 review r9 · QFL)",
      "href": "./a600-review.html#A600-08"
     }
    ]
@@ -2898,19 +3262,19 @@
     {
      "kind": "asset",
      "id": "A-5100",
-     "label": "A-5100 · Hot-Water Generation Package (Package) — 37 rows, 3 approved, 0 open gaps",
+     "label": "A-5100 · Hot-Water Generation Package (Package) — 39 rows, 3 approved, 0 open gaps",
      "href": "#a5000-assets"
     },
     {
      "kind": "asset",
      "id": "A-5200",
-     "label": "A-5200 · Cooling-Water Package (Package) — 39 rows, 3 approved, 0 open gaps",
+     "label": "A-5200 · Cooling-Water Package (Package) — 41 rows, 3 approved, 0 open gaps",
      "href": "#a5000-assets"
     },
     {
      "kind": "asset",
      "id": "A-5300",
-     "label": "A-5300 · Chilled-Water Package (Package) — 38 rows, 3 approved, 0 open gaps",
+     "label": "A-5300 · Chilled-Water Package (Package) — 40 rows, 3 approved, 0 open gaps",
      "href": "#a5000-assets"
     }
    ]
@@ -2981,19 +3345,84 @@
     {
      "kind": "asset",
      "id": "A-5400",
-     "label": "A-5400 · Missing ≥ 200 °C steam / thermal-oil loop (REP-043 F-51: HX-601 2.9–15 MW, acid concentrator 1.5–4.4 MW, R-141 fast heat-up) (UtilityPackage) — 38 rows, 1 approved, 2 open gaps",
+     "label": "A-5400 · Missing ≥ 200 °C steam / thermal-oil loop (REP-043 F-51: HX-601 2.9–15 MW, acid concentrator 1.5–4.4 MW, R-141 fast heat-up) (UtilityPackage) — 41 rows, 1 approved, 2 open gaps",
      "href": "#a5000-assets"
     },
     {
      "kind": "asset",
      "id": "A-5200",
-     "label": "A-5200 · Cooling-Water Package (Package) — 39 rows, 3 approved, 0 open gaps",
+     "label": "A-5200 · Cooling-Water Package (Package) — 41 rows, 3 approved, 0 open gaps",
      "href": "#a5000-assets"
     },
     {
      "kind": "asset",
      "id": "A-5300",
-     "label": "A-5300 · Chilled-Water Package (Package) — 38 rows, 3 approved, 0 open gaps",
+     "label": "A-5300 · Chilled-Water Package (Package) — 40 rows, 3 approved, 0 open gaps",
+     "href": "#a5000-assets"
+    }
+   ]
+  },
+  {
+   "id": "A5000-14",
+   "topic": "A-5400 thermal-oil tags and loop expansion vessels registered (LST-001 V5.2)",
+   "status": "Register revised — PFD MoC pending",
+   "priority": "medium",
+   "discipline": "Process / document control",
+   "observation": "FEED-PE-LST-001 V5.2 (register V12.5; bases T1–T9 approved in review by QFL 2026-09-29) catches the register up with the issued datasheets: 42 new tags (status “New V5.2” — not on PFD V5.1.1, connections as text, PFD MoC pending, FLG-016), duty / standby units lettered per datasheet, 16 retired tags kept and marked, C-301 / P-303 re-typed. The data layer reads the archived V5.1 first (existing valueIds unchanged) and appends V5.2 last; V5.2 supersedes the V5.1 register name / function rows in full and replaces the V5.1 stream rows; identity.esrStatus records New / Retired. A-5000: A-5400 (package, 14 MW rated) with H-5400 heater, P-5401 A/B circulation pumps, V-5401 expansion vessel and T-5401 drain tank — the tags DAT-140 V1.1 proposed (T3) — and the V-5210 / V-5310 loop expansion vessels (DAT-082) are registered. The sub-tags have no datasheet of their own (vendor sizes, DAT-140 HOLD U8), so their core design values show as open gaps.",
+   "action": "PFD-5000 MoC (LST-001 FLG-016); MOC-002 Part F; thermal-oil vendor data for H-5400 / P-5401 / V-5401 / T-5401.",
+   "evidence": [
+    {
+     "kind": "decision",
+     "id": "D-A5000-04",
+     "label": "D-A5000-04 (QFL 2026-09-29, FEED-PE-NTE-014): A-5400 medium: two QFL rulings of 2026-09-27 disagreed — D-A5000-02 (20 barg steam, 2 × 7 MW, with HR-601 and MVR) and the plant-wide balance stream (…",
+     "href": "#a5000-decisions"
+    },
+    {
+     "kind": "document",
+     "id": "FEED-PE-LST-001",
+     "label": "FEED-PE-LST-001 V5.2 · Equipment and Stream Register (controlled)",
+     "href": "#a5000-documents"
+    },
+    {
+     "kind": "document",
+     "id": "FEED-PE-DAT-140",
+     "label": "FEED-PE-DAT-140 V1.1 · A-5400 Thermal-Oil Heater Package Datasheet (controlled (preliminary - budget enquiry))",
+     "href": "#a5000-documents"
+    },
+    {
+     "kind": "value",
+     "id": "PV-A-5000-0603",
+     "label": "PV-A-5000-0603 · A-5400 identity.esrStatus = New V5.2 — not on PFD V5.1.1 (PFD MoC pending) (FEED-PE-LST-001)",
+     "href": "#a5000-approved"
+    },
+    {
+     "kind": "value",
+     "id": "PV-A-5000-0606",
+     "label": "PV-A-5000-0606 · H-5400 identity.esrStatus = New V5.2 — not on PFD V5.1.1 (PFD MoC pending) (FEED-PE-LST-001)",
+     "href": "#a5000-approved"
+    },
+    {
+     "kind": "value",
+     "id": "PV-A-5000-0609",
+     "label": "PV-A-5000-0609 · P-5401A identity.esrStatus = New V5.2 — not on PFD V5.1.1 (PFD MoC pending) (FEED-PE-LST-001)",
+     "href": "#a5000-approved"
+    },
+    {
+     "kind": "value",
+     "id": "PV-A-5000-0597",
+     "label": "PV-A-5000-0597 · V-5210 identity.esrStatus = New V5.2 — not on PFD V5.1.1 (PFD MoC pending) (FEED-PE-LST-001)",
+     "href": "#a5000-approved"
+    },
+    {
+     "kind": "asset",
+     "id": "A-5400",
+     "label": "A-5400 · Missing ≥ 200 °C steam / thermal-oil loop (REP-043 F-51: HX-601 2.9–15 MW, acid concentrator 1.5–4.4 MW, R-141 fast heat-up) (UtilityPackage) — 41 rows, 1 approved, 2 open gaps",
+     "href": "#a5000-assets"
+    },
+    {
+     "kind": "asset",
+     "id": "H-5400",
+     "label": "H-5400 · Thermal-Oil Heater (gas-fired) (Hopper) — 3 rows, 0 approved, 2 open gaps",
      "href": "#a5000-assets"
     }
    ]

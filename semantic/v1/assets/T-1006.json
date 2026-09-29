@@ -38,7 +38,7 @@
     "source": "data/semantic/A-1000",
     "approvedRows": 3,
     "heldRows": 0,
-    "pendingRows": 37,
+    "pendingRows": 39,
     "identityHold": null,
     "applied": "2026-09-29",
     "baseline": {
@@ -59,6 +59,6 @@
     "modelFunction": "Wastewater equalization tank",
     "name": "Wastewater Equalisation Tank",
     "sourceDocId": "FEED-PE-DAT-114",
-    "revision": "V1.0"
+    "revision": "V1.1"
   }
 }

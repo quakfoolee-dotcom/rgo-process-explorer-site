@@ -34,7 +34,7 @@
     "source": "data/semantic/A-1000",
     "approvedRows": 0,
     "heldRows": 0,
-    "pendingRows": 14,
+    "pendingRows": 17,
     "identityHold": null,
     "applied": "2026-09-29",
     "baseline": {},
@@ -45,6 +45,6 @@
     "modelFunction": "Proposed low centrate receiver",
     "name": "Centrate Receiver",
     "sourceDocId": "FEED-PE-DAT-124",
-    "revision": "V1.0"
+    "revision": "V1.1"
   }
 }

@@ -58,7 +58,7 @@
     "source": "data/semantic/A-2000",
     "approvedRows": 1,
     "heldRows": 0,
-    "pendingRows": 30,
+    "pendingRows": 32,
     "identityHold": null,
     "applied": "2026-09-29",
     "baseline": {
@@ -76,6 +76,6 @@
     "modelFunction": "Permeate storage",
     "name": "Process Water Tank",
     "sourceDocId": "FEED-PE-DAT-136",
-    "revision": "V1.0"
+    "revision": "V1.1"
   }
 }

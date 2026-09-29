@@ -30,7 +30,7 @@
     "source": "data/semantic/A-200",
     "approvedRows": 1,
     "heldRows": 0,
-    "pendingRows": 32,
+    "pendingRows": 34,
     "identityHold": null,
     "applied": "2026-09-29",
     "baseline": {
@@ -48,6 +48,6 @@
     "modelFunction": "Phosphoric acid day tank",
     "name": "H₃PO₄ Day Tank",
     "sourceDocId": "FEED-PE-DAT-086",
-    "revision": "V1.0"
+    "revision": "V1.1"
   }
 }

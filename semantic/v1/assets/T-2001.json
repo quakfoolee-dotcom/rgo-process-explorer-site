@@ -61,7 +61,7 @@
     "source": "data/semantic/A-2000",
     "approvedRows": 2,
     "heldRows": 0,
-    "pendingRows": 32,
+    "pendingRows": 34,
     "identityHold": null,
     "applied": "2026-09-29",
     "baseline": {
@@ -82,6 +82,6 @@
     "modelFunction": "RO feed equalization",
     "name": "Condensate Receiver",
     "sourceDocId": "FEED-PE-DAT-132",
-    "revision": "V1.0"
+    "revision": "V1.1"
   }
 }

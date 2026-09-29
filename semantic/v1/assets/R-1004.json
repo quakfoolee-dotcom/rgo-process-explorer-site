@@ -34,7 +34,7 @@
     "source": "data/semantic/A-1000",
     "approvedRows": 1,
     "heldRows": 0,
-    "pendingRows": 34,
+    "pendingRows": 36,
     "identityHold": null,
     "applied": "2026-09-29",
     "baseline": {
@@ -52,6 +52,6 @@
     "modelFunction": "Final conditioning and flocculation tank",
     "name": "Final Conditioning and Flocculation Tank",
     "sourceDocId": "FEED-PE-DAT-117",
-    "revision": "V1.0"
+    "revision": "V1.1"
   }
 }

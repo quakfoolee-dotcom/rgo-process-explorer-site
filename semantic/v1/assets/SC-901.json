@@ -44,7 +44,7 @@
     "source": "data/semantic/A-900",
     "approvedRows": 0,
     "heldRows": 1,
-    "pendingRows": 17,
+    "pendingRows": 19,
     "identityHold": {
       "reason": "Same tag, different duty: model SC-901 is a cooling / classification envelope after PG-901; register SC-901 is the densification-train screener",
       "reviewer": "QFL",
