@@ -33,3 +33,11 @@ html[data-ui-size="l"]{--u:1.3;--f:14px;--side-w:360px}
  .sidebar-footer{padding:calc(8px*var(--u)) 12px}
  .sidebar-footer button{min-height:calc(32px*var(--u));padding:4px 10px;font-size:var(--f)}
 }
+/* Focus mode (see focus-mode.js) */
+#focus-bar{display:none}
+html.focus-mode header{display:none}
+html.focus-mode .stage{height:100dvh;min-height:0}
+html.focus-mode #sidebar-expand{display:none!important}
+html.focus-mode:not(.focus-tools) .view-dock{display:none}
+html.focus-mode #focus-bar{display:flex;position:absolute;z-index:40;left:50%;transform:translateX(-50%);bottom:calc(var(--stage-toolbar-space,0px) + 10px);gap:8px;padding:4px;border-radius:8px;background:#0c1825e6;border:1px solid #34495d}
+#focus-bar button{min-height:32px;padding:4px 12px;font-size:13px;color:#eaf1f5}
