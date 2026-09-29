@@ -19,9 +19,7 @@
     "designTemperature": null,
     "materialOfConstruction": "Dual-laminate FRP/HDPE/rubber-lined CS on raw-acid stages; 316L or coated CS only after pH is reliably ≥6.5"
   },
-  "operatingEnvelope": {
-    "reagentBasis": "Lime stage to pH 8.5–10.5: ≈ 149 t/d Ca(OH)₂; 314 t/d gypsum + 20 t/d Ca₃(PO₄)₂ + 5 t/d Mn(OH)₂ (≈ 100 kt/y sludge, 500 kg per kg product); DBM A-2 (46 kt/y lime, 98 kt/y sludge) confirmed within 10 %"
-  },
+  "operatingEnvelope": null,
   "processBasis": [],
   "reviewStatus": "open",
   "reviewFindings": [
@@ -34,19 +32,18 @@
   "dataLayer": {
     "area": "A-1000",
     "source": "data/semantic/A-1000",
-    "approvedRows": 2,
+    "approvedRows": 1,
     "heldRows": 0,
-    "pendingRows": 34,
+    "pendingRows": 35,
     "identityHold": null,
-    "applied": "2026-09-28",
+    "applied": "2026-09-29",
     "baseline": {
       "design": {
         "capacityM3": null,
         "designPressure": null,
         "designTemperature": null,
         "materialOfConstruction": null
-      },
-      "operatingEnvelope": null
+      }
     },
     "baselineAbsent": []
   },

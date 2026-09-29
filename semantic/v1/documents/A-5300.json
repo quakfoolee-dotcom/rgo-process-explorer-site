@@ -35,6 +35,16 @@
       "availability": "indexed by data layer",
       "dataLayer": true,
       "file": "B. Technical Reports\\FEED-PE-REP-043_Plant-Utilities-and-Thermal-Balance_V1.0.docx"
+    },
+    {
+      "documentId": "FEED-PE-NTE-014",
+      "title": "A-5400 High-Temperature Heat Supply — Options and Basis",
+      "revision": "V1.0",
+      "page": null,
+      "status": "controlled (draft - issued for review)",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "B. Technical Reports\\FEED-PE-NTE-014_A-5400-Heat-Supply-Options-and-Basis_V1.0.docx"
     }
   ]
 }

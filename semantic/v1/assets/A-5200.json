@@ -63,16 +63,16 @@
     "CP-5000 is indication intent only; I/O, trips, setpoints and validated live data are absent."
   ],
   "identity": {
-    "designConcept": "Four loops, not three: ≥ 200 °C steam / thermal-oil (3–7 MW at 5 wt % dryer feed; 15–20 MW if 1 wt % is retained), hot water, cooling water, chilled water — duties from Reports 021–042"
+    "designConcept": "Four utility loops (D-A5000-01): A-5100 hot water 80–95 °C, A-5200 cooling water, A-5300 chilled water, and A-5400 20 barg saturated steam from 2 × 7 MW gas-fired boilers, 14 MW rated, for HX-601 (with HR-601), PK-1101 stage 2 and R-141 (D-A5000-02); FEED-PE-MOC-002 Part F pending"
   },
   "dataLayer": {
     "area": "A-5000",
     "source": "data/semantic/A-5000",
     "approvedRows": 3,
     "heldRows": 0,
-    "pendingRows": 34,
+    "pendingRows": 35,
     "identityHold": null,
-    "applied": "2026-09-28",
+    "applied": "2026-09-29",
     "baseline": {
       "design": {
         "capacityM3": null,

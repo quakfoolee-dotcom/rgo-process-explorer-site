@@ -52,22 +52,6 @@
       "gapId": "A300-001"
     },
     {
-      "valueId": "PV-A-300-0203",
-      "property": "design.materialOfConstruction",
-      "value": "Hastelloy C-276 (N10276) + WC or ceramic hardfacing",
-      "unit": null,
-      "source": "FEED-PE-MAT-002",
-      "revision": "V1.2",
-      "location": "'Selection Matrix'!row 30 (M-026)",
-      "status": "approved",
-      "confidence": "documented",
-      "tier": "A",
-      "conflictGroup": "CF-materialOfConstruc-C-301",
-      "note": "scope: C-301 Decanter Centrifuge — bowl/scroll; alt: Titanium Grade 7 (0.15 % Pd); status HELD | D-A300-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-20"
-    },
-    {
       "valueId": "PV-A-300-0537",
       "property": "identity.designConcept",
       "value": "Automatic membrane filter press (PP plates, PTFE cloth, ≈ 70 chambers of 1,500 mm) with a 1.5 pore-volume displacement cake wash: 90 % of the cake liquor to T-304 and the concentrator, ≈ 0.65 t/d H₂SO₄ left in the washed cake (decanter V1.1: 14.2 t/d); gated on M1, decanter with repulp wash the fallback",
@@ -82,6 +66,22 @@
       "note": "D-A300-07 | D-A300-07: C-301 becomes an automatic membrane filter press with a displacement cake wash as the Route 2 separation base case (bases CW1–CW8, FEED-PE-CAL-032 V1.2): press cake ≈ 4.6 t at 15 % solids (10–20 %), 1.5 pore volumes of process water (≈ 4.0 t per batch), 90 % of the cake liquor displaced to T-304 — H₂SO₄ leaving with the cake falls from 14.2 to ≈ 0.65 t/d and ≈ 13.6 t/d more reaches the concentrator (CAL-033 V1.1, rated 150 t/d); P-303 becomes the AODD press feed pump, T-304 65 m³, P-306 15 m³/h. Supersedes the decanter envelope of RA4; the decanter with a repulp wash is the fallback. A-1000 is not re-balanced (CW8): its extra capacity is margin for M2 / M3. Approved in review by QFL 2026-09-27.",
       "reviewer": "QFL",
       "reviewDate": "2026-09-27"
+    },
+    {
+      "valueId": "PV-A-300-0600",
+      "property": "design.materialOfConstruction",
+      "value": "Polypropylene plates, PTFE or PP multifilament cloth; PVDF / PTFE-lined manifolds (HOLD QH6)",
+      "unit": null,
+      "source": "FEED-PE-DAT-102",
+      "revision": "V1.2",
+      "location": "'C-301 Datasheet V1.2'!item 5.1",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": "CF-materialOfConstruc-C-301",
+      "note": "D-A300-08: replaces the decanter material ruling | D-A300-08: C-301 is a membrane filter press (D-A300-07): the MAT-002 decanter ruling (Hastelloy C-276 with WC / ceramic hardfacing) no longer applies. Approve the FEED-PE-DAT-102 V1.2 materials: PP plates, PTFE / PP cloth, PVDF / PTFE-lined manifolds. Stale-text clean-up A1, approved by QFL 2026-09-29.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-09-29"
     }
   ]
 }

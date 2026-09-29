@@ -68,38 +68,6 @@
       "reviewDate": "2026-09-20"
     },
     {
-      "valueId": "PV-A-1000-0287",
-      "property": "operatingEnvelope.feedComposition",
-      "value": "0.64 mol/L H₂SO₄ + 0.23 mol/L HCl: 179 t/d H₂SO₄, 24 t/d HCl, 129 kmol/d H₃PO₄; 1,070 mg/L Mn, 760 mg/L K, 1,400 mg/L P — dilute acid, not wastewater",
-      "unit": null,
-      "source": "FEED-PE-REP-038",
-      "revision": "V1.0",
-      "location": "Executive conclusion",
-      "status": "approved",
-      "confidence": "review required",
-      "tier": "B",
-      "conflictGroup": null,
-      "note": "D-A1000-01: REP-038 first-principles load adopted as the design statement: 0.64 mol/L H₂SO₄ + 0.23 mol/L HCl (179 t/d H₂SO₄, 24 t/d HCl) with Mn / K / P — the feed is dilute acid, not wastewater.",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-20"
-    },
-    {
-      "valueId": "PV-A-1000-0288",
-      "property": "identity.designConcept",
-      "value": "NaOH 'rapid' stage to pH 3–4 is not viable at 0.64 mol/L: ≈ 166 t/d NaOH (≈ $22 M/y), sulphate stays soluble as Na₂SO₄, doubles gypsum solubility, makes RO unworkable — NaOH has no place upstream of lime",
-      "unit": null,
-      "source": "FEED-PE-REP-038",
-      "revision": "V1.0",
-      "location": "Executive conclusion / basis table",
-      "status": "approved",
-      "confidence": "review required",
-      "tier": "B",
-      "conflictGroup": null,
-      "note": "RED | D-A1000-02: NaOH rapid stage to pH 3–4 is not viable at 0.64 mol/L (≈ 166 t/d NaOH; sulphate stays soluble; RO unworkable) — lime-first flowsheet adopted as intent; PFD-1000 R-1001 duty to be redefined by MoC.",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-20"
-    },
-    {
       "valueId": "PV-A-1000-0410",
       "property": "design.dutyBasis",
       "value": "Neutralisation heat 0.26 MW normal / 0.34 MW design (120 kJ/mol H₂SO₄) absorbed by the flow (< 3 K); no cooler",

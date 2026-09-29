@@ -17,7 +17,7 @@
     "capacityM3": null,
     "designPressure": null,
     "designTemperature": null,
-    "materialOfConstruction": "PTFE/PFA-lined pipe; PFA/ETFE-lined sealless pumps"
+    "materialOfConstruction": "Conductive PVDF or PTFE body; PTFE diaphragms and balls, PVDF seats (HOLD QH6)"
   },
   "operatingEnvelope": null,
   "reviewStatus": "open",
@@ -31,9 +31,9 @@
     "source": "data/semantic/A-300",
     "approvedRows": 1,
     "heldRows": 0,
-    "pendingRows": 72,
+    "pendingRows": 73,
     "identityHold": null,
-    "applied": "2026-09-28",
+    "applied": "2026-09-29",
     "baseline": {
       "design": {
         "capacityM3": null,

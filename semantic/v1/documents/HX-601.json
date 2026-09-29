@@ -37,16 +37,6 @@
       "availability": "indexed by data layer",
       "dataLayer": true,
       "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.2.xlsx"
-    },
-    {
-      "documentId": "FEED-PE-REP-016",
-      "title": "DR-601 Spray Dryer FEED Design Readiness Review",
-      "revision": "V1.4",
-      "page": null,
-      "status": "controlled",
-      "availability": "indexed by data layer",
-      "dataLayer": true,
-      "file": "B. Technical Reports\\FEED-PE-REP-016_DR-601-Spray-Dryer-FEED-Design-Readiness-Review_V1.4.docx"
     }
   ]
 }

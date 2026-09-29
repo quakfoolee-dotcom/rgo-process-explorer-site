@@ -68,38 +68,6 @@
       "reviewDate": "2026-09-20"
     },
     {
-      "valueId": "PV-A-1000-0286",
-      "property": "operatingEnvelope.feedComposition",
-      "value": "0.64 mol/L H₂SO₄ + 0.23 mol/L HCl: 179 t/d H₂SO₄, 24 t/d HCl, 129 kmol/d H₃PO₄; 1,070 mg/L Mn, 760 mg/L K, 1,400 mg/L P — dilute acid, not wastewater",
-      "unit": null,
-      "source": "FEED-PE-REP-038",
-      "revision": "V1.0",
-      "location": "Executive conclusion",
-      "status": "approved",
-      "confidence": "review required",
-      "tier": "B",
-      "conflictGroup": null,
-      "note": "D-A1000-01: REP-038 first-principles load adopted as the design statement: 0.64 mol/L H₂SO₄ + 0.23 mol/L HCl (179 t/d H₂SO₄, 24 t/d HCl) with Mn / K / P — the feed is dilute acid, not wastewater.",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-20"
-    },
-    {
-      "valueId": "PV-A-1000-0292",
-      "property": "identity.designConcept",
-      "value": "Acid recovery (150–200 t/d spent-acid reconcentration, 1.5–4.4 MW at 150–200 °C) removes ≈ 95 % of the A-1000 load — 'largest single design lever in the project' (REP-026 F-39); A-1000/A-2000 not to be frozen before the recovery decision",
-      "unit": null,
-      "source": "FEED-PE-REP-039",
-      "revision": "V1.0",
-      "location": "Executive conclusion",
-      "status": "approved",
-      "confidence": "review required",
-      "tier": "B",
-      "conflictGroup": null,
-      "note": "D-A1000-01: Acid recovery is the governing design lever for A-1000 / A-2000 (REP-026 F-39, REP-039); A-1000 not to be frozen before it.",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-20"
-    },
-    {
       "valueId": "PV-A-1000-0294",
       "property": "identity.acidRoute",
       "value": "Spent-acid recovery, REP-039 Route 2 + 6: TLGO separated from 50–60 wt % acid in A-300 (Route 2) and the GIC from the A-160 acid before washing (Route 6); the filtrates are reconcentrated and recycled, so A-1000 treats only the residual (≈ 6–15 t/d acid). Gated on M1 (filterability at 50–60 wt %), M2 (recycled-acid quality) and M3 (Mn(VII) = 0 before heating); Route 0 (neutralise everything in A-1000) is the fallback",

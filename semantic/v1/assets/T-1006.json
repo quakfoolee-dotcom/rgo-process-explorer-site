@@ -20,9 +20,7 @@
     "materialOfConstruction": "Dual-laminate FRP/HDPE/rubber-lined CS on raw-acid stages; 316L or coated CS only after pH is reliably ≥6.5",
     "feedBasis": "Route 2 + 6 residual: 615 m³/d design (25.6 m³/h), ≈ 495 m³/d normal; 24.3 t/d H₂SO₄ design (18.6 firm + 5.8 organics-bleed allowance), HCl 3 t/d (M3) to 18.2 t/d (PFD dose, bounding)"
   },
-  "operatingEnvelope": {
-    "feedComposition": "0.64 mol/L H₂SO₄ + 0.23 mol/L HCl: 179 t/d H₂SO₄, 24 t/d HCl, 129 kmol/d H₃PO₄; 1,070 mg/L Mn, 760 mg/L K, 1,400 mg/L P — dilute acid, not wastewater"
-  },
+  "operatingEnvelope": null,
   "processBasis": [],
   "reviewStatus": "open",
   "reviewFindings": [
@@ -33,17 +31,16 @@
     "Sheet is Draft - Not for Use with XXX revision. Cooling is a separate utility; duties and limits are unqualified. pH, temperature, level and mixing checks are functional concepts only. Legacy spare return connections remain capped; the modeled normal A-2000 backwash return is distinct. Aeration/oxidation remains future provision and is not invented as installed equipment."
   ],
   "identity": {
-    "designConcept": "Acid recovery (150–200 t/d spent-acid reconcentration, 1.5–4.4 MW at 150–200 °C) removes ≈ 95 % of the A-1000 load — 'largest single design lever in the project' (REP-026 F-39); A-1000/A-2000 not to be frozen before the recovery decision",
     "acidRoute": "Spent-acid recovery, REP-039 Route 2 + 6: TLGO separated from 50–60 wt % acid in A-300 (Route 2) and the GIC from the A-160 acid before washing (Route 6); the filtrates are reconcentrated and recycled, so A-1000 treats only the residual (≈ 6–15 t/d acid). Gated on M1 (filterability at 50–60 wt %), M2 (recycled-acid quality) and M3 (Mn(VII) = 0 before heating); Route 0 (neutralise everything in A-1000) is the fallback"
   },
   "dataLayer": {
     "area": "A-1000",
     "source": "data/semantic/A-1000",
-    "approvedRows": 5,
+    "approvedRows": 3,
     "heldRows": 0,
-    "pendingRows": 35,
+    "pendingRows": 37,
     "identityHold": null,
-    "applied": "2026-09-28",
+    "applied": "2026-09-29",
     "baseline": {
       "design": {
         "capacityM3": null,
@@ -51,7 +48,6 @@
         "designTemperature": null,
         "materialOfConstruction": null
       },
-      "operatingEnvelope": null,
       "identity": null
     },
     "baselineAbsent": [

@@ -52,20 +52,20 @@
       "gapId": "A300-001"
     },
     {
-      "valueId": "PV-A-300-0205",
+      "valueId": "PV-A-300-0601",
       "property": "design.materialOfConstruction",
-      "value": "PTFE/PFA-lined pipe; PFA/ETFE-lined sealless pumps",
+      "value": "Conductive PVDF or PTFE body; PTFE diaphragms and balls, PVDF seats (HOLD QH6)",
       "unit": null,
-      "source": "FEED-PE-MAT-002",
+      "source": "FEED-PE-DAT-103",
       "revision": "V1.2",
-      "location": "'Selection Matrix'!row 31 (M-027)",
+      "location": "'P-303 Datasheet V1.2'!items 5.1 / 5.2",
       "status": "approved",
       "confidence": "documented",
       "tier": "A",
       "conflictGroup": "WV-materialOfConstruc-P-303",
-      "note": "scope: Slurry transfer pumps and lines; alt: PVDF where T permits; status FIRM | D-A300-MOC: Plant-wide ruling: FEED-PE-MAT-002 'Recommended MOC (base case)' governs material of construction over FEED-PE-MDL-001 (scale-up study) and design-note wording — MAT-002 is the controlled MoC matrix and postdates MDL-001. Wording variants of the same material family are superseded by the MAT-002 statement.",
+      "note": "D-A300-08: replaces the sealless-pump material ruling | D-A300-08: P-303 is an air-operated diaphragm pump (D-A300-07): the MAT-002 lined sealless-pump ruling no longer applies. Approve the FEED-PE-DAT-103 V1.2 materials: conductive PVDF / PTFE body, PTFE diaphragms and balls, PVDF seats. Stale-text clean-up A2, approved by QFL 2026-09-29.",
       "reviewer": "QFL",
-      "reviewDate": "2026-09-20"
+      "reviewDate": "2026-09-29"
     }
   ]
 }

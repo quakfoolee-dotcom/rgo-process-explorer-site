@@ -23,14 +23,14 @@
       "availability": "dist/model.js, dist/a400.js, dist/a5000-basis.js and dist/engineering-register.js"
     },
     {
-      "documentId": "FEED-PE-MAT-002",
-      "title": "MOC Selection Matrix",
+      "documentId": "FEED-PE-DAT-103",
+      "title": "P-303 Filter Press Feed Pump Datasheet",
       "revision": "V1.2",
       "page": null,
-      "status": "controlled",
+      "status": "controlled (preliminary - budget enquiry)",
       "availability": "indexed by data layer",
       "dataLayer": true,
-      "file": "8 Equipment Design and Specifications\\5 - Material of Construction (MOC)\\FEED-PE-MAT-002_MOC-Selection-Matrix_V1.2.xlsx"
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-103_P-303-Filter-Press-Feed-Pump-Datasheet_V1.2.xlsx"
     }
   ]
 }

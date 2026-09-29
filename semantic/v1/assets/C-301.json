@@ -17,7 +17,7 @@
     "capacityM3": null,
     "designPressure": null,
     "designTemperature": null,
-    "materialOfConstruction": "Hastelloy C-276 (N10276) + WC or ceramic hardfacing"
+    "materialOfConstruction": "Polypropylene plates, PTFE or PP multifilament cloth; PVDF / PTFE-lined manifolds (HOLD QH6)"
   },
   "operatingEnvelope": null,
   "reviewStatus": "open",
@@ -34,17 +34,17 @@
     "source": "data/semantic/A-300",
     "approvedRows": 2,
     "heldRows": 0,
-    "pendingRows": 67,
+    "pendingRows": 68,
     "identityHold": null,
-    "applied": "2026-09-28",
+    "applied": "2026-09-29",
     "baseline": {
+      "identity": null,
       "design": {
         "capacityM3": null,
         "designPressure": null,
         "designTemperature": null,
         "materialOfConstruction": null
-      },
-      "identity": null
+      }
     },
     "baselineAbsent": [
       "identity"

@@ -20,9 +20,7 @@
     "materialOfConstruction": "Dual-laminate FRP/HDPE/rubber-lined CS on raw-acid stages; 316L or coated CS only after pH is reliably ≥6.5",
     "dutyBasis": "Neutralisation heat 0.26 MW normal / 0.34 MW design (120 kJ/mol H₂SO₄) absorbed by the flow (< 3 K); no cooler"
   },
-  "operatingEnvelope": {
-    "feedComposition": "0.64 mol/L H₂SO₄ + 0.23 mol/L HCl: 179 t/d H₂SO₄, 24 t/d HCl, 129 kmol/d H₃PO₄; 1,070 mg/L Mn, 760 mg/L K, 1,400 mg/L P — dilute acid, not wastewater"
-  },
+  "operatingEnvelope": null,
   "processBasis": [
     {
       "label": "Draft initial pH range",
@@ -56,30 +54,23 @@
     "Selected wet vents are candidate connections to HD-3100 only; chemical-storage vents remain separate by service. A-3000 condensate and blowdown returns are normally isolated. Low process drains are positively blinded; no common chemical drain or dry A-800 waste route is inferred. Sludge classification and receiving disposal acceptance require testing, not the draft non-hazardous wording.",
     "Sheet is Draft - Not for Use with XXX revision. Cooling is a separate utility; duties and limits are unqualified. pH, temperature, level and mixing checks are functional concepts only. Legacy spare return connections remain capped; the modeled normal A-2000 backwash return is distinct. Aeration/oxidation remains future provision and is not invented as installed equipment."
   ],
-  "identity": {
-    "designConcept": "NaOH 'rapid' stage to pH 3–4 is not viable at 0.64 mol/L: ≈ 166 t/d NaOH (≈ $22 M/y), sulphate stays soluble as Na₂SO₄, doubles gypsum solubility, makes RO unworkable — NaOH has no place upstream of lime"
-  },
   "dataLayer": {
     "area": "A-1000",
     "source": "data/semantic/A-1000",
-    "approvedRows": 4,
+    "approvedRows": 2,
     "heldRows": 0,
-    "pendingRows": 36,
+    "pendingRows": 38,
     "identityHold": null,
-    "applied": "2026-09-28",
+    "applied": "2026-09-29",
     "baseline": {
       "design": {
         "capacityM3": null,
         "designPressure": null,
         "designTemperature": null,
         "materialOfConstruction": null
-      },
-      "operatingEnvelope": null,
-      "identity": null
+      }
     },
-    "baselineAbsent": [
-      "identity"
-    ]
+    "baselineAbsent": []
   },
   "identitySource": {
     "modelName": "Initial neutralization reactor",

@@ -1,7 +1,7 @@
 {
  "schema": "rgo-simulation-inputs-v1",
  "layout": "FEED baseline · press + tray dryer",
- "generated": "2026-09-28",
+ "generated": "2026-09-29",
  "counts": {
   "approved": 34,
   "withdrawn": 16,
@@ -1335,7 +1335,7 @@
      "value": "64915",
      "unit": "kg",
      "source": "FEED-PE-DAT-097",
-     "location": "'T-303 Datasheet V1.1'!row 19 (item 2.4)",
+     "location": "'T-303 Datasheet V1.2'!row 19 (item 2.4)",
      "status": "conflict"
     }
    ]
@@ -1394,7 +1394,7 @@
      "value": "44.8",
      "unit": "m³",
      "source": "FEED-PE-DAT-097",
-     "location": "'T-303 Datasheet V1.1'!row 23 (item 3.1)",
+     "location": "'T-303 Datasheet V1.2'!row 23 (item 3.1)",
      "status": "candidate"
     }
    ]
@@ -1654,7 +1654,7 @@
      "value": "32.8",
      "unit": "m³",
      "source": "FEED-PE-DAT-063",
-     "location": "'T-601 Datasheet'!row 20 (item 3.1)",
+     "location": "'T-601 Datasheet V1.2'!row 20 (item 3.1)",
      "status": "candidate"
     }
    ]
