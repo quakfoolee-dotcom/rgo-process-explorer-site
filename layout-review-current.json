@@ -1,11 +1,11 @@
 {
- "version": "71e8c3f",
+ "version": "dee263f",
  "date": "2026-09-30",
- "generated": "2026-09-30T01:15:31.697Z",
- "revision": "r6",
+ "generated": "2026-09-30T07:15:42.594Z",
+ "revision": "r7",
  "reviewer": {
   "initials": "QFL",
-  "date": "2026-09-29"
+  "date": "2026-09-30"
  },
  "lead": "The published gate report (bc-corridors-85, 2026-09-12) is retained below as the coordinated baseline; the sections above it are measured on the current model on every refresh. Nothing here qualifies structure, slabs, vehicles or traffic.",
  "basis": {
@@ -16,19 +16,19 @@
   "method": "Continuous sweep bounded by adaptive poses and added allowance; oriented component envelopes. Full assembled geometry is screened regardless of display filters. No dynamic stability, braking, slab capacity or operating approval."
  },
  "summary": {
-  "externalElements": 7642,
-  "directAttachmentElements": 1140,
-  "supports": 3822,
-  "rackFrames": 243,
+  "externalElements": 7512,
+  "directAttachmentElements": 1105,
+  "supports": 3743,
+  "rackFrames": 248,
   "existingSteelAttachmentGroups": 20,
-  "columns": 589,
+  "columns": 586,
   "sharedStructures": 106,
-  "placementHolds": 273,
-  "shortConnections": 6186,
+  "placementHolds": 275,
+  "shortConnections": 6089,
   "vendorFlexible": 132,
   "structurallyQualified": false,
-  "memberLengthM": 14075.407928593448,
-  "parts": 155334
+  "memberLengthM": 13932.97439687313,
+  "parts": 152771
  },
  "published": {
   "revision": "bc-corridors-85",
@@ -66,7 +66,7 @@
  "holdsByArea": [
   {
    "area": "A-2000",
-   "holds": 229
+   "holds": 230
   },
   {
    "area": "A-4000",
@@ -78,7 +78,7 @@
   },
   {
    "area": "A-3000",
-   "holds": 3
+   "holds": 4
   },
   {
    "area": "A-200",
@@ -104,25 +104,25 @@
   },
   {
    "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment",
-   "holds": 28
+   "holds": 29
   },
   {
    "reason": "Local bearing requires shared-column bracket or single-post exception",
-   "holds": 27
+   "holds": 28
   }
  ],
  "inventory": [
   {
    "status": "short spool / fitting",
-   "count": 6186
+   "count": 6089
   },
   {
    "status": "attached — calculation hold",
-   "count": 1098
+   "count": 1064
   },
   {
    "status": "placement review",
-   "count": 184
+   "count": 185
   },
   {
    "status": "vendor flexible connection",
@@ -301,7 +301,7 @@
   }
  ],
  "reservedSpaces": {
-  "checked": 497,
+  "checked": 516,
   "zones": [
    "REMOVE-R201C",
    "REMOVE-PY801",
@@ -312,38 +312,38 @@
    {
     "zone": "REMOVE-R201C",
     "zoneKind": "maintenance",
-    "partId": 152418,
-    "name": "PS-A200-3386 bearing collar",
+    "partId": 149753,
+    "name": "PS-A200-3288 bearing collar",
     "area": "A-200",
     "kind": "Pipe support"
    },
    {
     "zone": "REMOVE-PY801",
     "zoneKind": "removal",
-    "partId": 151051,
-    "name": "PS-A900-3034 bearing collar",
+    "partId": 148381,
+    "name": "PS-A900-2932 bearing collar",
     "area": "A-900",
     "kind": "Pipe support"
    },
    {
     "zone": "PIPE-standing-access-613-CP-3000 / CP-3000 control display",
     "zoneKind": "standing",
-    "partId": 153479,
-    "name": "PS-A3000-3641 local bracket",
+    "partId": 150923,
+    "name": "PS-A3000-3561 local bracket",
     "area": "A-3000",
     "kind": "Pipe support"
    },
    {
     "zone": "HEADROOM-PL-801 feeder walkway",
     "zoneKind": "platform-access",
-    "partId": 148372,
-    "name": "PS-A5000-2265 insulation insert bearing collar",
+    "partId": 145760,
+    "name": "PS-A5000-2183 insulation insert bearing collar",
     "area": "A-5000",
     "kind": "Pipe support"
    }
   ],
   "newSincePublished": [
-   "REMOVE-PY801 · PS-A900-3034 bearing collar"
+   "REMOVE-PY801 · PS-A900-2932 bearing collar"
   ],
   "resolvedSincePublished": [
    "REMOVE-R201D · bearing collar"
@@ -404,28 +404,28 @@
     11.3,
     6
    ],
-   "bearings": 46,
+   "bearings": 44,
    "qualification": "HOLD: combined pipe reactions, lateral stability, guide/anchor loads, connection strength and foundations; entrance portal span, deflection and lateral/seismic load paths require calculation before construction"
   }
  ],
  "delta": {
-  "supports": 39,
-  "columns": -4,
-  "rackFrames": -4,
+  "supports": -40,
+  "columns": -7,
+  "rackFrames": 1,
   "sharedStructures": -1,
-  "placementHolds": -43,
-  "directAttachmentElements": 18,
-  "externalElements": 116,
-  "memberLengthM": 95.09188628775519,
-  "holdsNew": 20,
+  "placementHolds": -41,
+  "directAttachmentElements": -17,
+  "externalElements": -14,
+  "memberLengthM": -47.34164543256156,
+  "holdsNew": 22,
   "holdsResolved": 63,
   "areasAdded": [
    "A-900"
   ]
  },
  "a5000": {
-  "racks": 41,
-  "columns": 121,
+  "racks": 42,
+  "columns": 123,
   "localColumns": 14,
   "localBoundsM": [
    -31.3,
@@ -435,7 +435,7 @@
   ],
   "bearings": 973,
   "placementElements": 11,
-  "memberLengthM": 3837.033613852517,
+  "memberLengthM": 3959.525009516915,
   "coordinatedRacks": 10
  },
  "areas": [
@@ -584,22 +584,22 @@
   },
   {
    "area": "A-1000",
-   "supports": 317,
+   "supports": 241,
    "placementElements": 1,
    "holds": 1,
    "transportFindings": 0,
    "reservedSpaceFindings": 0,
    "review": {
     "href": "./a1000-review.html",
-    "revision": "r15",
+    "revision": "r16",
     "reviewer": "QFL"
    }
   },
   {
    "area": "A-2000",
-   "supports": 533,
-   "placementElements": 158,
-   "holds": 229,
+   "supports": 534,
+   "placementElements": 159,
+   "holds": 230,
    "transportFindings": 0,
    "reservedSpaceFindings": 0,
    "review": {
@@ -610,9 +610,9 @@
   },
   {
    "area": "A-3000",
-   "supports": 552,
+   "supports": 548,
    "placementElements": 2,
-   "holds": 3,
+   "holds": 4,
    "transportFindings": 0,
    "reservedSpaceFindings": 1,
    "review": {
@@ -662,8 +662,8 @@
    "area": "A-200",
    "equipment": "R-201C",
    "line": "XV-SMR201-C tagged actuator supply",
-   "lineId": "LINE-2547",
-   "partId": 119773,
+   "lineId": "LINE-2495",
+   "partId": 117686,
    "point": [
     -3.034,
     1.415,
@@ -688,8 +688,8 @@
    "area": "A-1000",
    "equipment": "T-1006",
    "line": "Combined wastewater to T-1006",
-   "lineId": "LINE-1253",
-   "partId": 94214,
+   "lineId": "LINE-1230",
+   "partId": 92870,
    "point": [
     19.5,
     7.6,
@@ -701,8 +701,8 @@
    "area": "A-2000",
    "equipment": "T-2001",
    "line": "A-1000 centrate to T-2001",
-   "lineId": "LINE-1580",
-   "partId": 106759,
+   "lineId": "LINE-1528",
+   "partId": 104676,
    "point": [
     66.55,
     9.482,
@@ -714,8 +714,8 @@
    "area": "A-2000",
    "equipment": "T-2001",
    "line": "A-1000 centrate to T-2001",
-   "lineId": "LINE-1580",
-   "partId": 106759,
+   "lineId": "LINE-1528",
+   "partId": 104676,
    "point": [
     66.55,
     7.567,
@@ -727,8 +727,8 @@
    "area": "A-2000",
    "equipment": "T-2001",
    "line": "A-1000 centrate to T-2001",
-   "lineId": "LINE-1580",
-   "partId": 106759,
+   "lineId": "LINE-1528",
+   "partId": 104676,
    "point": [
     66.55,
     5.652,
@@ -740,8 +740,8 @@
    "area": "A-2000",
    "equipment": "T-2001",
    "line": "A-1000 centrate to T-2001",
-   "lineId": "LINE-1580",
-   "partId": 106759,
+   "lineId": "LINE-1528",
+   "partId": 104676,
    "point": [
     66.55,
     3.737,
@@ -751,10 +751,23 @@
   },
   {
    "area": "A-2000",
+   "equipment": "P-BW2001",
+   "line": "A-2000 backwash to T-1006",
+   "lineId": "LINE-1746",
+   "partId": 107323,
+   "point": [
+    20.7,
+    8.579,
+    -6
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-2000",
    "equipment": "P-2005",
    "line": "A-2000 water to BL-RO162",
-   "lineId": "LINE-2060",
-   "partId": 116135,
+   "lineId": "LINE-2008",
+   "partId": 114048,
    "point": [
     -18.45,
     10.2,
@@ -766,8 +779,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "Accepted RO permeate to T-2002",
-   "lineId": "LINE-2047",
-   "partId": 115526,
+   "lineId": "LINE-1995",
+   "partId": 113439,
    "point": [
     96.55,
     4.784,
@@ -779,8 +792,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "Accepted RO permeate to T-2002",
-   "lineId": "LINE-2047",
-   "partId": 115525,
+   "lineId": "LINE-1995",
+   "partId": 113438,
    "point": [
     96.55,
     6,
@@ -792,8 +805,8 @@
    "area": "A-2000",
    "equipment": "P-2002",
    "line": "Antiscalant mixed RO feed",
-   "lineId": "LINE-1799",
-   "partId": 109424,
+   "lineId": "LINE-1747",
+   "partId": 107337,
    "point": [
     79.2,
     1.5,
@@ -805,8 +818,8 @@
    "area": "A-2000",
    "equipment": "P-2002",
    "line": "Antiscalant mixed RO feed",
-   "lineId": "LINE-1799",
-   "partId": 109424,
+   "lineId": "LINE-1747",
+   "partId": 107337,
    "point": [
     81.6,
     1.5,
@@ -818,8 +831,8 @@
    "area": "A-2000",
    "equipment": "P-2002",
    "line": "Antiscalant mixed RO feed",
-   "lineId": "LINE-1799",
-   "partId": 109424,
+   "lineId": "LINE-1747",
+   "partId": 107337,
    "point": [
     84,
     1.5,
@@ -831,8 +844,8 @@
    "area": "A-2000",
    "equipment": "CF-2001",
    "line": "CF-2001 backwash header 0",
-   "lineId": "LINE-1611",
-   "partId": 107415,
+   "lineId": "LINE-1559",
+   "partId": 105332,
    "point": [
     76.8,
     5.2,
@@ -844,8 +857,8 @@
    "area": "A-2000",
    "equipment": "CF-2001",
    "line": "CF-2001 backwash header 1",
-   "lineId": "LINE-1615",
-   "partId": 107522,
+   "lineId": "LINE-1563",
+   "partId": 105439,
    "point": [
     76.8,
     5.2,
@@ -857,8 +870,8 @@
    "area": "A-2000",
    "equipment": "CF-2001",
    "line": "CF-2001 filtrate branch 0",
-   "lineId": "LINE-1617",
-   "partId": 107540,
+   "lineId": "LINE-1565",
+   "partId": 105457,
    "point": [
     77.6,
     1.5,
@@ -870,8 +883,8 @@
    "area": "A-2000",
    "equipment": "UF-2001",
    "line": "CF-2001 to UF-2001",
-   "lineId": "LINE-1788",
-   "partId": 109144,
+   "lineId": "LINE-1736",
+   "partId": 107061,
    "point": [
     77.6,
     2.26,
@@ -883,8 +896,8 @@
    "area": "A-2000",
    "equipment": "UF-2001",
    "line": "CF-2001 to UF-2001",
-   "lineId": "LINE-1788",
-   "partId": 109144,
+   "lineId": "LINE-1736",
+   "partId": 107061,
    "point": [
     77.6,
     3.78,
@@ -896,8 +909,8 @@
    "area": "A-2000",
    "equipment": "UF-2001",
    "line": "CF-2001 to UF-2001",
-   "lineId": "LINE-1788",
-   "partId": 109145,
+   "lineId": "LINE-1736",
+   "partId": 107062,
    "point": [
     77.6,
     4.7,
@@ -909,8 +922,8 @@
    "area": "A-2000",
    "equipment": "CIP-2001",
    "line": "CIP low drain collection",
-   "lineId": "LINE-2071",
-   "partId": 116636,
+   "lineId": "LINE-2019",
+   "partId": 114549,
    "point": [
     91.2,
     0.5,
@@ -922,8 +935,8 @@
    "area": "A-2000",
    "equipment": "CIP-2001",
    "line": "CIP waste pump suction",
-   "lineId": "LINE-2075",
-   "partId": 116940,
+   "lineId": "LINE-2023",
+   "partId": 114853,
    "point": [
     91.2,
     0.5,
@@ -935,8 +948,8 @@
    "area": "A-2000",
    "equipment": "GF-2001",
    "line": "GF-2001 backwash header 0",
-   "lineId": "LINE-1599",
-   "partId": 107165,
+   "lineId": "LINE-1547",
+   "partId": 105082,
    "point": [
     72.01,
     5.2,
@@ -948,8 +961,8 @@
    "area": "A-2000",
    "equipment": "GF-2001",
    "line": "GF-2001 backwash header 0",
-   "lineId": "LINE-1599",
-   "partId": 107165,
+   "lineId": "LINE-1547",
+   "partId": 105082,
    "point": [
     74.4,
     5.2,
@@ -961,8 +974,8 @@
    "area": "A-2000",
    "equipment": "GF-2001",
    "line": "GF-2001 backwash header 1",
-   "lineId": "LINE-1603",
-   "partId": 107272,
+   "lineId": "LINE-1551",
+   "partId": 105189,
    "point": [
     72.01,
     5.2,
@@ -974,8 +987,8 @@
    "area": "A-2000",
    "equipment": "GF-2001",
    "line": "GF-2001 backwash header 1",
-   "lineId": "LINE-1603",
-   "partId": 107272,
+   "lineId": "LINE-1551",
+   "partId": 105189,
    "point": [
     74.4,
     5.2,
@@ -987,8 +1000,8 @@
    "area": "A-2000",
    "equipment": "GF-2001",
    "line": "GF-2001 filtrate branch 0",
-   "lineId": "LINE-1605",
-   "partId": 107290,
+   "lineId": "LINE-1553",
+   "partId": 105207,
    "point": [
     71.6,
     1.5,
@@ -1000,8 +1013,8 @@
    "area": "A-2000",
    "equipment": "GF-2001",
    "line": "GF-2001 to CF-2001",
-   "lineId": "LINE-1622",
-   "partId": 107587,
+   "lineId": "LINE-1570",
+   "partId": 105504,
    "point": [
     71.6,
     2.26,
@@ -1013,8 +1026,8 @@
    "area": "A-2000",
    "equipment": "GF-2001",
    "line": "GF-2001 to CF-2001",
-   "lineId": "LINE-1622",
-   "partId": 107587,
+   "lineId": "LINE-1570",
+   "partId": 105504,
    "point": [
     71.6,
     3.78,
@@ -1026,8 +1039,8 @@
    "area": "A-2000",
    "equipment": "MMF-2001",
    "line": "MMF-2001 backwash header 0",
-   "lineId": "LINE-1587",
-   "partId": 106915,
+   "lineId": "LINE-1535",
+   "partId": 104832,
    "point": [
     72,
     5.2,
@@ -1039,8 +1052,8 @@
    "area": "A-2000",
    "equipment": "MMF-2001",
    "line": "MMF-2001 backwash header 0",
-   "lineId": "LINE-1587",
-   "partId": 106915,
+   "lineId": "LINE-1535",
+   "partId": 104832,
    "point": [
     74.4,
     5.2,
@@ -1052,8 +1065,8 @@
    "area": "A-2000",
    "equipment": "MMF-2001",
    "line": "MMF-2001 backwash header 0",
-   "lineId": "LINE-1587",
-   "partId": 106915,
+   "lineId": "LINE-1535",
+   "partId": 104832,
    "point": [
     67.2,
     5.2,
@@ -1065,8 +1078,8 @@
    "area": "A-2000",
    "equipment": "MMF-2001",
    "line": "MMF-2001 backwash header 0",
-   "lineId": "LINE-1587",
-   "partId": 106915,
+   "lineId": "LINE-1535",
+   "partId": 104832,
    "point": [
     69.6,
     5.2,
@@ -1078,8 +1091,8 @@
    "area": "A-2000",
    "equipment": "MMF-2001",
    "line": "MMF-2001 backwash header 1",
-   "lineId": "LINE-1591",
-   "partId": 107022,
+   "lineId": "LINE-1539",
+   "partId": 104939,
    "point": [
     72,
     5.2,
@@ -1091,8 +1104,8 @@
    "area": "A-2000",
    "equipment": "MMF-2001",
    "line": "MMF-2001 backwash header 1",
-   "lineId": "LINE-1591",
-   "partId": 107022,
+   "lineId": "LINE-1539",
+   "partId": 104939,
    "point": [
     74.4,
     5.2,
@@ -1104,8 +1117,8 @@
    "area": "A-2000",
    "equipment": "MMF-2001",
    "line": "MMF-2001 backwash header 1",
-   "lineId": "LINE-1591",
-   "partId": 107022,
+   "lineId": "LINE-1539",
+   "partId": 104939,
    "point": [
     67.2,
     5.2,
@@ -1117,8 +1130,8 @@
    "area": "A-2000",
    "equipment": "MMF-2001",
    "line": "MMF-2001 backwash header 1",
-   "lineId": "LINE-1591",
-   "partId": 107022,
+   "lineId": "LINE-1539",
+   "partId": 104939,
    "point": [
     69.6,
     5.2,
@@ -1130,8 +1143,8 @@
    "area": "A-2000",
    "equipment": "MMF-2001",
    "line": "MMF-2001 filtrate branch 0",
-   "lineId": "LINE-1593",
-   "partId": 107040,
+   "lineId": "LINE-1541",
+   "partId": 104957,
    "point": [
     65.6,
     1.5,
@@ -1143,8 +1156,8 @@
    "area": "A-2000",
    "equipment": "MMF-2001",
    "line": "MMF-2001 to GF-2001",
-   "lineId": "LINE-1621",
-   "partId": 107578,
+   "lineId": "LINE-1569",
+   "partId": 105495,
    "point": [
     65.6,
     2.26,
@@ -1156,8 +1169,8 @@
    "area": "A-2000",
    "equipment": "MMF-2001",
    "line": "MMF-2001 to GF-2001",
-   "lineId": "LINE-1621",
-   "partId": 107578,
+   "lineId": "LINE-1569",
+   "partId": 105495,
    "point": [
     65.6,
     3.78,
@@ -1169,8 +1182,8 @@
    "area": "A-2000",
    "equipment": "CIP-2001",
    "line": "RO cleaning return to CIP-2001",
-   "lineId": "LINE-2069",
-   "partId": 116587,
+   "lineId": "LINE-2017",
+   "partId": 114500,
    "point": [
     81.6,
     5.3,
@@ -1182,8 +1195,8 @@
    "area": "A-2000",
    "equipment": "CIP-2001",
    "line": "RO cleaning return to CIP-2001",
-   "lineId": "LINE-2069",
-   "partId": 116587,
+   "lineId": "LINE-2017",
+   "partId": 114500,
    "point": [
     79.2,
     5.3,
@@ -1195,8 +1208,8 @@
    "area": "A-2000",
    "equipment": "CIP-2001",
    "line": "RO cleaning return to CIP-2001",
-   "lineId": "LINE-2069",
-   "partId": 116587,
+   "lineId": "LINE-2017",
+   "partId": 114500,
    "point": [
     84,
     5.3,
@@ -1208,8 +1221,8 @@
    "area": "A-2000",
    "equipment": "CIP-2001",
    "line": "RO cleaning return to CIP-2001",
-   "lineId": "LINE-2069",
-   "partId": 116587,
+   "lineId": "LINE-2017",
+   "partId": 114500,
    "point": [
     88.8,
     5.3,
@@ -1221,8 +1234,8 @@
    "area": "A-2000",
    "equipment": "CIP-2001",
    "line": "RO cleaning return to CIP-2001",
-   "lineId": "LINE-2069",
-   "partId": 116587,
+   "lineId": "LINE-2017",
+   "partId": 114500,
    "point": [
     86.4,
     5.3,
@@ -1234,8 +1247,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO concentrate to T-2003",
-   "lineId": "LINE-2049",
-   "partId": 115591,
+   "lineId": "LINE-1997",
+   "partId": 113504,
    "point": [
     81.6,
     4.9,
@@ -1247,8 +1260,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO concentrate to T-2003",
-   "lineId": "LINE-2049",
-   "partId": 115591,
+   "lineId": "LINE-1997",
+   "partId": 113504,
    "point": [
     79.2,
     4.9,
@@ -1260,8 +1273,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO concentrate to T-2003",
-   "lineId": "LINE-2049",
-   "partId": 115591,
+   "lineId": "LINE-1997",
+   "partId": 113504,
    "point": [
     84,
     4.9,
@@ -1273,8 +1286,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO concentrate to T-2003",
-   "lineId": "LINE-2049",
-   "partId": 115591,
+   "lineId": "LINE-1997",
+   "partId": 113504,
    "point": [
     88.8,
     4.9,
@@ -1286,8 +1299,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO concentrate to T-2003",
-   "lineId": "LINE-2049",
-   "partId": 115591,
+   "lineId": "LINE-1997",
+   "partId": 113504,
    "point": [
     86.4,
     4.9,
@@ -1299,8 +1312,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO concentrate to T-2003",
-   "lineId": "LINE-2049",
-   "partId": 115595,
+   "lineId": "LINE-1997",
+   "partId": 113508,
    "point": [
     96.55,
     5.727,
@@ -1312,8 +1325,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO off-spec recycle to T-2001",
-   "lineId": "LINE-2048",
-   "partId": 115578,
+   "lineId": "LINE-1996",
+   "partId": 113491,
    "point": [
     66.55,
     10.007,
@@ -1325,8 +1338,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO off-spec recycle to T-2001",
-   "lineId": "LINE-2048",
-   "partId": 115578,
+   "lineId": "LINE-1996",
+   "partId": 113491,
    "point": [
     66.55,
     7.942,
@@ -1338,8 +1351,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO off-spec recycle to T-2001",
-   "lineId": "LINE-2048",
-   "partId": 115578,
+   "lineId": "LINE-1996",
+   "partId": 113491,
    "point": [
     66.55,
     5.877,
@@ -1351,8 +1364,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO off-spec recycle to T-2001",
-   "lineId": "LINE-2048",
-   "partId": 115578,
+   "lineId": "LINE-1996",
+   "partId": 113491,
    "point": [
     66.55,
     3.812,
@@ -1364,8 +1377,8 @@
    "area": "A-2000",
    "equipment": "P-2002",
    "line": "RO train B feed",
-   "lineId": "LINE-1887",
-   "partId": 111717,
+   "lineId": "LINE-1835",
+   "partId": 109630,
    "point": [
     79.2,
     1.5,
@@ -1377,8 +1390,8 @@
    "area": "A-2000",
    "equipment": "P-2002",
    "line": "RO train B feed",
-   "lineId": "LINE-1887",
-   "partId": 111717,
+   "lineId": "LINE-1835",
+   "partId": 109630,
    "point": [
     81.6,
     1.5,
@@ -1390,8 +1403,8 @@
    "area": "A-2000",
    "equipment": "P-2002",
    "line": "RO train B feed",
-   "lineId": "LINE-1887",
-   "partId": 111717,
+   "lineId": "LINE-1835",
+   "partId": 109630,
    "point": [
     83.899,
     1.5,
@@ -1403,8 +1416,8 @@
    "area": "A-2000",
    "equipment": "P-2002",
    "line": "RO train C feed",
-   "lineId": "LINE-1968",
-   "partId": 113678,
+   "lineId": "LINE-1916",
+   "partId": 111591,
    "point": [
     79.2,
     1.5,
@@ -1416,8 +1429,8 @@
    "area": "A-2000",
    "equipment": "P-2002",
    "line": "RO train C feed",
-   "lineId": "LINE-1968",
-   "partId": 113678,
+   "lineId": "LINE-1916",
+   "partId": 111591,
    "point": [
     81.6,
     1.5,
@@ -1429,8 +1442,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A CIP feed branch",
-   "lineId": "LINE-1875",
-   "partId": 111410,
+   "lineId": "LINE-1823",
+   "partId": 109323,
    "point": [
     79.2,
     4.1,
@@ -1442,8 +1455,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A CIP return header",
-   "lineId": "LINE-1878",
-   "partId": 111487,
+   "lineId": "LINE-1826",
+   "partId": 109400,
    "point": [
     81.6,
     5.3,
@@ -1455,8 +1468,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A CIP return header",
-   "lineId": "LINE-1878",
-   "partId": 111487,
+   "lineId": "LINE-1826",
+   "partId": 109400,
    "point": [
     79.2,
     5.3,
@@ -1468,8 +1481,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A concentrate collection",
-   "lineId": "LINE-1872",
-   "partId": 111372,
+   "lineId": "LINE-1820",
+   "partId": 109285,
    "point": [
     81.6,
     4.9,
@@ -1481,8 +1494,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A concentrate collection",
-   "lineId": "LINE-1872",
-   "partId": 111372,
+   "lineId": "LINE-1820",
+   "partId": 109285,
    "point": [
     79.2,
     4.9,
@@ -1494,8 +1507,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A relief to concentrate tank",
-   "lineId": "LINE-1883",
-   "partId": 111538,
+   "lineId": "LINE-1831",
+   "partId": 109451,
    "point": [
     88.8,
     6,
@@ -1507,8 +1520,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A relief to concentrate tank",
-   "lineId": "LINE-1883",
-   "partId": 111538,
+   "lineId": "LINE-1831",
+   "partId": 109451,
    "point": [
     91.2,
     6,
@@ -1520,8 +1533,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A relief to concentrate tank",
-   "lineId": "LINE-1883",
-   "partId": 111540,
+   "lineId": "LINE-1831",
+   "partId": 109453,
    "point": [
     96,
     5.235,
@@ -1533,8 +1546,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A relief to concentrate tank",
-   "lineId": "LINE-1883",
-   "partId": 111539,
+   "lineId": "LINE-1831",
+   "partId": 109452,
    "point": [
     95,
     6,
@@ -1546,8 +1559,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A relief to concentrate tank",
-   "lineId": "LINE-1883",
-   "partId": 111538,
+   "lineId": "LINE-1831",
+   "partId": 109451,
    "point": [
     93.6,
     6,
@@ -1559,8 +1572,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A relief to concentrate tank",
-   "lineId": "LINE-1883",
-   "partId": 111539,
+   "lineId": "LINE-1831",
+   "partId": 109452,
    "point": [
     95,
     6,
@@ -1572,8 +1585,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 1 concentrate",
-   "lineId": "LINE-1814",
-   "partId": 110095,
+   "lineId": "LINE-1762",
+   "partId": 108008,
    "point": [
     81.6,
     3.8,
@@ -1585,8 +1598,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 1 concentrate",
-   "lineId": "LINE-1814",
-   "partId": 110094,
+   "lineId": "LINE-1762",
+   "partId": 108007,
    "point": [
     80.4,
     2.955,
@@ -1598,8 +1611,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 1 permeate",
-   "lineId": "LINE-1815",
-   "partId": 110099,
+   "lineId": "LINE-1763",
+   "partId": 108012,
    "point": [
     80.6,
     2.73,
@@ -1611,8 +1624,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 2 concentrate",
-   "lineId": "LINE-1819",
-   "partId": 110207,
+   "lineId": "LINE-1767",
+   "partId": 108120,
    "point": [
     81.6,
     3.8,
@@ -1624,8 +1637,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 2 concentrate",
-   "lineId": "LINE-1819",
-   "partId": 110206,
+   "lineId": "LINE-1767",
+   "partId": 108119,
    "point": [
     80.4,
     2.62,
@@ -1637,8 +1650,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 2 permeate",
-   "lineId": "LINE-1820",
-   "partId": 110211,
+   "lineId": "LINE-1768",
+   "partId": 108124,
    "point": [
     80.6,
     2.47,
@@ -1650,8 +1663,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 3 concentrate",
-   "lineId": "LINE-1824",
-   "partId": 110319,
+   "lineId": "LINE-1772",
+   "partId": 108232,
    "point": [
     81.6,
     3.8,
@@ -1663,8 +1676,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 3 concentrate",
-   "lineId": "LINE-1824",
-   "partId": 110318,
+   "lineId": "LINE-1772",
+   "partId": 108231,
    "point": [
     80.4,
     2.97,
@@ -1676,8 +1689,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 4 concentrate",
-   "lineId": "LINE-1829",
-   "partId": 110431,
+   "lineId": "LINE-1777",
+   "partId": 108344,
    "point": [
     81.6,
     3.8,
@@ -1689,8 +1702,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 5 concentrate",
-   "lineId": "LINE-1834",
-   "partId": 110543,
+   "lineId": "LINE-1782",
+   "partId": 108456,
    "point": [
     81.6,
     3.8,
@@ -1702,8 +1715,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 5 concentrate",
-   "lineId": "LINE-1834",
-   "partId": 110542,
+   "lineId": "LINE-1782",
+   "partId": 108455,
    "point": [
     81,
     1.585,
@@ -1715,8 +1728,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 5 concentrate",
-   "lineId": "LINE-1834",
-   "partId": 110542,
+   "lineId": "LINE-1782",
+   "partId": 108455,
    "point": [
     81,
     2.955,
@@ -1728,8 +1741,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 5 permeate",
-   "lineId": "LINE-1835",
-   "partId": 110547,
+   "lineId": "LINE-1783",
+   "partId": 108460,
    "point": [
     81.2,
     2.73,
@@ -1741,8 +1754,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 5 permeate",
-   "lineId": "LINE-1835",
-   "partId": 110548,
+   "lineId": "LINE-1783",
+   "partId": 108461,
    "point": [
     80.295,
     3.5,
@@ -1754,8 +1767,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 6 concentrate",
-   "lineId": "LINE-1839",
-   "partId": 110655,
+   "lineId": "LINE-1787",
+   "partId": 108568,
    "point": [
     81.6,
     3.8,
@@ -1767,8 +1780,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 6 concentrate",
-   "lineId": "LINE-1839",
-   "partId": 110654,
+   "lineId": "LINE-1787",
+   "partId": 108567,
    "point": [
     81,
     2.62,
@@ -1780,8 +1793,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 6 permeate",
-   "lineId": "LINE-1840",
-   "partId": 110659,
+   "lineId": "LINE-1788",
+   "partId": 108572,
    "point": [
     81.2,
     2.47,
@@ -1793,8 +1806,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 6 permeate",
-   "lineId": "LINE-1840",
-   "partId": 110660,
+   "lineId": "LINE-1788",
+   "partId": 108573,
    "point": [
     80.295,
     3.5,
@@ -1806,8 +1819,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 7 concentrate",
-   "lineId": "LINE-1844",
-   "partId": 110767,
+   "lineId": "LINE-1792",
+   "partId": 108680,
    "point": [
     81.6,
     3.8,
@@ -1819,8 +1832,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 7 concentrate",
-   "lineId": "LINE-1844",
-   "partId": 110766,
+   "lineId": "LINE-1792",
+   "partId": 108679,
    "point": [
     81,
     2.97,
@@ -1832,8 +1845,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 7 permeate",
-   "lineId": "LINE-1845",
-   "partId": 110772,
+   "lineId": "LINE-1793",
+   "partId": 108685,
    "point": [
     80.295,
     3.5,
@@ -1845,8 +1858,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 8 concentrate",
-   "lineId": "LINE-1849",
-   "partId": 110879,
+   "lineId": "LINE-1797",
+   "partId": 108792,
    "point": [
     81.6,
     3.8,
@@ -1858,8 +1871,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 8 feed",
-   "lineId": "LINE-1848",
-   "partId": 110873,
+   "lineId": "LINE-1796",
+   "partId": 108786,
    "point": [
     80.281,
     2.8,
@@ -1871,8 +1884,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 8 permeate",
-   "lineId": "LINE-1850",
-   "partId": 110884,
+   "lineId": "LINE-1798",
+   "partId": 108797,
    "point": [
     80.295,
     3.5,
@@ -1884,8 +1897,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 9 concentrate",
-   "lineId": "LINE-1854",
-   "partId": 110990,
+   "lineId": "LINE-1802",
+   "partId": 108903,
    "point": [
     81.6,
     2.955,
@@ -1897,8 +1910,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 9 feed",
-   "lineId": "LINE-1853",
-   "partId": 110986,
+   "lineId": "LINE-1801",
+   "partId": 108899,
    "point": [
     81.6,
     2.955,
@@ -1910,8 +1923,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 9 permeate",
-   "lineId": "LINE-1855",
-   "partId": 110996,
+   "lineId": "LINE-1803",
+   "partId": 108909,
    "point": [
     81,
     3.5,
@@ -1923,8 +1936,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 9 permeate",
-   "lineId": "LINE-1855",
-   "partId": 110995,
+   "lineId": "LINE-1803",
+   "partId": 108908,
    "point": [
     81.8,
     2.73,
@@ -1936,8 +1949,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 10 concentrate",
-   "lineId": "LINE-1859",
-   "partId": 111102,
+   "lineId": "LINE-1807",
+   "partId": 109015,
    "point": [
     81.6,
     2.62,
@@ -1949,8 +1962,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 10 feed",
-   "lineId": "LINE-1858",
-   "partId": 111098,
+   "lineId": "LINE-1806",
+   "partId": 109011,
    "point": [
     81.6,
     2.62,
@@ -1962,8 +1975,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 10 permeate",
-   "lineId": "LINE-1860",
-   "partId": 111108,
+   "lineId": "LINE-1808",
+   "partId": 109021,
    "point": [
     81,
     3.5,
@@ -1975,8 +1988,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 10 permeate",
-   "lineId": "LINE-1860",
-   "partId": 111107,
+   "lineId": "LINE-1808",
+   "partId": 109020,
    "point": [
     81.8,
     2.47,
@@ -1988,8 +2001,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 11 concentrate",
-   "lineId": "LINE-1864",
-   "partId": 111214,
+   "lineId": "LINE-1812",
+   "partId": 109127,
    "point": [
     81.6,
     2.97,
@@ -2001,8 +2014,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 11 feed",
-   "lineId": "LINE-1863",
-   "partId": 111210,
+   "lineId": "LINE-1811",
+   "partId": 109123,
    "point": [
     81.6,
     2.97,
@@ -2014,8 +2027,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 11 permeate",
-   "lineId": "LINE-1865",
-   "partId": 111220,
+   "lineId": "LINE-1813",
+   "partId": 109133,
    "point": [
     81,
     3.5,
@@ -2027,8 +2040,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001A vessel 12 permeate",
-   "lineId": "LINE-1870",
-   "partId": 111332,
+   "lineId": "LINE-1818",
+   "partId": 109245,
    "point": [
     81,
     3.5,
@@ -2040,8 +2053,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B CIP feed branch",
-   "lineId": "LINE-1956",
-   "partId": 113371,
+   "lineId": "LINE-1904",
+   "partId": 111284,
    "point": [
     81.6,
     4.1,
@@ -2053,8 +2066,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B CIP feed branch",
-   "lineId": "LINE-1956",
-   "partId": 113371,
+   "lineId": "LINE-1904",
+   "partId": 111284,
    "point": [
     79.2,
     4.1,
@@ -2066,8 +2079,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B CIP feed branch",
-   "lineId": "LINE-1956",
-   "partId": 113371,
+   "lineId": "LINE-1904",
+   "partId": 111284,
    "point": [
     84,
     4.1,
@@ -2079,8 +2092,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B CIP permeate header",
-   "lineId": "LINE-1961",
-   "partId": 113485,
+   "lineId": "LINE-1909",
+   "partId": 111398,
    "point": [
     81.6,
     5.6,
@@ -2092,8 +2105,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B CIP permeate header",
-   "lineId": "LINE-1961",
-   "partId": 113485,
+   "lineId": "LINE-1909",
+   "partId": 111398,
    "point": [
     79.348,
     5.6,
@@ -2105,8 +2118,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B CIP permeate header",
-   "lineId": "LINE-1961",
-   "partId": 113485,
+   "lineId": "LINE-1909",
+   "partId": 111398,
    "point": [
     83.85,
     5.6,
@@ -2118,8 +2131,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B CIP return header",
-   "lineId": "LINE-1959",
-   "partId": 113448,
+   "lineId": "LINE-1907",
+   "partId": 111361,
    "point": [
     81.6,
     5.3,
@@ -2131,8 +2144,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B CIP return header",
-   "lineId": "LINE-1959",
-   "partId": 113448,
+   "lineId": "LINE-1907",
+   "partId": 111361,
    "point": [
     79.2,
     5.3,
@@ -2144,8 +2157,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B CIP return header",
-   "lineId": "LINE-1959",
-   "partId": 113448,
+   "lineId": "LINE-1907",
+   "partId": 111361,
    "point": [
     84,
     5.3,
@@ -2157,8 +2170,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B CIP return header",
-   "lineId": "LINE-1959",
-   "partId": 113448,
+   "lineId": "LINE-1907",
+   "partId": 111361,
    "point": [
     86.4,
     5.3,
@@ -2170,8 +2183,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B concentrate collection",
-   "lineId": "LINE-1953",
-   "partId": 113333,
+   "lineId": "LINE-1901",
+   "partId": 111246,
    "point": [
     81.6,
     4.9,
@@ -2183,8 +2196,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B concentrate collection",
-   "lineId": "LINE-1953",
-   "partId": 113333,
+   "lineId": "LINE-1901",
+   "partId": 111246,
    "point": [
     79.2,
     4.9,
@@ -2196,8 +2209,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B concentrate collection",
-   "lineId": "LINE-1953",
-   "partId": 113333,
+   "lineId": "LINE-1901",
+   "partId": 111246,
    "point": [
     84,
     4.9,
@@ -2209,8 +2222,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B concentrate collection",
-   "lineId": "LINE-1953",
-   "partId": 113333,
+   "lineId": "LINE-1901",
+   "partId": 111246,
    "point": [
     86.4,
     4.9,
@@ -2222,8 +2235,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B permeate collection",
-   "lineId": "LINE-1955",
-   "partId": 113370,
+   "lineId": "LINE-1903",
+   "partId": 111283,
    "point": [
     81.6,
     4.5,
@@ -2235,8 +2248,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B permeate collection",
-   "lineId": "LINE-1955",
-   "partId": 113370,
+   "lineId": "LINE-1903",
+   "partId": 111283,
    "point": [
     79.2,
     4.5,
@@ -2248,8 +2261,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B permeate collection",
-   "lineId": "LINE-1955",
-   "partId": 113370,
+   "lineId": "LINE-1903",
+   "partId": 111283,
    "point": [
     83.85,
     4.5,
@@ -2261,8 +2274,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B relief to concentrate tank",
-   "lineId": "LINE-1964",
-   "partId": 113499,
+   "lineId": "LINE-1912",
+   "partId": 111412,
    "point": [
     88.8,
     6,
@@ -2274,8 +2287,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B relief to concentrate tank",
-   "lineId": "LINE-1964",
-   "partId": 113499,
+   "lineId": "LINE-1912",
+   "partId": 111412,
    "point": [
     91.2,
     6,
@@ -2287,8 +2300,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B relief to concentrate tank",
-   "lineId": "LINE-1964",
-   "partId": 113501,
+   "lineId": "LINE-1912",
+   "partId": 111414,
    "point": [
     96,
     5.235,
@@ -2300,8 +2313,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B relief to concentrate tank",
-   "lineId": "LINE-1964",
-   "partId": 113500,
+   "lineId": "LINE-1912",
+   "partId": 111413,
    "point": [
     95,
     6,
@@ -2313,8 +2326,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B relief to concentrate tank",
-   "lineId": "LINE-1964",
-   "partId": 113499,
+   "lineId": "LINE-1912",
+   "partId": 111412,
    "point": [
     93.6,
     6,
@@ -2326,8 +2339,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B relief to concentrate tank",
-   "lineId": "LINE-1964",
-   "partId": 113500,
+   "lineId": "LINE-1912",
+   "partId": 111413,
    "point": [
     95,
     6,
@@ -2339,8 +2352,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 1 concentrate",
-   "lineId": "LINE-1895",
-   "partId": 112056,
+   "lineId": "LINE-1843",
+   "partId": 109969,
    "point": [
     86.4,
     3.8,
@@ -2352,8 +2365,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 1 concentrate",
-   "lineId": "LINE-1895",
-   "partId": 112055,
+   "lineId": "LINE-1843",
+   "partId": 109968,
    "point": [
     84.9,
     2.955,
@@ -2365,8 +2378,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 1 permeate",
-   "lineId": "LINE-1896",
-   "partId": 112060,
+   "lineId": "LINE-1844",
+   "partId": 109973,
    "point": [
     85.1,
     2.73,
@@ -2378,8 +2391,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 2 concentrate",
-   "lineId": "LINE-1900",
-   "partId": 112168,
+   "lineId": "LINE-1848",
+   "partId": 110081,
    "point": [
     86.4,
     3.8,
@@ -2391,8 +2404,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 2 concentrate",
-   "lineId": "LINE-1900",
-   "partId": 112167,
+   "lineId": "LINE-1848",
+   "partId": 110080,
    "point": [
     84.9,
     2.62,
@@ -2404,8 +2417,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 2 permeate",
-   "lineId": "LINE-1901",
-   "partId": 112172,
+   "lineId": "LINE-1849",
+   "partId": 110085,
    "point": [
     85.1,
     2.47,
@@ -2417,8 +2430,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 3 concentrate",
-   "lineId": "LINE-1905",
-   "partId": 112280,
+   "lineId": "LINE-1853",
+   "partId": 110193,
    "point": [
     86.4,
     3.8,
@@ -2430,8 +2443,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 3 concentrate",
-   "lineId": "LINE-1905",
-   "partId": 112279,
+   "lineId": "LINE-1853",
+   "partId": 110192,
    "point": [
     84.9,
     2.97,
@@ -2443,8 +2456,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 4 concentrate",
-   "lineId": "LINE-1910",
-   "partId": 112392,
+   "lineId": "LINE-1858",
+   "partId": 110305,
    "point": [
     86.4,
     3.8,
@@ -2456,8 +2469,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 5 concentrate",
-   "lineId": "LINE-1915",
-   "partId": 112504,
+   "lineId": "LINE-1863",
+   "partId": 110417,
    "point": [
     86.4,
     3.8,
@@ -2469,8 +2482,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 5 concentrate",
-   "lineId": "LINE-1915",
-   "partId": 112503,
+   "lineId": "LINE-1863",
+   "partId": 110416,
    "point": [
     85.5,
     1.585,
@@ -2482,8 +2495,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 5 concentrate",
-   "lineId": "LINE-1915",
-   "partId": 112503,
+   "lineId": "LINE-1863",
+   "partId": 110416,
    "point": [
     85.5,
     2.955,
@@ -2495,8 +2508,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 5 permeate",
-   "lineId": "LINE-1916",
-   "partId": 112509,
+   "lineId": "LINE-1864",
+   "partId": 110422,
    "point": [
     84.6,
     3.5,
@@ -2508,8 +2521,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 5 permeate",
-   "lineId": "LINE-1916",
-   "partId": 112508,
+   "lineId": "LINE-1864",
+   "partId": 110421,
    "point": [
     85.7,
     2.73,
@@ -2521,8 +2534,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 6 concentrate",
-   "lineId": "LINE-1920",
-   "partId": 112616,
+   "lineId": "LINE-1868",
+   "partId": 110529,
    "point": [
     86.4,
     3.8,
@@ -2534,8 +2547,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 6 concentrate",
-   "lineId": "LINE-1920",
-   "partId": 112615,
+   "lineId": "LINE-1868",
+   "partId": 110528,
    "point": [
     85.5,
     2.62,
@@ -2547,8 +2560,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 6 permeate",
-   "lineId": "LINE-1921",
-   "partId": 112621,
+   "lineId": "LINE-1869",
+   "partId": 110534,
    "point": [
     84.6,
     3.5,
@@ -2560,8 +2573,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 6 permeate",
-   "lineId": "LINE-1921",
-   "partId": 112620,
+   "lineId": "LINE-1869",
+   "partId": 110533,
    "point": [
     85.7,
     2.47,
@@ -2573,8 +2586,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 7 concentrate",
-   "lineId": "LINE-1925",
-   "partId": 112728,
+   "lineId": "LINE-1873",
+   "partId": 110641,
    "point": [
     86.4,
     3.8,
@@ -2586,8 +2599,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 7 concentrate",
-   "lineId": "LINE-1925",
-   "partId": 112727,
+   "lineId": "LINE-1873",
+   "partId": 110640,
    "point": [
     85.5,
     2.97,
@@ -2599,8 +2612,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 7 permeate",
-   "lineId": "LINE-1926",
-   "partId": 112733,
+   "lineId": "LINE-1874",
+   "partId": 110646,
    "point": [
     84.6,
     3.5,
@@ -2612,8 +2625,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 8 concentrate",
-   "lineId": "LINE-1930",
-   "partId": 112840,
+   "lineId": "LINE-1878",
+   "partId": 110753,
    "point": [
     86.4,
     3.8,
@@ -2625,8 +2638,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 8 feed",
-   "lineId": "LINE-1929",
-   "partId": 112834,
+   "lineId": "LINE-1877",
+   "partId": 110747,
    "point": [
     84.781,
     2.8,
@@ -2638,8 +2651,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 8 permeate",
-   "lineId": "LINE-1931",
-   "partId": 112845,
+   "lineId": "LINE-1879",
+   "partId": 110758,
    "point": [
     84.6,
     3.5,
@@ -2651,8 +2664,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 9 concentrate",
-   "lineId": "LINE-1935",
-   "partId": 112951,
+   "lineId": "LINE-1883",
+   "partId": 110864,
    "point": [
     86.1,
     2.955,
@@ -2664,8 +2677,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 9 feed",
-   "lineId": "LINE-1934",
-   "partId": 112947,
+   "lineId": "LINE-1882",
+   "partId": 110860,
    "point": [
     86.1,
     2.955,
@@ -2677,8 +2690,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 9 permeate",
-   "lineId": "LINE-1936",
-   "partId": 112957,
+   "lineId": "LINE-1884",
+   "partId": 110870,
    "point": [
     84.6,
     3.5,
@@ -2690,8 +2703,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 9 permeate",
-   "lineId": "LINE-1936",
-   "partId": 112956,
+   "lineId": "LINE-1884",
+   "partId": 110869,
    "point": [
     86.3,
     2.73,
@@ -2703,8 +2716,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 10 concentrate",
-   "lineId": "LINE-1940",
-   "partId": 113063,
+   "lineId": "LINE-1888",
+   "partId": 110976,
    "point": [
     86.1,
     2.62,
@@ -2716,8 +2729,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 10 feed",
-   "lineId": "LINE-1939",
-   "partId": 113059,
+   "lineId": "LINE-1887",
+   "partId": 110972,
    "point": [
     86.1,
     2.62,
@@ -2729,8 +2742,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 10 permeate",
-   "lineId": "LINE-1941",
-   "partId": 113069,
+   "lineId": "LINE-1889",
+   "partId": 110982,
    "point": [
     84.6,
     3.5,
@@ -2742,8 +2755,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 10 permeate",
-   "lineId": "LINE-1941",
-   "partId": 113068,
+   "lineId": "LINE-1889",
+   "partId": 110981,
    "point": [
     86.3,
     2.47,
@@ -2755,8 +2768,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 11 concentrate",
-   "lineId": "LINE-1945",
-   "partId": 113175,
+   "lineId": "LINE-1893",
+   "partId": 111088,
    "point": [
     86.1,
     2.97,
@@ -2768,8 +2781,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 11 feed",
-   "lineId": "LINE-1944",
-   "partId": 113171,
+   "lineId": "LINE-1892",
+   "partId": 111084,
    "point": [
     86.1,
     2.97,
@@ -2781,8 +2794,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 11 permeate",
-   "lineId": "LINE-1946",
-   "partId": 113181,
+   "lineId": "LINE-1894",
+   "partId": 111094,
    "point": [
     84.6,
     3.5,
@@ -2794,8 +2807,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001B vessel 12 permeate",
-   "lineId": "LINE-1951",
-   "partId": 113293,
+   "lineId": "LINE-1899",
+   "partId": 111206,
    "point": [
     84.6,
     3.5,
@@ -2807,8 +2820,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C CIP feed branch",
-   "lineId": "LINE-2037",
-   "partId": 115332,
+   "lineId": "LINE-1985",
+   "partId": 113245,
    "point": [
     81.6,
     4.1,
@@ -2820,8 +2833,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C CIP feed branch",
-   "lineId": "LINE-2037",
-   "partId": 115332,
+   "lineId": "LINE-1985",
+   "partId": 113245,
    "point": [
     79.2,
     4.1,
@@ -2833,8 +2846,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C CIP feed branch",
-   "lineId": "LINE-2037",
-   "partId": 115332,
+   "lineId": "LINE-1985",
+   "partId": 113245,
    "point": [
     84,
     4.1,
@@ -2846,8 +2859,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C CIP permeate header",
-   "lineId": "LINE-2042",
-   "partId": 115446,
+   "lineId": "LINE-1990",
+   "partId": 113359,
    "point": [
     81.6,
     5.6,
@@ -2859,8 +2872,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C CIP permeate header",
-   "lineId": "LINE-2042",
-   "partId": 115446,
+   "lineId": "LINE-1990",
+   "partId": 113359,
    "point": [
     79.348,
     5.6,
@@ -2872,8 +2885,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C CIP return header",
-   "lineId": "LINE-2040",
-   "partId": 115409,
+   "lineId": "LINE-1988",
+   "partId": 113322,
    "point": [
     81.6,
     5.3,
@@ -2885,8 +2898,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C CIP return header",
-   "lineId": "LINE-2040",
-   "partId": 115409,
+   "lineId": "LINE-1988",
+   "partId": 113322,
    "point": [
     79.2,
     5.3,
@@ -2898,8 +2911,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C CIP return header",
-   "lineId": "LINE-2040",
-   "partId": 115409,
+   "lineId": "LINE-1988",
+   "partId": 113322,
    "point": [
     84,
     5.3,
@@ -2911,8 +2924,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C CIP return header",
-   "lineId": "LINE-2040",
-   "partId": 115409,
+   "lineId": "LINE-1988",
+   "partId": 113322,
    "point": [
     88.8,
     5.3,
@@ -2924,8 +2937,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C CIP return header",
-   "lineId": "LINE-2040",
-   "partId": 115409,
+   "lineId": "LINE-1988",
+   "partId": 113322,
    "point": [
     86.4,
     5.3,
@@ -2937,8 +2950,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C CIP return header",
-   "lineId": "LINE-2040",
-   "partId": 115409,
+   "lineId": "LINE-1988",
+   "partId": 113322,
    "point": [
     91.2,
     5.3,
@@ -2950,8 +2963,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C concentrate collection",
-   "lineId": "LINE-2034",
-   "partId": 115294,
+   "lineId": "LINE-1982",
+   "partId": 113207,
    "point": [
     81.6,
     4.9,
@@ -2963,8 +2976,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C concentrate collection",
-   "lineId": "LINE-2034",
-   "partId": 115294,
+   "lineId": "LINE-1982",
+   "partId": 113207,
    "point": [
     79.2,
     4.9,
@@ -2976,8 +2989,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C concentrate collection",
-   "lineId": "LINE-2034",
-   "partId": 115294,
+   "lineId": "LINE-1982",
+   "partId": 113207,
    "point": [
     84,
     4.9,
@@ -2989,8 +3002,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C concentrate collection",
-   "lineId": "LINE-2034",
-   "partId": 115294,
+   "lineId": "LINE-1982",
+   "partId": 113207,
    "point": [
     88.8,
     4.9,
@@ -3002,8 +3015,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C concentrate collection",
-   "lineId": "LINE-2034",
-   "partId": 115294,
+   "lineId": "LINE-1982",
+   "partId": 113207,
    "point": [
     86.4,
     4.9,
@@ -3015,8 +3028,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C concentrate collection",
-   "lineId": "LINE-2034",
-   "partId": 115294,
+   "lineId": "LINE-1982",
+   "partId": 113207,
    "point": [
     91.2,
     4.9,
@@ -3028,8 +3041,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C permeate collection",
-   "lineId": "LINE-2036",
-   "partId": 115331,
+   "lineId": "LINE-1984",
+   "partId": 113244,
    "point": [
     81.6,
     4.5,
@@ -3041,8 +3054,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C permeate collection",
-   "lineId": "LINE-2036",
-   "partId": 115331,
+   "lineId": "LINE-1984",
+   "partId": 113244,
    "point": [
     79.2,
     4.5,
@@ -3054,8 +3067,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C relief to concentrate tank",
-   "lineId": "LINE-2045",
-   "partId": 115462,
+   "lineId": "LINE-1993",
+   "partId": 113375,
    "point": [
     96,
     5.235,
@@ -3067,8 +3080,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C relief to concentrate tank",
-   "lineId": "LINE-2045",
-   "partId": 115461,
+   "lineId": "LINE-1993",
+   "partId": 113374,
    "point": [
     95,
     6,
@@ -3080,8 +3093,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C relief to concentrate tank",
-   "lineId": "LINE-2045",
-   "partId": 115460,
+   "lineId": "LINE-1993",
+   "partId": 113373,
    "point": [
     93.6,
     6,
@@ -3093,8 +3106,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C relief to concentrate tank",
-   "lineId": "LINE-2045",
-   "partId": 115461,
+   "lineId": "LINE-1993",
+   "partId": 113374,
    "point": [
     95,
     6,
@@ -3106,8 +3119,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 1 concentrate",
-   "lineId": "LINE-1976",
-   "partId": 114017,
+   "lineId": "LINE-1924",
+   "partId": 111930,
    "point": [
     91.2,
     3.8,
@@ -3119,8 +3132,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 1 concentrate",
-   "lineId": "LINE-1976",
-   "partId": 114016,
+   "lineId": "LINE-1924",
+   "partId": 111929,
    "point": [
     89.4,
     2.955,
@@ -3132,8 +3145,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 1 permeate",
-   "lineId": "LINE-1977",
-   "partId": 114021,
+   "lineId": "LINE-1925",
+   "partId": 111934,
    "point": [
     89.6,
     2.73,
@@ -3145,8 +3158,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 2 concentrate",
-   "lineId": "LINE-1981",
-   "partId": 114129,
+   "lineId": "LINE-1929",
+   "partId": 112042,
    "point": [
     91.2,
     3.8,
@@ -3158,8 +3171,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 2 concentrate",
-   "lineId": "LINE-1981",
-   "partId": 114128,
+   "lineId": "LINE-1929",
+   "partId": 112041,
    "point": [
     89.4,
     2.62,
@@ -3171,8 +3184,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 2 permeate",
-   "lineId": "LINE-1982",
-   "partId": 114133,
+   "lineId": "LINE-1930",
+   "partId": 112046,
    "point": [
     89.6,
     2.47,
@@ -3184,8 +3197,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 3 concentrate",
-   "lineId": "LINE-1986",
-   "partId": 114241,
+   "lineId": "LINE-1934",
+   "partId": 112154,
    "point": [
     91.2,
     3.8,
@@ -3197,8 +3210,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 3 concentrate",
-   "lineId": "LINE-1986",
-   "partId": 114240,
+   "lineId": "LINE-1934",
+   "partId": 112153,
    "point": [
     89.4,
     2.97,
@@ -3210,8 +3223,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 4 concentrate",
-   "lineId": "LINE-1991",
-   "partId": 114353,
+   "lineId": "LINE-1939",
+   "partId": 112266,
    "point": [
     91.2,
     3.8,
@@ -3223,8 +3236,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 5 concentrate",
-   "lineId": "LINE-1996",
-   "partId": 114465,
+   "lineId": "LINE-1944",
+   "partId": 112378,
    "point": [
     91.2,
     3.8,
@@ -3236,8 +3249,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 5 concentrate",
-   "lineId": "LINE-1996",
-   "partId": 114464,
+   "lineId": "LINE-1944",
+   "partId": 112377,
    "point": [
     90,
     1.585,
@@ -3249,8 +3262,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 5 concentrate",
-   "lineId": "LINE-1996",
-   "partId": 114464,
+   "lineId": "LINE-1944",
+   "partId": 112377,
    "point": [
     90,
     2.955,
@@ -3262,8 +3275,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 5 permeate",
-   "lineId": "LINE-1997",
-   "partId": 114470,
+   "lineId": "LINE-1945",
+   "partId": 112383,
    "point": [
     89.295,
     3.5,
@@ -3275,8 +3288,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 5 permeate",
-   "lineId": "LINE-1997",
-   "partId": 114469,
+   "lineId": "LINE-1945",
+   "partId": 112382,
    "point": [
     90.2,
     2.73,
@@ -3288,8 +3301,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 6 concentrate",
-   "lineId": "LINE-2001",
-   "partId": 114577,
+   "lineId": "LINE-1949",
+   "partId": 112490,
    "point": [
     91.2,
     3.8,
@@ -3301,8 +3314,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 6 concentrate",
-   "lineId": "LINE-2001",
-   "partId": 114576,
+   "lineId": "LINE-1949",
+   "partId": 112489,
    "point": [
     90,
     2.62,
@@ -3314,8 +3327,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 6 permeate",
-   "lineId": "LINE-2002",
-   "partId": 114582,
+   "lineId": "LINE-1950",
+   "partId": 112495,
    "point": [
     89.295,
     3.5,
@@ -3327,8 +3340,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 6 permeate",
-   "lineId": "LINE-2002",
-   "partId": 114581,
+   "lineId": "LINE-1950",
+   "partId": 112494,
    "point": [
     90.2,
     2.47,
@@ -3340,8 +3353,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 7 concentrate",
-   "lineId": "LINE-2006",
-   "partId": 114689,
+   "lineId": "LINE-1954",
+   "partId": 112602,
    "point": [
     91.2,
     3.8,
@@ -3353,8 +3366,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 7 concentrate",
-   "lineId": "LINE-2006",
-   "partId": 114688,
+   "lineId": "LINE-1954",
+   "partId": 112601,
    "point": [
     90,
     2.97,
@@ -3366,8 +3379,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 7 permeate",
-   "lineId": "LINE-2007",
-   "partId": 114694,
+   "lineId": "LINE-1955",
+   "partId": 112607,
    "point": [
     89.295,
     3.5,
@@ -3379,8 +3392,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 8 concentrate",
-   "lineId": "LINE-2011",
-   "partId": 114801,
+   "lineId": "LINE-1959",
+   "partId": 112714,
    "point": [
     91.2,
     3.8,
@@ -3392,8 +3405,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 8 feed",
-   "lineId": "LINE-2010",
-   "partId": 114795,
+   "lineId": "LINE-1958",
+   "partId": 112708,
    "point": [
     89.281,
     2.8,
@@ -3405,8 +3418,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 8 permeate",
-   "lineId": "LINE-2012",
-   "partId": 114806,
+   "lineId": "LINE-1960",
+   "partId": 112719,
    "point": [
     89.295,
     3.5,
@@ -3418,8 +3431,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 9 concentrate",
-   "lineId": "LINE-2016",
-   "partId": 114912,
+   "lineId": "LINE-1964",
+   "partId": 112825,
    "point": [
     90.6,
     2.955,
@@ -3431,8 +3444,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 9 feed",
-   "lineId": "LINE-2015",
-   "partId": 114908,
+   "lineId": "LINE-1963",
+   "partId": 112821,
    "point": [
     90.6,
     2.955,
@@ -3444,8 +3457,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 9 permeate",
-   "lineId": "LINE-2017",
-   "partId": 114917,
+   "lineId": "LINE-1965",
+   "partId": 112830,
    "point": [
     90.8,
     2.73,
@@ -3457,8 +3470,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 9 permeate",
-   "lineId": "LINE-2017",
-   "partId": 114918,
+   "lineId": "LINE-1965",
+   "partId": 112831,
    "point": [
     90,
     3.5,
@@ -3470,8 +3483,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 10 concentrate",
-   "lineId": "LINE-2021",
-   "partId": 115024,
+   "lineId": "LINE-1969",
+   "partId": 112937,
    "point": [
     90.6,
     2.62,
@@ -3483,8 +3496,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 10 feed",
-   "lineId": "LINE-2020",
-   "partId": 115020,
+   "lineId": "LINE-1968",
+   "partId": 112933,
    "point": [
     90.6,
     2.62,
@@ -3496,8 +3509,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 10 permeate",
-   "lineId": "LINE-2022",
-   "partId": 115029,
+   "lineId": "LINE-1970",
+   "partId": 112942,
    "point": [
     90.8,
     2.47,
@@ -3509,8 +3522,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 10 permeate",
-   "lineId": "LINE-2022",
-   "partId": 115030,
+   "lineId": "LINE-1970",
+   "partId": 112943,
    "point": [
     90,
     3.5,
@@ -3522,8 +3535,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 11 concentrate",
-   "lineId": "LINE-2026",
-   "partId": 115136,
+   "lineId": "LINE-1974",
+   "partId": 113049,
    "point": [
     90.6,
     2.97,
@@ -3535,8 +3548,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 11 feed",
-   "lineId": "LINE-2025",
-   "partId": 115132,
+   "lineId": "LINE-1973",
+   "partId": 113045,
    "point": [
     90.6,
     2.97,
@@ -3548,8 +3561,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 11 permeate",
-   "lineId": "LINE-2027",
-   "partId": 115142,
+   "lineId": "LINE-1975",
+   "partId": 113055,
    "point": [
     90,
     3.5,
@@ -3561,8 +3574,8 @@
    "area": "A-2000",
    "equipment": "RO-2001",
    "line": "RO-2001C vessel 12 permeate",
-   "lineId": "LINE-2032",
-   "partId": 115254,
+   "lineId": "LINE-1980",
+   "partId": 113167,
    "point": [
     90,
     3.5,
@@ -3574,8 +3587,8 @@
    "area": "A-2000",
    "equipment": "CF-2002",
    "line": "Stored off-spec water to T-2001",
-   "lineId": "LINE-2056",
-   "partId": 115804,
+   "lineId": "LINE-2004",
+   "partId": 113717,
    "point": [
     66.55,
     10.27,
@@ -3587,8 +3600,8 @@
    "area": "A-2000",
    "equipment": "CF-2002",
    "line": "Stored off-spec water to T-2001",
-   "lineId": "LINE-2056",
-   "partId": 115804,
+   "lineId": "LINE-2004",
+   "partId": 113717,
    "point": [
     66.55,
     8.13,
@@ -3600,8 +3613,8 @@
    "area": "A-2000",
    "equipment": "CF-2002",
    "line": "Stored off-spec water to T-2001",
-   "lineId": "LINE-2056",
-   "partId": 115804,
+   "lineId": "LINE-2004",
+   "partId": 113717,
    "point": [
     66.55,
     5.99,
@@ -3613,8 +3626,8 @@
    "area": "A-2000",
    "equipment": "CF-2002",
    "line": "Stored off-spec water to T-2001",
-   "lineId": "LINE-2056",
-   "partId": 115804,
+   "lineId": "LINE-2004",
+   "partId": 113717,
    "point": [
     66.55,
     3.85,
@@ -3626,8 +3639,8 @@
    "area": "A-2000",
    "equipment": "P-2005",
    "line": "T-2002 to P-2005",
-   "lineId": "LINE-2052",
-   "partId": 115714,
+   "lineId": "LINE-2000",
+   "partId": 113627,
    "point": [
     97,
     0.65,
@@ -3639,8 +3652,8 @@
    "area": "A-2000",
    "equipment": "P-2003",
    "line": "T-2003 to P-2003",
-   "lineId": "LINE-2050",
-   "partId": 115609,
+   "lineId": "LINE-1998",
+   "partId": 113522,
    "point": [
     98.4,
     0.65,
@@ -3652,8 +3665,8 @@
    "area": "A-2000",
    "equipment": "P-2003",
    "line": "T-2003 to P-2003",
-   "lineId": "LINE-2050",
-   "partId": 115608,
+   "lineId": "LINE-1998",
+   "partId": 113521,
    "point": [
     97,
     0.65,
@@ -3665,8 +3678,8 @@
    "area": "A-2000",
    "equipment": "TK-UF2001",
    "line": "UF clean filtrate backwash",
-   "lineId": "LINE-1793",
-   "partId": 109263,
+   "lineId": "LINE-1741",
+   "partId": 107180,
    "point": [
     82.83,
     1.5,
@@ -3678,8 +3691,21 @@
    "area": "A-3000",
    "equipment": "P-3111",
    "line": "P-3111 qualified return to T-1006",
-   "lineId": "LINE-1412",
-   "partId": 101290,
+   "lineId": "LINE-1363",
+   "partId": 99237,
+   "point": [
+    20.6,
+    9.959,
+    -5.7
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-3000",
+   "equipment": "P-3111",
+   "line": "P-3111 qualified return to T-1006",
+   "lineId": "LINE-1363",
+   "partId": 99237,
    "point": [
     20.6,
     8.598,
@@ -3691,8 +3717,8 @@
    "area": "A-3000",
    "equipment": "P-3183",
    "line": "P-3183 qualified return to T-1006",
-   "lineId": "LINE-1415",
-   "partId": 101426,
+   "lineId": "LINE-1366",
+   "partId": 99373,
    "point": [
     20.9,
     10.259,
@@ -3704,8 +3730,8 @@
    "area": "A-3000",
    "equipment": "P-3183",
    "line": "P-3183 qualified return to T-1006",
-   "lineId": "LINE-1415",
-   "partId": 101426,
+   "lineId": "LINE-1366",
+   "partId": 99373,
    "point": [
     20.9,
     8.698,
@@ -3717,8 +3743,8 @@
    "area": "A-4000",
    "equipment": "HD-4001",
    "line": "A-4000 to BL-IA201-D",
-   "lineId": "LINE-2196",
-   "partId": 118191,
+   "lineId": "LINE-2144",
+   "partId": 116104,
    "point": [
     4.76,
     12.15,
@@ -3730,8 +3756,8 @@
    "area": "A-4000",
    "equipment": "HD-4001",
    "line": "A-4000 to BL-IA201-D",
-   "lineId": "LINE-2196",
-   "partId": 118191,
+   "lineId": "LINE-2144",
+   "partId": 116104,
    "point": [
     4.76,
     12.15,
@@ -3743,8 +3769,8 @@
    "area": "A-4000",
    "equipment": "BL-PA4000",
    "line": "BL-PA4000 supply",
-   "lineId": "LINE-2197",
-   "partId": 118204,
+   "lineId": "LINE-2145",
+   "partId": 116117,
    "point": [
     -26.4,
     5.3,
@@ -3756,8 +3782,8 @@
    "area": "A-4000",
    "equipment": "BL-PA4000",
    "line": "BL-PA4000 supply",
-   "lineId": "LINE-2197",
-   "partId": 118204,
+   "lineId": "LINE-2145",
+   "partId": 116117,
    "point": [
     -24,
     5.3,
@@ -3769,8 +3795,8 @@
    "area": "A-4000",
    "equipment": "BL-PC4000",
    "line": "BL-PC4000 supply",
-   "lineId": "LINE-2200",
-   "partId": 118249,
+   "lineId": "LINE-2148",
+   "partId": 116162,
    "point": [
     -22.97,
     5.3,
@@ -3782,8 +3808,8 @@
    "area": "A-4000",
    "equipment": "TK-CD4001",
    "line": "D-4001A closed drain transfer",
-   "lineId": "LINE-2207",
-   "partId": 118324,
+   "lineId": "LINE-2155",
+   "partId": 116237,
    "point": [
     -24.3,
     0.12,
@@ -3795,8 +3821,8 @@
    "area": "A-4000",
    "equipment": "TK-CD4001",
    "line": "D-4001B closed drain transfer",
-   "lineId": "LINE-2212",
-   "partId": 118366,
+   "lineId": "LINE-2160",
+   "partId": 116279,
    "point": [
     -27,
     0.12,
@@ -3808,8 +3834,8 @@
    "area": "A-4000",
    "equipment": "TK-CD4001",
    "line": "D-4001B closed drain transfer",
-   "lineId": "LINE-2212",
-   "partId": 118366,
+   "lineId": "LINE-2160",
+   "partId": 116279,
    "point": [
     -25.2,
     0.12,
@@ -3821,8 +3847,8 @@
    "area": "A-4000",
    "equipment": "TK-CD4001",
    "line": "D-4001B closed drain transfer",
-   "lineId": "LINE-2212",
-   "partId": 118365,
+   "lineId": "LINE-2160",
+   "partId": 116278,
    "point": [
     -24.3,
     0.12,
@@ -3834,8 +3860,8 @@
    "area": "A-4000",
    "equipment": "HD-4001",
    "line": "HD-4001 loop section 0",
-   "lineId": "LINE-2168",
-   "partId": 118011,
+   "lineId": "LINE-2116",
+   "partId": 115924,
    "point": [
     -28.8,
     11.8,
@@ -3847,8 +3873,8 @@
    "area": "A-4000",
    "equipment": "HD-4001",
    "line": "HD-4001 loop section 0",
-   "lineId": "LINE-2168",
-   "partId": 118011,
+   "lineId": "LINE-2116",
+   "partId": 115924,
    "point": [
     -26.4,
     11.8,
@@ -3860,8 +3886,8 @@
    "area": "A-4000",
    "equipment": "HD-4001",
    "line": "HD-4001 loop section 0",
-   "lineId": "LINE-2168",
-   "partId": 118011,
+   "lineId": "LINE-2116",
+   "partId": 115924,
    "point": [
     -24,
     11.8,
@@ -3873,8 +3899,8 @@
    "area": "A-4000",
    "equipment": "HD-4001",
    "line": "HD-4001 loop section 0",
-   "lineId": "LINE-2168",
-   "partId": 118011,
+   "lineId": "LINE-2116",
+   "partId": 115924,
    "point": [
     -21.6,
     11.8,
@@ -3886,8 +3912,8 @@
    "area": "A-4000",
    "equipment": "HD-4001",
    "line": "HD-4001 loop section 0",
-   "lineId": "LINE-2168",
-   "partId": 118011,
+   "lineId": "LINE-2116",
+   "partId": 115924,
    "point": [
     -19.2,
     11.8,
@@ -3899,8 +3925,8 @@
    "area": "A-4000",
    "equipment": "HD-4001",
    "line": "HD-4001 loop section 0",
-   "lineId": "LINE-2168",
-   "partId": 118011,
+   "lineId": "LINE-2116",
+   "partId": 115924,
    "point": [
     -16.8,
     11.8,
@@ -3912,8 +3938,8 @@
    "area": "A-4000",
    "equipment": "HD-4001",
    "line": "HD-4001 loop section 0",
-   "lineId": "LINE-2168",
-   "partId": 118011,
+   "lineId": "LINE-2116",
+   "partId": 115924,
    "point": [
     -14.4,
     11.8,
@@ -3925,8 +3951,8 @@
    "area": "A-4000",
    "equipment": "HD-4001",
    "line": "HD-4001 loop section 0",
-   "lineId": "LINE-2168",
-   "partId": 118011,
+   "lineId": "LINE-2116",
+   "partId": 115924,
    "point": [
     -12,
     11.8,
@@ -3938,8 +3964,8 @@
    "area": "A-4000",
    "equipment": "HD-4001",
    "line": "HD-4001 loop section 4",
-   "lineId": "LINE-2180",
-   "partId": 118051,
+   "lineId": "LINE-2128",
+   "partId": 115964,
    "point": [
     -28.8,
     11.8,
@@ -3951,8 +3977,8 @@
    "area": "A-4000",
    "equipment": "HD-4001",
    "line": "HD-4001 loop section 4",
-   "lineId": "LINE-2180",
-   "partId": 118051,
+   "lineId": "LINE-2128",
+   "partId": 115964,
    "point": [
     -26.4,
     11.8,
@@ -3964,8 +3990,8 @@
    "area": "A-4000",
    "equipment": "HD-4001",
    "line": "HD-4001 loop section 4",
-   "lineId": "LINE-2180",
-   "partId": 118051,
+   "lineId": "LINE-2128",
+   "partId": 115964,
    "point": [
     -24,
     11.8,
@@ -3977,8 +4003,8 @@
    "area": "A-4000",
    "equipment": "HD-4001",
    "line": "HD-4001 loop section 4",
-   "lineId": "LINE-2180",
-   "partId": 118051,
+   "lineId": "LINE-2128",
+   "partId": 115964,
    "point": [
     -21.6,
     11.8,
@@ -3990,8 +4016,8 @@
    "area": "A-4000",
    "equipment": "HD-4001",
    "line": "HD-4001 loop section 4",
-   "lineId": "LINE-2180",
-   "partId": 118051,
+   "lineId": "LINE-2128",
+   "partId": 115964,
    "point": [
     -19.2,
     11.8,
@@ -4003,8 +4029,8 @@
    "area": "A-4000",
    "equipment": "HD-4001",
    "line": "HD-4001 loop section 4",
-   "lineId": "LINE-2180",
-   "partId": 118051,
+   "lineId": "LINE-2128",
+   "partId": 115964,
    "point": [
     -16.8,
     11.8,
@@ -4016,8 +4042,8 @@
    "area": "A-4000",
    "equipment": "HD-4001",
    "line": "HD-4001 loop section 4",
-   "lineId": "LINE-2180",
-   "partId": 118051,
+   "lineId": "LINE-2128",
+   "partId": 115964,
    "point": [
     -14.4,
     11.8,
@@ -4029,8 +4055,8 @@
    "area": "A-4000",
    "equipment": "HD-4001",
    "line": "HD-4001 loop section 4",
-   "lineId": "LINE-2180",
-   "partId": 118051,
+   "lineId": "LINE-2128",
+   "partId": 115964,
    "point": [
     -12,
     11.8,
@@ -4042,8 +4068,8 @@
    "area": "A-4000",
    "equipment": "TK-CD4001",
    "line": "T-4001 closed drain transfer",
-   "lineId": "LINE-2217",
-   "partId": 118407,
+   "lineId": "LINE-2165",
+   "partId": 116320,
    "point": [
     -27,
     0.07,
@@ -4055,8 +4081,8 @@
    "area": "A-5000",
    "equipment": "HD-5300",
    "line": "Chilled water supply riser",
-   "lineId": "LINE-2847",
-   "partId": 126589,
+   "lineId": "LINE-2795",
+   "partId": 124502,
    "point": [
     -14.1,
     12.4,
@@ -4068,8 +4094,8 @@
    "area": "A-5000",
    "equipment": "HD-5200",
    "line": "Cooling water supply riser",
-   "lineId": "LINE-2785",
-   "partId": 124495,
+   "lineId": "LINE-2733",
+   "partId": 122408,
    "point": [
     -14.1,
     10.8,
@@ -4081,8 +4107,8 @@
    "area": "A-5000",
    "equipment": "HD-5100",
    "line": "Hot water supply riser",
-   "lineId": "LINE-2720",
-   "partId": 122113,
+   "lineId": "LINE-2668",
+   "partId": 120026,
    "point": [
     -14.1,
     7.2,
@@ -4094,8 +4120,8 @@
    "area": "A-5000",
    "equipment": "TCU-141",
    "line": "R-141D return branch to service station",
-   "lineId": "LINE-2987",
-   "partId": 131894,
+   "lineId": "LINE-2935",
+   "partId": 129807,
    "point": [
     -28.8,
     3.3,
@@ -4107,8 +4133,8 @@
    "area": "A-5000",
    "equipment": "HD-5300",
    "line": "TCU-141 cooldown return branch to service station",
-   "lineId": "LINE-2955",
-   "partId": 130620,
+   "lineId": "LINE-2903",
+   "partId": 128533,
    "point": [
     -14.37,
     12.72,
@@ -4120,8 +4146,8 @@
    "area": "A-5000",
    "equipment": "TCU-141",
    "line": "TCU-141 single secondary return riser",
-   "lineId": "LINE-2905",
-   "partId": 129012,
+   "lineId": "LINE-2853",
+   "partId": 126925,
    "point": [
     -14.15,
     10.32,
@@ -4133,8 +4159,8 @@
    "area": "A-5000",
    "equipment": "TCU-201",
    "line": "TCU-201 single secondary return riser",
-   "lineId": "LINE-2909",
-   "partId": 129052,
+   "lineId": "LINE-2857",
+   "partId": 126965,
    "point": [
     -14.15,
     8.72,
@@ -4146,8 +4172,8 @@
    "area": "A-5000",
    "equipment": "HD-5300",
    "line": "TCU-201 supply branch to service station",
-   "lineId": "LINE-2927",
-   "partId": 129456,
+   "lineId": "LINE-2875",
+   "partId": 127369,
    "point": [
     -17.23,
     12.4,
@@ -4159,8 +4185,8 @@
    "area": "A-5000",
    "equipment": "TCU-1001",
    "line": "TCU-1001 single secondary return riser",
-   "lineId": "LINE-2913",
-   "partId": 129092,
+   "lineId": "LINE-2861",
+   "partId": 127005,
    "point": [
     -14.15,
     11.92,
@@ -4172,8 +4198,8 @@
    "area": "A-5000",
    "equipment": "HD-5200",
    "line": "TCU-1001 supply branch to service station",
-   "lineId": "LINE-2935",
-   "partId": 129800,
+   "lineId": "LINE-2883",
+   "partId": 127713,
    "point": [
     -17.23,
     10.8,
@@ -4185,8 +4211,8 @@
    "area": "A-5000",
    "equipment": "A-5200",
    "line": "Tower spray distribution",
-   "lineId": "LINE-2729",
-   "partId": 122543,
+   "lineId": "LINE-2677",
+   "partId": 120456,
    "point": [
     -26.4,
     3.6,
@@ -4210,15 +4236,22 @@
  ],
  "structuralAttachments": {
   "passes": true,
-  "loads": 2612,
-  "contacts": 21193,
-  "foundations": 5331,
+  "loads": 2560,
+  "contacts": 20858,
+  "foundations": 5274,
   "failures": 0,
   "method": "Declared mounting points checked against part geometry and assembled transforms, with graph reachability to foundations. Structural strength is not calculated."
  },
  "containment": {
-  "geometryPass": true,
-  "findings": []
+  "geometryPass": false,
+  "findings": [
+   {
+    "kind": "capture-pocket",
+    "cell": "BND-1012",
+    "patch": 0,
+    "reason": "Wet floor has a disconnected undrained pocket"
+   }
+  ]
  },
  "findings": [
   {
@@ -4227,13 +4260,13 @@
    "status": "Open — layout revision required",
    "priority": "high",
    "discipline": "Piping / structural",
-   "observation": "273 candidate support positions remain unresolved on the current model (published report: 316); A-2000 229, A-4000 26, A-5000 11. Leading reasons: \"Support rod conflicts with another service\" (218), \"No clear rack foundation / beam corridor\" (28).",
+   "observation": "275 candidate support positions remain unresolved on the current model (published report: 316); A-2000 230, A-4000 26, A-5000 11. Leading reasons: \"Support rod conflicts with another service\" (218), \"No clear rack foundation / beam corridor\" (29).",
    "action": "Revise the A-2000 RO / UF permeate rack tiers and the A-4000 header brackets so each held line has a bearing corridor; record the rack revision in the model before support calculations start.",
    "evidence": [
     {
      "kind": "holds",
      "id": "A-2000",
-     "label": "A-2000 · 229 placement holds",
+     "label": "A-2000 · 230 placement holds",
      "href": "#holds"
     },
     {
@@ -4262,7 +4295,7 @@
    "status": "Open — model correction",
    "priority": "high",
    "discipline": "Layout",
-   "observation": "4 support element(s) intrude into 4 reserved vehicle, maintenance or standing space(s) on the current model: PS-A200-3386 bearing collar in REMOVE-R201C; PS-A900-3034 bearing collar in REMOVE-PY801; PS-A3000-3641 local bracket in PIPE-standing-access-613-CP-3000 / CP-3000 control display; PS-A5000-2265 insulation insert bearing collar in HEADROOM-PL-801 feeder walkway. 1 new since the published report (REMOVE-PY801 · PS-A900-3034 bearing collar); 1 resolved (REMOVE-R201D · bearing collar). The A-3000 bracket position also moved with the A-3000 rebuild.",
+   "observation": "4 support element(s) intrude into 4 reserved vehicle, maintenance or standing space(s) on the current model: PS-A200-3288 bearing collar in REMOVE-R201C; PS-A900-2932 bearing collar in REMOVE-PY801; PS-A3000-3561 local bracket in PIPE-standing-access-613-CP-3000 / CP-3000 control display; PS-A5000-2183 insulation insert bearing collar in HEADROOM-PL-801 feeder walkway. 1 new since the published report (REMOVE-PY801 · PS-A900-2932 bearing collar); 1 resolved (REMOVE-R201D · bearing collar). The A-3000 bracket position also moved with the A-3000 rebuild.",
    "action": "Relocate or re-tier the intruding supports (A-900 collar in the PY-801 removal space, A-3000 bracket in the CP-3000 standing space) and re-run the corridor gate; the ES-3000 shower-head overlap stays an open access finding.",
    "evidence": [
     {
@@ -4373,13 +4406,13 @@
    "status": "Open — structural calculation",
    "priority": "medium",
    "discipline": "Structural",
-   "observation": "PR-A5000-T002: 46 assigned bearings across bays of 11.3 / 6.0 m; longest bay 11.3 m spans the A-300 → A-1000 under-rack aisle. HOLD: combined pipe reactions, lateral stability, guide/anchor loads, connection strength and foundations; entrance portal span, deflection and lateral/seismic load paths require calculation before construction.",
+   "observation": "PR-A5000-T002: 44 assigned bearings across bays of 11.3 / 6.0 m; longest bay 11.3 m spans the A-300 → A-1000 under-rack aisle. HOLD: combined pipe reactions, lateral stability, guide/anchor loads, connection strength and foundations; entrance portal span, deflection and lateral/seismic load paths require calculation before construction.",
    "action": "Size the portal members, deflection, lateral / seismic restraint, connections and foundations with the combined pipe reactions before any construction release.",
    "evidence": [
     {
      "kind": "rack",
      "id": "PR-A5000-T002",
-     "label": "Rack PR-A5000-T002 · 46 bearings",
+     "label": "Rack PR-A5000-T002 · 44 bearings",
      "href": "#portals"
     },
     {
@@ -4437,7 +4470,7 @@
    "status": "Provisional geometry — vendor loads unverified",
    "priority": "low",
    "discipline": "Structural",
-   "observation": "3822 modelled bearings, 589 support columns and 14.08 km of member envelope on the current model; 1098 pipe elements are attached on calculation hold and none is structurally qualified. Skids, frames and towers added since the published report (A-900 V163, A-3000 rebuild) carry the same provisional status.",
+   "observation": "3743 modelled bearings, 586 support columns and 13.93 km of member envelope on the current model; 1064 pipe elements are attached on calculation hold and none is structurally qualified. Skids, frames and towers added since the published report (A-900 V163, A-3000 rebuild) carry the same provisional status.",
    "action": "Collect vendor loads and anchor patterns; calculate spans, pipe stress, guide / anchor reactions, steel, bracing, connections and foundations (WorkSafeBC 4.2 / 4.3, BC Building Code).",
    "evidence": [
     {
@@ -4484,7 +4517,7 @@
    "status": "Open — model engineer",
    "priority": "high",
    "discipline": "Model management",
-   "observation": "tests/validate-corridors.mjs fails on the current model against the corridors-v84 fixture (pipe-geometry and component signatures, previously attached elements, reserved-space intrusions and undeclared pedestrian overlaps), so dist/layout-review.json stays at bc-corridors-85 (2026-09-12) and is not refreshed by the release checks. Current-model figures differ: supports 3783 → 3822, holds 316 → 273, columns 593 → 589.",
+   "observation": "tests/validate-corridors.mjs fails on the current model against the corridors-v84 fixture (pipe-geometry and component signatures, previously attached elements, reserved-space intrusions and undeclared pedestrian overlaps), so dist/layout-review.json stays at bc-corridors-85 (2026-09-12) and is not refreshed by the release checks. Current-model figures differ: supports 3783 → 3743, holds 316 → 275, columns 593 → 586.",
    "action": "Model engineer to rebaseline tests/fixtures/corridors-v84.json to the current model once LAY-02 and LAY-03 are corrected, then regenerate the gate report; this refresh remains the interim record.",
    "evidence": [
     {
@@ -4513,7 +4546,7 @@
    "status": "Applied to the model — removal handed to the model engineer",
    "priority": "medium",
    "discipline": "Model management / layout",
-   "observation": "D-MDL-01 (bases MC-1–MC-10, approved by QFL 2026-09-28) brings the model in line with the V219–V227 data-layer decisions. Release 1 keeps the 21 retired A-1000 / A-2000 tags in place — shown grey and labelled RETIRED with their decision — because the model engineer's validators still assert their streams, and resizes the A-1000 / A-2000 tanks to the issued datasheets (T-1006 400 m³ at Ø 8.4 m, R-1001 25, R-1002 30, R-1003 16, R-1004 10, T-1002 80, T-1003 30, T-1008 12, T-2001 15, T-2002 100 m³). Against main, on A-1000 / A-2000: pipe-support holds 229 → 230, structure passes, no headroom conflict, and two more reserved-space entries on an existing class in the containment yard (BND-1004 / TR-perimeter-85); R-1002 / R-1003 / R-1004 keep their footprints because new diameters re-flowed rack supports into emergency walkways PW-ES-030 / 031. Current model: 273 holds plant-wide. C-301 and T-304 (release 2) sit behind the pipe-racks-v31 fixture, which already fails on main.",
+   "observation": "D-MDL-01 (bases MC-1–MC-10, approved by QFL 2026-09-28) brings the model in line with the V219–V227 data-layer decisions. Release 1 keeps the 21 retired A-1000 / A-2000 tags in place — shown grey and labelled RETIRED with their decision — because the model engineer's validators still assert their streams, and resizes the A-1000 / A-2000 tanks to the issued datasheets (T-1006 400 m³ at Ø 8.4 m, R-1001 25, R-1002 30, R-1003 16, R-1004 10, T-1002 80, T-1003 30, T-1008 12, T-2001 15, T-2002 100 m³). Against main, on A-1000 / A-2000: pipe-support holds 229 → 230, structure passes, no headroom conflict, and two more reserved-space entries on an existing class in the containment yard (BND-1004 / TR-perimeter-85); R-1002 / R-1003 / R-1004 keep their footprints because new diameters re-flowed rack supports into emergency walkways PW-ES-030 / 031. Current model: 275 holds plant-wide. C-301 and T-304 (release 2) sit behind the pipe-racks-v31 fixture, which already fails on main.",
    "action": "Model engineer: remove the retired tags and rebaseline the validators and the pipe-racks-v31 fixture (docs/model-catchup-handoff.md); then release 2 (C-301 filter press, new equipment in existing areas) and release 3 (A-1100, A-5400 envelope).",
    "evidence": [
     {
@@ -4561,13 +4594,13 @@
     {
      "kind": "holds",
      "id": "A-2000",
-     "label": "A-2000 · 229 placement holds",
+     "label": "A-2000 · 230 placement holds",
      "href": "#holds"
     },
     {
      "kind": "page",
      "id": "A-1000",
-     "label": "A-1000 review r15 · QFL",
+     "label": "A-1000 review r16 · QFL",
      "href": "./a1000-review.html"
     },
     {
@@ -4584,7 +4617,7 @@
    "status": "Ruled by QFL 2026-09-29 (L1) — applied in release 3 (LAY-11)",
    "priority": "high",
    "discipline": "Model management / layout",
-   "observation": "Release 2 (bases R2-1–R2-8, approved by QFL 2026-09-28) adds standalone envelopes with nozzle stubs and no routes, built after the pipe supports so the racks do not re-flow, each placed by a clear-space search against every existing part: F-160 (−14.5, −24.5) and T-160 (−14.5, −27.6) south of F-161, P-160A/B beside T-160, HR-601 (66, 7.8) south of the dryer train, and an IF-A2000-CITY battery-limit marker beside CF-2002. Against V228: pipe-support holds, reserved-space conflicts and headroom unchanged, structure passes, walkways clear, no interference. CL-1001 (Ø 6.5 m thickener) and SL-1001 (200 m³ silo) are not placed: A-1000 has no clear space for them at datasheet size even ignoring the retired tags — the nearest clear spots are x ≈ 107 (the future-expansion block kept for A-5400) and (62, −19.5) inside the A-2000 block. F-160 could not go beside T-161, so its R-141 feed and cake transfer need a re-layout. Current model: 273 holds plant-wide.",
+   "observation": "Release 2 (bases R2-1–R2-8, approved by QFL 2026-09-28) adds standalone envelopes with nozzle stubs and no routes, built after the pipe supports so the racks do not re-flow, each placed by a clear-space search against every existing part: F-160 (−14.5, −24.5) and T-160 (−14.5, −27.6) south of F-161, P-160A/B beside T-160, HR-601 (66, 7.8) south of the dryer train, and an IF-A2000-CITY battery-limit marker beside CF-2002. Against V228: pipe-support holds, reserved-space conflicts and headroom unchanged, structure passes, walkways clear, no interference. CL-1001 (Ø 6.5 m thickener) and SL-1001 (200 m³ silo) are not placed: A-1000 has no clear space for them at datasheet size even ignoring the retired tags — the nearest clear spots are x ≈ 107 (the future-expansion block kept for A-5400) and (62, −19.5) inside the A-2000 block. F-160 could not go beside T-161, so its R-141 feed and cake transfer need a re-layout. Current model: 275 holds plant-wide.",
    "action": "QFL to rule the A-1000 layout: extend A-1000 into the west of the A-2000 block (freed by W3 once the retired tags are removed), or use the future-expansion block and move the A-5400 envelope, or wait for the removal; model engineer to add the tie-ins with the W3 / cascade re-routing.",
    "evidence": [
     {
@@ -4620,7 +4653,7 @@
     {
      "kind": "page",
      "id": "A-1000",
-     "label": "A-1000 review r15 · QFL",
+     "label": "A-1000 review r16 · QFL",
      "href": "./a1000-review.html"
     },
     {
@@ -4649,7 +4682,7 @@
    "status": "Applied — tie-ins and floor allocation with the model engineer",
    "priority": "high",
    "discipline": "Model management / layout",
-   "observation": "LAY-10 was ruled by QFL on 2026-09-29 (option L1, bases R3-1–R3-9) after a clear-space search of the current model (ground-level parts and walkways, 1 m clearance): A-1000 and A-2000 hold no 9 × 9 m pad even without the 20 retired tags, whose pipework and supports stay; the future-expansion block (x 105–116) and a south-east yard between the south pipe rack and the perimeter road (x 71–119, z −48…−34) are clear. Release 3 adds standalone envelopes (no routes, nozzle stubs marked tie-in deferred, built after the pipe supports): CL-1001 (76.5, −42.5); the A-1100 acid bund 20 × 11 m with T-1101 (Ø 5.5 × 5.4 m), T-1102 (Ø 6.0 × 7.2 m), P-1101A/B and P-1102A/B; PK-1101 as a 14 × 10 m screening envelope (hold K1); A-5400 on a 10 × 18 m curbed pad with H-5400 and its stack, P-5401A/B, V-5401 on the heater structure and T-5401 (hold U8); SL-1001 (110.5, −25). HAZOP inputs (U8): A-5400 is ≈ 27 m from the A-600 edge (DR-601), ≈ 14 m from the A-800 block edge (PY-801 hydrogen off-gas) and ≈ 17 m from the A-1100 bund. Current model: 273 holds plant-wide.",
+   "observation": "LAY-10 was ruled by QFL on 2026-09-29 (option L1, bases R3-1–R3-9) after a clear-space search of the current model (ground-level parts and walkways, 1 m clearance): A-1000 and A-2000 hold no 9 × 9 m pad even without the 20 retired tags, whose pipework and supports stay; the future-expansion block (x 105–116) and a south-east yard between the south pipe rack and the perimeter road (x 71–119, z −48…−34) are clear. Release 3 adds standalone envelopes (no routes, nozzle stubs marked tie-in deferred, built after the pipe supports): CL-1001 (76.5, −42.5); the A-1100 acid bund 20 × 11 m with T-1101 (Ø 5.5 × 5.4 m), T-1102 (Ø 6.0 × 7.2 m), P-1101A/B and P-1102A/B; PK-1101 as a 14 × 10 m screening envelope (hold K1); A-5400 on a 10 × 18 m curbed pad with H-5400 and its stack, P-5401A/B, V-5401 on the heater structure and T-5401 (hold U8); SL-1001 (110.5, −25). HAZOP inputs (U8): A-5400 is ≈ 27 m from the A-600 edge (DR-601), ≈ 14 m from the A-800 block edge (PY-801 hydrogen off-gas) and ≈ 17 m from the A-1100 bund. Current model: 275 holds plant-wide.",
    "action": "Model engineer: floor-allocation polygons for the south-east yard and the future-expansion block, tie-ins (thermal-oil mains ≈ 60 m to HX-601 and ≈ 20 m to PK-1101; acid lines on the south rack; the CL-1001 gravity feed from R-1004 with the cascade step check W7; lime to T-1002); rethink the 0.14 MW R-141 heat-up through A-5100 (≈ 135 m). Vendors: PK-1101 (K1) and A-5400 (U8) footprints.",
    "evidence": [
     {
@@ -4685,7 +4718,7 @@
     {
      "kind": "page",
      "id": "A-1000",
-     "label": "A-1000 review r15 · QFL",
+     "label": "A-1000 review r16 · QFL",
      "href": "./a1000-review.html"
     },
     {
@@ -4708,7 +4741,7 @@
    "status": "Applied — the south-east yard stays reserved",
    "priority": "medium",
    "discipline": "Model management / layout",
-   "observation": "D-MDL-02 (QFL 2026-09-29, bases AR-1–AR-9): the acid route is not decided, so the 3D model now opens on Route 0 (full neutralisation, REP-038 fallback) and shows Route 2 + 6 (spent-acid recovery, D-A1000-03, gated on REP-039 M1–M3) as an option under Model Setup → Acid route, built in the browser like the A-160 alternatives (URL acid=r26). D-A1000-03, the data layer, the datasheets and LST-001 V5.2 are unchanged. Route 0 builds no F-160 / T-160 / P-160 and no A-1100 set (PK-1101, T-1101, T-1102, P-1101A/B, P-1102A/B); the south-east yard keeps a plot outline (RSV-A1100) so the option keeps its space; CL-1001, SL-1001 and A-5400 are built in both routes. Current model (Route 0): 273 holds plant-wide.",
+   "observation": "D-MDL-02 (QFL 2026-09-29, bases AR-1–AR-9): the acid route is not decided, so the 3D model now opens on Route 0 (full neutralisation, REP-038 fallback) and shows Route 2 + 6 (spent-acid recovery, D-A1000-03, gated on REP-039 M1–M3) as an option under Model Setup → Acid route, built in the browser like the A-160 alternatives (URL acid=r26). D-A1000-03, the data layer, the datasheets and LST-001 V5.2 are unchanged. Route 0 builds no F-160 / T-160 / P-160 and no A-1100 set (PK-1101, T-1101, T-1102, P-1101A/B, P-1102A/B); the south-east yard keeps a plot outline (RSV-A1100) so the option keeps its space; CL-1001, SL-1001 and A-5400 are built in both routes. Current model (Route 0): 275 holds plant-wide.",
    "action": "Keep the south-east yard free until the acid route is ruled after REP-039 M1–M3; the model engineer re-bases the A-1000 envelopes if Route 0 is chosen (a Route 0 A-1000 is not designed).",
    "evidence": [
     {
@@ -4750,7 +4783,7 @@
     {
      "kind": "page",
      "id": "A-1000",
-     "label": "A-1000 review r15 · QFL",
+     "label": "A-1000 review r16 · QFL",
      "href": "./a1000-review.html"
     },
     {
@@ -4758,6 +4791,65 @@
      "id": "A-160",
      "label": "A-160 review r8 · QFL",
      "href": "./a160-review.html"
+    }
+   ]
+  },
+  {
+   "id": "LAY-13",
+   "topic": "A-1000 south strip cleared (D-MDL-03): retired equipment removed, interarea lines re-routed, CL-1001 and SL-1001 inside A-1000",
+   "status": "Applied — tie-ins open",
+   "priority": "high",
+   "discipline": "Model management / layout / piping",
+   "observation": "Correction to the release-3 record (A1000-17, LAY-11 and the hand-off note, 2026-09-29): CL-1001 at (76.5, −42.5) was ≈ 44 m in a straight line from R-1004 (≈ 60 m by a pipe route), not ≈ 20–30 m as stated, and a gravity feed over that distance and across the south rack was not feasible. D-MDL-03 (QFL instruction 2026-09-30, carried out as model engineer): T-1001 / P-1004 (NaOH, D-A1000-05), T-1004 / P-1001 (HCl trim), P-1006 / P-1007 / P-1008 (stage transfers) and P-1010 (centrifuge bypass, D-A1000-06) are removed with their pipework, valves, vents, drains, panels and bunds BND-1006 / BND-1009; the stage transfers are replaced by the approved gravity cascade R-1001 → R-1002 → R-1003 → R-1004 (falls 1.1 / 0.9 / 0.8 m on the model envelopes). The retired A-2000 backwash return to T-1006 is re-routed through the A-1000 north utility corridor, the lime / BaCl₂ / floc dosing lines run north first, and the R-1002 / R-1003 / A-500 wet-vent drops move to lanes clear of the south strip — rack S049 and the A-1000 racks S133 / S134 leave the south strip. CL-1001 (Ø 6.5 m) now sits at (41.75, −22.75), ≈ 17 m from R-1004 beside DC-1001 and T-1008; SL-1001 (200 m³, Ø 4.5 m, ≈ 15.6 m tall) at (18, −24.5), ≈ 9 m from T-1002, clear of every overhead line. Both positions were confirmed clear on the rebuilt model (0.5 m / 0.3 m clearance, walkways and overhead). T-1007 / P-1011 remain (in service under Route 0, D-MDL-02). The south-east yard now holds only the A-1100 option set (Route 2 + 6) and its Route 0 reservation. Current model: 275 holds plant-wide.",
+   "action": "Model: CL-1001 / SL-1001 tie-ins and the CL-1001 floor level (W7); re-baseline the pipe-racks-v31 fixture when the model engineer next re-issues it; A-2000 retired equipment (D-A2000-03) other than the backwash return is still in place.",
+   "evidence": [
+    {
+     "kind": "decision",
+     "id": "D-A1000-05",
+     "label": "D-A1000-05 (A-1000, QFL 2026-09-27): A-1000 sized for the REP-039 Route 2 + 6 residual on bases RS1–RS9 (FEED-PE-CAL-034): 615 m³/d and 24.3 t/d H₂SO₄ design, HCl bounding at the PFD dose; lime-onl…",
+     "href": "./semantic-core.html#area-A-1000"
+    },
+    {
+     "kind": "decision",
+     "id": "D-A1000-06",
+     "label": "D-A1000-06 (A-1000, QFL 2026-09-27): A-1000 phase 2 on bases P2-1–P2-9 (FEED-PE-CAL-035): gravity cascade R-1001 → R-1002 → R-1003 → R-1004 → CL-1001 retires the stage-transfer pumps P-1006 / P-100…",
+     "href": "./semantic-core.html#area-A-1000"
+    },
+    {
+     "kind": "decision",
+     "id": "D-A2000-03",
+     "label": "D-A2000-03 (A-2000, QFL 2026-09-27): A-2000 on clean sources only (W3, bases A2-1–A2-8, FEED-PE-CAL-036): on the Case 4 volumes the A-300 phase 2 HCl leaves ≈ 5.9–29 g/L chloride (≈ 12–48 g/L TDS) …",
+     "href": "./semantic-core.html#area-A-2000"
+    },
+    {
+     "kind": "doc",
+     "id": "dist/wastewater.js",
+     "label": "dist/wastewater.js",
+     "href": "https://github.com/quakfoolee-dotcom/rGO_3D_Plant_Model/blob/main/dist/wastewater.js"
+    },
+    {
+     "kind": "doc",
+     "id": "dist/model-catchup.js",
+     "label": "dist/model-catchup.js",
+     "href": "https://github.com/quakfoolee-dotcom/rGO_3D_Plant_Model/blob/main/dist/model-catchup.js"
+    },
+    {
+     "kind": "doc",
+     "id": "docs/model-catchup-handoff.md",
+     "label": "docs/model-catchup-handoff.md",
+     "href": "https://github.com/quakfoolee-dotcom/rGO_3D_Plant_Model/blob/main/docs/model-catchup-handoff.md"
+    },
+    {
+     "kind": "page",
+     "id": "A-1000",
+     "label": "A-1000 review r16 · QFL",
+     "href": "./a1000-review.html"
+    },
+    {
+     "kind": "page",
+     "id": "A-2000",
+     "label": "A-2000 review r7 · QFL",
+     "href": "./a2000-review.html"
     }
    ]
   }

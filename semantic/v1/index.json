@@ -3014,22 +3014,6 @@
       }
     },
     {
-      "assetId": "T-1001",
-      "area": "A-1000",
-      "equipmentId": 131,
-      "recordScope": "asset",
-      "endpoints": {
-        "assets": "./assets/T-1001.json",
-        "relationships": "./relationships/T-1001.json",
-        "streams": "./streams/T-1001.json",
-        "documents": "./documents/T-1001.json",
-        "state": "./state/T-1001.json",
-        "geometry": "./geometry/T-1001.json",
-        "provenance": "./provenance/T-1001.json",
-        "instruments": "./instruments/T-1001.json"
-      }
-    },
-    {
       "assetId": "T-1002",
       "area": "A-1000",
       "equipmentId": 132,
@@ -3062,22 +3046,6 @@
       }
     },
     {
-      "assetId": "T-1004",
-      "area": "A-1000",
-      "equipmentId": 134,
-      "recordScope": "asset",
-      "endpoints": {
-        "assets": "./assets/T-1004.json",
-        "relationships": "./relationships/T-1004.json",
-        "streams": "./streams/T-1004.json",
-        "documents": "./documents/T-1004.json",
-        "state": "./state/T-1004.json",
-        "geometry": "./geometry/T-1004.json",
-        "provenance": "./provenance/T-1004.json",
-        "instruments": "./instruments/T-1004.json"
-      }
-    },
-    {
       "assetId": "T-1005",
       "area": "A-1000",
       "equipmentId": 135,
@@ -3091,22 +3059,6 @@
         "geometry": "./geometry/T-1005.json",
         "provenance": "./provenance/T-1005.json",
         "instruments": "./instruments/T-1005.json"
-      }
-    },
-    {
-      "assetId": "P-1004",
-      "area": "A-1000",
-      "equipmentId": 136,
-      "recordScope": "asset",
-      "endpoints": {
-        "assets": "./assets/P-1004.json",
-        "relationships": "./relationships/P-1004.json",
-        "streams": "./streams/P-1004.json",
-        "documents": "./documents/P-1004.json",
-        "state": "./state/P-1004.json",
-        "geometry": "./geometry/P-1004.json",
-        "provenance": "./provenance/P-1004.json",
-        "instruments": "./instruments/P-1004.json"
       }
     },
     {
@@ -3142,22 +3094,6 @@
       }
     },
     {
-      "assetId": "P-1001",
-      "area": "A-1000",
-      "equipmentId": 139,
-      "recordScope": "asset",
-      "endpoints": {
-        "assets": "./assets/P-1001.json",
-        "relationships": "./relationships/P-1001.json",
-        "streams": "./streams/P-1001.json",
-        "documents": "./documents/P-1001.json",
-        "state": "./state/P-1001.json",
-        "geometry": "./geometry/P-1001.json",
-        "provenance": "./provenance/P-1001.json",
-        "instruments": "./instruments/P-1001.json"
-      }
-    },
-    {
       "assetId": "M-1001",
       "area": "A-1000",
       "equipmentId": 140,
@@ -3190,54 +3126,6 @@
       }
     },
     {
-      "assetId": "P-1006",
-      "area": "A-1000",
-      "equipmentId": 142,
-      "recordScope": "asset",
-      "endpoints": {
-        "assets": "./assets/P-1006.json",
-        "relationships": "./relationships/P-1006.json",
-        "streams": "./streams/P-1006.json",
-        "documents": "./documents/P-1006.json",
-        "state": "./state/P-1006.json",
-        "geometry": "./geometry/P-1006.json",
-        "provenance": "./provenance/P-1006.json",
-        "instruments": "./instruments/P-1006.json"
-      }
-    },
-    {
-      "assetId": "P-1007",
-      "area": "A-1000",
-      "equipmentId": 143,
-      "recordScope": "asset",
-      "endpoints": {
-        "assets": "./assets/P-1007.json",
-        "relationships": "./relationships/P-1007.json",
-        "streams": "./streams/P-1007.json",
-        "documents": "./documents/P-1007.json",
-        "state": "./state/P-1007.json",
-        "geometry": "./geometry/P-1007.json",
-        "provenance": "./provenance/P-1007.json",
-        "instruments": "./instruments/P-1007.json"
-      }
-    },
-    {
-      "assetId": "P-1008",
-      "area": "A-1000",
-      "equipmentId": 144,
-      "recordScope": "asset",
-      "endpoints": {
-        "assets": "./assets/P-1008.json",
-        "relationships": "./relationships/P-1008.json",
-        "streams": "./streams/P-1008.json",
-        "documents": "./documents/P-1008.json",
-        "state": "./state/P-1008.json",
-        "geometry": "./geometry/P-1008.json",
-        "provenance": "./provenance/P-1008.json",
-        "instruments": "./instruments/P-1008.json"
-      }
-    },
-    {
       "assetId": "P-1009",
       "area": "A-1000",
       "equipmentId": 145,
@@ -3251,22 +3139,6 @@
         "geometry": "./geometry/P-1009.json",
         "provenance": "./provenance/P-1009.json",
         "instruments": "./instruments/P-1009.json"
-      }
-    },
-    {
-      "assetId": "P-1010",
-      "area": "A-1000",
-      "equipmentId": 146,
-      "recordScope": "asset",
-      "endpoints": {
-        "assets": "./assets/P-1010.json",
-        "relationships": "./relationships/P-1010.json",
-        "streams": "./streams/P-1010.json",
-        "documents": "./documents/P-1010.json",
-        "state": "./state/P-1010.json",
-        "geometry": "./geometry/P-1010.json",
-        "provenance": "./provenance/P-1010.json",
-        "instruments": "./instruments/P-1010.json"
       }
     },
     {
@@ -3526,22 +3398,6 @@
       }
     },
     {
-      "assetId": "IF-A1000-FILL-T-1001",
-      "area": "A-1000",
-      "equipmentId": null,
-      "recordScope": "external-interface",
-      "endpoints": {
-        "assets": "./assets/IF-A1000-FILL-T-1001.json",
-        "relationships": "./relationships/IF-A1000-FILL-T-1001.json",
-        "streams": "./streams/IF-A1000-FILL-T-1001.json",
-        "documents": "./documents/IF-A1000-FILL-T-1001.json",
-        "state": "./state/IF-A1000-FILL-T-1001.json",
-        "geometry": "./geometry/IF-A1000-FILL-T-1001.json",
-        "provenance": "./provenance/IF-A1000-FILL-T-1001.json",
-        "instruments": "./instruments/IF-A1000-FILL-T-1001.json"
-      }
-    },
-    {
       "assetId": "IF-A1000-FILL-T-1002",
       "area": "A-1000",
       "equipmentId": null,
@@ -3574,22 +3430,6 @@
       }
     },
     {
-      "assetId": "IF-A1000-FILL-T-1004",
-      "area": "A-1000",
-      "equipmentId": null,
-      "recordScope": "external-interface",
-      "endpoints": {
-        "assets": "./assets/IF-A1000-FILL-T-1004.json",
-        "relationships": "./relationships/IF-A1000-FILL-T-1004.json",
-        "streams": "./streams/IF-A1000-FILL-T-1004.json",
-        "documents": "./documents/IF-A1000-FILL-T-1004.json",
-        "state": "./state/IF-A1000-FILL-T-1004.json",
-        "geometry": "./geometry/IF-A1000-FILL-T-1004.json",
-        "provenance": "./provenance/IF-A1000-FILL-T-1004.json",
-        "instruments": "./instruments/IF-A1000-FILL-T-1004.json"
-      }
-    },
-    {
       "assetId": "IF-A1000-FILL-T-1005",
       "area": "A-1000",
       "equipmentId": null,
@@ -3603,22 +3443,6 @@
         "geometry": "./geometry/IF-A1000-FILL-T-1005.json",
         "provenance": "./provenance/IF-A1000-FILL-T-1005.json",
         "instruments": "./instruments/IF-A1000-FILL-T-1005.json"
-      }
-    },
-    {
-      "assetId": "IF-A1000-VENT-T-1001",
-      "area": "A-1000",
-      "equipmentId": null,
-      "recordScope": "external-interface",
-      "endpoints": {
-        "assets": "./assets/IF-A1000-VENT-T-1001.json",
-        "relationships": "./relationships/IF-A1000-VENT-T-1001.json",
-        "streams": "./streams/IF-A1000-VENT-T-1001.json",
-        "documents": "./documents/IF-A1000-VENT-T-1001.json",
-        "state": "./state/IF-A1000-VENT-T-1001.json",
-        "geometry": "./geometry/IF-A1000-VENT-T-1001.json",
-        "provenance": "./provenance/IF-A1000-VENT-T-1001.json",
-        "instruments": "./instruments/IF-A1000-VENT-T-1001.json"
       }
     },
     {
@@ -3750,22 +3574,6 @@
       }
     },
     {
-      "assetId": "IF-A1000-DRAIN-T-1001",
-      "area": "A-1000",
-      "equipmentId": null,
-      "recordScope": "external-interface",
-      "endpoints": {
-        "assets": "./assets/IF-A1000-DRAIN-T-1001.json",
-        "relationships": "./relationships/IF-A1000-DRAIN-T-1001.json",
-        "streams": "./streams/IF-A1000-DRAIN-T-1001.json",
-        "documents": "./documents/IF-A1000-DRAIN-T-1001.json",
-        "state": "./state/IF-A1000-DRAIN-T-1001.json",
-        "geometry": "./geometry/IF-A1000-DRAIN-T-1001.json",
-        "provenance": "./provenance/IF-A1000-DRAIN-T-1001.json",
-        "instruments": "./instruments/IF-A1000-DRAIN-T-1001.json"
-      }
-    },
-    {
       "assetId": "IF-A1000-DRAIN-T-1002",
       "area": "A-1000",
       "equipmentId": null,
@@ -3795,22 +3603,6 @@
         "geometry": "./geometry/IF-A1000-DRAIN-T-1003.json",
         "provenance": "./provenance/IF-A1000-DRAIN-T-1003.json",
         "instruments": "./instruments/IF-A1000-DRAIN-T-1003.json"
-      }
-    },
-    {
-      "assetId": "IF-A1000-DRAIN-T-1004",
-      "area": "A-1000",
-      "equipmentId": null,
-      "recordScope": "external-interface",
-      "endpoints": {
-        "assets": "./assets/IF-A1000-DRAIN-T-1004.json",
-        "relationships": "./relationships/IF-A1000-DRAIN-T-1004.json",
-        "streams": "./streams/IF-A1000-DRAIN-T-1004.json",
-        "documents": "./documents/IF-A1000-DRAIN-T-1004.json",
-        "state": "./state/IF-A1000-DRAIN-T-1004.json",
-        "geometry": "./geometry/IF-A1000-DRAIN-T-1004.json",
-        "provenance": "./provenance/IF-A1000-DRAIN-T-1004.json",
-        "instruments": "./instruments/IF-A1000-DRAIN-T-1004.json"
       }
     },
     {
@@ -8338,14 +8130,6 @@
       "type": "GeometryBinding"
     },
     {
-      "id": "T-1001",
-      "type": "Asset"
-    },
-    {
-      "id": "GEOMETRY-T-1001",
-      "type": "GeometryBinding"
-    },
-    {
       "id": "T-1002",
       "type": "Asset"
     },
@@ -8362,27 +8146,11 @@
       "type": "GeometryBinding"
     },
     {
-      "id": "T-1004",
-      "type": "Asset"
-    },
-    {
-      "id": "GEOMETRY-T-1004",
-      "type": "GeometryBinding"
-    },
-    {
       "id": "T-1005",
       "type": "Asset"
     },
     {
       "id": "GEOMETRY-T-1005",
-      "type": "GeometryBinding"
-    },
-    {
-      "id": "P-1004",
-      "type": "Asset"
-    },
-    {
-      "id": "GEOMETRY-P-1004",
       "type": "GeometryBinding"
     },
     {
@@ -8402,14 +8170,6 @@
       "type": "GeometryBinding"
     },
     {
-      "id": "P-1001",
-      "type": "Asset"
-    },
-    {
-      "id": "GEOMETRY-P-1001",
-      "type": "GeometryBinding"
-    },
-    {
       "id": "M-1001",
       "type": "Asset"
     },
@@ -8426,43 +8186,11 @@
       "type": "GeometryBinding"
     },
     {
-      "id": "P-1006",
-      "type": "Asset"
-    },
-    {
-      "id": "GEOMETRY-P-1006",
-      "type": "GeometryBinding"
-    },
-    {
-      "id": "P-1007",
-      "type": "Asset"
-    },
-    {
-      "id": "GEOMETRY-P-1007",
-      "type": "GeometryBinding"
-    },
-    {
-      "id": "P-1008",
-      "type": "Asset"
-    },
-    {
-      "id": "GEOMETRY-P-1008",
-      "type": "GeometryBinding"
-    },
-    {
       "id": "P-1009",
       "type": "Asset"
     },
     {
       "id": "GEOMETRY-P-1009",
-      "type": "GeometryBinding"
-    },
-    {
-      "id": "P-1010",
-      "type": "Asset"
-    },
-    {
-      "id": "GEOMETRY-P-1010",
       "type": "GeometryBinding"
     },
     {
@@ -8594,14 +8322,6 @@
       "type": "GeometryBinding"
     },
     {
-      "id": "IF-A1000-FILL-T-1001",
-      "type": "ExternalInterface"
-    },
-    {
-      "id": "GEOMETRY-IF-A1000-FILL-T-1001",
-      "type": "GeometryBinding"
-    },
-    {
       "id": "IF-A1000-FILL-T-1002",
       "type": "ExternalInterface"
     },
@@ -8618,27 +8338,11 @@
       "type": "GeometryBinding"
     },
     {
-      "id": "IF-A1000-FILL-T-1004",
-      "type": "ExternalInterface"
-    },
-    {
-      "id": "GEOMETRY-IF-A1000-FILL-T-1004",
-      "type": "GeometryBinding"
-    },
-    {
       "id": "IF-A1000-FILL-T-1005",
       "type": "ExternalInterface"
     },
     {
       "id": "GEOMETRY-IF-A1000-FILL-T-1005",
-      "type": "GeometryBinding"
-    },
-    {
-      "id": "IF-A1000-VENT-T-1001",
-      "type": "ExternalInterface"
-    },
-    {
-      "id": "GEOMETRY-IF-A1000-VENT-T-1001",
       "type": "GeometryBinding"
     },
     {
@@ -8706,14 +8410,6 @@
       "type": "GeometryBinding"
     },
     {
-      "id": "IF-A1000-DRAIN-T-1001",
-      "type": "ExternalInterface"
-    },
-    {
-      "id": "GEOMETRY-IF-A1000-DRAIN-T-1001",
-      "type": "GeometryBinding"
-    },
-    {
       "id": "IF-A1000-DRAIN-T-1002",
       "type": "ExternalInterface"
     },
@@ -8727,14 +8423,6 @@
     },
     {
       "id": "GEOMETRY-IF-A1000-DRAIN-T-1003",
-      "type": "GeometryBinding"
-    },
-    {
-      "id": "IF-A1000-DRAIN-T-1004",
-      "type": "ExternalInterface"
-    },
-    {
-      "id": "GEOMETRY-IF-A1000-DRAIN-T-1004",
       "type": "GeometryBinding"
     },
     {
@@ -10605,23 +10293,14 @@
     "130": [
       "DC-1001"
     ],
-    "131": [
-      "T-1001"
-    ],
     "132": [
       "T-1002"
     ],
     "133": [
       "T-1003"
     ],
-    "134": [
-      "T-1004"
-    ],
     "135": [
       "T-1005"
-    ],
-    "136": [
-      "P-1004"
     ],
     "137": [
       "P-1003"
@@ -10629,29 +10308,14 @@
     "138": [
       "P-1002"
     ],
-    "139": [
-      "P-1001"
-    ],
     "140": [
       "M-1001"
     ],
     "141": [
       "P-1005"
     ],
-    "142": [
-      "P-1006"
-    ],
-    "143": [
-      "P-1007"
-    ],
-    "144": [
-      "P-1008"
-    ],
     "145": [
       "P-1009"
-    ],
-    "146": [
-      "P-1010"
     ],
     "147": [
       "BL-A2000"

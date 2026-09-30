@@ -3,7 +3,7 @@ import {structuralKit} from './structural-kit.js';
 import {ACCESS_ZONES,ACCESS_BASIS} from './access-layout.js';
 import {ACCESS_DESIGN} from './access-design.js';
 import {componentEnvelope,buildAccessRegister} from './access-review.js';
-import {PIPE_RACK_LAYOUT} from './pipe-rack-layout.js';
+import {PIPE_RACK_LAYOUT} from './pipe-rack-layout.js';import {WALKWAY_LAYOUT} from './walkway-layout.js';import {EMERGENCY_ACCESS_LAYOUT} from './emergency-access-layout.js';import {walkwayVolume} from './walkway-system.js';
 import {consolidatePipeSupports} from './pipe-support-consolidation.js';
 import {buildCoordinatedThermalRacks} from './thermal-racks.js';
 
@@ -16,6 +16,8 @@ function grid(){const cells=new Map(),size=3;return {add(item){const b=item.box;
 export function buildPipeSupportSystem(h,model){
  const {parts,edges,structure,setContext,b,band,c}=h,s=structuralKit(h),byId=new Map(parts.map(p=>[p.id,p])),routes=new Map(model.routes.map(r=>[r.id,r])),obstacles=grid(),members=grid();
  const protectedZones=[...ACCESS_ZONES,...model.thermalUtilities?.accessZones||[],...model.compressedAir?.accessZones||[],...model.reactorAir?.accessZones||[]].filter(z=>z.kind!=='utility').map(z=>({...z,box:box(z.min,z.max)}));
+ // D-MDL-03 (QFL 2026-09-30): with the south-strip racks re-routed, keep new support columns out of the planned pedestrian / emergency walkways in the A-1000 block.
+ for(const w of [...WALKWAY_LAYOUT.segments,...EMERGENCY_ACCESS_LAYOUT.segments]){const v=walkwayVolume(w);if(v.max[0]>13&&v.min[0]<59&&v.max[2]>-30&&v.min[2]<3)protectedZones.push({id:'WALK-'+w.id,kind:'pedestrian',box:box(v.min,v.max)});}
  for(const x of[-2.45,2.45])for(const z of[0,-16])protectedZones.push({id:'SF201-WITHDRAW-'+x+'-'+z,kind:'maintenance',box:box([x-.75,5.58,z-9.05],[x+1.35,6.56,z+1.05])});
  // Protect actual existing equipment, piping, hardware and platforms. Fastener-sized
  // details are included in the parent assembly envelope by the access audit.

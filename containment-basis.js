@@ -39,7 +39,7 @@ const ORIGINAL_CELLS=[
  C('402','A-400',[32],[[8.4,18,12.8,22.2],[10.2,22.2,11.0,22.9],[10.2,22.9,13.8,24.3]],'Diafiltration slurry'),
  C('403','A-400',[34],[[26.6,18.6,32,24],[28.8,24,33.4,25.7]],'Permeate · acidity and residual oxidizer unverified'),
  C('404','A-400',[124],[[21.5,23.25,25.7,25.45]],'CIP chemicals / spent cleaning liquor · separate from process',{packageInventoryM3:5}),
- ...[125,126,127,128,129,131,132,133,134,135,150,153].map((id,i)=>C('10'+String(i+1).padStart(2,'0'),'A-1000',[id],null,'Assigned wastewater vessel chemistry',{automaticPatch:true})),
+ ...[125,126,127,128,129,131,132,133,134,135,150,153].map((id,i)=>[id,i]).filter(([id])=>id!==131&&id!==134).map(([id,i])=>C('10'+String(i+1).padStart(2,'0'),'A-1000',[id],null,'Assigned wastewater vessel chemistry',{automaticPatch:true})), // BND-1006 / BND-1009 (T-1001 / T-1004) removed with their tanks, D-MDL-03; cell numbers kept
 ];
 // Preserve existing containment equipment IDs even after retiring the duplicate loop receiver.
 const originalWithIds=ORIGINAL_CELLS.map((c,i)=>({...c,modelId:155+i}));
@@ -60,8 +60,8 @@ export const CONTAINMENT_BLOCKS=[
  ['CB-403','Permeate / isolated CIP',['403','404'],'washing'],
  ['CB-1001','Equalization',['1001'],'water'],
  ['CB-1002','Treatment train',['1002','1003','1004','1005'],'water'],
- ['CB-1006','Alkaline reagents',['1006','1007'],'water'],
- ['CB-1008','Separate dosing chemicals',['1008','1009','1010'],'water'],
+ ['CB-1006','Alkaline reagents',['1007'],'water'], // BND-1006 (T-1001 NaOH) removed, D-MDL-03
+ ['CB-1008','Separate dosing chemicals',['1008','1010'],'water'], // BND-1009 (T-1004 HCl) removed, D-MDL-03
  ['CB-1011','Pre-G low receiver',['1011'],'preg'],
  ['CB-1012','Centrate receiver',['1012'],'water']
 ].map(([tag,label,keys,yard])=>({tag,label,keys,yard,sharedLiquid:false,qualification:'Civil grouping only; partitions, independent vents, differential loads and escalation require engineering review'}));

@@ -1,7 +1,0 @@
-{
-  "assetId": "P-1004",
-  "bindingId": "GEOMETRY-P-1004",
-  "modelEquipmentId": 136,
-  "bindingScope": "assembly-context",
-  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
-}

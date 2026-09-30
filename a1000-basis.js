@@ -18,17 +18,14 @@ export const A1000_EQUIPMENT={
  128:tank('R-1003','BaCl₂ sulfate polishing · 16 m³ priced option (FEED-PE-DAT-129)',43,-8,1.8,16,'wwtreat',{geometryStatus:'Volume from FEED-PE-DAT-129 (D-A1000-06); diameter and height are model choices — vendor dimensions unqualified (D-MDL-01 MC-2)'}),
  129:tank('R-1004','Flocculation · 10 m³ (FEED-PE-DAT-117)',50,-8,1.8,10,'wwtreat',{geometryStatus:'Volume from FEED-PE-DAT-117 (D-A1000-05); diameter and height are model choices — vendor dimensions unqualified (D-MDL-01 MC-2)'}),
  130:pump('DC-1001','Wastewater decanter centrifuge',48,-18,'wwseparate',{labelY:3.8}),
- 131:tank('T-1001','NaOH storage · provisional inventory',19,-24,1.25,20,'wwchem'),
  132:tank('T-1002','Lime slurry day tank · 80 m³ (FEED-PE-DAT-120)',27,-24,2.0,80,'wwchem',{geometryStatus:'Volume from FEED-PE-DAT-120 (D-A1000-05); diameter and height are model choices — vendor dimensions unqualified (D-MDL-01 MC-2)'}),
  133:tank('T-1003','BaCl₂ storage · 30 m³ priced option (FEED-PE-DAT-130)',35,-24,1.5,30,'wwchem',{geometryStatus:'Volume from FEED-PE-DAT-130 (D-A1000-06); diameter and height are model choices — vendor dimensions unqualified (D-MDL-01 MC-2)'}),
- 134:tank('T-1004','HCl storage · provisional inventory',41,-24,.85,5,'wwchem'),
  135:tank('T-1005','Floc aid preparation / storage',47,-24,.65,2,'wwchem'),
- 136:pump('P-1004','NaOH dosing pump',20.9,-21.6,'wwchem'),137:pump('P-1003','Lime slurry dosing pump',28.9,-21.6,'wwchem'),
- 138:pump('P-1002','Conditional BaCl₂ dosing pump',36.5,-21.6,'wwchem'),139:pump('P-1001','HCl dosing pump',42.5,-21.6,'wwchem'),
+ 137:pump('P-1003','Lime slurry dosing pump',28.9,-21.6,'wwchem'),
+ 138:pump('P-1002','Conditional BaCl₂ dosing pump',36.5,-21.6,'wwchem'),
  140:pump('M-1001','Polymer make-up and dosing · ≈ 264 kg/d (FEED-PE-DAT-128)',48.3,-21.6,'wwchem'),
- 141:pump('P-1005','Equalization transfer pump',24.5,-4,'wwcollect'),142:pump('P-1006','Stage 1 transfer pump',31.4,-4,'wwtreat'),
- 143:pump('P-1007','Stage 2 transfer pump',38.7,-4,'wwtreat'),144:pump('P-1008','Stage 3 transfer pump',45.5,-4,'wwtreat'),
- 145:pump('P-1009','Underflow pumps A/B · 18 m³/h (FEED-PE-DAT-123)',52.5,-4,'wwseparate'),146:pump('P-1010','Conditional centrifuge-bypass pump',55,-8,'wwseparate'),
+ 141:pump('P-1005','Equalization transfer pump',24.5,-4,'wwcollect'),
+ 145:pump('P-1009','Underflow pumps A/B · 18 m³/h (FEED-PE-DAT-123)',52.5,-4,'wwseparate'),
  147:{tag:'BL-A2000',label:'A-2000 interarea tie-in station',x:62,z:-12,labelY:2.7,areaId:'A-2000',primaryOperation:'ropretreat',designStatus:'interface',geometryStatus:'Interarea transfer and isolated spare return interfaces; full RO train modeled separately',reviewNote:'T-2001, pretreatment, RO, product, concentrate and CIP are modeled in the A-2000 package. Footprint, inventory and site access remain provisional.'},
  148:{tag:'PL-1001',label:'A-1000 containment and access',x:15,z:-16,labelY:2.5,areaId:'A-1000',primaryOperation:'wwcollect',designStatus:'proposed',geometryStatus:'Proposed containment and access envelopes; civil design unqualified'},
  149:{tag:'BIN-1001',label:'Sludge roll-off containers · 2 × 40 m³ (FEED-PE-DAT-126)',x:50.4,z:-19.5,labelY:2.2,areaId:'A-1000',primaryOperation:'wwseparate',designStatus:'proposed',geometryStatus:'Proposed removable sludge container; waste classification and capacity HOLD'},
@@ -38,12 +35,9 @@ export const A1000_EQUIPMENT={
  154:pump('P-1012','Centrate transfer / recycle pump',55.9,-20.2,'wwseparate',{designStatus:'proposed'}),
  152:{tag:'CP-1001',label:'Wastewater control and sample station',x:36,z:-1.6,labelY:2.1,areaId:'A-1000',primaryOperation:'wwtreat',designStatus:'proposed',geometryStatus:'Proposed accessible indication; no live data or approved interlocks'},
 };
-// D-MDL-01 MC-1: tags retired by the A-1000 decisions are kept in place for PFD-1000 continuity (streams, vents and drains unchanged),
-// shown as retired and left out of equipment counts. Physical removal is handed to the model owner with the validator updates.
-export const A1000_RETIRED={'T-1001':['D-A1000-05','NaOH storage — lime-first, no NaOH service (RS6)'],'P-1004':['D-A1000-05','NaOH metering — lime-first (RS6)'],
- 'T-1007':['D-A1000-05','Pre-G decant receiver — the A-160 decant no longer exists (RS7)'],'P-1011':['D-A1000-05','Pre-G decant lift — no decant (RS7)'],
- 'P-1006':['D-A1000-06','Stage 1 transfer — gravity cascade (P2-1)'],'P-1007':['D-A1000-06','Stage 2 transfer — gravity cascade (P2-1)'],'P-1008':['D-A1000-06','Stage 3 transfer — gravity cascade (P2-1)'],
- 'P-1010':['D-A1000-06','Centrifuge bypass — covered by P-1009A/B (P2-3)'],'T-1004':['D-A1000-06','HCl storage — no acid trim (P2-8)'],'P-1001':['D-A1000-06','HCl metering — no acid trim (P2-8)']};
+// D-MDL-01 MC-1 kept the retired tags in place; D-MDL-03 (QFL 2026-09-30) removed T-1001 / P-1004 (D-A1000-05), T-1004 / P-1001, P-1006 / P-1007 /
+// P-1008 and P-1010 (D-A1000-06) with their pipework. T-1007 / P-1011 remain: in service under Route 0, retired only under Route 2 + 6 (D-MDL-02).
+export const A1000_RETIRED={'T-1007':['D-A1000-05','Pre-G decant receiver — the A-160 decant no longer exists (RS7)'],'P-1011':['D-A1000-05','Pre-G decant lift — no decant (RS7)']};
 for(const e of Object.values(A1000_EQUIPMENT)){const r=A1000_RETIRED[e.tag];if(r){e.retired={decisionId:r[0],reason:r[1],basis:'D-MDL-01 MC-1'};e.label+=` · RETIRED (${r[0]})`;}}
 export const A1000_IDS=Object.keys(A1000_EQUIPMENT).map(Number);
 export const WATER_AREA_LAYOUT={units:'m',wastewater:{min:[14,0,-28],max:[58,10,2]},reclaimed:{min:[60,0,-28],max:[103,10,2]},futureExpansion:{min:[105,0,-28],max:[116,10,2]},note:'Approved relative location only. Block dimensions are provisional reservations; no surveyed building, road, wind or site boundary supplied.'};
@@ -66,8 +60,8 @@ export const A1000_HOLDS=[
  'Residence times of 15 / 30 / 20 / 20 minutes and chemical-storage inventories are provisional layout assumptions, not treatment-test results or procurement capacities.',
  'PFD R-1002 notes conflict: pH 7–10.5 versus 8.5–10.5. Manganese removal, redox requirements, flocculation, dissolved salts and sludge properties need testing.',
  'BaCl₂ is conditional, isolated by default and not an approved dosing recipe. Residual Ba / Ca / sulfate scaling and disposal limits require qualification; the draft 1500 mg/L note is not an established site permit.',
- 'HCl trim before separation requires a metals-redissolution review. No pH target, chemical dose, cooling duty, relief limit or automatic trip setpoint is approved.',
- 'DC-1001 bypass stays closed and blinded until the complete A-2000 acceptance basis is qualified. Centrifuge downtime alone does not permit bypass.',
+ 'No acid trim (D-A1000-06 P2-8; T-1004 / P-1001 removed, D-MDL-03). No pH target, chemical dose, cooling duty, relief limit or automatic trip setpoint is approved.',
+ 'No centrifuge bypass: P-1010 removed (D-A1000-06 P2-3, D-MDL-03); the A-2000 bypass interface stays positively blinded. Centrifuge downtime alone does not permit bypass.',
  'Centrate recycle is a controlled solids-capture loop; it does not remove dissolved salts. Sludge classification remains pending characterization and applicable disposal acceptance.',
  'Unused legacy UF/backwash, CIP and scrubber tie-ins remain capped; A-2000 uses a separately modeled normal backwash return. No unverified drain, Ar or dry A-800 process connection is made.',
  'Maintenance access remains open: tank manways and low drains need a coordinated contained service arrangement; pump, actuator and decanter removal envelopes require vendor dimensions and an isolation/handling plan. Routine grade panels and reserved aisles are screened separately.',

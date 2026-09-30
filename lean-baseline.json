@@ -1,28 +1,28 @@
 {
-  "version": "dee263f",
+  "version": "55b536c",
   "date": "2026-09-30",
   "basis": "Prepared FEED baseline; component counts are model objects, not procurement quantities.",
-  "parts": 155334,
+  "parts": 152771,
   "counts": {
-    "shell": 1921,
-    "head": 2670,
-    "fastener": 73365,
-    "internal": 9664,
-    "frame": 27534,
-    "pump": 2181,
-    "pipe": 33689,
-    "valve": 4310
+    "shell": 1919,
+    "head": 2664,
+    "fastener": 72093,
+    "internal": 9656,
+    "frame": 27088,
+    "pump": 2071,
+    "pipe": 33014,
+    "valve": 4266
   },
   "timing": {
     "source": "prepared",
-    "downloadMs": 97.094399,
-    "inflateMs": 931.116834,
-    "reconstructMs": 7919.429176,
-    "decodeMs": 8850.678503000001,
-    "totalMs": 8955.176774
+    "downloadMs": 80.55783500000001,
+    "inflateMs": 941.2684390000001,
+    "reconstructMs": 7170.774289999999,
+    "decodeMs": 8112.125804,
+    "totalMs": 8200.22472
   },
-  "maxHeartbeatGapMs": 772.9829109999991,
-  "ticks": 460,
+  "maxHeartbeatGapMs": 631.7865490000004,
+  "ticks": 443,
   "walkwaySegments": 188,
   "walkwayDestinations": 146
 }
