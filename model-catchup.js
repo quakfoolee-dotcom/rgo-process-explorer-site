@@ -33,9 +33,25 @@ export const CATCHUP_EQUIPMENT={
  668:r3('SL-1001','Hydrated lime silo · 200 m³ (FEED-PE-DAT-127)','A-1000','wwtreat',110.5,-25,{radius:2.5,bottom:3,top:3+200/(Math.PI*2.5**2),labelY:14.4,geometryStatus:note3('FEED-PE-DAT-127',' Future-expansion block; tanker stands on the adjacent access road; lime to T-1002 in A-1000 (≈ 50 m) is a tie-in item.')}),
  656:eq('IF-A2000-CITY','Municipal make-up battery limit (D-A2000-03)','A-2000','rodistribute',103.4,-2,{designStatus:'interface',labelY:2.2,geometryStatus:'Battery-limit marker only (D-MDL-01 release 2); municipal supply pressure, hardness and connection are site data.'}),
 };
+CATCHUP_EQUIPMENT[669]=eq('RSV-A1100','Reserved plot — A-1100 acid concentration (Route 2 + 6 option, D-MDL-02)','A-1000','wwtreat',101,-41.5,{labelY:1.6,geometryBasis:'D-MDL-02',geometryStatus:'Plot outline only (Route 0). Holds the south-east yard for PK-1101, T-1101 / T-1102 and P-1101 / P-1102 if Route 2 + 6 is chosen after REP-039 M1–M3.'});
 export const CATCHUP_IDS=Object.keys(CATCHUP_EQUIPMENT).map(Number);
+// D-MDL-02 (QFL 2026-09-29, bases AR-1…AR-9): equipment that exists only under Route 2 + 6 (acid recovery), and the Route 0 reservation.
+export const ACID_OPTION_IDS=[652,653,654,658,659,660,661,662];
+export function applyAcidRoute(E,route){
+ const byTag=tag=>Object.values(E).find(e=>e&&e.tag===tag);
+ if(route==='r26'){
+  delete E[669];
+  for(const id of ACID_OPTION_IDS)if(E[id]){E[id].acidRoute='r26';E[id].label+=' · OPTION — Route 2 + 6';E[id].geometryStatus='OPTION — Route 2 + 6 acid recovery, gated on REP-039 M1–M3 (D-MDL-02). '+(E[id].geometryStatus||'');}
+  const t162=byTag('T-162');if(t162&&!t162.retired){t162.retired={decisionId:'D-A160-04',reason:'Route 6: the hold moves into T-161, so T-162 is deleted',basis:'D-MDL-02 AR-4'};t162.label+=' · RETIRED (D-A160-04)';}
+  return;
+ }
+ for(const id of ACID_OPTION_IDS)delete E[id];
+ for(const tag of ['T-1007','P-1011']){const e=byTag(tag);if(e&&e.retired){delete e.retired;e.label=e.label.replace(/ · RETIRED \([^)]*\)$/,'');e.reviewNote=(e.reviewNote?e.reviewNote+' ':'')+'In service under Route 0 — its retirement (D-A1000-05, RS7) follows Route 6 (D-MDL-02 AR-4).';}}
+ const a=E[663];if(a){a.acidRouteNote='Route 0: users ≈ 10.9 MW (no PK-1101 stage 2); 14 MW rated kept (D-MDL-02 AR-5)';a.label='Thermal-oil heater package · 14 MW (FEED-PE-DAT-140) — users ≈ 10.9 MW under Route 0 (no PK-1101 stage 2)';}
+ for(const id of [657,668]){const e=E[id];if(e)e.geometryStatus+=' Under Route 0 the A-1000 envelope is the Route 2 + 6 residual size (CAL-034); a Route 0 A-1000 is not designed (REP-038 screening).';}
+}
 
-export function buildCatchup(h){
+export function buildCatchup(h,acidRoute='r0'){
  const k=processKit(h,.08),s=structuralKit(h),{T,parts,EQUIPMENT,setContext,b,c,band,nozzle}=k,first=parts.length,V=p=>new T.Vector3(...p);
  const base=(part,point)=>{h.structure.roots.push({part:part.id,local:V(point).sub(part.position).applyQuaternion(part.quaternion.clone().invert()).divide(part.scale).toArray(),elevation:0});return part;};
  const stub=(tag,point,axis,r=.08)=>nozzle(point,axis,.22,tag+' (tie-in deferred)',r);
@@ -49,12 +65,12 @@ export function buildCatchup(h){
   return {e,x,z,r,y0,y1,tag,body,roof};
  }
  // F-160 — elevated agitated pressure filter.
- const f=vessel(652);setContext(652,f.e.label);
+ if(EQUIPMENT[652]){const f=vessel(652);setContext(652,f.e.label);
  const motor=c('F-160 agitator drive','pump',.22,.55,[f.x,f.y1+.36,f.z],'blue');s.join(f.roof,motor,[f.x,f.y1+.08,f.z],'F-160 drive / head');s.load(motor,'F-160 agitator');
  stub('F-160 R-141 slurry inlet',[f.x+.4,f.y1+.08,f.z],[0,1,0]);stub('F-160 cake discharge to T-161',[f.x-f.r,f.y0+.35,f.z],[-1,0,0],.15);stub('F-160 acid filtrate outlet',[f.x,f.y0-.05,f.z],[0,-1,0],.05);
  // T-160 and P-160A/B.
  const t=vessel(653);stub('T-160 filtrate inlet',[t.x,t.y1+.08,t.z],[0,1,0],.05);stub('T-160 outlet',[t.x,.6,t.z+t.r],[0,0,1],.05);
- setContext(654,EQUIPMENT[654].label);for(const [i,dz] of [0,1.3].entries()){const p=k.transferPump(EQUIPMENT[654].x,'P-160'+'AB'[i],EQUIPMENT[654].label,{z:EQUIPMENT[654].z-dz});stub('P-160'+'AB'[i]+' discharge',p.outlet,[0,1,0],.04);}
+ setContext(654,EQUIPMENT[654].label);for(const [i,dz] of [0,1.3].entries()){const p=k.transferPump(EQUIPMENT[654].x,'P-160'+'AB'[i],EQUIPMENT[654].label,{z:EQUIPMENT[654].z-dz});stub('P-160'+'AB'[i]+' discharge',p.outlet,[0,1,0],.04);}}
  // HR-601 — air-to-air recuperator envelope on a slab.
  const hr=EQUIPMENT[655];setContext(655,hr.label);
  const slab=base(b('HR-601 foundation slab','frame',[7.4,.2,3.4],[hr.x,.1,hr.z],'dark'),[hr.x,0,hr.z]);
@@ -68,7 +84,8 @@ export function buildCatchup(h){
  const cl=vessel(657);const bridge=b('CL-1001 bridge','frame',[cl.r*2,.35,.9],[cl.x,cl.y1+.08+.175,cl.z],'steel');s.join(cl.roof,bridge,[cl.x,cl.y1+.08,cl.z],'CL-1001 bridge / wall');
  const drive=c('CL-1001 rake drive','pump',.45,.7,[cl.x,cl.y1+.43+.35,cl.z],'blue');s.join(bridge,drive,[cl.x,cl.y1+.43,cl.z],'CL-1001 drive / bridge');s.load(drive,'CL-1001 drive');
  stub('CL-1001 feedwell inlet from R-1004',[cl.x-cl.r,cl.y1-.4,cl.z],[-1,0,0],.12);stub('CL-1001 underflow to P-1009',[cl.x,.35,cl.z+cl.r],[0,0,1],.08);stub('CL-1001 overflow',[cl.x+cl.r,cl.y1-.3,cl.z],[1,0,0],.12);
- // A-1100 acid bund with T-1101 / T-1102 and the pumps.
+ // A-1100 acid bund with T-1101 / T-1102, the pumps and PK-1101 — Route 2 + 6 option only (D-MDL-02).
+ if(EQUIPMENT[658]){
  setContext(658,EQUIPMENT[658].label);
  const bund=base(b('A-1100 acid bund floor','frame',[20,.2,11],[93,.1,-41.5],'dark'),[93,0,-41.5]);
  for(const [lab,size,pos] of [['north',[20,1.2,.25],[93,.8,-36.125]],['south',[20,1.2,.25],[93,.8,-46.875]],['west',[.25,1.2,11],[83.125,.8,-41.5]],['east',[.25,1.2,11],[102.875,.8,-41.5]]]){const w=b('A-1100 bund wall '+lab,'frame',size,pos,'dark');s.join(bund,w,[pos[0],.2,pos[2]],'A-1100 bund wall '+lab+' / floor');}
@@ -81,6 +98,12 @@ export function buildCatchup(h){
  const encl=b('PK-1101 package envelope (screening)','shell',[13,10,9],[pk.x,.2+5,pk.z],'steel');s.join(pslab,encl,[pk.x,.2,pk.z],'PK-1101 envelope / slab');s.load(encl,'PK-1101 envelope');
  const col=c('PK-1101 stage 2 evaporator (screening)','shell',1.1,8,[pk.x+3.5,10.2+4,pk.z-2],'steel');s.join(encl,col,[pk.x+3.5,10.2,pk.z-2],'PK-1101 evaporator / envelope');
  for(const [lab,dx,dz] of [['feed from P-1101',-6.5,-3],['product to T-1102',-6.5,-1],['thermal oil supply / return',-6.5,1.5],['condensate',-6.5,3.5]])stub('PK-1101 '+lab,[pk.x+dx,1.4,pk.z+dz],[-1,0,0],.08);
+ }
+ // Route 0: the south-east yard reserved for the option — a low plot outline with a marker post (D-MDL-02 AR-6).
+ if(EQUIPMENT[669]){const rv=EQUIPMENT[669];setContext(669,rv.label);
+  const post=base(b('RSV-A1100 reservation marker post','frame',[.12,1.4,.12],[rv.x,.7,rv.z],'steel'),[rv.x,0,rv.z]);const sign=b('RSV-A1100 reservation sign','valve',[1.2,.5,.04],[rv.x,1.2,rv.z],'blue');s.join(post,sign,[rv.x,1.2,rv.z],'RSV-A1100 sign / post');
+  for(const [lab,size,pos] of [['north',[36,.08,.15],[101,.04,-36]],['south',[36,.08,.15],[101,.04,-47]],['west',[.15,.08,11],[83,.04,-41.5]],['east',[.15,.08,11],[119,.04,-41.5]]])base(b('RSV-A1100 plot outline '+lab,'frame',size,pos,'dark'),[pos[0],0,pos[2]]);
+ }
  // A-5400 — package pad with curb, H-5400 heater and stack, P-5401A/B, V-5401 on the heater structure, T-5401 drain tank.
  const ap=EQUIPMENT[663];setContext(663,ap.label);
  const apad=base(b('A-5400 package pad','frame',[10,.2,18],[ap.x,.1,ap.z],'dark'),[ap.x,0,ap.z]);

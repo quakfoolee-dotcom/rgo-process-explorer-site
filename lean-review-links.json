@@ -1,6 +1,6 @@
 {
- "version": "4c92ee7",
- "date": "2026-09-29",
+ "version": "dee263f",
+ "date": "2026-09-30",
  "items": {
   "L01": {
    "kind": "engineering",
@@ -28,7 +28,7 @@
      "id": "A160-05",
      "area": "A-160",
      "href": "./a160-review.html#A160-05",
-     "revision": "r7",
+     "revision": "r8",
      "reviewer": "QFL",
      "topic": "Register and model reconciliation, containment and interfaces",
      "status": "Register reconciliation required"
@@ -150,7 +150,7 @@
      "id": "A160-05",
      "area": "A-160",
      "href": "./a160-review.html#A160-05",
-     "revision": "r7",
+     "revision": "r8",
      "reviewer": "QFL",
      "topic": "Register and model reconciliation, containment and interfaces",
      "status": "Register reconciliation required"
@@ -394,7 +394,7 @@
      "id": "A160-01",
      "area": "A-160",
      "href": "./a160-review.html#A160-01",
-     "revision": "r7",
+     "revision": "r8",
      "reviewer": "QFL",
      "topic": "Dilution basis — Option B now, Option C later",
      "status": "Design concept approved — sizing withdrawn"

@@ -47,11 +47,11 @@ export function mountWorkspaceNavigation({root=document,onPanel,onArea,onResize=
  for(const a of areas){const o=root.createElement('option');o.value=a.id;o.textContent=a.label;$('nav-area').append(o);}
  $('nav-area').onchange=()=>onArea($('nav-area').value);
  $('sidebar-collapse').onclick=()=>{collapsed(true);$('sidebar-expand').focus();};$('sidebar-expand').onclick=()=>{collapsed(false);tabs.find(b=>b.dataset.workspace===workspace)?.focus();};
- function resetConfiguration(){$('a160-design').value=configuration.a160;$('argon-source').value=configuration.argonSource;$('model-setup-apply').disabled=true;}
+ function resetConfiguration(){$('a160-design').value=configuration.a160;if($('acid-route')){$('acid-route').value=configuration.acidRoute||'r0';$('acid-route').dispatchEvent(new Event('change'));}$('argon-source').value=configuration.argonSource;$('model-setup-apply').disabled=true;}
  const dialogs=[['model-setup','model-setup-dialog'],['view-settings','view-settings-dialog'],['resources','resources-dialog']];
  for(const [prefix,id]of dialogs){const d=$(id),opener=$(prefix+'-open');opener.onclick=()=>{if(prefix==='model-setup')resetConfiguration();syncViews();d.showModal();};for(const b of d.querySelectorAll('[data-close-dialog]'))b.onclick=()=>d.close();d.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();e.stopPropagation();d.close();}});d.addEventListener('close',()=>{if(prefix==='model-setup')resetConfiguration();opener.focus({preventScroll:true});});}
- for(const id of ['a160-design','argon-source'])$(id).onchange=()=>{$('model-setup-apply').disabled=$('a160-design').value===configuration.a160&&$('argon-source').value===configuration.argonSource;};
- $('model-setup-apply').onclick=()=>onApply({a160:$('a160-design').value,argonSource:$('argon-source').value});
+ for(const id of ['a160-design','argon-source','acid-route'].filter(id=>$(id)))$(id).addEventListener('change',()=>{$('model-setup-apply').disabled=$('a160-design').value===configuration.a160&&$('argon-source').value===configuration.argonSource&&($('acid-route')?.value||'r0')===(configuration.acidRoute||'r0');});
+ $('model-setup-apply').onclick=()=>onApply({a160:$('a160-design').value,...($('acid-route')?.value==='r26'?{acidRoute:'r26'}:{}),argonSource:$('argon-source').value});
  $('nav-model-status').textContent=configuration.label+' · draft';
  $('resources-configuration').onclick=()=>$('download-configuration').click();
  const viewLinks={'view-area-labels':'area-markings-toggle','view-equipment-labels':'equipment-label-toggle','view-supports':'show-support-structures','view-access':'show-access-structures','view-walkways':'walkways-toggle'};

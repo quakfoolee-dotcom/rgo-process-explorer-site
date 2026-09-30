@@ -1,7 +1,7 @@
 import {PREPARED_MODEL_MANIFEST as manifest} from './prepared-model-manifest.js';
 import {decodePreparedModel} from './prepared-model-codec.js';
 
-export const configurationKey=s=>[s.scope||'feed',s.a160||'baseline',s.argonSource||'bulk'].join('|')+(s.a400?'|a400:'+s.a400:'');
+export const configurationKey=s=>[s.scope||'feed',s.a160||'baseline',s.argonSource||'bulk'].join('|')+(s.a400?'|a400:'+s.a400:'')+(s.acidRoute==='r26'?'|acid:r26':'');
 async function cache(action,key,value){
  if(!globalThis.indexedDB)return null;
  return new Promise(resolve=>{

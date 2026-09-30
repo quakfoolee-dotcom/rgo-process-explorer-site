@@ -1,8 +1,8 @@
 {
- "version": "2b15ce3",
- "date": "2026-09-29",
- "generated": "2026-09-29T22:09:46.129Z",
- "revision": "r5",
+ "version": "71e8c3f",
+ "date": "2026-09-30",
+ "generated": "2026-09-30T01:15:31.697Z",
+ "revision": "r6",
  "reviewer": {
   "initials": "QFL",
   "date": "2026-09-29"
@@ -28,7 +28,7 @@
   "vendorFlexible": 132,
   "structurallyQualified": false,
   "memberLengthM": 14075.407928593448,
-  "parts": 157128
+  "parts": 155334
  },
  "published": {
   "revision": "bc-corridors-85",
@@ -474,7 +474,7 @@
    "reservedSpaceFindings": 0,
    "review": {
     "href": "./a160-review.html",
-    "revision": "r7",
+    "revision": "r8",
     "reviewer": "QFL"
    }
   },
@@ -591,7 +591,7 @@
    "reservedSpaceFindings": 0,
    "review": {
     "href": "./a1000-review.html",
-    "revision": "r14",
+    "revision": "r15",
     "reviewer": "QFL"
    }
   },
@@ -4210,9 +4210,9 @@
  ],
  "structuralAttachments": {
   "passes": true,
-  "loads": 2618,
-  "contacts": 21211,
-  "foundations": 5332,
+  "loads": 2612,
+  "contacts": 21193,
+  "foundations": 5331,
   "failures": 0,
   "method": "Declared mounting points checked against part geometry and assembled transforms, with graph reachability to foundations. Structural strength is not calculated."
  },
@@ -4567,7 +4567,7 @@
     {
      "kind": "page",
      "id": "A-1000",
-     "label": "A-1000 review r14 · QFL",
+     "label": "A-1000 review r15 · QFL",
      "href": "./a1000-review.html"
     },
     {
@@ -4620,13 +4620,13 @@
     {
      "kind": "page",
      "id": "A-1000",
-     "label": "A-1000 review r14 · QFL",
+     "label": "A-1000 review r15 · QFL",
      "href": "./a1000-review.html"
     },
     {
      "kind": "page",
      "id": "A-160",
-     "label": "A-160 review r7 · QFL",
+     "label": "A-160 review r8 · QFL",
      "href": "./a160-review.html"
     },
     {
@@ -4685,7 +4685,7 @@
     {
      "kind": "page",
      "id": "A-1000",
-     "label": "A-1000 review r14 · QFL",
+     "label": "A-1000 review r15 · QFL",
      "href": "./a1000-review.html"
     },
     {
@@ -4699,6 +4699,65 @@
      "id": "A-2000",
      "label": "A-2000 review r7 · QFL",
      "href": "./a2000-review.html"
+    }
+   ]
+  },
+  {
+   "id": "LAY-12",
+   "topic": "Acid route as a model configuration (D-MDL-02): Route 0 by default, Route 2 + 6 as an option",
+   "status": "Applied — the south-east yard stays reserved",
+   "priority": "medium",
+   "discipline": "Model management / layout",
+   "observation": "D-MDL-02 (QFL 2026-09-29, bases AR-1–AR-9): the acid route is not decided, so the 3D model now opens on Route 0 (full neutralisation, REP-038 fallback) and shows Route 2 + 6 (spent-acid recovery, D-A1000-03, gated on REP-039 M1–M3) as an option under Model Setup → Acid route, built in the browser like the A-160 alternatives (URL acid=r26). D-A1000-03, the data layer, the datasheets and LST-001 V5.2 are unchanged. Route 0 builds no F-160 / T-160 / P-160 and no A-1100 set (PK-1101, T-1101, T-1102, P-1101A/B, P-1102A/B); the south-east yard keeps a plot outline (RSV-A1100) so the option keeps its space; CL-1001, SL-1001 and A-5400 are built in both routes. Current model (Route 0): 273 holds plant-wide.",
+   "action": "Keep the south-east yard free until the acid route is ruled after REP-039 M1–M3; the model engineer re-bases the A-1000 envelopes if Route 0 is chosen (a Route 0 A-1000 is not designed).",
+   "evidence": [
+    {
+     "kind": "decision",
+     "id": "D-A1000-03",
+     "label": "D-A1000-03 (A-1000, QFL 2026-09-25): Spent-acid recovery (REP-039 Route 2 + 6) is the FEED base case for the wet train, gated on M1 (filterability at 50–60 wt %), M2 (recycled-acid quality) and M3 …",
+     "href": "./semantic-core.html#area-A-1000"
+    },
+    {
+     "kind": "decision",
+     "id": "D-A160-04",
+     "label": "D-A160-04 (A-160, QFL 2026-09-26): Route 6 (REP-039; REP-042 Option C) is the A-160 base case under D-A1000-03: F-160 filters the Pre-G GIC from the ≈ 90 wt % R-141 acid at up to 80 °C (2.5 m², c…",
+     "href": "./semantic-core.html#area-A-160"
+    },
+    {
+     "kind": "decision",
+     "id": "D-A1000-05",
+     "label": "D-A1000-05 (A-1000, QFL 2026-09-27): A-1000 sized for the REP-039 Route 2 + 6 residual on bases RS1–RS9 (FEED-PE-CAL-034): 615 m³/d and 24.3 t/d H₂SO₄ design, HCl bounding at the PFD dose; lime-onl…",
+     "href": "./semantic-core.html#area-A-1000"
+    },
+    {
+     "kind": "doc",
+     "id": "dist/model-catchup.js",
+     "label": "dist/model-catchup.js",
+     "href": "https://github.com/quakfoolee-dotcom/rGO_3D_Plant_Model/blob/main/dist/model-catchup.js"
+    },
+    {
+     "kind": "doc",
+     "id": "dist/design-scenarios.js",
+     "label": "dist/design-scenarios.js",
+     "href": "https://github.com/quakfoolee-dotcom/rGO_3D_Plant_Model/blob/main/dist/design-scenarios.js"
+    },
+    {
+     "kind": "doc",
+     "id": "docs/model-catchup-handoff.md",
+     "label": "docs/model-catchup-handoff.md",
+     "href": "https://github.com/quakfoolee-dotcom/rGO_3D_Plant_Model/blob/main/docs/model-catchup-handoff.md"
+    },
+    {
+     "kind": "page",
+     "id": "A-1000",
+     "label": "A-1000 review r15 · QFL",
+     "href": "./a1000-review.html"
+    },
+    {
+     "kind": "page",
+     "id": "A-160",
+     "label": "A-160 review r8 · QFL",
+     "href": "./a160-review.html"
     }
    ]
   }

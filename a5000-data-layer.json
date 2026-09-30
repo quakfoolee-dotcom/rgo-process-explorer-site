@@ -1,8 +1,8 @@
 {
  "area": "A-5000",
- "version": "2b15ce3",
- "date": "2026-09-29",
- "revision": "r12",
+ "version": "71e8c3f",
+ "date": "2026-09-30",
+ "revision": "r13",
  "reviewer": {
   "initials": "QFL",
   "date": "2026-09-29"
@@ -2684,10 +2684,10 @@
   }
  ],
  "layout": {
-  "version": "9990108",
+  "version": "4c92ee7",
   "date": "2026-09-29",
-  "revision": "r5",
-  "reviewer": "QFL",
+  "revision": "r6",
+  "reviewer": null,
   "supports": 973,
   "holds": 11,
   "placementElements": 11,
@@ -3521,6 +3521,47 @@
      "kind": "asset",
      "id": "P-5401A",
      "label": "P-5401A · Thermal-Oil Circulation Pumps (Pump) — 3 rows, 0 approved, 4 open gaps",
+     "href": "#a5000-assets"
+    }
+   ]
+  },
+  {
+   "id": "A5000-17",
+   "topic": "A-5400 and the load list under the two acid routes (D-MDL-02)",
+   "status": "Model configuration — A-5400 kept at 14 MW rated",
+   "priority": "medium",
+   "discipline": "Process / utilities",
+   "observation": "D-MDL-02 (QFL 2026-09-29, bases AR-1–AR-9): the acid route is not decided, so the 3D model now opens on Route 0 (full neutralisation, REP-038 fallback) and shows Route 2 + 6 (spent-acid recovery, D-A1000-03, gated on REP-039 M1–M3) as an option under Model Setup → Acid route, built in the browser like the A-160 alternatives (URL acid=r26). D-A1000-03, the data layer, the datasheets and LST-001 V5.2 are unchanged. A-5400 is built in both routes (HX-601 needs it either way); under Route 0 its users are ≈ 10.9 MW (no PK-1101 stage 2) against 14 MW rated. About 0.85 MW of the FEED-PE-LST-010 V1.0 maximum demand depends on Route 2 + 6 (MVR ≈ 0.8 MW, PK-1101 auxiliaries, A-1100 pumps); Route 0 would lower the maximum demand to ≈ 3.2 MW but adds the larger A-1000 lime train, which is not listed.",
+   "action": "Keep the 14 MW rating until the acid route is ruled; revise LST-010 with the ruling.",
+   "evidence": [
+    {
+     "kind": "decision",
+     "id": "D-A5000-04",
+     "label": "D-A5000-04 (QFL 2026-09-29, FEED-PE-NTE-014): A-5400 medium: two QFL rulings of 2026-09-27 disagreed — D-A5000-02 (20 barg steam, 2 × 7 MW, with HR-601 and MVR) and the plant-wide balance stream (…",
+     "href": "#a5000-decisions"
+    },
+    {
+     "kind": "document",
+     "id": "FEED-PE-LST-010",
+     "label": "FEED-PE-LST-010 V1.0 · Electrical Load List (controlled)",
+     "href": "#a5000-documents"
+    },
+    {
+     "kind": "document",
+     "id": "FEED-PE-DAT-140",
+     "label": "FEED-PE-DAT-140 V1.1 · A-5400 Thermal-Oil Heater Package Datasheet (controlled (preliminary - budget enquiry))",
+     "href": "#a5000-documents"
+    },
+    {
+     "kind": "asset",
+     "id": "A-5400",
+     "label": "A-5400 · Missing ≥ 200 °C steam / thermal-oil loop (REP-043 F-51: HX-601 2.9–15 MW, acid concentrator 1.5–4.4 MW, R-141 fast heat-up) (UtilityPackage) — 41 rows, 1 approved, 2 open gaps",
+     "href": "#a5000-assets"
+    },
+    {
+     "kind": "asset",
+     "id": "H-5400",
+     "label": "H-5400 · Thermal-Oil Heater (gas-fired) (Hopper) — 3 rows, 0 approved, 2 open gaps",
      "href": "#a5000-assets"
     }
    ]
