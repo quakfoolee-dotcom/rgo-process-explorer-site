@@ -1,5 +1,6 @@
 import {processKit} from './process-kit.js';
 import {structuralKit} from './structural-kit.js';
+import {buildThermalOil,THERMAL_OIL_BASIS} from './thermal-oil.js';
 
 // D-MDL-01 release 2 (bases R2-1…R2-8, approved by QFL 2026-09-28): equipment issued in the V219–V227 datasheets that the model did not
 // carry. Standalone envelopes with nozzle stubs — no process routes are added (tie-ins deferred to the model engineer with the W3 / cascade
@@ -27,11 +28,11 @@ export const CATCHUP_EQUIPMENT={
  660:r3('P-1101','Concentrator feed pumps A/B (FEED-PE-DAT-112)','A-1000','wwtreat',101.2,-44.8,{labelY:2.1,geometryStatus:note3('FEED-PE-DAT-112',' 1 + 1 inside the A-1100 bund.')}),
  661:r3('P-1102','Recovered acid return pumps A/B (FEED-PE-DAT-113)','A-1000','wwtreat',101.2,-39.6,{labelY:2.1,geometryStatus:note3('FEED-PE-DAT-113',' 1 + 1 inside the A-1100 bund; return to T-201 / T-102 on the south rack.')}),
  662:r3('PK-1101','Spent-acid concentrator package · screening 14 × 10 m (FEED-PE-DAT-109)','A-1000','wwtreat',112,-42,{labelY:19,geometryStatus:note3('FEED-PE-DAT-109',' Footprint, height and evaporator arrangement are vendor data (hold K1, REP-039 M5).')}),
- 663:r3('A-5400','Thermal-oil heater package · 14 MW · screening 10 × 18 m (FEED-PE-DAT-140)','A-5000','a5000',111,-11,{labelY:3,geometryStatus:note3('FEED-PE-DAT-140',' Future-expansion block; ≈ 27 m from the A-600 edge (DR-601), ≈ 14 m from the A-800 block edge and ≈ 17 m from the A-1100 bund — HAZOP inputs (U8), not a spacing ruling.')}),
- 664:r3('H-5400','Thermal-oil heater (gas-fired) · 14 MW rated (FEED-PE-DAT-140)','A-5000','a5000',108.8,-13,{labelY:6.4,geometryStatus:note3('FEED-PE-DAT-140',' Horizontal-coil heater with a ≈ 20 m stack; vendor geometry (U8).')}),
- 665:r3('P-5401','Thermal-oil circulation pumps A/B · 900 m³/h (FEED-PE-DAT-140)','A-5000','a5000',114.2,-13.5,{labelY:2.1,geometryStatus:note3('FEED-PE-DAT-140',' 1 + 1 beside the heater.')}),
- 666:r3('V-5401','Thermal-oil expansion vessel (FEED-PE-DAT-140)','A-5000','a5000',108.8,-18.2,{radius:.9,bottom:5.6,top:8.4,labelY:9.4,geometryStatus:note3('FEED-PE-DAT-140',' Inert-gas blanketed, on the heater structure at the loop high point; vendor sizes (U8).')}),
- 667:r3('T-5401','Thermal-oil drain / storage tank (FEED-PE-DAT-140)','A-5000','a5000',113.8,-5.2,{radius:1.6,bottom:.26,top:.26+3.7,labelY:5.2,geometryStatus:note3('FEED-PE-DAT-140',' Full-inventory drain tank on a curbed pad (≈ 30 m³ screening); vendor sizes (U8).')}),
+ 663:r3('A-5400','Thermal-oil heater package · 14 MW · 10 × 18 m pad (FEED-PE-DAT-140)','A-5000','a5000',111,-11,{labelY:3,geometryBasis:'D-MDL-05',geometryStatus:note3('FEED-PE-DAT-140',' Future-expansion block; ≈ 27 m from the A-600 edge (DR-601), ≈ 14 m from the A-800 block edge and ≈ 17 m from the A-1100 bund — HAZOP inputs (U8, FEED-PS-HOP-001), not a spacing ruling.').replace('Standalone — tie-ins deferred to the model engineer. Screening size; vendor geometry unqualified.','Connected: DN300 thermal-oil mains to HX-601 (and DN150 to PK-1101 under Route 2 + 6) on a dedicated rack, D-MDL-05 (QFL 2026-10-01).')}),
+ 664:r3('H-5400','Thermal-oil heater (gas-fired) · 14 MW rated (FEED-PE-DAT-140)','A-5000','a5000',108.6,-12,{radius:1.8,labelY:6.4,geometryBasis:'D-MDL-05',geometryStatus:'Horizontal cylindrical coil heater Ø 3.6 × 10 m on saddles, burner and FD fan at the north end, flue box and Ø 1.4 m stack to ≈ 20 m (provisional, dispersion study) at the rear (FEED-PE-DAT-140).'+' Real-world geometry and the thermal-oil mains to HX-601 (and PK-1101 under Route 2 + 6) on a dedicated rack: D-MDL-05 (QFL 2026-10-01), dist/thermal-oil.js; dimensions are model choices pending vendor data (U8).'}),
+ 665:r3('P-5401','Thermal-oil circulation pumps A/B · 900 m³/h (FEED-PE-DAT-140)','A-5000','a5000',113.2,-11.5,{labelY:2.1,geometryBasis:'D-MDL-05',geometryStatus:'1 + 1 horizontal end-suction hot-oil pumps with motors on baseplates, suction from the air separator, discharge to the heater coil (FEED-PE-DAT-140).'+' Real-world geometry and the thermal-oil mains to HX-601 (and PK-1101 under Route 2 + 6) on a dedicated rack: D-MDL-05 (QFL 2026-10-01), dist/thermal-oil.js; dimensions are model choices pending vendor data (U8).'}),
+ 666:r3('V-5401','Thermal-oil expansion vessel (FEED-PE-DAT-140)','A-5000','a5000',113,-16.5,{radius:.9,bottom:5.6,top:7.4,labelY:8.6,geometryBasis:'D-MDL-05',geometryStatus:'Horizontal N₂-blanketed expansion drum Ø 1.8 × 4.5 m (≈ 11 m³) on a frame above the loop high point, with deck, handrail and ladder; the air separator on the pump suction belongs to this assembly until LST-001 allocates a tag.'+' Real-world geometry and the thermal-oil mains to HX-601 (and PK-1101 under Route 2 + 6) on a dedicated rack: D-MDL-05 (QFL 2026-10-01), dist/thermal-oil.js; dimensions are model choices pending vendor data (U8).'}),
+ 667:r3('T-5401','Thermal-oil drain / storage tank (FEED-PE-DAT-140)','A-5000','a5000',114,-5.5,{radius:1.3,bottom:.7,top:3.3,labelY:4.4,geometryBasis:'D-MDL-05',geometryStatus:'Horizontal drain / storage drum Ø 2.6 × 6 m (≈ 30 m³) on saddles at grade inside the curbed pad; drain-down by N₂ push (a gravity drain would need a pit — vendor, U8).'+' Real-world geometry and the thermal-oil mains to HX-601 (and PK-1101 under Route 2 + 6) on a dedicated rack: D-MDL-05 (QFL 2026-10-01), dist/thermal-oil.js; dimensions are model choices pending vendor data (U8).'}),
  668:r3('SL-1001','Hydrated lime silo · 200 m³ · Ø 4.5 m (FEED-PE-DAT-127)','A-1000','wwtreat',18,-24.5,{radius:2.25,bottom:3,top:3+200/(Math.PI*2.25**2),labelY:17,geometryBasis:'D-MDL-03',geometryStatus:note3('FEED-PE-DAT-127',' Relocated inside A-1000 (D-MDL-03, QFL 2026-09-30) to the former T-1001 position, ≈ 9 m from T-1002; Ø 4.5 m chosen so the ≈ 15.6 m silo clears the overhead lines (diameter is a model choice — DAT-127 gives the volume). Tanker access from the WATER-DELIVERY frontage (z −31.5…−28.5).')}),
  656:eq('IF-A2000-CITY','Municipal make-up battery limit (D-A2000-03)','A-2000','rodistribute',103.4,-2,{designStatus:'interface',labelY:2.2,geometryStatus:'Battery-limit marker only (D-MDL-01 release 2); municipal supply pressure, hardness and connection are site data.'}),
 };
@@ -99,30 +100,18 @@ export function buildCatchup(h,acidRoute='r0'){
  const pslab=base(b('PK-1101 foundation slab','frame',[14,.2,10],[pk.x,.1,pk.z],'dark'),[pk.x,0,pk.z]);
  const encl=b('PK-1101 package envelope (screening)','shell',[13,10,9],[pk.x,.2+5,pk.z],'steel');s.join(pslab,encl,[pk.x,.2,pk.z],'PK-1101 envelope / slab');s.load(encl,'PK-1101 envelope');
  const col=c('PK-1101 stage 2 evaporator (screening)','shell',1.1,8,[pk.x+3.5,10.2+4,pk.z-2],'steel');s.join(encl,col,[pk.x+3.5,10.2,pk.z-2],'PK-1101 evaporator / envelope');
- for(const [lab,dx,dz] of [['feed from P-1101',-6.5,-3],['product to T-1102',-6.5,-1],['thermal oil supply / return',-6.5,1.5],['condensate',-6.5,3.5]])stub('PK-1101 '+lab,[pk.x+dx,1.4,pk.z+dz],[-1,0,0],.08);
+ for(const [lab,dx,dz] of [['feed from P-1101',-6.5,-3],['product to T-1102',-6.5,-1],['condensate',-6.5,3.5]])stub('PK-1101 '+lab,[pk.x+dx,1.4,pk.z+dz],[-1,0,0],.08);
+ for(const [lab,dz] of [['supply',1],['return',2]])nozzle([pk.x-6.5,1.4,pk.z+dz],[-1,0,0],.22,'PK-1101 thermal oil '+lab+' (stage 2)',THERMAL_OIL_BASIS.branchRadius); // D-MDL-05: connected to the A-5400 branch
  }
  // Route 0: the south-east yard reserved for the option — a low plot outline with a marker post (D-MDL-02 AR-6).
  if(EQUIPMENT[669]){const rv=EQUIPMENT[669];setContext(669,rv.label);
   const post=base(b('RSV-A1100 reservation marker post','frame',[.12,1.4,.12],[rv.x,.7,rv.z],'steel'),[rv.x,0,rv.z]);const sign=b('RSV-A1100 reservation sign','valve',[1.2,.5,.04],[rv.x,1.2,rv.z],'blue');s.join(post,sign,[rv.x,1.2,rv.z],'RSV-A1100 sign / post');
   for(const [lab,size,pos] of [['north',[36,.08,.15],[101,.04,-36]],['south',[36,.08,.15],[101,.04,-47]],['west',[.15,.08,11],[83,.04,-41.5]],['east',[.15,.08,11],[119,.04,-41.5]]])base(b('RSV-A1100 plot outline '+lab,'frame',size,pos,'dark'),[pos[0],0,pos[2]]);
  }
- // A-5400 — package pad with curb, H-5400 heater and stack, P-5401A/B, V-5401 on the heater structure, T-5401 drain tank.
- const ap=EQUIPMENT[663];setContext(663,ap.label);
- const apad=base(b('A-5400 package pad','frame',[10,.2,18],[ap.x,.1,ap.z],'dark'),[ap.x,0,ap.z]);
- for(const [lab,size,pos] of [['north',[10,.3,.2],[ap.x,.35,ap.z+8.9]],['south',[10,.3,.2],[ap.x,.35,ap.z-8.9]],['west',[.2,.3,18],[ap.x-4.9,.35,ap.z]],['east',[.2,.3,18],[ap.x+4.9,.35,ap.z]]]){const w=b('A-5400 spill curb '+lab,'frame',size,pos,'dark');s.join(apad,w,[pos[0],.2,pos[2]],'A-5400 curb '+lab+' / pad');}
- const he=EQUIPMENT[664];setContext(664,he.label);
- const heater=b('H-5400 heater casing','shell',[3.6,4.6,10],[he.x,.2+2.3,he.z],'steel');s.join(apad,heater,[he.x,.2,he.z],'H-5400 casing / pad');s.load(heater,'H-5400 casing');
- const stack=c('H-5400 stack','shell',.7,15.2,[he.x,4.8+7.6,he.z+4.2],'steel');s.join(heater,stack,[he.x,4.8,he.z+4.2],'H-5400 stack / casing');
- const burner=c('H-5400 burner','pump',.6,1.2,[he.x,2.4,he.z-5.6],'blue');s.join(heater,burner,[he.x,2.4,he.z-5],'H-5400 burner / casing');
- stub('H-5400 oil outlet 280 °C',[he.x+1.8,3.8,he.z-3],[1,0,0],.18);stub('H-5400 oil inlet 250 °C',[he.x+1.8,1.2,he.z-3],[1,0,0],.18);stub('H-5400 natural gas',[he.x-1.8,1.5,he.z-4.5],[-1,0,0],.06);
- const pp=EQUIPMENT[665];setContext(665,pp.label);for(const [i,dz] of [0,2].entries()){const p=k.transferPump(pp.x,'P-5401'+'AB'[i],pp.label,{z:pp.z+dz});stub('P-5401'+'AB'[i]+' discharge',p.outlet,[0,1,0],.12);}
- const ve=EQUIPMENT[666];setContext(666,ve.label);
- const frame=b('V-5401 support frame','frame',[2.2,ve.bottom-.2,2.2],[ve.x,.2+(ve.bottom-.2)/2,ve.z],'steel');s.join(apad,frame,[ve.x,.2,ve.z],'V-5401 frame / pad');
- const vb=band('V-5401 shell','shell',ve.radius,ve.radius-.04,ve.top-ve.bottom,[ve.x,(ve.bottom+ve.top)/2,ve.z],'steel');s.join(frame,vb,[ve.x,ve.bottom,ve.z],'V-5401 shell / frame');s.load(vb,'V-5401 shell');
- stub('V-5401 inert-gas blanket',[ve.x,ve.top+.05,ve.z],[0,1,0],.04);stub('V-5401 expansion line',[ve.x+ve.radius,ve.bottom+.45,ve.z],[1,0,0],.1);
- const t5=vessel(667);stub('T-5401 drain inlet',[t5.x,t5.y1+.08,t5.z],[0,1,0],.1);stub('T-5401 refill outlet',[t5.x-t5.r,.6,t5.z],[-1,0,0],.08);
+ // A-5400 — real-world package, thermal-oil mains to HX-601 and (Route 2 + 6) the PK-1101 branch on a dedicated rack (D-MDL-05).
+ const thermalOil=buildThermalOil(k,s,base,{acidRoute});
  // SL-1001 — silo on a skirt.
  const sl=vessel(668);
  stub('SL-1001 pneumatic fill',[sl.x,sl.y1+.08,sl.z],[0,1,0],.05);stub('SL-1001 lime discharge to T-1002',[sl.x+sl.r,sl.y0+.4,sl.z],[1,0,0],.1);
- return {partIds:parts.slice(first).map(p=>p.id),equipment:CATCHUP_IDS,tieIns:'deferred'};
+ return {partIds:parts.slice(first).map(p=>p.id),equipment:CATCHUP_IDS,tieIns:'deferred except A-5400 (D-MDL-05)',thermalOil};
 }

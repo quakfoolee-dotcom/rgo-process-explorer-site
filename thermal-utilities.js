@@ -134,6 +134,9 @@ export function buildThermalUtilities(h,{design='baseline',routePlanner=thermalR
  // Unselected thermal media remain closed, grey, and available for local tracing.
  const unresolved=[{id:'HX-601',tag:'HX-601',owner:73,area:'A-600',service:'unresolved',inTag:'BL-HT601-IN',outTag:'BL-HT601-RET',passageName:'HX-601 separate thermal passage',note:'PFD typical dryer air inlet 140–145 °C; outlet 80–90 °C. Final values, heating medium and evaporation duty remain unselected. 90 °C hot water alone cannot provide this inlet-air target; no connection is assumed'}];
  if(!['baseline','elevated'].includes(design))unresolved.push({id:EQUIPMENT[design==='integrated'?92:47].tag,tag:EQUIPMENT[design==='integrated'?92:47].tag,owner:design==='integrated'?92:47,area:'A-160',service:'unresolved',inTag:'BL-166-HEAT',outTag:'BL-166-HRET',passageName:'A-160 dryer thermal jacket passage',otherPorts:['BL-166-COOL','BL-166-CRET'],note:'Alternative dryer hot/cold selection needs isolated TCU and qualified temperatures; all four primary interfaces remain blinded'});
+ // D-MDL-05 (QFL 2026-10-01): HX-601 is served by the A-5400 thermal-oil mains (D-A5000-04, dist/thermal-oil.js), not by a water loop — an external
+ // consumer: its battery limits stay open for the mains and only its local HX-601 path is resolved below (no water loop).
+ if(EQUIPMENT[663]){const hx=unresolved.find(r=>r.id==='HX-601');if(hx){unresolved.splice(unresolved.indexOf(hx),1);Object.assign(hx,{status:'external',service:'thermal-oil',circuit:'A-5400',note:'Served by the A-5400 thermal-oil mains, 280 / 250 °C (D-A5000-04, D-MDL-05); the dryer air duty and HX-601 sizing remain open',dutyKW:null,flowM3H:null,supplyPoint:port(hx.inTag).point,returnPoint:port(hx.outTag).point});for(const tag of [hx.inTag,hx.outTag])port(tag).role='interunit';consumers.push(hx);}}
  for(const row of unresolved){row.status='unresolved';row.circuit='unresolved-'+row.id;row.supplyPoint=port(row.inTag).point;row.returnPoint=port(row.outTag).point;row.dutyKW=null;row.flowM3H=null;consumers.push(row);for(const tag of[row.inTag,row.outTag,...row.otherPorts||[]]){const p=port(tag);setContext(p.reactor,row.tag+' unresolved utility boundary');blind(p.point,p.axis,tag,row.circuit,row.note,p.radius);p.role='blinded';}}
 
  // Explicitly resolve existing utility-only geometry before adding distribution.
@@ -146,12 +149,12 @@ export function buildThermalUtilities(h,{design='baseline',routePlanner=thermalR
  };
  const localNet=createJourneyNetwork({edges,routes,ports},{acceptEdge:eligible});
  for(const row of consumers){
-  const matches=edges.filter(e=>e.name===row.passageName);if(matches.length!==1){row.status='unresolved';row.issue='Missing or ambiguous utility passage';continue;}const passage=matches[0];row.passage={a:passage.a,b:passage.b};
+  const matches=edges.filter(e=>e.name===row.passageName);if(matches.length!==1){if(row.status!=='external')row.status='unresolved';row.issue='Missing or ambiguous utility passage';continue;}const passage=matches[0];row.passage={a:passage.a,b:passage.b};
   try{
    const a=localNet.path(row.supplyPoint,passage.a),z=localNet.path(passage.b,row.returnPoint),path=[...a.segments,{...passage,index:edges.indexOf(passage),part:passage.part},...z.segments];
    row.localEdgeIds=[...new Set(path.map(e=>e.index))];row.localPartIds=[...new Set(path.map(e=>e.part))];
    for(const index of row.localEdgeIds){const ed=edges[index];ed.thermalCircuit=row.circuit||row.service;ed.thermalRole=index===edges.indexOf(passage)?'consumer':a.segments.some(e=>e.index===index)?'supply':'return';tagPart(byId.get(ed.part),ed.thermalCircuit,ed.thermalRole);}
-  }catch(error){row.status='unresolved';row.issue='Local thermal path: '+error.message;}
+  }catch(error){if(row.status!=='external')row.status='unresolved';row.issue='Local thermal path: '+error.message;}
  }
  const secondaryHeaders={};
  for(const [circuit,source]of Object.entries(secondaries)){

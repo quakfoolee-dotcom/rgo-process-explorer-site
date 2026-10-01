@@ -22,13 +22,15 @@ export function compileThermalTrace(model,options={}){
  const runningPrimary=!['pumpsOff','powerLoss'].includes(choices.scenario),thermalAvailable=runningPrimary&&choices.scenario!=='generationLoss',pumpIndex=choices.scenario==='pumpA'?1:0;
  function record(row,path,circuit,isSecondary,available,note){
   Object.assign(path,{id:row.id,label:row.tag,circuit,service:isSecondary?(circuit==='secondary-830'&&choices.mode==='cool'?'chw':row.service):row.service,secondary:isSecondary,available,note,owner:row.owner,area:row.area});
-  const cfg=u.loops[path.service];for(const seg of path.segments){const e=model.edges[seg.index];seg.role=e.thermalRole;seg.circuit=circuit;seg.temperatureC=isSecondary||!thermalAvailable||row.status==='unresolved'?null:seg.role==='return'?cfg.returnC:['consumer','generation'].includes(seg.role)?null:cfg.supplyC;seg.temperatureBasis=seg.temperatureC===null?'Unknown; no internal midpoint or secondary temperature inferred':'Illustrative pair within PFD V5.1 page 19 ranges';seg.pfdRange=seg.temperatureC===null?null:seg.role==='return'?cfg.pfdReturn:cfg.pfdSupply;seg.colour=temperatureColour(seg.temperatureC);seg.internal=!!e.internalTo;}
+  const cfg=u.loops[path.service];for(const seg of path.segments){const e=model.edges[seg.index];seg.role=e.thermalRole;seg.circuit=circuit;seg.temperatureC=isSecondary||!thermalAvailable||row.status==='unresolved'||row.status==='external'?null:seg.role==='return'?cfg.returnC:['consumer','generation'].includes(seg.role)?null:cfg.supplyC;seg.temperatureBasis=seg.temperatureC===null?'Unknown; no internal midpoint or secondary temperature inferred':'Illustrative pair within PFD V5.1 page 19 ranges';seg.pfdRange=seg.temperatureC===null?null:seg.role==='return'?cfg.pfdReturn:cfg.pfdSupply;seg.colour=temperatureColour(seg.temperatureC);seg.internal=!!e.internalTo;}
   paths.push(path);for(const s of path.segments){if(available&&s.tag)valveStates[s.tag]='open';if(!roleMatch(s.role,choices.extent))continue;allIds.add(s.part);colours.set(s.part,s.colour);renderSegments.set(thermalSegmentKey(s,circuit),s);}
  }
  const usedServices=new Set();
  for(const row of requested.values()){
   if(!row){findings.push({reason:'Missing primary exchanger allocation'});continue;}
   const circuit=row.circuit||row.service,secondary=u.secondaries[circuit],isSecondary=!!secondary,closed=choices.scenario==='branchClosed'&&(choices.consumer==='all'?selectedRows.has(row.id):row.id===choices.consumer),baseAvailable=isSecondary?choices.scenario!=='powerLoss':runningPrimary;
+  // D-MDL-05: served outside the A-5000 water loops (HX-601 on A-5400 thermal oil) — shown locally, no water temperature inferred, not a finding.
+  if(row.status==='external'){if(row.passage)try{const p=pathThrough(network(model,circuit),[row.supplyPoint,row.passage.a,row.passage.b,row.returnPoint]);record(row,p,circuit,false,choices.scenario!=='powerLoss','External service · A-5400 thermal oil 280 / 250 °C (D-A5000-04, D-MDL-05)');}catch{}continue;}
   if(row.status==='unresolved'){
    findings.push({id:row.id,reason:row.note+(row.issue?' · '+row.issue:'')});
    if(row.passage)try{const p=pathThrough(network(model,circuit),[row.supplyPoint,row.passage.a,row.passage.b,row.returnPoint]);record(row,p,circuit,false,false,'Unresolved service · interfaces positively blinded');}catch{}continue;

@@ -1,11 +1,11 @@
 {
- "version": "9bef6ea",
+ "version": "428128c",
  "date": "2026-10-01",
- "generated": "2026-10-01T00:02:03.731Z",
- "revision": "r7",
+ "generated": "2026-10-01T10:37:28.601Z",
+ "revision": "r8",
  "reviewer": {
   "initials": "QFL",
-  "date": "2026-09-30"
+  "date": "2026-10-01"
  },
  "lead": "The published gate report (bc-corridors-85, 2026-09-12) is retained below as the coordinated baseline; the sections above it are measured on the current model on every refresh. Nothing here qualifies structure, slabs, vehicles or traffic.",
  "basis": {
@@ -28,7 +28,7 @@
   "vendorFlexible": 132,
   "structurallyQualified": false,
   "memberLengthM": 13820.088468058912,
-  "parts": 151879
+  "parts": 152891
  },
  "published": {
   "revision": "bc-corridors-85",
@@ -316,7 +316,7 @@
    {
     "zone": "REMOVE-R201C",
     "zoneKind": "maintenance",
-    "partId": 149559,
+    "partId": 149557,
     "name": "PS-A200-3253 bearing collar",
     "area": "A-200",
     "kind": "Pipe support"
@@ -324,7 +324,7 @@
    {
     "zone": "REMOVE-PY801",
     "zoneKind": "removal",
-    "partId": 148091,
+    "partId": 148089,
     "name": "PS-A900-2877 bearing collar",
     "area": "A-900",
     "kind": "Pipe support"
@@ -332,7 +332,7 @@
    {
     "zone": "PIPE-standing-access-613-CP-3000 / CP-3000 control display",
     "zoneKind": "standing",
-    "partId": 150789,
+    "partId": 150787,
     "name": "PS-A3000-3547 local bracket",
     "area": "A-3000",
     "kind": "Pipe support"
@@ -340,7 +340,7 @@
    {
     "zone": "HEADROOM-PL-801 feeder walkway",
     "zoneKind": "platform-access",
-    "partId": 145521,
+    "partId": 145519,
     "name": "PS-A5000-2126 insulation insert bearing collar",
     "area": "A-5000",
     "kind": "Pipe support"
@@ -376,13 +376,8 @@
  },
  "thermalPaths": {
   "total": 21,
-  "available": 20,
-  "findings": [
-   {
-    "id": "HX-601",
-    "reason": "PFD typical dryer air inlet 140–145 °C; outlet 80–90 °C. Final values, heating medium and evaporation duty remain unselected. 90 °C hot water alone cannot provide this inlet-air target; no connection is assumed"
-   }
-  ]
+  "available": 21,
+  "findings": []
  },
  "portals": [
   {
@@ -543,7 +538,7 @@
    "reservedSpaceFindings": 0,
    "review": {
     "href": "./a600-review.html",
-    "revision": "r9",
+    "revision": "r10",
     "reviewer": "QFL"
    }
   },
@@ -4242,7 +4237,7 @@
    "equipment": "HD-5200",
    "line": "E-702 return branch to service station",
    "lineId": "LINE-2975",
-   "partId": 131408,
+   "partId": 131406,
    "point": [
     93.47,
     7.623,
@@ -4268,7 +4263,7 @@
    "equipment": "TCU-141",
    "line": "R-141D return branch to service station",
    "lineId": "LINE-2935",
-   "partId": 129807,
+   "partId": 129805,
    "point": [
     -28.8,
     3.3,
@@ -4281,7 +4276,7 @@
    "equipment": "HD-5300",
    "line": "TCU-141 cooldown return branch to service station",
    "lineId": "LINE-2903",
-   "partId": 128533,
+   "partId": 128531,
    "point": [
     -14.37,
     12.72,
@@ -4294,7 +4289,7 @@
    "equipment": "HD-5300",
    "line": "TCU-141 cooldown return branch to service station",
    "lineId": "LINE-2903",
-   "partId": 128533,
+   "partId": 128531,
    "point": [
     -14.37,
     12.72,
@@ -4307,7 +4302,7 @@
    "equipment": "TCU-141",
    "line": "TCU-141 single secondary return riser",
    "lineId": "LINE-2853",
-   "partId": 126925,
+   "partId": 126923,
    "point": [
     -14.15,
     10.32,
@@ -4320,7 +4315,7 @@
    "equipment": "TCU-201",
    "line": "TCU-201 single secondary return riser",
    "lineId": "LINE-2857",
-   "partId": 126965,
+   "partId": 126963,
    "point": [
     -14.15,
     8.72,
@@ -4333,7 +4328,7 @@
    "equipment": "HD-5300",
    "line": "TCU-201 supply branch to service station",
    "lineId": "LINE-2875",
-   "partId": 127369,
+   "partId": 127367,
    "point": [
     -17.23,
     12.4,
@@ -4346,7 +4341,7 @@
    "equipment": "TCU-1001",
    "line": "TCU-1001 single secondary return riser",
    "lineId": "LINE-2861",
-   "partId": 127005,
+   "partId": 127003,
    "point": [
     -14.15,
     11.92,
@@ -4359,7 +4354,7 @@
    "equipment": "HD-5200",
    "line": "TCU-1001 supply branch to service station",
    "lineId": "LINE-2883",
-   "partId": 127713,
+   "partId": 127711,
    "point": [
     -17.23,
     10.8,
@@ -4396,9 +4391,9 @@
  ],
  "structuralAttachments": {
   "passes": true,
-  "loads": 2556,
-  "contacts": 20823,
-  "foundations": 4849,
+  "loads": 2588,
+  "contacts": 20908,
+  "foundations": 4858,
   "failures": 0,
   "method": "Declared mounting points checked against part geometry and assembled transforms, with graph reachability to foundations. Structural strength is not calculated."
  },
@@ -4588,7 +4583,7 @@
    "status": "Model paths available — heating medium unselected",
    "priority": "medium",
    "discipline": "Process / utilities",
-   "observation": "20 of 21 illustrated thermal paths are available (HX-601: PFD typical dryer air inlet 140–145 °C; outlet 80–90 °C). 23 A-5000 maintenance and operating spaces registered, 0 obstruction envelopes.",
+   "observation": "21 of 21 illustrated thermal paths are available (). 23 A-5000 maintenance and operating spaces registered, 0 obstruction envelopes.",
    "action": "Close the HX-601 heating-medium selection (REP-016 HOLD-5) and the fourth ≥ 200 °C utility loop (REP-043) so the A-5000 → A-600 path can be connected and its access spaces confirmed with vendor envelopes.",
    "evidence": [
     {
@@ -4818,7 +4813,7 @@
     {
      "kind": "page",
      "id": "A-600",
-     "label": "A-600 review r9 · QFL",
+     "label": "A-600 review r10 · QFL",
      "href": "./a600-review.html"
     },
     {
@@ -4877,7 +4872,7 @@
     {
      "kind": "page",
      "id": "A-600",
-     "label": "A-600 review r9 · QFL",
+     "label": "A-600 review r10 · QFL",
      "href": "./a600-review.html"
     },
     {
@@ -5003,6 +4998,41 @@
      "id": "A-2000",
      "label": "A-2000 review r7 · QFL",
      "href": "./a2000-review.html"
+    }
+   ]
+  },
+  {
+   "id": "LAY-14",
+   "topic": "Thermal-oil mains A-5400 → HX-601 on a dedicated rack (D-MDL-05)",
+   "status": "Applied — stress and vendor checks open",
+   "priority": "medium",
+   "discipline": "Layout / piping / model management",
+   "observation": "D-MDL-05 (bases M5-1–M5-10, approved by QFL 2026-10-01): the A-5400 screening boxes are replaced by real-world equipment on the same 10 × 18 m pad — H-5400 a horizontal cylindrical coil heater Ø 3.6 × 10 m on saddles with burner, FD fan, gas train, top walkway and ladder, flue box and Ø 1.4 m stack to ≈ 20 m with sampling platform; P-5401A/B horizontal end-suction hot-oil pumps with motors on baseplates; V-5401 a Ø 1.8 × 4.5 m expansion drum (≈ 11 m³) on a frame above the loop high point with deck and ladder, and an air separator on the pump suction (untagged until LST-001 allocates one); T-5401 a Ø 2.6 × 6 m drain drum (≈ 30 m³) at grade (N₂-push drain-down). The package is piped (return → air separator → pumps → coil → supply; expansion, overflow, drain-down, refill), and DN300 insulated supply and return mains (≈ 65 m each, stacked at 7.4 / 6.6 m below the A-5000 utility racks) run on a dedicated T-post rack (12 posts) into the HX-601 battery limits BL-HT601-IN / -RET, which are no longer blinded; under Route 2 + 6 a DN150 branch (≈ 45 m each way, 6 more posts) serves PK-1101 stage 2. Built with the catch-up equipment after the plant-wide support generator, so no other rack re-flows; no clash with existing parts under either acid route. The corridor came from an occupancy scan of the built model: along x 105, z 5.45 (between the A-5000 rack columns at z 4.65 and 6.0, clear of the WATER-FRONT and WALK-601 walkways) and x 78.3 (east of the PL-601 stair tower). The rack is explicit, so the generated supports and holds are untouched — current model: 287 holds plant-wide. Open: HX-601’s heating nozzles and local heating routes are DN100 placeholders in the A-600 model (reducers at the battery limit) against 543 / 597 m³/h of oil (DAT-065 V1.3); the stack height waits for the dispersion study; no pipe-stress, expansion or hydraulic calculation; equipment dimensions are model choices pending vendor data (U8).",
+   "action": "Pipe-stress / expansion review of the ≈ 65 m runs and anchor / guide positions at detailed design; confirm the rack against the site traffic plan; re-run this review when the vendor package (U8) and HX-601 nozzle sizes arrive.",
+   "evidence": [
+    {
+     "kind": "decision",
+     "id": "D-A5000-04",
+     "label": "D-A5000-04 (A-5000, QFL 2026-09-29): A-5400 medium: two QFL rulings of 2026-09-27 disagreed — D-A5000-02 (20 barg steam, 2 × 7 MW, with HR-601 and MVR) and the plant-wide balance stream (thermal oi…",
+     "href": "./semantic-core.html#area-A-5000"
+    },
+    {
+     "kind": "doc",
+     "id": "dist/thermal-oil.js",
+     "label": "dist/thermal-oil.js",
+     "href": "https://github.com/quakfoolee-dotcom/rGO_3D_Plant_Model/blob/main/dist/thermal-oil.js"
+    },
+    {
+     "kind": "doc",
+     "id": "docs/model-catchup-handoff.md",
+     "label": "docs/model-catchup-handoff.md",
+     "href": "https://github.com/quakfoolee-dotcom/rGO_3D_Plant_Model/blob/main/docs/model-catchup-handoff.md"
+    },
+    {
+     "kind": "page",
+     "id": "A-600",
+     "label": "A-600 review r10 · QFL",
+     "href": "./a600-review.html"
     }
    ]
   }
