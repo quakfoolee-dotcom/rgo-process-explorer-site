@@ -1,6 +1,6 @@
 {
  "area": "A-5000",
- "version": "dee263f",
+ "version": "9bef6ea",
  "date": "2026-09-30",
  "revision": "r13",
  "reviewer": {
@@ -2684,13 +2684,13 @@
   }
  ],
  "layout": {
-  "version": "71e8c3f",
+  "version": "9bef6ea",
   "date": "2026-09-30",
-  "revision": "r6",
+  "revision": "r7",
   "reviewer": "QFL",
-  "supports": 973,
-  "holds": 11,
-  "placementElements": 11,
+  "supports": 971,
+  "holds": 13,
+  "placementElements": 12,
   "reserved": 1,
   "records": 87,
   "findings": [
@@ -2988,7 +2988,7 @@
    "status": "Provisional geometry — vendor loads unverified",
    "priority": "medium",
    "discipline": "Structural / layout",
-   "observation": "The current-model layout review records 973 modelled bearings and 11 support placement holds in A-5000, 1 support element(s) inside a reserved space, and 87 located access records on this area’s plan. The 18.3 × 16.1 m planning footprint, the service reservations and the entrance portal PR-A5000-T002 remain unqualified.",
+   "observation": "The current-model layout review records 971 modelled bearings and 13 support placement holds in A-5000, 1 support element(s) inside a reserved space, and 87 located access records on this area’s plan. The 18.3 × 16.1 m planning footprint, the service reservations and the entrance portal PR-A5000-T002 remain unqualified.",
    "action": "Carry the A-5000 holds and the portal into the structural calculation set with vendor loads and maintenance envelopes; the reserved spaces must be cleared before the corridor gate can be rebaselined.",
    "evidence": [
     {

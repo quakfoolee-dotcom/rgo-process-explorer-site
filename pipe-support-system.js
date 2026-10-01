@@ -4,7 +4,7 @@ import {ACCESS_ZONES,ACCESS_BASIS} from './access-layout.js';
 import {ACCESS_DESIGN} from './access-design.js';
 import {componentEnvelope,buildAccessRegister} from './access-review.js';
 import {PIPE_RACK_LAYOUT} from './pipe-rack-layout.js';import {WALKWAY_LAYOUT} from './walkway-layout.js';import {EMERGENCY_ACCESS_LAYOUT} from './emergency-access-layout.js';import {walkwayVolume} from './walkway-system.js';
-import {consolidatePipeSupports} from './pipe-support-consolidation.js';
+import {consolidatePipeSupports} from './pipe-support-consolidation.js';import {CONTAINMENT_CELLS} from './containment-basis.js';
 import {buildCoordinatedThermalRacks} from './thermal-racks.js';
 
 // Editable concept layout targets. They are NOT allowable spans or steel ratings.
@@ -16,8 +16,6 @@ function grid(){const cells=new Map(),size=3;return {add(item){const b=item.box;
 export function buildPipeSupportSystem(h,model){
  const {parts,edges,structure,setContext,b,band,c}=h,s=structuralKit(h),byId=new Map(parts.map(p=>[p.id,p])),routes=new Map(model.routes.map(r=>[r.id,r])),obstacles=grid(),members=grid();
  const protectedZones=[...ACCESS_ZONES,...model.thermalUtilities?.accessZones||[],...model.compressedAir?.accessZones||[],...model.reactorAir?.accessZones||[]].filter(z=>z.kind!=='utility').map(z=>({...z,box:box(z.min,z.max)}));
- // D-MDL-03 (QFL 2026-09-30): with the south-strip racks re-routed, keep new support columns out of the planned pedestrian / emergency walkways in the A-1000 block.
- for(const w of [...WALKWAY_LAYOUT.segments,...EMERGENCY_ACCESS_LAYOUT.segments]){const v=walkwayVolume(w);if(v.max[0]>13&&v.min[0]<59&&v.max[2]>-30&&v.min[2]<3)protectedZones.push({id:'WALK-'+w.id,kind:'pedestrian',box:box(v.min,v.max)});}
  for(const x of[-2.45,2.45])for(const z of[0,-16])protectedZones.push({id:'SF201-WITHDRAW-'+x+'-'+z,kind:'maintenance',box:box([x-.75,5.58,z-9.05],[x+1.35,6.56,z+1.05])});
  // Protect actual existing equipment, piping, hardware and platforms. Fastener-sized
  // details are included in the parent assembly envelope by the access audit.
@@ -35,6 +33,10 @@ export function buildPipeSupportSystem(h,model){
  for(const d of model.accessSystem?.decks||[]){const bb=box([d.min[0],d.min[1]+.035,d.min[2]],[d.max[0],d.min[1]+ACCESS_DESIGN.criteria.headroom,d.max[2]]);protectedZones.push({id:'HEADROOM-'+d.id,kind:'platform-access',box:bb});}
  for(const f of model.accessSystem?.flights||[])for(const id of f.treads){const tread=byId.get(id);if(!tread)continue;const bb=componentEnvelope(tread),top=bb.max.y;bb.min.y=top+.035;bb.max.y=top+ACCESS_DESIGN.criteria.headroom;protectedZones.push({id:'HEADROOM-'+f.tag+'-'+id,kind:'stair-access',box:bb});}
  const protectedIndex=grid();for(const z of protectedZones)protectedIndex.add(z);
+ // D-MDL-03 (QFL 2026-09-30): with the south-strip racks re-routed, keep new support columns out of the planned pedestrian / emergency walkways (plant-wide: the generator is global, so a re-flow in A-1000 moved a column into PW-069 at A-3000). Collision index only, so the exported reservations and the prepared model stay as they were.
+ for(const w of [...WALKWAY_LAYOUT.segments,...EMERGENCY_ACCESS_LAYOUT.segments]){const v=walkwayVolume(w);protectedIndex.add({id:'WALK-'+w.id,kind:'pedestrian',box:box(v.min,v.max)});}
+ // D-MDL-03 (QFL 2026-09-30): after the south-strip re-route, keep new columns off the A-1000 and A-160 bund floors (each cell's containment patch for the current design scenario), where the re-flow split BND-1012 and added upstand clashes in BND-164; elsewhere supports keep their lined pedestal upstands. Collision index only; not a reported reservation.
+ for(const c of CONTAINMENT_CELLS){if(c.areaId!=='A-1000'&&c.areaId!=='A-160')continue;let rects;if(c.automaticPatch){const e=model.equipment[c.owners[0]];if(!e||e.radius==null)continue;const r=e.radius+.85;rects=[[e.x-r,e.z-r-.4,e.x+r,c.owners[0]===153?-16.1:e.z+r]];}else rects=c.scenarioPatches?.[model.designScenario||'baseline']||c.patches||[];for(const [i,q] of rects.entries())protectedIndex.add({id:'BUND-'+c.key+'-'+i,kind:'containment',box:box([q[0],0,q[1]],[q[2],.35,q[3]])});}
  const sharedRails=[],assigned=new Set();
  const existingLoads=new Set(structure.loads.map(l=>l.part)),inventory=[],groups=new Map(),supports=[],racks=[],holds=[],first=parts.length;
  const eligible=e=>!ARCHIVE(e.reactor)&&!byId.get(e.part)?.containmentCell&&e.screenAsPipe!==false&&!e.internalTo&&e.transport!=='bulk solids'&&byId.get(e.part)?.system==='pipe';

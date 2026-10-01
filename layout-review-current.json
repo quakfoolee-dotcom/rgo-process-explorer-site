@@ -1,7 +1,7 @@
 {
- "version": "dee263f",
- "date": "2026-09-30",
- "generated": "2026-09-30T07:15:42.594Z",
+ "version": "9bef6ea",
+ "date": "2026-10-01",
+ "generated": "2026-10-01T00:02:03.731Z",
  "revision": "r7",
  "reviewer": {
   "initials": "QFL",
@@ -17,18 +17,18 @@
  },
  "summary": {
   "externalElements": 7512,
-  "directAttachmentElements": 1105,
-  "supports": 3743,
-  "rackFrames": 248,
+  "directAttachmentElements": 1102,
+  "supports": 3731,
+  "rackFrames": 253,
   "existingSteelAttachmentGroups": 20,
-  "columns": 586,
-  "sharedStructures": 106,
-  "placementHolds": 275,
+  "columns": 579,
+  "sharedStructures": 101,
+  "placementHolds": 287,
   "shortConnections": 6089,
   "vendorFlexible": 132,
   "structurallyQualified": false,
-  "memberLengthM": 13932.97439687313,
-  "parts": 152771
+  "memberLengthM": 13820.088468058912,
+  "parts": 151879
  },
  "published": {
   "revision": "bc-corridors-85",
@@ -66,7 +66,7 @@
  "holdsByArea": [
   {
    "area": "A-2000",
-   "holds": 230
+   "holds": 231
   },
   {
    "area": "A-4000",
@@ -74,11 +74,19 @@
   },
   {
    "area": "A-5000",
-   "holds": 11
+   "holds": 13
   },
   {
    "area": "A-3000",
-   "holds": 4
+   "holds": 8
+  },
+  {
+   "area": "A-160",
+   "holds": 3
+  },
+  {
+   "area": "A-1000",
+   "holds": 3
   },
   {
    "area": "A-200",
@@ -89,10 +97,6 @@
    "holds": 1
   },
   {
-   "area": "A-1000",
-   "holds": 1
-  },
-  {
    "area": "A-6000",
    "holds": 1
   }
@@ -100,15 +104,15 @@
  "holdsByReason": [
   {
    "reason": "Support rod conflicts with another service; local bracket / rack tier review required",
-   "holds": 218
+   "holds": 221
   },
   {
    "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment",
-   "holds": 29
+   "holds": 35
   },
   {
    "reason": "Local bearing requires shared-column bracket or single-post exception",
-   "holds": 28
+   "holds": 31
   }
  ],
  "inventory": [
@@ -118,11 +122,11 @@
   },
   {
    "status": "attached — calculation hold",
-   "count": 1064
+   "count": 1053
   },
   {
    "status": "placement review",
-   "count": 185
+   "count": 196
   },
   {
    "status": "vendor flexible connection",
@@ -301,7 +305,7 @@
   }
  ],
  "reservedSpaces": {
-  "checked": 516,
+  "checked": 494,
   "zones": [
    "REMOVE-R201C",
    "REMOVE-PY801",
@@ -312,38 +316,38 @@
    {
     "zone": "REMOVE-R201C",
     "zoneKind": "maintenance",
-    "partId": 149753,
-    "name": "PS-A200-3288 bearing collar",
+    "partId": 149559,
+    "name": "PS-A200-3253 bearing collar",
     "area": "A-200",
     "kind": "Pipe support"
    },
    {
     "zone": "REMOVE-PY801",
     "zoneKind": "removal",
-    "partId": 148381,
-    "name": "PS-A900-2932 bearing collar",
+    "partId": 148091,
+    "name": "PS-A900-2877 bearing collar",
     "area": "A-900",
     "kind": "Pipe support"
    },
    {
     "zone": "PIPE-standing-access-613-CP-3000 / CP-3000 control display",
     "zoneKind": "standing",
-    "partId": 150923,
-    "name": "PS-A3000-3561 local bracket",
+    "partId": 150789,
+    "name": "PS-A3000-3547 local bracket",
     "area": "A-3000",
     "kind": "Pipe support"
    },
    {
     "zone": "HEADROOM-PL-801 feeder walkway",
     "zoneKind": "platform-access",
-    "partId": 145760,
-    "name": "PS-A5000-2183 insulation insert bearing collar",
+    "partId": 145521,
+    "name": "PS-A5000-2126 insulation insert bearing collar",
     "area": "A-5000",
     "kind": "Pipe support"
    }
   ],
   "newSincePublished": [
-   "REMOVE-PY801 · PS-A900-2932 bearing collar"
+   "REMOVE-PY801 · PS-A900-2877 bearing collar"
   ],
   "resolvedSincePublished": [
    "REMOVE-R201D · bearing collar"
@@ -404,20 +408,20 @@
     11.3,
     6
    ],
-   "bearings": 44,
+   "bearings": 47,
    "qualification": "HOLD: combined pipe reactions, lateral stability, guide/anchor loads, connection strength and foundations; entrance portal span, deflection and lateral/seismic load paths require calculation before construction"
   }
  ],
  "delta": {
-  "supports": -40,
-  "columns": -7,
-  "rackFrames": 1,
-  "sharedStructures": -1,
-  "placementHolds": -41,
-  "directAttachmentElements": -17,
+  "supports": -52,
+  "columns": -14,
+  "rackFrames": 6,
+  "sharedStructures": -6,
+  "placementHolds": -29,
+  "directAttachmentElements": -20,
   "externalElements": -14,
-  "memberLengthM": -47.34164543256156,
-  "holdsNew": 22,
+  "memberLengthM": -160.22757424678093,
+  "holdsNew": 34,
   "holdsResolved": 63,
   "areasAdded": [
    "A-900"
@@ -426,16 +430,16 @@
  "a5000": {
   "racks": 42,
   "columns": 123,
-  "localColumns": 14,
+  "localColumns": 15,
   "localBoundsM": [
    -31.3,
    12.4,
    -13,
    28.5
   ],
-  "bearings": 973,
-  "placementElements": 11,
-  "memberLengthM": 3959.525009516915,
+  "bearings": 971,
+  "placementElements": 12,
+  "memberLengthM": 3936.4470341669276,
   "coordinatedRacks": 10
  },
  "areas": [
@@ -467,9 +471,9 @@
   },
   {
    "area": "A-160",
-   "supports": 37,
-   "placementElements": 0,
-   "holds": 0,
+   "supports": 34,
+   "placementElements": 3,
+   "holds": 3,
    "transportFindings": 0,
    "reservedSpaceFindings": 0,
    "review": {
@@ -584,9 +588,9 @@
   },
   {
    "area": "A-1000",
-   "supports": 241,
-   "placementElements": 1,
-   "holds": 1,
+   "supports": 239,
+   "placementElements": 3,
+   "holds": 3,
    "transportFindings": 0,
    "reservedSpaceFindings": 0,
    "review": {
@@ -597,9 +601,9 @@
   },
   {
    "area": "A-2000",
-   "supports": 534,
-   "placementElements": 159,
-   "holds": 230,
+   "supports": 533,
+   "placementElements": 160,
+   "holds": 231,
    "transportFindings": 0,
    "reservedSpaceFindings": 0,
    "review": {
@@ -610,9 +614,9 @@
   },
   {
    "area": "A-3000",
-   "supports": 548,
-   "placementElements": 2,
-   "holds": 4,
+   "supports": 544,
+   "placementElements": 6,
+   "holds": 8,
    "transportFindings": 0,
    "reservedSpaceFindings": 1,
    "review": {
@@ -632,9 +636,9 @@
   },
   {
    "area": "A-5000",
-   "supports": 973,
-   "placementElements": 11,
-   "holds": 11,
+   "supports": 971,
+   "placementElements": 12,
+   "holds": 13,
    "transportFindings": 0,
    "reservedSpaceFindings": 1,
    "review": {
@@ -658,6 +662,45 @@
   }
  ],
  "holds": [
+  {
+   "area": "A-160",
+   "equipment": "F-161",
+   "line": "A160 press feed suction header",
+   "lineId": "LINE-1064",
+   "partId": 70859,
+   "point": [
+    -16.3,
+    0.3,
+    -21.6
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-160",
+   "equipment": "T-161",
+   "line": "T-161 bottom waste pickup",
+   "lineId": "LINE-1047",
+   "partId": 69548,
+   "point": [
+    -18.2,
+    0.3,
+    -14.4
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-160",
+   "equipment": "T-163",
+   "line": "T-163 to P-165",
+   "lineId": "LINE-1053",
+   "partId": 69918,
+   "point": [
+    -19.9,
+    0.25,
+    -24.5
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
   {
    "area": "A-200",
    "equipment": "R-201C",
@@ -696,6 +739,32 @@
     -4.8
    ],
    "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-1000",
+   "equipment": "R-1002",
+   "line": "R-1002 closed vent",
+   "lineId": "LINE-1274",
+   "partId": 94713,
+   "point": [
+    36.45,
+    7.321,
+    -8.35
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-1000",
+   "equipment": "T-1008",
+   "line": "T-1008 closed vent",
+   "lineId": "LINE-1281",
+   "partId": 95140,
+   "point": [
+    54.45,
+    7.188,
+    -18.35
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
   },
   {
    "area": "A-2000",
@@ -759,6 +828,19 @@
     20.7,
     8.579,
     -6
+   ],
+   "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-2000",
+   "equipment": "P-BW2001",
+   "line": "A-2000 backwash to T-1006",
+   "lineId": "LINE-1746",
+   "partId": 107322,
+   "point": [
+    20.7,
+    9.4,
+    -4.8
    ],
    "reason": "Local bearing requires shared-column bracket or single-post exception"
   },
@@ -3715,6 +3797,19 @@
   },
   {
    "area": "A-3000",
+   "equipment": "P-3111",
+   "line": "P-3111 qualified return to T-1006",
+   "lineId": "LINE-1363",
+   "partId": 99236,
+   "point": [
+    20.6,
+    10.8,
+    -7.2
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-3000",
    "equipment": "P-3183",
    "line": "P-3183 qualified return to T-1006",
    "lineId": "LINE-1366",
@@ -3736,6 +3831,45 @@
     20.9,
     8.698,
     -5.7
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-3000",
+   "equipment": "P-3183",
+   "line": "P-3183 qualified return to T-1006",
+   "lineId": "LINE-1366",
+   "partId": 99372,
+   "point": [
+    20.9,
+    11.2,
+    -7.2
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-3000",
+   "equipment": "HD-3100",
+   "line": "Wet vent BL-V-T-162 to HD-3100",
+   "lineId": "LINE-1434",
+   "partId": 100915,
+   "point": [
+    -18.725,
+    8.695,
+    -20.475
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
+  },
+  {
+   "area": "A-3000",
+   "equipment": "HD-3100",
+   "line": "Wet vent BL-VENTT1006 to HD-3100",
+   "lineId": "LINE-1440",
+   "partId": 100976,
+   "point": [
+    20.9,
+    10.198,
+    -7.2
    ],
    "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
   },
@@ -4105,6 +4239,19 @@
   },
   {
    "area": "A-5000",
+   "equipment": "HD-5200",
+   "line": "E-702 return branch to service station",
+   "lineId": "LINE-2975",
+   "partId": 131408,
+   "point": [
+    93.47,
+    7.623,
+    30.2
+   ],
+   "reason": "Support rod conflicts with another service; local bracket / rack tier review required"
+  },
+  {
+   "area": "A-5000",
    "equipment": "HD-5100",
    "line": "Hot water supply riser",
    "lineId": "LINE-2668",
@@ -4128,6 +4275,19 @@
     -19.35
    ],
    "reason": "Local bearing requires shared-column bracket or single-post exception"
+  },
+  {
+   "area": "A-5000",
+   "equipment": "HD-5300",
+   "line": "TCU-141 cooldown return branch to service station",
+   "lineId": "LINE-2903",
+   "partId": 128533,
+   "point": [
+    -14.37,
+    12.72,
+    4.8
+   ],
+   "reason": "No clear rack foundation / beam corridor; revise adjacent layout or use engineered attachment"
   },
   {
    "area": "A-5000",
@@ -4236,22 +4396,15 @@
  ],
  "structuralAttachments": {
   "passes": true,
-  "loads": 2560,
-  "contacts": 20858,
-  "foundations": 5274,
+  "loads": 2556,
+  "contacts": 20823,
+  "foundations": 4849,
   "failures": 0,
   "method": "Declared mounting points checked against part geometry and assembled transforms, with graph reachability to foundations. Structural strength is not calculated."
  },
  "containment": {
-  "geometryPass": false,
-  "findings": [
-   {
-    "kind": "capture-pocket",
-    "cell": "BND-1012",
-    "patch": 0,
-    "reason": "Wet floor has a disconnected undrained pocket"
-   }
-  ]
+  "geometryPass": true,
+  "findings": []
  },
  "findings": [
   {
@@ -4260,13 +4413,13 @@
    "status": "Open — layout revision required",
    "priority": "high",
    "discipline": "Piping / structural",
-   "observation": "275 candidate support positions remain unresolved on the current model (published report: 316); A-2000 230, A-4000 26, A-5000 11. Leading reasons: \"Support rod conflicts with another service\" (218), \"No clear rack foundation / beam corridor\" (29).",
+   "observation": "287 candidate support positions remain unresolved on the current model (published report: 316); A-2000 231, A-4000 26, A-5000 13. Leading reasons: \"Support rod conflicts with another service\" (221), \"No clear rack foundation / beam corridor\" (35).",
    "action": "Revise the A-2000 RO / UF permeate rack tiers and the A-4000 header brackets so each held line has a bearing corridor; record the rack revision in the model before support calculations start.",
    "evidence": [
     {
      "kind": "holds",
      "id": "A-2000",
-     "label": "A-2000 · 230 placement holds",
+     "label": "A-2000 · 231 placement holds",
      "href": "#holds"
     },
     {
@@ -4295,7 +4448,7 @@
    "status": "Open — model correction",
    "priority": "high",
    "discipline": "Layout",
-   "observation": "4 support element(s) intrude into 4 reserved vehicle, maintenance or standing space(s) on the current model: PS-A200-3288 bearing collar in REMOVE-R201C; PS-A900-2932 bearing collar in REMOVE-PY801; PS-A3000-3561 local bracket in PIPE-standing-access-613-CP-3000 / CP-3000 control display; PS-A5000-2183 insulation insert bearing collar in HEADROOM-PL-801 feeder walkway. 1 new since the published report (REMOVE-PY801 · PS-A900-2932 bearing collar); 1 resolved (REMOVE-R201D · bearing collar). The A-3000 bracket position also moved with the A-3000 rebuild.",
+   "observation": "4 support element(s) intrude into 4 reserved vehicle, maintenance or standing space(s) on the current model: PS-A200-3253 bearing collar in REMOVE-R201C; PS-A900-2877 bearing collar in REMOVE-PY801; PS-A3000-3547 local bracket in PIPE-standing-access-613-CP-3000 / CP-3000 control display; PS-A5000-2126 insulation insert bearing collar in HEADROOM-PL-801 feeder walkway. 1 new since the published report (REMOVE-PY801 · PS-A900-2877 bearing collar); 1 resolved (REMOVE-R201D · bearing collar). The A-3000 bracket position also moved with the A-3000 rebuild.",
    "action": "Relocate or re-tier the intruding supports (A-900 collar in the PY-801 removal space, A-3000 bracket in the CP-3000 standing space) and re-run the corridor gate; the ES-3000 shower-head overlap stays an open access finding.",
    "evidence": [
     {
@@ -4406,13 +4559,13 @@
    "status": "Open — structural calculation",
    "priority": "medium",
    "discipline": "Structural",
-   "observation": "PR-A5000-T002: 44 assigned bearings across bays of 11.3 / 6.0 m; longest bay 11.3 m spans the A-300 → A-1000 under-rack aisle. HOLD: combined pipe reactions, lateral stability, guide/anchor loads, connection strength and foundations; entrance portal span, deflection and lateral/seismic load paths require calculation before construction.",
+   "observation": "PR-A5000-T002: 47 assigned bearings across bays of 11.3 / 6.0 m; longest bay 11.3 m spans the A-300 → A-1000 under-rack aisle. HOLD: combined pipe reactions, lateral stability, guide/anchor loads, connection strength and foundations; entrance portal span, deflection and lateral/seismic load paths require calculation before construction.",
    "action": "Size the portal members, deflection, lateral / seismic restraint, connections and foundations with the combined pipe reactions before any construction release.",
    "evidence": [
     {
      "kind": "rack",
      "id": "PR-A5000-T002",
-     "label": "Rack PR-A5000-T002 · 44 bearings",
+     "label": "Rack PR-A5000-T002 · 47 bearings",
      "href": "#portals"
     },
     {
@@ -4470,7 +4623,7 @@
    "status": "Provisional geometry — vendor loads unverified",
    "priority": "low",
    "discipline": "Structural",
-   "observation": "3743 modelled bearings, 586 support columns and 13.93 km of member envelope on the current model; 1064 pipe elements are attached on calculation hold and none is structurally qualified. Skids, frames and towers added since the published report (A-900 V163, A-3000 rebuild) carry the same provisional status.",
+   "observation": "3731 modelled bearings, 579 support columns and 13.82 km of member envelope on the current model; 1053 pipe elements are attached on calculation hold and none is structurally qualified. Skids, frames and towers added since the published report (A-900 V163, A-3000 rebuild) carry the same provisional status.",
    "action": "Collect vendor loads and anchor patterns; calculate spans, pipe stress, guide / anchor reactions, steel, bracing, connections and foundations (WorkSafeBC 4.2 / 4.3, BC Building Code).",
    "evidence": [
     {
@@ -4517,7 +4670,7 @@
    "status": "Open — model engineer",
    "priority": "high",
    "discipline": "Model management",
-   "observation": "tests/validate-corridors.mjs fails on the current model against the corridors-v84 fixture (pipe-geometry and component signatures, previously attached elements, reserved-space intrusions and undeclared pedestrian overlaps), so dist/layout-review.json stays at bc-corridors-85 (2026-09-12) and is not refreshed by the release checks. Current-model figures differ: supports 3783 → 3743, holds 316 → 275, columns 593 → 586.",
+   "observation": "tests/validate-corridors.mjs fails on the current model against the corridors-v84 fixture (pipe-geometry and component signatures, previously attached elements, reserved-space intrusions and undeclared pedestrian overlaps), so dist/layout-review.json stays at bc-corridors-85 (2026-09-12) and is not refreshed by the release checks. Current-model figures differ: supports 3783 → 3731, holds 316 → 287, columns 593 → 579.",
    "action": "Model engineer to rebaseline tests/fixtures/corridors-v84.json to the current model once LAY-02 and LAY-03 are corrected, then regenerate the gate report; this refresh remains the interim record.",
    "evidence": [
     {
@@ -4546,7 +4699,7 @@
    "status": "Applied to the model — removal handed to the model engineer",
    "priority": "medium",
    "discipline": "Model management / layout",
-   "observation": "D-MDL-01 (bases MC-1–MC-10, approved by QFL 2026-09-28) brings the model in line with the V219–V227 data-layer decisions. Release 1 keeps the 21 retired A-1000 / A-2000 tags in place — shown grey and labelled RETIRED with their decision — because the model engineer's validators still assert their streams, and resizes the A-1000 / A-2000 tanks to the issued datasheets (T-1006 400 m³ at Ø 8.4 m, R-1001 25, R-1002 30, R-1003 16, R-1004 10, T-1002 80, T-1003 30, T-1008 12, T-2001 15, T-2002 100 m³). Against main, on A-1000 / A-2000: pipe-support holds 229 → 230, structure passes, no headroom conflict, and two more reserved-space entries on an existing class in the containment yard (BND-1004 / TR-perimeter-85); R-1002 / R-1003 / R-1004 keep their footprints because new diameters re-flowed rack supports into emergency walkways PW-ES-030 / 031. Current model: 275 holds plant-wide. C-301 and T-304 (release 2) sit behind the pipe-racks-v31 fixture, which already fails on main.",
+   "observation": "D-MDL-01 (bases MC-1–MC-10, approved by QFL 2026-09-28) brings the model in line with the V219–V227 data-layer decisions. Release 1 keeps the 21 retired A-1000 / A-2000 tags in place — shown grey and labelled RETIRED with their decision — because the model engineer's validators still assert their streams, and resizes the A-1000 / A-2000 tanks to the issued datasheets (T-1006 400 m³ at Ø 8.4 m, R-1001 25, R-1002 30, R-1003 16, R-1004 10, T-1002 80, T-1003 30, T-1008 12, T-2001 15, T-2002 100 m³). Against main, on A-1000 / A-2000: pipe-support holds 229 → 230, structure passes, no headroom conflict, and two more reserved-space entries on an existing class in the containment yard (BND-1004 / TR-perimeter-85); R-1002 / R-1003 / R-1004 keep their footprints because new diameters re-flowed rack supports into emergency walkways PW-ES-030 / 031. Current model: 287 holds plant-wide. C-301 and T-304 (release 2) sit behind the pipe-racks-v31 fixture, which already fails on main.",
    "action": "Model engineer: remove the retired tags and rebaseline the validators and the pipe-racks-v31 fixture (docs/model-catchup-handoff.md); then release 2 (C-301 filter press, new equipment in existing areas) and release 3 (A-1100, A-5400 envelope).",
    "evidence": [
     {
@@ -4588,13 +4741,13 @@
     {
      "kind": "holds",
      "id": "A-1000",
-     "label": "A-1000 · 1 placement holds",
+     "label": "A-1000 · 3 placement holds",
      "href": "#holds"
     },
     {
      "kind": "holds",
      "id": "A-2000",
-     "label": "A-2000 · 230 placement holds",
+     "label": "A-2000 · 231 placement holds",
      "href": "#holds"
     },
     {
@@ -4617,7 +4770,7 @@
    "status": "Ruled by QFL 2026-09-29 (L1) — applied in release 3 (LAY-11)",
    "priority": "high",
    "discipline": "Model management / layout",
-   "observation": "Release 2 (bases R2-1–R2-8, approved by QFL 2026-09-28) adds standalone envelopes with nozzle stubs and no routes, built after the pipe supports so the racks do not re-flow, each placed by a clear-space search against every existing part: F-160 (−14.5, −24.5) and T-160 (−14.5, −27.6) south of F-161, P-160A/B beside T-160, HR-601 (66, 7.8) south of the dryer train, and an IF-A2000-CITY battery-limit marker beside CF-2002. Against V228: pipe-support holds, reserved-space conflicts and headroom unchanged, structure passes, walkways clear, no interference. CL-1001 (Ø 6.5 m thickener) and SL-1001 (200 m³ silo) are not placed: A-1000 has no clear space for them at datasheet size even ignoring the retired tags — the nearest clear spots are x ≈ 107 (the future-expansion block kept for A-5400) and (62, −19.5) inside the A-2000 block. F-160 could not go beside T-161, so its R-141 feed and cake transfer need a re-layout. Current model: 275 holds plant-wide.",
+   "observation": "Release 2 (bases R2-1–R2-8, approved by QFL 2026-09-28) adds standalone envelopes with nozzle stubs and no routes, built after the pipe supports so the racks do not re-flow, each placed by a clear-space search against every existing part: F-160 (−14.5, −24.5) and T-160 (−14.5, −27.6) south of F-161, P-160A/B beside T-160, HR-601 (66, 7.8) south of the dryer train, and an IF-A2000-CITY battery-limit marker beside CF-2002. Against V228: pipe-support holds, reserved-space conflicts and headroom unchanged, structure passes, walkways clear, no interference. CL-1001 (Ø 6.5 m thickener) and SL-1001 (200 m³ silo) are not placed: A-1000 has no clear space for them at datasheet size even ignoring the retired tags — the nearest clear spots are x ≈ 107 (the future-expansion block kept for A-5400) and (62, −19.5) inside the A-2000 block. F-160 could not go beside T-161, so its R-141 feed and cake transfer need a re-layout. Current model: 287 holds plant-wide.",
    "action": "QFL to rule the A-1000 layout: extend A-1000 into the west of the A-2000 block (freed by W3 once the retired tags are removed), or use the future-expansion block and move the A-5400 envelope, or wait for the removal; model engineer to add the tie-ins with the W3 / cascade re-routing.",
    "evidence": [
     {
@@ -4682,7 +4835,7 @@
    "status": "Applied — tie-ins and floor allocation with the model engineer",
    "priority": "high",
    "discipline": "Model management / layout",
-   "observation": "LAY-10 was ruled by QFL on 2026-09-29 (option L1, bases R3-1–R3-9) after a clear-space search of the current model (ground-level parts and walkways, 1 m clearance): A-1000 and A-2000 hold no 9 × 9 m pad even without the 20 retired tags, whose pipework and supports stay; the future-expansion block (x 105–116) and a south-east yard between the south pipe rack and the perimeter road (x 71–119, z −48…−34) are clear. Release 3 adds standalone envelopes (no routes, nozzle stubs marked tie-in deferred, built after the pipe supports): CL-1001 (76.5, −42.5); the A-1100 acid bund 20 × 11 m with T-1101 (Ø 5.5 × 5.4 m), T-1102 (Ø 6.0 × 7.2 m), P-1101A/B and P-1102A/B; PK-1101 as a 14 × 10 m screening envelope (hold K1); A-5400 on a 10 × 18 m curbed pad with H-5400 and its stack, P-5401A/B, V-5401 on the heater structure and T-5401 (hold U8); SL-1001 (110.5, −25). HAZOP inputs (U8): A-5400 is ≈ 27 m from the A-600 edge (DR-601), ≈ 14 m from the A-800 block edge (PY-801 hydrogen off-gas) and ≈ 17 m from the A-1100 bund. Current model: 275 holds plant-wide.",
+   "observation": "LAY-10 was ruled by QFL on 2026-09-29 (option L1, bases R3-1–R3-9) after a clear-space search of the current model (ground-level parts and walkways, 1 m clearance): A-1000 and A-2000 hold no 9 × 9 m pad even without the 20 retired tags, whose pipework and supports stay; the future-expansion block (x 105–116) and a south-east yard between the south pipe rack and the perimeter road (x 71–119, z −48…−34) are clear. Release 3 adds standalone envelopes (no routes, nozzle stubs marked tie-in deferred, built after the pipe supports): CL-1001 (76.5, −42.5); the A-1100 acid bund 20 × 11 m with T-1101 (Ø 5.5 × 5.4 m), T-1102 (Ø 6.0 × 7.2 m), P-1101A/B and P-1102A/B; PK-1101 as a 14 × 10 m screening envelope (hold K1); A-5400 on a 10 × 18 m curbed pad with H-5400 and its stack, P-5401A/B, V-5401 on the heater structure and T-5401 (hold U8); SL-1001 (110.5, −25). HAZOP inputs (U8): A-5400 is ≈ 27 m from the A-600 edge (DR-601), ≈ 14 m from the A-800 block edge (PY-801 hydrogen off-gas) and ≈ 17 m from the A-1100 bund. Current model: 287 holds plant-wide.",
    "action": "Model engineer: floor-allocation polygons for the south-east yard and the future-expansion block, tie-ins (thermal-oil mains ≈ 60 m to HX-601 and ≈ 20 m to PK-1101; acid lines on the south rack; the CL-1001 gravity feed from R-1004 with the cascade step check W7; lime to T-1002); rethink the 0.14 MW R-141 heat-up through A-5100 (≈ 135 m). Vendors: PK-1101 (K1) and A-5400 (U8) footprints.",
    "evidence": [
     {
@@ -4741,7 +4894,7 @@
    "status": "Applied — the south-east yard stays reserved",
    "priority": "medium",
    "discipline": "Model management / layout",
-   "observation": "D-MDL-02 (QFL 2026-09-29, bases AR-1–AR-9): the acid route is not decided, so the 3D model now opens on Route 0 (full neutralisation, REP-038 fallback) and shows Route 2 + 6 (spent-acid recovery, D-A1000-03, gated on REP-039 M1–M3) as an option under Model Setup → Acid route, built in the browser like the A-160 alternatives (URL acid=r26). D-A1000-03, the data layer, the datasheets and LST-001 V5.2 are unchanged. Route 0 builds no F-160 / T-160 / P-160 and no A-1100 set (PK-1101, T-1101, T-1102, P-1101A/B, P-1102A/B); the south-east yard keeps a plot outline (RSV-A1100) so the option keeps its space; CL-1001, SL-1001 and A-5400 are built in both routes. Current model (Route 0): 275 holds plant-wide.",
+   "observation": "D-MDL-02 (QFL 2026-09-29, bases AR-1–AR-9): the acid route is not decided, so the 3D model now opens on Route 0 (full neutralisation, REP-038 fallback) and shows Route 2 + 6 (spent-acid recovery, D-A1000-03, gated on REP-039 M1–M3) as an option under Model Setup → Acid route, built in the browser like the A-160 alternatives (URL acid=r26). D-A1000-03, the data layer, the datasheets and LST-001 V5.2 are unchanged. Route 0 builds no F-160 / T-160 / P-160 and no A-1100 set (PK-1101, T-1101, T-1102, P-1101A/B, P-1102A/B); the south-east yard keeps a plot outline (RSV-A1100) so the option keeps its space; CL-1001, SL-1001 and A-5400 are built in both routes. Current model (Route 0): 287 holds plant-wide.",
    "action": "Keep the south-east yard free until the acid route is ruled after REP-039 M1–M3; the model engineer re-bases the A-1000 envelopes if Route 0 is chosen (a Route 0 A-1000 is not designed).",
    "evidence": [
     {
@@ -4800,7 +4953,7 @@
    "status": "Applied — tie-ins open",
    "priority": "high",
    "discipline": "Model management / layout / piping",
-   "observation": "Correction to the release-3 record (A1000-17, LAY-11 and the hand-off note, 2026-09-29): CL-1001 at (76.5, −42.5) was ≈ 44 m in a straight line from R-1004 (≈ 60 m by a pipe route), not ≈ 20–30 m as stated, and a gravity feed over that distance and across the south rack was not feasible. D-MDL-03 (QFL instruction 2026-09-30, carried out as model engineer): T-1001 / P-1004 (NaOH, D-A1000-05), T-1004 / P-1001 (HCl trim), P-1006 / P-1007 / P-1008 (stage transfers) and P-1010 (centrifuge bypass, D-A1000-06) are removed with their pipework, valves, vents, drains, panels and bunds BND-1006 / BND-1009; the stage transfers are replaced by the approved gravity cascade R-1001 → R-1002 → R-1003 → R-1004 (falls 1.1 / 0.9 / 0.8 m on the model envelopes). The retired A-2000 backwash return to T-1006 is re-routed through the A-1000 north utility corridor, the lime / BaCl₂ / floc dosing lines run north first, and the R-1002 / R-1003 / A-500 wet-vent drops move to lanes clear of the south strip — rack S049 and the A-1000 racks S133 / S134 leave the south strip. CL-1001 (Ø 6.5 m) now sits at (41.75, −22.75), ≈ 17 m from R-1004 beside DC-1001 and T-1008; SL-1001 (200 m³, Ø 4.5 m, ≈ 15.6 m tall) at (18, −24.5), ≈ 9 m from T-1002, clear of every overhead line. Both positions were confirmed clear on the rebuilt model (0.5 m / 0.3 m clearance, walkways and overhead). T-1007 / P-1011 remain (in service under Route 0, D-MDL-02). The south-east yard now holds only the A-1100 option set (Route 2 + 6) and its Route 0 reservation. Current model: 275 holds plant-wide.",
+   "observation": "Correction to the release-3 record (A1000-17, LAY-11 and the hand-off note, 2026-09-29): CL-1001 at (76.5, −42.5) was ≈ 44 m in a straight line from R-1004 (≈ 60 m by a pipe route), not ≈ 20–30 m as stated, and a gravity feed over that distance and across the south rack was not feasible. D-MDL-03 (QFL instruction 2026-09-30, carried out as model engineer): T-1001 / P-1004 (NaOH, D-A1000-05), T-1004 / P-1001 (HCl trim), P-1006 / P-1007 / P-1008 (stage transfers) and P-1010 (centrifuge bypass, D-A1000-06) are removed with their pipework, valves, vents, drains, panels and bunds BND-1006 / BND-1009; the stage transfers are replaced by the approved gravity cascade R-1001 → R-1002 → R-1003 → R-1004 (falls 1.1 / 0.9 / 0.8 m on the model envelopes). The retired A-2000 backwash return to T-1006 is re-routed through the A-1000 north utility corridor, the lime / BaCl₂ / floc dosing lines run north first, and the R-1002 / R-1003 / A-500 wet-vent drops move to lanes clear of the south strip — rack S049 and the A-1000 racks S133 / S134 leave the south strip. CL-1001 (Ø 6.5 m) now sits at (41.75, −22.75), ≈ 17 m from R-1004 beside DC-1001 and T-1008; SL-1001 (200 m³, Ø 4.5 m, ≈ 15.6 m tall) at (18, −24.5), ≈ 9 m from T-1002, clear of every overhead line. Both positions were confirmed clear on the rebuilt model (0.5 m / 0.3 m clearance, walkways and overhead). T-1007 / P-1011 remain (in service under Route 0, D-MDL-02). The south-east yard now holds only the A-1100 option set (Route 2 + 6) and its Route 0 reservation. Current model: 287 holds plant-wide.",
    "action": "Model: CL-1001 / SL-1001 tie-ins and the CL-1001 floor level (W7); re-baseline the pipe-racks-v31 fixture when the model engineer next re-issues it; A-2000 retired equipment (D-A2000-03) other than the backwash return is still in place.",
    "evidence": [
     {
