@@ -1,11 +1,11 @@
 {
  "area": "A-5000",
- "version": "9bef6ea",
- "date": "2026-09-30",
- "revision": "r13",
+ "version": "e15bd42",
+ "date": "2026-10-01",
+ "revision": "r14",
  "reviewer": {
   "initials": "QFL",
-  "date": "2026-09-29"
+  "date": "2026-10-01"
  },
  "lead": "The engineering content of this page — the thermal projections, the PFD temperature register, the fluid-separation and consumer tables and the heat balance — is the model engineer’s and is unchanged. This section adds the data-layer record for A-5000: what is approved, what is in conflict, what is withdrawn and what is still missing, on the same basis as the other fifteen area reviews.",
  "semanticCoreVersion": "1.19.0-foundation",
@@ -20,7 +20,7 @@
   "gapsOpen": 28,
   "gapsClosed": 14,
   "holds": 0,
-  "documents": 25
+  "documents": 26
  },
  "approved": [
   {
@@ -2553,6 +2553,16 @@
    "valueRows": "0"
   },
   {
+   "documentId": "FEED-PS-HOP-001",
+   "title": "A-5400 Thermal Oil and R-201 / T-303 Chilled-Water Service FEED HAZOP Pack",
+   "revision": "V1.0",
+   "docType": "HOP",
+   "control": "controlled (draft - issued for review; workshop pending)",
+   "tier": "B",
+   "file": "11 Process Safety and HAZOP Analysis\\FEED-PS-HOP-001_A-5400-Thermal-Oil-and-Chilled-Water-HAZOP-Pack_V1.0.docx",
+   "valueRows": "0"
+  },
+  {
    "documentId": "FEED-PE-MOC-002",
    "title": "MOC Request: A-5000 Fourth Utility Loop and Exotherm Control (PFD-5000)",
    "revision": "V1.0",
@@ -2685,7 +2695,7 @@
  ],
  "layout": {
   "version": "9bef6ea",
-  "date": "2026-09-30",
+  "date": "2026-10-01",
   "revision": "r7",
   "reviewer": "QFL",
   "supports": 971,
@@ -3563,6 +3573,59 @@
      "id": "H-5400",
      "label": "H-5400 · Thermal-Oil Heater (gas-fired) (Hopper) — 3 rows, 0 approved, 2 open gaps",
      "href": "#a5000-assets"
+    }
+   ]
+  },
+  {
+   "id": "A5000-18",
+   "topic": "FEED HAZOP pack issued for A-5400 thermal oil and the R-201 / T-303 chilled-water service (FEED-PS-HOP-001 V1.0) — workshop pending",
+   "status": "Pack issued — workshop pending; MOC-002 D.1 item 1 open",
+   "priority": "high",
+   "discipline": "Process safety / utilities",
+   "observation": "FEED-PS-HOP-001 V1.0 (bases HZ-1–HZ-9 approved in review by QFL 2026-09-29; method FEED-PS-GDL-001; register V12.12) prepares the HAZOP asked for by FEED-PE-MOC-002 Part D.1 item 1: 9 nodes (A1–A6 thermal oil, B1–B3 chilled water), 24 draft deviations, 28 draft actions and 4 pack-level recommendations. 7 deviations are proposed High and none Extreme — low or no oil flow while firing (A-01), a mains leak or spray fire (A-06), water in the oil and boil-over (A-09), oil leaking into the HX-601 drying air at the combustible-dust dryer (A-12), drying air above the dryer inlet limit (A-13), loss of chilled water during KMnO₄ dosing (B-01) and loss of loop cooling during the quench / dilution (B-05). The rankings are proposals for the team; this is not a completed HAZOP. Nodes B1–B3 cover the R-201 / T-303 chilled-water service; the A-200 / A-300 reviews carry no separate finding.",
+   "action": "Hold the workshop (≈ 2 days); close MOC-002 D.1 item 1 and FEED-PE-DAT-140 hold U8 only on the issued workshop report; Process Safety to confirm the ≈ 14 m from A-5400 to the A-800 block edge (PY-801 / FN-801 location and hazardous-area class) — ≈ 27 m to DR-601 and ≈ 17 m to the A-1100 set appear adequate; propose a FEED-PM-LOG-001 risk entry for the oil-fire and HX-601 exchanger-leak scenarios.",
+   "evidence": [
+    {
+     "kind": "document",
+     "id": "FEED-PS-HOP-001",
+     "label": "FEED-PS-HOP-001 V1.0 · A-5400 Thermal Oil and R-201 / T-303 Chilled-Water Service FEED HAZOP Pack (controlled (draft - issued for review; workshop pending))",
+     "href": "#a5000-documents"
+    },
+    {
+     "kind": "document",
+     "id": "FEED-PE-MOC-002",
+     "label": "FEED-PE-MOC-002 V1.0 · MOC Request: A-5000 Fourth Utility Loop and Exotherm Control (PFD-5000) (controlled (raised 2026-09-22 - pending review and decision))",
+     "href": "#a5000-documents"
+    },
+    {
+     "kind": "document",
+     "id": "FEED-PE-DAT-140",
+     "label": "FEED-PE-DAT-140 V1.1 · A-5400 Thermal-Oil Heater Package Datasheet (controlled (preliminary - budget enquiry))",
+     "href": "#a5000-documents"
+    },
+    {
+     "kind": "decision",
+     "id": "D-A5000-04",
+     "label": "D-A5000-04 (QFL 2026-09-29, FEED-PE-NTE-014): A-5400 medium: two QFL rulings of 2026-09-27 disagreed — D-A5000-02 (20 barg steam, 2 × 7 MW, with HR-601 and MVR) and the plant-wide balance stream (…",
+     "href": "#a5000-decisions"
+    },
+    {
+     "kind": "asset",
+     "id": "A-5400",
+     "label": "A-5400 · Missing ≥ 200 °C steam / thermal-oil loop (REP-043 F-51: HX-601 2.9–15 MW, acid concentrator 1.5–4.4 MW, R-141 fast heat-up) (UtilityPackage) — 41 rows, 1 approved, 2 open gaps",
+     "href": "#a5000-assets"
+    },
+    {
+     "kind": "asset",
+     "id": "H-5400",
+     "label": "H-5400 · Thermal-Oil Heater (gas-fired) (Hopper) — 3 rows, 0 approved, 2 open gaps",
+     "href": "#a5000-assets"
+    },
+    {
+     "kind": "page",
+     "id": "A-600",
+     "label": "A-600 review r9 · QFL",
+     "href": "./a600-review.html"
     }
    ]
   }
