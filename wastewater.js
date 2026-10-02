@@ -20,7 +20,7 @@ export function buildWastewater(h){
   if(agitated){setContext(id,tag+' mixing assembly');c(tag+' agitator shaft','internal',.035,y1-.5,[x,(y1+.5)/2,z],'inner');for(const yy of[1,y1*.6]){c(tag+' impeller hub','internal',.09,.13,[x,yy,z],'inner');for(let j=0;j<3;j++)b(tag+' impeller blade','internal',[r*.65,.055,.18],[x+Math.cos(j*2*Math.PI/3)*r*.3,yy,z+Math.sin(j*2*Math.PI/3)*r*.3],'inner',new T.Quaternion().setFromAxisAngle(new T.Vector3(0,1,0),-j*2*Math.PI/3));}
    const mount=b(tag+' agitator mounting plinth','frame',[.5,.16,.5],[x,y1+.16,z]),motor=c(tag+' agitator motor','pump',.23,.6,[x,y1+.54,z],'blue');s.join(roof,mount,[x,y1+.08,z],tag+' mixer plinth / roof');s.join(mount,motor,[x,y1+.24,z],tag+' motor / plinth');s.load(motor,tag+' mixer');}
   const level=port('level measurement tap',[x+r,Math.min(1.35,y1-.15),z],[1,0,0],.02);terminal(level,tag+' sealed level instrument');c(tag+' level process transmitter','valve',.045,.06,[level[0]+.03,level[1],level[2]],'blue',[1,0,0]);
-  const display=fixedPanel(id,'LIT-'+(Number(tag.replace(/^\D+-/,''))+(tag.startsWith('R-')?10:0)),id===150?-22.95:id>=131&&id<=135?x-1.9:x+r+(id===153?1.05:1.5),id===150?-31.15:id===129?-6.7:id>=131&&id<=135?-20.05:z+.1);display.remoteSource=tag+' level tap';
+  const display=fixedPanel(id,'LIT-'+(Number(tag.replace(/^\D+-/,''))+(tag.startsWith('R-')?10:0)),id===150?-22.95:id===135?47:id===153?55.6:id>=131&&id<=134?x-1.9:x+r+1.5,id===150?-31.15:id===129?-6.7:id===153?-22.6:id>=131&&id<=135?-20.05:z+.1);display.remoteSource=tag+' level tap';
   const v={id,tag,x,z,r,top:y1,input,out,vent,hub,body,floor,roof,holes,port,display};vessels[tag]=v;return v;
  }
  // Grade-mounted tanks avoid decorative tall leg frames. Civil capacity remains unqualified.
