@@ -348,12 +348,12 @@ export const EMERGENCY_LOCATION_PLAN=[
     "id": 122017,
     "tag": "ES-300-17",
     "areaId": "A-300",
-    "x": 15.6,
-    "z": -6.5,
-    "yaw": -1.5707963267948966,
+    "x": 10.75,
+    "z": -3.9,
+    "yaw": 3.141592653589793,
     "walkPoint": [
-      14,
-      -6.5
+      10.75,
+      -5.5
     ],
     "reason": "Additional local coverage for A-300 · T-301 approach"
   },
@@ -550,12 +550,12 @@ export const EMERGENCY_LOCATION_PLAN=[
     "id": 122030,
     "tag": "ES-602",
     "areaId": "A-600",
-    "x": 45.4,
-    "z": 15.615385,
-    "yaw": 1.5707963267948966,
+    "x": 47,
+    "z": 20.1,
+    "yaw": 3.141592653589793,
     "walkPoint": [
       47,
-      15.615385
+      18.5
     ],
     "reason": "Additional local coverage for A-600 · T-601 feed-side work",
     "servesTaskIds": [

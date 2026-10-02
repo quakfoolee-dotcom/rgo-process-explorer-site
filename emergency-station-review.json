@@ -6,7 +6,7 @@
   "clearStationReservations": 40,
   "sampledPositions": 86,
   "checkedRoutes": 2660,
-  "footprintsChecked": 1224,
+  "footprintsChecked": 1222,
   "exposureCoverage": {
     "exposures": [
       {
@@ -531,10 +531,10 @@
         "material": "Confirm SDS and concentration",
         "nearest": {
           "tag": "ES-300-17",
-          "checkedDistanceM": 3.5,
+          "checkedDistanceM": 1.25,
           "originGapM": 0,
-          "finalGapM": 0.6999999999999993,
-          "completeDistanceM": 4.199999999999999
+          "finalGapM": 0.7000000000000002,
+          "completeDistanceM": 1.9500000000000002
         },
         "status": "verification-pending",
         "distanceLimitM": 6,
@@ -967,10 +967,10 @@
         "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
         "nearest": {
           "tag": "ES-602",
-          "checkedDistanceM": 0.8846150000000002,
+          "checkedDistanceM": 2,
           "originGapM": 0,
           "finalGapM": 0.7000000000000028,
-          "completeDistanceM": 1.584615000000003
+          "completeDistanceM": 2.700000000000003
         },
         "status": "verification-pending",
         "distanceLimitM": 6,
