@@ -35,7 +35,7 @@ export function expandOxidationBank(h){
  setContext(29,'Four-reactor distribution rack');
  const L=(p,label,service)=>line(p,.055,label,service);
  // New header ends physically meet the cloned branch centerlines.
- L([[0,4.43,-1.85],[-.7,4.43,-1.85],[-.7,7.45,-1.85],[-.7,7.45,-17.62],[0,7.45,-17.62],[0,4.43,-17.62]],'Sulfuric supply to rear reactor pair','Sulfuric acid');
+ L([[0,4.43,-1.62],[0,4.43,-1.85],[-.7,4.43,-1.85],[-.7,7.45,-1.85],[-.7,7.45,-17.62],[0,7.45,-17.62],[0,4.43,-17.62]],'Sulfuric supply to rear reactor pair','Sulfuric acid');
  L([[4.4,6.9,-8.8],[4.4,6.9,-24.8],[-2.4,6.9,-24.8]],'Phosphoric supply to rear reactor pair','Phosphoric acid');h.capped([-2.4,6.9,-24.8],[-1,0,0],.055,'Rear phosphoric header closure');
  for(const [y,r,label,service,start,end] of [[9.65,.045,'Acid vent','Acid vent',-4.0,4.5],[9.25,.025,'Pre-G dust','Pre-G dust',-3.0,3.2],[8.85,.025,'Oxidizer dust','Oxidizer dust',-4.5,1.2],[8.45,.025,'Nitrogen','Nitrogen',-4.5,1.2]]){
   const trunkX=service==='Acid vent'?7.9:service==='Pre-G dust'?3.95:service==='Oxidizer dust'?.80:1.05;
