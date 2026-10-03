@@ -1,7 +1,7 @@
 {
  "schema": "rgo-simulation-inputs-v1",
  "layout": "FEED baseline · press + tray dryer",
- "generated": "2026-10-02",
+ "generated": "2026-10-03",
  "counts": {
   "approved": 34,
   "withdrawn": 16,
