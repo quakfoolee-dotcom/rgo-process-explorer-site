@@ -1,4 +1,4 @@
-import {createInspectionPresentation} from './inspection-presentation.js';
+import {isContainmentPart,createInspectionPresentation} from './inspection-presentation.js';
 import {mountPlantBrowse} from './plant-browse.js';
 import {mountControlledSelects} from './controlled-select.js';
 import {mountProcessWorkspace,adjacentProcessOperation} from './process-workspace.js';
@@ -122,7 +122,20 @@ let feederMaintenanceBranch='';
 let cameraGoal=null,targetGoal=null,aspect=1,activePanel='process',focusIds=null,focusText='',routeId='',routeTrace=null,activeClash=null,clashResult=null,clashPage=0,treeTimer=null;
 const hiddenGroups=new Set(),groupKey=p=>p.reactor+'|'+p.assembly,section={enabled:false,axis:'z',fraction:.5,flip:false,show:true,scope:'visible',equipmentId:null},sectionPlane=new T.Plane(new T.Vector3(0,0,-1),0);
 let sectionInspector=null,sectionContext=null,sectionContextId=null,sectionSlice=null,sectionMemberIds=null;
-const inspectionPresentation=createInspectionPresentation({model,ground,width:groundWidth,depth:groundDepth,center:plantCenter,getState:()=>({exploration,section,isolated,selected,selectedEquipmentId,activePanel,containmentBelow})});
+// Plant footprint without the spill-capture / retention cells, for the 'Show spill capture & retention' switch.
+const containmentFootprint=(()=>{if(!model.containment)return null;const b=new T.Box3();for(const p of parts)if(!isContainmentPart(p))b.union(p.bounds);if(b.isEmpty())return null;const sz=b.getSize(new T.Vector3());return{width:Math.ceil(sz.x+18),depth:Math.ceil(sz.z+18),center:b.getCenter(new T.Vector3())}})();
+const inspectionPresentation=createInspectionPresentation({model,ground,width:groundWidth,depth:groundDepth,center:plantCenter,compact:containmentFootprint,getState:()=>({exploration,section,isolated,selected,selectedEquipmentId,activePanel,containmentBelow})});
+// Grid follows the same footprint: smaller when the containment cells are hidden.
+const gridHome={geometry:grid.geometry,position:grid.position.clone()},compactGrid=containmentFootprint?new T.GridHelper(Math.max(containmentFootprint.width,containmentFootprint.depth),Math.ceil(Math.max(containmentFootprint.width,containmentFootprint.depth)),0x3c5368,0x2c4054):null;
+function syncGridFootprint(){const small=!!compactGrid&&inspectionPresentation.compactActive;grid.geometry=small?compactGrid.geometry:gridHome.geometry;if(small)grid.position.set(containmentFootprint.center.x,gridHome.position.y,containmentFootprint.center.z);else grid.position.copy(gridHome.position);}
+// Show spill capture & retention (default on). Remembered per browser; header button and View settings checkbox stay in sync.
+let containmentShown=true;try{containmentShown=localStorage.getItem('rgo-containment')!=='off'}catch(e){}
+const containmentCheck=$('show-containment'),containmentButton=$('containment-toggle');
+if(!containmentFootprint){containmentShown=true;if(containmentCheck)containmentCheck.closest('label').hidden=true;if(containmentButton)containmentButton.hidden=true;}
+inspectionPresentation.setUserHidden(!containmentShown);
+const syncContainmentControls=()=>{if(containmentCheck)containmentCheck.checked=containmentShown;if(containmentButton){containmentButton.setAttribute('aria-pressed',String(containmentShown));containmentButton.textContent=containmentShown?'◫ Retention on':'◫ Retention off'}};
+function setContainmentShown(value){containmentShown=value;inspectionPresentation.setUserHidden(!value);syncContainmentControls();try{localStorage.setItem('rgo-containment',value?'on':'off')}catch(e){}reconcileStructureSelection();renderTree();dirty=true;updateParts();}
+containmentCheck?.addEventListener('change',()=>setContainmentShown(containmentCheck.checked));containmentButton?.addEventListener('click',()=>setContainmentShown(!containmentShown));syncContainmentControls();
 const planeHelper=new T.PlaneHelper(sectionPlane,34,0x6cbfdf);planeHelper.visible=false;planeHelper.material.depthWrite=false;scene.add(planeHelper);
 const dummy=new T.Object3D(),tmp=new T.Vector3(),raycaster=new T.Raycaster(),pointer=new T.Vector2(),white=new T.Color('white'),accent=new T.Color(0xffc05a),routeColor=new T.Color(0x52e2ee),clashColor=new T.Color(0xff6692),dim=new T.Color(0x43546b);
 const serviceColors={'Argon':0xb5a0ff,'Argon / thermal off-gas':0xc3abfa,'Argon purge exhaust':0xc3abfa,'Oxygen sample':0xf2d189,'Thermal off-gas':0xe8a874,'Cooling water':0x6ddce7,'Dry GO':0xddd2a3,'Sulfuric acid':0x6cdbe7,'Phosphoric acid':0xf4c16f,'Pre-G':0xe5ceb0,'KMnO4':0xd497f2,'Reaction slurry':0xd6ae78,'Peroxide':0x8bc9ff,'HCl':0xa3d98b,'RO water':0x73dacc,'Quenched slurry':0xc1d394,'Acid vent':0xc6bbde,'Peroxide vent':0xc3d6ee,'Acid wash vent':0xd2dcc0,'Nitrogen':0xa7bce1,'Pre-G dust':0xbfb2a3,'Oxidizer dust':0xcda6de,Supply:0x52e2ee,Receive:0x82dcb2,Slurry:0xe9ad65,Filtrate:0x76c2ff,Wash:0x77e0c6,'Wet cake':0xdda4ee,'Pressure gas':0xd2c181,Vent:0xb7b5df,Relief:0xf17682,'Wash vent':0xa8d9d3,Vapor:0xcbb9f6,'Vapor / condensate':0xb9caff,Condensate:0x82c8fa,Thermal:0xf5a479,Cooling:0x6de0ec,'Dry solid':0xeacd85,'Retentate':0x68dac5,'Permeate':0x83baff,'Centrate':0xe9b58d,'Concentrate':0xe8c789,'Washed product':0x92e9b9,'CIP':0xf49edb,'Pre-G solids':0xe5ceb0,'Bin vent':0xb1d9b7};
@@ -144,7 +157,7 @@ function updateEquipmentLabels(){updateClosedMarkers();const width=viewport.clie
 
 function allBounds(explosion=amount){const bounds=new T.Box3();for(const p of parts)if(!exploration||exploration.plan.ids.has(p.id))bounds.union(p.bounds.clone().translate(tmp.copy(p.offset).multiplyScalar(explosion)));return bounds;}
 function disposeSectionContext(){sectionContext?.dispose();sectionContext=null;sectionContextId=null;}
-function updateSection(){inspectionPresentation.sync();
+function updateSection(){inspectionPresentation.sync();syncGridFootprint();
  const plan=section.scope==='equipment'?getExplorePlan(section.equipmentId):null;
  sectionMemberIds=plan?.ids||null;sectionSlice=null;planeHelper.visible=false;
  if(section.enabled){
