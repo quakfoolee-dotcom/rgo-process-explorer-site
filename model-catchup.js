@@ -21,7 +21,7 @@ export const CATCHUP_EQUIPMENT={
  652:eq('F-160','Pre-G acid filter · 2.54 m² (FEED-PE-DAT-106)','A-160','fixing',-14.5,-24.5,{radius:.9,bottom:1.4,top:3.4,labelY:4.6,geometryStatus:note('FEED-PE-DAT-106',' Agitated pressure filter; placed south of F-161 (no clear space beside T-161), so the R-141 feed and the cake transfer to T-161 need a re-layout — deferred.')}),
  653:eq('T-160','Recovered-acid receiver · 10 m³ (FEED-PE-DAT-107)','A-160','pregpress',-14.5,-27.6,{radius:1.1,bottom:.26,top:.26+10/(Math.PI*1.06**2),labelY:4.2,geometryStatus:note('FEED-PE-DAT-107')}),
  654:eq('P-160','Recovered-acid transfer pumps A/B · 5 m³/h × 22 m (FEED-PE-DAT-108)','A-160','pregpress',-12.4,-28.6,{labelY:2.1,geometryStatus:note('FEED-PE-DAT-108',' 1 + 1 sealless pumps.')}),
- 655:eq('HR-601','Dryer exhaust heat recuperator · 2.7 MW (FEED-PE-DAT-141)','A-600','a600',66,7.8,{labelY:6.9,geometryStatus:note('FEED-PE-DAT-141',' Air-to-air envelope for ≈ 408,000 m³/h exhaust; ducting to the F-601 exhaust and the BL-601 intake deferred.')}),
+ 655:eq('HR-601','Dryer exhaust heat recuperator · 2.7 MW (FEED-PE-DAT-141)','A-600','a600',66.9,7.8,{labelY:6.9,geometryStatus:'HR-601 is a proposed air-to-air heat exchanger on the DR-601 spray-dryer package (A-600). It uses the hot dryer exhaust to pre-warm the incoming drying air. Envelope from FEED-PE-DAT-141 (D-MDL-01 release 2) for ≈ 408,000 m³/h exhaust, ducted in series between F-601 and FN-601 on the exhaust side and between the ambient-air battery limit and BL-601 on the air side. Duct sizes are model choices; the datasheet bypass damper is not modelled; vendor geometry unqualified.'}),
  657:r3('CL-1001','HDS thickener · Ø 6.5 m (FEED-PE-DAT-118)','A-1000','wwseparate',41.75,-22.75,{radius:3.25,bottom:.26,top:3.8,labelY:6,geometryBasis:'D-MDL-03',geometryStatus:note3('FEED-PE-DAT-118',' Relocated inside A-1000 (D-MDL-03, QFL 2026-09-30) to the former T-1004 / P-1001 position after the retired equipment was removed and the interarea lines were re-routed; ≈ 17 m from R-1004, beside DC-1001 and T-1008. Tie-ins deferred: the gravity feed from R-1004 needs the thickener feedwell below the R-1004 overflow (≈ 1.0 m in the model) — sink CL-1001 or raise the cascade (W7, civil).')}),
  658:r3('T-1101','Concentrator feed tank · 125 m³ (FEED-PE-DAT-110)','A-1000','wwtreat',88,-41.5,{radius:2.75,bottom:.26,top:.26+5.4,labelY:7.2,geometryStatus:note3('FEED-PE-DAT-110',' A-1100 acid bund, south-east yard (Sheet 2 geometry Ø 5.5 × 5.4 m).')}),
  659:r3('T-1102','Recovered acid tank · 200 m³ (FEED-PE-DAT-111)','A-1000','wwtreat',96.5,-41.5,{radius:3,bottom:.26,top:.26+7.2,labelY:9,geometryStatus:note3('FEED-PE-DAT-111',' A-1100 acid bund, south-east yard (Sheet 2 geometry Ø 6.0 × 7.2 m).')}),
@@ -37,6 +37,19 @@ export const CATCHUP_EQUIPMENT={
  656:eq('IF-A2000-CITY','Municipal make-up battery limit (D-A2000-03)','A-2000','rodistribute',103.4,-2,{designStatus:'interface',labelY:2.2,geometryStatus:'Battery-limit marker only (D-MDL-01 release 2); municipal supply pressure, hardness and connection are site data.'}),
 };
 CATCHUP_EQUIPMENT[669]=eq('RSV-A1100','Reserved plot — A-1100 acid concentration (Route 2 + 6 option, D-MDL-02)','A-1000','wwtreat',101,-41.5,{labelY:1.6,geometryBasis:'D-MDL-02',geometryStatus:'Plot outline only (Route 0). Holds the south-east yard for PK-1101, T-1101 / T-1102 and P-1101 / P-1102 if Route 2 + 6 is chosen after REP-039 M1–M3.'});
+// HR-601 port table, shared with spray-drying.js so the A-600 ducts end exactly on the recuperator's nozzles.
+// Exhaust side (F-601 -> HR-601 -> FN-601) uses the top face; air side (ambient -> HR-601 -> BL-601) uses the south face.
+export function hr601Ports(hr){
+ const top=5.6,len=.22,end=(root,axis)=>root.map((v,i)=>v+axis[i]*len);
+ const port=(root,axis)=>({root,axis,end:end(root,axis)});
+ return {
+  exhaustIn:port([hr.x-1.65,top,hr.z-.9],[0,1,0]),
+  exhaustOut:port([hr.x-.95,top,hr.z+.8],[0,1,0]),
+  airOut:port([hr.x-2.9,2.3,hr.z-1.5],[0,0,-1]),
+  airIn:port([hr.x+1.1,2.3,hr.z-1.5],[0,0,-1]),
+  radius:.28,
+ };
+}
 export const CATCHUP_IDS=Object.keys(CATCHUP_EQUIPMENT).map(Number);
 // D-MDL-02 (QFL 2026-09-29, bases AR-1…AR-9): equipment that exists only under Route 2 + 6 (acid recovery), and the Route 0 reservation.
 export const ACID_OPTION_IDS=[652,653,654,658,659,660,661,662];
@@ -78,7 +91,11 @@ export function buildCatchup(h,acidRoute='r0'){
  const hr=EQUIPMENT[655];setContext(655,hr.label);
  const slab=base(b('HR-601 foundation slab','frame',[7.4,.2,3.4],[hr.x,.1,hr.z],'dark'),[hr.x,0,hr.z]);
  const casing=b('HR-601 recuperator casing','shell',[7,5.4,3],[hr.x,.2+2.7,hr.z],'steel');s.join(slab,casing,[hr.x,.2,hr.z],'HR-601 casing / slab');s.load(casing,'HR-601 casing');
- for(const [lab,dx] of [['exhaust inlet from F-601',-2.2],['exhaust outlet to FN-601',-.8],['drying air inlet',.8],['preheated air to HX-601',2.2]])stub('HR-601 '+lab,[hr.x+dx,4.4,hr.z+1.5],[0,0,1],.45);
+ const hp=hr601Ports(hr);for(const [lab,p] of [['exhaust inlet from F-601',hp.exhaustIn],['exhaust outlet to FN-601',hp.exhaustOut],['preheated air outlet to BL-601',hp.airOut],['ambient drying air inlet',hp.airIn]])nozzle(p.root,p.axis,.22,'HR-601 '+lab,hp.radius);
+ // Gas passages through the casing join the nozzles, so the exhaust (F-601 → FN-601) and air (ambient → BL-601) paths stay connected through HR-601.
+ const inside=p=>p.root.map((v,i)=>v-p.axis[i]*.045),xe=(p,y)=>[p.root[0],y,p.root[2]];
+ k.passage(casing,[inside(hp.exhaustIn),xe(hp.exhaustIn,4.2),xe(hp.exhaustOut,4.2),inside(hp.exhaustOut)],'HR-601 exhaust gas passage','Moist drying gas');
+ k.passage(casing,[inside(hp.airIn),[hp.airIn.root[0],2.3,hr.z],[hp.airOut.root[0],2.3,hr.z],inside(hp.airOut)],'HR-601 drying air passage','Drying gas');
  // IF-A2000-CITY — battery-limit marker.
  const ci=EQUIPMENT[656];setContext(656,ci.label);
  const post=base(b('IF-A2000-CITY battery-limit post','frame',[.12,1.6,.12],[ci.x,.8,ci.z],'steel'),[ci.x,0,ci.z]);const plate=b('IF-A2000-CITY battery-limit plate','valve',[.5,.3,.04],[ci.x,1.45,ci.z],'blue');s.join(post,plate,[ci.x,1.45,ci.z],'IF-A2000-CITY plate / post');
