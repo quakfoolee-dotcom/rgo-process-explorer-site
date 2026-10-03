@@ -144,6 +144,8 @@ export function buildContainment(h,{a160='baseline'}={}){
   const sign=flag(b(tag+' emergency identification sign','valve',[.38,.32,.025],[x,1.82,z+.055],'green'),cell,'emergency');sign.emergencyRole='sign';sign.emergencySign={tag,title:'EMERGENCY SHOWER / EYEWASH',directions:'Pull shower handle / push eyewash paddle; supplier instructions pending'};s.join(riser,sign,[x,1.82,z+.045],tag+' sign / column');
   // White identification cross remains legible in flow mode; ES tags identify individual stations.
   for(const size of[[.22,.045,.008],[.045,.22,.008]]){const mark=flag(b(tag+' emergency sign white cross','valve',size,[x,1.82,z+.072],'dial'),cell,'emergency');mark.emergencyRole='symbol';}
+  // Station fixtures are not process piping: their free ends (shower head, rod grip, eyewash bowl) are not open pipe faces.
+  for(const fixture of edges.slice(edgeStart))fixture.screenAsPipe=false;
   // Rotate the complete local assembly, including explicit connection metadata.
   const yaw=e.yaw||0,q=new T.Quaternion().setFromAxisAngle(new T.Vector3(0,1,0),yaw),origin=new T.Vector3(x,0,z);
   const transform=a=>new T.Vector3(...a).sub(origin).applyQuaternion(q).add(origin).toArray();
