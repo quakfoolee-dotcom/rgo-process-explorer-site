@@ -33,8 +33,10 @@
   "datasheet": {
     "equipmentTag": "HR-601",
     "equipmentName": "Dryer Exhaust Heat Recuperator",
+    "function": "Preheat the DR-601 drying air with the exhaust air downstream of F-601, reducing the HX-601 steam duty",
     "quantityRequired": 1,
     "dryingAir": "25 → 50",
+    "exhaustAir": "≈ 80 °C in",
     "effectiveness": "45%",
     "type": "Plate air-to-air exchanger or glycol run-around coil (vendor)",
     "features": "Bypass damper on upset; condensate drain on the exhaust side; access for washing (fines)",
@@ -44,14 +46,15 @@
     "airSide": "Aluminium / galvanised, vendor"
   },
   "identity": {
-    "esrName": "Dryer Exhaust Heat Recuperator"
+    "esrName": "Dryer Exhaust Heat Recuperator",
+    "esrStatus": "New V5.2 — not on PFD V5.1.1 (PFD MoC pending)"
   },
   "dataLayer": {
     "area": "A-600",
     "source": "data/semantic/A-600",
-    "approvedRows": 15,
+    "approvedRows": 18,
     "heldRows": 0,
-    "pendingRows": 3,
+    "pendingRows": 0,
     "identityHold": null,
     "applied": "2026-10-04",
     "baseline": {

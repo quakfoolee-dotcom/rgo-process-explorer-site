@@ -84,6 +84,22 @@
       "reviewDate": "2026-10-03"
     },
     {
+      "valueId": "PV-A-600-0392",
+      "property": "datasheet.function",
+      "value": "Preheat the DR-601 drying air with the exhaust air downstream of F-601, reducing the HX-601 steam duty",
+      "unit": null,
+      "source": "FEED-PE-DAT-141",
+      "revision": "V1.0",
+      "location": "'HR-601 Datasheet'!row 13 (item 1.3)",
+      "status": "approved",
+      "confidence": "documented (preliminary datasheet, budget enquiry)",
+      "tier": "A",
+      "conflictGroup": null,
+      "note": "D-A600-06: Recorded as stated in FEED-PE-DAT-141 V1.0 item 1.3. The datasheet's steam wording is outdated: D-A5000-04 moved the heat supply to thermal oil, and the displayed process function (LST-001 V5.2, approved in D-A600-05) uses the thermal-oil wording. Approved as the datasheet statement, not as the heat-supply basis.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-10-03"
+    },
+    {
       "valueId": "PV-A-600-0393",
       "property": "datasheet.quantityRequired",
       "value": 1,
@@ -128,6 +144,22 @@
       "tier": "A",
       "conflictGroup": null,
       "note": "Clean side, upstream of HX-601 | D-A600-05: HR-601 values recorded from FEED-PE-DAT-141 V1.0 (controlled, preliminary — budget enquiry) as the design basis of the proposed recuperator (D-A5000-02 / D-A5000-04, HS-4). Vendor type, materials and effectiveness remain subject to the vendor offer; HOLD A4 (heat supply) and U2 (dryer exhaust condition) stay open.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-10-03"
+    },
+    {
+      "valueId": "PV-A-600-0396",
+      "property": "datasheet.exhaustAir",
+      "value": "≈ 80 °C in",
+      "unit": null,
+      "source": "FEED-PE-DAT-141",
+      "revision": "V1.0",
+      "location": "'HR-601 Datasheet'!row 18 (item 2.3)",
+      "status": "approved",
+      "confidence": "documented (preliminary datasheet, budget enquiry)",
+      "tier": "A",
+      "conflictGroup": null,
+      "note": "Downstream of F-601 — HOLD U2 | D-A600-06: Recorded as stated in FEED-PE-DAT-141 V1.0 item 2.3 (exhaust about 80 C inlet, downstream of F-601). HOLD U2 (dryer exhaust condition, to be confirmed by the dryer vendor) stays open; approved as the datasheet value, not as a confirmed operating condition.",
       "reviewer": "QFL",
       "reviewDate": "2026-10-03"
     },
@@ -288,6 +320,22 @@
       "tier": "A",
       "conflictGroup": null,
       "note": "D-A600-05: HR-601 identity and process function taken from FEED-PE-LST-001 V5.2 row 83 (thermal-oil wording per D-A5000-04). The tag is new in V5.2 and not on PFD V5.1.1; the PFD MoC and tag allocation remain pending.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-10-03"
+    },
+    {
+      "valueId": "PV-A-600-0488",
+      "property": "identity.esrStatus",
+      "value": "New V5.2 — not on PFD V5.1.1 (PFD MoC pending)",
+      "unit": null,
+      "source": "FEED-PE-LST-001",
+      "revision": "V5.2",
+      "location": "V5.2 'Equipment Stream Register'!row 83",
+      "status": "approved",
+      "confidence": "documented",
+      "tier": "A",
+      "conflictGroup": null,
+      "note": "D-A5000-02 (HS-4), D-A5000-04 | D-A600-06: Recorded as stated in FEED-PE-LST-001 V5.2 row 83: new in V5.2, not on PFD V5.1.1. The PFD MoC and the tag allocation remain pending; approved as the register's status statement.",
       "reviewer": "QFL",
       "reviewDate": "2026-10-03"
     }
