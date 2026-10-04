@@ -1,0 +1,43 @@
+/* Inspector readability pass (phase 1): one type scale tied to the interface size (--f), consistent spacing,
+   a folded long description, grouped secondary actions, a single scrolling tab row and a stacked specification
+   list. Layout and type only; the content is unchanged. */
+#inspector #part-name{font-size:calc(var(--f) + 7px);line-height:1.25;margin:.35rem 0 .45rem}
+#inspector #part-system{font-size:calc(var(--f) - .5px);line-height:1.4;margin:.2rem 0}
+#inspector #part-context{font-size:calc(var(--f) + .5px);line-height:1.5;margin:.3rem 0 .6rem}
+#inspector .status-badges{margin:.7rem 0 .9rem}
+#inspector #part-description{font-size:calc(var(--f) + 1px);line-height:1.55;margin:.75rem 0 .4rem;max-width:64ch}
+#inspector #part-description.is-folded:not(.is-open){display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:5;line-clamp:5;overflow:hidden}
+#inspector .fold-toggle{display:inline-block;width:auto;min-height:0;margin:0 0 .7rem;padding:.2rem 0;border:0;background:transparent;color:#8fd3c4;font-size:calc(var(--f) + .5px);font-weight:600;text-decoration:underline;cursor:pointer}
+#inspector .fold-toggle[hidden]{display:none}
+#inspector .small-note,#inspector #part-source{font-size:max(12.5px,calc(var(--f) + .5px));line-height:1.5;margin:.55rem 0}
+#inspector #equipment-facts dt{font-size:calc(var(--f) - .5px);margin-top:.9rem}
+#inspector #equipment-facts dd{font-size:calc(var(--f) + 2px);margin:.25rem 0 .75rem}
+#inspector .review-note{font-size:calc(var(--f) + .5px);line-height:1.5;margin:.7rem 0}
+/* Actions: one primary button, Fit / Isolate, then the rest under "More actions". */
+#inspector .inspector-body>#explore-selected{margin-top:.9rem}
+#inspector .inspector-body>.tool-row{margin:.6rem 0}
+#inspector .more-actions{margin:.75rem 0 .25rem;border:1px solid #455b6b;border-radius:6px}
+#inspector .more-actions>summary{display:flex;align-items:center;justify-content:space-between;min-height:36px;padding:.45rem .75rem;font-size:calc(var(--f) + .5px);font-weight:600;cursor:pointer;list-style:none}
+#inspector .more-actions>summary::-webkit-details-marker{display:none}
+#inspector .more-actions>summary::after{content:"▾";font-size:1.1em}
+#inspector .more-actions[open]>summary::after{content:"▴"}
+#inspector .more-actions-body{display:flex;flex-direction:column;gap:.5rem;padding:0 .75rem .75rem}
+#inspector .more-actions-body .wide{margin-top:0}
+#inspector .more-actions-body .check-row{margin:.25rem 0}
+/* Semantic record: one scrolling tab row, no asset dropdown. */
+#inspector .semantic-tabs{flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;gap:6px;padding:8px 1px 10px;scrollbar-width:thin}
+#inspector .semantic-tabs button{flex:0 0 auto;min-width:0;white-space:nowrap}
+#inspector .semantic-tabs select{flex:0 0 auto;width:auto}
+/* Specifications: stacked rows (name + status, value + unit) instead of four cramped columns. */
+#inspector .semantic-spec-table,#inspector .semantic-spec-table tbody{display:block}
+#inspector .semantic-spec-table thead{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0)}
+#inspector .semantic-spec-table tr{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"name status" "value unit";gap:.2rem .75rem;padding:.7rem 0;border-bottom:1px solid #71869940}
+#inspector .semantic-spec-table td{display:block;padding:0;border:0;font-size:calc(var(--f) + .5px);line-height:1.45}
+#inspector .semantic-spec-table td:nth-child(1){grid-area:name;font-size:calc(var(--f) + .5px)}
+#inspector .semantic-spec-table td:nth-child(2){grid-area:value;font-size:calc(var(--f) + 1px)}
+#inspector .semantic-spec-table td:nth-child(3){grid-area:unit;align-self:end;color:#a9c6d9}
+#inspector .semantic-spec-table td:nth-child(2).is-empty,#inspector .semantic-spec-table td:nth-child(3).is-empty{color:#8da3b5}
+#inspector .semantic-spec-table td:nth-child(3).is-empty{display:none}
+#inspector .semantic-spec-table td:nth-child(4){grid-area:status;justify-self:end;align-self:start;padding:.05rem .5rem;border:1px solid #5d7488;border-radius:999px;font-size:calc(var(--f) - 1px);white-space:nowrap}
+#inspector .semantic-spec-table td[data-status="Approved"]{color:#8fd3c4;border-color:#4f8f84}
+#inspector .semantic-spec-table td[data-status="Missing"]{color:#f0c27a;border-color:#8f7240}
