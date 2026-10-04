@@ -58,9 +58,9 @@
       }
     },
     {
-      "id": "REL-F-601-S-600-FILTER-EXHAUST-FN-601",
+      "id": "REL-F-601-S-600-FILTER-EXHAUST-HR-601",
       "type": "connectedTo",
-      "target": "FN-601",
+      "target": "HR-601",
       "role": "filter exhaust",
       "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
       "streamId": "S-600-FILTER-EXHAUST",
@@ -97,7 +97,7 @@
       ],
       "geometry": {
         "equipmentIds": [
-          75
+          655
         ],
         "routeLabels": [
           "F-601 clean gas duct",

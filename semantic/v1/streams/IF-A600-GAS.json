@@ -6,6 +6,7 @@
       "name": "gas supply",
       "source": "IF-A600-GAS",
       "via": [
+        "HR-601",
         "BL-601"
       ],
       "destination": "HX-601",

@@ -3351,6 +3351,7 @@
       "name": "gas supply",
       "source": "IF-A600-GAS",
       "via": [
+        "HR-601",
         "BL-601"
       ],
       "destination": "HX-601",
@@ -3506,7 +3507,9 @@
       "streamId": "S-600-FILTER-EXHAUST",
       "name": "filter exhaust",
       "source": "F-601",
-      "via": [],
+      "via": [
+        "HR-601"
+      ],
       "destination": "FN-601",
       "material": "Filtered moist drying gas",
       "phase": "Gas",

@@ -1622,6 +1622,22 @@
       }
     },
     {
+      "assetId": "HR-601",
+      "area": "A-600",
+      "equipmentId": 655,
+      "recordScope": "asset",
+      "endpoints": {
+        "assets": "./assets/HR-601.json",
+        "relationships": "./relationships/HR-601.json",
+        "streams": "./streams/HR-601.json",
+        "documents": "./documents/HR-601.json",
+        "state": "./state/HR-601.json",
+        "geometry": "./geometry/HR-601.json",
+        "provenance": "./provenance/HR-601.json",
+        "instruments": "./instruments/HR-601.json"
+      }
+    },
+    {
       "assetId": "SC-601",
       "area": "A-600",
       "equipmentId": 76,
@@ -7434,6 +7450,14 @@
       "type": "GeometryBinding"
     },
     {
+      "id": "HR-601",
+      "type": "Asset"
+    },
+    {
+      "id": "GEOMETRY-HR-601",
+      "type": "GeometryBinding"
+    },
+    {
       "id": "SC-601",
       "type": "Asset"
     },
@@ -10550,6 +10574,9 @@
     ],
     "641": [
       "DC-3812"
+    ],
+    "655": [
+      "HR-601"
     ],
     "800": [
       "A-5100"

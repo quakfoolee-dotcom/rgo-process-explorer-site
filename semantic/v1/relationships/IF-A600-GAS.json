@@ -10,9 +10,9 @@
       "reviewStatus": "open"
     },
     {
-      "id": "REL-IF-A600-GAS-S-600-GAS-SUPPLY-BL-601",
+      "id": "REL-IF-A600-GAS-S-600-GAS-SUPPLY-HR-601",
       "type": "connectedTo",
-      "target": "BL-601",
+      "target": "HR-601",
       "role": "gas supply",
       "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
       "streamId": "S-600-GAS-SUPPLY",
@@ -49,7 +49,7 @@
       ],
       "geometry": {
         "equipmentIds": [
-          72
+          655
         ],
         "routeLabels": [
           "HR-601 preheated air to BL-601",

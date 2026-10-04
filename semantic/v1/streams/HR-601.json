@@ -1,21 +1,24 @@
 {
-  "assetId": "BL-601",
-  "relationships": [
+  "assetId": "HR-601",
+  "streams": [
     {
-      "id": "REL-BL-601-AREA",
-      "type": "locatedIn",
-      "target": "A-600",
-      "status": "model area assignment",
-      "evidenceStatus": "model-derived",
-      "reviewStatus": "open"
-    },
-    {
-      "id": "REL-BL-601-S-600-GAS-SUPPLY-HR-601",
-      "type": "connectedTo",
-      "target": "HR-601",
-      "role": "gas supply",
-      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
       "streamId": "S-600-GAS-SUPPLY",
+      "name": "gas supply",
+      "source": "IF-A600-GAS",
+      "via": [
+        "HR-601",
+        "BL-601"
+      ],
+      "destination": "HX-601",
+      "material": "Drying gas; choice unqualified",
+      "phase": "Gas",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "model process context; design and operating sequence unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
       "evidenceStatus": "model-derived",
       "reviewStatus": "open",
       "sourceReferences": [
@@ -47,24 +50,29 @@
           "href": "./pfd-temperature-sheets.pdf#page=6"
         }
       ],
-      "geometry": {
-        "equipmentIds": [
-          655
-        ],
-        "routeLabels": [
-          "HR-601 preheated air to BL-601",
-          "BL-601 discharge duct",
-          "BL-601 to HX-601"
-        ]
-      }
+      "routeLabels": [
+        "HR-601 preheated air to BL-601",
+        "BL-601 discharge duct",
+        "BL-601 to HX-601"
+      ]
     },
     {
-      "id": "REL-BL-601-S-600-GAS-SUPPLY-HX-601",
-      "type": "connectedTo",
-      "target": "HX-601",
-      "role": "gas supply",
+      "streamId": "S-600-FILTER-EXHAUST",
+      "name": "filter exhaust",
+      "source": "F-601",
+      "via": [
+        "HR-601"
+      ],
+      "destination": "FN-601",
+      "material": "Filtered moist drying gas",
+      "phase": "Gas",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "model process context; design and operating sequence unqualified",
       "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
-      "streamId": "S-600-GAS-SUPPLY",
       "evidenceStatus": "model-derived",
       "reviewStatus": "open",
       "sourceReferences": [
@@ -96,16 +104,11 @@
           "href": "./pfd-temperature-sheets.pdf#page=6"
         }
       ],
-      "geometry": {
-        "equipmentIds": [
-          73
-        ],
-        "routeLabels": [
-          "HR-601 preheated air to BL-601",
-          "BL-601 discharge duct",
-          "BL-601 to HX-601"
-        ]
-      }
+      "routeLabels": [
+        "F-601 clean gas duct",
+        "F-601 to HR-601",
+        "HR-601 to FN-601"
+      ]
     }
   ]
 }
