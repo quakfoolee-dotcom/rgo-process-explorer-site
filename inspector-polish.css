@@ -1,57 +1,80 @@
-/* Inspector readability pass (phase 1): one type scale tied to the interface size (--f), consistent spacing,
-   a folded long description, grouped secondary actions, a single scrolling tab row and a stacked specification
-   list. Layout and type only; the content is unchanged. */
-#inspector #part-name{font-size:calc(var(--f) + 7px);line-height:1.25;margin:.35rem 0 .45rem}
-#inspector #part-system{font-size:calc(var(--f) - .5px);line-height:1.4;margin:.2rem 0}
-#inspector #part-context{font-size:calc(var(--f) + .5px);line-height:1.5;margin:.3rem 0 .6rem}
+/* Inspector readability: one type scale tied to the interface size (--f), consistent spacing, a folded long description,
+   structured model notes, grouped secondary actions, a single scrolling tab row and a one-line-per-row specification table.
+   Layout and type only; the content is unchanged.
+   Type scale (every text element in the panel uses one of these four sizes):
+     title    --f + 7   equipment / component name
+     section  --f + 3   section headings
+     body     --f + .5  paragraphs, values, buttons, table cells
+     label    --f - .5  captions, table headers, chips, previews, tabs */
+#inspector{--ip-title:calc(var(--f) + 7px);--ip-section:calc(var(--f) + 3px);--ip-body:calc(var(--f) + .5px);--ip-label:calc(var(--f) - .5px)}
+#inspector #part-name{font-size:var(--ip-title);line-height:1.25;margin:.35rem 0 .45rem}
+#inspector #part-id,#inspector #part-system,#inspector .status-badges,#inspector .status-badges *{font-size:var(--ip-label)}
+#inspector #part-system{line-height:1.4;margin:.2rem 0}
+#inspector #part-context{font-size:var(--ip-body);line-height:1.5;margin:.3rem 0 .6rem}
 #inspector .status-badges{margin:.7rem 0 .9rem}
-#inspector #part-description{font-size:calc(var(--f) + 1px);line-height:1.55;margin:.75rem 0 .4rem;max-width:64ch}
+#inspector #part-description{font-size:var(--ip-body);line-height:1.55;margin:.75rem 0 .4rem;max-width:64ch}
 #inspector #part-description.is-folded:not(.is-open){display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:5;line-clamp:5;overflow:hidden}
-#inspector .fold-toggle{display:inline-block;width:auto;min-height:0;margin:0 0 .7rem;padding:.2rem 0;border:0;background:transparent;color:#8fd3c4;font-size:calc(var(--f) + .5px);font-weight:600;text-decoration:underline;cursor:pointer}
+#inspector .fold-toggle{display:inline-block;width:auto;min-height:0;margin:0 0 .7rem;padding:.2rem 0;border:0;background:transparent;color:#8fd3c4;font-size:var(--ip-body);font-weight:600;text-decoration:underline;cursor:pointer}
 #inspector .fold-toggle[hidden]{display:none}
-#inspector .small-note,#inspector #part-source{font-size:max(12.5px,calc(var(--f) + .5px));line-height:1.5;margin:.55rem 0}
-#inspector #equipment-facts dt{font-size:calc(var(--f) - .5px);margin-top:.9rem}
-#inspector #equipment-facts dd{font-size:calc(var(--f) + 2px);margin:.25rem 0 .75rem}
-#inspector .review-note{font-size:calc(var(--f) + .5px);line-height:1.5;margin:.7rem 0}
+#inspector .small-note,#inspector #part-source{font-size:var(--ip-body);line-height:1.5;margin:.55rem 0}
+#inspector #equipment-facts dt{font-size:var(--ip-label);margin-top:.9rem}
+#inspector #equipment-facts dd{font-size:var(--ip-body);font-weight:600;margin:.25rem 0 .75rem}
+#inspector .review-note{font-size:var(--ip-body);line-height:1.5;margin:.7rem 0}
+#inspector .wide,#inspector .tool-row button,#inspector .check-row{font-size:var(--ip-body)}
 /* Actions: one primary button, Fit / Isolate, then the rest under "More actions". */
 #inspector .inspector-body>#explore-selected{margin-top:.9rem}
 #inspector .inspector-body>.tool-row{margin:.6rem 0}
 #inspector .more-actions{margin:.75rem 0 .25rem;border:1px solid #455b6b;border-radius:6px}
-#inspector .more-actions>summary{display:flex;align-items:center;justify-content:space-between;min-height:36px;padding:.45rem .75rem;font-size:calc(var(--f) + .5px);font-weight:600;cursor:pointer;list-style:none}
+#inspector .more-actions>summary{display:flex;align-items:center;justify-content:space-between;min-height:36px;padding:.45rem .75rem;font-size:var(--ip-body);font-weight:600;cursor:pointer;list-style:none}
 #inspector .more-actions>summary::-webkit-details-marker{display:none}
 #inspector .more-actions>summary::after{content:"▾";font-size:1.1em}
 #inspector .more-actions[open]>summary::after{content:"▴"}
 #inspector .more-actions-body{display:flex;flex-direction:column;gap:.5rem;padding:0 .75rem .75rem}
 #inspector .more-actions-body .wide{margin-top:0}
 #inspector .more-actions-body .check-row{margin:.25rem 0}
-/* Semantic record: one scrolling tab row, no asset dropdown. */
+/* Semantic record: one scrolling tab row, no asset dropdown, one text scale. */
+#inspector .semantic-heading h3,#inspector .semantic-body h4{font-size:var(--ip-section)}
+#inspector .semantic-version,#inspector .semantic-status,#inspector .semantic-inline,#inspector .semantic-body dt,#inspector .semantic-list li button{font-size:var(--ip-label)}
+#inspector .semantic-body,#inspector .semantic-note,#inspector .semantic-hold,#inspector .semantic-body dd,#inspector .semantic-group>summary,#inspector .semantic-body input[type=search]{font-size:var(--ip-body)}
+#inspector .semantic-body button{font-size:var(--ip-body)}
+#inspector .semantic-body .semantic-list li button{font-size:var(--ip-label)}
 #inspector .semantic-tabs{flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;gap:6px;padding:8px 1px 10px;scrollbar-width:thin}
+#inspector .semantic-tabs button,#inspector .semantic-tabs select{font-size:var(--ip-label)}
 #inspector .semantic-tabs button{flex:0 0 auto;min-width:0;white-space:nowrap}
 #inspector .semantic-tabs select{flex:0 0 auto;width:auto}
-/* Specifications: stacked rows (name + status, value + unit) instead of four cramped columns. */
-#inspector .semantic-spec-table,#inspector .semantic-spec-table tbody{display:block}
-#inspector .semantic-spec-table thead{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0)}
-#inspector .semantic-spec-table tr{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"name status" "value unit";gap:.2rem .75rem;padding:.7rem 0;border-bottom:1px solid #71869940}
-#inspector .semantic-spec-table td{display:block;padding:0;border:0;font-size:calc(var(--f) + .5px);line-height:1.45}
-#inspector .semantic-spec-table td:nth-child(1){grid-area:name;font-size:calc(var(--f) + .5px)}
-#inspector .semantic-spec-table td:nth-child(2){grid-area:value;font-size:calc(var(--f) + 1px)}
-#inspector .semantic-spec-table td:nth-child(3){grid-area:unit;align-self:end;color:#a9c6d9}
+/* Specifications: one line per property (Property | Value | Unit | Status); a long value wraps inside its own column. */
+#inspector .semantic-spec-table{width:100%;table-layout:fixed;border-collapse:collapse;margin:.6rem 0}
+#inspector .semantic-spec-table th{padding:.4rem .3rem;font-size:var(--ip-label);font-weight:600;letter-spacing:.2px;text-align:left;color:#a9c6d9;border-bottom:1px solid #718699}
+#inspector .semantic-spec-table td{padding:.55rem .3rem;border-bottom:1px solid #71869940;font-size:var(--ip-body);line-height:1.4;vertical-align:top;overflow-wrap:anywhere}
+#inspector .semantic-spec-table th:nth-child(1){width:32%}
+#inspector .semantic-spec-table th:nth-child(2){width:28%}
+#inspector .semantic-spec-table th:nth-child(3){width:15%}
+#inspector .semantic-spec-table th:nth-child(4){width:25%}
+#inspector .semantic-spec-table td:nth-child(3){white-space:nowrap;color:#a9c6d9}
 #inspector .semantic-spec-table td:nth-child(2).is-empty,#inspector .semantic-spec-table td:nth-child(3).is-empty{color:#8da3b5}
-#inspector .semantic-spec-table td:nth-child(3).is-empty{display:none}
-#inspector .semantic-spec-table td:nth-child(4){grid-area:status;justify-self:end;align-self:start;padding:.05rem .5rem;border:1px solid #5d7488;border-radius:999px;font-size:calc(var(--f) - 1px);white-space:nowrap}
-#inspector .semantic-spec-table td[data-status="Approved"]{color:#8fd3c4;border-color:#4f8f84}
-#inspector .semantic-spec-table td[data-status="Missing"]{color:#f0c27a;border-color:#8f7240}
-/* Phase 2: summary plus collapsible, labelled model notes (rendered by inspector-polish.js for the records in equipment-notes.js). */
+#inspector .semantic-spec-table td:nth-child(4){font-size:var(--ip-label);line-height:1.3;overflow-wrap:normal;word-break:normal}
+#inspector .semantic-spec-table td[data-status]{font-weight:600}
+#inspector .semantic-spec-table td[data-status="Approved"]{color:#8fd3c4}
+#inspector .semantic-spec-table td[data-status="Missing"]{color:#f0c27a}
+#inspector .semantic-spec-table td[data-status="Pending review"],#inspector .semantic-spec-table td[data-status="Conflict"],#inspector .semantic-spec-table td[data-status="Superseded"]{color:#e3b9a0}
+/* PFD temperature basis section: same scale (its headline value uses the title size). */
+#inspector .pfd-temperature-panel h3{font-size:var(--ip-section)}
+#inspector .pfd-temperature-panel summary,#inspector .pfd-temperature-panel p,#inspector .pfd-temperature-panel strong,#inspector .pfd-temperature-panel a,#inspector .pfd-temperature-panel li,#inspector .pfd-temperature-panel dd,#inspector .pfd-temperature-panel .review-note{font-size:var(--ip-body)}
+#inspector .pfd-temperature-panel .pfd-temperature-record p{font-size:var(--ip-body)!important}
+#inspector .pfd-temperature-panel .pfd-temperature-bands span{font-size:var(--ip-label)}
+#inspector .pfd-temperature-panel .pfd-temperature-record .pfd-temperature-value{font-size:var(--ip-title)!important}
+/* style.css marks these two sizes !important, so they need the same here. */
+/* Structured model notes (rendered by inspector-polish.js for the records in equipment-notes.js). */
 #inspector .model-notes-host{margin:.6rem 0 .8rem}
 #inspector .model-notes{border:1px solid #455b6b;border-radius:6px}
-#inspector .model-notes>summary{display:flex;align-items:baseline;gap:.5rem;min-height:36px;padding:.5rem .75rem;font-size:calc(var(--f) + .5px);font-weight:600;cursor:pointer;list-style:none}
+#inspector .model-notes>summary{display:flex;align-items:baseline;gap:.5rem;min-height:36px;padding:.5rem .75rem;font-size:var(--ip-body);font-weight:600;cursor:pointer;list-style:none}
 #inspector .model-notes>summary::-webkit-details-marker{display:none}
 #inspector .model-notes>summary::before{content:"▸";flex:0 0 auto}
 #inspector .model-notes[open]>summary::before{content:"▾"}
 #inspector .model-notes-title{flex:0 0 auto}
-#inspector .model-notes-count{flex:0 0 auto;padding:0 .45rem;border:1px solid #5d7488;border-radius:999px;font-size:calc(var(--f) - 1px);font-weight:600}
-#inspector .model-notes-labels{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:calc(var(--f) - .5px);font-weight:400;color:#a9c6d9}
+#inspector .model-notes-count{flex:0 0 auto;padding:0 .45rem;border:1px solid #5d7488;border-radius:999px;font-size:var(--ip-label);font-weight:600}
+#inspector .model-notes-labels{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:var(--ip-label);font-weight:400;color:#a9c6d9}
 #inspector .model-notes[open] .model-notes-labels{display:none}
 #inspector .model-notes dl{display:block;margin:0;padding:0 .75rem .75rem}
-#inspector .model-notes dt{margin:.85rem 0 .2rem;font-size:calc(var(--f) - .5px);letter-spacing:.3px;text-transform:uppercase;color:#a9c6d9}
-#inspector .model-notes dd{margin:0;max-width:64ch;font-size:calc(var(--f) + .5px);line-height:1.55}
+#inspector .model-notes dt{margin:.85rem 0 .2rem;font-size:var(--ip-label);letter-spacing:.3px;text-transform:uppercase;color:#a9c6d9}
+#inspector .model-notes dd{margin:0;max-width:64ch;font-size:var(--ip-body);line-height:1.55}
