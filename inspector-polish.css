@@ -41,3 +41,17 @@
 #inspector .semantic-spec-table td:nth-child(4){grid-area:status;justify-self:end;align-self:start;padding:.05rem .5rem;border:1px solid #5d7488;border-radius:999px;font-size:calc(var(--f) - 1px);white-space:nowrap}
 #inspector .semantic-spec-table td[data-status="Approved"]{color:#8fd3c4;border-color:#4f8f84}
 #inspector .semantic-spec-table td[data-status="Missing"]{color:#f0c27a;border-color:#8f7240}
+/* Phase 2: summary plus collapsible, labelled model notes (rendered by inspector-polish.js for the records in equipment-notes.js). */
+#inspector .model-notes-host{margin:.6rem 0 .8rem}
+#inspector .model-notes{border:1px solid #455b6b;border-radius:6px}
+#inspector .model-notes>summary{display:flex;align-items:baseline;gap:.5rem;min-height:36px;padding:.5rem .75rem;font-size:calc(var(--f) + .5px);font-weight:600;cursor:pointer;list-style:none}
+#inspector .model-notes>summary::-webkit-details-marker{display:none}
+#inspector .model-notes>summary::before{content:"▸";flex:0 0 auto}
+#inspector .model-notes[open]>summary::before{content:"▾"}
+#inspector .model-notes-title{flex:0 0 auto}
+#inspector .model-notes-count{flex:0 0 auto;padding:0 .45rem;border:1px solid #5d7488;border-radius:999px;font-size:calc(var(--f) - 1px);font-weight:600}
+#inspector .model-notes-labels{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:calc(var(--f) - .5px);font-weight:400;color:#a9c6d9}
+#inspector .model-notes[open] .model-notes-labels{display:none}
+#inspector .model-notes dl{display:block;margin:0;padding:0 .75rem .75rem}
+#inspector .model-notes dt{margin:.85rem 0 .2rem;font-size:calc(var(--f) - .5px);letter-spacing:.3px;text-transform:uppercase;color:#a9c6d9}
+#inspector .model-notes dd{margin:0;max-width:64ch;font-size:calc(var(--f) + .5px);line-height:1.55}
