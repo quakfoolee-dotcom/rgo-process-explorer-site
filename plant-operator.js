@@ -1,7 +1,7 @@
 import * as T from './vendor/three.module.js';
 import {planBrowseRoute} from './plant-browse-route.js';
 import {projectToEdge,edgeElevation,angleDelta} from './plant-browse-network.js';
-import {buildStations,createOperatorSim,planRound} from './plant-operator-sim.js';
+import {buildStations,buildInstrumentStations,createOperatorSim,planRound} from './plant-operator-sim.js';
 
 // Animated field operator for Browse plant. It walks the same checked walkway network
 // as the visitor, climbs the same stair flights, and carries out tasks at tagged
@@ -87,7 +87,8 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
  const areaSel=$('op-area');areaSel.replaceChildren();
  for(const [value,text] of [['','All areas'],...areaIds.map(a=>[a,a])]){const o=document.createElement('option');o.value=value;o.textContent=text;areaSel.append(o);}
  const list=$('op-tags');list.replaceChildren();
- for(const s of stations){const o=document.createElement('option');o.value=s.tag;o.textContent=s.label;list.append(o);}
+ const addOption=s=>{const o=document.createElement('option');o.value=s.tag;o.textContent=s.label;list.append(o);};
+ for(const s of stations)addOption(s);
  const show=text=>{if($('op-status').textContent!==text)$('op-status').textContent=text;};
  const status=(text,hold=0)=>{st.msg=text;st.msgT=hold;show(text);};
  function renderLog(){
@@ -101,9 +102,12 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
  function validate(kind,tag){
   const s=stationFor(tag);
   if(!s)return {error:'Unknown tag '+(tag||'(empty)')};
-  if(kind==='check-valve'||kind==='operate-valve'){if(s.type!=='valve')return {error:s.tag+' is not a valve'};if(kind==='operate-valve'&&s.kind==='check-valve')return {error:s.tag+' is a check valve (self-acting)'};}
+  if(kind==='check-valve'||kind==='operate-valve'){
+   if(s.type!=='valve')return {error:s.tag+' is not a valve'};
+   if(kind==='operate-valve'&&s.actuation==='self-acting')return {error:s.tag+' is a '+s.valveClass.toLowerCase()+' (self-acting)'};
+  }
   if(kind==='pump'&&(s.type!=='equipment'||s.kind!=='pump'))return {error:s.tag+' is not a pump'};
-  if(kind==='reading'&&s.type!=='equipment'&&s.type!=='valve')return {error:'Cannot read '+s.tag};
+  if(kind==='reading'&&s.type==='valve'&&s.actuation==='self-acting')return {error:'Check '+s.tag+' with Check valve'};
   return {station:s};
  }
  function enqueue(kind,tag){
@@ -111,7 +115,7 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
   if(v.error){logEntry(tag||'—','Task refused',v.error,true);status(v.error,4);return false;}
   st.queue.push({kind,station:v.station});status(st.cur?'Task queued ('+st.queue.length+' waiting)':'Task queued',2);return true;
  }
- function describe(t){const s=t.station;return t.kind==='goto'?'Walking to '+s.tag:t.kind==='operate-valve'?'Operating '+s.tag:t.kind==='pump'?'Pump '+s.tag:t.kind==='check-valve'?'Checking '+s.tag:'Reading '+s.tag;}
+ function describe(t){const s=t.station;return t.kind==='goto'?'Walking to '+s.tag:t.kind==='operate-valve'?'Operating '+s.tag:t.kind==='pump'?'Pump '+s.tag:t.kind==='check-valve'?'Checking '+s.tag:s.type==='instrument'?'Reading instrument '+s.tag:'Reading '+s.tag;}
  function begin(t){
   st.cur=t;const s=t.station;
   if(!access.has(s.tag))access.set(s.tag,accessPoint(network,s));
@@ -120,20 +124,28 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
   st.path=routePath(route,st.loc);st.seg=0;st.segT=0;st.mode='walk';st.dest=dest;
   status(describe(t)+' · '+route.distance.toFixed(0)+' m');
  }
+ const joined=r=>r.map(x=>x.name+' '+x.value+(x.unit?' '+x.unit:'')).join(', ');
+ function valveNote(s,r){return r[0].status==='off-normal'?' — OFF NORMAL (normally '+s.normal+')':s.normal==null&&s.actuation!=='self-acting'?' (normal position not defined)':'';}
  function finishWork(){
-  const t=st.cur,s=t.station;let result='';let flag=false;
-  if(t.kind==='reading'){const r=sim.readings(s,st.simT);result=r.map(x=>x.name+' '+x.value+(x.unit?' '+x.unit:'')).join(', ');flag=r.some(x=>x.status==='high'||x.status==='low');if(flag)result+=' — OUT OF RANGE';}
-  else if(t.kind==='check-valve'){const r=sim.readings(s,st.simT)[0];result=r.value+(r.status==='off-normal'?' — OFF NORMAL (normally '+s.normal+')':', normal');flag=r.status==='off-normal';}
-  else if(t.kind==='operate-valve'){const open=!sim.valveOpen(s);sim.setValve(s,open);result='handwheel turned, now '+(open?'open':'closed');flag=open!==(s.normal!=='closed');if(flag)result+=' — OFF NORMAL';}
-  else if(t.kind==='pump'){const run=!sim.pumpRunning(s);sim.setPump(s,run);result=run?'START pressed, running':'STOP pressed, stopped';}
-  else result='arrived';
-  logEntry(s.tag,t.kind==='goto'?'Walk to':t.kind==='reading'?'Readings':t.kind==='check-valve'?'Valve check':t.kind==='operate-valve'?'Valve operated':'Pump',result,flag);
+  const t=st.cur,s=t.station;let result='',flag=false,task='';
+  if(t.kind==='reading'){
+   const r=sim.readings(s,st.simT);flag=r.some(x=>x.status==='high'||x.status==='low');
+   if(s.type==='instrument'){task='Instrument';result=joined(r)+' · '+s.status+(s.asset?' on '+s.asset:'')+(s.setpoint?' · setpoint: '+s.setpoint:'');if(flag)result+=' — OUT OF RANGE; alarm basis: '+(s.alarm||'not stated');}
+   else if(s.type==='valve'){task='Valve check';result=joined(r)+valveNote(s,r);flag=r[0].status==='off-normal';}
+   else{task='Readings';result=joined(r);if(flag)result+=' — OUT OF RANGE';}
+  }
+  else if(t.kind==='check-valve'){task='Valve check';const r=sim.readings(s,st.simT);result=s.valveClass+': '+joined(r)+valveNote(s,r);flag=r[0].status==='off-normal';}
+  else if(t.kind==='operate-valve'){task='Valve operated';const open=!sim.valveOpen(s);sim.setValve(s,open);flag=s.normal!=null&&open!==(s.normal!=='closed');
+   result=(s.actuation==='actuated'?'local control confirmed with control room, now ':'handwheel turned, now ')+(open?'open':'closed')+(flag?' — OFF NORMAL':s.normal==null?' (normal position not defined)':'');}
+  else if(t.kind==='pump'){task='Pump';const run=!sim.pumpRunning(s);sim.setPump(s,run);result=run?'START pressed, running':'STOP pressed, stopped';}
+  else{task='Walk to';result='arrived';}
+  logEntry(s.tag,task,result,flag);
   st.cur=null;st.mode='idle';st.loc=st.dest;
  }
  function workPose(){
   const t=st.cur,s=t.station;
-  if(t.kind==='reading')return 'inspect';
-  if(t.kind==='pump')return 'press';
+  if(t.kind==='reading'||(t.kind==='check-valve'&&s.actuation==='self-acting'))return 'inspect';
+  if(t.kind==='pump'||(t.kind==='operate-valve'&&s.actuation==='actuated'))return 'press';
   if(t.kind==='goto')return 'idle';
   return s.y>st.pos.y+1.7?'wheelHigh':'wheel';
  }
@@ -247,6 +259,7 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
 
  return {
   update,setView,enqueue,sim,stations,
+  addInstruments(items){const added=buildInstrumentStations(items,stations);sim.addStations(added);for(const s of added)addOption(s);return added.length;},
   get viewing(){return st.view!=='own';},
   get view(){return st.view;},
   show(){st.shown=true;group.visible=st.view!=='ride';$('browse-operator').hidden=false;},
