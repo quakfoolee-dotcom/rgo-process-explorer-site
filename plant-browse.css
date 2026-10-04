@@ -30,3 +30,20 @@
 
 /* v111: icon-only minimize matches close while keeping a readable restore action. */
 #plant-browse-panel #browse-map-toggle[aria-expanded=true],#plant-browse-panel #browse-exit{width:44px;height:44px;min-width:44px;padding:0;font-size:20px;flex:none}
+
+/* Field operator: animated walker that carries out tagged tasks (simulated readings). */
+.browse-operator{margin-top:12px;border-top:1px solid #669b9e;padding-top:10px}
+.browse-operator>summary{cursor:pointer;font-weight:600;min-height:32px}
+.browse-operator[hidden]{display:none}
+.browse-operator .browse-op-row{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:8px 0}
+.browse-operator .browse-op-row button{flex:1 1 90px;min-height:44px;font-size:.875rem}
+.browse-operator .browse-op-row label{flex:0 0 auto}
+.browse-operator select,.browse-operator input{flex:1 1 120px;min-height:44px;box-sizing:border-box;max-width:100%}
+.browse-operator button[aria-pressed=true]{background:#f5c779;color:#182a38;border-color:#f5c779}
+.browse-operator .browse-op-note{font-size:.8125rem;opacity:.85;margin:6px 0}
+#op-status{margin:8px 0;font-weight:500}
+#op-log{margin:6px 0 0;padding-left:1.1em;max-height:150px;overflow:auto;font-size:.8125rem;line-height:1.35}
+#op-log li{margin:2px 0}#op-log li.op-flag{color:#ffb4a8}
+.browse-op-label{position:absolute;left:0;top:0;z-index:44;pointer-events:none;background:rgba(15,33,47,.92);color:#fff;border:1.5px solid #e8711a;border-radius:10px;padding:3px 8px;font-size:.75rem;font-weight:600;white-space:nowrap;max-width:240px;overflow:hidden;text-overflow:ellipsis}
+.browse-op-label[hidden]{display:none}
+@media(prefers-reduced-motion:reduce){.browse-op-label{transition:none}}
