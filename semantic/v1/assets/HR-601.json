@@ -11,7 +11,7 @@
     "system": "A-600 drying process context",
     "parentAsset": null
   },
-  "processFunction": "Preheat the DR-601 drying air with the exhaust air downstream of F-601, reducing the HX-601 steam duty",
+  "processFunction": "Preheats the DR-601 drying air with the exhaust air downstream of F-601, reducing the HX-601 thermal-oil duty (DAT-141; D-A5000-04).",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
