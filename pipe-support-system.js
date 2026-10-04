@@ -16,6 +16,8 @@ function grid(){const cells=new Map(),size=3;return {add(item){const b=item.box;
 export function buildPipeSupportSystem(h,model){
  const {parts,edges,structure,setContext,b,band,c}=h,s=structuralKit(h),byId=new Map(parts.map(p=>[p.id,p])),routes=new Map(model.routes.map(r=>[r.id,r])),obstacles=grid(),members=grid();
  const protectedZones=[...ACCESS_ZONES,...model.thermalUtilities?.accessZones||[],...model.compressedAir?.accessZones||[],...model.reactorAir?.accessZones||[]].filter(z=>z.kind!=='utility').map(z=>({...z,box:box(z.min,z.max)}));
+ // HR-601 (model-catchup.js) is built after this generator: reserve its slab and casing (7.4 x 3.4 m, 5.6 m high) so no rack or column lands inside it.
+ {const hr=model.equipment?.[655];if(hr&&hr.x!=null&&hr.z!=null)protectedZones.push({id:'HR601-RESERVED',kind:'equipment',box:box([hr.x-3.7,0,hr.z-1.7],[hr.x+3.7,5.62,hr.z+1.7])});}
  for(const x of[-2.45,2.45])for(const z of[0,-16])protectedZones.push({id:'SF201-WITHDRAW-'+x+'-'+z,kind:'maintenance',box:box([x-.75,5.58,z-9.05],[x+1.35,6.56,z+1.05])});
  // Protect actual existing equipment, piping, hardware and platforms. Fastener-sized
  // details are included in the parent assembly envelope by the access audit.
