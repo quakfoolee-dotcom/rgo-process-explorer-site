@@ -26,9 +26,12 @@ const VALVE_CLASS={
  check:['Check valve','self-acting'],relief:['Relief valve','self-acting'],regulator:['Regulator','self-acting']
 };
 export function valveInfo(v){
- const [valveClass,base]=VALVE_CLASS[v.type]||['Valve','manual'];
- const actuation=base==='manual'&&(v.pneumatic||v.pneumaticIsolation||v.actuator)?'actuated':base;
- return {valveClass,actuation,control:v.type==='control'||/^(F|P|T|L)?CV-/.test(v.tag||'')};
+ const [typeClass,base]=VALVE_CLASS[v.type]||['Valve','manual'];
+ // A control-valve tag (FCV, PCV, TCV, LCV, CV) makes it a control valve, whatever generic type the model draws; it has an actuator.
+ const tagged=/^(F|P|T|L)?CV-/.test(v.tag||''),control=v.type==='control'||(tagged&&base!=='self-acting');
+ const valveClass=control?'Control valve':typeClass;
+ const actuation=control&&base==='manual'?'actuated':base==='manual'&&(v.pneumatic||v.pneumaticIsolation||v.actuator)?'actuated':base;
+ return {valveClass,actuation,control};
 }
 
 function routeIndex(model){
