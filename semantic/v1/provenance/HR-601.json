@@ -338,6 +338,38 @@
       "note": "D-A5000-02 (HS-4), D-A5000-04 | D-A600-06: Recorded as stated in FEED-PE-LST-001 V5.2 row 83: new in V5.2, not on PFD V5.1.1. The PFD MoC and the tag allocation remain pending; approved as the register's status statement.",
       "reviewer": "QFL",
       "reviewDate": "2026-10-03"
+    },
+    {
+      "valueId": "PV-A-600-0489",
+      "property": "design.designPressure",
+      "value": "± 10",
+      "unit": "kPa",
+      "source": "FEED-PE-DAT-141",
+      "revision": "V1.0",
+      "location": "'HR-601 Datasheet'!row 25 (item 4.1)",
+      "status": "approved",
+      "confidence": "documented (preliminary datasheet, budget enquiry)",
+      "tier": "A",
+      "conflictGroup": null,
+      "note": "Same datasheet item as PV-A-600-0401 (datasheet.designPressure) | D-A600-07: Design pressure for HR-601 taken from FEED-PE-DAT-141 V1.0 item 4.1 (±10 kPa), the same datasheet statement already approved as datasheet.designPressure. Preliminary datasheet (budget enquiry); the vendor offer will fix the design pressure.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-10-03"
+    },
+    {
+      "valueId": "PV-A-600-0490",
+      "property": "design.materialOfConstruction",
+      "value": "Exhaust side: 316L (acidic condensate, TLGO fines); air side: aluminium / galvanised, vendor",
+      "unit": null,
+      "source": "FEED-PE-DAT-141",
+      "revision": "V1.0",
+      "location": "'HR-601 Datasheet'!rows 28-29 (items 5.1, 5.2)",
+      "status": "approved",
+      "confidence": "documented (preliminary datasheet, budget enquiry)",
+      "tier": "A",
+      "conflictGroup": null,
+      "note": "Items 5.1 and 5.2 combined (PV-A-600-0403, PV-A-600-0404) | D-A600-07: Material of construction for HR-601 taken from FEED-PE-DAT-141 V1.0 items 5.1 and 5.2: exhaust side 316L (acidic condensate, TLGO fines), air side aluminium or galvanised steel, vendor-selected. FEED-PE-MAT-002 has no HR-601 entry, so the preliminary datasheet is the only source; the vendor offer and a MAT-002 review will confirm it.",
+      "reviewer": "QFL",
+      "reviewDate": "2026-10-03"
     }
   ]
 }

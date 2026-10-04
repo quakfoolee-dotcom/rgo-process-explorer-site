@@ -15,9 +15,9 @@
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
-    "designPressure": null,
+    "designPressure": "± 10",
     "designTemperature": 150,
-    "materialOfConstruction": null,
+    "materialOfConstruction": "Exhaust side: 316L (acidic condensate, TLGO fines); air side: aluminium / galvanised, vendor",
     "heatRecoveredKw": 2722
   },
   "operatingEnvelope": null,
@@ -52,7 +52,7 @@
   "dataLayer": {
     "area": "A-600",
     "source": "data/semantic/A-600",
-    "approvedRows": 18,
+    "approvedRows": 20,
     "heldRows": 0,
     "pendingRows": 0,
     "identityHold": null,
