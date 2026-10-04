@@ -1,8 +1,8 @@
 {
   "summary": {
-    "revision": "bc-walkways-91",
+    "revision": "emergency-access-91",
     "pedestrianSegments": 188,
-    "centrelineLengthM": 1278.95,
+    "centrelineLengthM": 1278.949999999999,
     "clearWidthM": 1.2,
     "headroomM": 2.3,
     "protectionAssemblies": 68,
@@ -39,7 +39,7 @@
     ]
   },
   "review": {
-    "revision": "bc-walkways-91",
+    "revision": "emergency-access-91",
     "segments": [
       {
         "id": "PW-001",
@@ -1212,67 +1212,67 @@
     },
     {
       "id": "EXP-501-SAMPLE",
-      "label": "A-500 \u00b7 T-501 sampling approach: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+      "label": "A-500 · T-501 sampling approach: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
     },
     {
       "id": "EXP-501-SERVICE",
-      "label": "A-500 \u00b7 US-501 cleaning / service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+      "label": "A-500 · US-501 cleaning / service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
     },
     {
       "id": "EXP-602-TRANSFER",
-      "label": "A-600 \u00b7 T-602 powder-transfer service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+      "label": "A-600 · T-602 powder-transfer service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
     },
     {
       "id": "EXP-702-TRANSFER",
-      "label": "A-700 \u00b7 T-702 product-transfer service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+      "label": "A-700 · T-702 product-transfer service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
     },
     {
       "id": "EXP-701-OFFGAS",
-      "label": "A-700 \u00b7 Off-gas equipment service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+      "label": "A-700 · Off-gas equipment service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
     },
     {
       "id": "EXP-2001-DOSE",
-      "label": "A-2000 \u00b7 Antiscalant dosing service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+      "label": "A-2000 · Antiscalant dosing service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
     },
     {
       "id": "EXP-2001-CEB",
-      "label": "A-2000 \u00b7 UF chemical-backwash interface: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+      "label": "A-2000 · UF chemical-backwash interface: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
     },
     {
       "id": "EXP-2001-RO",
-      "label": "A-2000 \u00b7 RO cleaning / membrane service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+      "label": "A-2000 · RO cleaning / membrane service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
     },
     {
       "id": "EXP-1004-HCL",
-      "label": "A-1000 \u00b7 HCl dosing service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+      "label": "A-1000 · HCl dosing service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
     },
     {
       "id": "EXP-201-UPPER",
-      "label": "A-200 \u00b7 Upper reactor work: Confirm actual platform work position and same-level emergency washing provision; grade route not credited."
+      "label": "A-200 · Upper reactor work: Confirm actual platform work position and same-level emergency washing provision; grade route not credited."
     },
     {
       "id": "EXP-166-PLATFORM",
-      "label": "A-160 \u00b7 Filter upper work: Platform and task elevation require survey; grade station provides no elevated coverage credit."
+      "label": "A-160 · Filter upper work: Platform and task elevation require survey; grade station provides no elevated coverage credit."
     },
     {
       "id": "EXP-601-ATOMIZER",
-      "label": "A-600 \u00b7 DR-601 atomizer work: Equipment service elevation shown; standing platform and same-level washing provision require design."
+      "label": "A-600 · DR-601 atomizer work: Equipment service elevation shown; standing platform and same-level washing provision require design."
     },
     {
       "id": "EXP-601-FILTER",
-      "label": "A-600 \u00b7 F-601 filter opening: Equipment service elevation shown; confirm standing deck and same-level emergency access."
+      "label": "A-600 · F-601 filter opening: Equipment service elevation shown; confirm standing deck and same-level emergency access."
     },
     {
       "id": "EXP-701-UPPER",
-      "label": "A-700 \u00b7 LK-701 / H-701 upper feed work: Elevated work position and local washing provision unresolved; do not project onto grade."
+      "label": "A-700 · LK-701 / H-701 upper feed work: Elevated work position and local washing provision unresolved; do not project onto grade."
     },
     {
       "id": "EXP-802-DOCK",
-      "label": "A-800 \u00b7 LK-802 reagent docking: Docking interface elevation shown; operator position, platform and local combination station require coordinated design."
+      "label": "A-800 · LK-802 reagent docking: Docking interface elevation shown; operator position, platform and local combination station require coordinated design."
     },
     {
       "id": "EXP-802-FEEDER",
-      "label": "A-800 \u00b7 PL-801 feeder service: Same-level station space, water and runoff design required; ground station is not credited."
+      "label": "A-800 · PL-801 feeder service: Same-level station space, water and runoff design required; ground station is not credited."
     },
     {
       "id": "EMERGENCY-COVERAGE",
