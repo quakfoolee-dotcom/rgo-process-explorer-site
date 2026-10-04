@@ -69,7 +69,7 @@ function createFigure(){
 const nf=(n,d=0)=>Number(n).toFixed(d);
 const clock=t=>{const s=Math.floor(t),m=Math.floor(s/60);return String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0')+':'+String(s%60).padStart(2,'0');};
 
-export function createFieldOperator({model,scene,viewport,root,network,entries=[],getCamera,applyCamera,restoreCamera}){
+export function createFieldOperator({model,scene,viewport,root,network,entries=[],getCamera,applyCamera,restoreCamera,getOcclusion=()=>null}){
  const $=id=>root.querySelector('#'+id);
  const stations=buildStations(model),sim=createOperatorSim(stations),figure=createFigure(),group=figure.group;
  group.name='Browse field operator';group.visible=false;scene.add(group);
@@ -166,10 +166,28 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
    if(st.mode==='work'&&st.cur){const s=st.cur.station;aim.set(s.x,s.y,s.z);}
    viewCam.lookAt(aim);viewCam.updateMatrixWorld();applyCamera(viewCam,aim);
   }else{
-   const target=V(st.pos.x-Math.sin(st.viewYaw)*5.5,st.pos.y+3.2,st.pos.z-Math.cos(st.viewYaw)*5.5);
-   if(!st.followInit){viewCam.position.copy(target);st.followInit=true;}else viewCam.position.lerp(target,k);
+   const head=V(st.pos.x,st.pos.y+1.5,st.pos.z),target=chaseTarget(head,dt);
+   if(!st.followInit||st.camBlocked){viewCam.position.copy(target);st.followInit=true;}else viewCam.position.lerp(target,k);
    const aim=V(st.pos.x,st.pos.y+1.1,st.pos.z);viewCam.lookAt(aim);viewCam.updateMatrixWorld();applyCamera(viewCam,aim);
   }
+ }
+ // Chase camera that stays out of columns and decks: candidates behind, beside and closer in, checked against the exact geometry.
+ const ray=new T.Raycaster(),CHASE=[[0,5.5,3.2],[.6,5.5,3.2],[-.6,5.5,3.2],[1.2,5,3],[-1.2,5,3],[0,3.6,2.4],[.8,3.2,2.2],[-.8,3.2,2.2],[Math.PI,4,2.6],[1.6,3,2],[-1.6,3,2],[0,2,1.6],[Math.PI,2.4,1.8]];
+ function clearLine(occ,from,to){const dir=to.clone().sub(from),len=dir.length();if(len<1e-3)return true;ray.set(from,dir.normalize());ray.far=len;return !occ.blocked(ray,to);}
+ function chaseTarget(head,dt){
+  const occ=getOcclusion();st.chaseT=(st.chaseT||0)-dt;st.camBlocked=false;
+  const at=([off,dist,h])=>{const yaw=st.viewYaw+off;return V(head.x-Math.sin(yaw)*dist,st.pos.y+h,head.z-Math.cos(yaw)*dist);};
+  if(!occ){return at(CHASE[0]);}
+  if(st.chaseTarget&&st.chaseT>0)return st.chaseTarget;
+  st.chaseT=.15;
+  // keep the last good choice while it is still clear; otherwise take the first clear candidate
+  const order=st.chaseIdx==null?CHASE.map((_,i)=>i):[st.chaseIdx,...CHASE.map((_,i)=>i).filter(i=>i!==st.chaseIdx)];
+  let pick=null;
+  for(const i of order){const p=at(CHASE[i]);if(clearLine(occ,head,p)){pick=p;st.chaseIdx=i;break;}}
+  if(!pick){pick=V(head.x,head.y+.9,head.z);st.chaseIdx=null;}
+  // if the camera itself drifted behind something, snap rather than glide through it
+  if(st.followInit&&!clearLine(occ,head,viewCam.position))st.camBlocked=true;
+  st.chaseTarget=pick;return pick;
  }
  function updateLabel(){
   const cam=getCamera?.();

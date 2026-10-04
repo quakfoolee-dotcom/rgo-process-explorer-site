@@ -66,7 +66,7 @@ export function mountPlantBrowse({model,scene,viewport,canvas,button,onEnter,onL
  }
  function attachOperator(){
   try{
-   if(!operator||operatorNetwork!==network){operator?.dispose();operator=createFieldOperator({model,scene,viewport,root,network,entries,getCamera,applyCamera:(cam,aim)=>onCamera(cam,aim,true),restoreCamera});operatorNetwork=network;}
+   if(!operator||operatorNetwork!==network){operator?.dispose();operator=createFieldOperator({model,scene,viewport,root,network,entries,getCamera,applyCamera:(cam,aim)=>onCamera(cam,aim,true),restoreCamera,getOcclusion:()=>cache?.occlusion||null});operatorNetwork=network;}
    operator.show();
   }catch(error){operator=null;operatorNetwork=null;const d=root.querySelector('#browse-operator');if(d)d.hidden=true;}
  }
