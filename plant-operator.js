@@ -181,9 +181,11 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
   if(label.textContent!==text)label.textContent=text;
  }
 
- function update(dt){
+ function update(dt,wall=false){
   if(!st.shown)return;
-  dt=Math.min(dt,.1);st.t+=dt;st.simT+=dt*st.fast;
+  // The host caps frame time at 0.05 s, which slows the operator on a heavy scene: use the wall clock when asked.
+  if(wall){const now=performance.now();dt=st.lastWall?Math.min((now-st.lastWall)/1000,.5):dt;st.lastWall=now;}
+  dt=Math.min(dt,.5);st.t+=dt;st.simT+=dt*st.fast;
   if(!st.cur&&st.queue.length)begin(st.queue.shift());
   let pose='idle';
   if(st.cur&&st.mode==='walk')pose=walk(dt);
@@ -201,7 +203,7 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
 
  function setView(view,{restore=true}={}){
   if(view===st.view)return;
-  const was=st.view;st.view=view;st.followInit=false;st.viewYaw=st.yaw;
+  const was=st.view;st.view=view;st.lastWall=0;group.visible=st.shown&&view!=='ride';st.followInit=false;st.viewYaw=st.yaw;
   for(const [id,v] of [['op-view-own','own'],['op-view-follow','follow'],['op-view-ride','ride']])$(id).setAttribute('aria-pressed',String(v===view));
   if(view==='own'&&was!=='own'&&restore)restoreCamera?.();
  }
@@ -229,7 +231,7 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
   update,setView,enqueue,sim,stations,
   get viewing(){return st.view!=='own';},
   get view(){return st.view;},
-  show(){st.shown=true;group.visible=true;$('browse-operator').hidden=false;},
+  show(){st.shown=true;group.visible=st.view!=='ride';$('browse-operator').hidden=false;},
   hide(){st.shown=false;group.visible=false;label.hidden=true;interrupt();setView('own',{restore:false});},
   getState:()=>({shown:st.shown,mode:st.mode,view:st.view,position:[st.pos.x,st.pos.y,st.pos.z],queue:st.queue.length,busy:!!st.cur,log:st.log.length,stations:stations.length,simTime:st.simT}),
   get log(){return st.log;},
