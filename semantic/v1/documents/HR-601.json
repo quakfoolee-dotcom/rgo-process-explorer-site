@@ -27,6 +27,26 @@
       "status": "Draft - Not for Use; not approved",
       "availability": "available and reviewed",
       "href": "./pfd-temperature-sheets.pdf#page=6"
+    },
+    {
+      "documentId": "FEED-PE-DAT-141",
+      "title": "HR-601 Dryer Exhaust Heat Recuperator Datasheet",
+      "revision": "V1.0",
+      "page": null,
+      "status": "controlled (preliminary - budget enquiry)",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "8 Equipment Design and Specifications\\3 - Datasheet (DAT) Templates\\FEED-PE-DAT-141_HR-601-Dryer-Exhaust-Heat-Recuperator-Datasheet_V1.0.xlsx"
+    },
+    {
+      "documentId": "FEED-PE-LST-001",
+      "title": "Equipment and Stream Register",
+      "revision": "V5.2",
+      "page": null,
+      "status": "controlled",
+      "availability": "indexed by data layer",
+      "dataLayer": true,
+      "file": "6 Process Flow Diagram (PFDs)\\FEED-PE-LST-001_Equipment-and-Stream-Register_V5.2.xlsx"
     }
   ]
 }

@@ -16,8 +16,9 @@
   "design": {
     "capacityM3": null,
     "designPressure": null,
-    "designTemperature": null,
-    "materialOfConstruction": null
+    "designTemperature": 150,
+    "materialOfConstruction": null,
+    "heatRecoveredKw": 2722
   },
   "operatingEnvelope": null,
   "processBasis": [],
@@ -29,20 +30,49 @@
     "Air is a draft/model concept. Gas selection, GO thermal stability, dust explosibility, grounding, dryer/filter protection, pressure limits and interlocks remain open. Conditional oxygen monitoring for inert drying is not an installed protective system.",
     "Sheet is Draft - Not for Use with revision XXX. Wash compatibility, powder isolation, filter-media servicing, scrubber-liquor chemistry, drain receivers and gas-admission procedures require approval. No common process/thermal drain or cleaning sequence is authorized."
   ],
+  "datasheet": {
+    "equipmentTag": "HR-601",
+    "equipmentName": "Dryer Exhaust Heat Recuperator",
+    "quantityRequired": 1,
+    "dryingAir": "25 → 50",
+    "effectiveness": "45%",
+    "type": "Plate air-to-air exchanger or glycol run-around coil (vendor)",
+    "features": "Bypass damper on upset; condensate drain on the exhaust side; access for washing (fines)",
+    "hx601DutyAfterHr601": "9800 design / 10780 rated",
+    "designPressure": "± 10",
+    "exhaustSide": "316L (acidic condensate, TLGO fines)",
+    "airSide": "Aluminium / galvanised, vendor"
+  },
+  "identity": {
+    "esrName": "Dryer Exhaust Heat Recuperator"
+  },
   "dataLayer": {
     "area": "A-600",
     "source": "data/semantic/A-600",
-    "approvedRows": 0,
+    "approvedRows": 15,
     "heldRows": 0,
-    "pendingRows": 18,
+    "pendingRows": 3,
     "identityHold": null,
     "applied": "2026-10-04",
-    "baseline": {},
-    "baselineAbsent": []
+    "baseline": {
+      "datasheet": null,
+      "design": {
+        "capacityM3": null,
+        "designPressure": null,
+        "designTemperature": null,
+        "materialOfConstruction": null
+      },
+      "identity": null,
+      "processFunction": "Dryer exhaust heat recuperator (proposed; FEED-PE-DAT-141)"
+    },
+    "baselineAbsent": [
+      "datasheet",
+      "identity"
+    ]
   },
   "identitySource": {
     "modelName": "Dryer exhaust heat recuperator (proposed; FEED-PE-DAT-141)",
-    "modelFunction": "Dryer exhaust heat recuperator (proposed; FEED-PE-DAT-141)",
+    "modelFunction": "Preheats the DR-601 drying air with the exhaust air downstream of F-601, reducing the HX-601 thermal-oil duty (DAT-141; D-A5000-04).",
     "name": "Dryer Exhaust Heat Recuperator",
     "sourceDocId": "FEED-PE-DAT-141",
     "revision": "V1.0"
