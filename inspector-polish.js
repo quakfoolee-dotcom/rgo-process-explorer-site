@@ -84,6 +84,7 @@ function init() {
 }
 
 const COUNT = /^([\d,]+) modeled components · ([\d,]+) assemblies$/;
+const plural = (n, one, many) => n + ' ' + (Number(n.replace(/,/g, '')) === 1 ? one : many);
 function initKeyFacts() {
   const title = document.getElementById('part-name');
   if (!title || document.getElementById('key-facts')) return;
@@ -113,7 +114,7 @@ function initKeyFacts() {
       const cells = [cell('Area', text('part-context')), cell('Status', status.childNodes.length ? status : '—'),
         ...(duty && duty !== text('part-name') ? [cell('Duty / service', duty, true)] : []),
         cell('Envelope · X × Z × H', text('equipment-envelope') || '—'),
-        cell('Components', m ? m[1] + ' components · ' + m[2] + ' assemblies' : (count || '—'))];
+        cell('Components', m ? plural(m[1], 'component', 'components') + ' · ' + plural(m[2], 'assembly', 'assemblies') : (count || '—'))];
       grid.replaceChildren(...cells);
       grid.hidden = false;
     } finally { setTimeout(() => { busy = false; }, 0); }
