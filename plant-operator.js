@@ -52,7 +52,7 @@ function createFigure(){
  const lL=limb(-.085,.93,.45,.44,.062,new T.BoxGeometry(.1,.08,.24),boot),lR=limb(.085,.93,.45,.44,.062,new T.BoxGeometry(.1,.08,.24),boot);
  lL.end.position.z=.05;lR.end.position.z=.05;
  // Tablet held in front of the chest: dark frame with a lit screen on its +z face (which faces the operator's face once the forearm is raised), turned a little outward so it reads from the side.
- const tablet=new T.Group();tablet.position.set(-.09,-.25,.04);tablet.rotation.y=.55;aR.el.add(tablet);tablet.visible=false;
+ const tablet=new T.Group();tablet.position.set(-.09,-.25,.04);tablet.rotation.y=-.55;aR.el.add(tablet);tablet.visible=false;
  add(new T.BoxGeometry(.22,.3,.02),M(0x16202b),V(0,0,0),tablet);
  add(new T.BoxGeometry(.185,.255,.006),new T.MeshStandardMaterial({color:0x8fd8ff,emissive:0x2f8fc0,emissiveIntensity:.9,roughness:.3}),V(0,0,.0115),tablet);
  g.traverse(o=>{if(o.isMesh)o.frustumCulled=false;});
