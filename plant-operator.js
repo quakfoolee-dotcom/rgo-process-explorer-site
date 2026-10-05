@@ -51,7 +51,10 @@ function createFigure(){
  const aL=limb(-.2,1.47,.29,.27,.045,new T.SphereGeometry(.045,10,8),glove),aR=limb(.2,1.47,.29,.27,.045,new T.SphereGeometry(.045,10,8),glove);
  const lL=limb(-.085,.93,.45,.44,.062,new T.BoxGeometry(.1,.08,.24),boot),lR=limb(.085,.93,.45,.44,.062,new T.BoxGeometry(.1,.08,.24),boot);
  lL.end.position.z=.05;lR.end.position.z=.05;
- const tablet=add(new T.BoxGeometry(.16,.22,.015),M(0x1a2a3a),V(0,-.32,.06),aR.el);tablet.visible=false;
+ // Tablet held in front of the chest: dark frame with a lit screen on its +z face (which faces the operator's face once the forearm is raised), turned a little outward so it reads from the side.
+ const tablet=new T.Group();tablet.position.set(-.09,-.25,.04);tablet.rotation.y=.55;aR.el.add(tablet);tablet.visible=false;
+ add(new T.BoxGeometry(.22,.3,.02),M(0x16202b),V(0,0,0),tablet);
+ add(new T.BoxGeometry(.185,.255,.006),new T.MeshStandardMaterial({color:0x8fd8ff,emissive:0x2f8fc0,emissiveIntensity:.9,roughness:.3}),V(0,0,.0115),tablet);
  g.traverse(o=>{if(o.isMesh)o.frustumCulled=false;});
  // aim: arm elevation above horizontal toward the item worked (radians) and how far the elbows bend (0 straight)
  function pose(mode,t,phase,aim={elev:0,bend:.5}){
@@ -59,11 +62,15 @@ function createFigure(){
   tablet.visible=mode==='inspect';body.position.y=0;head.rotation.set(0,0,0);
   if(mode==='walk'||mode==='stair'){const A=mode==='stair'?.75:.5,K=mode==='stair'?1.1:.7;set(lL,-s*A,Math.max(0,s)*K);set(lR,s*A,Math.max(0,-s)*K);set(aL,s*.45,-.35);set(aR,-s*.45,-.35);body.position.y=Math.abs(c)*.03;}
   else if(mode==='wheel'||mode==='wheelHigh'){const w=t*3.2,base=-(Math.PI/2+aim.elev),e=-aim.bend;set(lL,0,0);set(lR,0,0);set(aL,base+.22*Math.sin(w),e,.18*Math.cos(w));set(aR,base-.22*Math.sin(w),e,-.18*Math.cos(w));head.rotation.x=-aim.elev*.5;}
-  else if(mode==='inspect'){set(lL,0,0);set(lR,0,0);set(aR,-.9,-1.1);set(aL,-1.35+.08*Math.sin(t*2),-.15);head.rotation.x=Math.sin(t*1.3)*.15;}
+  else if(mode==='inspect'){set(lL,0,0);set(lR,0,0);set(aR,-.55,-1.85,-.22);set(aL,-.6+.04*Math.sin(t*2),-1.7,.25);head.rotation.x=.28+Math.sin(t*1.3)*.05;}
   else if(mode==='press'){set(lL,0,0);set(lR,0,0);set(aL,.05,-.2);set(aR,-(Math.PI/2+aim.elev)+.12*Math.max(0,Math.sin(t*5)),-aim.bend);head.rotation.x=-aim.elev*.5;}
   else{set(lL,0,0);set(lR,0,0);set(aL,.05,-.15,-.05);set(aR,.05,-.15,.05);body.position.y=Math.sin(t*1.5)*.004;}
  }
- return {group:g,pose,armPitch:()=>aR.sh.rotation.x};
+ const tp=new T.Vector3(),tq=new T.Quaternion(),gq=new T.Quaternion();
+ // Tablet centre and screen normal in the operator's own frame (+z forward, +y up), for tests.
+ function tabletInfo(){g.updateMatrixWorld(true);tablet.getWorldPosition(tp);tablet.getWorldQuaternion(tq);g.getWorldQuaternion(gq);
+  const inv=gq.clone().invert(),pos=g.worldToLocal(tp.clone()),normal=new T.Vector3(0,0,1).applyQuaternion(tq).applyQuaternion(inv);return {visible:tablet.visible,pos:[pos.x,pos.y,pos.z],normal:[normal.x,normal.y,normal.z]};}
+ return {group:g,pose,armPitch:()=>aR.sh.rotation.x,tabletInfo};
 }
 
 const nf=(n,d=0)=>Number(n).toFixed(d);
@@ -284,7 +291,7 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
   get view(){return st.view;},
   show(){st.shown=true;group.visible=st.view!=='ride';$('browse-operator').hidden=false;},
   hide(){st.shown=false;group.visible=false;label.hidden=true;interrupt();setView('own',{restore:false});},
-  getState:()=>({shown:st.shown,mode:st.mode,view:st.view,yaw:st.yaw,aim:{...st.aim},armPitch:figure.armPitch(),position:[st.pos.x,st.pos.y,st.pos.z],queue:st.queue.length,busy:!!st.cur,log:st.log.length,stations:stations.length,simTime:st.simT}),
+  getState:()=>({shown:st.shown,mode:st.mode,view:st.view,yaw:st.yaw,aim:{...st.aim},armPitch:figure.armPitch(),tablet:figure.tabletInfo(),position:[st.pos.x,st.pos.y,st.pos.z],queue:st.queue.length,busy:!!st.cur,log:st.log.length,stations:stations.length,simTime:st.simT}),
   get log(){return st.log;},
   dispose(){scene.remove(group);label.remove();}
  };
