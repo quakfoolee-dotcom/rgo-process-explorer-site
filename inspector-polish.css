@@ -78,3 +78,8 @@
 #inspector .model-notes dl{display:block;margin:0;padding:0 .75rem .75rem}
 #inspector .model-notes dt{margin:.85rem 0 .2rem;font-size:var(--ip-label);letter-spacing:.3px;text-transform:uppercase;color:#a9c6d9}
 #inspector .model-notes dd{margin:0;max-width:64ch;font-size:var(--ip-body);line-height:1.55}
+/* V268: the line shown when a click on the 3D model opened the equipment overview; names the part that was actually clicked. */
+#inspector .clicked-part{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .75rem;margin:.6rem 0;padding:.5rem .75rem;border-left:3px solid #f0c27a;font-size:var(--ip-body)}
+#inspector .clicked-part-label{flex:0 0 100%;font-size:var(--ip-label);text-transform:uppercase;letter-spacing:.3px;color:#a9c6d9}
+#inspector .clicked-part strong{flex:1 1 12ch;min-width:0;font-size:var(--ip-body);font-weight:600;overflow-wrap:anywhere}
+#inspector .clicked-part button{font-size:var(--ip-body)}

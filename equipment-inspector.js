@@ -32,3 +32,14 @@ export function equipmentComponentList(plan, selected, isAvailable) {
   if (selected && !plan?.ids.has(selected.id) && isAvailable(selected)) result.push(selected);
   return result;
 }
+
+// A click on the 3D model opens the equipment the part belongs to, not the single part. The part view stays for: parts that are not
+// members of the equipment's own plan (external service details, pipes, supports), clicks while an equipment is explored or exploded,
+// a second click on the same part within a short time (double-click), and a click on another part of the equipment whose component
+// is already open (the user has drilled down and is moving between its parts).
+export function clickTarget({ part, plan, record, selected, exploring, repeated }) {
+  if (!part || exploring || repeated) return 'part';
+  if (!plan || !record || !plan.ids?.has(part.id) || record.modelId !== plan.equipmentId) return 'part';
+  if (selected && Number(selected.reactor) === Number(part.reactor)) return 'part';
+  return 'equipment';
+}

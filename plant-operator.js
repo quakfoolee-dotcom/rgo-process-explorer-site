@@ -54,7 +54,10 @@ function createFigure(){
  // Tablet held in front of the chest: dark frame with a lit screen on its +z face (which faces the operator's face once the forearm is raised), turned a little outward so it reads from the side.
  const tablet=new T.Group();tablet.position.set(-.09,-.25,.04);tablet.rotation.y=-.55;aR.el.add(tablet);tablet.visible=false;
  add(new T.BoxGeometry(.22,.3,.02),M(0x16202b),V(0,0,0),tablet);
- add(new T.BoxGeometry(.185,.255,.006),new T.MeshStandardMaterial({color:0x8fd8ff,emissive:0x2f8fc0,emissiveIntensity:.9,roughness:.3}),V(0,0,.0115),tablet);
+ // The screen is unlit and exempt from tone mapping, so it stays bright whatever the lighting or angle; a few dark lines read as text.
+ const screenMat=new T.MeshBasicMaterial({color:0xcff2ff,toneMapped:false}),textMat=new T.MeshBasicMaterial({color:0x2f7fb0,toneMapped:false});
+ const screen=add(new T.BoxGeometry(.19,.26,.006),screenMat,V(0,0,.0115),tablet);screen.name='Tablet screen';
+ for(const [y,w] of [[.09,.15],[.04,.12],[-.01,.14],[-.06,.09]])add(new T.BoxGeometry(w,.014,.002),textMat,V(-(.15-w)/2,y,.0155),tablet);
  g.traverse(o=>{if(o.isMesh)o.frustumCulled=false;});
  // aim: arm elevation above horizontal toward the item worked (radians) and how far the elbows bend (0 straight)
  function pose(mode,t,phase,aim={elev:0,bend:.5}){
