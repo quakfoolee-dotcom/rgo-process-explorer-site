@@ -60,12 +60,12 @@ function createFigure(){
  for(const [y,w] of [[.09,.15],[.04,.12],[-.01,.14],[-.06,.09]])add(new T.BoxGeometry(w,.014,.002),textMat,V(-(.15-w)/2,y,.0155),tablet);
  g.traverse(o=>{if(o.isMesh)o.frustumCulled=false;});
  // aim: arm elevation above horizontal toward the item worked (radians) and how far the elbows bend (0 straight)
- function pose(mode,t,phase,aim={elev:0,bend:.5}){
+ function pose(mode,t,phase,aim={elev:0,bend:.5,turn:-.55}){
   const s=Math.sin(phase),c=Math.cos(phase),set=(l,a,b,z=0)=>{l.sh.rotation.set(a,0,z);l.el.rotation.set(b,0,0);};
   tablet.visible=mode==='inspect';body.position.y=0;head.rotation.set(0,0,0);
   if(mode==='walk'||mode==='stair'){const A=mode==='stair'?.75:.5,K=mode==='stair'?1.1:.7;set(lL,-s*A,Math.max(0,s)*K);set(lR,s*A,Math.max(0,-s)*K);set(aL,s*.45,-.35);set(aR,-s*.45,-.35);body.position.y=Math.abs(c)*.03;}
   else if(mode==='wheel'||mode==='wheelHigh'){const w=t*3.2,base=-(Math.PI/2+aim.elev),e=-aim.bend;set(lL,0,0);set(lR,0,0);set(aL,base+.22*Math.sin(w),e,.18*Math.cos(w));set(aR,base-.22*Math.sin(w),e,-.18*Math.cos(w));head.rotation.x=-aim.elev*.5;}
-  else if(mode==='inspect'){set(lL,0,0);set(lR,0,0);set(aR,-.55,-1.85,-.22);set(aL,-.6+.04*Math.sin(t*2),-1.7,.25);head.rotation.x=.28+Math.sin(t*1.3)*.05;}
+  else if(mode==='inspect'){set(lL,0,0);set(lR,0,0);set(aR,-.55,-1.85,-.22);set(aL,-.6+.04*Math.sin(t*2),-1.7,.25);head.rotation.x=.28+Math.sin(t*1.3)*.05;tablet.rotation.y+=((aim.turn??-.55)-tablet.rotation.y)*.3;}
   else if(mode==='press'){set(lL,0,0);set(lR,0,0);set(aL,.05,-.2);set(aR,-(Math.PI/2+aim.elev)+.12*Math.max(0,Math.sin(t*5)),-aim.bend);head.rotation.x=-aim.elev*.5;}
   else{set(lL,0,0);set(lR,0,0);set(aL,.05,-.15,-.05);set(aR,.05,-.15,.05);body.position.y=Math.sin(t*1.5)*.004;}
  }
@@ -162,7 +162,7 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
    elev=Math.max(-.9,Math.min(1.4,Math.atan2(dy,Math.max(.05,d))));
    bend=Math.max(.05,Math.min(1.5,(1-Math.hypot(d,dy)/ARM)*1.8));
   }
-  const k=Math.min(1,dt*8);st.aim.elev+=(elev-st.aim.elev)*k;st.aim.bend+=(bend-st.aim.bend)*k;return st.aim;
+  const k=Math.min(1,dt*8);st.aim.elev+=(elev-st.aim.elev)*k;st.aim.bend+=(bend-st.aim.bend)*k;st.aim.turn=(st.tabletSide||-1)*.55;return st.aim;
  }
  function workPose(){
   const t=st.cur,s=t.station;
@@ -203,6 +203,9 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
    const head=V(st.pos.x,st.pos.y+1.5,st.pos.z),target=chaseTarget(head,dt);
    if(!st.followInit||st.camBlocked){viewCam.position.copy(target);st.followInit=true;}else viewCam.position.lerp(target,k);
    const aim=V(st.pos.x,st.pos.y+(st.view==='side'?1.15:1.1),st.pos.z);viewCam.lookAt(aim);viewCam.updateMatrixWorld();applyCamera(viewCam,aim);
+   // the tablet is turned to whichever side the camera is on (local +x is (cos yaw, -sin yaw) in the world)
+   const side=(viewCam.position.x-st.pos.x)*Math.cos(st.yaw)-(viewCam.position.z-st.pos.z)*Math.sin(st.yaw),len=Math.hypot(viewCam.position.x-st.pos.x,viewCam.position.z-st.pos.z);
+   if(len>.5&&Math.abs(side)/len>.35)st.tabletSide=side>0?1:-1;
   }
  }
  // Chase camera that stays out of columns and decks: candidates behind, beside and closer in, checked against the exact geometry.
@@ -266,7 +269,7 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
  function setView(view,{restore=true}={}){
   if(view===st.view)return;
   const was=st.view;st.view=view;st.lastWall=0;group.visible=st.shown&&view!=='ride';st.followInit=false;st.viewYaw=st.yaw;
-  st.chaseIdx=null;st.chaseTarget=null;
+  st.chaseIdx=null;st.chaseTarget=null;st.tabletSide=-1;
   for(const [id,v] of [['op-view-own','own'],['op-view-follow','follow'],['op-view-side','side'],['op-view-ride','ride']])$(id).setAttribute('aria-pressed',String(v===view));
   if(view==='own'&&was!=='own'&&restore)restoreCamera?.();
  }
