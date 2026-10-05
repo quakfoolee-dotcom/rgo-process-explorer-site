@@ -38,10 +38,6 @@
 #inspector .semantic-body,#inspector .semantic-note,#inspector .semantic-hold,#inspector .semantic-body dd,#inspector .semantic-group>summary,#inspector .semantic-body input[type=search]{font-size:var(--ip-body)}
 #inspector .semantic-body button{font-size:var(--ip-body)}
 #inspector .semantic-body .semantic-list li button{font-size:var(--ip-label)}
-#inspector .semantic-tabs{flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;gap:6px;padding:8px 1px 10px;scrollbar-width:thin}
-#inspector .semantic-tabs button,#inspector .semantic-tabs select{font-size:var(--ip-label)}
-#inspector .semantic-tabs button{flex:0 0 auto;min-width:0;white-space:nowrap}
-#inspector .semantic-tabs select{flex:0 0 auto;width:auto}
 /* Specifications: one line per property (Property | Value | Unit | Status); a long value wraps inside its own column. */
 #inspector .semantic-spec-table{width:100%;table-layout:fixed;border-collapse:collapse;margin:.6rem 0}
 #inspector .semantic-spec-table th{padding:.4rem .3rem;font-size:var(--ip-label);font-weight:600;letter-spacing:.2px;text-align:left;color:#a9c6d9;border-bottom:1px solid #718699}
@@ -83,3 +79,21 @@
 #inspector .clicked-part-label{flex:0 0 100%;font-size:var(--ip-label);text-transform:uppercase;letter-spacing:.3px;color:#a9c6d9}
 #inspector .clicked-part strong{flex:1 1 12ch;min-width:0;font-size:var(--ip-body);font-weight:600;overflow-wrap:anywhere}
 #inspector .clicked-part button{font-size:var(--ip-body)}
+/* V269: collapsible Equipment-data sections with counts, and the key-facts grid under the title. */
+#inspector .semantic-section{margin:.5rem 0;border:1px solid #455b6b;border-radius:6px}
+#inspector .semantic-section>summary{display:flex;align-items:center;gap:.5rem;min-height:40px;padding:.45rem .75rem;font-size:var(--ip-section);font-weight:600;cursor:pointer;list-style:none}
+#inspector .semantic-section>summary::-webkit-details-marker{display:none}
+#inspector .semantic-section>summary::after{content:"▾";margin-left:auto;font-size:var(--ip-body)}
+#inspector .semantic-section[open]>summary::after{content:"▴"}
+#inspector .semantic-section-title{flex:0 1 auto;min-width:0}
+#inspector .semantic-section-count{flex:none;min-width:1.7rem;padding:.05rem .5rem;border:1px solid #6f8798;border-radius:999px;font-size:var(--ip-label);font-weight:600;text-align:center;color:#a9c6d9}
+#inspector .semantic-section-body{padding:0 .75rem .75rem}
+#inspector .semantic-section-body>h4:first-child{margin-top:.2rem}
+#inspector .key-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem .9rem;margin:.6rem 0 .9rem;padding:.7rem .8rem;border:1px solid #455b6b;border-radius:6px}
+#inspector .key-facts[hidden]{display:none}
+#inspector .key-facts>div{min-width:0}
+#inspector .key-facts .key-wide{grid-column:1/-1}
+#inspector .key-facts dt{margin:0 0 .15rem;font-size:var(--ip-label);letter-spacing:.3px;text-transform:uppercase;color:#a9c6d9}
+#inspector .key-facts dd{margin:0;font-size:var(--ip-body);font-weight:600;line-height:1.4;overflow-wrap:anywhere}
+#inspector .key-facts .status-badges{margin:0}
+#inspector[data-level=equipment] :is(#part-context,#part-status,#equipment-facts dl,#equipment-count){display:none}

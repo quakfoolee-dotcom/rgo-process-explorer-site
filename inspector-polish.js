@@ -1,5 +1,7 @@
 // Inspector readability.
 // Phase 1: fold a long description behind "Show more".
+// Phase 3 (V269): at the equipment overview, the area, status, duty, envelope and component count are shown as one key-facts grid
+// under the title (built from the same elements the app fills in; the originals stay in the page, hidden by CSS).
 // Phase 2: for the equipment listed in equipment-notes.js, show a one-paragraph summary and keep the rest as labelled
 // "Model notes" in a collapsible block. The app writes the record's full geometry status into #part-description; this
 // script reads the shown tag and text, and only restructures when they match a registered entry exactly (so an edited or
@@ -81,4 +83,52 @@ function init() {
   sync();
 }
 
-if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+const COUNT = /^([\d,]+) modeled components · ([\d,]+) assemblies$/;
+function initKeyFacts() {
+  const title = document.getElementById('part-name');
+  if (!title || document.getElementById('key-facts')) return;
+  const grid = document.createElement('dl');
+  grid.id = 'key-facts'; grid.className = 'key-facts'; grid.hidden = true;
+  title.after(grid);
+  const text = id => (document.getElementById(id)?.textContent || '').trim();
+  function cell(label, value, wide) {
+    const box = document.createElement('div'), dt = document.createElement('dt'), dd = document.createElement('dd');
+    if (wide) box.className = 'key-wide';
+    dt.textContent = label;
+    if (typeof value === 'string') dd.textContent = value; else dd.append(value);
+    box.append(dt, dd);
+    return box;
+  }
+  let busy = false;
+  function build() {
+    if (busy) return;
+    busy = true;
+    try {
+      const facts = document.getElementById('equipment-facts');
+      if (!facts || facts.hidden) { grid.hidden = true; grid.replaceChildren(); return; }
+      const status = document.createElement('div');
+      status.className = 'status-badges';
+      for (const node of document.getElementById('part-status')?.childNodes || []) status.append(node.cloneNode(true));
+      const count = text('equipment-count'), m = COUNT.exec(count), duty = text('equipment-duty');
+      const cells = [cell('Area', text('part-context')), cell('Status', status.childNodes.length ? status : '—'),
+        ...(duty && duty !== text('part-name') ? [cell('Duty / service', duty, true)] : []),
+        cell('Envelope · X × Z × H', text('equipment-envelope') || '—'),
+        cell('Components', m ? m[1] + ' components · ' + m[2] + ' assemblies' : (count || '—'))];
+      grid.replaceChildren(...cells);
+      grid.hidden = false;
+    } finally { setTimeout(() => { busy = false; }, 0); }
+  }
+  let timer = 0;
+  const schedule = () => { clearTimeout(timer); timer = setTimeout(build, 0); };
+  const observer = new MutationObserver(schedule);
+  for (const id of ['part-id', 'part-context', 'part-status', 'equipment-duty', 'equipment-envelope', 'equipment-count'])
+    { const node = document.getElementById(id); if (node) observer.observe(node, {childList: true, characterData: true, subtree: true}); }
+  const facts = document.getElementById('equipment-facts');
+  if (facts) observer.observe(facts, {attributes: true, attributeFilter: ['hidden']});
+  const inspector = document.getElementById('inspector');
+  if (inspector) observer.observe(inspector, {attributes: true, attributeFilter: ['data-level', 'hidden']});
+  build();
+}
+
+function start() { init(); initKeyFacts(); }
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
