@@ -180,15 +180,21 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
   }else{
    const head=V(st.pos.x,st.pos.y+1.5,st.pos.z),target=chaseTarget(head,dt);
    if(!st.followInit||st.camBlocked){viewCam.position.copy(target);st.followInit=true;}else viewCam.position.lerp(target,k);
-   const aim=V(st.pos.x,st.pos.y+1.1,st.pos.z);viewCam.lookAt(aim);viewCam.updateMatrixWorld();applyCamera(viewCam,aim);
+   const aim=V(st.pos.x,st.pos.y+(st.view==='side'?1.15:1.1),st.pos.z);viewCam.lookAt(aim);viewCam.updateMatrixWorld();applyCamera(viewCam,aim);
   }
  }
  // Chase camera that stays out of columns and decks: candidates behind, beside and closer in, checked against the exact geometry.
- const ray=new T.Raycaster(),CHASE=[[0,5.5,3.2],[.6,5.5,3.2],[-.6,5.5,3.2],[1.2,5,3],[-1.2,5,3],[0,3.6,2.4],[.8,3.2,2.2],[-.8,3.2,2.2],[Math.PI,4,2.6],[1.6,3,2],[-1.6,3,2],[0,2,1.6],[Math.PI,2.4,1.8]];
+ const ray=new T.Raycaster(),H=Math.PI/2;
+ // [yaw offset from the operator's facing, distance, camera height above the floor]; the first clear one wins.
+ const VIEWS={
+  follow:[[0,5.5,3.2],[.6,5.5,3.2],[-.6,5.5,3.2],[1.2,5,3],[-1.2,5,3],[0,3.6,2.4],[.8,3.2,2.2],[-.8,3.2,2.2],[Math.PI,4,2.6],[1.6,3,2],[-1.6,3,2],[0,2,1.6],[Math.PI,2.4,1.8]],
+  side:[[H,3.4,1.7],[-H,3.4,1.7],[H,2.4,1.6],[-H,2.4,1.6],[H*.75,3.4,1.9],[-H*.75,3.4,1.9],[H*1.25,3.4,1.9],[-H*1.25,3.4,1.9],[H,4.6,2.4],[-H,4.6,2.4],[H,1.7,1.5],[-H,1.7,1.5]]
+ };
  function clearLine(occ,from,to){const dir=to.clone().sub(from),len=dir.length();if(len<1e-3)return true;ray.set(from,dir.normalize());ray.far=len;return !occ.blocked(ray,to);}
  function chaseTarget(head,dt){
   const occ=getOcclusion();st.chaseT=(st.chaseT||0)-dt;st.camBlocked=false;
   const at=([off,dist,h])=>{const yaw=st.viewYaw+off;return V(head.x-Math.sin(yaw)*dist,st.pos.y+h,head.z-Math.cos(yaw)*dist);};
+  const CHASE=VIEWS[st.view]||VIEWS.follow;
   if(!occ){return at(CHASE[0]);}
   if(st.chaseTarget&&st.chaseT>0)return st.chaseTarget;
   st.chaseT=.15;
@@ -234,7 +240,8 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
  function setView(view,{restore=true}={}){
   if(view===st.view)return;
   const was=st.view;st.view=view;st.lastWall=0;group.visible=st.shown&&view!=='ride';st.followInit=false;st.viewYaw=st.yaw;
-  for(const [id,v] of [['op-view-own','own'],['op-view-follow','follow'],['op-view-ride','ride']])$(id).setAttribute('aria-pressed',String(v===view));
+  st.chaseIdx=null;st.chaseTarget=null;
+  for(const [id,v] of [['op-view-own','own'],['op-view-follow','follow'],['op-view-side','side'],['op-view-ride','ride']])$(id).setAttribute('aria-pressed',String(v===view));
   if(view==='own'&&was!=='own'&&restore)restoreCamera?.();
  }
 
@@ -250,6 +257,7 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
  $('op-fast').onclick=e=>{st.fast=st.fast===1?3:1;e.currentTarget.setAttribute('aria-pressed',String(st.fast>1));};
  $('op-view-own').onclick=()=>setView('own');
  $('op-view-follow').onclick=()=>setView('follow');
+ $('op-view-side').onclick=()=>setView('side');
  $('op-view-ride').onclick=()=>setView('ride');
  $('op-csv').onclick=async()=>{
   const rows=[['time','tag','task','result','flag'],...st.log.map(e=>[e.time,e.tag,e.task,e.result,e.flag?'yes':''])];
@@ -264,7 +272,7 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
   get view(){return st.view;},
   show(){st.shown=true;group.visible=st.view!=='ride';$('browse-operator').hidden=false;},
   hide(){st.shown=false;group.visible=false;label.hidden=true;interrupt();setView('own',{restore:false});},
-  getState:()=>({shown:st.shown,mode:st.mode,view:st.view,position:[st.pos.x,st.pos.y,st.pos.z],queue:st.queue.length,busy:!!st.cur,log:st.log.length,stations:stations.length,simTime:st.simT}),
+  getState:()=>({shown:st.shown,mode:st.mode,view:st.view,yaw:st.yaw,position:[st.pos.x,st.pos.y,st.pos.z],queue:st.queue.length,busy:!!st.cur,log:st.log.length,stations:stations.length,simTime:st.simT}),
   get log(){return st.log;},
   dispose(){scene.remove(group);label.remove();}
  };
