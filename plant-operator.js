@@ -70,7 +70,7 @@ function createFigure(){
  // Tablet centre and screen normal in the operator's own frame (+z forward, +y up), for tests.
  function tabletInfo(){g.updateMatrixWorld(true);tablet.getWorldPosition(tp);tablet.getWorldQuaternion(tq);g.getWorldQuaternion(gq);
   const inv=gq.clone().invert(),pos=g.worldToLocal(tp.clone()),normal=new T.Vector3(0,0,1).applyQuaternion(tq).applyQuaternion(inv);return {visible:tablet.visible,pos:[pos.x,pos.y,pos.z],normal:[normal.x,normal.y,normal.z]};}
- return {group:g,pose,armPitch:()=>aR.sh.rotation.x,tabletInfo};
+ return {group:g,pose,armPitch:()=>aR.sh.rotation.x,tabletInfo,tablet};
 }
 
 const nf=(n,d=0)=>Number(n).toFixed(d);
@@ -207,13 +207,17 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
  // [yaw offset from the operator's facing, distance, camera height above the floor]; the first clear one wins.
  const VIEWS={
   follow:[[0,5.5,3.2],[.6,5.5,3.2],[-.6,5.5,3.2],[1.2,5,3],[-1.2,5,3],[0,3.6,2.4],[.8,3.2,2.2],[-.8,3.2,2.2],[Math.PI,4,2.6],[1.6,3,2],[-1.6,3,2],[0,2,1.6],[Math.PI,2.4,1.8]],
+  // while a tablet is out: a rear-quarter on the left, wide enough to clear the torso and see the screen, then the usual chase positions
+  read:[[1.1,4.4,2.8],[1.3,4.0,2.6],[.9,4.6,2.9],[1.5,3.8,2.4],[H,3.4,1.9]],
   side:[[H,3.4,1.7],[-H,3.4,1.7],[H,2.4,1.6],[-H,2.4,1.6],[H*.75,3.4,1.9],[-H*.75,3.4,1.9],[H*1.25,3.4,1.9],[-H*1.25,3.4,1.9],[H,4.6,2.4],[-H,4.6,2.4],[H,1.7,1.5],[-H,1.7,1.5]]
  };
  function clearLine(occ,from,to){const dir=to.clone().sub(from),len=dir.length();if(len<1e-3)return true;ray.set(from,dir.normalize());ray.far=len;return !occ.blocked(ray,to);}
+ function tabletOut(){return st.mode==='work'&&!!st.cur&&workPose()==='inspect';}
  function chaseTarget(head,dt){
   const occ=getOcclusion();st.chaseT=(st.chaseT||0)-dt;st.camBlocked=false;
   const at=([off,dist,h])=>{const yaw=st.viewYaw+off;return V(head.x-Math.sin(yaw)*dist,st.pos.y+h,head.z-Math.cos(yaw)*dist);};
-  const CHASE=VIEWS[st.view]||VIEWS.follow;
+  const key=st.view==='follow'&&tabletOut()?'read':st.view,CHASE=key==='read'?[...VIEWS.read,...VIEWS.follow]:(VIEWS[key]||VIEWS.follow);
+  if(st.chaseKey!==key){st.chaseKey=key;st.chaseIdx=null;st.chaseTarget=null;st.chaseT=0;}
   if(!occ){return at(CHASE[0]);}
   if(st.chaseTarget&&st.chaseT>0)return st.chaseTarget;
   st.chaseT=.15;
@@ -285,7 +289,7 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
  };
 
  return {
-  update,setView,enqueue,sim,stations,
+  update,setView,enqueue,sim,stations,figure,
   addInstruments(items){const added=buildInstrumentStations(items,stations);sim.addStations(added);for(const s of added)addOption(s);return added.length;},
   get viewing(){return st.view!=='own';},
   get view(){return st.view;},
