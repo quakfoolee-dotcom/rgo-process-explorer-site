@@ -46,7 +46,6 @@ html .workspace-dialog .dialog-apply{display:flex;flex-wrap:wrap;align-items:cen
 html .workspace-dialog .dialog-apply p{flex:1 0 100%;margin:0}
 html #inspection-active .back-link,html .sidebar-content .back-link,html .sidebar .back-link{padding:6px var(--gap-m);min-height:var(--ctl-h);margin:0 0 var(--gap-m)}
 html .sidebar-content>*+*{margin-top:var(--gap-s)}
-html .sidebar-content :is(button,summary)+:is(button,details,p,div){margin-top:var(--gap-s)}
 html #plant-browse-panel :is(.browse-op-row,#browse-arrow-actions,#browse-photo-tools){gap:var(--gap-s)}
 html #plant-browse-panel .browse-op-row{margin:var(--gap-s) 0}
 html #plant-browse-panel :is(#browse-panel-content,.browse-operator)>*+*{margin-top:var(--gap-s)}
@@ -72,3 +71,6 @@ html #section-inspector #slice-exit{font-size:20px}
 html .pfd-temperature-record p{font-size:var(--t-body)!important}
 html .pfd-temperature-record .pfd-temperature-value{font-size:var(--t-title)!important}
 html #plant-browse-panel :is(div,details):not(.browse-op-row):not(#browse-arrow-actions):not(#browse-photo-tools):not(.browse-heading):not(.controlled-select):not(.select-popup)>*+*{margin-top:var(--gap-s)}
+/* Button pairs: equal columns that can shrink (a nowrap primary button used to stretch its column and push the row past the card), same padding and wrapping. */
+html .sidebar .explore-view-buttons{grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--gap-s)}
+html .sidebar .explore-view-buttons button:not(#_1){min-width:0;white-space:normal;padding:8px var(--gap-s);min-height:var(--ctl-h);margin:0}
