@@ -1,5 +1,5 @@
 {
-  "version": "f389fb6",
+  "version": "ba3d1b3",
   "date": "2026-10-05",
   "basis": "Prepared FEED baseline; component counts are model objects, not procurement quantities.",
   "parts": 153709,
@@ -15,14 +15,14 @@
   },
   "timing": {
     "source": "prepared",
-    "downloadMs": 86.61173099999999,
-    "inflateMs": 1126.7740050000002,
-    "reconstructMs": 7497.969724999999,
-    "decodeMs": 8624.81825,
-    "totalMs": 8719.416510000001
+    "downloadMs": 86.50243699999999,
+    "inflateMs": 1109.586004,
+    "reconstructMs": 7342.689063000001,
+    "decodeMs": 8452.350277,
+    "totalMs": 8546.806682999999
   },
-  "maxHeartbeatGapMs": 661.3108510000011,
-  "ticks": 489,
+  "maxHeartbeatGapMs": 436.3496129999994,
+  "ticks": 470,
   "walkwaySegments": 188,
   "walkwayDestinations": 146
 }

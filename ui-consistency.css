@@ -1,0 +1,74 @@
+/* V264 - one type scale, one control height and one spacing rhythm for the chrome panels and dialogs.
+   Loaded after the other panel stylesheets so it settles the size fights between style.css (fixed px),
+   workspace-navigation.css (fixed rem) and compact-ui.css (--f, follows the Interface size setting).
+   The four sizes follow --f exactly like the equipment inspector (inspector-polish.css), so the Small / Standard / Large setting still scales everything.
+   Not touched: the 3D labels, the brand, the big plant statistics and the inspector (it has its own copy of the scale). */
+:root{--t-title:calc(var(--f) + 7px);--t-head:calc(var(--f) + 3px);--t-body:calc(var(--f) + .5px);--t-label:calc(var(--f) - .5px);--ctl-h:40px;--gap-s:8px;--gap-m:12px;--gap-l:18px}
+
+/* The chrome that gets the scale: sidebar, floating panels, dialogs and the stage toolbars. */
+/* Body size: text, buttons, dropdown values and inputs. */
+html :is(.sidebar,#plant-browse-panel,#walkway-panel,#walk-panel,#measure-panel,#section-inspector,#fire-safety-panel,#emergency-station-panel,.workspace-dialog,.view-dock,.stage-options,#focus-bar) :is(p,li,a,summary,button,select,input,textarea,.select-value,.select-option,.check-row,.method-note,.small-note,.detail-note,.task-list button span){font-size:var(--t-body)}
+html .select-popup{font-size:var(--t-body)}
+/* Label size: field labels, eyebrows, helper notes under a control, status lines. */
+html :is(.sidebar,#plant-browse-panel,#walkway-panel,#walk-panel,#measure-panel,#section-inspector,#fire-safety-panel,#emergency-station-panel,.workspace-dialog,.view-dock) :is(label,.field-label,.eyebrow,.small-note,.browse-op-note,#nav-area-help,#nav-model-status,#browse-status,.task-list h3,.stage-title #projection-label){font-size:var(--t-label)}
+html .stage-title #projection-label,html .stage-title #stage-context{font-size:var(--t-label)}
+/* Section heading and panel title. */
+html :is(.sidebar,#plant-browse-panel,#walkway-panel,#walk-panel,#measure-panel,#section-inspector,#fire-safety-panel,#emergency-station-panel) :is(h2,h3){font-size:var(--t-head);line-height:1.3}
+html #plant-browse-panel .browse-heading h3{font-size:var(--t-head)}
+html .workspace-dialog h2{font-size:var(--t-title);line-height:1.25}
+html .workspace-dialog h3{font-size:var(--t-head)}
+html .sidebar .task-list button strong{font-size:var(--t-head)}
+/* Header buttons and the dock share the body size; the brand and its icon keep their own. */
+html header button,html header .edition{font-size:var(--t-body)}
+html header .edition{font-size:var(--t-label)}
+
+/* One control height. Icon-only buttons (x, minus, +) stay square at the same height. */
+html :is(.sidebar,#plant-browse-panel,#walkway-panel,#walk-panel,#measure-panel,#section-inspector,#fire-safety-panel,#emergency-station-panel,.workspace-dialog,.view-dock,.stage-options,header) :is(button,select,input:not([type=checkbox]):not([type=radio]):not([type=range])){min-height:var(--ctl-h)}
+html :is(.sidebar,#plant-browse-panel,#walkway-panel,#walk-panel,#measure-panel,#section-inspector,#fire-safety-panel,#emergency-station-panel,.workspace-dialog) :is(button,input:not([type=checkbox]):not([type=radio]):not([type=range])){padding-inline:var(--gap-m);line-height:1.3}
+html :is(.workspace-dialog,#plant-browse-panel,#walkway-panel) button.select-trigger,html .sidebar button.select-trigger{min-height:var(--ctl-h);padding:6px var(--gap-m)}
+html .workspace-dialog select{min-height:var(--ctl-h);margin-bottom:var(--gap-s)}
+html .sidebar #workspace-tabs button{min-height:var(--ctl-h);padding-inline:4px}
+html .stage .panel-minimize,html #plant-browse-panel #browse-map-toggle,html #plant-browse-panel #browse-exit,html .workspace-dialog .dialog-heading button{min-width:var(--ctl-h);min-height:var(--ctl-h);padding:0}
+html .workspace-dialog .dialog-heading button{font-size:var(--t-title)}
+
+/* Dropdown arrow: the text glyph rendered as a small letter v; draw a proper chevron instead. */
+html .select-chevron{font-size:0;width:8px;height:8px;margin:-4px 4px 0 0;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg)}
+
+/* Spacing rhythm: 8px between controls, 12px between groups. Fixes text pressed against borders and rows of buttons that touch. */
+html .workspace-dialog details{margin:var(--gap-m) 0}
+html .workspace-dialog summary{padding:6px 0;min-height:32px;display:list-item}
+html .workspace-dialog details>summary+*{margin-top:var(--gap-s)}
+html .workspace-dialog .design-settings>*+*,html .workspace-dialog .view-settings>*+*{margin-top:var(--gap-m)}
+html .workspace-dialog .field-label{margin:0 0 6px}
+html .workspace-dialog p{margin:0 0 var(--gap-s)}
+html .workspace-dialog .wide{margin:var(--gap-m) 0}
+html .workspace-dialog .dialog-apply{display:flex;flex-wrap:wrap;align-items:center;gap:var(--gap-s) var(--gap-m);margin-top:var(--gap-l);padding-top:var(--gap-m)}
+html .workspace-dialog .dialog-apply p{flex:1 0 100%;margin:0}
+html #inspection-active .back-link,html .sidebar-content .back-link,html .sidebar .back-link{padding:6px var(--gap-m);min-height:var(--ctl-h);margin:0 0 var(--gap-m)}
+html .sidebar-content>*+*{margin-top:var(--gap-s)}
+html .sidebar-content :is(button,summary)+:is(button,details,p,div){margin-top:var(--gap-s)}
+html #plant-browse-panel :is(.browse-op-row,#browse-arrow-actions,#browse-photo-tools){gap:var(--gap-s)}
+html #plant-browse-panel .browse-op-row{margin:var(--gap-s) 0}
+html #plant-browse-panel :is(#browse-panel-content,.browse-operator)>*+*{margin-top:var(--gap-s)}
+html #plant-browse-panel :is(p,label){margin-block:0}
+html #plant-browse-panel label{display:block;margin-bottom:6px}
+html #plant-browse-panel :is(summary,.browse-heading){margin-bottom:var(--gap-s)}
+html #plant-browse-panel .browse-op-row button{flex:1 1 96px}
+html #walkway-panel :is(button,select){margin-bottom:var(--gap-s)}
+html .stage-options,html .view-dock .dock-group{gap:var(--gap-s)}
+
+/* Panel titles (the strong or h3 that heads a floating panel), legends, outputs and the small spans inside lists. */
+html :is(#fire-safety-panel,#emergency-station-panel,#walkway-panel,#walk-panel,#measure-panel,#section-inspector,.sidebar,#dock-visibility) :is(strong,output,legend){font-size:var(--t-body)}
+html :is(.section-inspector-heading,.walk-heading,#measure-panel .inspector-top,.browse-heading) :is(strong,h3){font-size:var(--t-head)}
+html .dock-info,html .dock-info *{font-size:var(--t-label)}
+html header span:not(.brand-icon):not(button span){font-size:var(--t-label)}
+html :is(#panel-tree,#panel-product,.journey-card) span:not(.select-value):not(.select-chevron):not(.option-check){font-size:var(--t-label)}
+html #panel-thermal span:not(.select-value):not(.select-chevron):not(.option-check){font-size:var(--t-body)}
+/* Icon-only glyph buttons (minus, x) share one size. */
+html :is(.panel-minimize,#slice-exit,#browse-exit,#browse-map-toggle,[id$=-close]){font-size:20px;line-height:1}
+html .view-dock #pivot-status,html .view-dock .navigation-hint{font-size:var(--t-label)}
+html .assessment-notice span,html :is(.sidebar,#panel-thermal,.workspace-dialog,#section-inspector,#measure-panel) :is(td,th,dd,dt,caption,figcaption){font-size:var(--t-body)}
+html #section-inspector #slice-exit{font-size:20px}
+html .pfd-temperature-record p{font-size:var(--t-body)!important}
+html .pfd-temperature-record .pfd-temperature-value{font-size:var(--t-title)!important}
+html #plant-browse-panel :is(div,details):not(.browse-op-row):not(#browse-arrow-actions):not(#browse-photo-tools):not(.browse-heading):not(.controlled-select):not(.select-popup)>*+*{margin-top:var(--gap-s)}
