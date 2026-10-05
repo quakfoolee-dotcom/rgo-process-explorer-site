@@ -53,17 +53,17 @@ function createFigure(){
  lL.end.position.z=.05;lR.end.position.z=.05;
  const tablet=add(new T.BoxGeometry(.16,.22,.015),M(0x1a2a3a),V(0,-.32,.06),aR.el);tablet.visible=false;
  g.traverse(o=>{if(o.isMesh)o.frustumCulled=false;});
- function pose(mode,t,phase){
+ // aim: arm elevation above horizontal toward the item worked (radians) and how far the elbows bend (0 straight)
+ function pose(mode,t,phase,aim={elev:0,bend:.5}){
   const s=Math.sin(phase),c=Math.cos(phase),set=(l,a,b,z=0)=>{l.sh.rotation.set(a,0,z);l.el.rotation.set(b,0,0);};
   tablet.visible=mode==='inspect';body.position.y=0;head.rotation.set(0,0,0);
   if(mode==='walk'||mode==='stair'){const A=mode==='stair'?.75:.5,K=mode==='stair'?1.1:.7;set(lL,-s*A,Math.max(0,s)*K);set(lR,s*A,Math.max(0,-s)*K);set(aL,s*.45,-.35);set(aR,-s*.45,-.35);body.position.y=Math.abs(c)*.03;}
-  else if(mode==='wheel'){const w=t*3.2;set(lL,0,0);set(lR,0,0);set(aL,-1.25+.22*Math.sin(w),-.55,.18*Math.cos(w));set(aR,-1.25-.22*Math.sin(w),-.55,-.18*Math.cos(w));}
-  else if(mode==='wheelHigh'){const w=t*3.2;set(lL,0,0);set(lR,0,0);set(aL,-2.5+.2*Math.sin(w),-.2,.15*Math.cos(w));set(aR,-2.5-.2*Math.sin(w),-.2,-.15*Math.cos(w));}
+  else if(mode==='wheel'||mode==='wheelHigh'){const w=t*3.2,base=-(Math.PI/2+aim.elev),e=-aim.bend;set(lL,0,0);set(lR,0,0);set(aL,base+.22*Math.sin(w),e,.18*Math.cos(w));set(aR,base-.22*Math.sin(w),e,-.18*Math.cos(w));head.rotation.x=-aim.elev*.5;}
   else if(mode==='inspect'){set(lL,0,0);set(lR,0,0);set(aR,-.9,-1.1);set(aL,-1.35+.08*Math.sin(t*2),-.15);head.rotation.x=Math.sin(t*1.3)*.15;}
-  else if(mode==='press'){set(lL,0,0);set(lR,0,0);set(aL,.05,-.2);set(aR,-1.2+.12*Math.max(0,Math.sin(t*5)),-.25);}
+  else if(mode==='press'){set(lL,0,0);set(lR,0,0);set(aL,.05,-.2);set(aR,-(Math.PI/2+aim.elev)+.12*Math.max(0,Math.sin(t*5)),-aim.bend);head.rotation.x=-aim.elev*.5;}
   else{set(lL,0,0);set(lR,0,0);set(aL,.05,-.15,-.05);set(aR,.05,-.15,.05);body.position.y=Math.sin(t*1.5)*.004;}
  }
- return {group:g,pose};
+ return {group:g,pose,armPitch:()=>aR.sh.rotation.x};
 }
 
 const nf=(n,d=0)=>Number(n).toFixed(d);
@@ -142,12 +142,24 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
   logEntry(s.tag,task,result,flag);
   st.cur=null;st.mode='idle';st.loc=st.dest;
  }
+ // Arms point at the item worked: elevation from the shoulder to the station, elbows straighter the further it is.
+ const SHOULDER=1.47,ARM=.62;
+ st.aim={elev:0,bend:.5};
+ function aimToward(dt,pose){
+  let elev=0,bend=.5;
+  if((pose==='wheel'||pose==='wheelHigh'||pose==='press')&&st.cur){
+   const s=st.cur.station,dx=s.x-st.pos.x,dz=s.z-st.pos.z,d=Math.hypot(dx,dz),dy=s.y-(st.pos.y+SHOULDER);
+   elev=Math.max(-.9,Math.min(1.4,Math.atan2(dy,Math.max(.05,d))));
+   bend=Math.max(.05,Math.min(1.5,(1-Math.hypot(d,dy)/ARM)*1.8));
+  }
+  const k=Math.min(1,dt*8);st.aim.elev+=(elev-st.aim.elev)*k;st.aim.bend+=(bend-st.aim.bend)*k;return st.aim;
+ }
  function workPose(){
   const t=st.cur,s=t.station;
   if(t.kind==='reading'||(t.kind==='check-valve'&&s.actuation==='self-acting'))return 'inspect';
   if(t.kind==='pump'||(t.kind==='operate-valve'&&s.actuation==='actuated'))return 'press';
   if(t.kind==='goto')return 'idle';
-  return s.y>st.pos.y+1.7?'wheelHigh':'wheel';
+  return 'wheel';
  }
 
  // ---- motion
@@ -229,7 +241,7 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
    faceStation(dt);st.work+=dt;pose=workPose();
    if(st.work>=WORK[st.cur.kind]/Math.max(1,st.fast*.6))finishWork();
   }
-  figure.pose(pose,st.t,st.phase);
+  figure.pose(pose,st.t,st.phase,aimToward(dt,pose));
   group.position.copy(st.pos);group.rotation.y=st.yaw;
   if(st.cur)show(describe(st.cur)+(st.mode==='walk'&&st.queue.length?' · '+st.queue.length+' more':''));
   else if(st.msgT>0){st.msgT-=dt;show(st.msg);}
@@ -272,7 +284,7 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
   get view(){return st.view;},
   show(){st.shown=true;group.visible=st.view!=='ride';$('browse-operator').hidden=false;},
   hide(){st.shown=false;group.visible=false;label.hidden=true;interrupt();setView('own',{restore:false});},
-  getState:()=>({shown:st.shown,mode:st.mode,view:st.view,yaw:st.yaw,position:[st.pos.x,st.pos.y,st.pos.z],queue:st.queue.length,busy:!!st.cur,log:st.log.length,stations:stations.length,simTime:st.simT}),
+  getState:()=>({shown:st.shown,mode:st.mode,view:st.view,yaw:st.yaw,aim:{...st.aim},armPitch:figure.armPitch(),position:[st.pos.x,st.pos.y,st.pos.z],queue:st.queue.length,busy:!!st.cur,log:st.log.length,stations:stations.length,simTime:st.simT}),
   get log(){return st.log;},
   dispose(){scene.remove(group);label.remove();}
  };
