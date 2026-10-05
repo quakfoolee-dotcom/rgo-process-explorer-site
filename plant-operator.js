@@ -62,18 +62,25 @@ function createFigure(){
  // aim: arm elevation above horizontal toward the item worked (radians) and how far the elbows bend (0 straight)
  function pose(mode,t,phase,aim={elev:0,bend:.5,turn:-.55}){
   const s=Math.sin(phase),c=Math.cos(phase),set=(l,a,b,z=0)=>{l.sh.rotation.set(a,0,z);l.el.rotation.set(b,0,0);};
-  tablet.visible=mode==='inspect';body.position.y=0;head.rotation.set(0,0,0);
+  tablet.visible=mode==='inspect';body.position.y=0;body.rotation.x=0;head.rotation.set(0,0,0);
   if(mode==='walk'||mode==='stair'){const A=mode==='stair'?.75:.5,K=mode==='stair'?1.1:.7;set(lL,-s*A,Math.max(0,s)*K);set(lR,s*A,Math.max(0,-s)*K);set(aL,s*.45,-.35);set(aR,-s*.45,-.35);body.position.y=Math.abs(c)*.03;}
   else if(mode==='wheel'||mode==='wheelHigh'){const w=t*3.2,base=-(Math.PI/2+aim.elev),e=-aim.bend;set(lL,0,0);set(lR,0,0);set(aL,base+.22*Math.sin(w),e,.18*Math.cos(w));set(aR,base-.22*Math.sin(w),e,-.18*Math.cos(w));head.rotation.x=-aim.elev*.5;}
   else if(mode==='inspect'){set(lL,0,0);set(lR,0,0);set(aR,-.55,-1.85,-.22);set(aL,-.6+.04*Math.sin(t*2),-1.7,.25);head.rotation.x=.28+Math.sin(t*1.3)*.05;tablet.rotation.y+=((aim.turn??-.55)-tablet.rotation.y)*.3;}
-  else if(mode==='press'){set(lL,0,0);set(lR,0,0);set(aL,.05,-.2);set(aR,-(Math.PI/2+aim.elev)+.12*Math.max(0,Math.sin(t*5)),-aim.bend);head.rotation.x=-aim.elev*.5;}
+  else if(mode==='press'){
+   // A push, hold, release and rest every 1.1 s: the forearm folds back, shoots out to the control, holds, and folds back, with a lean into it.
+   const u=(t/1.1)%1,push=u<.3?Math.sin(u/.3*Math.PI/2):u<.45?1:u<.75?Math.cos((u-.45)/.3*Math.PI/2):0;
+   set(lL,0,0);set(lR,0,0);set(aL,.05,-.2);set(aR,-(Math.PI/2+aim.elev),-(aim.bend+1.5*(1-push)));
+   body.rotation.x=.12*push;head.rotation.x=-aim.elev*.5;}
   else{set(lL,0,0);set(lR,0,0);set(aL,.05,-.15,-.05);set(aR,.05,-.15,.05);body.position.y=Math.sin(t*1.5)*.004;}
  }
  const tp=new T.Vector3(),tq=new T.Quaternion(),gq=new T.Quaternion();
  // Tablet centre and screen normal in the operator's own frame (+z forward, +y up), for tests.
  function tabletInfo(){g.updateMatrixWorld(true);tablet.getWorldPosition(tp);tablet.getWorldQuaternion(tq);g.getWorldQuaternion(gq);
   const inv=gq.clone().invert(),pos=g.worldToLocal(tp.clone()),normal=new T.Vector3(0,0,1).applyQuaternion(tq).applyQuaternion(inv);return {visible:tablet.visible,pos:[pos.x,pos.y,pos.z],normal:[normal.x,normal.y,normal.z]};}
- return {group:g,pose,armPitch:()=>aR.sh.rotation.x,tabletInfo,tablet};
+ const sp=new T.Vector3(),hp=new T.Vector3();
+ // Distance from the shoulder to the glove, for tests of how far a push extends.
+ function handReach(){g.updateMatrixWorld(true);aR.sh.getWorldPosition(sp);aR.end.getWorldPosition(hp);return sp.distanceTo(hp);}
+ return {group:g,pose,armPitch:()=>aR.sh.rotation.x,tabletInfo,tablet,handReach};
 }
 
 const nf=(n,d=0)=>Number(n).toFixed(d);
@@ -301,7 +308,7 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
   get view(){return st.view;},
   show(){st.shown=true;group.visible=st.view!=='ride';$('browse-operator').hidden=false;},
   hide(){st.shown=false;group.visible=false;label.hidden=true;interrupt();setView('own',{restore:false});},
-  getState:()=>({shown:st.shown,mode:st.mode,view:st.view,yaw:st.yaw,aim:{...st.aim},armPitch:figure.armPitch(),tablet:figure.tabletInfo(),position:[st.pos.x,st.pos.y,st.pos.z],queue:st.queue.length,busy:!!st.cur,log:st.log.length,stations:stations.length,simTime:st.simT}),
+  getState:()=>({shown:st.shown,mode:st.mode,view:st.view,yaw:st.yaw,aim:{...st.aim},armPitch:figure.armPitch(),handReach:figure.handReach(),tablet:figure.tabletInfo(),position:[st.pos.x,st.pos.y,st.pos.z],queue:st.queue.length,busy:!!st.cur,log:st.log.length,stations:stations.length,simTime:st.simT}),
   get log(){return st.log;},
   dispose(){scene.remove(group);label.remove();}
  };
