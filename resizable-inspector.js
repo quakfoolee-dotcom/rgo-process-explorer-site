@@ -1,6 +1,6 @@
 const WIDTH_STORAGE_KEY='rgo-inspector-width';
 const HEIGHT_STORAGE_KEY='rgo-inspector-height';
-export const DEFAULT_INSPECTOR_WIDTH=340;
+export const DEFAULT_INSPECTOR_WIDTH=400;
 export const DEFAULT_INSPECTOR_HEIGHT=520;
 export const MIN_INSPECTOR_WIDTH=300;
 export const MIN_INSPECTOR_HEIGHT=320;

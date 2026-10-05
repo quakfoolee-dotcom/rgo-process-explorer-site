@@ -1,4 +1,4 @@
-#inspector{width:var(--inspector-width,340px);height:var(--inspector-height,520px);max-width:82%;bottom:auto;max-height:calc(100% - var(--stage-toolbar-space,190px) - 97px);display:flex;flex-direction:column;padding:0;overflow:hidden;container-type:inline-size}
+#inspector{width:var(--inspector-width,400px);height:var(--inspector-height,520px);max-width:82%;bottom:auto;max-height:calc(100% - var(--stage-toolbar-space,190px) - 97px);display:flex;flex-direction:column;padding:0;overflow:hidden;container-type:inline-size}
 #inspector>*{min-width:0}
 #inspector .inspector-top{position:relative;flex:0 0 auto;gap:12px;margin:0;padding:12px 18px;background:#142335;border-bottom:1px solid #334b61;border-radius:8px 8px 0 0}
 #inspector #part-id{min-width:0;overflow-wrap:anywhere}

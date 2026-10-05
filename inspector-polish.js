@@ -130,5 +130,61 @@ function initKeyFacts() {
   build();
 }
 
-function start() { init(); initKeyFacts(); }
+// Phase 3, part 2 (V272): in the part (component) view, name the equipment the part belongs to and keep that equipment's data
+// folded away, so the part's own details come first. The page keeps the original back button (hidden by CSS at part level).
+function initParent() {
+  const inspector = document.getElementById('inspector'), title = document.getElementById('part-name'), back = document.getElementById('back-equipment');
+  if (!inspector || !title || !back || document.getElementById('part-of')) return;
+  const block = document.createElement('div');
+  block.id = 'part-of'; block.className = 'part-of'; block.hidden = true;
+  const label = document.createElement('span'); label.className = 'part-of-label'; label.textContent = 'Part of';
+  const owner = document.createElement('strong'); owner.id = 'part-of-name';
+  const open = document.createElement('button'); open.type = 'button'; open.id = 'part-of-open'; open.textContent = 'View overview';
+  open.onclick = () => back.click();
+  block.append(label, owner, open);
+  title.after(block);
+
+  let lastPart = '', toggle = null;
+  function equipmentName(tag) {
+    for (const o of document.getElementById('explore-equipment')?.options || [])
+      if (o.textContent.startsWith(tag + ' · ')) return o.textContent.slice(tag.length + 3).trim();
+    return '';
+  }
+  function sync() {
+    const part = inspector.dataset.level === 'component', m = /^← (.+) overview$/.exec((back.textContent || '').trim());
+    const host = document.getElementById('semantic-inspector');
+    if (!part || !m) {
+      block.hidden = true; lastPart = '';
+      if (host) { delete host.dataset.parent; delete host.dataset.collapsed; const h = host.querySelector('.semantic-heading h3'); if (h) h.textContent = 'Semantic Plant Core'; }
+      return;
+    }
+    const tag = m[1], name = equipmentName(tag);
+    owner.textContent = name ? tag + ' · ' + name : tag;
+    open.textContent = 'View ' + tag + ' overview';
+    block.hidden = false;
+    if (!host) return;
+    const heading = host.querySelector('.semantic-heading');
+    if (heading && !toggle) {
+      toggle = document.createElement('button'); toggle.type = 'button'; toggle.id = 'semantic-collapse'; toggle.className = 'semantic-collapse';
+      toggle.onclick = () => { host.dataset.collapsed = host.dataset.collapsed === 'true' ? 'false' : 'true'; label2(); };
+      heading.append(toggle);
+    }
+    const h3 = host.querySelector('.semantic-heading h3'); if (h3) h3.textContent = tag + ' equipment data';
+    host.dataset.parent = 'true';
+    const id = (document.getElementById('part-id')?.textContent || '').trim();
+    if (id !== lastPart) { lastPart = id; host.dataset.collapsed = 'true'; }
+    label2();
+    function label2() { if (toggle) { const c = host.dataset.collapsed === 'true'; toggle.textContent = c ? 'Show' : 'Hide'; toggle.setAttribute('aria-expanded', String(!c)); } }
+  }
+  let timer = 0;
+  const schedule = () => { clearTimeout(timer); timer = setTimeout(sync, 0); };
+  const observer = new MutationObserver(schedule);
+  observer.observe(inspector, {attributes: true, attributeFilter: ['data-level', 'hidden']});
+  observer.observe(back, {childList: true, characterData: true, subtree: true});
+  const id = document.getElementById('part-id'); if (id) observer.observe(id, {childList: true, characterData: true, subtree: true});
+  const body = inspector.querySelector('.inspector-body'); if (body) observer.observe(body, {childList: true});
+  sync();
+}
+
+function start() { init(); initKeyFacts(); initParent(); }
 if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();

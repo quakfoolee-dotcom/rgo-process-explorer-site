@@ -97,3 +97,14 @@
 #inspector .key-facts dd{margin:0;font-size:var(--ip-body);font-weight:600;line-height:1.4;overflow-wrap:anywhere}
 #inspector .key-facts .status-badges{margin:0}
 #inspector[data-level=equipment] :is(#part-context,#part-status,#equipment-facts dl,#equipment-count){display:none}
+/* V272: part view - the equipment the part belongs to, and that equipment's data folded behind a toggle. */
+#inspector .part-of{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .75rem;margin:.4rem 0 .7rem;padding:.5rem .75rem;border-left:3px solid #8fd3c4;font-size:var(--ip-body)}
+#inspector .part-of[hidden]{display:none}
+#inspector .part-of-label{flex:0 0 100%;font-size:var(--ip-label);text-transform:uppercase;letter-spacing:.3px;color:#a9c6d9}
+#inspector .part-of strong{flex:1 1 12ch;min-width:0;font-size:var(--ip-body);font-weight:600;overflow-wrap:anywhere}
+#inspector .part-of button{font-size:var(--ip-body)}
+#inspector[data-level=component] #back-equipment{display:none}
+#inspector .semantic-collapse{display:none;margin-left:auto;min-height:32px;padding:.2rem .75rem;font-size:var(--ip-label)}
+#inspector #semantic-inspector[data-parent=true] .semantic-collapse{display:inline-block}
+#inspector #semantic-inspector[data-parent=true] .semantic-version{display:none}
+#inspector #semantic-inspector[data-parent=true][data-collapsed=true] :is(.semantic-body,[data-semantic-status]){display:none}
