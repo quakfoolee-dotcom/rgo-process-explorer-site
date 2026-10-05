@@ -27,7 +27,7 @@ html :is(.sidebar,#plant-browse-panel,#walkway-panel,#walk-panel,#measure-panel,
 html :is(.sidebar,#plant-browse-panel,#walkway-panel,#walk-panel,#measure-panel,#section-inspector,#fire-safety-panel,#emergency-station-panel,.workspace-dialog) :is(button,input:not([type=checkbox]):not([type=radio]):not([type=range])){padding-inline:var(--gap-m);line-height:1.3}
 html :is(.workspace-dialog,#plant-browse-panel,#walkway-panel) button.select-trigger,html .sidebar button.select-trigger{min-height:var(--ctl-h);padding:6px var(--gap-m)}
 html .workspace-dialog select{min-height:var(--ctl-h);margin-bottom:var(--gap-s)}
-html .sidebar #workspace-tabs button{min-height:var(--ctl-h);padding-inline:4px}
+html .sidebar #workspace-tabs button:not(#_1):not(#_2){min-height:var(--ctl-h);padding:4px}
 html .stage .panel-minimize,html #plant-browse-panel #browse-map-toggle,html #plant-browse-panel #browse-exit,html .workspace-dialog .dialog-heading button{min-width:var(--ctl-h);min-height:var(--ctl-h);padding:0}
 html .workspace-dialog .dialog-heading button{font-size:var(--t-title)}
 
