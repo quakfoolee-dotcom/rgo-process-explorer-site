@@ -4,12 +4,12 @@
   "modelEquipmentId": 122028,
   "bindingScope": "station-assembly",
   "location": {
-    "x": 84.9,
-    "z": -17,
-    "yawRad": 1.5707963267948966,
+    "x": 81.8,
+    "z": -12,
+    "yawRad": 0,
     "walkPoint": [
-      86.5,
-      -17
+      81.75,
+      -10.5
     ]
   },
   "bindingRule": "Indicative station geometry and access screening; no compliance or commissioning claim."

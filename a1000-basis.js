@@ -26,7 +26,7 @@ export const A1000_EQUIPMENT={
  140:pump('M-1001','Polymer make-up and dosing · ≈ 264 kg/d (FEED-PE-DAT-128)',48.3,-21.6,'wwchem'),
  141:pump('P-1005','Equalization transfer pump',24.5,-4,'wwcollect'),
  145:pump('P-1009','Underflow pumps A/B · 18 m³/h (FEED-PE-DAT-123)',52.5,-4,'wwseparate'),
- 147:{tag:'BL-A2000',label:'A-1000 effluent battery limit (blinded)',x:60,z:-13.5,labelY:2.7,areaId:'A-2000',primaryOperation:'ropretreat',designStatus:'interface',geometryStatus:'Positively blinded battery limit at the end of the A-1000 effluent line (D-A2000-03: the effluent no longer feeds A-2000); discharge route and approval not assigned',reviewNote:'The A-2000 package takes clean sources only (condensate and city make-up). Footprint, inventory and site access remain provisional.'},
+ 147:{tag:'BL-EFF1000',label:'A-1000 effluent battery limit (blinded)',x:56.6,z:-13.5,labelY:2.7,areaId:'A-2000',primaryOperation:'ropretreat',designStatus:'interface',geometryStatus:'Positively blinded battery limit at the end of the A-1000 effluent line (D-A2000-03: the effluent no longer feeds A-2000); discharge route and approval not assigned',reviewNote:'The A-2000 package takes clean sources only (condensate and city make-up). Footprint, inventory and site access remain provisional.'},
  148:{tag:'PL-1001',label:'A-1000 containment and access',x:15,z:-16,labelY:2.5,areaId:'A-1000',primaryOperation:'wwcollect',designStatus:'proposed',geometryStatus:'Proposed containment and access envelopes; civil design unqualified'},
  149:{tag:'BIN-1001',label:'Sludge roll-off containers · 2 × 40 m³ (FEED-PE-DAT-126)',x:50.4,z:-19.5,labelY:2.2,areaId:'A-1000',primaryOperation:'wwseparate',designStatus:'proposed',geometryStatus:'Proposed removable sludge container; waste classification and capacity HOLD'},
  150:tank('T-1007','Pre-G gravity-decant receiving sump',-25.5,-29.2,1.15,5,'wwcollect',{designStatus:'proposed',geometryStatus:'Proposed low receiver preserves descending Pre-G decant; capacity and vent compatibility HOLD'}),
@@ -40,7 +40,7 @@ export const A1000_EQUIPMENT={
 export const A1000_RETIRED={'T-1007':['D-A1000-05','Pre-G decant receiver — the A-160 decant no longer exists (RS7)'],'P-1011':['D-A1000-05','Pre-G decant lift — no decant (RS7)']};
 for(const e of Object.values(A1000_EQUIPMENT)){const r=A1000_RETIRED[e.tag];if(r){e.retired={decisionId:r[0],reason:r[1],basis:'D-MDL-01 MC-1'};e.label+=` · RETIRED (${r[0]})`;}}
 export const A1000_IDS=Object.keys(A1000_EQUIPMENT).map(Number);
-export const WATER_AREA_LAYOUT={units:'m',wastewater:{min:[14,0,-28],max:[58,10,2]},reclaimed:{min:[60,0,-28],max:[95,10,2]},futureExpansion:{min:[105,0,-28],max:[116,10,2]},note:'Approved relative location only. Block dimensions are provisional reservations; no surveyed building, road, wind or site boundary supplied.'};
+export const WATER_AREA_LAYOUT={units:'m',wastewater:{min:[14,0,-28],max:[58,10,2]},reclaimed:{min:[60,0,-22],max:[95,10,2]},futureExpansion:{min:[105,0,-28],max:[116,10,2]},note:'Approved relative location only. Block dimensions are provisional reservations; no surveyed building, road, wind or site boundary supplied.'};
 const zone=(id,kind,min,max,note,areaIds=['A-1000'])=>({id,kind,areaIds,min,max,note,designStatus:'proposed'});
 export const WATER_ACCESS_ZONES=[
  zone('WALK-WATER-FRONT','pedestrian',[14,.02,2],[116,2.32,3.5],'Continuous treatment / RO approach connected to the east plant spine',['A-1000','A-2000']),

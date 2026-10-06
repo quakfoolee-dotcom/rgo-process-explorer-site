@@ -1,28 +1,28 @@
 {
-  "version": "b430deb",
+  "version": "d2166d5",
   "date": "2026-10-06",
   "basis": "Prepared FEED baseline; component counts are model objects, not procurement quantities.",
-  "parts": 146158,
+  "parts": 145869,
   "counts": {
     "shell": 1869,
     "head": 2548,
-    "fastener": 68255,
+    "fastener": 68215,
     "internal": 9989,
-    "frame": 25871,
+    "frame": 25630,
     "pump": 1944,
-    "pipe": 31349,
+    "pipe": 31341,
     "valve": 4333
   },
   "timing": {
     "source": "prepared",
-    "downloadMs": 147.138257,
-    "inflateMs": 1177.1780310000001,
-    "reconstructMs": 7426.363746999999,
-    "decodeMs": 8603.649689,
-    "totalMs": 8764.329633000001
+    "downloadMs": 90.600632,
+    "inflateMs": 1075.167046,
+    "reconstructMs": 7265.084333999999,
+    "decodeMs": 8340.331471,
+    "totalMs": 8439.113709
   },
-  "maxHeartbeatGapMs": 627.5964699999995,
-  "ticks": 485,
-  "walkwaySegments": 186,
-  "walkwayDestinations": 145
+  "maxHeartbeatGapMs": 624.5534790000002,
+  "ticks": 478,
+  "walkwaySegments": 190,
+  "walkwayDestinations": 144
 }

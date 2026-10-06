@@ -252,12 +252,12 @@ export const EMERGENCY_ACCESS_LAYOUT={
     {
       "id": "PW-ES-020",
       "a": [
-        85.25,
-        -25.25
+        90.75,
+        -9.5
       ],
       "b": [
-        85.25,
-        -25
+        91,
+        -9.5
       ],
       "width": 1.2,
       "emergencyAccess": true
@@ -265,12 +265,12 @@ export const EMERGENCY_ACCESS_LAYOUT={
     {
       "id": "PW-ES-021",
       "a": [
-        20.25,
-        -20
+        83,
+        -14
       ],
       "b": [
-        20.25,
-        -15.25
+        83,
+        -10.5
       ],
       "width": 1.2,
       "emergencyAccess": true
@@ -278,6 +278,45 @@ export const EMERGENCY_ACCESS_LAYOUT={
     {
       "id": "PW-ES-022",
       "a": [
+        80.5,
+        -11
+      ],
+      "b": [
+        80.5,
+        -10.5
+      ],
+      "width": 1.2,
+      "emergencyAccess": true
+    },
+    {
+      "id": "PW-ES-023",
+      "a": [
+        80.5,
+        -10.5
+      ],
+      "b": [
+        81.75,
+        -10.5
+      ],
+      "width": 1.2,
+      "emergencyAccess": true
+    },
+    {
+      "id": "PW-ES-024",
+      "a": [
+        20.25,
+        -20
+      ],
+      "b": [
+        20.25,
+        -15.25
+      ],
+      "width": 1.2,
+      "emergencyAccess": true
+    },
+    {
+      "id": "PW-ES-025",
+      "a": [
         28.75,
         -20
       ],
@@ -289,7 +328,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
       "emergencyAccess": true
     },
     {
-      "id": "PW-ES-023",
+      "id": "PW-ES-026",
       "a": [
         36.5,
         -20
@@ -302,7 +341,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
       "emergencyAccess": true
     },
     {
-      "id": "PW-ES-024",
+      "id": "PW-ES-027",
       "a": [
         49.25,
         -24.75
@@ -315,7 +354,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
       "emergencyAccess": true
     },
     {
-      "id": "PW-ES-025",
+      "id": "PW-ES-028",
       "a": [
         49.25,
         -24.75
@@ -328,7 +367,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
       "emergencyAccess": true
     },
     {
-      "id": "PW-ES-026",
+      "id": "PW-ES-029",
       "a": [
         56,
         -26
@@ -509,44 +548,52 @@ export const EMERGENCY_ACCESS_LAYOUT={
       "label": "A-2000 · CIP-2001 chemical-service approach",
       "area": "A-2000",
       "point": [
-        85.75,
-        -17.5
+        90.75,
+        -9.5
       ],
-      "walkPoint": null
+      "walkPoint": [
+        90.75,
+        -9.5
+      ],
+      "linkLengthM": 0.25
     },
     {
       "id": "EXP-2001-WASTE",
       "label": "A-2000 · Spent-CIP transfer",
       "area": "A-2000",
       "point": [
-        85.25,
-        -25
+        90.25,
+        -17
       ],
-      "walkPoint": [
-        85.25,
-        -25
-      ],
-      "linkLengthM": 0.25
+      "walkPoint": null
     },
     {
       "id": "EXP-2001-DOSE",
       "label": "A-2000 · Antiscalant dosing service",
       "area": "A-2000",
       "point": [
-        78,
-        -22
+        83,
+        -14
       ],
-      "walkPoint": null
+      "walkPoint": [
+        83,
+        -14
+      ],
+      "linkLengthM": 3.5
     },
     {
       "id": "EXP-2001-RO",
       "label": "A-2000 · RO cleaning / membrane service",
       "area": "A-2000",
       "point": [
-        79,
-        -12
+        80.5,
+        -11
       ],
-      "walkPoint": null
+      "walkPoint": [
+        80.5,
+        -11
+      ],
+      "linkLengthM": 1.75
     },
     {
       "id": "EXP-1001-NAOH",
@@ -637,16 +684,8 @@ export const EMERGENCY_ACCESS_LAYOUT={
       "label": "A-700 · Off-gas equipment service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
     },
     {
-      "id": "EXP-2001-CIP",
-      "label": "A-2000 · CIP-2001 chemical-service approach: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
-    },
-    {
-      "id": "EXP-2001-DOSE",
-      "label": "A-2000 · Antiscalant dosing service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
-    },
-    {
-      "id": "EXP-2001-RO",
-      "label": "A-2000 · RO cleaning / membrane service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+      "id": "EXP-2001-WASTE",
+      "label": "A-2000 · Spent-CIP transfer: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
     },
     {
       "id": "EXP-1004-HCL",

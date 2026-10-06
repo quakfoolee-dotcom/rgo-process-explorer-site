@@ -33,12 +33,12 @@
     {
       "property": "location reservation",
       "value": {
-        "x": 85.25,
-        "z": -26.85,
+        "x": 92.4,
+        "z": -18.4,
         "yawRad": 0,
         "walkPoint": [
-          85.25,
-          -25.25
+          92.5,
+          -16.75
         ]
       },
       "source": "MODEL-A6000-EMERGENCY",

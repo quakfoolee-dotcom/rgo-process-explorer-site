@@ -1,9 +1,9 @@
 {
-  "assetId": "BL-A2000",
+  "assetId": "BL-EFF1000",
   "properties": [
     {
       "property": "identity",
-      "value": "BL-A2000",
+      "value": "BL-EFF1000",
       "source": "MODEL-A1000",
       "revision": "V150 / 0f89c6bb63ec5c5127db6f48f8d1843733c0b83c",
       "page": null,

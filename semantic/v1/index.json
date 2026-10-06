@@ -3158,19 +3158,19 @@
       }
     },
     {
-      "assetId": "BL-A2000",
+      "assetId": "BL-EFF1000",
       "area": "A-2000",
       "equipmentId": 147,
       "recordScope": "external-interface",
       "endpoints": {
-        "assets": "./assets/BL-A2000.json",
-        "relationships": "./relationships/BL-A2000.json",
-        "streams": "./streams/BL-A2000.json",
-        "documents": "./documents/BL-A2000.json",
-        "state": "./state/BL-A2000.json",
-        "geometry": "./geometry/BL-A2000.json",
-        "provenance": "./provenance/BL-A2000.json",
-        "instruments": "./instruments/BL-A2000.json"
+        "assets": "./assets/BL-EFF1000.json",
+        "relationships": "./relationships/BL-EFF1000.json",
+        "streams": "./streams/BL-EFF1000.json",
+        "documents": "./documents/BL-EFF1000.json",
+        "state": "./state/BL-EFF1000.json",
+        "geometry": "./geometry/BL-EFF1000.json",
+        "provenance": "./provenance/BL-EFF1000.json",
+        "instruments": "./instruments/BL-EFF1000.json"
       }
     },
     {
@@ -7994,11 +7994,11 @@
       "type": "GeometryBinding"
     },
     {
-      "id": "BL-A2000",
+      "id": "BL-EFF1000",
       "type": "ExternalInterface"
     },
     {
-      "id": "GEOMETRY-BL-A2000",
+      "id": "GEOMETRY-BL-EFF1000",
       "type": "GeometryBinding"
     },
     {
@@ -10006,7 +10006,7 @@
       "P-1009"
     ],
     "147": [
-      "BL-A2000"
+      "BL-EFF1000"
     ],
     "148": [
       "PL-1001"
