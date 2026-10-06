@@ -1,6 +1,6 @@
 {
   "assetId": "BL-A2000",
-  "name": "A-2000 interarea tie-in context",
+  "name": "A-1000 effluent battery limit context (blinded)",
   "assetClassId": "ExternalInterface",
   "status": "proposed",
   "identityStatus": "model-derived; tag qualification open",
@@ -11,7 +11,7 @@
     "system": "A-1000 wastewater treatment context",
     "parentAsset": null
   },
-  "processFunction": "A-2000 interarea tie-in context",
+  "processFunction": "A-1000 effluent battery limit context (blinded)",
   "handledMaterials": [],
   "design": {
     "capacityM3": null,
