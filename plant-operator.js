@@ -256,13 +256,20 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
   // Head-on on a walkway: both keep to their own right. A higher-numbered operator waits behind a walker it would catch,
   // and everyone keeps about a metre and a half from anyone standing still; an operator who is idle and in the way steps aside.
   const isIdle=o=>!o.st.cur&&o.st.queue.length===0&&o.st.mode==='idle';
+  // The nearest walkway point 1.2 to 4 m from here that is further from whoever is waiting than I am (never back past them).
   function asideHit(from){
-   let best=null;
-   for(let k=0;k<12;k++){
-    const a=k*Math.PI/6,p=[st.pos.x+Math.sin(a)*1.8,st.pos.z+Math.cos(a)*1.8],h=network.nearest(p,.3);
-    if(!h||Math.abs(edgeElevation(h.edge,h.t)-st.pos.y)>.4)continue;
-    const dFrom=Math.hypot(h.point[0]-from.x,h.point[1]-from.z),dMe=Math.hypot(st.pos.x-from.x,st.pos.z-from.z);if(dFrom<dMe+1)continue;// away from whoever is waiting, never past them
-    if(!best||dFrom>best.dFrom)best={edge:h.edge,t:h.t,point:h.point,dFrom};
+   let best=null;const dMe=Math.hypot(st.pos.x-from.x,st.pos.z-from.z);
+   for(const edge of network.edges){
+    if(edge.stair)continue;
+    const near=projectToEdge([st.pos.x,st.pos.z],edge);if(near.distance>4.5)continue;
+    const n=Math.max(1,Math.ceil(edge.length/.4));
+    for(let k=0;k<=n;k++){
+     const t=k/n,x=edge.a[0]+(edge.b[0]-edge.a[0])*t,z=edge.a[1]+(edge.b[1]-edge.a[1])*t;
+     if(Math.abs(edgeElevation(edge,t)-st.pos.y)>.4)continue;
+     const d=Math.hypot(x-st.pos.x,z-st.pos.z);if(d<1.2||d>4)continue;
+     if(Math.hypot(x-from.x,z-from.z)<dMe+1)continue;
+     if(!best||d<best.d)best={edge,t,point:[x,z],d};
+    }
    }
    return best;
   }
