@@ -252,12 +252,12 @@ export const EMERGENCY_ACCESS_LAYOUT={
     {
       "id": "PW-ES-020",
       "a": [
-        90.75,
-        -9.5
+        20.25,
+        -20
       ],
       "b": [
-        91,
-        -9.5
+        20.25,
+        -15.25
       ],
       "width": 1.2,
       "emergencyAccess": true
@@ -265,12 +265,12 @@ export const EMERGENCY_ACCESS_LAYOUT={
     {
       "id": "PW-ES-021",
       "a": [
-        83,
-        -14
+        28.75,
+        -20
       ],
       "b": [
-        83,
-        -10.5
+        28.75,
+        -15.25
       ],
       "width": 1.2,
       "emergencyAccess": true
@@ -278,70 +278,18 @@ export const EMERGENCY_ACCESS_LAYOUT={
     {
       "id": "PW-ES-022",
       "a": [
-        80.5,
-        -11
+        36.5,
+        -20
       ],
       "b": [
-        80.5,
-        -10.5
+        36.5,
+        -15.25
       ],
       "width": 1.2,
       "emergencyAccess": true
     },
     {
       "id": "PW-ES-023",
-      "a": [
-        80.5,
-        -10.5
-      ],
-      "b": [
-        81.75,
-        -10.5
-      ],
-      "width": 1.2,
-      "emergencyAccess": true
-    },
-    {
-      "id": "PW-ES-024",
-      "a": [
-        20.25,
-        -20
-      ],
-      "b": [
-        20.25,
-        -15.25
-      ],
-      "width": 1.2,
-      "emergencyAccess": true
-    },
-    {
-      "id": "PW-ES-025",
-      "a": [
-        28.75,
-        -20
-      ],
-      "b": [
-        28.75,
-        -15.25
-      ],
-      "width": 1.2,
-      "emergencyAccess": true
-    },
-    {
-      "id": "PW-ES-026",
-      "a": [
-        36.5,
-        -20
-      ],
-      "b": [
-        36.5,
-        -15.25
-      ],
-      "width": 1.2,
-      "emergencyAccess": true
-    },
-    {
-      "id": "PW-ES-027",
       "a": [
         49.25,
         -24.75
@@ -354,7 +302,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
       "emergencyAccess": true
     },
     {
-      "id": "PW-ES-028",
+      "id": "PW-ES-024",
       "a": [
         49.25,
         -24.75
@@ -367,7 +315,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
       "emergencyAccess": true
     },
     {
-      "id": "PW-ES-029",
+      "id": "PW-ES-025",
       "a": [
         56,
         -26
@@ -548,52 +496,56 @@ export const EMERGENCY_ACCESS_LAYOUT={
       "label": "A-2000 · CIP-2001 chemical-service approach",
       "area": "A-2000",
       "point": [
-        90.75,
-        -9.5
+        82.5,
+        -5
       ],
       "walkPoint": [
-        90.75,
-        -9.5
+        82.5,
+        -5
       ],
-      "linkLengthM": 0.25
+      "linkLengthM": 0
     },
     {
       "id": "EXP-2001-WASTE",
       "label": "A-2000 · Spent-CIP transfer",
       "area": "A-2000",
       "point": [
-        90.25,
-        -17
+        86.5,
+        -13.5
       ],
-      "walkPoint": null
+      "walkPoint": [
+        86.5,
+        -13.5
+      ],
+      "linkLengthM": 0
     },
     {
       "id": "EXP-2001-DOSE",
       "label": "A-2000 · Antiscalant dosing service",
       "area": "A-2000",
       "point": [
-        83,
-        -14
+        80.25,
+        -9.5
       ],
       "walkPoint": [
-        83,
-        -14
+        80.25,
+        -9.5
       ],
-      "linkLengthM": 3.5
+      "linkLengthM": 0
     },
     {
       "id": "EXP-2001-RO",
       "label": "A-2000 · RO cleaning / membrane service",
       "area": "A-2000",
       "point": [
-        80.5,
-        -11
+        80.25,
+        -12
       ],
       "walkPoint": [
-        80.5,
-        -11
+        80.25,
+        -12
       ],
-      "linkLengthM": 1.75
+      "linkLengthM": 0
     },
     {
       "id": "EXP-1001-NAOH",
@@ -682,10 +634,6 @@ export const EMERGENCY_ACCESS_LAYOUT={
     {
       "id": "EXP-701-OFFGAS",
       "label": "A-700 · Off-gas equipment service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
-    },
-    {
-      "id": "EXP-2001-WASTE",
-      "label": "A-2000 · Spent-CIP transfer: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
     },
     {
       "id": "EXP-1004-HCL",

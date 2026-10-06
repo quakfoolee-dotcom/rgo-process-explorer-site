@@ -28,8 +28,8 @@
           "availability": "available model source reviewed",
           "files": {
             "wastewater.js": "fd451d36b0f1276c31dbc8e7d6eed4a5885a721d65fa259f62b299fa47eb8e6a",
-            "a1000-basis.js": "a2e8ea6e5c2de1e496f642cad59aae2cef1531d85ae5a9fdef5f499e59a93fcf",
-            "reclaimed-water.js": "7de8c4f0e159ffcabe1f131e6ab58bd640ec535cd2d2ad5b4f3fd96bd248b696",
+            "a1000-basis.js": "3ce22f3e27d0a42010e1002cc1afbf7d709a8f72ca6d99a1b2ce7941b972a513",
+            "reclaimed-water.js": "d0ac3f9e5303747c587f4b136023a3d4a5f26634646c7bf55ac6df5be420189b",
             "vent-gas.js": "6bcb8c5041f39c2e6b0114296fae2fd8103ae7b7f2ec72afcf89e1be0ebc8146",
             "thermal-utilities.js": "489fa837080943fb9a4a36f2d0af8796ca99c090063dc457ca7e902c532ccfbb"
           },
@@ -82,8 +82,8 @@
           "availability": "available model source reviewed",
           "files": {
             "wastewater.js": "fd451d36b0f1276c31dbc8e7d6eed4a5885a721d65fa259f62b299fa47eb8e6a",
-            "a1000-basis.js": "a2e8ea6e5c2de1e496f642cad59aae2cef1531d85ae5a9fdef5f499e59a93fcf",
-            "reclaimed-water.js": "7de8c4f0e159ffcabe1f131e6ab58bd640ec535cd2d2ad5b4f3fd96bd248b696",
+            "a1000-basis.js": "3ce22f3e27d0a42010e1002cc1afbf7d709a8f72ca6d99a1b2ce7941b972a513",
+            "reclaimed-water.js": "d0ac3f9e5303747c587f4b136023a3d4a5f26634646c7bf55ac6df5be420189b",
             "vent-gas.js": "6bcb8c5041f39c2e6b0114296fae2fd8103ae7b7f2ec72afcf89e1be0ebc8146",
             "thermal-utilities.js": "489fa837080943fb9a4a36f2d0af8796ca99c090063dc457ca7e902c532ccfbb"
           },
@@ -135,8 +135,8 @@
           "availability": "available model source reviewed",
           "files": {
             "wastewater.js": "fd451d36b0f1276c31dbc8e7d6eed4a5885a721d65fa259f62b299fa47eb8e6a",
-            "a1000-basis.js": "a2e8ea6e5c2de1e496f642cad59aae2cef1531d85ae5a9fdef5f499e59a93fcf",
-            "reclaimed-water.js": "7de8c4f0e159ffcabe1f131e6ab58bd640ec535cd2d2ad5b4f3fd96bd248b696",
+            "a1000-basis.js": "3ce22f3e27d0a42010e1002cc1afbf7d709a8f72ca6d99a1b2ce7941b972a513",
+            "reclaimed-water.js": "d0ac3f9e5303747c587f4b136023a3d4a5f26634646c7bf55ac6df5be420189b",
             "vent-gas.js": "6bcb8c5041f39c2e6b0114296fae2fd8103ae7b7f2ec72afcf89e1be0ebc8146",
             "thermal-utilities.js": "489fa837080943fb9a4a36f2d0af8796ca99c090063dc457ca7e902c532ccfbb"
           },
