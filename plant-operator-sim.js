@@ -67,7 +67,7 @@ export function buildInstrumentStations(instruments,stations,seen=new Set(statio
   const host=byTag.get(i.asset);if(!host||seen.has(i.tag))continue;
   seen.add(i.tag);
   out.push({key:'inst:'+i.tag,tag:i.tag,label:i.variable+' on '+i.asset,kind:'instrument',type:'instrument',areaId:host.areaId||i.area,x:host.x,z:host.z,y:Math.min(host.y,2.4),
-   asset:i.asset,also:i.also||[],variable:i.variable,purpose:i.purpose,setpoint:i.setpoint,alarm:i.alarm,interlock:i.interlock,status:i.status});
+   asset:i.asset,also:i.also||[],variable:i.variable,purpose:i.purpose,setpoint:i.setpoint,alarm:i.alarm,interlock:i.interlock,status:i.status,band:i.band||null});
  }
  return out;
 }
@@ -83,6 +83,15 @@ const SPECS={
 
 // Instrument signal by measured variable: unit, nominal, swing, low and high limits (illustrative).
 export function instrumentSpec(i){
+ // A band written in the source record wins over the generic signal for that kind of measurement.
+ // Normal band lo..hi (or setpoint with an inferred band): the signal moves inside it and alarms outside it.
+ const b=i.band;
+ if(b&&(b.lo!=null||b.setpoint!=null)){
+  const nom=b.setpoint!=null?b.setpoint:(b.lo+b.hi)/2,half=b.lo!=null&&b.hi!=null?(b.hi-b.lo)/2:Math.max(Math.abs(nom)*.03,.2);
+  const lo=b.lo!=null?b.lo:nom-(b.hi!=null?(b.hi-nom):half),hi=b.hi!=null?b.hi:nom+(nom-lo);
+  const unitText=b.unit==='barg'?'barg':b.unit;
+  return {unit:unitText,nom,amp:Math.max((hi-lo)*.2,.05),lo,hi,dec:(hi-lo)<5?2:(hi-lo)<50?1:0,fromSource:true};
+ }
  const text=(i.variable+' '+i.tag).toLowerCase();
  if(/(^|[^a-z])ph([^a-z]|$)/i.test(i.variable)||/^pH/.test(i.tag)){
   const m=/pH\s*([\d.]+)\s*(?:-|to|–)\s*([\d.]+)/i.exec(i.variable+' '+i.setpoint);
@@ -114,9 +123,10 @@ export function createOperatorSim(stations=[]){
   }
   if(s.type==='instrument'){
    const spec=instrumentSpec(s),ex=excursion(s.tag,t),phase=unit(s.tag,'ip')*6.283;
-   const value=spec.nom*(.92+unit(s.tag,'in')*.16)+spec.amp*(Math.sin(t/(30+unit(s.tag,'ipp')*50)+phase)+Math.sin(t*1.3+phase*3)*.15)+(spec.hi-spec.nom)*1.2*ex;
+   const base=spec.fromSource?spec.nom:spec.nom*(.92+unit(s.tag,'in')*.16);
+   const value=base+spec.amp*(Math.sin(t/(30+unit(s.tag,'ipp')*50)+phase)+Math.sin(t*1.3+phase*3)*.15)+(spec.hi-spec.nom)*1.2*ex;
    const status=value>spec.hi?'high':value<spec.lo?'low':'ok';
-   return [{name:s.variable,unit:spec.unit,value:+value.toFixed(spec.dec),status}];
+   return [{name:s.variable,unit:spec.unit,value:+value.toFixed(spec.dec),status,band:spec.fromSource?{lo:spec.lo,hi:spec.hi}:null}];
   }
   const spec=SPECS[s.kind]||SPECS.equipment,run=s.kind==='pump'?pumpRunning(s):true,ex=excursion(s.tag,t),out=[];
   for(const [i,[name,unitText,nom,amp,lo,hi]] of spec.entries()){

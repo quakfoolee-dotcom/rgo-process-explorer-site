@@ -765,7 +765,7 @@ if(model.walkways)plantBrowse=mountPlantBrowse({model,scene,viewport,canvas:rend
   dirty=true;updateParts();
  },
  onCamera:(next,aim,overview=false)=>{camera=next;if(overview){if(camera.isPerspectiveCamera)camera.aspect=aspect;camera.updateProjectionMatrix();}controls.enabled=false;controls.target.copy(aim);cameraGoal=targetGoal=null;if(!overview){$('projection-label').textContent='WALKWAY VIEW · EYE HEIGHT 1.6 m';document.querySelector('.navigation-hint').textContent='Drag: look · W/S: walk · A/D: look · Esc: return';}},
- onEquipment:e=>{const r=renderer.domElement.getBoundingClientRect();pointer.set((e.clientX-r.left)/r.width*2-1,1-(e.clientY-r.top)/r.height*2);raycaster.setFromCamera(pointer,camera);const hit=raycaster.intersectObjects(meshes.filter(m=>m.visible),false).find(h=>h.object.userData.parts[h.instanceId]?.visible);if(hit)selectPart(hit.object.userData.parts[hit.instanceId]);},
+ onEquipment:e=>{const r=renderer.domElement.getBoundingClientRect();pointer.set((e.clientX-r.left)/r.width*2-1,1-(e.clientY-r.top)/r.height*2);raycaster.setFromCamera(pointer,camera);const hit=raycaster.intersectObjects(meshes.filter(m=>m.visible),false).find(h=>h.object.userData.parts[h.instanceId]?.visible);if(hit){const part=hit.object.userData.parts[hit.instanceId];if(plantBrowse?.operatorPick?.(part))return;selectPart(part);}},
  onMode:mode=>{if(mode==='placing'){$('projection-label').textContent='BROWSE PLANT · CHOOSE A WALKWAY';document.querySelector('.navigation-hint').textContent='Drop the person or click a highlighted walkway';}}
 });
 else $('browse-plant').disabled=true;
