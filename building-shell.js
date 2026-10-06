@@ -3,10 +3,18 @@ import {EMERGENCY_ACCESS_LAYOUT} from './emergency-access-layout.js';
 import {TRANSPORT_ROUTES} from './transport-layout.js';
 // Proposed outside walls of the process building, as a display layer: the building-footprint envelope of every area except A-6000
 // (x -42...117, z -31.5...41.6) with the wall just outside it; the argon yard stays outside (V291). The south wall steps 1.1 m south
-// at x 89 so the A-800 service aisle (z 41.4-42.6) stays inside, and the west wall stays inside the plant walkway at x -43.
-export const BUILDING_SHELL={revision:'bldg-1',rect:[-42.25,-32,117.5,42.8],runs:[
- {id:'W',axis:'x',c:-42.25,lo:-32,hi:41.7},{id:'N',axis:'z',c:-32,lo:-42.25,hi:117.5},{id:'E',axis:'x',c:117.5,lo:-32,hi:42.8},
- {id:'S1',axis:'z',c:41.7,lo:-42.25,hi:89},{id:'J',axis:'x',c:89,lo:41.7,hi:42.8},{id:'S2',axis:'z',c:42.8,lo:89,hi:117.5}],height:12,thickness:.15,doorHeight:3,doorExtra:.8,vehicleDoor:{width:6,height:4.5},columnPitch:6,
+// 2.6 m at x 89 so the A-800 service aisle and its fire point FE-802 stay inside, and the west wall stays inside the plant walkway at x -43.
+export const BUILDING_SHELL={revision:'bldg-2',rect:[-42.25,-32,117.5,44.3],runs:[
+ {id:'W',axis:'x',c:-42.25,lo:-32,hi:41.7},{id:'N',axis:'z',c:-32,lo:-42.25,hi:117.5},{id:'E',axis:'x',c:117.5,lo:-32,hi:44.3},
+ {id:'S1',axis:'z',c:41.7,lo:-42.25,hi:89},{id:'J',axis:'x',c:89,lo:41.7,hi:44.3},{id:'S2',axis:'z',c:44.3,lo:89,hi:117.5}],height:12,thickness:.15,doorHeight:3,doorExtra:.8,vehicleDoor:{width:6,height:4.5},columnPitch:6,
+ // Lines and fire points that stand outside the wall on purpose. Insulation, heat trace and containment are open design items (V293).
+ outdoorService:{
+  firePoints:['FE-6001','FE-901'],
+  groups:[
+   {id:'north-rack',label:'North outdoor rack',routes:['HD-3100 sloped wet collection trunk','P-3111 qualified return to T-1006','P-3183 qualified return to T-1006'],open:['insulation and heat trace (frost, wet condensate in the vent trunk)','drip tray or containment under the acid-condensate and scrubber-blowdown lines','slope and drain verification of the vent trunk']},
+   {id:'argon',label:'Argon header and takeoffs',routes:['A-6200 common Ar header','AR-6001 regulated supply to A-6200'],open:['supplier confirmation of the outdoor header route and wall penetrations']},
+   {id:'abatement',label:'Off-gas and exhaust to the outdoor abatement units',routes:['BL-OFF801 to AB-3801','BL-VENT801 to DC-3811'],open:['trace and insulation of wet exhaust runs','wall penetration design']},
+   {id:'retention',label:'Gravity drains to the remote retention tanks',routes:['BND-1005 single gravity retention trunk','BND-161 single gravity retention trunk'],open:['burial or containment of the drain trunks']}]},
  note:'Proposed outer walls only: no roof, no base slab, no structural design. Openings follow the modelled walkway, forklift and pipe crossings; fire rating, doors and wall penetrations are not designed.'};
 const SIDES=BUILDING_SHELL.runs;
 const r3=v=>Math.round(v*1000)/1000;
@@ -63,5 +71,5 @@ export function buildBuildingShell(h){
   for(let k=0;k<=n;k++){const s=side.lo+(side.hi-side.lo)*k/n;if(side.openings.some(o=>o.s0-.2<=s&&o.s1+.2>=s))continue;b('Building wall '+side.id+' column','frame',[.3,H,.3],side.axis==='x'?[side.line,H/2,s]:[s,H/2,side.line],'steel');columnCount++;}
  }
  const ids=parts.slice(first).map(p=>{Object.assign(p,{buildingShell:true,structureVisibility:'building',designStatus:'proposed'});p.offset.set(0,0,0);return p.id;});
- return {revision:plan.revision,rect:plan.rect,height:H,thickness:t,note:plan.note,partIds:ids,panelCount,columnCount,sides:plan.sides.map(s=>({id:s.id,line:s.line,openings:s.openings}))};
+ return {revision:plan.revision,rect:plan.rect,height:H,thickness:t,note:plan.note,outdoorService:BUILDING_SHELL.outdoorService,partIds:ids,panelCount,columnCount,sides:plan.sides.map(s=>({id:s.id,line:s.line,openings:s.openings}))};
 }
