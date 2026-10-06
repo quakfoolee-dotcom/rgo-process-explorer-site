@@ -16,7 +16,7 @@ const EXTERNAL_ACCESS_ASSEMBLIES = new Set([
 ]);
 
 export function createStructureVisibility(model) {
- const supportIds=new Set(),accessIds=new Set(),layers=new Map();
+ const supportIds=new Set(),accessIds=new Set(),buildingIds=new Set(),layers=new Map();
  const registeredAccess=new Set(model.accessSystem?.partIds||[]);
  for(const deck of model.accessSystem?.decks||[]){registeredAccess.add(deck.partId);for(const id of deck.guardParts||[])registeredAccess.add(id);for(const id of deck.gates||[])registeredAccess.add(id);}
  const conduits=new Set((model.edges||[]).map(e=>e.part));
@@ -24,22 +24,23 @@ export function createStructureVisibility(model) {
   let layer=null;
   // Equipment ownership takes precedence even if a shared register references it.
   if(conduits.has(p.id)||p.structureVisibility==='equipment'||p.exploreRole==='equipment')continue;
-  if(p.structureVisibility==='access'||p.structureVisibility==='support')layer=p.structureVisibility;
+  if(p.structureVisibility==='building')layer='building';
+  else if(p.structureVisibility==='access'||p.structureVisibility==='support')layer=p.structureVisibility;
   else if(p.accessGeometry||registeredAccess.has(p.id))layer='access';
   else if(p.pipeSupportTag||p.pipeSupport)layer='support';
   else if(['frame','fastener'].includes(p.system)){
    if(EXTERNAL_ACCESS_ASSEMBLIES.has(p.assembly))layer='access';
    else if(EXTERNAL_SUPPORT_ASSEMBLIES.has(p.assembly))layer='support';
   }
-  if(layer){layers.set(p.id,layer);(layer==='access'?accessIds:supportIds).add(p.id);}
+  if(layer){layers.set(p.id,layer);(layer==='building'?buildingIds:layer==='access'?accessIds:supportIds).add(p.id);}
  }
- const state={supports:true,access:true};
+ const state={supports:true,access:true,building:true};
  return {
-  supportIds,accessIds,
+  supportIds,accessIds,buildingIds,
   layerFor:p=>layers.get(typeof p==='number'?p:p.id)||null,
-  isVisible(p){const layer=layers.get(p.id);return layer==='support'?state.supports:layer==='access'?state.access:true;},
-  set(next){for(const key of ['supports','access'])if(typeof next[key]==='boolean')state[key]=next[key];return {...state};},
+  isVisible(p){const layer=layers.get(p.id);return layer==='support'?state.supports:layer==='access'?state.access:layer==='building'?state.building:true;},
+  set(next){for(const key of ['supports','access','building'])if(typeof next[key]==='boolean')state[key]=next[key];return {...state};},
   getState:()=>({...state}),
-  counts:{supports:supportIds.size,access:accessIds.size},
+  counts:{supports:supportIds.size,access:accessIds.size,building:buildingIds.size},
  };
 }
