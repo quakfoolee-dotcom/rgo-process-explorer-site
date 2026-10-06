@@ -6,7 +6,7 @@ import {TRANSPORT_ROUTES} from './transport-layout.js';
 // at x 89 so the A-800 service aisle (z 41.4-42.6) stays inside, and the west wall stays inside the plant walkway at x -43.
 export const BUILDING_SHELL={revision:'bldg-1',rect:[-42.25,-32,117.5,42.8],runs:[
  {id:'W',axis:'x',c:-42.25,lo:-32,hi:41.7},{id:'N',axis:'z',c:-32,lo:-42.25,hi:117.5},{id:'E',axis:'x',c:117.5,lo:-32,hi:42.8},
- {id:'S1',axis:'z',c:41.7,lo:-42.25,hi:89},{id:'J',axis:'x',c:89,lo:41.7,hi:42.8},{id:'S2',axis:'z',c:42.8,lo:89,hi:117.5}],height:12,thickness:.15,doorHeight:3,doorExtra:.8,vehicleDoor:{width:4.2,height:4.5},columnPitch:6,
+ {id:'S1',axis:'z',c:41.7,lo:-42.25,hi:89},{id:'J',axis:'x',c:89,lo:41.7,hi:42.8},{id:'S2',axis:'z',c:42.8,lo:89,hi:117.5}],height:12,thickness:.15,doorHeight:3,doorExtra:.8,vehicleDoor:{width:6,height:4.5},columnPitch:6,
  note:'Proposed outer walls only: no roof, no base slab, no structural design. Openings follow the modelled walkway, forklift and pipe crossings; fire rating, doors and wall penetrations are not designed.'};
 const SIDES=BUILDING_SHELL.runs;
 const r3=v=>Math.round(v*1000)/1000;
@@ -22,9 +22,16 @@ function collect(){
  for(const route of TRANSPORT_ROUTES){const pts=route.loop?[...route.points,route.points[0]]:route.points;for(let k=1;k<pts.length;k++)for(const side of SIDES){const x=crossings(side,pts[k-1],pts[k]);if(x)door(side,x.s,BUILDING_SHELL.vehicleDoor.width,BUILDING_SHELL.vehicleDoor.height,'vehicle door');}}
  return out;
 }
+// A window wherever a pipe's plan footprint (radius + 0.35 m for fittings and bends) reaches the wall band, whether it crosses, ends at or runs along the wall.
 function pipeWindows(edges,out){
- for(const e of edges){const P=e.path;if(!P||P.length<2)continue;const r=(e.radius||.05)+.25;
-  for(let k=1;k<P.length;k++){const a=P[k-1],b=P[k];for(const side of SIDES){const x=crossings(side,[a[0],a[2]],[b[0],b[2]]);if(!x)continue;const y=a[1]+(b[1]-a[1])*x.t;out[side.id].push({s0:x.s-r,s1:x.s+r,y0:Math.max(0,y-r),y1:y+r,kind:'pipe penetration'});}}}
+ for(const e of edges){const P=e.path;if(!P||P.length<2)continue;const m=(e.radius||.05)+.35;
+  for(let k=1;k<P.length;k++){const a=P[k-1],b=P[k],lo=[Math.min(a[0],b[0])-m,Math.min(a[2],b[2])-m],hi=[Math.max(a[0],b[0])+m,Math.max(a[2],b[2])+m],y0=Math.min(a[1],b[1])-m,y1=Math.max(a[1],b[1])+m;
+   for(const side of SIDES){const i=side.axis==='x'?0:1,j=1-i;if(lo[i]<side.c+BUILDING_SHELL.thickness/2&&hi[i]>side.c-BUILDING_SHELL.thickness/2&&lo[j]<side.hi&&hi[j]>side.lo&&y0<BUILDING_SHELL.height)out[side.id].push({s0:Math.max(side.lo,lo[j]),s1:Math.min(side.hi,hi[j]),y0:Math.max(0,y0),y1,kind:'pipe penetration'});}}}
+}
+// A recess where a fire point stands in the wall line, so the cabinet and its approach stay reachable.
+function firePointRecesses(parts,out){
+ const seen=new Set();for(const p of parts){if(!p.firePoint||seen.has(p.firePoint))continue;seen.add(p.firePoint);const x=p.position.x,z=p.position.z;
+  for(const side of SIDES){const i=side.axis==='x'?0:1,j=1-i,pos=[x,z],half=.95;if(Math.abs(pos[i]-side.c)<half&&pos[j]>side.lo-half&&pos[j]<side.hi+half)out[side.id].push({s0:Math.max(side.lo,pos[j]-half),s1:Math.min(side.hi,pos[j]+half),y0:0,y1:2.6,kind:'fire point recess'});}}
 }
 // Merge openings that overlap or lie within 0.6 m of each other so a pipe bundle becomes one window.
 function merge(list){
@@ -40,13 +47,13 @@ export function wallPanels(lo,hi,height,openings){
  const panels=[];for(const st of strips)for(const [y0,y1]of st.solid){const last=panels.find(p=>p.b===st.a&&Math.abs(p.y0-y0)<1e-6&&Math.abs(p.y1-y1)<1e-6);if(last)last.b=st.b;else panels.push({a:st.a,b:st.b,y0,y1});}
  return panels.filter(p=>p.b-p.a>.05&&p.y1-p.y0>.05);
 }
-export function planBuildingShell(edges){
- const openings=collect();pipeWindows(edges,openings);
+export function planBuildingShell(edges,parts=[]){
+ const openings=collect();pipeWindows(edges,openings);firePointRecesses(parts,openings);
  const sides=SIDES.map(side=>{const list=merge(openings[side.id]);return {...side,line:side.c,openings:list,panels:wallPanels(side.lo,side.hi,BUILDING_SHELL.height,list)};});
  return {...BUILDING_SHELL,sides};
 }
 export function buildBuildingShell(h){
- const {EQUIPMENT,parts,edges,setContext,b}=h,plan=planBuildingShell(edges),owner=122000,H=BUILDING_SHELL.height,t=BUILDING_SHELL.thickness;
+ const {EQUIPMENT,parts,edges,setContext,b}=h,plan=planBuildingShell(edges,parts),owner=122000,H=BUILDING_SHELL.height,t=BUILDING_SHELL.thickness;
  EQUIPMENT[owner]={tag:'BLD-WALLS',label:'Proposed building outside walls',areaId:'SHARED',x:(plan.rect[0]+plan.rect[2])/2,z:(plan.rect[1]+plan.rect[3])/2,labelY:H+1,designStatus:'proposed',primaryOperation:'access',geometryStatus:'Proposed envelope only: no structure, roof, slab, fire rating or door design. Openings follow modelled walkway, forklift and pipe crossings.'};
  setContext(owner,'Building outside walls');
  const first=parts.length;let panelCount=0,columnCount=0;
