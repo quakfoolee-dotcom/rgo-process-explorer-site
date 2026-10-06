@@ -15,7 +15,7 @@ export const BUILDING_SHELL={revision:'bldg-2',rect:[-42.25,-32,117.5,45],runs:[
    {id:'argon',label:'Argon header and takeoffs',routes:['A-6200 common Ar header','AR-6001 regulated supply to A-6200'],open:['supplier confirmation of the outdoor header route and wall penetrations']},
    {id:'abatement',label:'Off-gas and exhaust to the outdoor abatement units',routes:['BL-OFF801 to AB-3801','BL-VENT801 to DC-3811'],open:['trace and insulation of wet exhaust runs','wall penetration design']},
    {id:'retention',label:'Gravity drains to the remote retention tanks',routes:['BND-1005 single gravity retention trunk','BND-161 single gravity retention trunk'],open:['burial or containment of the drain trunks']}]},
- note:'Proposed outer walls only: no roof, no base slab, no structural design. Openings follow the modelled walkway, forklift and pipe crossings; fire rating, doors and wall penetrations are not designed.'};
+ note:'Proposed outer walls only: no roof, no base slab, no structural design. Openings are doors for the modelled walkway and forklift crossings and a recess for a fire point; pipes pass through the wall as recorded penetrations. Fire rating, doors and sleeves are not designed.'};
 const SIDES=BUILDING_SHELL.runs;
 const r3=v=>Math.round(v*1000)/1000;
 function crossings(side,a,b){const c=side.c,i=side.axis==='x'?0:1,j=1-i;
@@ -30,15 +30,11 @@ function collect(){
  for(const route of TRANSPORT_ROUTES){const pts=route.loop?[...route.points,route.points[0]]:route.points;for(let k=1;k<pts.length;k++)for(const side of SIDES){const x=crossings(side,pts[k-1],pts[k]);if(x)door(side,x.s,BUILDING_SHELL.vehicleDoor.width,BUILDING_SHELL.vehicleDoor.height,'vehicle door');}}
  return out;
 }
-// A window where a pipe's footprint (radius + 0.35 m for fittings and bends) meets the wall: the pipe is clipped to the wall band first,
-// so a pipe that crosses gets a window at its crossing height, and one that only runs close gets one along that stretch.
-function pipeWindows(edges,out){
- for(const e of edges){const P=e.path;if(!P||P.length<2)continue;const m=(e.radius||.05)+.35;
-  for(let k=1;k<P.length;k++){const a=P[k-1],b=P[k];
-   for(const side of SIDES){const i=side.axis==='x'?0:2,j=side.axis==='x'?2:0,band=m+BUILDING_SHELL.thickness/2,d=b[i]-a[i];let t0=0,t1=1;
-    if(Math.abs(d)<1e-9){if(Math.abs(a[i]-side.c)>band)continue;}else{const u=(side.c-band-a[i])/d,v=(side.c+band-a[i])/d;t0=Math.max(0,Math.min(u,v));t1=Math.min(1,Math.max(u,v));if(t0>=t1)continue;}
-    const at=t=>[a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,a[2]+(b[2]-a[2])*t],p=at(t0),q=at(t1),s0=Math.min(p[j],q[j])-m,s1=Math.max(p[j],q[j])+m,y0=Math.min(p[1],q[1])-m,y1=Math.max(p[1],q[1])+m;
-    if(s1>side.lo&&s0<side.hi&&y0<BUILDING_SHELL.height)out[side.id].push({s0:Math.max(side.lo,s0),s1:Math.min(side.hi,s1),y0:Math.max(0,y0),y1,kind:'pipe penetration'});}}}
+// Pipes pass through the wall (no window is cut, so the wall stays whole); each crossing is recorded as a penetration for later sleeve design.
+function pipePenetrations(edges){
+ const list=[];for(const e of edges){const P=e.path;if(!P||P.length<2)continue;
+  for(let k=1;k<P.length;k++)for(const side of SIDES){const x=crossings(side,[P[k-1][0],P[k-1][2]],[P[k][0],P[k][2]]);if(x)list.push({label:String(e.name||'').replace(/ (spool|elbow).*$/,''),side:side.id,s:r3(x.s),y:r3(P[k-1][1]+(P[k][1]-P[k-1][1])*x.t),radius:e.radius||.05});}}
+ return list;
 }
 // A recess where a fire point stands in the wall line, so the cabinet and its approach stay reachable.
 function firePointRecesses(parts,out){
@@ -63,13 +59,13 @@ export function wallPanels(lo,hi,height,openings){
  return panels.filter(p=>p.b-p.a>.05&&p.y1-p.y0>.05);
 }
 export function planBuildingShell(edges,parts=[]){
- const openings=collect();pipeWindows(edges,openings);firePointRecesses(parts,openings);
+ const openings=collect();firePointRecesses(parts,openings);
  const sides=SIDES.map(side=>{const list=merge(openings[side.id]);return {...side,line:side.c,openings:list,panels:wallPanels(side.lo,side.hi,BUILDING_SHELL.height,list)};});
- return {...BUILDING_SHELL,sides};
+ return {...BUILDING_SHELL,sides,penetrations:pipePenetrations(edges)};
 }
 export function buildBuildingShell(h){
  const {EQUIPMENT,parts,edges,setContext,b}=h,plan=planBuildingShell(edges,parts),owner=122000,H=BUILDING_SHELL.height,t=BUILDING_SHELL.thickness;
- EQUIPMENT[owner]={tag:'BLD-WALLS',label:'Proposed building outside walls',areaId:'SHARED',x:(plan.rect[0]+plan.rect[2])/2,z:(plan.rect[1]+plan.rect[3])/2,labelY:H+1,designStatus:'proposed',primaryOperation:'access',geometryStatus:'Proposed envelope only: no structure, roof, slab, fire rating or door design. Openings follow modelled walkway, forklift and pipe crossings.'};
+ EQUIPMENT[owner]={tag:'BLD-WALLS',label:'Proposed building outside walls',areaId:'SHARED',x:(plan.rect[0]+plan.rect[2])/2,z:(plan.rect[1]+plan.rect[3])/2,labelY:H+1,designStatus:'proposed',primaryOperation:'access',geometryStatus:'Proposed envelope only: no structure, roof, slab, fire rating or door design. Doors follow modelled walkway and forklift crossings; pipes pass through as recorded penetrations.'};
  setContext(owner,'Building outside walls');
  const first=parts.length;let panelCount=0,columnCount=0;
  for(const side of plan.sides){
@@ -77,6 +73,6 @@ export function buildBuildingShell(h){
   const n=Math.ceil((side.hi-side.lo)/BUILDING_SHELL.columnPitch);
   for(let k=0;k<=n;k++){const s=side.lo+(side.hi-side.lo)*k/n;if(side.openings.some(o=>o.s0-.2<=s&&o.s1+.2>=s))continue;b('Building wall '+side.id+' column','frame',[.3,H,.3],side.axis==='x'?[side.line,H/2,s]:[s,H/2,side.line],'steel');columnCount++;}
  }
- const ids=parts.slice(first).map(p=>{Object.assign(p,{buildingShell:true,structureVisibility:'building',designStatus:'proposed'});p.offset.set(0,0,0);return p.id;});
- return {revision:plan.revision,rect:plan.rect,height:H,thickness:t,note:plan.note,outdoorService:BUILDING_SHELL.outdoorService,partIds:ids,panelCount,columnCount,sides:plan.sides.map(s=>({id:s.id,line:s.line,openings:s.openings}))};
+ const ids=parts.slice(first).map(p=>{Object.assign(p,{buildingShell:true,structureVisibility:'building',designStatus:'proposed',screenBody:null});p.offset.set(0,0,0);return p.id;});
+ return {revision:plan.revision,rect:plan.rect,height:H,thickness:t,note:plan.note,outdoorService:BUILDING_SHELL.outdoorService,partIds:ids,panelCount,columnCount,sides:plan.sides.map(s=>({id:s.id,line:s.line,openings:s.openings})),penetrations:plan.penetrations};
 }
