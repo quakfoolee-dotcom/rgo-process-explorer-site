@@ -67,10 +67,11 @@ function createFigure(){
   else if(mode==='wheel'||mode==='wheelHigh'){const w=t*3.2,base=-(Math.PI/2+aim.elev),e=-aim.bend;set(lL,0,0);set(lR,0,0);set(aL,base+.22*Math.sin(w),e,.18*Math.cos(w));set(aR,base-.22*Math.sin(w),e,-.18*Math.cos(w));head.rotation.x=-aim.elev*.5;}
   else if(mode==='inspect'){set(lL,0,0);set(lR,0,0);set(aR,-.55,-1.85,-.22);set(aL,-.6+.04*Math.sin(t*2),-1.7,.25);head.rotation.x=.28+Math.sin(t*1.3)*.05;tablet.rotation.y+=((aim.turn??-.55)-tablet.rotation.y)*.3;}
   else if(mode==='press'){
-   // A push, hold, release and rest every 1.1 s: the forearm folds back, shoots out to the control, holds, and folds back, with a lean into it.
-   const u=(t/1.1)%1,push=u<.3?Math.sin(u/.3*Math.PI/2):u<.45?1:u<.75?Math.cos((u-.45)/.3*Math.PI/2):0;
-   set(lL,0,0);set(lR,0,0);set(aL,.05,-.2);set(aR,-(Math.PI/2+aim.elev),-(aim.bend+1.5*(1-push)));
-   body.rotation.x=.12*push;head.rotation.x=-aim.elev*.5;}
+   // A push, hold, release and rest every 1.3 s. At rest the upper arm hangs and the forearm is bent up in front of the chest;
+   // the push swings the arm out to the control and straightens it. Eased, so it reads as a calm press.
+   const u=(t/1.3)%1,ease=x=>.5-.5*Math.cos(Math.PI*Math.min(1,Math.max(0,x))),push=u<.3?ease(u/.3):u<.5?1:u<.8?1-ease((u-.5)/.3):0;
+   set(lL,0,0);set(lR,0,0);set(aL,.05,-.2);set(aR,-.5+(-(Math.PI/2+aim.elev)+.5)*push,-(aim.bend+1.7*(1-push)));
+   body.rotation.x=.06*push;head.rotation.x=-aim.elev*.5;}
   else{set(lL,0,0);set(lR,0,0);set(aL,.05,-.15,-.05);set(aR,.05,-.15,.05);body.position.y=Math.sin(t*1.5)*.004;}
  }
  const tp=new T.Vector3(),tq=new T.Quaternion(),gq=new T.Quaternion();
@@ -80,7 +81,9 @@ function createFigure(){
  const sp=new T.Vector3(),hp=new T.Vector3();
  // Distance from the shoulder to the glove, for tests of how far a push extends.
  function handReach(){g.updateMatrixWorld(true);aR.sh.getWorldPosition(sp);aR.end.getWorldPosition(hp);return sp.distanceTo(hp);}
- return {group:g,pose,armPitch:()=>aR.sh.rotation.x,tabletInfo,tablet,handReach};
+ // Glove position relative to the shoulder in the operator's frame (+z forward, +y up).
+ function handRel(){g.updateMatrixWorld(true);aR.sh.getWorldPosition(sp);aR.end.getWorldPosition(hp);const d=g.worldToLocal(hp.clone()).sub(g.worldToLocal(sp.clone()));return [d.x,d.y,d.z];}
+ return {group:g,pose,armPitch:()=>aR.sh.rotation.x,tabletInfo,tablet,handReach,handRel};
 }
 
 const nf=(n,d=0)=>Number(n).toFixed(d);
@@ -308,7 +311,7 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
   get view(){return st.view;},
   show(){st.shown=true;group.visible=st.view!=='ride';$('browse-operator').hidden=false;},
   hide(){st.shown=false;group.visible=false;label.hidden=true;interrupt();setView('own',{restore:false});},
-  getState:()=>({shown:st.shown,mode:st.mode,view:st.view,yaw:st.yaw,aim:{...st.aim},armPitch:figure.armPitch(),handReach:figure.handReach(),tablet:figure.tabletInfo(),position:[st.pos.x,st.pos.y,st.pos.z],queue:st.queue.length,busy:!!st.cur,log:st.log.length,stations:stations.length,simTime:st.simT}),
+  getState:()=>({shown:st.shown,mode:st.mode,view:st.view,yaw:st.yaw,aim:{...st.aim},armPitch:figure.armPitch(),handReach:figure.handReach(),handRel:figure.handRel(),tablet:figure.tabletInfo(),position:[st.pos.x,st.pos.y,st.pos.z],queue:st.queue.length,busy:!!st.cur,log:st.log.length,stations:stations.length,simTime:st.simT}),
   get log(){return st.log;},
   dispose(){scene.remove(group);label.remove();}
  };
