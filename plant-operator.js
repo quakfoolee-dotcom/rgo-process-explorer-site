@@ -333,11 +333,14 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
     if(Math.hypot(b.x-a.x,b.z-a.z)>1e-3){ang=Math.atan2(b.x-a.x,b.z-a.z);const d=angleDelta(ang,st.yaw);st.yaw+=d*Math.min(1,dt*10);}
     if(st.segT>=1-1e-6){st.seg++;st.segT=0;}
    }
-   st.dirNow=moved?[Math.sin(ang),Math.cos(ang)]:null;
+   if(moved)st.dirNow=[Math.sin(ang),Math.cos(ang)]; // kept across a zero-length frame, so the other operator still sees which way I am going
    // keep to the right (local +x is (cos, -sin) of the heading) when passing someone head-on
-   st.lat+=(tr.lat-st.lat)*Math.min(1,dt*7);
-   if(Math.abs(st.lat)>.005){st.pos.x+=Math.cos(ang)*st.lat;st.pos.z+=-Math.sin(ang)*st.lat;}
-   st.pos.x+=st.push.x;st.pos.z+=st.push.z;st.push.x*=.9;st.push.z*=.9;
+   // Only on a frame that moved: the position was just rebuilt from the path, so the offsets are added once, never stacked.
+   if(moved){
+    st.lat+=(tr.lat-st.lat)*Math.min(1,dt*7);
+    if(Math.abs(st.lat)>.005){st.pos.x+=Math.cos(ang)*st.lat;st.pos.z+=-Math.sin(ang)*st.lat;}
+    st.pos.x+=st.push.x;st.pos.z+=st.push.z;st.push.x*=.9;st.push.z*=.9;
+   }
    st.phase+=dt*7.5*ctx.fast*(stair?.8:1);
    if(st.seg>=st.path.length-1){st.mode='work';st.work=0;st.lat=0;}
    return moved?(stair?'stair':'walk'):'idle';
