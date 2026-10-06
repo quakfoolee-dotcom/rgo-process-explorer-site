@@ -8,7 +8,7 @@ import {buildStations,buildInstrumentStations,createOperatorSim,planRound} from 
 // equipment and valves. Readings come from a simple illustrative simulation.
 const WALK_SPEED=1.3,STAIR_FACTOR=.55,V=(x,y,z)=>new T.Vector3(x,y,z);
 const WORK={reading:2.6,'check-valve':2.2,'operate-valve':3.4,pump:2.4,goto:.4,aside:.05};
-const MIN_SEP=.62,KEEP_CLEAR=.95,PASS_LATERAL=.33,WAIT_LATERAL=.35,WAIT_GIVE_UP=8;
+const MIN_SEP=.78,KEEP_CLEAR=.95,PASS_LATERALS=[.48,.42,.36,.33],WAIT_LATERAL=.35,WAIT_GIVE_UP=8;
 
 // Walkway standing points for an item, best first and at least 2.5 m apart: nearest, with a penalty when the walkway is too high or low to reach it.
 export function accessCandidates(network,station,limit=5){
@@ -278,6 +278,19 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
    const hit=asideHit(pos);if(!hit)return;
    st.yieldedAt=ctx.simT;st.queue.unshift({kind:'aside',hit,station:{tag:'aside',x:hit.point[0],z:hit.point[1],y:st.pos.y,type:'equipment',kind:'equipment'}});
   }
+  // How far to the right to keep when passing: the widest of PASS_LATERALS that the body can occupy without touching anything.
+  function passLateral(ang,dir){
+   if((st.latT||0)>st.t)return st.latCache;
+   st.latT=st.t+.2;
+   const occ=getOcclusion(),right=[Math.cos(ang),-Math.sin(ang)];
+   if(!occ){st.latCache=PASS_LATERALS.at(-1);return st.latCache;}
+   const bx=st.pos.x-right[0]*st.lat,bz=st.pos.z-right[1]*st.lat,y=st.pos.y;
+   for(const c of PASS_LATERALS){
+    const ok=[0,.6].every(ahead=>{const x0=bx+dir[0]*ahead,z0=bz+dir[1]*ahead;return occ.bodyClear([x0,y,z0],[x0+right[0]*c,y,z0+right[1]*c]);});
+    if(ok){st.latCache=c;return c;}
+   }
+   st.latCache=PASS_LATERALS.at(-1);return st.latCache;
+  }
   function traffic(dt){
    const a=st.path[st.seg],b=st.path[st.seg+1];if(!b||workers.length<2)return {block:null,lat:0};
    const ang=Math.atan2(b.x-a.x,b.z-a.z),dir=[Math.sin(ang),Math.cos(ang)],px=st.pos.x+dir[0]*.5,pz=st.pos.z+dir[1]*.5;
@@ -288,7 +301,7 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
     const ahead=((os.pos.x-st.pos.x)*dir[0]+(os.pos.z-st.pos.z)*dir[1])>0;
     if(os.mode==='walk'&&os.blockedBy!==w){
      const od=os.dirNow,headOn=od&&(od[0]*dir[0]+od[1]*dir[1])<-.5;
-     if(headOn&&ahead&&dNow<4.5)lat=PASS_LATERAL;
+     if(headOn&&(ahead?dNow<4.5:dNow<1.8))lat=passLateral(ang,dir); // keep to the side until well past each other
      else if(ahead&&dAhead<KEEP_CLEAR&&index>o.st.index)block=o;
     }else if(os.mode!=='walk'&&ahead&&dAhead<KEEP_CLEAR+.5&&dNow>.2)block=o;
    }
@@ -527,6 +540,6 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
   get log(){return ctx.log;},
   dispose(){for(const w of workers){scene.remove(w.group);w.label.remove();}}
  };
- function stateOf(w){const st=w.st;return {shown:ctx.shown,mode:st.mode,view:ctx.view,yaw:st.yaw,aim:{...st.aim},armPitch:w.figure.armPitch(),handReach:w.figure.handReach(),handRel:w.figure.handRel(),handWorld:w.figure.handWorld(),tablet:w.figure.tabletInfo(),position:[st.pos.x,st.pos.y,st.pos.z],queue:st.queue.length,busy:!!st.cur,stepOff:st.stepOff||0,reached:st.reached??null,blockedBy:st.blockedBy?st.blockedBy.st.index:null,log:ctx.log.length,stations:stations.length,simTime:ctx.simT,operators:workers.length};}
+ function stateOf(w){const st=w.st;return {shown:ctx.shown,mode:st.mode,view:ctx.view,yaw:st.yaw,aim:{...st.aim},armPitch:w.figure.armPitch(),handReach:w.figure.handReach(),handRel:w.figure.handRel(),handWorld:w.figure.handWorld(),tablet:w.figure.tabletInfo(),position:[st.pos.x,st.pos.y,st.pos.z],queue:st.queue.length,busy:!!st.cur,stepOff:st.stepOff||0,reached:st.reached??null,blockedBy:st.blockedBy?st.blockedBy.st.index:null,lateral:st.lat,lateralChoice:st.latCache??null,log:ctx.log.length,stations:stations.length,simTime:ctx.simT,operators:workers.length};}
  return api;
 }
