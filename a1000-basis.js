@@ -40,7 +40,7 @@ export const A1000_EQUIPMENT={
 export const A1000_RETIRED={'T-1007':['D-A1000-05','Pre-G decant receiver — the A-160 decant no longer exists (RS7)'],'P-1011':['D-A1000-05','Pre-G decant lift — no decant (RS7)']};
 for(const e of Object.values(A1000_EQUIPMENT)){const r=A1000_RETIRED[e.tag];if(r){e.retired={decisionId:r[0],reason:r[1],basis:'D-MDL-01 MC-1'};e.label+=` · RETIRED (${r[0]})`;}}
 export const A1000_IDS=Object.keys(A1000_EQUIPMENT).map(Number);
-export const WATER_AREA_LAYOUT={units:'m',wastewater:{min:[14,0,-28],max:[58,10,2]},reclaimed:{min:[60,0,-28],max:[103,10,2]},futureExpansion:{min:[105,0,-28],max:[116,10,2]},note:'Approved relative location only. Block dimensions are provisional reservations; no surveyed building, road, wind or site boundary supplied.'};
+export const WATER_AREA_LAYOUT={units:'m',wastewater:{min:[14,0,-28],max:[58,10,2]},reclaimed:{min:[60,0,-28],max:[95,10,2]},futureExpansion:{min:[105,0,-28],max:[116,10,2]},note:'Approved relative location only. Block dimensions are provisional reservations; no surveyed building, road, wind or site boundary supplied.'};
 const zone=(id,kind,min,max,note,areaIds=['A-1000'])=>({id,kind,areaIds,min,max,note,designStatus:'proposed'});
 export const WATER_ACCESS_ZONES=[
  zone('WALK-WATER-FRONT','pedestrian',[14,.02,2],[116,2.32,3.5],'Continuous treatment / RO approach connected to the east plant spine',['A-1000','A-2000']),

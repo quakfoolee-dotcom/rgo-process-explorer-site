@@ -106,15 +106,15 @@ export const EMERGENCY_LOCATION_PLAN=[
     "id": 198,
     "tag": "ES-2000",
     "areaId": "A-2000",
-    "x": 100,
+    "x": 92,
     "z": -26.85,
     "yaw": 0,
     "walkPoint": [
-      100,
+      92,
       -25.25
     ],
     "previous": [
-      100,
+      92,
       -26.7
     ],
     "reason": "Relocate to a clear, connected pedestrian approach"
@@ -147,7 +147,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       -12.5,
       -17.25
     ],
-    "reason": "Additional local coverage for A-160 · D-164 approach; A-160 · TR-164 approach"
+    "reason": "Additional local coverage for A-160 \u00b7 D-164 approach; A-160 \u00b7 TR-164 approach"
   },
   {
     "id": 122002,
@@ -160,7 +160,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       -2.5,
       4
     ],
-    "reason": "Additional local coverage for A-200 · R-201A approach; A-300 · C-301 approach"
+    "reason": "Additional local coverage for A-200 \u00b7 R-201A approach; A-300 \u00b7 C-301 approach"
   },
   {
     "id": 122003,
@@ -173,7 +173,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       -29,
       -10.75
     ],
-    "reason": "Additional local coverage for A-140 · R-141A approach; A-140 · R-141B approach"
+    "reason": "Additional local coverage for A-140 \u00b7 R-141A approach; A-140 \u00b7 R-141B approach"
   },
   {
     "id": 122004,
@@ -186,7 +186,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       -0.5,
       -11
     ],
-    "reason": "Additional local coverage for A-200 · R-201C approach; A-200 · R-201D approach"
+    "reason": "Additional local coverage for A-200 \u00b7 R-201C approach; A-200 \u00b7 R-201D approach"
   },
   {
     "id": 122005,
@@ -199,7 +199,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       1,
       13.5
     ],
-    "reason": "Additional local coverage for A-300 · T-304 approach"
+    "reason": "Additional local coverage for A-300 \u00b7 T-304 approach"
   },
   {
     "id": 122006,
@@ -212,7 +212,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       10.75,
       9.5
     ],
-    "reason": "Additional local coverage for A-300 · T-302 approach"
+    "reason": "Additional local coverage for A-300 \u00b7 T-302 approach"
   },
   {
     "id": 122007,
@@ -225,7 +225,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       -2.328125,
       -6.75
     ],
-    "reason": "Additional local coverage for A-200 · A/B dosing frontage approach"
+    "reason": "Additional local coverage for A-200 \u00b7 A/B dosing frontage approach"
   },
   {
     "id": 122008,
@@ -238,7 +238,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       -2.25,
       -24.5
     ],
-    "reason": "Additional local coverage for A-200 · C/D dosing frontage approach"
+    "reason": "Additional local coverage for A-200 \u00b7 C/D dosing frontage approach"
   },
   {
     "id": 122009,
@@ -290,7 +290,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       -9.5,
       -21
     ],
-    "reason": "Additional local coverage for A-160 · F-161 approach"
+    "reason": "Additional local coverage for A-160 \u00b7 F-161 approach"
   },
   {
     "id": 122013,
@@ -303,7 +303,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       14,
       -13.791667
     ],
-    "reason": "Additional local coverage for West treatment bays · turn back"
+    "reason": "Additional local coverage for West treatment bays \u00b7 turn back"
   },
   {
     "id": 122014,
@@ -316,7 +316,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       15,
       30.75
     ],
-    "reason": "Additional local coverage for Front service junction · alternate clear viewpoint"
+    "reason": "Additional local coverage for Front service junction \u00b7 alternate clear viewpoint"
   },
   {
     "id": 122015,
@@ -329,7 +329,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       -10.75,
       -4.367647
     ],
-    "reason": "Additional local coverage for A-200 · T-202 approach"
+    "reason": "Additional local coverage for A-200 \u00b7 T-202 approach"
   },
   {
     "id": 122016,
@@ -342,7 +342,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       3,
       -6.75
     ],
-    "reason": "Additional local coverage for A-200 · R-201B approach"
+    "reason": "Additional local coverage for A-200 \u00b7 R-201B approach"
   },
   {
     "id": 122017,
@@ -355,7 +355,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       10.75,
       -5.5
     ],
-    "reason": "Additional local coverage for A-300 · T-301 approach"
+    "reason": "Additional local coverage for A-300 \u00b7 T-301 approach"
   },
   {
     "id": 122018,
@@ -368,7 +368,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       28.5,
       29.25
     ],
-    "reason": "Additional local coverage for Washing equipment frontage · alternate clear viewpoint"
+    "reason": "Additional local coverage for Washing equipment frontage \u00b7 alternate clear viewpoint"
   },
   {
     "id": 122019,
@@ -381,7 +381,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       -41,
       -11.5
     ],
-    "reason": "Additional local coverage for A-100 · Acid transfer / disconnection",
+    "reason": "Additional local coverage for A-100 \u00b7 Acid transfer / disconnection",
     "servesTaskIds": [
       "EXP-101-TRANSFER"
     ]
@@ -397,7 +397,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       53.75,
       16.5
     ],
-    "reason": "Additional local coverage for A-600 · P-601 feed / recycle service",
+    "reason": "Additional local coverage for A-600 \u00b7 P-601 feed / recycle service",
     "servesTaskIds": [
       "EXP-601-PUMP"
     ]
@@ -413,7 +413,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       62,
       27
     ],
-    "reason": "Additional local coverage for A-700 · Feed equipment grade service",
+    "reason": "Additional local coverage for A-700 \u00b7 Feed equipment grade service",
     "servesTaskIds": [
       "EXP-701-FEED"
     ]
@@ -429,7 +429,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       93.75,
       32
     ],
-    "reason": "Additional local coverage for A-800 · RV-801 lower feed service",
+    "reason": "Additional local coverage for A-800 \u00b7 RV-801 lower feed service",
     "servesTaskIds": [
       "EXP-801-FEED"
     ]
@@ -445,7 +445,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       107.75,
       37.25
     ],
-    "reason": "Additional local coverage for A-800 · Off-gas maintenance approach",
+    "reason": "Additional local coverage for A-800 \u00b7 Off-gas maintenance approach",
     "servesTaskIds": [
       "EXP-801-OFFGAS"
     ]
@@ -461,7 +461,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       20.25,
       -20
     ],
-    "reason": "Additional local coverage for A-1000 · NaOH dosing service",
+    "reason": "Additional local coverage for A-1000 \u00b7 NaOH dosing service",
     "servesTaskIds": [
       "EXP-1001-NAOH"
     ]
@@ -477,7 +477,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       28.75,
       -20
     ],
-    "reason": "Additional local coverage for A-1000 · Lime-slurry dosing service",
+    "reason": "Additional local coverage for A-1000 \u00b7 Lime-slurry dosing service",
     "servesTaskIds": [
       "EXP-1002-LIME"
     ]
@@ -493,7 +493,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       36.5,
       -20
     ],
-    "reason": "Additional local coverage for A-1000 · Conditional BaCl2 dosing",
+    "reason": "Additional local coverage for A-1000 \u00b7 Conditional BaCl2 dosing",
     "servesTaskIds": [
       "EXP-1003-BARIUM"
     ]
@@ -502,14 +502,14 @@ export const EMERGENCY_LOCATION_PLAN=[
     "id": 122027,
     "tag": "ES-2001",
     "areaId": "A-2000",
-    "x": 93.25,
+    "x": 85.25,
     "z": -26.85,
     "yaw": 0,
     "walkPoint": [
-      93.25,
+      85.25,
       -25.25
     ],
-    "reason": "Additional local coverage for A-2000 · Spent-CIP transfer",
+    "reason": "Additional local coverage for A-2000 \u00b7 Spent-CIP transfer",
     "servesTaskIds": [
       "EXP-2001-WASTE"
     ]
@@ -518,14 +518,14 @@ export const EMERGENCY_LOCATION_PLAN=[
     "id": 122028,
     "tag": "ES-2002",
     "areaId": "A-2000",
-    "x": 92.15,
+    "x": 84.9,
     "z": -17,
     "yaw": 1.5707963267948966,
     "walkPoint": [
-      93.75,
+      86.5,
       -17
     ],
-    "reason": "Additional local coverage for A-2000 · CIP-2001 chemical-service approach",
+    "reason": "Additional local coverage for A-2000 \u00b7 CIP-2001 chemical-service approach",
     "servesTaskIds": [
       "EXP-2001-CIP"
     ]
@@ -541,7 +541,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       49.25,
       -24.75
     ],
-    "reason": "Additional local coverage for A-1000 · Flocculant preparation service",
+    "reason": "Additional local coverage for A-1000 \u00b7 Flocculant preparation service",
     "servesTaskIds": [
       "EXP-1005-FLOC"
     ]
@@ -557,7 +557,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       47,
       18.5
     ],
-    "reason": "Additional local coverage for A-600 · T-601 feed-side work",
+    "reason": "Additional local coverage for A-600 \u00b7 T-601 feed-side work",
     "servesTaskIds": [
       "EXP-601-FEED"
     ]
@@ -573,7 +573,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       75.25,
       17.75
     ],
-    "reason": "Additional local coverage for A-600 · Wash return / collection",
+    "reason": "Additional local coverage for A-600 \u00b7 Wash return / collection",
     "servesTaskIds": [
       "EXP-600-WASH"
     ]
@@ -589,7 +589,7 @@ export const EMERGENCY_LOCATION_PLAN=[
       3,
       -11.1875
     ],
-    "reason": "Additional local coverage for A-200 · R-201D approach",
+    "reason": "Additional local coverage for A-200 \u00b7 R-201D approach",
     "servesTaskIds": [
       "LOCAL-R201D"
     ]

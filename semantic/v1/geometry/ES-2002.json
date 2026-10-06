@@ -4,11 +4,11 @@
   "modelEquipmentId": 122028,
   "bindingScope": "station-assembly",
   "location": {
-    "x": 92.15,
+    "x": 84.9,
     "z": -17,
     "yawRad": 1.5707963267948966,
     "walkPoint": [
-      93.75,
+      86.5,
       -17
     ]
   },

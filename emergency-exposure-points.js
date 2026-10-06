@@ -361,18 +361,6 @@ const LEGACY_EMERGENCY_EXPOSURE_POINTS=[
     "basis": "Sampled service approach; chemical task, exposure position and risk pending",
     "exposureVerified": false
   },
-  {
-    "id": "reclaimed-7",
-    "label": "CIP / concentrate approach",
-    "point": [
-      102.25,
-      -26.5
-    ],
-    "area": "A-2000",
-    "riskAssumption": "high",
-    "basis": "Sampled service approach; chemical task, exposure position and risk pending",
-    "exposureVerified": false
-  }
 ];
 
 export const EMERGENCY_EXPOSURE_POINTS=[...LEGACY_EMERGENCY_EXPOSURE_POINTS.map(e=>({...e,elevationM:0,eyeRisk:'unassigned',skinRisk:'unassigned',work:e.basis,material:'Confirm SDS and concentration'})),...ADDITIONAL_EMERGENCY_TASKS];

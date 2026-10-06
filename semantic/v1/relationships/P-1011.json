@@ -27,9 +27,9 @@
           "status": "model-derived; not an approved process design",
           "availability": "available model source reviewed",
           "files": {
-            "wastewater.js": "87710092d6b4c69f311cb9559123f1b541d757fe750101f3451a06f40f1abb8d",
-            "a1000-basis.js": "acbc3994e08e939534f1b15aa35d67ca143bea713a7be80e5a0594dcc8da065f",
-            "reclaimed-water.js": "1b02fc9e65690fe1088d4d54cc67f8d3cf7c874cc2c07492ffe8b080375f641f",
+            "wastewater.js": "b1ed27296a6673e08a2871fc6e29f02bcb20de267490096a5749ad727828c47f",
+            "a1000-basis.js": "224e62c16b24aa57c6df39a4b2839dc5b79c800961173067ce27f224a1625566",
+            "reclaimed-water.js": "2f742a7f40e657b985d00e56730591753bea12ae8f1d35f44882b4b26ad5e4bc",
             "vent-gas.js": "6bcb8c5041f39c2e6b0114296fae2fd8103ae7b7f2ec72afcf89e1be0ebc8146",
             "thermal-utilities.js": "489fa837080943fb9a4a36f2d0af8796ca99c090063dc457ca7e902c532ccfbb"
           },
@@ -79,9 +79,9 @@
           "status": "model-derived; not an approved process design",
           "availability": "available model source reviewed",
           "files": {
-            "wastewater.js": "87710092d6b4c69f311cb9559123f1b541d757fe750101f3451a06f40f1abb8d",
-            "a1000-basis.js": "acbc3994e08e939534f1b15aa35d67ca143bea713a7be80e5a0594dcc8da065f",
-            "reclaimed-water.js": "1b02fc9e65690fe1088d4d54cc67f8d3cf7c874cc2c07492ffe8b080375f641f",
+            "wastewater.js": "b1ed27296a6673e08a2871fc6e29f02bcb20de267490096a5749ad727828c47f",
+            "a1000-basis.js": "224e62c16b24aa57c6df39a4b2839dc5b79c800961173067ce27f224a1625566",
+            "reclaimed-water.js": "2f742a7f40e657b985d00e56730591753bea12ae8f1d35f44882b4b26ad5e4bc",
             "vent-gas.js": "6bcb8c5041f39c2e6b0114296fae2fd8103ae7b7f2ec72afcf89e1be0ebc8146",
             "thermal-utilities.js": "489fa837080943fb9a4a36f2d0af8796ca99c090063dc457ca7e902c532ccfbb"
           },

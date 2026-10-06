@@ -86,7 +86,6 @@ export function buildWastewater(h){
  // Low floor markings do not become obstacles in the reserved walking volumes.
  function outline(owner,tag,min,max,material='blue'){const start=parts.length;setContext(owner,tag);for(const z of[min[2],max[2]])b(tag+' boundary','frame',[max[0]-min[0],.012,.08],[(min[0]+max[0])/2,.007,z],material);for(const x of[min[0],max[0]])b(tag+' boundary','frame',[.08,.012,max[2]-min[2]],[x,.007,(min[2]+max[2])/2],material);for(const p of parts.slice(start))p.floorAllocationLegacy=true;}
  outline(148,'A-1000 floor reservation',WATER_AREA_LAYOUT.wastewater.min,WATER_AREA_LAYOUT.wastewater.max);outline(147,'A-2000 future footprint',WATER_AREA_LAYOUT.reclaimed.min,WATER_AREA_LAYOUT.reclaimed.max);outline(147,'A-2000 future expansion',WATER_AREA_LAYOUT.futureExpansion.min,WATER_AREA_LAYOUT.futureExpansion.max);
- fixedPanel(147,'A-2000-TIE-INS',62,-27.7);
  // Replaced the undersized tank-ring curbs with the independently sized containment system.
  // Normal process drains above remain isolated and blinded; emergency spill collection is separate.
  // Source-area views include the shared collector through to its receiving tank.

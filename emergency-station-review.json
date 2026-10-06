@@ -4,9 +4,9 @@
   "stations": 40,
   "connectedApproaches": 40,
   "clearStationReservations": 40,
-  "sampledPositions": 86,
-  "checkedRoutes": 2660,
-  "footprintsChecked": 1222,
+  "sampledPositions": 85,
+  "checkedRoutes": 2622,
+  "footprintsChecked": 1290,
   "exposureCoverage": {
     "exposures": [
       {
@@ -850,34 +850,6 @@
         "complianceVerified": false
       },
       {
-        "id": "reclaimed-7",
-        "label": "CIP / concentrate approach",
-        "point": [
-          102.25,
-          -26.5
-        ],
-        "area": "A-2000",
-        "riskAssumption": "high",
-        "basis": "Sampled service approach; chemical task, exposure position and risk pending",
-        "exposureVerified": false,
-        "elevationM": 0,
-        "eyeRisk": "unassigned",
-        "skinRisk": "unassigned",
-        "work": "Sampled service approach; chemical task, exposure position and risk pending",
-        "material": "Confirm SDS and concentration",
-        "nearest": {
-          "tag": "ES-2000",
-          "checkedDistanceM": 3.5,
-          "originGapM": 0,
-          "finalGapM": 0.7000000000000028,
-          "completeDistanceM": 4.200000000000003
-        },
-        "status": "verification-pending",
-        "distanceLimitM": 6,
-        "timeLimitS": 5,
-        "complianceVerified": false
-      },
-      {
         "id": "EXP-101-TRANSFER",
         "area": "A-100",
         "label": "A-100 · Acid transfer / disconnection",
@@ -1217,7 +1189,7 @@
         "area": "A-2000",
         "label": "A-2000 · CIP-2001 chemical-service approach",
         "point": [
-          93.75,
+          85.75,
           -17.5
         ],
         "elevationM": 0,
@@ -1228,14 +1200,8 @@
         "riskAssumption": "high",
         "exposureVerified": false,
         "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
-        "nearest": {
-          "tag": "ES-2002",
-          "checkedDistanceM": 0.5,
-          "originGapM": 0,
-          "finalGapM": 0.6999999999999886,
-          "completeDistanceM": 1.1999999999999886
-        },
-        "status": "verification-pending",
+        "nearest": null,
+        "status": "access-gap",
         "distanceLimitM": 6,
         "timeLimitS": 5,
         "complianceVerified": false
@@ -1245,7 +1211,7 @@
         "area": "A-2000",
         "label": "A-2000 · Spent-CIP transfer",
         "point": [
-          93.25,
+          85.25,
           -25
         ],
         "elevationM": 0,
@@ -1273,7 +1239,7 @@
         "area": "A-2000",
         "label": "A-2000 · Antiscalant dosing service",
         "point": [
-          86,
+          78,
           -22
         ],
         "elevationM": 0,
@@ -1291,33 +1257,11 @@
         "complianceVerified": false
       },
       {
-        "id": "EXP-2001-CEB",
-        "area": "A-2000",
-        "label": "A-2000 · UF chemical-backwash interface",
-        "point": [
-          80.75,
-          -26
-        ],
-        "elevationM": 0,
-        "material": "Vendor-selected CEB chemical",
-        "work": "Blinded chemical-enhanced backwash connection; chemical selection pending",
-        "eyeRisk": "unassigned",
-        "skinRisk": "unassigned",
-        "riskAssumption": "high",
-        "exposureVerified": false,
-        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
-        "nearest": null,
-        "status": "access-gap",
-        "distanceLimitM": 6,
-        "timeLimitS": 5,
-        "complianceVerified": false
-      },
-      {
         "id": "EXP-2001-RO",
         "area": "A-2000",
         "label": "A-2000 · RO cleaning / membrane service",
         "point": [
-          87,
+          79,
           -12
         ],
         "elevationM": 0,
@@ -1631,8 +1575,8 @@
         "complianceVerified": false
       }
     ],
-    "total": 61,
-    "withinDistanceScreen": 41,
+    "total": 59,
+    "withinDistanceScreen": 39,
     "areas": [
       {
         "area": "A-100",
@@ -1780,11 +1724,11 @@
       {
         "area": "A-2000",
         "label": "Reclaimed water / RO",
-        "remaining": "Confirm CIP, CEB, antiscalant and spent-cleaner tasks.",
+        "remaining": "Confirm CIP, antiscalant and spent-cleaner tasks (the UF chemical-backwash interface was retired, D-A2000-03).",
         "assessmentComplete": false,
         "stations": 3,
-        "tasks": 6,
-        "withinDistanceScreen": 3,
+        "tasks": 4,
+        "withinDistanceScreen": 1,
         "accessGaps": 3,
         "distanceGaps": 0,
         "elevatedGaps": 0,
@@ -1843,7 +1787,7 @@
         "status": "assessment-incomplete"
       }
     ],
-    "gradeTotal": 54,
+    "gradeTotal": 52,
     "elevatedGaps": 7,
     "accessGaps": 9,
     "distanceGaps": 4,
@@ -2015,11 +1959,11 @@
         "id": "PW-ES-013",
         "a": [
           93.75,
-          -17.5
+          32
         ],
         "b": [
           93.75,
-          -17
+          32.5
         ],
         "width": 1.2,
         "emergencyAccess": true
@@ -2027,8 +1971,8 @@
       {
         "id": "PW-ES-014",
         "a": [
-          93.75,
-          32
+          91.75,
+          32.5
         ],
         "b": [
           93.75,
@@ -2040,12 +1984,12 @@
       {
         "id": "PW-ES-015",
         "a": [
-          91.5,
+          91.75,
           32.5
         ],
         "b": [
-          93.75,
-          32.5
+          91.75,
+          33.25
         ],
         "width": 1.2,
         "emergencyAccess": true
@@ -2053,11 +1997,11 @@
       {
         "id": "PW-ES-016",
         "a": [
-          91.5,
-          32.5
+          91.25,
+          33.25
         ],
         "b": [
-          91.5,
+          91.75,
           33.25
         ],
         "width": 1.2,
@@ -2065,19 +2009,6 @@
       },
       {
         "id": "PW-ES-017",
-        "a": [
-          91.25,
-          33.25
-        ],
-        "b": [
-          91.5,
-          33.25
-        ],
-        "width": 1.2,
-        "emergencyAccess": true
-      },
-      {
-        "id": "PW-ES-018",
         "a": [
           111.5,
           31.75
@@ -2090,7 +2021,7 @@
         "emergencyAccess": true
       },
       {
-        "id": "PW-ES-019",
+        "id": "PW-ES-018",
         "a": [
           107.75,
           32.75
@@ -2103,7 +2034,7 @@
         "emergencyAccess": true
       },
       {
-        "id": "PW-ES-020",
+        "id": "PW-ES-019",
         "a": [
           107.75,
           32.75
@@ -2116,14 +2047,27 @@
         "emergencyAccess": true
       },
       {
-        "id": "PW-ES-021",
+        "id": "PW-ES-020",
         "a": [
-          28.5,
-          -17
+          85.25,
+          -25.25
         ],
         "b": [
-          28.75,
-          -17
+          85.25,
+          -25
+        ],
+        "width": 1.2,
+        "emergencyAccess": true
+      },
+      {
+        "id": "PW-ES-021",
+        "a": [
+          20.25,
+          -20
+        ],
+        "b": [
+          20.25,
+          -15.25
         ],
         "width": 1.2,
         "emergencyAccess": true
@@ -2131,12 +2075,12 @@
       {
         "id": "PW-ES-022",
         "a": [
-          93.75,
-          -17
+          28.75,
+          -20
         ],
         "b": [
-          102.25,
-          -17
+          28.75,
+          -15.25
         ],
         "width": 1.2,
         "emergencyAccess": true
@@ -2144,83 +2088,18 @@
       {
         "id": "PW-ES-023",
         "a": [
-          93.25,
-          -25.25
+          36.5,
+          -20
         ],
         "b": [
-          93.25,
-          -25
+          36.5,
+          -15.25
         ],
         "width": 1.2,
         "emergencyAccess": true
       },
       {
         "id": "PW-ES-024",
-        "a": [
-          93.25,
-          -25.25
-        ],
-        "b": [
-          100,
-          -25.25
-        ],
-        "width": 1.2,
-        "emergencyAccess": true
-      },
-      {
-        "id": "PW-ES-025",
-        "a": [
-          20.25,
-          -20
-        ],
-        "b": [
-          20.25,
-          -15.25
-        ],
-        "width": 1.2,
-        "emergencyAccess": true
-      },
-      {
-        "id": "PW-ES-026",
-        "a": [
-          28.75,
-          -20
-        ],
-        "b": [
-          28.75,
-          -17
-        ],
-        "width": 1.2,
-        "emergencyAccess": true
-      },
-      {
-        "id": "PW-ES-027",
-        "a": [
-          28.5,
-          -17
-        ],
-        "b": [
-          28.5,
-          -15.25
-        ],
-        "width": 1.2,
-        "emergencyAccess": true
-      },
-      {
-        "id": "PW-ES-028",
-        "a": [
-          36.5,
-          -20
-        ],
-        "b": [
-          36.5,
-          -15.25
-        ],
-        "width": 1.2,
-        "emergencyAccess": true
-      },
-      {
-        "id": "PW-ES-029",
         "a": [
           49.25,
           -24.75
@@ -2233,7 +2112,7 @@
         "emergencyAccess": true
       },
       {
-        "id": "PW-ES-030",
+        "id": "PW-ES-025",
         "a": [
           49.25,
           -24.75
@@ -2246,7 +2125,7 @@
         "emergencyAccess": true
       },
       {
-        "id": "PW-ES-031",
+        "id": "PW-ES-026",
         "a": [
           56,
           -26
@@ -2427,46 +2306,32 @@
         "label": "A-2000 · CIP-2001 chemical-service approach",
         "area": "A-2000",
         "point": [
-          93.75,
+          85.75,
           -17.5
         ],
-        "walkPoint": [
-          93.75,
-          -17.5
-        ],
-        "linkLengthM": 9
+        "walkPoint": null
       },
       {
         "id": "EXP-2001-WASTE",
         "label": "A-2000 · Spent-CIP transfer",
         "area": "A-2000",
         "point": [
-          93.25,
+          85.25,
           -25
         ],
         "walkPoint": [
-          93.25,
+          85.25,
           -25
         ],
-        "linkLengthM": 7
+        "linkLengthM": 0.25
       },
       {
         "id": "EXP-2001-DOSE",
         "label": "A-2000 · Antiscalant dosing service",
         "area": "A-2000",
         "point": [
-          86,
+          78,
           -22
-        ],
-        "walkPoint": null
-      },
-      {
-        "id": "EXP-2001-CEB",
-        "label": "A-2000 · UF chemical-backwash interface",
-        "area": "A-2000",
-        "point": [
-          80.75,
-          -26
         ],
         "walkPoint": null
       },
@@ -2475,7 +2340,7 @@
         "label": "A-2000 · RO cleaning / membrane service",
         "area": "A-2000",
         "point": [
-          87,
+          79,
           -12
         ],
         "walkPoint": null
@@ -2506,7 +2371,7 @@
           28.75,
           -20
         ],
-        "linkLengthM": 5
+        "linkLengthM": 4.75
       },
       {
         "id": "EXP-1003-BARIUM",
@@ -2569,12 +2434,12 @@
         "label": "A-700 · Off-gas equipment service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
       },
       {
-        "id": "EXP-2001-DOSE",
-        "label": "A-2000 · Antiscalant dosing service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+        "id": "EXP-2001-CIP",
+        "label": "A-2000 · CIP-2001 chemical-service approach: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
       },
       {
-        "id": "EXP-2001-CEB",
-        "label": "A-2000 · UF chemical-backwash interface: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+        "id": "EXP-2001-DOSE",
+        "label": "A-2000 · Antiscalant dosing service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
       },
       {
         "id": "EXP-2001-RO",
