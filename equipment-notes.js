@@ -59,6 +59,26 @@ export const EQUIPMENT_NOTES={
   {summary:"Pre-G acid filter, a 2.54 m² agitated pressure filter in A-160, placed south of F-161.",notes:[
    {label:"Basis",text:"Envelope from FEED-PE-DAT-106 (D-MDL-01 release 2). Standalone — tie-ins deferred to the model engineer. Diameters and heights are model choices; vendor geometry unqualified."},
    {label:"Position and open items",text:"Agitated pressure filter; placed south of F-161 (no clear space beside T-161), so the R-141 feed and the cake transfer to T-161 need a re-layout — deferred."}
+  ]},
+ "T-1101":
+  {summary:"Concentrator feed tank, 125 m³, in the A-1100 acid bund, south-east yard (Ø 5.5 × 5.4 m from the Sheet 2 geometry).",notes:[
+   {label:"Basis",text:"Envelope from FEED-PE-DAT-110 (D-MDL-01 release 3, LAY-10 ruling L1). Standalone — tie-ins deferred to the model engineer. Screening size; vendor geometry unqualified."},
+   {label:"Position",text:"A-1100 acid bund, south-east yard (Sheet 2 geometry Ø 5.5 × 5.4 m)."}
+  ]},
+ "T-1102":
+  {summary:"Recovered acid tank, 200 m³, in the A-1100 acid bund, south-east yard (Ø 6.0 × 7.2 m from the Sheet 2 geometry).",notes:[
+   {label:"Basis",text:"Envelope from FEED-PE-DAT-111 (D-MDL-01 release 3, LAY-10 ruling L1). Standalone — tie-ins deferred to the model engineer. Screening size; vendor geometry unqualified."},
+   {label:"Position",text:"A-1100 acid bund, south-east yard (Sheet 2 geometry Ø 6.0 × 7.2 m)."}
+  ]},
+ "P-1102":
+  {summary:"Recovered acid return pumps A/B: 1 + 1 inside the A-1100 bund, returning to T-201 / T-102 on the south rack.",notes:[
+   {label:"Basis",text:"Envelope from FEED-PE-DAT-113 (D-MDL-01 release 3, LAY-10 ruling L1). Standalone — tie-ins deferred to the model engineer. Screening size; vendor geometry unqualified."},
+   {label:"Position",text:"1 + 1 inside the A-1100 bund; return to T-201 / T-102 on the south rack."}
+  ]},
+ "PK-1101":
+  {summary:"Spent-acid concentrator package, screening envelope 14 × 10 m; footprint, height and evaporator arrangement are vendor data.",notes:[
+   {label:"Basis",text:"Envelope from FEED-PE-DAT-109 (D-MDL-01 release 3, LAY-10 ruling L1). Standalone — tie-ins deferred to the model engineer. Screening size; vendor geometry unqualified."},
+   {label:"Open items",text:"Footprint, height and evaporator arrangement are vendor data (hold K1, REP-039 M5)."}
   ]}
 };
 

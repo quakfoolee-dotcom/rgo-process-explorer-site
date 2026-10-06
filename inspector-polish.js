@@ -6,7 +6,7 @@
 // "Model notes" in a collapsible block. The app writes the record's full geometry status into #part-description; this
 // script reads the shown tag and text, and only restructures when they match a registered entry exactly (so an edited or
 // route-prefixed status falls back to the plain, folded description). Nothing here changes the data.
-import {structuredFor} from './equipment-notes.js';
+import {structuredFor} from './equipment-notes.js?v=2';
 
 const LIMIT = 260;
 
