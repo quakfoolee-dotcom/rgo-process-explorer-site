@@ -7,7 +7,8 @@ import {buildStations,buildInstrumentStations,createOperatorSim,planRound} from 
 // as the visitor, climbs the same stair flights, and carries out tasks at tagged
 // equipment and valves. Readings come from a simple illustrative simulation.
 const WALK_SPEED=1.3,STAIR_FACTOR=.55,V=(x,y,z)=>new T.Vector3(x,y,z);
-const WORK={reading:2.6,'check-valve':2.2,'operate-valve':3.4,pump:2.4,goto:.4};
+const WORK={reading:2.6,'check-valve':2.2,'operate-valve':3.4,pump:2.4,goto:.4,aside:.05};
+const MIN_SEP=.62,KEEP_CLEAR=.95,PASS_LATERAL=.33,WAIT_LATERAL=.35,WAIT_GIVE_UP=8;
 
 // Walkway standing points for an item, best first and at least 2.5 m apart: nearest, with a penalty when the walkway is too high or low to reach it.
 export function accessCandidates(network,station,limit=5){
@@ -141,7 +142,7 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
   const figure=createFigure(palette),group=figure.group,label=document.createElement('div');
   group.name='Browse field operator '+(index+1);group.visible=false;scene.add(group);
   label.className='browse-op-label';label.hidden=true;viewport.append(label);
-  const st={index,loc:null,pos:V(0,0,0),yaw:0,phase:0,t:0,mode:'idle',cur:null,queue:[],path:null,seg:0,segT:0,work:0,viewYaw:0,msg:'',msgT:0,tabletSide:-1};
+  const st={index,lat:0,push:{x:0,z:0},loc:null,pos:V(0,0,0),yaw:0,phase:0,t:0,mode:'idle',cur:null,queue:[],path:null,seg:0,segT:0,work:0,viewYaw:0,msg:'',msgT:0,tabletSide:-1};
   const w={st,figure,group,label,text:'Operator standing by'};
   function place(h){st.loc=h;st.pos.set(h.point[0],edgeElevation(h.edge,h.t),h.point[1]);st.yaw=h.edge.heading;st.viewYaw=st.yaw;}
   place(hit);
@@ -153,7 +154,7 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
    if(v.error){logEntry(tag||'—','Task refused',v.error,true);say(v.error,4);return false;}
    st.queue.push({kind,station:v.station});say(st.cur?'Task queued ('+st.queue.length+' waiting)':'Task queued',2);return true;
   }
-  function describe(t){const s=t.station;return t.kind==='goto'?'Walking to '+s.tag:t.kind==='operate-valve'?'Operating '+s.tag:t.kind==='pump'?'Pump '+s.tag:t.kind==='check-valve'?'Checking '+s.tag:s.type==='instrument'?'Reading instrument '+s.tag:'Reading '+s.tag;}
+  function describe(t){const s=t.station;return t.kind==='aside'?'Stepping aside':t.kind==='goto'?'Walking to '+s.tag:t.kind==='operate-valve'?'Operating '+s.tag:t.kind==='pump'?'Pump '+s.tag:t.kind==='check-valve'?'Checking '+s.tag:s.type==='instrument'?'Reading instrument '+s.tag:'Reading '+s.tag;}
 
   // On ground level the operator walks off the walkway toward the item, around obstacles, until the hands can reach it
   // or as near as the body fits: a short A* search on a 0.3 m floor grid, every move checked with the body envelope.
@@ -199,22 +200,24 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
    return best;
   }
   function begin(t){
-   st.cur=t;const s=t.station;
-   if(!access.has(s.tag))access.set(s.tag,chooseAccess(s));
-   const acc=access.get(s.tag),dest=acc?.dest,route=dest&&planBrowseRoute(network,st.loc,dest);
-   if(!dest||!route){logEntry(s.tag,describe(t),'no connected walkway within reach',true);st.cur=null;st.mode='idle';return;}
+   st.cur=t;const s=t.station,aside=t.kind==='aside';
+   let acc=null;
+   if(!aside){if(!access.has(s.tag))access.set(s.tag,chooseAccess(s));acc=access.get(s.tag);}
+   const dest=aside?t.hit:acc?.dest,route=dest&&planBrowseRoute(network,st.loc,dest);
+   if(!dest||!route){if(!aside)logEntry(s.tag,describe(t),'no connected walkway within reach',true);st.cur=null;st.mode='idle';return;}
    const path=routePath(route,st.loc);
    // back onto the walkway first if the last task ended off it, by the same trail it left on
    if(st.trail?.length){const back=[...st.trail].reverse().map(p=>({...p,off:true}));back.unshift({x:st.pos.x,y:st.pos.y,z:st.pos.z,stair:false,off:true});path.unshift(...back);}
    else if(Math.hypot(st.pos.x-path[0].x,st.pos.z-path[0].z)>.05)path.unshift({x:st.pos.x,y:st.pos.y,z:st.pos.z,stair:false});
    st.trail=null;
-   const stand=path[path.length-1],off=t.kind==='goto'?null:acc.off;
+   const stand=path[path.length-1],off=(t.kind==='goto'||aside)?null:acc.off;
    if(off){path.push(...off.route);st.trail=off.route.map(p=>({x:p.x,y:p.y,z:p.z,stair:false}));st.trail.unshift({x:stand.x,y:stand.y,z:stand.z,stair:false});}
-   st.path=path;st.seg=0;st.segT=0;st.mode='walk';st.dest=dest;st.stepOff=off?off.m:0;st.reached=t.kind==='goto'?null:acc.finalD<=REACH_STOP+.05;
+   st.path=path;st.seg=0;st.segT=0;st.mode='walk';st.dest=dest;st.stepOff=off?off.m:0;st.reached=(t.kind==='goto'||aside)?null:acc.finalD<=REACH_STOP+.05;
    say(describe(t)+' · '+route.distance.toFixed(0)+' m');
   }
   function finishWork(){
    const t=st.cur,s=t.station;let result='',flag=false,task='';
+   if(t.kind==='aside'){st.cur=null;st.mode='idle';st.loc=st.dest;return;}
    if(t.kind==='reading'){
     const r=sim.readings(s,ctx.simT);flag=r.some(x=>x.status==='high'||x.status==='low');
     if(s.type==='instrument'){task='Instrument';const bt=bandText(s);result=joined(r)+(bt?' ('+bt+')':'')+' · '+s.status+(s.asset?' on '+s.asset:'')+(!bt&&s.setpoint?' · setpoint: '+s.setpoint:'');if(flag)result+=' — OUT OF RANGE; alarm basis: '+(s.alarm||'not stated');}
@@ -226,6 +229,7 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
     result=(s.actuation==='actuated'?'local control confirmed with control room, now ':'handwheel turned, now ')+(open?'open':'closed')+(flag?' — OFF NORMAL':s.normal==null?' (normal position not defined)':'');}
    else if(t.kind==='pump'){task='Pump';const run=!sim.pumpRunning(s);sim.setPump(s,run);result=run?'START pressed, running':'STOP pressed, stopped';}
    else{task='Walk to';result='arrived';}
+   if(st.occupied){result+=' — item occupied by operator '+st.occupied.by+', done from '+st.occupied.d.toFixed(1)+' m away';st.occupied=null;}
    logEntry(s.tag,task,result,flag);
    st.cur=null;st.mode='idle';st.loc=st.dest;
   }
@@ -245,22 +249,77 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
    const t=st.cur,s=t.station;
    if(t.kind==='reading'||(t.kind==='check-valve'&&s.actuation==='self-acting'))return 'inspect';
    if(t.kind==='pump'||(t.kind==='operate-valve'&&s.actuation==='actuated'))return 'press';
-   if(t.kind==='goto')return 'idle';
+   if(t.kind==='goto'||t.kind==='aside')return 'idle';
    return 'wheel';
   }
+  // ---- keeping clear of the other operator
+  // Head-on on a walkway: both keep to their own right. A higher-numbered operator waits behind a walker it would catch,
+  // and everyone keeps about a metre and a half from anyone standing still; an operator who is idle and in the way steps aside.
+  const isIdle=o=>!o.st.cur&&o.st.queue.length===0&&o.st.mode==='idle';
+  function asideHit(from){
+   let best=null;
+   for(let k=0;k<12;k++){
+    const a=k*Math.PI/6,p=[st.pos.x+Math.sin(a)*1.8,st.pos.z+Math.cos(a)*1.8],h=network.nearest(p,.3);
+    if(!h||Math.abs(edgeElevation(h.edge,h.t)-st.pos.y)>.4)continue;
+    const dFrom=Math.hypot(h.point[0]-from.x,h.point[1]-from.z),dMe=Math.hypot(st.pos.x-from.x,st.pos.z-from.z);if(dFrom<dMe+1)continue;// away from whoever is waiting, never past them
+    if(!best||dFrom>best.dFrom)best={edge:h.edge,t:h.t,point:h.point,dFrom};
+   }
+   return best;
+  }
+  function yieldFrom(pos){
+   if(!isIdle(w)||st.yieldedAt===ctx.simT)return;
+   const hit=asideHit(pos);if(!hit)return;
+   st.yieldedAt=ctx.simT;st.queue.unshift({kind:'aside',hit,station:{tag:'aside',x:hit.point[0],z:hit.point[1],y:st.pos.y,type:'equipment',kind:'equipment'}});
+  }
+  function traffic(dt){
+   const a=st.path[st.seg],b=st.path[st.seg+1];if(!b||workers.length<2)return {block:null,lat:0};
+   const ang=Math.atan2(b.x-a.x,b.z-a.z),dir=[Math.sin(ang),Math.cos(ang)],px=st.pos.x+dir[0]*.5,pz=st.pos.z+dir[1]*.5;
+   let block=null,lat=0;
+   for(const o of workers){
+    if(o===w)continue;const os=o.st;if(Math.abs(os.pos.y-st.pos.y)>1.2)continue;
+    const dNow=Math.hypot(os.pos.x-st.pos.x,os.pos.z-st.pos.z),dAhead=Math.hypot(os.pos.x-px,os.pos.z-pz);
+    const ahead=((os.pos.x-st.pos.x)*dir[0]+(os.pos.z-st.pos.z)*dir[1])>0;
+    if(os.mode==='walk'&&os.blockedBy!==w){
+     const od=os.dirNow,headOn=od&&(od[0]*dir[0]+od[1]*dir[1])<-.5;
+     if(headOn&&ahead&&dNow<4.5)lat=PASS_LATERAL;
+     else if(ahead&&dAhead<KEEP_CLEAR&&index>o.st.index)block=o;
+    }else if(os.mode!=='walk'&&ahead&&dAhead<KEEP_CLEAR+.5&&dNow>.2)block=o;
+   }
+   if(block&&st.t<(st.ignoreUntil||0))block=null;
+   return {block,lat,ang,dir};
+  }
   function walk(dt){
-   let left=dt*WALK_SPEED*ctx.fast,moved=false,stair=false;
+   const tr=traffic(dt);
+   st.blockedBy=tr.block;
+   if(tr.block){
+    st.waitT=(st.waitT||0)+dt;
+    // stand a little to the side while waiting for a walker; ask an idle operator in the way to move
+    st.lat+=(WAIT_LATERAL-st.lat)*Math.min(1,dt*4);
+    if(tr.block.st.mode==='walk'){/* the walker passes */}else if(isIdle(tr.block)&&st.waitT>.6)tr.block.yieldFrom(st.pos);
+    st.dirNow=null;w.waitText='Waiting for operator '+(tr.block.st.index+1);
+    // Never walk through someone: if they cannot make room, do the work from here and say so.
+    if(st.waitT>WAIT_GIVE_UP&&tr.block.st.mode!=='walk'){st.occupied={by:tr.block.st.index+1,d:Math.hypot(st.pos.x-tr.block.st.pos.x,st.pos.z-tr.block.st.pos.z)};st.seg=st.path.length-1;st.segT=0;st.mode='work';st.work=0;st.waitT=0;st.lat=0;return 'idle';}
+    if(st.waitT>WAIT_GIVE_UP){st.ignoreUntil=st.t+2.5;st.waitT=0;}
+    return 'idle';
+   }
+   st.waitT=0;w.waitText=null;
+   let left=dt*WALK_SPEED*ctx.fast,moved=false,stair=false,ang=tr.ang??0;
    while(left>1e-6&&st.seg<st.path.length-1){
     const a=st.path[st.seg],b=st.path[st.seg+1],len=Math.hypot(b.x-a.x,b.y-a.y,b.z-a.z),sp=b.stair?STAIR_FACTOR:1;
     if(len<1e-6){st.seg++;st.segT=0;continue;}
     const remain=(1-st.segT)*len,go=Math.min(left*sp,remain);
     st.segT+=go/len;left-=go/sp;moved=true;stair=b.stair;
     const f=st.segT;st.pos.set(a.x+(b.x-a.x)*f,a.y+(b.y-a.y)*f,a.z+(b.z-a.z)*f);
-    if(Math.hypot(b.x-a.x,b.z-a.z)>1e-3){const d=angleDelta(Math.atan2(b.x-a.x,b.z-a.z),st.yaw);st.yaw+=d*Math.min(1,dt*10);}
+    if(Math.hypot(b.x-a.x,b.z-a.z)>1e-3){ang=Math.atan2(b.x-a.x,b.z-a.z);const d=angleDelta(ang,st.yaw);st.yaw+=d*Math.min(1,dt*10);}
     if(st.segT>=1-1e-6){st.seg++;st.segT=0;}
    }
+   st.dirNow=moved?[Math.sin(ang),Math.cos(ang)]:null;
+   // keep to the right (local +x is (cos, -sin) of the heading) when passing someone head-on
+   st.lat+=(tr.lat-st.lat)*Math.min(1,dt*7);
+   if(Math.abs(st.lat)>.005){st.pos.x+=Math.cos(ang)*st.lat;st.pos.z+=-Math.sin(ang)*st.lat;}
+   st.pos.x+=st.push.x;st.pos.z+=st.push.z;st.push.x*=.9;st.push.z*=.9;
    st.phase+=dt*7.5*ctx.fast*(stair?.8:1);
-   if(st.seg>=st.path.length-1){st.mode='work';st.work=0;}
+   if(st.seg>=st.path.length-1){st.mode='work';st.work=0;st.lat=0;}
    return moved?(stair?'stair':'walk'):'idle';
   }
   function faceStation(dt){const s=st.cur.station,d=angleDelta(Math.atan2(s.x-st.pos.x,s.z-st.pos.z),st.yaw);st.yaw+=d*Math.min(1,dt*6);}
@@ -333,7 +392,7 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
    }
    figure.pose(pose,st.t,st.phase,aimToward(dt,pose));
    group.position.copy(st.pos);group.rotation.y=st.yaw;
-   if(st.cur)w.text=describe(st.cur)+(st.mode==='walk'&&st.queue.length?' · '+st.queue.length+' more':'');
+   if(st.cur)w.text=(st.mode==='walk'&&w.waitText?w.waitText+' · ':'')+describe(st.cur)+(st.mode==='walk'&&st.queue.length?' · '+st.queue.length+' more':'');
    else if(st.msgT>0){st.msgT-=dt;w.text=st.msg;}
    else w.text=st.queue.length?'Task queued':'Operator standing by';
    if(w===active)updateViewCamera(dt);
@@ -343,7 +402,7 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
    if(st.cur&&st.mode==='walk'&&st.path&&st.seg<st.path.length-1){const b=st.path[st.seg+1];if(b.edge)st.loc={edge:b.edge,t:b.from+(b.to-b.from)*st.segT,point:[st.pos.x,st.pos.z]};else if(b.off&&st.dest){st.loc=st.dest;const fo=st.path.findIndex(p=>p.off),from=Math.max(0,fo);st.trail=st.path.slice(from,st.seg+1).filter(p=>p.off||true).map(p=>({x:p.x,y:p.y,z:p.z,stair:false}));st.trail.push({x:st.pos.x,y:st.pos.y,z:st.pos.z,stair:false});}}
    st.queue=[];st.cur=null;st.mode='idle';st.path=null;
   }
-  Object.assign(w,{enqueue,update,interrupt,say,logEntry,describe});
+  Object.assign(w,{enqueue,update,interrupt,say,logEntry,describe,yieldFrom});
   return w;
  }
 
@@ -376,12 +435,24 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
   for(const [id,v] of [['op-view-own','own'],['op-view-follow','follow'],['op-view-side','side'],['op-view-ride','ride']])$(id).setAttribute('aria-pressed',String(v===view));
   if(view==='own'&&was!=='own'&&restore)restoreCamera?.();
  }
+ // Last resort: two bodies are never closer than MIN_SEP. The one that is moving gives way; a walker's nudge is kept for a few frames.
+ function separate(){
+  for(let i=0;i<workers.length;i++)for(let j=i+1;j<workers.length;j++){
+   const a=workers[i].st,b=workers[j].st;if(Math.abs(a.pos.y-b.pos.y)>1.2)continue;
+   let dx=b.pos.x-a.pos.x,dz=b.pos.z-a.pos.z,d=Math.hypot(dx,dz);if(d>=MIN_SEP)continue;
+   if(d<1e-3){dx=Math.cos(a.yaw);dz=-Math.sin(a.yaw);d=1;}
+   const nx=dx/d,nz=dz/d,pen=MIN_SEP-Math.hypot(b.pos.x-a.pos.x,b.pos.z-a.pos.z);
+   const aw=a.mode==='walk',bw=b.mode==='walk',fa=aw&&bw?.5:aw?1:bw?0:.5,fb=1-fa;
+   for(const [o,f,sg] of [[a,fa,-1],[b,fb,1]]){if(!f)continue;const mx=nx*pen*f*sg,mz=nz*pen*f*sg;o.pos.x+=mx;o.pos.z+=mz;if(o.mode==='walk'){o.push.x+=mx;o.push.z+=mz;}}
+  }
+ }
  function update(dt,wall=false){
   if(!ctx.shown)return;
   // The host caps frame time at 0.05 s, which slows the operator on a heavy scene: use the wall clock when asked.
   if(wall){const now=performance.now();dt=ctx.lastWall?Math.min((now-ctx.lastWall)/1000,.5):dt;ctx.lastWall=now;}
   dt=Math.min(dt,.5);ctx.simT+=dt*ctx.fast;
   for(const w of workers)w.update(dt);
+  separate();
   refreshStatus();
  }
 
@@ -449,6 +520,6 @@ export function createFieldOperator({model,scene,viewport,root,network,entries=[
   get log(){return ctx.log;},
   dispose(){for(const w of workers){scene.remove(w.group);w.label.remove();}}
  };
- function stateOf(w){const st=w.st;return {shown:ctx.shown,mode:st.mode,view:ctx.view,yaw:st.yaw,aim:{...st.aim},armPitch:w.figure.armPitch(),handReach:w.figure.handReach(),handRel:w.figure.handRel(),handWorld:w.figure.handWorld(),tablet:w.figure.tabletInfo(),position:[st.pos.x,st.pos.y,st.pos.z],queue:st.queue.length,busy:!!st.cur,stepOff:st.stepOff||0,reached:st.reached??null,log:ctx.log.length,stations:stations.length,simTime:ctx.simT,operators:workers.length};}
+ function stateOf(w){const st=w.st;return {shown:ctx.shown,mode:st.mode,view:ctx.view,yaw:st.yaw,aim:{...st.aim},armPitch:w.figure.armPitch(),handReach:w.figure.handReach(),handRel:w.figure.handRel(),handWorld:w.figure.handWorld(),tablet:w.figure.tabletInfo(),position:[st.pos.x,st.pos.y,st.pos.z],queue:st.queue.length,busy:!!st.cur,stepOff:st.stepOff||0,reached:st.reached??null,blockedBy:st.blockedBy?st.blockedBy.st.index:null,log:ctx.log.length,stations:stations.length,simTime:ctx.simT,operators:workers.length};}
  return api;
 }
