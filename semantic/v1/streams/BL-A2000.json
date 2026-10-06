@@ -1,4 +1,60 @@
 {
   "assetId": "BL-A2000",
-  "streams": []
+  "streams": [
+    {
+      "streamId": "S-1000-RO-FEED",
+      "name": "ro feed",
+      "source": "T-1008",
+      "via": [
+        "P-1012"
+      ],
+      "destination": "BL-A2000",
+      "material": "Wastewater; chemistry unqualified; A-2000 does not use this centrate (D-A2000-03), battery limit unconnected",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "model process context; receiving acceptance and operating sequence unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A1000",
+          "title": "Wastewater treatment, receiving sources, conditional chemistry and A-2000 handoff",
+          "revision": "V150 / 0f89c6bb63ec5c5127db6f48f8d1843733c0b83c",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "wastewater.js": "e5722eba9a5c0e4ccdfd07ab3ecd56aa3494e29ce91aae636212f29fd6df697a",
+            "a1000-basis.js": "b11037f00a67820403c141ffc5f4c6dc0b59d4e71b6d2ecda3f0e1b0f8cd2b4a",
+            "reclaimed-water.js": "21dc64a92cee412fc98f2ad7391bf95e02a99eca4f582b93fa7ef35574f742a5",
+            "vent-gas.js": "6bcb8c5041f39c2e6b0114296fae2fd8103ae7b7f2ec72afcf89e1be0ebc8146",
+            "thermal-utilities.js": "489fa837080943fb9a4a36f2d0af8796ca99c090063dc457ca7e902c532ccfbb"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-1000",
+          "sheetId": "FEED-PFD-1000",
+          "title": "Commercial Scale Wastewater Treatment",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 9,
+          "file": "pfd-temperature-sheets.pdf",
+          "sha256": "cf31e43b30f9121d5610318ffa53d2cd264477b6ae94f80ade79ad9297d27d4f",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./pfd-temperature-sheets.pdf#page=9"
+        }
+      ],
+      "routeLabels": [
+        "T-1008 to P-1012 suction",
+        "Lifted centrate to A-2000"
+      ]
+    }
+  ]
 }

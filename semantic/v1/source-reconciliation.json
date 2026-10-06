@@ -176,7 +176,7 @@
       "files": {
         "wastewater.js": "e5722eba9a5c0e4ccdfd07ab3ecd56aa3494e29ce91aae636212f29fd6df697a",
         "a1000-basis.js": "b11037f00a67820403c141ffc5f4c6dc0b59d4e71b6d2ecda3f0e1b0f8cd2b4a",
-        "reclaimed-water.js": "f542555ce184772c61ebf0db349914de74ce6ca5145799b214475b9e852a5d22",
+        "reclaimed-water.js": "21dc64a92cee412fc98f2ad7391bf95e02a99eca4f582b93fa7ef35574f742a5",
         "vent-gas.js": "6bcb8c5041f39c2e6b0114296fae2fd8103ae7b7f2ec72afcf89e1be0ebc8146",
         "thermal-utilities.js": "489fa837080943fb9a4a36f2d0af8796ca99c090063dc457ca7e902c532ccfbb"
       },
@@ -197,15 +197,14 @@
     },
     {
       "documentId": "MODEL-A2000",
-      "title": "Reclaimed-water pretreatment, UF, RO, reuse and segregated returns",
+      "title": "Condensate receiving, carbon filtration, RO polishing, city make-up, reuse and the reject return",
       "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
       "page": null,
       "status": "model-derived; not an approved process design",
       "availability": "available model source reviewed",
       "files": {
-        "reclaimed-water.js": "f542555ce184772c61ebf0db349914de74ce6ca5145799b214475b9e852a5d22",
-        "a2000-basis.js": "9f8784a08530b979de9cac64315cbf40cadfd84cee0954ac44cc541a343c406c",
-        "uf-manifolds.js": "bde5bc174a8c256b05cf0b1000855ea0eafb003a551d9477db6afabc5c270854"
+        "reclaimed-water.js": "21dc64a92cee412fc98f2ad7391bf95e02a99eca4f582b93fa7ef35574f742a5",
+        "a2000-basis.js": "a33d5178769b4089f8cc88aacbfaf9710c66f2bd215b983b265eb2197597d930"
       },
       "hashNormalization": "UTF-8 text with LF line endings"
     },
@@ -713,7 +712,7 @@
       "id": "REC-A2000-002",
       "status": "open",
       "subject": "Model sizing and water balance",
-      "observed": "Model 100 m3/h feed, media 98%, UF 92.5%, 60% RO recovery and tank volumes are screening allowances, not ratings. Eight-hour inventory is a lower-end model selection within the draft 8-12 h recommendation. Base permeate is below the A-400 71 m3/h duty alone; supplemental water and batch balance remain unresolved.",
+      "observed": "A-2000 is on clean sources only (D-A2000-03, FEED-PE-CAL-036): the RO polishes A-1100 concentrator condensate (2.62 m3/h normal, 2.97 m3/h rated; 3 m3/h feed per train at 85% recovery gives 2.22-2.55 m3/h permeate) and about 15.8 m3/h of city make-up is filtered by CF-2002 into T-2002 for an 18 m3/h demand. The datasheets are candidate and preliminary. The condensate exists only under the Route 2 + 6 option and its tie-in is not modelled; city water quality (hardness below 10 mg/L), demand and condensate acidity (HOLD R1 to R3) are open.",
       "gapIds": [
         "A2000-002"
       ]
@@ -722,7 +721,7 @@
       "id": "REC-A2000-003",
       "status": "open",
       "subject": "Membrane and chemistry basis",
-      "observed": "Draft N+1 does not specify N; the model selects A/B duty and C standby with 72 elements per train and 8:4 staging in a single pass. Draft 70-75% higher recovery requires a scaling study. Residual Ba/Ca/sulfate, silica, oxidant breakthrough, greensand regeneration and antiscalant dose remain unqualified.",
+      "observed": "The model carries two RO trains, A duty and B standby (FEED-PE-DAT-134 / 135); the third train was removed (D-A2000-03). The membrane array is a model choice pending the vendor; the datasheet basis is 10 bar on low-TDS condensate with brackish elements. Antiscalant dose, the NaOH pH trim of the acidic condensate (about 100 mg/L H2SO4) and carry-over of volatile organics past the carbon filter remain unqualified.",
       "gapIds": [
         "A2000-003"
       ]
@@ -731,7 +730,7 @@
       "id": "REC-A2000-004",
       "status": "open",
       "subject": "Segregated waste and cleaning",
-      "observed": "Normal media/UF backwash returns to A-1000. Brine and spent CIP have separate positively blinded boundaries with destinations unassigned. Sequential acid/alkaline CIP isolates one train from product and brine export. Low CIP drain needs contained pump-out; UF chemical CEB is an unmodeled hold with no active pipe.",
+      "observed": "RO reject, the two relief lines and the carbon-filter backwash waste share one return to A-1000 T-1006 (receiving acceptance unqualified). The carbon filter is backwashed with RO permeate from T-2002 (DAT-133). Spent CIP has a separate positively blinded boundary with the destination unassigned. Sequential acid/alkaline CIP isolates one train from product and reject. Low CIP drain needs contained pump-out.",
       "gapIds": [
         "A2000-004"
       ]
@@ -740,7 +739,7 @@
       "id": "REC-A2000-005",
       "status": "open",
       "subject": "Quality diversion and protection",
-      "observed": "Model off-spec permeate and stored water recycle to T-2001; no active off-spec drain is added from draft wording. Train C is modeled standby, not live state. Relief capacity/backpressure, tank vent qualification, pressure ratings and hygienic turnover remain open. Reclaimed water is not a potable emergency supply.",
+      "observed": "Model off-spec permeate and stored water recycle to T-2001; no active off-spec drain is added from draft wording. Train B is the standby train, not a live state. There is no pump between T-2001 and the RO feed pumps: P-2002 draws through CF-2001 and the guard filters, which needs an NPSH and pressure-drop check. Relief capacity/backpressure, tank vent qualification, pressure ratings and hygienic turnover remain open. Reclaimed water is not a potable emergency supply.",
       "gapIds": [
         "A2000-005"
       ]

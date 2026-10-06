@@ -1,0 +1,31 @@
+{
+  "assetId": "IF-A2000-CITY",
+  "documents": [
+    {
+      "documentId": "MODEL-A2000",
+      "title": "Condensate receiving, carbon filtration, RO polishing, city make-up, reuse and the reject return",
+      "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
+      "page": null,
+      "status": "model-derived; not an approved process design",
+      "availability": "available model source reviewed",
+      "files": {
+        "reclaimed-water.js": "21dc64a92cee412fc98f2ad7391bf95e02a99eca4f582b93fa7ef35574f742a5",
+        "a2000-basis.js": "a33d5178769b4089f8cc88aacbfaf9710c66f2bd215b983b265eb2197597d930"
+      },
+      "hashNormalization": "UTF-8 text with LF line endings"
+    },
+    {
+      "documentId": "FEED-PFD-2000",
+      "sheetId": "FEED-PFD-2000",
+      "title": "Commercial Scale Reclaimed Water RO System",
+      "revision": null,
+      "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+      "page": 1,
+      "file": "feed-pfd-2000.pdf",
+      "sha256": "c7ff684a1dd010cfd5399ae997aad339c31fd1c8c4bff543347d247561c4be0c",
+      "status": "Draft - Not for Use; not approved",
+      "availability": "available and reviewed",
+      "href": "./feed-pfd-2000.pdf#page=1"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "assetId": "IF-A2000-CITY",
+  "bindingId": "GEOMETRY-IF-A2000-CITY",
+  "modelEquipmentId": 656,
+  "bindingScope": "assembly-context",
+  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
+}

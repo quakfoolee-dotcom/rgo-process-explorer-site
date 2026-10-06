@@ -14,22 +14,21 @@
       "temperature": null,
       "pressure": null,
       "directionality": "forward",
-      "operatingMode": "offline sequential acid/alkaline cleaning; one train isolated from product/brine export; waste and low-drain boundaries positively blinded pending receiving approval",
+      "operatingMode": "offline sequential acid/alkaline cleaning; one train isolated from product and reject; waste and low-drain boundaries positively blinded pending receiving approval",
       "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
       "evidenceStatus": "model-derived",
       "reviewStatus": "open",
       "sourceReferences": [
         {
           "documentId": "MODEL-A2000",
-          "title": "Reclaimed-water pretreatment, UF, RO, reuse and segregated returns",
+          "title": "Condensate receiving, carbon filtration, RO polishing, city make-up, reuse and the reject return",
           "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
           "page": null,
           "status": "model-derived; not an approved process design",
           "availability": "available model source reviewed",
           "files": {
-            "reclaimed-water.js": "f542555ce184772c61ebf0db349914de74ce6ca5145799b214475b9e852a5d22",
-            "a2000-basis.js": "9f8784a08530b979de9cac64315cbf40cadfd84cee0954ac44cc541a343c406c",
-            "uf-manifolds.js": "bde5bc174a8c256b05cf0b1000855ea0eafb003a551d9477db6afabc5c270854"
+            "reclaimed-water.js": "21dc64a92cee412fc98f2ad7391bf95e02a99eca4f582b93fa7ef35574f742a5",
+            "a2000-basis.js": "a33d5178769b4089f8cc88aacbfaf9710c66f2bd215b983b265eb2197597d930"
           },
           "hashNormalization": "UTF-8 text with LF line endings"
         },
@@ -71,22 +70,21 @@
       "temperature": null,
       "pressure": null,
       "directionality": "forward",
-      "operatingMode": "offline sequential acid/alkaline cleaning; one train isolated from product/brine export; waste and low-drain boundaries positively blinded pending receiving approval",
+      "operatingMode": "offline sequential acid/alkaline cleaning; one train isolated from product and reject; waste and low-drain boundaries positively blinded pending receiving approval",
       "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
       "evidenceStatus": "model-derived",
       "reviewStatus": "open",
       "sourceReferences": [
         {
           "documentId": "MODEL-A2000",
-          "title": "Reclaimed-water pretreatment, UF, RO, reuse and segregated returns",
+          "title": "Condensate receiving, carbon filtration, RO polishing, city make-up, reuse and the reject return",
           "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
           "page": null,
           "status": "model-derived; not an approved process design",
           "availability": "available model source reviewed",
           "files": {
-            "reclaimed-water.js": "f542555ce184772c61ebf0db349914de74ce6ca5145799b214475b9e852a5d22",
-            "a2000-basis.js": "9f8784a08530b979de9cac64315cbf40cadfd84cee0954ac44cc541a343c406c",
-            "uf-manifolds.js": "bde5bc174a8c256b05cf0b1000855ea0eafb003a551d9477db6afabc5c270854"
+            "reclaimed-water.js": "21dc64a92cee412fc98f2ad7391bf95e02a99eca4f582b93fa7ef35574f742a5",
+            "a2000-basis.js": "a33d5178769b4089f8cc88aacbfaf9710c66f2bd215b983b265eb2197597d930"
           },
           "hashNormalization": "UTF-8 text with LF line endings"
         },
@@ -127,22 +125,21 @@
       "temperature": null,
       "pressure": null,
       "directionality": "forward",
-      "operatingMode": "offline sequential acid/alkaline cleaning; one train isolated from product/brine export; waste and low-drain boundaries positively blinded pending receiving approval",
+      "operatingMode": "offline sequential acid/alkaline cleaning; one train isolated from product and reject; waste and low-drain boundaries positively blinded pending receiving approval",
       "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
       "evidenceStatus": "model-derived",
       "reviewStatus": "open",
       "sourceReferences": [
         {
           "documentId": "MODEL-A2000",
-          "title": "Reclaimed-water pretreatment, UF, RO, reuse and segregated returns",
+          "title": "Condensate receiving, carbon filtration, RO polishing, city make-up, reuse and the reject return",
           "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
           "page": null,
           "status": "model-derived; not an approved process design",
           "availability": "available model source reviewed",
           "files": {
-            "reclaimed-water.js": "f542555ce184772c61ebf0db349914de74ce6ca5145799b214475b9e852a5d22",
-            "a2000-basis.js": "9f8784a08530b979de9cac64315cbf40cadfd84cee0954ac44cc541a343c406c",
-            "uf-manifolds.js": "bde5bc174a8c256b05cf0b1000855ea0eafb003a551d9477db6afabc5c270854"
+            "reclaimed-water.js": "21dc64a92cee412fc98f2ad7391bf95e02a99eca4f582b93fa7ef35574f742a5",
+            "a2000-basis.js": "a33d5178769b4089f8cc88aacbfaf9710c66f2bd215b983b265eb2197597d930"
           },
           "hashNormalization": "UTF-8 text with LF line endings"
         },
@@ -183,22 +180,21 @@
       "temperature": null,
       "pressure": null,
       "directionality": "forward",
-      "operatingMode": "offline sequential acid/alkaline cleaning; one train isolated from product/brine export; waste and low-drain boundaries positively blinded pending receiving approval",
+      "operatingMode": "offline sequential acid/alkaline cleaning; one train isolated from product and reject; waste and low-drain boundaries positively blinded pending receiving approval; train B is the standby train, normally isolated, model intent, no live state",
       "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
       "evidenceStatus": "model-derived",
       "reviewStatus": "open",
       "sourceReferences": [
         {
           "documentId": "MODEL-A2000",
-          "title": "Reclaimed-water pretreatment, UF, RO, reuse and segregated returns",
+          "title": "Condensate receiving, carbon filtration, RO polishing, city make-up, reuse and the reject return",
           "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
           "page": null,
           "status": "model-derived; not an approved process design",
           "availability": "available model source reviewed",
           "files": {
-            "reclaimed-water.js": "f542555ce184772c61ebf0db349914de74ce6ca5145799b214475b9e852a5d22",
-            "a2000-basis.js": "9f8784a08530b979de9cac64315cbf40cadfd84cee0954ac44cc541a343c406c",
-            "uf-manifolds.js": "bde5bc174a8c256b05cf0b1000855ea0eafb003a551d9477db6afabc5c270854"
+            "reclaimed-water.js": "21dc64a92cee412fc98f2ad7391bf95e02a99eca4f582b93fa7ef35574f742a5",
+            "a2000-basis.js": "a33d5178769b4089f8cc88aacbfaf9710c66f2bd215b983b265eb2197597d930"
           },
           "hashNormalization": "UTF-8 text with LF line endings"
         },
@@ -240,22 +236,21 @@
       "temperature": null,
       "pressure": null,
       "directionality": "forward",
-      "operatingMode": "offline sequential acid/alkaline cleaning; one train isolated from product/brine export; waste and low-drain boundaries positively blinded pending receiving approval",
+      "operatingMode": "offline sequential acid/alkaline cleaning; one train isolated from product and reject; waste and low-drain boundaries positively blinded pending receiving approval; train B is the standby train, normally isolated, model intent, no live state",
       "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
       "evidenceStatus": "model-derived",
       "reviewStatus": "open",
       "sourceReferences": [
         {
           "documentId": "MODEL-A2000",
-          "title": "Reclaimed-water pretreatment, UF, RO, reuse and segregated returns",
+          "title": "Condensate receiving, carbon filtration, RO polishing, city make-up, reuse and the reject return",
           "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
           "page": null,
           "status": "model-derived; not an approved process design",
           "availability": "available model source reviewed",
           "files": {
-            "reclaimed-water.js": "f542555ce184772c61ebf0db349914de74ce6ca5145799b214475b9e852a5d22",
-            "a2000-basis.js": "9f8784a08530b979de9cac64315cbf40cadfd84cee0954ac44cc541a343c406c",
-            "uf-manifolds.js": "bde5bc174a8c256b05cf0b1000855ea0eafb003a551d9477db6afabc5c270854"
+            "reclaimed-water.js": "21dc64a92cee412fc98f2ad7391bf95e02a99eca4f582b93fa7ef35574f742a5",
+            "a2000-basis.js": "a33d5178769b4089f8cc88aacbfaf9710c66f2bd215b983b265eb2197597d930"
           },
           "hashNormalization": "UTF-8 text with LF line endings"
         },
@@ -296,22 +291,21 @@
       "temperature": null,
       "pressure": null,
       "directionality": "forward",
-      "operatingMode": "offline sequential acid/alkaline cleaning; one train isolated from product/brine export; waste and low-drain boundaries positively blinded pending receiving approval",
+      "operatingMode": "offline sequential acid/alkaline cleaning; one train isolated from product and reject; waste and low-drain boundaries positively blinded pending receiving approval; train B is the standby train, normally isolated, model intent, no live state",
       "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
       "evidenceStatus": "model-derived",
       "reviewStatus": "open",
       "sourceReferences": [
         {
           "documentId": "MODEL-A2000",
-          "title": "Reclaimed-water pretreatment, UF, RO, reuse and segregated returns",
+          "title": "Condensate receiving, carbon filtration, RO polishing, city make-up, reuse and the reject return",
           "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
           "page": null,
           "status": "model-derived; not an approved process design",
           "availability": "available model source reviewed",
           "files": {
-            "reclaimed-water.js": "f542555ce184772c61ebf0db349914de74ce6ca5145799b214475b9e852a5d22",
-            "a2000-basis.js": "9f8784a08530b979de9cac64315cbf40cadfd84cee0954ac44cc541a343c406c",
-            "uf-manifolds.js": "bde5bc174a8c256b05cf0b1000855ea0eafb003a551d9477db6afabc5c270854"
+            "reclaimed-water.js": "21dc64a92cee412fc98f2ad7391bf95e02a99eca4f582b93fa7ef35574f742a5",
+            "a2000-basis.js": "a33d5178769b4089f8cc88aacbfaf9710c66f2bd215b983b265eb2197597d930"
           },
           "hashNormalization": "UTF-8 text with LF line endings"
         },
@@ -340,175 +334,6 @@
       ]
     },
     {
-      "streamId": "S-2000-CIP-FEED-C",
-      "name": "cip feed c",
-      "source": "CIP-2001",
-      "via": [],
-      "destination": "RO-2001C",
-      "material": "Sequential cleaning solution",
-      "phase": "Liquid",
-      "massFlow": null,
-      "feedRatio": null,
-      "temperature": null,
-      "pressure": null,
-      "directionality": "forward",
-      "operatingMode": "offline sequential acid/alkaline cleaning; one train isolated from product/brine export; waste and low-drain boundaries positively blinded pending receiving approval; train C normally isolated standby model intent, no live state",
-      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
-      "evidenceStatus": "model-derived",
-      "reviewStatus": "open",
-      "sourceReferences": [
-        {
-          "documentId": "MODEL-A2000",
-          "title": "Reclaimed-water pretreatment, UF, RO, reuse and segregated returns",
-          "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
-          "page": null,
-          "status": "model-derived; not an approved process design",
-          "availability": "available model source reviewed",
-          "files": {
-            "reclaimed-water.js": "f542555ce184772c61ebf0db349914de74ce6ca5145799b214475b9e852a5d22",
-            "a2000-basis.js": "9f8784a08530b979de9cac64315cbf40cadfd84cee0954ac44cc541a343c406c",
-            "uf-manifolds.js": "bde5bc174a8c256b05cf0b1000855ea0eafb003a551d9477db6afabc5c270854"
-          },
-          "hashNormalization": "UTF-8 text with LF line endings"
-        },
-        {
-          "documentId": "FEED-PFD-2000",
-          "sheetId": "FEED-PFD-2000",
-          "title": "Commercial Scale Reclaimed Water RO System",
-          "revision": null,
-          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
-          "page": 1,
-          "file": "feed-pfd-2000.pdf",
-          "sha256": "c7ff684a1dd010cfd5399ae997aad339c31fd1c8c4bff543347d247561c4be0c",
-          "status": "Draft - Not for Use; not approved",
-          "availability": "available and reviewed",
-          "href": "./feed-pfd-2000.pdf#page=1"
-        }
-      ],
-      "routeLabels": [
-        "CIP-2001 pump suction",
-        "CIP-2001 cleaning supply",
-        "RO-2001C CIP feed branch",
-        "RO-2001C CIP feed to membrane"
-      ],
-      "contextAssetIds": [
-        "RO-2001",
-        "CP-2000"
-      ]
-    },
-    {
-      "streamId": "S-2000-CIP-CONCENTRATE-C",
-      "name": "cip concentrate c",
-      "source": "RO-2001C",
-      "via": [],
-      "destination": "CIP-2001",
-      "material": "Cleaning return",
-      "phase": "Liquid",
-      "massFlow": null,
-      "feedRatio": null,
-      "temperature": null,
-      "pressure": null,
-      "directionality": "forward",
-      "operatingMode": "offline sequential acid/alkaline cleaning; one train isolated from product/brine export; waste and low-drain boundaries positively blinded pending receiving approval; train C normally isolated standby model intent, no live state",
-      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
-      "evidenceStatus": "model-derived",
-      "reviewStatus": "open",
-      "sourceReferences": [
-        {
-          "documentId": "MODEL-A2000",
-          "title": "Reclaimed-water pretreatment, UF, RO, reuse and segregated returns",
-          "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
-          "page": null,
-          "status": "model-derived; not an approved process design",
-          "availability": "available model source reviewed",
-          "files": {
-            "reclaimed-water.js": "f542555ce184772c61ebf0db349914de74ce6ca5145799b214475b9e852a5d22",
-            "a2000-basis.js": "9f8784a08530b979de9cac64315cbf40cadfd84cee0954ac44cc541a343c406c",
-            "uf-manifolds.js": "bde5bc174a8c256b05cf0b1000855ea0eafb003a551d9477db6afabc5c270854"
-          },
-          "hashNormalization": "UTF-8 text with LF line endings"
-        },
-        {
-          "documentId": "FEED-PFD-2000",
-          "sheetId": "FEED-PFD-2000",
-          "title": "Commercial Scale Reclaimed Water RO System",
-          "revision": null,
-          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
-          "page": 1,
-          "file": "feed-pfd-2000.pdf",
-          "sha256": "c7ff684a1dd010cfd5399ae997aad339c31fd1c8c4bff543347d247561c4be0c",
-          "status": "Draft - Not for Use; not approved",
-          "availability": "available and reviewed",
-          "href": "./feed-pfd-2000.pdf#page=1"
-        }
-      ],
-      "routeLabels": [
-        "RO-2001C CIP concentrate return",
-        "RO-2001C CIP return header",
-        "RO cleaning return to CIP-2001"
-      ],
-      "contextAssetIds": [
-        "RO-2001",
-        "CP-2000"
-      ]
-    },
-    {
-      "streamId": "S-2000-CIP-PERMEATE-C",
-      "name": "cip permeate c",
-      "source": "RO-2001C",
-      "via": [],
-      "destination": "CIP-2001",
-      "material": "Cleaning return",
-      "phase": "Liquid",
-      "massFlow": null,
-      "feedRatio": null,
-      "temperature": null,
-      "pressure": null,
-      "directionality": "forward",
-      "operatingMode": "offline sequential acid/alkaline cleaning; one train isolated from product/brine export; waste and low-drain boundaries positively blinded pending receiving approval; train C normally isolated standby model intent, no live state",
-      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
-      "evidenceStatus": "model-derived",
-      "reviewStatus": "open",
-      "sourceReferences": [
-        {
-          "documentId": "MODEL-A2000",
-          "title": "Reclaimed-water pretreatment, UF, RO, reuse and segregated returns",
-          "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
-          "page": null,
-          "status": "model-derived; not an approved process design",
-          "availability": "available model source reviewed",
-          "files": {
-            "reclaimed-water.js": "f542555ce184772c61ebf0db349914de74ce6ca5145799b214475b9e852a5d22",
-            "a2000-basis.js": "9f8784a08530b979de9cac64315cbf40cadfd84cee0954ac44cc541a343c406c",
-            "uf-manifolds.js": "bde5bc174a8c256b05cf0b1000855ea0eafb003a551d9477db6afabc5c270854"
-          },
-          "hashNormalization": "UTF-8 text with LF line endings"
-        },
-        {
-          "documentId": "FEED-PFD-2000",
-          "sheetId": "FEED-PFD-2000",
-          "title": "Commercial Scale Reclaimed Water RO System",
-          "revision": null,
-          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
-          "page": 1,
-          "file": "feed-pfd-2000.pdf",
-          "sha256": "c7ff684a1dd010cfd5399ae997aad339c31fd1c8c4bff543347d247561c4be0c",
-          "status": "Draft - Not for Use; not approved",
-          "availability": "available and reviewed",
-          "href": "./feed-pfd-2000.pdf#page=1"
-        }
-      ],
-      "routeLabels": [
-        "RO-2001C CIP permeate return",
-        "RO-2001C CIP permeate header",
-        "RO cleaning return to CIP-2001"
-      ],
-      "contextAssetIds": [
-        "RO-2001",
-        "CP-2000"
-      ]
-    },
-    {
       "streamId": "S-2000-CIP-SPENT",
       "name": "cip spent",
       "source": "CIP-2001",
@@ -521,22 +346,21 @@
       "temperature": null,
       "pressure": null,
       "directionality": "forward",
-      "operatingMode": "offline sequential acid/alkaline cleaning; one train isolated from product/brine export; waste and low-drain boundaries positively blinded pending receiving approval",
+      "operatingMode": "offline sequential acid/alkaline cleaning; one train isolated from product and reject; waste and low-drain boundaries positively blinded pending receiving approval",
       "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
       "evidenceStatus": "model-derived",
       "reviewStatus": "open",
       "sourceReferences": [
         {
           "documentId": "MODEL-A2000",
-          "title": "Reclaimed-water pretreatment, UF, RO, reuse and segregated returns",
+          "title": "Condensate receiving, carbon filtration, RO polishing, city make-up, reuse and the reject return",
           "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
           "page": null,
           "status": "model-derived; not an approved process design",
           "availability": "available model source reviewed",
           "files": {
-            "reclaimed-water.js": "f542555ce184772c61ebf0db349914de74ce6ca5145799b214475b9e852a5d22",
-            "a2000-basis.js": "9f8784a08530b979de9cac64315cbf40cadfd84cee0954ac44cc541a343c406c",
-            "uf-manifolds.js": "bde5bc174a8c256b05cf0b1000855ea0eafb003a551d9477db6afabc5c270854"
+            "reclaimed-water.js": "21dc64a92cee412fc98f2ad7391bf95e02a99eca4f582b93fa7ef35574f742a5",
+            "a2000-basis.js": "a33d5178769b4089f8cc88aacbfaf9710c66f2bd215b983b265eb2197597d930"
           },
           "hashNormalization": "UTF-8 text with LF line endings"
         },
@@ -574,22 +398,21 @@
       "temperature": null,
       "pressure": null,
       "directionality": "forward",
-      "operatingMode": "offline sequential acid/alkaline cleaning; one train isolated from product/brine export; waste and low-drain boundaries positively blinded pending receiving approval",
+      "operatingMode": "offline sequential acid/alkaline cleaning; one train isolated from product and reject; waste and low-drain boundaries positively blinded pending receiving approval",
       "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
       "evidenceStatus": "model-derived",
       "reviewStatus": "open",
       "sourceReferences": [
         {
           "documentId": "MODEL-A2000",
-          "title": "Reclaimed-water pretreatment, UF, RO, reuse and segregated returns",
+          "title": "Condensate receiving, carbon filtration, RO polishing, city make-up, reuse and the reject return",
           "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
           "page": null,
           "status": "model-derived; not an approved process design",
           "availability": "available model source reviewed",
           "files": {
-            "reclaimed-water.js": "f542555ce184772c61ebf0db349914de74ce6ca5145799b214475b9e852a5d22",
-            "a2000-basis.js": "9f8784a08530b979de9cac64315cbf40cadfd84cee0954ac44cc541a343c406c",
-            "uf-manifolds.js": "bde5bc174a8c256b05cf0b1000855ea0eafb003a551d9477db6afabc5c270854"
+            "reclaimed-water.js": "21dc64a92cee412fc98f2ad7391bf95e02a99eca4f582b93fa7ef35574f742a5",
+            "a2000-basis.js": "a33d5178769b4089f8cc88aacbfaf9710c66f2bd215b983b265eb2197597d930"
           },
           "hashNormalization": "UTF-8 text with LF line endings"
         },

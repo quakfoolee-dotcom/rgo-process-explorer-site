@@ -1,7 +1,0 @@
-{
-  "assetId": "RO-2001C",
-  "bindingId": "GEOMETRY-RO-2001C",
-  "modelEquipmentId": 507,
-  "bindingScope": "assembly-context",
-  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
-}

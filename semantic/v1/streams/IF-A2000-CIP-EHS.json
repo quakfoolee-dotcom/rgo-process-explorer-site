@@ -14,22 +14,21 @@
       "temperature": null,
       "pressure": null,
       "directionality": "forward",
-      "operatingMode": "offline sequential acid/alkaline cleaning; one train isolated from product/brine export; waste and low-drain boundaries positively blinded pending receiving approval",
+      "operatingMode": "offline sequential acid/alkaline cleaning; one train isolated from product and reject; waste and low-drain boundaries positively blinded pending receiving approval",
       "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
       "evidenceStatus": "model-derived",
       "reviewStatus": "open",
       "sourceReferences": [
         {
           "documentId": "MODEL-A2000",
-          "title": "Reclaimed-water pretreatment, UF, RO, reuse and segregated returns",
+          "title": "Condensate receiving, carbon filtration, RO polishing, city make-up, reuse and the reject return",
           "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
           "page": null,
           "status": "model-derived; not an approved process design",
           "availability": "available model source reviewed",
           "files": {
-            "reclaimed-water.js": "f542555ce184772c61ebf0db349914de74ce6ca5145799b214475b9e852a5d22",
-            "a2000-basis.js": "9f8784a08530b979de9cac64315cbf40cadfd84cee0954ac44cc541a343c406c",
-            "uf-manifolds.js": "bde5bc174a8c256b05cf0b1000855ea0eafb003a551d9477db6afabc5c270854"
+            "reclaimed-water.js": "21dc64a92cee412fc98f2ad7391bf95e02a99eca4f582b93fa7ef35574f742a5",
+            "a2000-basis.js": "a33d5178769b4089f8cc88aacbfaf9710c66f2bd215b983b265eb2197597d930"
           },
           "hashNormalization": "UTF-8 text with LF line endings"
         },

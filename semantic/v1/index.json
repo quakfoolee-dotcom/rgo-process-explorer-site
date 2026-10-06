@@ -3286,38 +3286,6 @@
       }
     },
     {
-      "assetId": "T-2001",
-      "area": "A-2000",
-      "equipmentId": 500,
-      "recordScope": "asset",
-      "endpoints": {
-        "assets": "./assets/T-2001.json",
-        "relationships": "./relationships/T-2001.json",
-        "streams": "./streams/T-2001.json",
-        "documents": "./documents/T-2001.json",
-        "state": "./state/T-2001.json",
-        "geometry": "./geometry/T-2001.json",
-        "provenance": "./provenance/T-2001.json",
-        "instruments": "./instruments/T-2001.json"
-      }
-    },
-    {
-      "assetId": "P-BW2001",
-      "area": "A-2000",
-      "equipmentId": 520,
-      "recordScope": "asset",
-      "endpoints": {
-        "assets": "./assets/P-BW2001.json",
-        "relationships": "./relationships/P-BW2001.json",
-        "streams": "./streams/P-BW2001.json",
-        "documents": "./documents/P-BW2001.json",
-        "state": "./state/P-BW2001.json",
-        "geometry": "./geometry/P-BW2001.json",
-        "provenance": "./provenance/P-BW2001.json",
-        "instruments": "./instruments/P-BW2001.json"
-      }
-    },
-    {
       "assetId": "P-3111",
       "area": "A-3000",
       "equipmentId": 611,
@@ -3718,51 +3686,19 @@
       }
     },
     {
-      "assetId": "P-2001",
+      "assetId": "T-2001",
       "area": "A-2000",
-      "equipmentId": 501,
+      "equipmentId": 500,
       "recordScope": "asset",
       "endpoints": {
-        "assets": "./assets/P-2001.json",
-        "relationships": "./relationships/P-2001.json",
-        "streams": "./streams/P-2001.json",
-        "documents": "./documents/P-2001.json",
-        "state": "./state/P-2001.json",
-        "geometry": "./geometry/P-2001.json",
-        "provenance": "./provenance/P-2001.json",
-        "instruments": "./instruments/P-2001.json"
-      }
-    },
-    {
-      "assetId": "MMF-2001",
-      "area": "A-2000",
-      "equipmentId": 502,
-      "recordScope": "asset",
-      "endpoints": {
-        "assets": "./assets/MMF-2001.json",
-        "relationships": "./relationships/MMF-2001.json",
-        "streams": "./streams/MMF-2001.json",
-        "documents": "./documents/MMF-2001.json",
-        "state": "./state/MMF-2001.json",
-        "geometry": "./geometry/MMF-2001.json",
-        "provenance": "./provenance/MMF-2001.json",
-        "instruments": "./instruments/MMF-2001.json"
-      }
-    },
-    {
-      "assetId": "GF-2001",
-      "area": "A-2000",
-      "equipmentId": 503,
-      "recordScope": "asset",
-      "endpoints": {
-        "assets": "./assets/GF-2001.json",
-        "relationships": "./relationships/GF-2001.json",
-        "streams": "./streams/GF-2001.json",
-        "documents": "./documents/GF-2001.json",
-        "state": "./state/GF-2001.json",
-        "geometry": "./geometry/GF-2001.json",
-        "provenance": "./provenance/GF-2001.json",
-        "instruments": "./instruments/GF-2001.json"
+        "assets": "./assets/T-2001.json",
+        "relationships": "./relationships/T-2001.json",
+        "streams": "./streams/T-2001.json",
+        "documents": "./documents/T-2001.json",
+        "state": "./state/T-2001.json",
+        "geometry": "./geometry/T-2001.json",
+        "provenance": "./provenance/T-2001.json",
+        "instruments": "./instruments/T-2001.json"
       }
     },
     {
@@ -3779,22 +3715,6 @@
         "geometry": "./geometry/CF-2001.json",
         "provenance": "./provenance/CF-2001.json",
         "instruments": "./instruments/CF-2001.json"
-      }
-    },
-    {
-      "assetId": "UF-2001",
-      "area": "A-2000",
-      "equipmentId": 505,
-      "recordScope": "asset",
-      "endpoints": {
-        "assets": "./assets/UF-2001.json",
-        "relationships": "./relationships/UF-2001.json",
-        "streams": "./streams/UF-2001.json",
-        "documents": "./documents/UF-2001.json",
-        "state": "./state/UF-2001.json",
-        "geometry": "./geometry/UF-2001.json",
-        "provenance": "./provenance/UF-2001.json",
-        "instruments": "./instruments/UF-2001.json"
       }
     },
     {
@@ -3878,38 +3798,6 @@
       }
     },
     {
-      "assetId": "T-2003",
-      "area": "A-2000",
-      "equipmentId": 511,
-      "recordScope": "asset",
-      "endpoints": {
-        "assets": "./assets/T-2003.json",
-        "relationships": "./relationships/T-2003.json",
-        "streams": "./streams/T-2003.json",
-        "documents": "./documents/T-2003.json",
-        "state": "./state/T-2003.json",
-        "geometry": "./geometry/T-2003.json",
-        "provenance": "./provenance/T-2003.json",
-        "instruments": "./instruments/T-2003.json"
-      }
-    },
-    {
-      "assetId": "P-2003",
-      "area": "A-2000",
-      "equipmentId": 512,
-      "recordScope": "asset",
-      "endpoints": {
-        "assets": "./assets/P-2003.json",
-        "relationships": "./relationships/P-2003.json",
-        "streams": "./streams/P-2003.json",
-        "documents": "./documents/P-2003.json",
-        "state": "./state/P-2003.json",
-        "geometry": "./geometry/P-2003.json",
-        "provenance": "./provenance/P-2003.json",
-        "instruments": "./instruments/P-2003.json"
-      }
-    },
-    {
       "assetId": "T-2004",
       "area": "A-2000",
       "equipmentId": 513,
@@ -3971,54 +3859,6 @@
         "geometry": "./geometry/CP-2000.json",
         "provenance": "./provenance/CP-2000.json",
         "instruments": "./instruments/CP-2000.json"
-      }
-    },
-    {
-      "assetId": "TK-UF2001",
-      "area": "A-2000",
-      "equipmentId": 517,
-      "recordScope": "asset",
-      "endpoints": {
-        "assets": "./assets/TK-UF2001.json",
-        "relationships": "./relationships/TK-UF2001.json",
-        "streams": "./streams/TK-UF2001.json",
-        "documents": "./documents/TK-UF2001.json",
-        "state": "./state/TK-UF2001.json",
-        "geometry": "./geometry/TK-UF2001.json",
-        "provenance": "./provenance/TK-UF2001.json",
-        "instruments": "./instruments/TK-UF2001.json"
-      }
-    },
-    {
-      "assetId": "P-UF2001",
-      "area": "A-2000",
-      "equipmentId": 518,
-      "recordScope": "asset",
-      "endpoints": {
-        "assets": "./assets/P-UF2001.json",
-        "relationships": "./relationships/P-UF2001.json",
-        "streams": "./streams/P-UF2001.json",
-        "documents": "./documents/P-UF2001.json",
-        "state": "./state/P-UF2001.json",
-        "geometry": "./geometry/P-UF2001.json",
-        "provenance": "./provenance/P-UF2001.json",
-        "instruments": "./instruments/P-UF2001.json"
-      }
-    },
-    {
-      "assetId": "TK-BW2001",
-      "area": "A-2000",
-      "equipmentId": 519,
-      "recordScope": "asset",
-      "endpoints": {
-        "assets": "./assets/TK-BW2001.json",
-        "relationships": "./relationships/TK-BW2001.json",
-        "streams": "./streams/TK-BW2001.json",
-        "documents": "./documents/TK-BW2001.json",
-        "state": "./state/TK-BW2001.json",
-        "geometry": "./geometry/TK-BW2001.json",
-        "provenance": "./provenance/TK-BW2001.json",
-        "instruments": "./instruments/TK-BW2001.json"
       }
     },
     {
@@ -4166,86 +4006,6 @@
       }
     },
     {
-      "assetId": "GF-RO2001C",
-      "area": "A-2000",
-      "equipmentId": 524,
-      "recordScope": "asset",
-      "endpoints": {
-        "assets": "./assets/GF-RO2001C.json",
-        "relationships": "./relationships/GF-RO2001C.json",
-        "streams": "./streams/GF-RO2001C.json",
-        "documents": "./documents/GF-RO2001C.json",
-        "state": "./state/GF-RO2001C.json",
-        "geometry": "./geometry/GF-RO2001C.json",
-        "provenance": "./provenance/GF-RO2001C.json",
-        "instruments": "./instruments/GF-RO2001C.json"
-      }
-    },
-    {
-      "assetId": "P-2002C",
-      "area": "A-2000",
-      "equipmentId": 506,
-      "recordScope": "asset",
-      "endpoints": {
-        "assets": "./assets/P-2002C.json",
-        "relationships": "./relationships/P-2002C.json",
-        "streams": "./streams/P-2002C.json",
-        "documents": "./documents/P-2002C.json",
-        "state": "./state/P-2002C.json",
-        "geometry": "./geometry/P-2002C.json",
-        "provenance": "./provenance/P-2002C.json",
-        "instruments": "./instruments/P-2002C.json"
-      }
-    },
-    {
-      "assetId": "RO-2001C",
-      "area": "A-2000",
-      "equipmentId": 507,
-      "recordScope": "asset",
-      "endpoints": {
-        "assets": "./assets/RO-2001C.json",
-        "relationships": "./relationships/RO-2001C.json",
-        "streams": "./streams/RO-2001C.json",
-        "documents": "./documents/RO-2001C.json",
-        "state": "./state/RO-2001C.json",
-        "geometry": "./geometry/RO-2001C.json",
-        "provenance": "./provenance/RO-2001C.json",
-        "instruments": "./instruments/RO-2001C.json"
-      }
-    },
-    {
-      "assetId": "PSV-RO-C",
-      "area": "A-2000",
-      "equipmentId": 507,
-      "recordScope": "asset",
-      "endpoints": {
-        "assets": "./assets/PSV-RO-C.json",
-        "relationships": "./relationships/PSV-RO-C.json",
-        "streams": "./streams/PSV-RO-C.json",
-        "documents": "./documents/PSV-RO-C.json",
-        "state": "./state/PSV-RO-C.json",
-        "geometry": "./geometry/PSV-RO-C.json",
-        "provenance": "./provenance/PSV-RO-C.json",
-        "instruments": "./instruments/PSV-RO-C.json"
-      }
-    },
-    {
-      "assetId": "IF-A2000-BRINE",
-      "area": "A-2000",
-      "equipmentId": null,
-      "recordScope": "external-interface",
-      "endpoints": {
-        "assets": "./assets/IF-A2000-BRINE.json",
-        "relationships": "./relationships/IF-A2000-BRINE.json",
-        "streams": "./streams/IF-A2000-BRINE.json",
-        "documents": "./documents/IF-A2000-BRINE.json",
-        "state": "./state/IF-A2000-BRINE.json",
-        "geometry": "./geometry/IF-A2000-BRINE.json",
-        "provenance": "./provenance/IF-A2000-BRINE.json",
-        "instruments": "./instruments/IF-A2000-BRINE.json"
-      }
-    },
-    {
       "assetId": "IF-A2000-CIP-EHS",
       "area": "A-2000",
       "equipmentId": null,
@@ -4291,22 +4051,6 @@
         "geometry": "./geometry/IF-A2000-AS-FILL.json",
         "provenance": "./provenance/IF-A2000-AS-FILL.json",
         "instruments": "./instruments/IF-A2000-AS-FILL.json"
-      }
-    },
-    {
-      "assetId": "IF-A2000-CEB",
-      "area": "A-2000",
-      "equipmentId": null,
-      "recordScope": "external-interface",
-      "endpoints": {
-        "assets": "./assets/IF-A2000-CEB.json",
-        "relationships": "./relationships/IF-A2000-CEB.json",
-        "streams": "./streams/IF-A2000-CEB.json",
-        "documents": "./documents/IF-A2000-CEB.json",
-        "state": "./state/IF-A2000-CEB.json",
-        "geometry": "./geometry/IF-A2000-CEB.json",
-        "provenance": "./provenance/IF-A2000-CEB.json",
-        "instruments": "./instruments/IF-A2000-CEB.json"
       }
     },
     {
@@ -4371,6 +4115,38 @@
         "geometry": "./geometry/IF-A2000-RO-201.json",
         "provenance": "./provenance/IF-A2000-RO-201.json",
         "instruments": "./instruments/IF-A2000-RO-201.json"
+      }
+    },
+    {
+      "assetId": "IF-A2000-COND",
+      "area": "A-2000",
+      "equipmentId": null,
+      "recordScope": "external-interface",
+      "endpoints": {
+        "assets": "./assets/IF-A2000-COND.json",
+        "relationships": "./relationships/IF-A2000-COND.json",
+        "streams": "./streams/IF-A2000-COND.json",
+        "documents": "./documents/IF-A2000-COND.json",
+        "state": "./state/IF-A2000-COND.json",
+        "geometry": "./geometry/IF-A2000-COND.json",
+        "provenance": "./provenance/IF-A2000-COND.json",
+        "instruments": "./instruments/IF-A2000-COND.json"
+      }
+    },
+    {
+      "assetId": "IF-A2000-CITY",
+      "area": "A-2000",
+      "equipmentId": 656,
+      "recordScope": "external-interface",
+      "endpoints": {
+        "assets": "./assets/IF-A2000-CITY.json",
+        "relationships": "./relationships/IF-A2000-CITY.json",
+        "streams": "./streams/IF-A2000-CITY.json",
+        "documents": "./documents/IF-A2000-CITY.json",
+        "state": "./state/IF-A2000-CITY.json",
+        "geometry": "./geometry/IF-A2000-CITY.json",
+        "provenance": "./provenance/IF-A2000-CITY.json",
+        "instruments": "./instruments/IF-A2000-CITY.json"
       }
     },
     {
@@ -8282,22 +8058,6 @@
       "type": "GeometryBinding"
     },
     {
-      "id": "T-2001",
-      "type": "Asset"
-    },
-    {
-      "id": "GEOMETRY-T-2001",
-      "type": "GeometryBinding"
-    },
-    {
-      "id": "P-BW2001",
-      "type": "Asset"
-    },
-    {
-      "id": "GEOMETRY-P-BW2001",
-      "type": "GeometryBinding"
-    },
-    {
       "id": "P-3111",
       "type": "Asset"
     },
@@ -8498,27 +8258,11 @@
       "type": "GeometryBinding"
     },
     {
-      "id": "P-2001",
+      "id": "T-2001",
       "type": "Asset"
     },
     {
-      "id": "GEOMETRY-P-2001",
-      "type": "GeometryBinding"
-    },
-    {
-      "id": "MMF-2001",
-      "type": "Asset"
-    },
-    {
-      "id": "GEOMETRY-MMF-2001",
-      "type": "GeometryBinding"
-    },
-    {
-      "id": "GF-2001",
-      "type": "Asset"
-    },
-    {
-      "id": "GEOMETRY-GF-2001",
+      "id": "GEOMETRY-T-2001",
       "type": "GeometryBinding"
     },
     {
@@ -8527,14 +8271,6 @@
     },
     {
       "id": "GEOMETRY-CF-2001",
-      "type": "GeometryBinding"
-    },
-    {
-      "id": "UF-2001",
-      "type": "Asset"
-    },
-    {
-      "id": "GEOMETRY-UF-2001",
       "type": "GeometryBinding"
     },
     {
@@ -8578,22 +8314,6 @@
       "type": "GeometryBinding"
     },
     {
-      "id": "T-2003",
-      "type": "Asset"
-    },
-    {
-      "id": "GEOMETRY-T-2003",
-      "type": "GeometryBinding"
-    },
-    {
-      "id": "P-2003",
-      "type": "Asset"
-    },
-    {
-      "id": "GEOMETRY-P-2003",
-      "type": "GeometryBinding"
-    },
-    {
       "id": "T-2004",
       "type": "Asset"
     },
@@ -8623,30 +8343,6 @@
     },
     {
       "id": "GEOMETRY-CP-2000",
-      "type": "GeometryBinding"
-    },
-    {
-      "id": "TK-UF2001",
-      "type": "Asset"
-    },
-    {
-      "id": "GEOMETRY-TK-UF2001",
-      "type": "GeometryBinding"
-    },
-    {
-      "id": "P-UF2001",
-      "type": "Asset"
-    },
-    {
-      "id": "GEOMETRY-P-UF2001",
-      "type": "GeometryBinding"
-    },
-    {
-      "id": "TK-BW2001",
-      "type": "Asset"
-    },
-    {
-      "id": "GEOMETRY-TK-BW2001",
       "type": "GeometryBinding"
     },
     {
@@ -8722,46 +8418,6 @@
       "type": "GeometryBinding"
     },
     {
-      "id": "GF-RO2001C",
-      "type": "Asset"
-    },
-    {
-      "id": "GEOMETRY-GF-RO2001C",
-      "type": "GeometryBinding"
-    },
-    {
-      "id": "P-2002C",
-      "type": "Asset"
-    },
-    {
-      "id": "GEOMETRY-P-2002C",
-      "type": "GeometryBinding"
-    },
-    {
-      "id": "RO-2001C",
-      "type": "Asset"
-    },
-    {
-      "id": "GEOMETRY-RO-2001C",
-      "type": "GeometryBinding"
-    },
-    {
-      "id": "PSV-RO-C",
-      "type": "Asset"
-    },
-    {
-      "id": "GEOMETRY-PSV-RO-C",
-      "type": "GeometryBinding"
-    },
-    {
-      "id": "IF-A2000-BRINE",
-      "type": "ExternalInterface"
-    },
-    {
-      "id": "GEOMETRY-IF-A2000-BRINE",
-      "type": "GeometryBinding"
-    },
-    {
       "id": "IF-A2000-CIP-EHS",
       "type": "ExternalInterface"
     },
@@ -8783,14 +8439,6 @@
     },
     {
       "id": "GEOMETRY-IF-A2000-AS-FILL",
-      "type": "GeometryBinding"
-    },
-    {
-      "id": "IF-A2000-CEB",
-      "type": "ExternalInterface"
-    },
-    {
-      "id": "GEOMETRY-IF-A2000-CEB",
       "type": "GeometryBinding"
     },
     {
@@ -8823,6 +8471,22 @@
     },
     {
       "id": "GEOMETRY-IF-A2000-RO-201",
+      "type": "GeometryBinding"
+    },
+    {
+      "id": "IF-A2000-COND",
+      "type": "ExternalInterface"
+    },
+    {
+      "id": "GEOMETRY-IF-A2000-COND",
+      "type": "GeometryBinding"
+    },
+    {
+      "id": "IF-A2000-CITY",
+      "type": "ExternalInterface"
+    },
+    {
+      "id": "GEOMETRY-IF-A2000-CITY",
       "type": "GeometryBinding"
     },
     {
@@ -10419,35 +10083,20 @@
     "500": [
       "T-2001"
     ],
-    "501": [
-      "P-2001"
-    ],
-    "502": [
-      "MMF-2001"
-    ],
-    "503": [
-      "GF-2001"
-    ],
     "504": [
       "CF-2001"
-    ],
-    "505": [
-      "UF-2001"
     ],
     "506": [
       "P-2002",
       "P-2002A",
-      "P-2002B",
-      "P-2002C"
+      "P-2002B"
     ],
     "507": [
       "RO-2001",
       "RO-2001A",
       "PSV-RO-A",
       "RO-2001B",
-      "PSV-RO-B",
-      "RO-2001C",
-      "PSV-RO-C"
+      "PSV-RO-B"
     ],
     "508": [
       "T-2002"
@@ -10457,12 +10106,6 @@
     ],
     "510": [
       "CF-2002"
-    ],
-    "511": [
-      "T-2003"
-    ],
-    "512": [
-      "P-2003"
     ],
     "513": [
       "T-2004"
@@ -10476,18 +10119,6 @@
     "516": [
       "CP-2000"
     ],
-    "517": [
-      "TK-UF2001"
-    ],
-    "518": [
-      "P-UF2001"
-    ],
-    "519": [
-      "TK-BW2001"
-    ],
-    "520": [
-      "P-BW2001"
-    ],
     "521": [
       "TK-CIP2001-W"
     ],
@@ -10496,9 +10127,6 @@
     ],
     "523": [
       "GF-RO2001B"
-    ],
-    "524": [
-      "GF-RO2001C"
     ],
     "600": [
       "V-3110"
@@ -10577,6 +10205,9 @@
     ],
     "655": [
       "HR-601"
+    ],
+    "656": [
+      "IF-A2000-CITY"
     ],
     "800": [
       "A-5100"

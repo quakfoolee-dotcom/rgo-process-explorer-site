@@ -14,34 +14,23 @@ const common={areaId:'A-2000',designStatus:'listed',geometryBasis:'A2000-40',geo
 const eq=(tag,label,x,z,op,extra={})=>({...common,tag,label,x,z,primaryOperation:op,labelY:3.7,...extra});
 const tank=(tag,label,x,z,r,capacityM3,op,extra={})=>eq(tag,label,x,z,op,{radius:r,bottom:.26,top:.26+capacityM3/(Math.PI*(r-.04)**2),capacityM3,...extra});
 export const A2000_EQUIPMENT={
- 500:tank('T-2001','Condensate receiver · 15 m³ (FEED-PE-DAT-132, D-A2000-03)',67,-20,1.5,15,'ropretreat',{geometryStatus:'Re-purposed as the A-1100 condensate receiver, 15 m³ nominal (FEED-PE-DAT-132, D-A2000-03); diameter is a model choice; the PFD-2000 feed-tank connections are kept for continuity (D-MDL-01 MC-2)'}),
- 501:eq('P-2001','Feed / media backwash pump',74,-13.7,'ropretreat'),
- 502:eq('MMF-2001','Multimedia filtration · parallel vessel allowance',64,-6.7,'ropretreat'),
- 503:eq('GF-2001','Greensand Fe / Mn filtration · parallel allowance',70,-6.7,'ropretreat'),
+ 500:tank('T-2001','Condensate receiver · 15 m³ (FEED-PE-DAT-132, D-A2000-03)',67,-20,1.5,15,'ropretreat',{geometryStatus:'Re-purposed as the A-1100 condensate receiver, 15 m³ nominal (FEED-PE-DAT-132, D-A2000-03); diameter is a model choice. Condensate arrives at a positively blinded battery limit (Route 2 + 6 option); city make-up and NaOH pH trim enter the roof (FEED-PE-DAT-132 / 138 / 139)'}),
  504:eq('CF-2001','Condensate carbon filter · Ø 0.8 m, 0.74 m³ bed (FEED-PE-DAT-133)',76,-6.7,'ropretreat'),
- 505:eq('UF-2001','Dead-end ultrafiltration · two backwash banks',79,-21,'ropretreat',{reviewNote:'Conceptual supported feed and filtrate manifolds with separate bank waste isolation. Welded tees/elbows and removable clamped module joints are illustrative; material, pressure rating, hydraulic sizing and vendor connection specification remain open. Disconnect upper branch spools before vertical module removal. BL-UF2001-CEB is a design hold with no modeled pipe connection.'}),
- 506:eq('P-2002','RO high-pressure pump package · A/B duty (C standby retired, D-A2000-03)',85.5,-15.2,'rorecover'),
- 507:eq('RO-2001','Condensate polishing RO · A/B, 1 + 1 (FEED-PE-DAT-134; train C retired, D-A2000-03)',85.5,-9,'rorecover'),
+ 506:eq('P-2002','RO high-pressure pump package · A/B, 1 duty + 1 standby (FEED-PE-DAT-135; third train removed, D-A2000-03)',85.5,-15.2,'rorecover'),
+ 507:eq('RO-2001','Condensate polishing RO · A/B, 1 duty + 1 standby (FEED-PE-DAT-134; third train removed, D-A2000-03)',85.5,-9,'rorecover'),
  508:tank('T-2002','Process water tank · 100 m³ (FEED-PE-DAT-136)',97,-6,3.2,100,'rodistribute',{geometryStatus:'100 m³ nominal from FEED-PE-DAT-136 (D-A2000-03); diameter is a model choice (D-MDL-01 MC-2)'}),
  509:eq('P-2005','RO permeate distribution pump',97,-1.7,'rodistribute'),
  510:eq('CF-2002','Municipal make-up cartridge filter · 20 m³/h, 5 µm (FEED-PE-DAT-138)',100,-2,'rodistribute'),
- 511:tank('T-2003','RO concentrate storage · 95 m³ screening',97,-21,2.7,calc.brineTankNominalM3,'rowaste'),
- 512:eq('P-2003','Concentrate transfer pump',100.7,-21,'rowaste'),
  513:tank('T-2004','RO dosing skid · antiscalant 0.2 m³ + NaOH IBC (FEED-PE-DAT-139)',86,-24.2,.65,1,'roclean'),
  514:eq('P-2004','Antiscalant / NaOH metering pumps (FEED-PE-DAT-139)',87.3,-24.2,'roclean'),
  515:eq('CIP-2001','RO cleaning skid · sequential acid / alkaline service',89.5,-20.5,'roclean'),
  516:eq('CP-2000','Reclaimed-water control and quality station',91.7,-2,'rorecover',{designStatus:'proposed',labelY:2.3}),
- 517:tank('TK-UF2001','UF filtrate / backwash buffer · 10 m³ allowance',83,-21,1.15,10,'ropretreat',{designStatus:'proposed'}),
- 518:eq('P-UF2001','UF filtrate transfer / backwash pump',84.7,-21,'ropretreat',{designStatus:'proposed'}),
- 519:tank('TK-BW2001','Backwash collection · 10 m³ allowance',76,-26.1,1.1,10,'rowaste',{designStatus:'proposed'}),
- 520:eq('P-BW2001','Backwash lift to A-1000',77.7,-26.1,'rowaste',{designStatus:'proposed'}),
  521:tank('TK-CIP2001-W','Segregated spent CIP hold · 5 m³ allowance',90.4,-25.6,.95,5,'roclean',{designStatus:'proposed'}),
 };
-for(const [i,x] of [81,85.5,90].entries()) A2000_EQUIPMENT[522+i]=eq('GF-RO2001'+String.fromCharCode(65+i),'Guard cartridge filter housing',x-1.3,-16.3,'ropretreat',{radius:.23,labelY:2.1,designStatus:'proposed',packageParentId:506,processAssociation:'P-2002'+String.fromCharCode(65+i),reviewNote:'Conceptual cartridge, seals, closure and supports; vendor selection, pressure rating, filtration duty and removal clearance require confirmation.'});
-// D-MDL-01 MC-1: A-2000 on clean sources only (D-A2000-03, basis A2-7) retires the media / UF train, backwash, brine handling and the third RO
-// train. Kept in place for PFD-2000 continuity, shown as retired and left out of equipment counts; removal is handed to the model owner.
-export const A2000_RETIRED=['MMF-2001','GF-2001','UF-2001','P-2001','TK-UF2001','P-UF2001','TK-BW2001','P-BW2001','T-2003','P-2003','GF-RO2001C'];   // P-2002C / RO-2001C are trains of the P-2002 / RO-2001 packages: noted on their labels
-for(const e of Object.values(A2000_EQUIPMENT))if(A2000_RETIRED.includes(e.tag)){e.retired={decisionId:'D-A2000-03',reason:'No service on clean sources only (basis A2-7)',basis:'D-MDL-01 MC-1'};e.label+=' · RETIRED (D-A2000-03)';}
+for(const [i,x] of [81,85.5].entries()) A2000_EQUIPMENT[522+i]=eq('GF-RO2001'+String.fromCharCode(65+i),'Guard cartridge filter housing',x-1.3,-16.3,'ropretreat',{radius:.23,labelY:2.1,designStatus:'proposed',packageParentId:506,processAssociation:'P-2002'+String.fromCharCode(65+i),reviewNote:'Conceptual cartridge, seals, closure and supports; vendor selection, pressure rating, filtration duty and removal clearance require confirmation.'});
+// D-A2000-03 (QFL 2026-09-27, basis A2-7) put A-2000 on clean sources only. The media / UF train, the backwash and brine handling and the third RO train were
+// kept in place as retired by D-MDL-01 MC-1 and are removed from the model (V280): MMF-2001, GF-2001, UF-2001, P-2001, TK-UF2001, P-UF2001, TK-BW2001, P-BW2001, T-2003, P-2003, GF-RO2001C, RO-2001C, P-2002C.
+export const A2000_RETIRED=[];
 export const A2000_IDS=Object.keys(A2000_EQUIPMENT).map(Number);
 const zone=(id,kind,min,max,note)=>({id,kind,areaIds:['A-2000'],min,max,note,designStatus:'proposed'});
 export const A2000_ACCESS_ZONES=[
@@ -49,8 +38,7 @@ export const A2000_ACCESS_ZONES=[
  zone('WALK-RO-WEST','pedestrian',[58.5,.02,-12],[60,2.32,2],'Connect water-area link to RO front approach'),
  zone('WALK-RO-FRONT','pedestrian',[61,.02,.25],[103,2.32,2],'Continuous RO service frontage; joins the water-area front aisle'),
  zone('WALK-RO-EAST','pedestrian',[101.5,.02,-28],[103,2.32,.25],'East-side passage connects concentrate, CIP and product services'),
- ...[81,85.5,90].map((x,i)=>zone('REMOVE-RO2001-'+String.fromCharCode(65+i),'removal',[x-1.55,.02,-5.4],[x+1.55,4,-2.8],'2 m end withdrawal allowance; six 40-inch elements removed sequentially; vendor tooling / access HOLD')),
- ...[0,1].flatMap(bank=>Array.from({length:10},(_,j)=>{const x=77.7+j*.285,z=-22.3+bank*2.4;return zone('REMOVE-UF2001-'+bank+'-'+j,'removal',[x-.14,3.125,z-.14],[x+.14,6,z+.14],'Single-module vertical withdrawal: isolate and drain bank; remove upper connection spool first. Vendor lifting envelope provisional.');})),
+ ...[81,85.5].map((x,i)=>zone('REMOVE-RO2001-'+String.fromCharCode(65+i),'removal',[x-1.55,.02,-5.4],[x+1.55,4,-2.8],'2 m end withdrawal allowance; six 40-inch elements removed sequentially; vendor tooling / access HOLD')),
 ];
 export const A2000_SOURCES=[
  {title:'FEED-PFD-2000 · V5.1 page 16 (draft)',url:'./feed-pfd-2000.pdf'},
@@ -64,15 +52,15 @@ export const A2000_SOURCES=[
  {title:'BC Environmental Management Act · discharge authorization',url:'https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/03053_02'}
 ];
 export const A2000_HOLDS=[
- '100 m³/h is inherited from the A-1000 screening case, not measured centrate production. The 98% media yield is an added allowance; UF 92.5% is within the PFD 90–95% range. Returned backwash, off-spec recycle, CIP, outages and batch peaks require a plant-wide balance.',
- 'T-2001 uses the lower PFD recommendation of 8–12 hours: 800 m³ working / 1,000 m³ nominal at 80% fill. At 12 hours it becomes 1,500 m³ nominal. Agitation is included; civil, seismic, vent, overflow and access design are unqualified.',
- 'RO base recovery is the PFD 60%. Higher 70–75% cases require measured Ba, Ca, sulfate, silica and full ionic analysis, membrane projection and an accepted concentrate outlet. UF does not remove dissolved salts; antiscalant does not make an incompatible feed safe.',
- 'Three conceptual 72-element trains implement N=2 duty plus one standby. Each 30 m³/h allowance uses a proposed 12-vessel, six-element, 8:4 staging arrangement. It is not the supplier S-28800 skid geometry or a vendor performance guarantee. S-28800 / S-36000 areas are references, not gallons-per-day ratings.',
- 'PFD P-2002 specifies horizontal multistage VFD pumps and a draft 12–16 bar / ≥82% combined efficiency target. Pressure, cold-water flux, pump curves, NPSH, minimum flows and maximum shutoff pressure require vendor verification. Common pretreatment/distribution pumps remain availability bottlenecks.',
- 'Carbon protects against oxidants but removal capacity and H₂O₂ breakthrough need testing. Greensand regeneration chemistry and carryover are unqualified. Do not add chlorination or a second RO pass without an approved need. Post-UF guard cartridges are proposed for pump/membrane protection.',
+ 'The design basis is D-A2000-03 (FEED-PE-CAL-036): clean sources only. The RO polishes A-1100 concentrator condensate (2.62 m³/h normal, 2.97 m³/h at the 150 t/d rating), which exists only under the Route 2 + 6 option and whose tie-in is not modelled (a positively blinded battery limit is provided). The A-1000 effluent goes to sewer and no longer feeds A-2000. The screening calculator below still uses the superseded PFD-2000 inputs (100 m³/h feed, 60% recovery) and is kept for reference only.',
+ 'T-2001 is the 15 m³ condensate receiver (FEED-PE-DAT-132): 4 hours at the 2.97 m³/h rating. The condensate is acidic (about 100 mg/L H₂SO₄, pH ≈ 3), so a NaOH pH trim (about 5.1 kg/d from the T-2004 skid, P-2004B) is modelled into the receiver (HOLD R2). Agitation, civil, seismic, vent, overflow and access design are unqualified.',
+ 'RO recovery is 85% at 10 bar on low-TDS condensate (FEED-PE-DAT-134 / 135), giving 2.22–2.55 m³/h of permeate per duty train. Membrane projection, scaling limits (BaSO₄ / CaSO₄), the oxidant limit and the array must come from the RO vendor. Antiscalant does not make an incompatible feed safe.',
+ 'Two trains, one duty and one standby (A / B), follow the datasheet (the third train was removed, D-A2000-03). The model still draws each train as the proposed 12-vessel, six-element, 8:4 array carried over from the PFD-2000 screening basis; it is far larger than the 3 m³/h datasheet duty and is not the vendor array or a performance guarantee.',
+ 'FEED-PE-DAT-135 specifies vertical multistage VFD pumps, 3.5 m³/h at 113 m differential head (10 bar feed + 10%); the model draws horizontal multistage pumps as a stand-in. Pressure, pump curves, NPSH, minimum flows and maximum shutoff pressure require vendor verification. There is no pump between T-2001 and P-2002: the feed pumps draw through CF-2001 and the guard filters, which needs an NPSH and pressure-drop check.',
+ 'CF-2001 removes volatile organics from the pH-trimmed condensate (FEED-PE-DAT-133: one Ø 0.8 m vessel, 0.74 m³ bed, 15 min empty-bed contact time) and is backwashed with RO permeate from T-2002. The model still draws the earlier two-vessel media-filter template (Ø 2.5 m). Loading capacity, ΔP rise and backwash frequency need testing. Do not add chlorination or a second RO pass without an approved need.',
  'Product targets are transcribed from the draft PFD, not demonstrated quality or permit limits. Conductivity alone cannot prove all targets. Release needs qualified online instruments plus laboratory acceptance; pH adjustment or polishing may be needed after trials.',
- 'At the base screening case, permeate is below the existing 71 m³/h A-400 washing duty alone. Reclaimed water supplements process supply; it is not a proven closed water loop or a substitute for independent potable emergency water.',
- 'UF and media backwash collect in TK-BW2001 and are lifted to A-1000 T-1006. Chemical CEB requires a vendor-designed, separately isolated route to spent-CIP collection; the interface remains unmodeled pending design. Concentrate and CIP retain distinct, closed disposal boundaries pending characterization and authorized destinations. No routine concentrate recycle to A-1000 is credited.',
+ 'RO permeate (about 2.2 m³/h) supplies about 12% of the 18 m³/h design demand; the rest (about 15.8 m³/h) is city make-up filtered by CF-2002 (5 µm cartridge, FEED-PE-DAT-138) into T-2002. A cartridge filter removes no hardness, TDS or chlorine, so the city water must already meet the permeate specification (TDS below 250, SO₄ below 30, hardness below 10 mg/L). Supply data (HOLD R3) and the demand (HOLD R1) are open. Reclaimed water supplements process supply; it is not a potable emergency substitute.',
+ 'RO reject (0.45 m³/h per duty train), the relief lines and the carbon-filter backwash waste return to A-1000 T-1006 through one line; receiving acceptance, flow and chemistry are unqualified. The carbon filter is backwashed with RO permeate from T-2002. Spent CIP keeps a distinct, closed boundary with no assigned destination. No routine recycle to A-1000 is credited.',
  'Raised, closed antiscalant and spent-CIP bunds are geometric allowances only. Large water-tank rupture/flooding, emergency capture volume, liner compatibility, blocked drains, support loading and site containment must be qualified; no emergency-spill credit is assigned to normal process tanks.',
  'Pipe-support screening flags unresolved header supports, tank-nozzle attachments and local skid brackets. These findings remain visible in the support review; automatic rack geometry is not a completed support design. Vendor withdrawal space, structural loads and seismic attachments require detailed coordination.',
  'Apply BC pressure-equipment/piping registration, applicable codes, electrical approval, safe access and isolation requirements to the selected package. Determine TSBC applicability from the final pressure, volume, materials and piping design; supplier marketing marks do not establish BC acceptance.',

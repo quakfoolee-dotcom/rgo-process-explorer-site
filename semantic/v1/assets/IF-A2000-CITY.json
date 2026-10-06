@@ -1,0 +1,32 @@
+{
+  "assetId": "IF-A2000-CITY",
+  "name": "City make-up battery limit (D-A2000-03)",
+  "assetClassId": "ExternalInterface",
+  "status": "proposed",
+  "identityStatus": "model-derived; tag qualification open",
+  "recordScope": "external-interface",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-2000",
+    "system": "A-2000 reclaimed-water treatment context",
+    "parentAsset": null
+  },
+  "processFunction": "City make-up battery limit (D-A2000-03)",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null
+  },
+  "operatingEnvelope": null,
+  "processBasis": [],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "The sheet is Draft - Not for Use, revision XXX. Functional monitoring has no approved instrument tags, ranges or trip setpoints. Draft permeate quality targets are not measured performance or discharge permission. Conductivity alone does not verify all reuse criteria.",
+    "A-2000 is on clean sources only (D-A2000-03, FEED-PE-CAL-036): the RO polishes A-1100 concentrator condensate (2.62 m3/h normal, 2.97 m3/h rated; 3 m3/h feed per train at 85% recovery gives 2.22-2.55 m3/h permeate) and about 15.8 m3/h of city make-up is filtered by CF-2002 into T-2002 for an 18 m3/h demand. The datasheets are candidate and preliminary. The condensate exists only under the Route 2 + 6 option and its tie-in is not modelled; city water quality (hardness below 10 mg/L), demand and condensate acidity (HOLD R1 to R3) are open.",
+    "The model carries two RO trains, A duty and B standby (FEED-PE-DAT-134 / 135); the third train was removed (D-A2000-03). The membrane array is a model choice pending the vendor; the datasheet basis is 10 bar on low-TDS condensate with brackish elements. Antiscalant dose, the NaOH pH trim of the acidic condensate (about 100 mg/L H2SO4) and carry-over of volatile organics past the carbon filter remain unqualified.",
+    "RO reject, the two relief lines and the carbon-filter backwash waste share one return to A-1000 T-1006 (receiving acceptance unqualified). The carbon filter is backwashed with RO permeate from T-2002 (DAT-133). Spent CIP has a separate positively blinded boundary with the destination unassigned. Sequential acid/alkaline CIP isolates one train from product and reject. Low CIP drain needs contained pump-out.",
+    "Model off-spec permeate and stored water recycle to T-2001; no active off-spec drain is added from draft wording. Train B is the standby train, not a live state. There is no pump between T-2001 and the RO feed pumps: P-2002 draws through CF-2001 and the guard filters, which needs an NPSH and pressure-drop check. Relief capacity/backpressure, tank vent qualification, pressure ratings and hygienic turnover remain open. Reclaimed water is not a potable emergency supply."
+  ]
+}

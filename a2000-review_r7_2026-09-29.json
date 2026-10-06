@@ -3,7 +3,7 @@
   "title": "A-2000 assembly & design review",
   "revision": "r7",
   "date": "2026-09-29",
-  "sourceCommit": "4720eba",
+  "sourceCommit": "491f9341",
   "semanticCoreVersion": "1.19.0-foundation",
   "registerRevision": "2026-09-10 · Physical equipment ownership and complete Explore assemblies",
   "modelConfig": {
@@ -16,8 +16,8 @@
     "initials": "QFL",
     "date": "2026-09-29"
   },
-  "representedParts": 15629,
-  "ownedEquipment": 34,
+  "representedParts": 10202,
+  "ownedEquipment": 24,
   "findings": [
     {
       "id": "A2000-01",
@@ -107,9 +107,9 @@
       "id": "A2000-03",
       "topic": "Pretreatment and backwash",
       "status": "Configuration as modelled — duties open",
-      "reason": "Multimedia, greensand, carbon and ultrafiltration protect the RO; their backwash and filtrate handling return to A-1000 and must be sized with it.",
-      "observation": "The model provides the register pretreatment train MMF-2001 / GF-2001 / CF-2001 (parallel-vessel allowances) and a dead-end UF-2001 with two backwash banks, plus the model-only UF filtrate / backwash buffer TK-UF2001 with pump P-UF2001, the backwash collection TK-BW2001 with lift pump P-BW2001 to A-1000 and the control station CP-2000. None of the model-only tags is on LST-001; no filtration duty is approved.",
-      "action": "Size the pretreatment on the A-2000 stream table; register TK-UF2001, P-UF2001, TK-BW2001, P-BW2001 and CP-2000 or record them by decision; state the backwash return in the A-1000 balance.",
+      "reason": "The activated-carbon filter CF-2001 is the only pretreatment left (D-A2000-03: clean condensate); its backwash is taken from the permeate tank T-2002 and returns to A-1000 T-1006, and must be sized with it.",
+      "observation": "The multimedia, greensand and ultrafiltration pretreatment (MMF-2001, GF-2001, UF-2001) and its buffer tank, pumps and backwash collection were retired by D-A2000-03 and removed from the model. CF-2001 filters the T-2001 condensate and is backwashed with RO permeate from T-2002 through P-2005; the backwash waste joins the RO reject to A-1000 T-1006. The control station CP-2000 remains model-only and is not on LST-001; no filtration duty is approved.",
+      "action": "Size CF-2001 and its permeate backwash on the A-2000 stream table; register CP-2000 or record it by decision; state the backwash return in the A-1000 balance.",
       "discipline": "Process / mechanical",
       "evidence": [
         {
@@ -117,27 +117,7 @@
           "kind": "gap"
         },
         {
-          "ref": "UF-2001",
-          "kind": "asset"
-        },
-        {
-          "ref": "MMF-2001",
-          "kind": "asset"
-        },
-        {
-          "ref": "TK-UF2001",
-          "kind": "asset"
-        },
-        {
-          "ref": "P-UF2001",
-          "kind": "asset"
-        },
-        {
-          "ref": "TK-BW2001",
-          "kind": "asset"
-        },
-        {
-          "ref": "P-BW2001",
+          "ref": "CF-2001",
           "kind": "asset"
         },
         {
@@ -195,10 +175,6 @@
         {
           "ref": "D-A2000-MOC",
           "kind": "decision"
-        },
-        {
-          "ref": "CF-materialOfConstruc-UF-2001",
-          "kind": "conflictGroup"
         },
         {
           "ref": "CF-materialOfConstruc-P-2002",
@@ -277,14 +253,6 @@
           "kind": "value"
         },
         {
-          "ref": "PV-A-2000-0272",
-          "kind": "value"
-        },
-        {
-          "ref": "PV-A-2000-0282",
-          "kind": "value"
-        },
-        {
           "ref": "PV-A-2000-0295",
           "kind": "value"
         },
@@ -325,10 +293,6 @@
           "kind": "asset"
         },
         {
-          "ref": "MMF-2001",
-          "kind": "asset"
-        },
-        {
           "ref": "IF-A2000-CITY",
           "kind": "asset"
         }
@@ -338,10 +302,10 @@
     {
       "id": "A2000-07",
       "topic": "Model catch-up release 1 (D-MDL-01): the W3 retirements shown in place; T-2001 / T-2002 at datasheet volumes",
-      "status": "Model updated — physical removal and W3 routes with the model engineer",
-      "reason": "The model still drew the PFD-2000 reclaim plant that D-A2000-03 retired.",
-      "observation": "MMF-2001, GF-2001, UF-2001, P-2001, TK-UF2001, P-UF2001, TK-BW2001, P-BW2001, T-2003, P-2003 and GF-RO2001C are kept with their streams, shown grey and labelled RETIRED (D-A2000-03); trains P-2002C / RO-2001C are noted on the package labels. T-2001 is drawn as the 15 m³ condensate receiver (FEED-PE-DAT-132) and T-2002 at 100 m³ (FEED-PE-DAT-136). The PFD-2000 feed routes are kept for continuity until the model engineer re-routes A-2000 to the W3 basis.",
-      "action": "Model engineer to remove the retired tags and route the A-1100 condensate to T-2001 and the A-1000 effluent to sewer (docs/model-catchup-handoff.md); release 2 adds CF-2002 at IF-A2000-CITY and the T-2004 / P-2004 skid.",
+      "status": "Model updated — retired equipment removed and W3 routes drawn (V279)",
+      "reason": "The model drew the PFD-2000 reclaim plant that D-A2000-03 retired; V279 removes it.",
+      "observation": "MMF-2001, GF-2001, UF-2001, P-2001, TK-UF2001, P-UF2001, TK-BW2001, P-BW2001, T-2003, P-2003 and the third RO train (GF-RO2001C, P-2002C, RO-2001C) are removed from the model with their streams (D-A2000-03, V279). T-2001 is the 15 m³ condensate receiver (FEED-PE-DAT-132) fed from the blinded A-1100 condensate boundary and T-2002 is 100 m³ (FEED-PE-DAT-136); RO reject, relief and the carbon-filter backwash return to A-1000 T-1006, and CF-2002 feeds city make-up into T-2002.",
+      "action": "Carry the compact re-layout of the remaining equipment (stage 2) and confirm the A-1100 condensate tie-in under Route 2 + 6.",
       "discipline": "Model management",
       "evidence": [
         {
@@ -362,18 +326,6 @@
         },
         {
           "ref": "T-2002",
-          "kind": "asset"
-        },
-        {
-          "ref": "MMF-2001",
-          "kind": "asset"
-        },
-        {
-          "ref": "UF-2001",
-          "kind": "asset"
-        },
-        {
-          "ref": "T-2003",
           "kind": "asset"
         }
       ],
@@ -485,20 +437,12 @@
           "kind": "decision"
         },
         {
-          "ref": "PV-A-2000-0389",
-          "kind": "value"
-        },
-        {
           "ref": "PV-A-2000-0402",
           "kind": "value"
         },
         {
           "ref": "GAP-A-2000-ID-d8f929",
           "kind": "gap"
-        },
-        {
-          "ref": "MMF-2001",
-          "kind": "asset"
         },
         {
           "ref": "P-2002A",
@@ -515,15 +459,15 @@
       "exitCode": 0,
       "passed": true,
       "lastLine": "PASS: A-2000 upstream continuity, pretreatment, UF/RO duty-standby, quality diversion, segregated CIP/brine/backwash, draft bases and source guards.",
-      "ranAt": "2026-09-29T15:28:32.263Z"
+      "ranAt": "2026-10-06T05:22:46.117Z"
     },
     {
       "command": "node tests/validate-semantic-data.mjs",
       "purpose": "data-layer invariants (registered sources, reviewer on approvals, conflict groups, identity holds)",
       "exitCode": 0,
       "passed": true,
-      "lastLine": "{\"passed\":true,\"areas\":[{\"area\":\"A-100\",\"assets\":10,\"holds\":0,\"values\":324,\"approved\":10,\"conflicts\":2,\"variants\":12,\"gaps\":8},{\"area\":\"A-1000\",\"assets\":81,\"holds\":0,\"values\":980,\"approved\":32,\"conflicts\":6,\"variants\":19,\"gaps\":60},{\"area\":\"A-140\",\"assets\":17,\"holds\":0,\"values\":536,\"approved\":57,\"conflicts\":20,\"variants\":14,\"gaps\":32},{\"area\":\"A-160\",\"assets\":29,\"holds\":0,\"values\":636,\"approved\":14,\"conflicts\":5,\"variants\":12,\"gaps\":18},{\"area\":\"A-200\",\"assets\":72,\"holds\":0,\"values\":1303,\"approved\":110,\"conflicts\":85,\"variants\":41,\"gaps\":129},{\"area\":\"A-2000\",\"assets\":52,\"holds\":0,\"values\":423,\"approved\":33,\"conflicts\":12,\"variants\":19,\"gaps\":55},{\"area\":\"A-300\",\"assets\":27,\"holds\":0,\"values\":638,\"approved\":27,\"conflicts\":14,\"variants\":17,\"gaps\":51},{\"area\":\"A-3000\",\"assets\":51,\"holds\":0,\"values\":442,\"approved\":13,\"conflicts\":3,\"variants\":11,\"gaps\":6},{\"area\":\"A-400\",\"assets\":23,\"holds\":0,\"values\":280,\"approved\":15,\"conflicts\":9,\"variants\":8,\"gaps\":40},{\"area\":\"A-4000\",\"assets\":11,\"holds\":0,\"values\":315,\"approved\":13,\"conflicts\":11,\"variants\":11,\"gaps\":13},{\"area\":\"A-500\",\"assets\":12,\"holds\":0,\"values\":224,\"approved\":18,\"conflicts\":5,\"variants\":5,\"gaps\":14},{\"area\":\"A-5000\",\"assets\":52,\"holds\":0,\"values\":618,\"approved\":17,\"conflicts\":14,\"variants\":10,\"gaps\":42},{\"area\":\"A-600\",\"assets\":32,\"holds\":0,\"values\":488,\"approved\":17,\"conflicts\":5,\"variants\":12,\"gaps\":17},{\"area\":\"A-6000\",\"assets\":6,\"holds\":0,\"values\":42,\"approved\":3,\"conflicts\":2,\"variants\":2,\"gaps\":5},{\"area\":\"A-700\",\"assets\":17,\"holds\":0,\"values\":452,\"approved\":39,\"conflicts\":5,\"variants\":7,\"gaps\":70},{\"area\":\"A-800\",\"assets\":27,\"holds\":0,\"values\":504,\"approved\":29,\"conflicts\":10,\"variants\":14,\"gaps\":35},{\"area\":\"A-900\",\"assets\":23,\"holds\":4,\"values\":265,\"approved\":20,\"conflicts\":11,\"variants\":11,\"gaps\":17}]}",
-      "ranAt": "2026-09-29T15:28:34.498Z"
+      "lastLine": "{\"passed\":true,\"areas\":[{\"area\":\"A-100\",\"assets\":10,\"holds\":0,\"values\":324,\"approved\":10,\"conflicts\":2,\"variants\":12,\"gaps\":8},{\"area\":\"A-1000\",\"assets\":76,\"holds\":0,\"values\":980,\"approved\":32,\"conflicts\":6,\"variants\":19,\"gaps\":60},{\"area\":\"A-140\",\"assets\":17,\"holds\":0,\"values\":536,\"approved\":57,\"conflicts\":20,\"variants\":14,\"gaps\":32},{\"area\":\"A-160\",\"assets\":29,\"holds\":0,\"values\":636,\"approved\":14,\"conflicts\":5,\"variants\":12,\"gaps\":18},{\"area\":\"A-200\",\"assets\":72,\"holds\":0,\"values\":1303,\"approved\":110,\"conflicts\":85,\"variants\":41,\"gaps\":129},{\"area\":\"A-2000\",\"assets\":37,\"holds\":0,\"values\":282,\"approved\":12,\"conflicts\":8,\"variants\":11,\"gaps\":26},{\"area\":\"A-300\",\"assets\":27,\"holds\":0,\"values\":638,\"approved\":27,\"conflicts\":14,\"variants\":17,\"gaps\":51},{\"area\":\"A-3000\",\"assets\":51,\"holds\":0,\"values\":442,\"approved\":13,\"conflicts\":3,\"variants\":11,\"gaps\":6},{\"area\":\"A-400\",\"assets\":23,\"holds\":0,\"values\":280,\"approved\":15,\"conflicts\":9,\"variants\":8,\"gaps\":40},{\"area\":\"A-4000\",\"assets\":11,\"holds\":0,\"values\":315,\"approved\":13,\"conflicts\":11,\"variants\":11,\"gaps\":13},{\"area\":\"A-500\",\"assets\":12,\"holds\":0,\"values\":224,\"approved\":18,\"conflicts\":5,\"variants\":5,\"gaps\":14},{\"area\":\"A-5000\",\"assets\":53,\"holds\":0,\"values\":618,\"approved\":17,\"conflicts\":14,\"variants\":10,\"gaps\":40},{\"area\":\"A-600\",\"assets\":32,\"holds\":0,\"values\":490,\"approved\":37,\"conflicts\":5,\"variants\":12,\"gaps\":17},{\"area\":\"A-6000\",\"assets\":6,\"holds\":0,\"values\":42,\"approved\":3,\"conflicts\":2,\"variants\":2,\"gaps\":5},{\"area\":\"A-700\",\"assets\":17,\"holds\":0,\"values\":452,\"approved\":39,\"conflicts\":5,\"variants\":7,\"gaps\":70},{\"area\":\"A-800\",\"assets\":27,\"holds\":0,\"values\":504,\"approved\":29,\"conflicts\":10,\"variants\":14,\"gaps\":35},{\"area\":\"A-900\",\"assets\":23,\"holds\":4,\"values\":265,\"approved\":20,\"conflicts\":11,\"variants\":11,\"gaps\":17}]}",
+      "ranAt": "2026-10-06T05:22:46.284Z"
     },
     {
       "command": "node tests/validate-semantic-fields.mjs",
@@ -531,13 +475,13 @@
       "exitCode": 0,
       "passed": true,
       "lastLine": "PASS: documented pending values, superseded values hidden, alternatives, mixed units, missing values and identity holds.",
-      "ranAt": "2026-09-29T15:28:43.223Z"
+      "ranAt": "2026-10-06T05:22:47.737Z"
     }
   ],
   "decisions": [
     {
       "decisionId": "D-A2000-MOC",
-      "assetPattern": "CF-2001|CF-2002|CIP-2001|GF-2001|MMF-2001|P-2001|P-2002|P-2003|P-2005|RO-2001|T-2001|T-2002|T-2003|UF-2001",
+      "assetPattern": "CF-2001|CF-2002|CIP-2001|P-2002|P-2005|RO-2001|T-2001|T-2002",
       "property": "design.materialOfConstruction",
       "approvedSourceDocId": "FEED-PE-MAT-002",
       "approvedValue": "",
@@ -624,17 +568,6 @@
       "gapNote": ""
     },
     {
-      "decisionId": "D-A2000-03",
-      "assetPattern": "MMF-2001|GF-2001|UF-2001|P-2001|TK-UF2001|P-UF2001|TK-BW2001|P-BW2001|T-2003|P-2003|RO-2001C|GF-RO2001C|P-2002C|PSV-RO-C|IF-A2000-BRINE",
-      "property": "identity.status",
-      "approvedSourceDocId": "FEED-PE-CAL-036",
-      "approvedValue": "",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-27",
-      "rationale": "Retired (A2-7): the media / greensand / UF train, the backwash and brine handling and the third RO train have no service in W3.",
-      "gapNote": ""
-    },
-    {
       "decisionId": "D-A2000-04",
       "assetPattern": "T-2001",
       "property": "identity.esrName",
@@ -687,57 +620,6 @@
       ]
     },
     {
-      "valueId": "PV-A-2000-0239",
-      "assetId": "P-2001",
-      "property": "design.materialOfConstruction",
-      "value": "TFC polyamide RO; FRP pressure vessels; 316L/duplex HP pump; PVC/PP/PVDF/316L-EP distribution as service requires",
-      "unit": "",
-      "sourceDocId": "FEED-PE-MAT-002",
-      "sourceRevision": "V1.2",
-      "sourceLocation": "'Selection Matrix'!row 65 (M-061)",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-20",
-      "held": false,
-      "conflictGroup": "CF-materialOfConstruc-P-2001",
-      "resolves": [
-        "FEED-PE-MDL-001: 316L SS wetted pump; SiC seal faces and EPDM/PTFE seals. Epoxy-coated ductile iron may be acceptable for low-chloride backwash service; duplex 2205 only if chloride assessment requires."
-      ]
-    },
-    {
-      "valueId": "PV-A-2000-0241",
-      "assetId": "MMF-2001",
-      "property": "design.materialOfConstruction",
-      "value": "TFC polyamide RO; FRP pressure vessels; 316L/duplex HP pump; PVC/PP/PVDF/316L-EP distribution as service requires",
-      "unit": "",
-      "sourceDocId": "FEED-PE-MAT-002",
-      "sourceRevision": "V1.2",
-      "sourceLocation": "'Selection Matrix'!row 65 (M-061)",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-20",
-      "held": false,
-      "conflictGroup": "WV-materialOfConstruc-MMF-2001",
-      "resolves": [
-        "FEED-PE-MDL-001: FRP pressure vessel with PP internals/distributors; EPDM seals."
-      ]
-    },
-    {
-      "valueId": "PV-A-2000-0243",
-      "assetId": "GF-2001",
-      "property": "design.materialOfConstruction",
-      "value": "TFC polyamide RO; FRP pressure vessels; 316L/duplex HP pump; PVC/PP/PVDF/316L-EP distribution as service requires",
-      "unit": "",
-      "sourceDocId": "FEED-PE-MAT-002",
-      "sourceRevision": "V1.2",
-      "sourceLocation": "'Selection Matrix'!row 65 (M-061)",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-20",
-      "held": false,
-      "conflictGroup": "WV-materialOfConstruc-GF-2001",
-      "resolves": [
-        "FEED-PE-MDL-001: FRP pressure vessel with PP/PVDF internals; EPDM/PTFE seals."
-      ]
-    },
-    {
       "valueId": "PV-A-2000-0245",
       "assetId": "CF-2001",
       "property": "design.materialOfConstruction",
@@ -752,23 +634,6 @@
       "conflictGroup": "WV-materialOfConstruc-CF-2001",
       "resolves": [
         "FEED-PE-MDL-001: FRP pressure vessel with PP internals; EPDM seals; compatible activated-carbon media support."
-      ]
-    },
-    {
-      "valueId": "PV-A-2000-0247",
-      "assetId": "UF-2001",
-      "property": "design.materialOfConstruction",
-      "value": "TFC polyamide RO; FRP pressure vessels; 316L/duplex HP pump; PVC/PP/PVDF/316L-EP distribution as service requires",
-      "unit": "",
-      "sourceDocId": "FEED-PE-MAT-002",
-      "sourceRevision": "V1.2",
-      "sourceLocation": "'Selection Matrix'!row 65 (M-061)",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-20",
-      "held": false,
-      "conflictGroup": "CF-materialOfConstruc-UF-2001",
-      "resolves": [
-        "FEED-PE-MDL-001: PVDF membrane modules/housings with uPVC/CPVC/PP/PVDF skid manifolds and piping where pressure/CIP chemistry allow; EPDM/PTFE seals. Use 316L only for pump/high-load structural sections."
       ]
     },
     {
@@ -857,40 +722,6 @@
       ]
     },
     {
-      "valueId": "PV-A-2000-0259",
-      "assetId": "T-2003",
-      "property": "design.materialOfConstruction",
-      "value": "TFC polyamide RO; FRP pressure vessels; 316L/duplex HP pump; PVC/PP/PVDF/316L-EP distribution as service requires",
-      "unit": "",
-      "sourceDocId": "FEED-PE-MAT-002",
-      "sourceRevision": "V1.2",
-      "sourceLocation": "'Selection Matrix'!row 65 (M-061)",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-20",
-      "held": false,
-      "conflictGroup": "CF-materialOfConstruc-T-2003",
-      "resolves": [
-        "FEED-PE-MDL-001: HDPE/XLPE tank preferred for RO concentrate at ambient atmospheric service; PP/PVDF fittings and EPDM/PTFE seals. Use FRP only if size/temperature/structural requirements exceed molded-PE limits."
-      ]
-    },
-    {
-      "valueId": "PV-A-2000-0261",
-      "assetId": "P-2003",
-      "property": "design.materialOfConstruction",
-      "value": "TFC polyamide RO; FRP pressure vessels; 316L/duplex HP pump; PVC/PP/PVDF/316L-EP distribution as service requires",
-      "unit": "",
-      "sourceDocId": "FEED-PE-MAT-002",
-      "sourceRevision": "V1.2",
-      "sourceLocation": "'Selection Matrix'!row 65 (M-061)",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-20",
-      "held": false,
-      "conflictGroup": "CF-materialOfConstruc-P-2003",
-      "resolves": [
-        "FEED-PE-MDL-001: 316L SS wetted pump; SiC seal faces and EPDM/PTFE seals. Upgrade to duplex 2205 only if concentrate chloride/pitting assessment requires."
-      ]
-    },
-    {
       "valueId": "PV-A-2000-0263",
       "assetId": "CIP-2001",
       "property": "design.materialOfConstruction",
@@ -972,353 +803,11 @@
       "resolves": [
         "FEED-PE-REP-038: 12–16 bar high-pressure pump (MAT-002 service register) bar"
       ]
-    },
-    {
-      "valueId": "PV-A-2000-0272",
-      "assetId": "MMF-2001",
-      "property": "identity.status",
-      "value": "Retired — no service when A-2000 treats only the A-1100 condensate and municipal make-up (D-A2000-03, basis A2-7)",
-      "unit": "",
-      "sourceDocId": "FEED-PE-CAL-036",
-      "sourceRevision": "V1.0",
-      "sourceLocation": "Cover — Area / tags",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-27",
-      "held": false,
-      "conflictGroup": null,
-      "resolves": []
-    },
-    {
-      "valueId": "PV-A-2000-0273",
-      "assetId": "GF-2001",
-      "property": "identity.status",
-      "value": "Retired — no service when A-2000 treats only the A-1100 condensate and municipal make-up (D-A2000-03, basis A2-7)",
-      "unit": "",
-      "sourceDocId": "FEED-PE-CAL-036",
-      "sourceRevision": "V1.0",
-      "sourceLocation": "Cover — Area / tags",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-27",
-      "held": false,
-      "conflictGroup": null,
-      "resolves": []
-    },
-    {
-      "valueId": "PV-A-2000-0274",
-      "assetId": "UF-2001",
-      "property": "identity.status",
-      "value": "Retired — no service when A-2000 treats only the A-1100 condensate and municipal make-up (D-A2000-03, basis A2-7)",
-      "unit": "",
-      "sourceDocId": "FEED-PE-CAL-036",
-      "sourceRevision": "V1.0",
-      "sourceLocation": "Cover — Area / tags",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-27",
-      "held": false,
-      "conflictGroup": null,
-      "resolves": []
-    },
-    {
-      "valueId": "PV-A-2000-0275",
-      "assetId": "P-2001",
-      "property": "identity.status",
-      "value": "Retired — no service when A-2000 treats only the A-1100 condensate and municipal make-up (D-A2000-03, basis A2-7)",
-      "unit": "",
-      "sourceDocId": "FEED-PE-CAL-036",
-      "sourceRevision": "V1.0",
-      "sourceLocation": "Cover — Area / tags",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-27",
-      "held": false,
-      "conflictGroup": null,
-      "resolves": []
-    },
-    {
-      "valueId": "PV-A-2000-0276",
-      "assetId": "TK-UF2001",
-      "property": "identity.status",
-      "value": "Retired — no service when A-2000 treats only the A-1100 condensate and municipal make-up (D-A2000-03, basis A2-7)",
-      "unit": "",
-      "sourceDocId": "FEED-PE-CAL-036",
-      "sourceRevision": "V1.0",
-      "sourceLocation": "Cover — Area / tags",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-27",
-      "held": false,
-      "conflictGroup": null,
-      "resolves": []
-    },
-    {
-      "valueId": "PV-A-2000-0277",
-      "assetId": "P-UF2001",
-      "property": "identity.status",
-      "value": "Retired — no service when A-2000 treats only the A-1100 condensate and municipal make-up (D-A2000-03, basis A2-7)",
-      "unit": "",
-      "sourceDocId": "FEED-PE-CAL-036",
-      "sourceRevision": "V1.0",
-      "sourceLocation": "Cover — Area / tags",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-27",
-      "held": false,
-      "conflictGroup": null,
-      "resolves": []
-    },
-    {
-      "valueId": "PV-A-2000-0278",
-      "assetId": "TK-BW2001",
-      "property": "identity.status",
-      "value": "Retired — no service when A-2000 treats only the A-1100 condensate and municipal make-up (D-A2000-03, basis A2-7)",
-      "unit": "",
-      "sourceDocId": "FEED-PE-CAL-036",
-      "sourceRevision": "V1.0",
-      "sourceLocation": "Cover — Area / tags",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-27",
-      "held": false,
-      "conflictGroup": null,
-      "resolves": []
-    },
-    {
-      "valueId": "PV-A-2000-0279",
-      "assetId": "P-BW2001",
-      "property": "identity.status",
-      "value": "Retired — no service when A-2000 treats only the A-1100 condensate and municipal make-up (D-A2000-03, basis A2-7)",
-      "unit": "",
-      "sourceDocId": "FEED-PE-CAL-036",
-      "sourceRevision": "V1.0",
-      "sourceLocation": "Cover — Area / tags",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-27",
-      "held": false,
-      "conflictGroup": null,
-      "resolves": []
-    },
-    {
-      "valueId": "PV-A-2000-0280",
-      "assetId": "T-2003",
-      "property": "identity.status",
-      "value": "Retired — no service when A-2000 treats only the A-1100 condensate and municipal make-up (D-A2000-03, basis A2-7)",
-      "unit": "",
-      "sourceDocId": "FEED-PE-CAL-036",
-      "sourceRevision": "V1.0",
-      "sourceLocation": "Cover — Area / tags",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-27",
-      "held": false,
-      "conflictGroup": null,
-      "resolves": []
-    },
-    {
-      "valueId": "PV-A-2000-0281",
-      "assetId": "P-2003",
-      "property": "identity.status",
-      "value": "Retired — no service when A-2000 treats only the A-1100 condensate and municipal make-up (D-A2000-03, basis A2-7)",
-      "unit": "",
-      "sourceDocId": "FEED-PE-CAL-036",
-      "sourceRevision": "V1.0",
-      "sourceLocation": "Cover — Area / tags",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-27",
-      "held": false,
-      "conflictGroup": null,
-      "resolves": []
-    },
-    {
-      "valueId": "PV-A-2000-0282",
-      "assetId": "RO-2001C",
-      "property": "identity.status",
-      "value": "Retired — no service when A-2000 treats only the A-1100 condensate and municipal make-up (D-A2000-03, basis A2-7)",
-      "unit": "",
-      "sourceDocId": "FEED-PE-CAL-036",
-      "sourceRevision": "V1.0",
-      "sourceLocation": "Cover — Area / tags",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-27",
-      "held": false,
-      "conflictGroup": null,
-      "resolves": []
-    },
-    {
-      "valueId": "PV-A-2000-0283",
-      "assetId": "GF-RO2001C",
-      "property": "identity.status",
-      "value": "Retired — no service when A-2000 treats only the A-1100 condensate and municipal make-up (D-A2000-03, basis A2-7)",
-      "unit": "",
-      "sourceDocId": "FEED-PE-CAL-036",
-      "sourceRevision": "V1.0",
-      "sourceLocation": "Cover — Area / tags",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-27",
-      "held": false,
-      "conflictGroup": null,
-      "resolves": []
-    },
-    {
-      "valueId": "PV-A-2000-0284",
-      "assetId": "P-2002C",
-      "property": "identity.status",
-      "value": "Retired — no service when A-2000 treats only the A-1100 condensate and municipal make-up (D-A2000-03, basis A2-7)",
-      "unit": "",
-      "sourceDocId": "FEED-PE-CAL-036",
-      "sourceRevision": "V1.0",
-      "sourceLocation": "Cover — Area / tags",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-27",
-      "held": false,
-      "conflictGroup": null,
-      "resolves": []
-    },
-    {
-      "valueId": "PV-A-2000-0285",
-      "assetId": "PSV-RO-C",
-      "property": "identity.status",
-      "value": "Retired — no service when A-2000 treats only the A-1100 condensate and municipal make-up (D-A2000-03, basis A2-7)",
-      "unit": "",
-      "sourceDocId": "FEED-PE-CAL-036",
-      "sourceRevision": "V1.0",
-      "sourceLocation": "Cover — Area / tags",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-27",
-      "held": false,
-      "conflictGroup": null,
-      "resolves": []
-    },
-    {
-      "valueId": "PV-A-2000-0286",
-      "assetId": "IF-A2000-BRINE",
-      "property": "identity.status",
-      "value": "Retired — no service when A-2000 treats only the A-1100 condensate and municipal make-up (D-A2000-03, basis A2-7)",
-      "unit": "",
-      "sourceDocId": "FEED-PE-CAL-036",
-      "sourceRevision": "V1.0",
-      "sourceLocation": "Cover — Area / tags",
-      "reviewer": "QFL",
-      "reviewDate": "2026-09-27",
-      "held": false,
-      "conflictGroup": null,
-      "resolves": []
     }
   ],
   "openConflicts": [],
   "identityHolds": [],
   "gaps": [
-    {
-      "gapId": "GAP-A-2000-MV-c15c8e",
-      "assetId": "P-BW2001",
-      "kind": "missing value",
-      "subject": "design.pumpType",
-      "requiredSource": "Pump datasheet / hydraulic calculation",
-      "status": "open",
-      "note": "no source row harvested"
-    },
-    {
-      "gapId": "GAP-A-2000-MV-3d499e",
-      "assetId": "P-BW2001",
-      "kind": "missing value",
-      "subject": "design.ratedFlowM3h",
-      "requiredSource": "Pump datasheet / hydraulic calculation",
-      "status": "open",
-      "note": "no source row harvested"
-    },
-    {
-      "gapId": "GAP-A-2000-MV-e2fdb3",
-      "assetId": "P-BW2001",
-      "kind": "missing value",
-      "subject": "design.differentialHead",
-      "requiredSource": "Pump datasheet / hydraulic calculation",
-      "status": "open",
-      "note": "no source row harvested"
-    },
-    {
-      "gapId": "GAP-A-2000-MV-772040",
-      "assetId": "P-BW2001",
-      "kind": "missing value",
-      "subject": "design.materialOfConstruction",
-      "requiredSource": "Pump datasheet / hydraulic calculation",
-      "status": "open",
-      "note": "no source row harvested"
-    },
-    {
-      "gapId": "GAP-A-2000-MV-4f9148",
-      "assetId": "P-2001",
-      "kind": "missing value",
-      "subject": "design.pumpType",
-      "requiredSource": "Pump datasheet / hydraulic calculation",
-      "status": "open",
-      "note": "no source row harvested"
-    },
-    {
-      "gapId": "GAP-A-2000-MV-ad2b33",
-      "assetId": "P-2001",
-      "kind": "missing value",
-      "subject": "design.ratedFlowM3h",
-      "requiredSource": "Pump datasheet / hydraulic calculation",
-      "status": "open",
-      "note": "no source row harvested"
-    },
-    {
-      "gapId": "GAP-A-2000-MV-1fd472",
-      "assetId": "P-2001",
-      "kind": "missing value",
-      "subject": "design.differentialHead",
-      "requiredSource": "Pump datasheet / hydraulic calculation",
-      "status": "open",
-      "note": "no source row harvested"
-    },
-    {
-      "gapId": "GAP-A-2000-MV-ffe439",
-      "assetId": "T-2003",
-      "kind": "missing value",
-      "subject": "design.totalVolumeM3",
-      "requiredSource": "Equipment datasheet",
-      "status": "open",
-      "note": "no source row harvested"
-    },
-    {
-      "gapId": "GAP-A-2000-MV-bbc6d4",
-      "assetId": "T-2003",
-      "kind": "missing value",
-      "subject": "design.designPressure",
-      "requiredSource": "Equipment datasheet",
-      "status": "open",
-      "note": "no source row harvested"
-    },
-    {
-      "gapId": "GAP-A-2000-MV-1ae6e2",
-      "assetId": "T-2003",
-      "kind": "missing value",
-      "subject": "design.designTemperature",
-      "requiredSource": "Equipment datasheet",
-      "status": "open",
-      "note": "no source row harvested"
-    },
-    {
-      "gapId": "GAP-A-2000-MV-977c78",
-      "assetId": "P-2003",
-      "kind": "missing value",
-      "subject": "design.pumpType",
-      "requiredSource": "Pump datasheet / hydraulic calculation",
-      "status": "open",
-      "note": "no source row harvested"
-    },
-    {
-      "gapId": "GAP-A-2000-MV-a4d587",
-      "assetId": "P-2003",
-      "kind": "missing value",
-      "subject": "design.ratedFlowM3h",
-      "requiredSource": "Pump datasheet / hydraulic calculation",
-      "status": "open",
-      "note": "no source row harvested"
-    },
-    {
-      "gapId": "GAP-A-2000-MV-18eaef",
-      "assetId": "P-2003",
-      "kind": "missing value",
-      "subject": "design.differentialHead",
-      "requiredSource": "Pump datasheet / hydraulic calculation",
-      "status": "open",
-      "note": "no source row harvested"
-    },
     {
       "gapId": "GAP-A-2000-MV-a3e284",
       "assetId": "T-2004",
@@ -1392,114 +881,6 @@
       "note": "no source row harvested"
     },
     {
-      "gapId": "GAP-A-2000-MV-50cd8e",
-      "assetId": "TK-UF2001",
-      "kind": "missing value",
-      "subject": "design.totalVolumeM3",
-      "requiredSource": "Equipment datasheet",
-      "status": "open",
-      "note": "no source row harvested"
-    },
-    {
-      "gapId": "GAP-A-2000-MV-7dc1ee",
-      "assetId": "TK-UF2001",
-      "kind": "missing value",
-      "subject": "design.designPressure",
-      "requiredSource": "Equipment datasheet",
-      "status": "open",
-      "note": "no source row harvested"
-    },
-    {
-      "gapId": "GAP-A-2000-MV-842c64",
-      "assetId": "TK-UF2001",
-      "kind": "missing value",
-      "subject": "design.designTemperature",
-      "requiredSource": "Equipment datasheet",
-      "status": "open",
-      "note": "no source row harvested"
-    },
-    {
-      "gapId": "GAP-A-2000-MV-a28141",
-      "assetId": "TK-UF2001",
-      "kind": "missing value",
-      "subject": "design.materialOfConstruction",
-      "requiredSource": "Equipment datasheet",
-      "status": "open",
-      "note": "no source row harvested"
-    },
-    {
-      "gapId": "GAP-A-2000-MV-80d69d",
-      "assetId": "P-UF2001",
-      "kind": "missing value",
-      "subject": "design.pumpType",
-      "requiredSource": "Pump datasheet / hydraulic calculation",
-      "status": "open",
-      "note": "no source row harvested"
-    },
-    {
-      "gapId": "GAP-A-2000-MV-042b0e",
-      "assetId": "P-UF2001",
-      "kind": "missing value",
-      "subject": "design.ratedFlowM3h",
-      "requiredSource": "Pump datasheet / hydraulic calculation",
-      "status": "open",
-      "note": "no source row harvested"
-    },
-    {
-      "gapId": "GAP-A-2000-MV-162369",
-      "assetId": "P-UF2001",
-      "kind": "missing value",
-      "subject": "design.differentialHead",
-      "requiredSource": "Pump datasheet / hydraulic calculation",
-      "status": "open",
-      "note": "no source row harvested"
-    },
-    {
-      "gapId": "GAP-A-2000-MV-aafa9b",
-      "assetId": "P-UF2001",
-      "kind": "missing value",
-      "subject": "design.materialOfConstruction",
-      "requiredSource": "Pump datasheet / hydraulic calculation",
-      "status": "open",
-      "note": "no source row harvested"
-    },
-    {
-      "gapId": "GAP-A-2000-MV-09514b",
-      "assetId": "TK-BW2001",
-      "kind": "missing value",
-      "subject": "design.totalVolumeM3",
-      "requiredSource": "Equipment datasheet",
-      "status": "open",
-      "note": "no source row harvested"
-    },
-    {
-      "gapId": "GAP-A-2000-MV-7cad25",
-      "assetId": "TK-BW2001",
-      "kind": "missing value",
-      "subject": "design.designPressure",
-      "requiredSource": "Equipment datasheet",
-      "status": "open",
-      "note": "no source row harvested"
-    },
-    {
-      "gapId": "GAP-A-2000-MV-21a005",
-      "assetId": "TK-BW2001",
-      "kind": "missing value",
-      "subject": "design.designTemperature",
-      "requiredSource": "Equipment datasheet",
-      "status": "open",
-      "note": "no source row harvested"
-    },
-    {
-      "gapId": "GAP-A-2000-MV-8a6379",
-      "assetId": "TK-BW2001",
-      "kind": "missing value",
-      "subject": "design.materialOfConstruction",
-      "requiredSource": "Equipment datasheet",
-      "status": "open",
-      "note": "no source row harvested"
-    },
-    {
       "gapId": "GAP-A-2000-MV-be7d8d",
       "assetId": "TK-CIP2001-W",
       "kind": "missing value",
@@ -1545,24 +926,6 @@
       "note": "CF-materialOfConstruc-T-2001"
     },
     {
-      "gapId": "GAP-A-2000-CF-199729",
-      "assetId": "P-2001",
-      "kind": "conflict",
-      "subject": "design.materialOfConstruction",
-      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
-      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
-      "note": "CF-materialOfConstruc-P-2001"
-    },
-    {
-      "gapId": "GAP-A-2000-CF-5bfd89",
-      "assetId": "UF-2001",
-      "kind": "conflict",
-      "subject": "design.materialOfConstruction",
-      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
-      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
-      "note": "CF-materialOfConstruc-UF-2001"
-    },
-    {
       "gapId": "GAP-A-2000-CF-1f1c39",
       "assetId": "P-2002",
       "kind": "conflict",
@@ -1579,24 +942,6 @@
       "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
       "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
       "note": "CF-materialOfConstruc-T-2002"
-    },
-    {
-      "gapId": "GAP-A-2000-CF-83619c",
-      "assetId": "T-2003",
-      "kind": "conflict",
-      "subject": "design.materialOfConstruction",
-      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
-      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
-      "note": "CF-materialOfConstruc-T-2003"
-    },
-    {
-      "gapId": "GAP-A-2000-CF-d6a4cd",
-      "assetId": "P-2003",
-      "kind": "conflict",
-      "subject": "design.materialOfConstruction",
-      "requiredSource": "Engineering decision; record via FEED-GV-SOP-010 MoC; sources: FEED-PE-MAT-002, FEED-PE-MDL-001",
-      "status": "closed — FEED-PE-MAT-002 approved by QFL 2026-09-20",
-      "note": "CF-materialOfConstruc-P-2003"
     },
     {
       "gapId": "GAP-A-2000-CF-0991c2",
@@ -1657,7 +1002,7 @@
       "assetId": "P-2002",
       "kind": "decision follow-up",
       "subject": "design.operatingPressureBar",
-      "requiredSource": "Reconcile the model's three RO trains (RO-2001A/B/C, P-2002A/B/C) and the backwash / UF / CIP sub-package tags with LST-001 / PFD-2000 once the A-2000 stream table exists.",
+      "requiredSource": "Reconcile the model's two RO trains (RO-2001A/B, P-2002A/B) and the CIP sub-package tags with LST-001 / PFD-2000 once the A-2000 stream table exists.",
       "status": "open",
       "note": "D-A2000-02"
     },
@@ -1666,7 +1011,7 @@
       "assetId": "RO-2001",
       "kind": "decision follow-up",
       "subject": "design.feedBasis",
-      "requiredSource": "Final demand (A-400 hold H-01); condensate quality (M2 / M5); municipal supply data (IF-A2000-CITY); PFD-2000 MoC and LST-001; remove the retired tags from the model; W1 only if M3 cuts the HCl and reuse becomes a requirement",
+      "requiredSource": "Final demand (A-400 hold H-01); condensate quality (M2 / M5); municipal supply data (IF-A2000-CITY); PFD-2000 MoC and LST-001; the A-1100 condensate tie-in (Route 2 + 6 option; the retired tags are removed from the model); W1 only if M3 cuts the HCl and reuse becomes a requirement",
       "status": "open",
       "note": "D-A2000-03"
     },
@@ -1675,9 +1020,9 @@
       "assetId": "RO train count",
       "kind": "identity / naming conflict",
       "subject": "One RO-2001 / P-2002 (LST-001, PFD-2000)",
-      "requiredSource": "RO-2001A/B/C, P-2002A/B/C, GF-RO2001A/B/C, PSV-RO-A/B/C (semantic core / model)",
+      "requiredSource": "RO-2001A/B, P-2002A/B, GF-RO2001A/B, PSV-RO-A/B (semantic core / model)",
       "status": "open",
-      "note": "Model splits the RO into three trains without a register basis"
+      "note": "Model splits the RO into two trains, one duty and one standby (DAT-134 / 135), without a register basis"
     },
     {
       "gapId": "GAP-A-2000-ID-0c159a",
@@ -1692,10 +1037,10 @@
       "gapId": "GAP-A-2000-ID-d0aead",
       "assetId": "Model-only tags",
       "kind": "identity / naming conflict",
-      "subject": "P-BW2001, TK-UF2001, P-UF2001, TK-BW2001, TK-CIP2001-W, CP-2000 (model)",
+      "subject": "TK-CIP2001-W, CP-2000 (model)",
       "requiredSource": "Not on LST-001",
       "status": "open",
-      "note": "Backwash / UF / CIP sub-packages exist only in the model"
+      "note": "The spent-CIP hold and the control station exist only in the model"
     }
   ],
   "inventory": [
@@ -1732,49 +1077,7 @@
       "name": "Condensate Receiver",
       "modelEquipmentId": 500,
       "operation": "ropretreat",
-      "parts": 309,
-      "designStatus": "listed",
-      "inRegister": "yes",
-      "identityStatus": "draft-pfd-tag",
-      "identityHold": false,
-      "approvedRows": 2,
-      "heldRows": 0,
-      "semanticRecord": true
-    },
-    {
-      "tag": "P-2001",
-      "name": "Feed / media backwash pump · RETIRED (D-A2000-03)",
-      "modelEquipmentId": 501,
-      "operation": "ropretreat",
-      "parts": 300,
-      "designStatus": "listed",
-      "inRegister": "yes",
-      "identityStatus": "draft-pfd-tag",
-      "identityHold": false,
-      "approvedRows": 2,
-      "heldRows": 0,
-      "semanticRecord": true
-    },
-    {
-      "tag": "MMF-2001",
-      "name": "Multimedia filtration · parallel vessel allowance · RETIRED (D-A2000-03)",
-      "modelEquipmentId": 502,
-      "operation": "ropretreat",
-      "parts": 313,
-      "designStatus": "listed",
-      "inRegister": "yes",
-      "identityStatus": "draft-pfd-tag",
-      "identityHold": false,
-      "approvedRows": 2,
-      "heldRows": 0,
-      "semanticRecord": true
-    },
-    {
-      "tag": "GF-2001",
-      "name": "Greensand Fe / Mn filtration · parallel allowance · RETIRED (D-A2000-03)",
-      "modelEquipmentId": 503,
-      "operation": "ropretreat",
-      "parts": 281,
+      "parts": 287,
       "designStatus": "listed",
       "inRegister": "yes",
       "identityStatus": "draft-pfd-tag",
@@ -1788,7 +1091,7 @@
       "name": "Condensate Carbon Filter",
       "modelEquipmentId": 504,
       "operation": "ropretreat",
-      "parts": 299,
+      "parts": 546,
       "designStatus": "listed",
       "inRegister": "yes",
       "identityStatus": "draft-pfd-tag",
@@ -1798,25 +1101,11 @@
       "semanticRecord": true
     },
     {
-      "tag": "UF-2001",
-      "name": "Dead-end ultrafiltration · two backwash banks · RETIRED (D-A2000-03)",
-      "modelEquipmentId": 505,
-      "operation": "ropretreat",
-      "parts": 1672,
-      "designStatus": "listed",
-      "inRegister": "yes",
-      "identityStatus": "draft-pfd-tag",
-      "identityHold": false,
-      "approvedRows": 2,
-      "heldRows": 0,
-      "semanticRecord": true
-    },
-    {
       "tag": "P-2002",
       "name": "RO Feed Pumps",
       "modelEquipmentId": 506,
       "operation": "rorecover",
-      "parts": 359,
+      "parts": 245,
       "designStatus": "listed",
       "inRegister": "yes",
       "identityStatus": "draft-pfd-tag",
@@ -1830,7 +1119,7 @@
       "name": "Condensate Polishing RO",
       "modelEquipmentId": 507,
       "operation": "rorecover",
-      "parts": 5592,
+      "parts": 4016,
       "designStatus": "listed",
       "inRegister": "yes",
       "identityStatus": "draft-pfd-tag",
@@ -1844,7 +1133,7 @@
       "name": "Process Water Tank",
       "modelEquipmentId": 508,
       "operation": "rodistribute",
-      "parts": 165,
+      "parts": 414,
       "designStatus": "listed",
       "inRegister": "yes",
       "identityStatus": "draft-pfd-tag",
@@ -1858,7 +1147,7 @@
       "name": "Process Water Distribution Pumps",
       "modelEquipmentId": 509,
       "operation": "rodistribute",
-      "parts": 1539,
+      "parts": 1721,
       "designStatus": "listed",
       "inRegister": "yes",
       "identityStatus": "draft-pfd-tag",
@@ -1872,40 +1161,12 @@
       "name": "Municipal Make-Up Cartridge Filter",
       "modelEquipmentId": 510,
       "operation": "rodistribute",
-      "parts": 346,
+      "parts": 86,
       "designStatus": "listed",
       "inRegister": "yes",
       "identityStatus": "draft-pfd-tag",
       "identityHold": false,
       "approvedRows": 1,
-      "heldRows": 0,
-      "semanticRecord": true
-    },
-    {
-      "tag": "T-2003",
-      "name": "RO concentrate storage · 95 m³ screening · RETIRED (D-A2000-03)",
-      "modelEquipmentId": 511,
-      "operation": "rowaste",
-      "parts": 165,
-      "designStatus": "listed",
-      "inRegister": "yes",
-      "identityStatus": "draft-pfd-tag",
-      "identityHold": false,
-      "approvedRows": 2,
-      "heldRows": 0,
-      "semanticRecord": true
-    },
-    {
-      "tag": "P-2003",
-      "name": "Concentrate transfer pump · RETIRED (D-A2000-03)",
-      "modelEquipmentId": 512,
-      "operation": "rowaste",
-      "parts": 348,
-      "designStatus": "listed",
-      "inRegister": "yes",
-      "identityStatus": "draft-pfd-tag",
-      "identityHold": false,
-      "approvedRows": 2,
       "heldRows": 0,
       "semanticRecord": true
     },
@@ -1928,7 +1189,7 @@
       "name": "RO Chemical Dosing Skid",
       "modelEquipmentId": 514,
       "operation": "roclean",
-      "parts": 452,
+      "parts": 631,
       "designStatus": "listed",
       "inRegister": "yes",
       "identityStatus": "draft-pfd-tag",
@@ -1942,7 +1203,7 @@
       "name": "RO cleaning skid · sequential acid / alkaline service",
       "modelEquipmentId": 515,
       "operation": "roclean",
-      "parts": 233,
+      "parts": 248,
       "designStatus": "listed",
       "inRegister": "yes",
       "identityStatus": "draft-pfd-tag",
@@ -1962,62 +1223,6 @@
       "identityStatus": "model-derived; tag qualification open",
       "identityHold": false,
       "approvedRows": 0,
-      "heldRows": 0,
-      "semanticRecord": true
-    },
-    {
-      "tag": "TK-UF2001",
-      "name": "UF filtrate / backwash buffer · 10 m³ allowance · RETIRED (D-A2000-03)",
-      "modelEquipmentId": 517,
-      "operation": "ropretreat",
-      "parts": 297,
-      "designStatus": "proposed",
-      "inRegister": "no",
-      "identityStatus": "model-derived; tag qualification open",
-      "identityHold": false,
-      "approvedRows": 1,
-      "heldRows": 0,
-      "semanticRecord": true
-    },
-    {
-      "tag": "P-UF2001",
-      "name": "UF filtrate transfer / backwash pump · RETIRED (D-A2000-03)",
-      "modelEquipmentId": 518,
-      "operation": "ropretreat",
-      "parts": 242,
-      "designStatus": "proposed",
-      "inRegister": "no",
-      "identityStatus": "model-derived; tag qualification open",
-      "identityHold": false,
-      "approvedRows": 1,
-      "heldRows": 0,
-      "semanticRecord": true
-    },
-    {
-      "tag": "TK-BW2001",
-      "name": "Backwash collection · 10 m³ allowance · RETIRED (D-A2000-03)",
-      "modelEquipmentId": 519,
-      "operation": "rowaste",
-      "parts": 222,
-      "designStatus": "proposed",
-      "inRegister": "no",
-      "identityStatus": "model-derived; tag qualification open",
-      "identityHold": false,
-      "approvedRows": 1,
-      "heldRows": 0,
-      "semanticRecord": true
-    },
-    {
-      "tag": "P-BW2001",
-      "name": "Backwash lift to A-1000 · RETIRED (D-A2000-03)",
-      "modelEquipmentId": 520,
-      "operation": "rowaste",
-      "parts": 568,
-      "designStatus": "proposed",
-      "inRegister": "no",
-      "identityStatus": "model-derived; tag qualification open",
-      "identityHold": false,
-      "approvedRows": 1,
       "heldRows": 0,
       "semanticRecord": true
     },
@@ -2064,20 +1269,6 @@
       "semanticRecord": true
     },
     {
-      "tag": "GF-RO2001C",
-      "name": "Guard cartridge filter housing · RETIRED (D-A2000-03)",
-      "modelEquipmentId": 524,
-      "operation": "ropretreat",
-      "parts": 161,
-      "designStatus": "proposed",
-      "inRegister": "no",
-      "identityStatus": "model-derived; tag qualification open",
-      "identityHold": false,
-      "approvedRows": 1,
-      "heldRows": 0,
-      "semanticRecord": true
-    },
-    {
       "tag": "IF-A2000-CITY",
       "name": "Municipal make-up battery limit (D-A2000-03)",
       "modelEquipmentId": 656,
@@ -2085,11 +1276,11 @@
       "parts": 2,
       "designStatus": "interface",
       "inRegister": "no",
-      "identityStatus": "candidate-not-in-model",
+      "identityStatus": "model-derived; tag qualification open",
       "identityHold": false,
       "approvedRows": 0,
       "heldRows": 0,
-      "semanticRecord": false
+      "semanticRecord": true
     },
     {
       "tag": "FE-2001",
@@ -2165,6 +1356,20 @@
       "tag": "P-CIP2001",
       "name": "CIP recirculation",
       "modelEquipmentId": 2227102935,
+      "operation": "roclean",
+      "parts": 242,
+      "designStatus": "proposed",
+      "inRegister": "no",
+      "identityStatus": "model-only (not in the data layer)",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": false
+    },
+    {
+      "tag": "P-2004B",
+      "name": "NaOH metering pump",
+      "modelEquipmentId": 3132961950,
       "operation": "roclean",
       "parts": 242,
       "designStatus": "proposed",
@@ -2296,66 +1501,6 @@
       "modelOwned": false
     },
     {
-      "tag": "P-2002C",
-      "name": "RO train C high-pressure pump",
-      "modelEquipmentId": "506",
-      "operation": null,
-      "parts": 0,
-      "designStatus": null,
-      "inRegister": "via composite",
-      "identityStatus": "model-derived; tag qualification open",
-      "identityHold": false,
-      "approvedRows": 1,
-      "heldRows": 0,
-      "semanticRecord": true,
-      "modelOwned": false
-    },
-    {
-      "tag": "RO-2001C",
-      "name": "RO train C; standby model intent",
-      "modelEquipmentId": "507",
-      "operation": null,
-      "parts": 0,
-      "designStatus": null,
-      "inRegister": "via composite",
-      "identityStatus": "model-derived; tag qualification open",
-      "identityHold": false,
-      "approvedRows": 1,
-      "heldRows": 0,
-      "semanticRecord": true,
-      "modelOwned": false
-    },
-    {
-      "tag": "PSV-RO-C",
-      "name": "RO train C relief provision; sizing unqualified",
-      "modelEquipmentId": "507",
-      "operation": null,
-      "parts": 0,
-      "designStatus": null,
-      "inRegister": "no",
-      "identityStatus": "model-derived; tag qualification open",
-      "identityHold": false,
-      "approvedRows": 1,
-      "heldRows": 0,
-      "semanticRecord": true,
-      "modelOwned": false
-    },
-    {
-      "tag": "IF-A2000-BRINE",
-      "name": "Blinded concentrate export; destination TBD",
-      "modelEquipmentId": null,
-      "operation": null,
-      "parts": 0,
-      "designStatus": null,
-      "inRegister": "no",
-      "identityStatus": "model-derived; tag qualification open",
-      "identityHold": false,
-      "approvedRows": 1,
-      "heldRows": 0,
-      "semanticRecord": true,
-      "modelOwned": false
-    },
-    {
       "tag": "IF-A2000-CIP-EHS",
       "name": "Blinded spent CIP export; destination TBD",
       "modelEquipmentId": null,
@@ -2388,21 +1533,6 @@
     {
       "tag": "IF-A2000-AS-FILL",
       "name": "Closed antiscalant fill boundary",
-      "modelEquipmentId": null,
-      "operation": null,
-      "parts": 0,
-      "designStatus": null,
-      "inRegister": "no",
-      "identityStatus": "model-derived; tag qualification open",
-      "identityHold": false,
-      "approvedRows": 0,
-      "heldRows": 0,
-      "semanticRecord": true,
-      "modelOwned": false
-    },
-    {
-      "tag": "IF-A2000-CEB",
-      "name": "UF chemical CEB hold; no modeled connection",
       "modelEquipmentId": null,
       "operation": null,
       "parts": 0,
@@ -2504,6 +1634,21 @@
       "heldRows": 0,
       "semanticRecord": false,
       "modelOwned": false
+    },
+    {
+      "tag": "IF-A2000-COND",
+      "name": "Blinded A-1100 condensate boundary; connects under Route 2 + 6",
+      "modelEquipmentId": null,
+      "operation": null,
+      "parts": 0,
+      "designStatus": null,
+      "inRegister": "no",
+      "identityStatus": "model-derived; tag qualification open",
+      "identityHold": false,
+      "approvedRows": 0,
+      "heldRows": 0,
+      "semanticRecord": true,
+      "modelOwned": false
     }
   ],
   "documents": [
@@ -2600,11 +1745,11 @@
     {
       "documentId": "FEED-PE-REP-043",
       "title": "Plant Utilities and Thermal Balance (A-5000 / A-6000 / A-4000)",
-      "revision": "V1.1",
+      "revision": "V1.2",
       "docType": "REP",
       "control": "controlled",
       "tier": "B",
-      "file": "B. Technical Reports\\FEED-PE-REP-043_Plant-Utilities-and-Thermal-Balance_V1.1.docx",
+      "file": "B. Technical Reports\\FEED-PE-REP-043_Plant-Utilities-and-Thermal-Balance_V1.2.docx",
       "valueRows": "0"
     },
     {
@@ -2870,13 +2015,13 @@
     }
   ],
   "counts": {
-    "assets": 52,
-    "propertyRows": 423,
-    "approved": 33,
+    "assets": 37,
+    "propertyRows": 282,
+    "approved": 12,
     "openConflicts": 0,
     "decisions": 5,
     "holds": 0,
-    "gapsOpen": 43,
-    "gapsClosed": 12
+    "gapsOpen": 18,
+    "gapsClosed": 8
   }
 }
