@@ -3,7 +3,7 @@
   "title": "A-2000 assembly & design review",
   "revision": "r7",
   "date": "2026-09-29",
-  "sourceCommit": "f7a7c8c5",
+  "sourceCommit": "2b366539",
   "semanticCoreVersion": "1.19.0-foundation",
   "registerRevision": "2026-09-10 · Physical equipment ownership and complete Explore assemblies",
   "modelConfig": {
@@ -459,7 +459,7 @@
       "exitCode": 0,
       "passed": true,
       "lastLine": "PASS: A-2000 upstream continuity, pretreatment, UF/RO duty-standby, quality diversion, segregated CIP/brine/backwash, draft bases and source guards.",
-      "ranAt": "2026-10-06T18:50:42.094Z"
+      "ranAt": "2026-10-06T20:28:37.422Z"
     },
     {
       "command": "node tests/validate-semantic-data.mjs",
@@ -467,7 +467,7 @@
       "exitCode": 0,
       "passed": true,
       "lastLine": "{\"passed\":true,\"areas\":[{\"area\":\"A-100\",\"assets\":10,\"holds\":0,\"values\":324,\"approved\":10,\"conflicts\":2,\"variants\":12,\"gaps\":8},{\"area\":\"A-1000\",\"assets\":76,\"holds\":0,\"values\":980,\"approved\":32,\"conflicts\":6,\"variants\":19,\"gaps\":60},{\"area\":\"A-140\",\"assets\":17,\"holds\":0,\"values\":536,\"approved\":57,\"conflicts\":20,\"variants\":14,\"gaps\":32},{\"area\":\"A-160\",\"assets\":29,\"holds\":0,\"values\":636,\"approved\":14,\"conflicts\":5,\"variants\":12,\"gaps\":18},{\"area\":\"A-200\",\"assets\":72,\"holds\":0,\"values\":1303,\"approved\":110,\"conflicts\":85,\"variants\":41,\"gaps\":129},{\"area\":\"A-2000\",\"assets\":37,\"holds\":0,\"values\":282,\"approved\":12,\"conflicts\":8,\"variants\":11,\"gaps\":26},{\"area\":\"A-300\",\"assets\":27,\"holds\":0,\"values\":638,\"approved\":27,\"conflicts\":14,\"variants\":17,\"gaps\":51},{\"area\":\"A-3000\",\"assets\":51,\"holds\":0,\"values\":442,\"approved\":13,\"conflicts\":3,\"variants\":11,\"gaps\":6},{\"area\":\"A-400\",\"assets\":23,\"holds\":0,\"values\":280,\"approved\":15,\"conflicts\":9,\"variants\":8,\"gaps\":40},{\"area\":\"A-4000\",\"assets\":11,\"holds\":0,\"values\":315,\"approved\":13,\"conflicts\":11,\"variants\":11,\"gaps\":13},{\"area\":\"A-500\",\"assets\":12,\"holds\":0,\"values\":224,\"approved\":18,\"conflicts\":5,\"variants\":5,\"gaps\":14},{\"area\":\"A-5000\",\"assets\":53,\"holds\":0,\"values\":618,\"approved\":17,\"conflicts\":14,\"variants\":10,\"gaps\":40},{\"area\":\"A-600\",\"assets\":32,\"holds\":0,\"values\":490,\"approved\":37,\"conflicts\":5,\"variants\":12,\"gaps\":17},{\"area\":\"A-6000\",\"assets\":6,\"holds\":0,\"values\":42,\"approved\":3,\"conflicts\":2,\"variants\":2,\"gaps\":5},{\"area\":\"A-700\",\"assets\":17,\"holds\":0,\"values\":452,\"approved\":39,\"conflicts\":5,\"variants\":7,\"gaps\":70},{\"area\":\"A-800\",\"assets\":27,\"holds\":0,\"values\":504,\"approved\":29,\"conflicts\":10,\"variants\":14,\"gaps\":35},{\"area\":\"A-900\",\"assets\":23,\"holds\":4,\"values\":265,\"approved\":20,\"conflicts\":11,\"variants\":11,\"gaps\":17}]}",
-      "ranAt": "2026-10-06T18:50:42.236Z"
+      "ranAt": "2026-10-06T20:28:37.604Z"
     },
     {
       "command": "node tests/validate-semantic-fields.mjs",
@@ -475,7 +475,7 @@
       "exitCode": 0,
       "passed": true,
       "lastLine": "PASS: documented pending values, superseded values hidden, alternatives, mixed units, missing values and identity holds.",
-      "ranAt": "2026-10-06T18:50:43.439Z"
+      "ranAt": "2026-10-06T20:28:39.059Z"
     }
   ],
   "decisions": [

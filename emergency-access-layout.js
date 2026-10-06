@@ -525,11 +525,11 @@ export const EMERGENCY_ACCESS_LAYOUT={
       "area": "A-2000",
       "point": [
         78.5,
-        -7.75
+        -9
       ],
       "walkPoint": [
         78.5,
-        -7.75
+        -9
       ],
       "linkLengthM": 0
     },

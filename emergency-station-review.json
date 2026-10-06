@@ -6,7 +6,7 @@
   "clearStationReservations": 40,
   "sampledPositions": 84,
   "checkedRoutes": 2698,
-  "footprintsChecked": 1065,
+  "footprintsChecked": 1063,
   "exposureCoverage": {
     "exposures": [
       {
@@ -1246,7 +1246,7 @@
         "label": "A-2000 · Antiscalant dosing service",
         "point": [
           78.5,
-          -7.75
+          -9
         ],
         "elevationM": 0,
         "material": "Antiscalant",
@@ -1258,10 +1258,10 @@
         "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
         "nearest": {
           "tag": "ES-2002",
-          "checkedDistanceM": 5.25,
+          "checkedDistanceM": 4,
           "originGapM": 0,
           "finalGapM": 0.6082762530298206,
-          "completeDistanceM": 5.85827625302982
+          "completeDistanceM": 4.60827625302982
         },
         "status": "verification-pending",
         "distanceLimitM": 6,
@@ -2340,11 +2340,11 @@
         "area": "A-2000",
         "point": [
           78.5,
-          -7.75
+          -9
         ],
         "walkPoint": [
           78.5,
-          -7.75
+          -9
         ],
         "linkLengthM": 0
       },

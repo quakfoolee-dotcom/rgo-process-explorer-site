@@ -16,7 +16,7 @@ export const ADDITIONAL_EMERGENCY_TASKS=[
  task('801-OFFGAS','A-800','Off-gas maintenance approach',[107.75,37.25],'Off-gas deposits / residual reagent','Isolated cooler and fan service; assess residual reactivity'),
  task('2001-CIP','A-2000','CIP-2001 chemical-service approach',[80.75,-3.25],'Acid / alkaline CIP chemicals','Cleaning connection approach; final hose handling and connection reach require coordinated design'),
  task('2001-WASTE','A-2000','Spent-CIP transfer',[86.5,-11.75],'Spent acid / alkaline cleaning liquor','Waste transfer and isolated connection service'),
- task('2001-DOSE','A-2000','Antiscalant dosing service',[78.5,-7.75],'Antiscalant','Container/dosing service; supplier SDS and concentration pending'),
+ task('2001-DOSE','A-2000','Antiscalant dosing service',[78.5,-9],'Antiscalant','Container/dosing service; supplier SDS and concentration pending'),
  task('2001-RO','A-2000','RO cleaning / membrane service',[78.5,-10.25],'Residual CIP liquor','Isolated membrane and cleaning manifold service'),
  task('1001-NAOH','A-1000','NaOH dosing service',[20.25,-20],'NaOH','Chemical dosing connection and isolated pump service'),
  task('1002-LIME','A-1000','Lime-slurry dosing service',[28.75,-20],'Lime slurry','Chemical dosing and isolated pump service'),
