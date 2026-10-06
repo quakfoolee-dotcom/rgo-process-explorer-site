@@ -4,9 +4,9 @@ import {TRANSPORT_ROUTES} from './transport-layout.js';
 // Proposed outside walls of the process building, as a display layer: the building-footprint envelope of every area except A-6000
 // (x -42...117, z -31.5...41.6) with the wall just outside it; the argon yard stays outside (V291). The south wall steps 1.1 m south
 // 2.6 m at x 89 so the A-800 service aisle and its fire point FE-802 stay inside, and the west wall stays inside the plant walkway at x -43.
-export const BUILDING_SHELL={revision:'bldg-2',rect:[-42.25,-32,117.5,44.3],runs:[
- {id:'W',axis:'x',c:-42.25,lo:-32,hi:41.7},{id:'N',axis:'z',c:-32,lo:-42.25,hi:117.5},{id:'E',axis:'x',c:117.5,lo:-32,hi:44.3},
- {id:'S1',axis:'z',c:41.7,lo:-42.25,hi:89},{id:'J',axis:'x',c:89,lo:41.7,hi:44.3},{id:'S2',axis:'z',c:44.3,lo:89,hi:117.5}],height:12,thickness:.15,doorHeight:3,doorExtra:.8,vehicleDoor:{width:6,height:4.5},columnPitch:6,
+export const BUILDING_SHELL={revision:'bldg-2',rect:[-42.25,-32,117.5,45],runs:[
+ {id:'W',axis:'x',c:-42.25,lo:-32,hi:41.7},{id:'N',axis:'z',c:-32,lo:-42.25,hi:117.5},{id:'E',axis:'x',c:117.5,lo:-32,hi:45},
+ {id:'S1',axis:'z',c:41.7,lo:-42.25,hi:89},{id:'J',axis:'x',c:89,lo:41.7,hi:45},{id:'S2',axis:'z',c:45,lo:89,hi:117.5}],height:12,thickness:.15,doorHeight:3,doorExtra:.8,vehicleDoor:{width:6,height:4.5},columnPitch:6,
  // Lines and fire points that stand outside the wall on purpose. Insulation, heat trace and containment are open design items (V293).
  outdoorService:{
   firePoints:['FE-6001','FE-901'],
@@ -30,11 +30,15 @@ function collect(){
  for(const route of TRANSPORT_ROUTES){const pts=route.loop?[...route.points,route.points[0]]:route.points;for(let k=1;k<pts.length;k++)for(const side of SIDES){const x=crossings(side,pts[k-1],pts[k]);if(x)door(side,x.s,BUILDING_SHELL.vehicleDoor.width,BUILDING_SHELL.vehicleDoor.height,'vehicle door');}}
  return out;
 }
-// A window wherever a pipe's plan footprint (radius + 0.35 m for fittings and bends) reaches the wall band, whether it crosses, ends at or runs along the wall.
+// A window where a pipe's footprint (radius + 0.35 m for fittings and bends) meets the wall: the pipe is clipped to the wall band first,
+// so a pipe that crosses gets a window at its crossing height, and one that only runs close gets one along that stretch.
 function pipeWindows(edges,out){
  for(const e of edges){const P=e.path;if(!P||P.length<2)continue;const m=(e.radius||.05)+.35;
-  for(let k=1;k<P.length;k++){const a=P[k-1],b=P[k],lo=[Math.min(a[0],b[0])-m,Math.min(a[2],b[2])-m],hi=[Math.max(a[0],b[0])+m,Math.max(a[2],b[2])+m],y0=Math.min(a[1],b[1])-m,y1=Math.max(a[1],b[1])+m;
-   for(const side of SIDES){const i=side.axis==='x'?0:1,j=1-i;if(lo[i]<side.c+BUILDING_SHELL.thickness/2&&hi[i]>side.c-BUILDING_SHELL.thickness/2&&lo[j]<side.hi&&hi[j]>side.lo&&y0<BUILDING_SHELL.height)out[side.id].push({s0:Math.max(side.lo,lo[j]),s1:Math.min(side.hi,hi[j]),y0:Math.max(0,y0),y1,kind:'pipe penetration'});}}}
+  for(let k=1;k<P.length;k++){const a=P[k-1],b=P[k];
+   for(const side of SIDES){const i=side.axis==='x'?0:2,j=side.axis==='x'?2:0,band=m+BUILDING_SHELL.thickness/2,d=b[i]-a[i];let t0=0,t1=1;
+    if(Math.abs(d)<1e-9){if(Math.abs(a[i]-side.c)>band)continue;}else{const u=(side.c-band-a[i])/d,v=(side.c+band-a[i])/d;t0=Math.max(0,Math.min(u,v));t1=Math.min(1,Math.max(u,v));if(t0>=t1)continue;}
+    const at=t=>[a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,a[2]+(b[2]-a[2])*t],p=at(t0),q=at(t1),s0=Math.min(p[j],q[j])-m,s1=Math.max(p[j],q[j])+m,y0=Math.min(p[1],q[1])-m,y1=Math.max(p[1],q[1])+m;
+    if(s1>side.lo&&s0<side.hi&&y0<BUILDING_SHELL.height)out[side.id].push({s0:Math.max(side.lo,s0),s1:Math.min(side.hi,s1),y0:Math.max(0,y0),y1,kind:'pipe penetration'});}}}
 }
 // A recess where a fire point stands in the wall line, so the cabinet and its approach stay reachable.
 function firePointRecesses(parts,out){
@@ -42,9 +46,12 @@ function firePointRecesses(parts,out){
   for(const side of SIDES){const i=side.axis==='x'?0:1,j=1-i,pos=[x,z],half=.95;if(Math.abs(pos[i]-side.c)<half&&pos[j]>side.lo-half&&pos[j]<side.hi+half)out[side.id].push({s0:Math.max(side.lo,pos[j]-half),s1:Math.min(side.hi,pos[j]+half),y0:0,y1:2.6,kind:'fire point recess'});}}
 }
 // Merge openings that overlap or lie within 0.6 m of each other so a pipe bundle becomes one window.
+const area=o=>(o.s1-o.s0)*(o.y1-o.y0);
+// Two openings join only when the joined opening is no more than 1.6 times their combined area plus 1 m², so a chain of doors and pipes never becomes one long hole.
+const grows=(a,b)=>area({s0:Math.min(a.s0,b.s0),s1:Math.max(a.s1,b.s1),y0:Math.min(a.y0,b.y0),y1:Math.max(a.y1,b.y1)})<=1.6*(area(a)+area(b))+1;
 function merge(list){
  const g=.6;let rects=list.map(o=>({...o,kinds:new Set([o.kind])}));let again=true;
- while(again){again=false;outer:for(let i=0;i<rects.length;i++)for(let j=i+1;j<rects.length;j++){const a=rects[i],b=rects[j];if(a.s0<=b.s1+g&&b.s0<=a.s1+g&&a.y0<=b.y1+g&&b.y0<=a.y1+g){rects[i]={s0:Math.min(a.s0,b.s0),s1:Math.max(a.s1,b.s1),y0:Math.min(a.y0,b.y0),y1:Math.max(a.y1,b.y1),kinds:new Set([...a.kinds,...b.kinds])};rects.splice(j,1);again=true;break outer;}}}
+ while(again){again=false;outer:for(let i=0;i<rects.length;i++)for(let j=i+1;j<rects.length;j++){const a=rects[i],b=rects[j];if(a.s0<=b.s1+g&&b.s0<=a.s1+g&&a.y0<=b.y1+g&&b.y0<=a.y1+g&&grows(a,b)){rects[i]={s0:Math.min(a.s0,b.s0),s1:Math.max(a.s1,b.s1),y0:Math.min(a.y0,b.y0),y1:Math.max(a.y1,b.y1),kinds:new Set([...a.kinds,...b.kinds])};rects.splice(j,1);again=true;break outer;}}}
  return rects.map(o=>({s0:r3(o.s0),s1:r3(o.s1),y0:r3(o.y0),y1:r3(o.y1),kinds:[...o.kinds].sort()}));
 }
 // Solid wall panels = side rectangle minus the openings, cut into vertical strips and joined where neighbouring strips match.
