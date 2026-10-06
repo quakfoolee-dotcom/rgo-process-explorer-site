@@ -1,8 +1,8 @@
 {
   "summary": {
     "revision": "emergency-access-91",
-    "pedestrianSegments": 187,
-    "centrelineLengthM": 1244.5499999999988,
+    "pedestrianSegments": 188,
+    "centrelineLengthM": 1245.2499999999989,
     "clearWidthM": 1.2,
     "headroomM": 2.3,
     "protectionAssemblies": 68,
@@ -599,12 +599,6 @@
         "crossings": []
       },
       {
-        "id": "PW-099",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
         "id": "PW-100",
         "clear": true,
         "findings": [],
@@ -1008,6 +1002,18 @@
       },
       {
         "id": "LINK-FE-2002-1",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-143",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-144",
         "clear": true,
         "findings": [],
         "crossings": []
