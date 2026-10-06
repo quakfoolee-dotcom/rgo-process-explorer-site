@@ -3,7 +3,7 @@
   "title": "A-2000 assembly & design review",
   "revision": "r7",
   "date": "2026-09-29",
-  "sourceCommit": "2b366539",
+  "sourceCommit": "63f4ca89",
   "semanticCoreVersion": "1.19.0-foundation",
   "registerRevision": "2026-09-10 · Physical equipment ownership and complete Explore assemblies",
   "modelConfig": {
@@ -132,7 +132,7 @@
       "topic": "Cleaning-in-place and spent CIP",
       "status": "Configuration as modelled — chemistry open",
       "reason": "Sequential acid / alkaline cleaning liquor is a segregated waste and must not reach the RO feed or the A-1000 lime stage uncontrolled.",
-      "observation": "The model provides the register CIP skid CIP-2001 with recirculation pump P-CIP2001, a segregated spent-CIP hold TK-CIP2001-W (5 m³ allowance) with transfer pump P-CIP2001-W, and the antiscalant day tank T-2004 / P-2004. The CIP chemistry, frequency and spent-liquor destination are not defined; the spent-CIP tank and the two CIP pumps (P-CIP2001, P-CIP2001-W) exist only as model geometry without semantic records.",
+      "observation": "The model provides the register CIP skid CIP-2001 with recirculation pump P-CIP2001, a segregated spent-CIP hold TK-CIP2001-W (5 m³ allowance) with transfer pump P-CIP2001-W, and the antiscalant day tank T-2004 / P-2004. The CIP chemistry, frequency and spent-liquor destination are not defined; the spent-CIP tank and the two CIP pumps (P-CIP2001, P-CIP2001-W) exist only as model geometry without semantic records. The three closed bunds are checked as a screening limit (V290): usable volume less the tank volume below the curb holds 110 % of inventory (BND-AS2001 2.7 / 1.1 m³, BND-CIP2001 8.9 / 2.2 m³, BND-CIP2001-W 5.7 / 5.5 m³ after its curb was raised from 0.8 to 0.85 m); pumps and skids are not deducted and civil verification stays open.",
       "action": "Define the CIP chemistry and cycle with the membrane selection; assign the spent-CIP destination (A-1000 stage or off-site); register the model-only tags.",
       "discipline": "Process / environmental",
       "evidence": [
@@ -305,7 +305,7 @@
       "status": "Model updated — retired equipment removed and W3 routes drawn (V280)",
       "reason": "The model drew the PFD-2000 reclaim plant that D-A2000-03 retired; V280 removes it.",
       "observation": "MMF-2001, GF-2001, UF-2001, P-2001, TK-UF2001, P-UF2001, TK-BW2001, P-BW2001, T-2003, P-2003 and the third RO train (GF-RO2001C, P-2002C, RO-2001C) are removed from the model with their streams (D-A2000-03, V280). T-2001 is the 15 m³ condensate receiver (FEED-PE-DAT-132) fed from the blinded A-1100 condensate boundary and T-2002 is 100 m³ (FEED-PE-DAT-136); RO reject, relief and the carbon-filter backwash return to A-1000 T-1006, and CF-2002 feeds city make-up into T-2002.",
-      "action": "Carry the compact re-layout of the remaining equipment (stage 2) and confirm the A-1100 condensate tie-in under Route 2 + 6.",
+      "action": "The compact re-layout is done (V282–V289, floor block 1,050 to 570 m²); confirm the A-1100 condensate tie-in under Route 2 + 6.",
       "discipline": "Model management",
       "evidence": [
         {
@@ -336,8 +336,8 @@
       "topic": "Model catch-up release 2: W3 re-labels and the IF-A2000-CITY battery limit",
       "status": "Model labels updated — routes with the model engineer",
       "reason": "CF-2001, CF-2002 and T-2004 / P-2004 were re-purposed by D-A2000-03 and IF-A2000-CITY had no model marker.",
-      "observation": "CF-2001 is labelled as the condensate carbon filter (FEED-PE-DAT-133), CF-2002 as the municipal make-up cartridge filter (FEED-PE-DAT-138) and T-2004 / P-2004 as the RO dosing skid (FEED-PE-DAT-139); an IF-A2000-CITY battery-limit marker stands at the east block edge beside CF-2002. The municipal line itself is not routed.",
-      "action": "Route the municipal make-up to CF-2002 and T-2002 with the W3 re-routing (model engineer); obtain the municipal supply data.",
+      "observation": "CF-2001 is labelled as the condensate carbon filter (FEED-PE-DAT-133), CF-2002 as the municipal make-up cartridge filter (FEED-PE-DAT-138) and T-2004 / P-2004 as the RO dosing skid (FEED-PE-DAT-139); an IF-A2000-CITY battery-limit marker stands at the west block edge beside CF-2002. The municipal make-up is routed from BL-A2000-CITY through CF-2002 to T-2002 (V285).",
+      "action": "Obtain the municipal supply data (pressure, hardness, connection point) for the routed make-up.",
       "discipline": "Model management",
       "evidence": [
         {
@@ -459,7 +459,7 @@
       "exitCode": 0,
       "passed": true,
       "lastLine": "PASS: A-2000 upstream continuity, pretreatment, UF/RO duty-standby, quality diversion, segregated CIP/brine/backwash, draft bases and source guards.",
-      "ranAt": "2026-10-06T20:28:37.422Z"
+      "ranAt": "2026-10-06T21:05:04.210Z"
     },
     {
       "command": "node tests/validate-semantic-data.mjs",
@@ -467,7 +467,7 @@
       "exitCode": 0,
       "passed": true,
       "lastLine": "{\"passed\":true,\"areas\":[{\"area\":\"A-100\",\"assets\":10,\"holds\":0,\"values\":324,\"approved\":10,\"conflicts\":2,\"variants\":12,\"gaps\":8},{\"area\":\"A-1000\",\"assets\":76,\"holds\":0,\"values\":980,\"approved\":32,\"conflicts\":6,\"variants\":19,\"gaps\":60},{\"area\":\"A-140\",\"assets\":17,\"holds\":0,\"values\":536,\"approved\":57,\"conflicts\":20,\"variants\":14,\"gaps\":32},{\"area\":\"A-160\",\"assets\":29,\"holds\":0,\"values\":636,\"approved\":14,\"conflicts\":5,\"variants\":12,\"gaps\":18},{\"area\":\"A-200\",\"assets\":72,\"holds\":0,\"values\":1303,\"approved\":110,\"conflicts\":85,\"variants\":41,\"gaps\":129},{\"area\":\"A-2000\",\"assets\":37,\"holds\":0,\"values\":282,\"approved\":12,\"conflicts\":8,\"variants\":11,\"gaps\":26},{\"area\":\"A-300\",\"assets\":27,\"holds\":0,\"values\":638,\"approved\":27,\"conflicts\":14,\"variants\":17,\"gaps\":51},{\"area\":\"A-3000\",\"assets\":51,\"holds\":0,\"values\":442,\"approved\":13,\"conflicts\":3,\"variants\":11,\"gaps\":6},{\"area\":\"A-400\",\"assets\":23,\"holds\":0,\"values\":280,\"approved\":15,\"conflicts\":9,\"variants\":8,\"gaps\":40},{\"area\":\"A-4000\",\"assets\":11,\"holds\":0,\"values\":315,\"approved\":13,\"conflicts\":11,\"variants\":11,\"gaps\":13},{\"area\":\"A-500\",\"assets\":12,\"holds\":0,\"values\":224,\"approved\":18,\"conflicts\":5,\"variants\":5,\"gaps\":14},{\"area\":\"A-5000\",\"assets\":53,\"holds\":0,\"values\":618,\"approved\":17,\"conflicts\":14,\"variants\":10,\"gaps\":40},{\"area\":\"A-600\",\"assets\":32,\"holds\":0,\"values\":490,\"approved\":37,\"conflicts\":5,\"variants\":12,\"gaps\":17},{\"area\":\"A-6000\",\"assets\":6,\"holds\":0,\"values\":42,\"approved\":3,\"conflicts\":2,\"variants\":2,\"gaps\":5},{\"area\":\"A-700\",\"assets\":17,\"holds\":0,\"values\":452,\"approved\":39,\"conflicts\":5,\"variants\":7,\"gaps\":70},{\"area\":\"A-800\",\"assets\":27,\"holds\":0,\"values\":504,\"approved\":29,\"conflicts\":10,\"variants\":14,\"gaps\":35},{\"area\":\"A-900\",\"assets\":23,\"holds\":4,\"values\":265,\"approved\":20,\"conflicts\":11,\"variants\":11,\"gaps\":17}]}",
-      "ranAt": "2026-10-06T20:28:37.604Z"
+      "ranAt": "2026-10-06T21:05:04.384Z"
     },
     {
       "command": "node tests/validate-semantic-fields.mjs",
@@ -475,7 +475,7 @@
       "exitCode": 0,
       "passed": true,
       "lastLine": "PASS: documented pending values, superseded values hidden, alternatives, mixed units, missing values and identity holds.",
-      "ranAt": "2026-10-06T20:28:39.059Z"
+      "ranAt": "2026-10-06T21:05:05.861Z"
     }
   ],
   "decisions": [
@@ -1893,7 +1893,7 @@
         0.8,
         1
       ],
-      "alt": "condensate receiver, carbon filter, guard filters, vertical high-pressure pumps and the two RO trains, permeate tank and distribution pump, make-up filter, antiscalant skid and CIP in the compact V282 layout, moved west in V284"
+      "alt": "condensate receiver, carbon filter, guard filters, vertical high-pressure pumps and the two RO trains, permeate tank and distribution pump, make-up filter, antiscalant skid and CIP in the compact layout (V282–V290: 570 m² floor block, east group on the x 78.5 aisle)"
     },
     {
       "key": "pretreat",

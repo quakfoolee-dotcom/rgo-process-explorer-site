@@ -1,8 +1,8 @@
 {
   "summary": {
     "revision": "emergency-access-91",
-    "pedestrianSegments": 188,
-    "centrelineLengthM": 1278.949999999999,
+    "pedestrianSegments": 187,
+    "centrelineLengthM": 1244.5499999999988,
     "clearWidthM": 1.2,
     "headroomM": 2.3,
     "protectionAssemblies": 68,
@@ -25,16 +25,13 @@
     ],
     "exposedDrainRunM": 0.7,
     "qualified": false,
-    "additionalEmergencyTaskApproaches": 14,
+    "additionalEmergencyTaskApproaches": 16,
     "unresolvedEmergencyTaskApproaches": [
       "EXP-501-SAMPLE",
       "EXP-501-SERVICE",
       "EXP-602-TRANSFER",
       "EXP-702-TRANSFER",
       "EXP-701-OFFGAS",
-      "EXP-2001-DOSE",
-      "EXP-2001-CEB",
-      "EXP-2001-RO",
       "EXP-1004-HCL"
     ]
   },
@@ -78,25 +75,7 @@
         "crossings": []
       },
       {
-        "id": "PW-007",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
         "id": "PW-008",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-009",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-010",
         "clear": true,
         "findings": [],
         "crossings": []
@@ -582,18 +561,6 @@
         "crossings": []
       },
       {
-        "id": "PW-091",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-092",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
         "id": "PW-093",
         "clear": true,
         "findings": [],
@@ -800,12 +767,6 @@
         "crossings": []
       },
       {
-        "id": "PW-127",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
         "id": "PW-128",
         "clear": true,
         "findings": [],
@@ -956,12 +917,6 @@
         "crossings": []
       },
       {
-        "id": "LINK-FE-2002-0",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
         "id": "LINK-FE-3001-1",
         "clear": true,
         "findings": [],
@@ -981,6 +936,78 @@
       },
       {
         "id": "LINK-FE-6001-1",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-131",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-132",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-135",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-136",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-137",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-138",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-139",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-140",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-141",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-142",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-2002-0",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-2002-1",
         "clear": true,
         "findings": [],
         "crossings": []
@@ -1134,42 +1161,6 @@
         "clear": true,
         "findings": [],
         "crossings": []
-      },
-      {
-        "id": "PW-ES-026",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-ES-027",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-ES-028",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-ES-029",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-ES-030",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-ES-031",
-        "clear": true,
-        "findings": [],
-        "crossings": []
       }
     ],
     "clear": true,
@@ -1229,18 +1220,6 @@
     {
       "id": "EXP-701-OFFGAS",
       "label": "A-700 · Off-gas equipment service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
-    },
-    {
-      "id": "EXP-2001-DOSE",
-      "label": "A-2000 · Antiscalant dosing service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
-    },
-    {
-      "id": "EXP-2001-CEB",
-      "label": "A-2000 · UF chemical-backwash interface: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
-    },
-    {
-      "id": "EXP-2001-RO",
-      "label": "A-2000 · RO cleaning / membrane service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
     },
     {
       "id": "EXP-1004-HCL",
