@@ -33,11 +33,11 @@
     {
       "property": "location reservation",
       "value": {
-        "x": 82.5,
+        "x": 80.75,
         "z": -6.6,
         "yawRad": 0,
         "walkPoint": [
-          82.5,
+          80.75,
           -5
         ]
       },

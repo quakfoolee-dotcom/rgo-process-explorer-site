@@ -496,11 +496,11 @@ export const EMERGENCY_ACCESS_LAYOUT={
       "label": "A-2000 · CIP-2001 chemical-service approach",
       "area": "A-2000",
       "point": [
-        82.5,
+        80.75,
         -5
       ],
       "walkPoint": [
-        82.5,
+        80.75,
         -5
       ],
       "linkLengthM": 0
@@ -510,11 +510,11 @@ export const EMERGENCY_ACCESS_LAYOUT={
       "label": "A-2000 · Spent-CIP transfer",
       "area": "A-2000",
       "point": [
-        86.5,
+        84.75,
         -13.5
       ],
       "walkPoint": [
-        86.5,
+        84.75,
         -13.5
       ],
       "linkLengthM": 0
@@ -524,11 +524,11 @@ export const EMERGENCY_ACCESS_LAYOUT={
       "label": "A-2000 · Antiscalant dosing service",
       "area": "A-2000",
       "point": [
-        80.25,
+        78.5,
         -9.5
       ],
       "walkPoint": [
-        80.25,
+        78.5,
         -9.5
       ],
       "linkLengthM": 0
@@ -538,11 +538,11 @@ export const EMERGENCY_ACCESS_LAYOUT={
       "label": "A-2000 · RO cleaning / membrane service",
       "area": "A-2000",
       "point": [
-        80.25,
+        78.5,
         -12
       ],
       "walkPoint": [
-        80.25,
+        78.5,
         -12
       ],
       "linkLengthM": 0

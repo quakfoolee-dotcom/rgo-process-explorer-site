@@ -14,31 +14,31 @@ const common={areaId:'A-2000',designStatus:'listed',geometryBasis:'A2000-40',geo
 const eq=(tag,label,x,z,op,extra={})=>({...common,tag,label,x,z,primaryOperation:op,labelY:3.7,...extra});
 const tank=(tag,label,x,z,r,capacityM3,op,extra={})=>eq(tag,label,x,z,op,{radius:r,bottom:.26,top:.26+capacityM3/(Math.PI*(r-.04)**2),capacityM3,...extra});
 export const A2000_EQUIPMENT={
- 500:tank('T-2001','Condensate receiver · 15 m³ (FEED-PE-DAT-132, D-A2000-03)',66,-14.3,1.5,15,'ropretreat',{geometryStatus:'Re-purposed as the A-1100 condensate receiver, 15 m³ nominal (FEED-PE-DAT-132, D-A2000-03); diameter is a model choice. Condensate arrives at a positively blinded battery limit (Route 2 + 6 option); city make-up and NaOH pH trim enter the roof (FEED-PE-DAT-132 / 138 / 139)'}),
- 504:eq('CF-2001','Condensate carbon filter · Ø 0.8 m, 0.74 m³ bed (FEED-PE-DAT-133)',70.2,-12.5,'ropretreat'),
- 506:eq('P-2002','RO high-pressure pump package · A/B, 1 duty + 1 standby (FEED-PE-DAT-135; third train removed, D-A2000-03)',77.5,-15.2,'rorecover'),
- 507:eq('RO-2001','Condensate polishing RO · A/B, 1 duty + 1 standby (FEED-PE-DAT-134; third train removed, D-A2000-03)',75.25,-10.15,'rorecover'),
- 508:tank('T-2002','Process water tank · 100 m³ (FEED-PE-DAT-136)',64.5,-6.5,2.25,100,'rodistribute',{geometryStatus:'100 m³ nominal from FEED-PE-DAT-136 (D-A2000-03); Ø 4.5 m and about 6.5 m tall to save plot area (model choice, D-MDL-01 MC-2)'}),
- 509:eq('P-2005','RO permeate distribution pump',64.5,-2.2,'rodistribute'),
- 510:eq('CF-2002','Municipal make-up cartridge filter · 20 m³/h, 5 µm (FEED-PE-DAT-138)',68.5,-3.6,'rodistribute'),
- 513:tank('T-2004','RO dosing skid · antiscalant 0.2 m³ + NaOH IBC (FEED-PE-DAT-139)',82.2,-9.2,.65,1,'roclean'),
- 514:eq('P-2004','Antiscalant / NaOH metering pumps (FEED-PE-DAT-139)',83.5,-9.2,'roclean'),
- 515:eq('CIP-2001','RO cleaning skid · sequential acid / alkaline service',85.7,-5.5,'roclean'),
- 516:eq('CP-2000','Reclaimed-water control and quality station',71.8,-2.4,'rorecover',{designStatus:'proposed',labelY:2.3}),
- 521:tank('TK-CIP2001-W','Segregated spent CIP hold · 5 m³ allowance',86.6,-10.6,.95,5,'roclean',{designStatus:'proposed'}),
+ 500:tank('T-2001','Condensate receiver · 15 m³ (FEED-PE-DAT-132, D-A2000-03)',64,-14.3,1.5,15,'ropretreat',{geometryStatus:'Re-purposed as the A-1100 condensate receiver, 15 m³ nominal (FEED-PE-DAT-132, D-A2000-03); diameter is a model choice. Condensate arrives at a positively blinded battery limit (Route 2 + 6 option); city make-up and NaOH pH trim enter the roof (FEED-PE-DAT-132 / 138 / 139)'}),
+ 504:eq('CF-2001','Condensate carbon filter · Ø 0.8 m, 0.74 m³ bed (FEED-PE-DAT-133)',68.45,-12.5,'ropretreat'),
+ 506:eq('P-2002','RO high-pressure pump package · A/B, 1 duty + 1 standby (FEED-PE-DAT-135; third train removed, D-A2000-03)',75.75,-15.2,'rorecover'),
+ 507:eq('RO-2001','Condensate polishing RO · A/B, 1 duty + 1 standby (FEED-PE-DAT-134; third train removed, D-A2000-03)',73.5,-10.15,'rorecover'),
+ 508:tank('T-2002','Process water tank · 100 m³ (FEED-PE-DAT-136)',63.5,-6.5,2.25,100,'rodistribute',{geometryStatus:'100 m³ nominal from FEED-PE-DAT-136 (D-A2000-03); Ø 4.5 m and about 6.5 m tall to save plot area (model choice, D-MDL-01 MC-2)'}),
+ 509:eq('P-2005','RO permeate distribution pump',63.5,-2.2,'rodistribute'),
+ 510:eq('CF-2002','Municipal make-up cartridge filter · 20 m³/h, 5 µm (FEED-PE-DAT-138)',67.5,-3.6,'rodistribute'),
+ 513:tank('T-2004','RO dosing skid · antiscalant 0.2 m³ + NaOH IBC (FEED-PE-DAT-139)',80.45,-9.2,.65,1,'roclean'),
+ 514:eq('P-2004','Antiscalant / NaOH metering pumps (FEED-PE-DAT-139)',81.75,-9.2,'roclean'),
+ 515:eq('CIP-2001','RO cleaning skid · sequential acid / alkaline service',83.95,-5.5,'roclean'),
+ 516:eq('CP-2000','Reclaimed-water control and quality station',70.05,-2.4,'rorecover',{designStatus:'proposed',labelY:2.3}),
+ 521:tank('TK-CIP2001-W','Segregated spent CIP hold · 5 m³ allowance',84.85,-10.6,.95,5,'roclean',{designStatus:'proposed'}),
 };
-for(const [i,x] of [73,77.5].entries()) A2000_EQUIPMENT[522+i]=eq('GF-RO2001'+String.fromCharCode(65+i),'Guard cartridge filter housing',x-1.3,-16.3,'ropretreat',{radius:.23,labelY:2.1,designStatus:'proposed',packageParentId:506,processAssociation:'P-2002'+String.fromCharCode(65+i),reviewNote:'Conceptual cartridge, seals, closure and supports; vendor selection, pressure rating, filtration duty and removal clearance require confirmation.'});
+for(const [i,x] of [71.25,75.75].entries()) A2000_EQUIPMENT[522+i]=eq('GF-RO2001'+String.fromCharCode(65+i),'Guard cartridge filter housing',x-1.3,-16.3,'ropretreat',{radius:.23,labelY:2.1,designStatus:'proposed',packageParentId:506,processAssociation:'P-2002'+String.fromCharCode(65+i),reviewNote:'Conceptual cartridge, seals, closure and supports; vendor selection, pressure rating, filtration duty and removal clearance require confirmation.'});
 // D-A2000-03 (QFL 2026-09-27, basis A2-7) put A-2000 on clean sources only. The media / UF train, the backwash and brine handling and the third RO train were
 // kept in place as retired by D-MDL-01 MC-1 and are removed from the model (V280): MMF-2001, GF-2001, UF-2001, P-2001, TK-UF2001, P-UF2001, TK-BW2001, P-BW2001, T-2003, P-2003, GF-RO2001C, RO-2001C, P-2002C.
 export const A2000_RETIRED=[];
 export const A2000_IDS=Object.keys(A2000_EQUIPMENT).map(Number);
 const zone=(id,kind,min,max,note)=>({id,kind,areaIds:['A-2000'],min,max,note,designStatus:'proposed'});
 export const A2000_ACCESS_ZONES=[
- zone('WALK-RO-MID','pedestrian',[60,.02,-11.5],[70,2.32,-10],'Condensate receiver / permeate tank / carbon filter access, connected to the west link'),
+ zone('WALK-RO-MID','pedestrian',[60,.02,-11.5],[69.5,2.32,-10],'Condensate receiver / permeate tank / carbon filter access, connected to the west link'),
  zone('WALK-RO-WEST','pedestrian',[58.5,.02,-12],[60,2.32,2],'Connect water-area link to RO front approach'),
- zone('WALK-RO-FRONT','pedestrian',[61,.02,.25],[90,2.32,2],'Continuous RO service frontage; joins the water-area front aisle'),
- zone('WALK-RO-EAST','pedestrian',[79.65,.02,-18.8],[80.85,2.32,.25],'North-south aisle between the RO and the chemical block; connects the dosing, CIP, pump and RO services to the front aisle'),
- ...[73,77.5].map((x,i)=>zone('REMOVE-RO2001-'+String.fromCharCode(65+i),'removal',[x-1.55,.02,-7.7],[x+1.55,4,-5.1],'2 m end withdrawal allowance; six 40-inch elements removed sequentially; vendor tooling / access HOLD')),
+ zone('WALK-RO-FRONT','pedestrian',[61,.02,.25],[88.25,2.32,2],'Continuous RO service frontage; joins the water-area front aisle'),
+ zone('WALK-RO-EAST','pedestrian',[77.9,.02,-18.8],[79.1,2.32,.25],'North-south aisle between the RO and the chemical block; connects the dosing, CIP, pump and RO services to the front aisle'),
+ ...[71.25,75.75].map((x,i)=>zone('REMOVE-RO2001-'+String.fromCharCode(65+i),'removal',[x-1.55,.02,-7.7],[x+1.55,4,-5.1],'2 m end withdrawal allowance; six 40-inch elements removed sequentially; vendor tooling / access HOLD')),
 ];
 export const A2000_SOURCES=[
  {title:'FEED-PFD-2000 · V5.1 page 16 (draft)',url:'./feed-pfd-2000.pdf'},

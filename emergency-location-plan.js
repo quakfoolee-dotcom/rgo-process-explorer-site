@@ -106,11 +106,11 @@ export const EMERGENCY_LOCATION_PLAN=[
     "id": 198,
     "tag": "ES-2000",
     "areaId": "A-2000",
-    "x": 82.5,
+    "x": 80.75,
     "z": -6.6,
     "yaw": 0,
     "walkPoint": [
-      82.5,
+      80.75,
       -5
     ],
     "reason": "Relocate to a clear, connected pedestrian approach"
@@ -498,11 +498,11 @@ export const EMERGENCY_LOCATION_PLAN=[
     "id": 122027,
     "tag": "ES-2001",
     "areaId": "A-2000",
-    "x": 87.4,
+    "x": 85.65,
     "z": -15.0,
     "yaw": 0,
     "walkPoint": [
-      87.5,
+      85.75,
       -13.5
     ],
     "reason": "Additional local coverage for A-2000 \u00b7 Spent-CIP transfer",
@@ -514,11 +514,11 @@ export const EMERGENCY_LOCATION_PLAN=[
     "id": 122028,
     "tag": "ES-2002",
     "areaId": "A-2000",
-    "x": 81.6,
+    "x": 79.85,
     "z": -15.0,
     "yaw": 0,
     "walkPoint": [
-      81.5,
+      79.75,
       -13.5
     ],
     "reason": "Additional local coverage for A-2000 \u00b7 CIP-2001 chemical-service approach",
