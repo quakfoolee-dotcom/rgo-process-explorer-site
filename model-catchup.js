@@ -43,7 +43,6 @@ export const CATCHUP_EQUIPMENT={
  668:r3('SL-1001','Hydrated lime silo · 135 m³ · Ø 4.5 m with 60° cone (FEED-PE-DAT-127, provisional volume basis)','A-1000','wwtreat',18,-24.5,{radius:SL1001_BASIS.radius,bottom:SL1001_BASIS.outletY,top:SL1001_BASIS.top,outletRadius:SL1001_BASIS.outletRadius,coneHeight:SL1001_BASIS.coneHeight,wallAngleDeg:SL1001_BASIS.wallAngleDeg,volumeM3:SL1001_BASIS.volumeM3,labelY:15.5,geometryBasis:'D-MDL-07',geometryStatus:note3('FEED-PE-DAT-127',' Back at its A-1000 position (18, −24.5), ≈ 9 m from T-1002 (D-MDL-07, QFL 2026-10-04; D-MDL-06 had moved it east of x 70). Ø 4.5 m with a 60° conical hopper (0.5 m outlet at 3 m), cylinder to ≈ 13.7 m. The volume is 2 days at the 40.5 t/d bounding dose (CAL-034) at a settled bulk density of 0.6 t/m³ = 135 m³; DAT-127 implies 200 m³ (0.405 t/m³ loose), so the density and the storage days are provisional until the datasheet owner and a lime supplier confirm them. Only Ø 4.5 m fits here without moving the overhead lines at y 8.7–11.8 m (0.31 m clearance). Cone angle and outlet size are model choices pending the vendor flow test. Tanker access from the WATER-DELIVERY frontage (z −31.5…−28.5). Piping (D-MDL-08, QFL 2026-10-04): closed pneumatic tanker fill (coupling BL-FILLSL1001, isolation valve XV-SL1001-FILL, riser on the north side), roof dust filter with a vent to atmosphere, and a rotary valve plus inclined enclosed screw conveyor (≈ 34°, above the usual ≈ 30° limit; vendor to confirm) to a new roof nozzle on T-1002 — provisional until the powder-versus-slurry report. Make-up water to T-1002 and hopper aeration air are not modelled.')}),
  656:eq('IF-A2000-CITY','Municipal make-up battery limit (D-A2000-03)','A-2000','rodistribute',103.4,-2,{designStatus:'interface',labelY:2.2,geometryStatus:'Battery-limit marker only (D-MDL-01 release 2); municipal supply pressure, hardness and connection are site data.'}),
 };
-CATCHUP_EQUIPMENT[669]=eq('RSV-A1100','Reserved plot — A-1100 acid concentration (Route 2 + 6 option, D-MDL-02)','A-1000','wwtreat',101,-41.5,{labelY:1.6,geometryBasis:'D-MDL-02',geometryStatus:'Plot outline only (Route 0). Holds the south-east yard for PK-1101, T-1101 / T-1102 and P-1101 / P-1102 if Route 2 + 6 is chosen after REP-039 M1–M3.'});
 // HR-601 port table, shared with spray-drying.js so the A-600 ducts end exactly on the recuperator's nozzles.
 // Exhaust side (F-601 -> HR-601 -> FN-601) uses the top face; air side (ambient -> HR-601 -> BL-601) uses the south face.
 export function hr601Ports(hr){
@@ -63,7 +62,6 @@ export const ACID_OPTION_IDS=[652,653,654,658,659,660,661,662];
 export function applyAcidRoute(E,route){
  const byTag=tag=>Object.values(E).find(e=>e&&e.tag===tag);
  if(route==='r26'){
-  delete E[669];
   for(const id of ACID_OPTION_IDS)if(E[id]){E[id].acidRoute='r26';E[id].label+=' · OPTION — Route 2 + 6';E[id].geometryStatus='OPTION — Route 2 + 6 acid recovery, gated on REP-039 M1–M3 (D-MDL-02). '+(E[id].geometryStatus||'');}
   const t162=byTag('T-162');if(t162&&!t162.retired){t162.retired={decisionId:'D-A160-04',reason:'Route 6: the hold moves into T-161, so T-162 is deleted',basis:'D-MDL-02 AR-4'};t162.label+=' · RETIRED (D-A160-04)';}
   return;
@@ -126,11 +124,6 @@ export function buildCatchup(h,acidRoute='r0'){
  const col=c('PK-1101 stage 2 evaporator (screening)','shell',1.1,8,[pk.x+3.5,10.2+4,pk.z-2],'steel');s.join(encl,col,[pk.x+3.5,10.2,pk.z-2],'PK-1101 evaporator / envelope');
  for(const [lab,dx,dz] of [['feed from P-1101',-6.5,-3],['product to T-1102',-6.5,-1],['condensate',-6.5,3.5]])stub('PK-1101 '+lab,[pk.x+dx,1.4,pk.z+dz],[-1,0,0],.08);
  for(const [lab,dz] of [['supply',1],['return',2]])nozzle([pk.x-6.5,1.4,pk.z+dz],[-1,0,0],.22,'PK-1101 thermal oil '+lab+' (stage 2)',THERMAL_OIL_BASIS.branchRadius); // D-MDL-05: connected to the A-5400 branch
- }
- // Route 0: the south-east yard reserved for the option — a low plot outline with a marker post (D-MDL-02 AR-6).
- if(EQUIPMENT[669]){const rv=EQUIPMENT[669];setContext(669,rv.label);
-  const post=base(b('RSV-A1100 reservation marker post','frame',[.12,1.4,.12],[rv.x,.7,rv.z],'steel'),[rv.x,0,rv.z]);const sign=b('RSV-A1100 reservation sign','valve',[1.2,.5,.04],[rv.x,1.2,rv.z],'blue');s.join(post,sign,[rv.x,1.2,rv.z],'RSV-A1100 sign / post');
-  for(const [lab,size,pos] of [['north',[36,.08,.15],[101,.04,-36]],['south',[36,.08,.15],[101,.04,-47]],['west',[.15,.08,11],[83,.04,-41.5]],['east',[.15,.08,11],[119,.04,-41.5]]])base(b('RSV-A1100 plot outline '+lab,'frame',size,pos,'dark'),[pos[0],0,pos[2]]);
  }
  // A-5400 — real-world package, thermal-oil mains to HX-601 and (Route 2 + 6) the PK-1101 branch on a dedicated rack (D-MDL-05).
  const thermalOil=buildThermalOil(k,s,base,{acidRoute});

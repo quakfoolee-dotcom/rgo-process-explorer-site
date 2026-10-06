@@ -4886,10 +4886,10 @@
   {
    "id": "LAY-12",
    "topic": "Acid route as a model configuration (D-MDL-02): Route 0 by default, Route 2 + 6 as an option",
-   "status": "Applied — the south-east yard stays reserved",
+   "status": "Applied — the south-east yard stays free (no longer drawn)",
    "priority": "medium",
    "discipline": "Model management / layout",
-   "observation": "D-MDL-02 (QFL 2026-09-29, bases AR-1–AR-9): the acid route is not decided, so the 3D model now opens on Route 0 (full neutralisation, REP-038 fallback) and shows Route 2 + 6 (spent-acid recovery, D-A1000-03, gated on REP-039 M1–M3) as an option under Model Setup → Acid route, built in the browser like the A-160 alternatives (URL acid=r26). D-A1000-03, the data layer, the datasheets and LST-001 V5.2 are unchanged. Route 0 builds no F-160 / T-160 / P-160 and no A-1100 set (PK-1101, T-1101, T-1102, P-1101A/B, P-1102A/B); the south-east yard keeps a plot outline (RSV-A1100) so the option keeps its space; CL-1001, SL-1001 and A-5400 are built in both routes. Current model (Route 0): 287 holds plant-wide.",
+   "observation": "D-MDL-02 (QFL 2026-09-29, bases AR-1–AR-9): the acid route is not decided, so the 3D model now opens on Route 0 (full neutralisation, REP-038 fallback) and shows Route 2 + 6 (spent-acid recovery, D-A1000-03, gated on REP-039 M1–M3) as an option under Model Setup → Acid route, built in the browser like the A-160 alternatives (URL acid=r26). D-A1000-03, the data layer, the datasheets and LST-001 V5.2 are unchanged. Route 0 builds no F-160 / T-160 / P-160 and no A-1100 set (PK-1101, T-1101, T-1102, P-1101A/B, P-1102A/B); the south-east yard is kept free but is no longer drawn (the RSV-A1100 plot outline was removed, QFL 2026-10-05); CL-1001, SL-1001 and A-5400 are built in both routes. Current model (Route 0): 287 holds plant-wide.",
    "action": "Keep the south-east yard free until the acid route is ruled after REP-039 M1–M3; the model engineer re-bases the A-1000 envelopes if Route 0 is chosen (a Route 0 A-1000 is not designed).",
    "evidence": [
     {
