@@ -5,11 +5,11 @@
   "bindingScope": "station-assembly",
   "location": {
     "x": 79.85,
-    "z": -15,
+    "z": -13.25,
     "yawRad": 0,
     "walkPoint": [
       79.75,
-      -13.5
+      -11.75
     ]
   },
   "bindingRule": "Indicative station geometry and access screening; no compliance or commissioning claim."

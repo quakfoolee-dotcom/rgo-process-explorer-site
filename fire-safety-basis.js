@@ -46,7 +46,7 @@ export const FIRE_POINTS=[
  point('FE-1002','A-1000','Wastewater central aisle',35,-13,Math.PI,'chemical'),
  point('FE-1003','A-1000','Wastewater east approach',55,-26,Math.PI/2,'chemical'),
  point('FE-2001','A-2000','RO front approach',67.25,4.9,Math.PI,'general'),
- point('FE-2002','A-2000','RO east / CIP approach',88.05,-14.6,-Math.PI/2,'chemical'),
+ point('FE-2002','A-2000','RO east / CIP approach',88.05,-12.85,-Math.PI/2,'chemical'),
  point('FE-3001','A-3000','Vent-treatment approach',-35,11.7,Math.PI,'chemical'),
  point('FE-4001','A-4000','Compressed-air approach',-25,11.7,Math.PI,'utility'),
  point('FE-5001','A-5000','Heating / cooling approach',-24,30.5,Math.PI,'utility'),

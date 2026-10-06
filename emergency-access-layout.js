@@ -497,11 +497,11 @@ export const EMERGENCY_ACCESS_LAYOUT={
       "area": "A-2000",
       "point": [
         80.75,
-        -5
+        -3.25
       ],
       "walkPoint": [
         80.75,
-        -5
+        -3.25
       ],
       "linkLengthM": 0
     },
@@ -510,12 +510,12 @@ export const EMERGENCY_ACCESS_LAYOUT={
       "label": "A-2000 · Spent-CIP transfer",
       "area": "A-2000",
       "point": [
-        84.75,
-        -13.5
+        86.5,
+        -11.75
       ],
       "walkPoint": [
-        84.75,
-        -13.5
+        86.5,
+        -11.75
       ],
       "linkLengthM": 0
     },
@@ -525,11 +525,11 @@ export const EMERGENCY_ACCESS_LAYOUT={
       "area": "A-2000",
       "point": [
         78.5,
-        -9.5
+        -7.75
       ],
       "walkPoint": [
         78.5,
-        -9.5
+        -7.75
       ],
       "linkLengthM": 0
     },
@@ -539,11 +539,11 @@ export const EMERGENCY_ACCESS_LAYOUT={
       "area": "A-2000",
       "point": [
         78.5,
-        -12
+        -10.25
       ],
       "walkPoint": [
         78.5,
-        -12
+        -10.25
       ],
       "linkLengthM": 0
     },

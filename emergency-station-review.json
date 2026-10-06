@@ -6,7 +6,7 @@
   "clearStationReservations": 40,
   "sampledPositions": 84,
   "checkedRoutes": 2698,
-  "footprintsChecked": 1072,
+  "footprintsChecked": 1065,
   "exposureCoverage": {
     "exposures": [
       {
@@ -1190,7 +1190,7 @@
         "label": "A-2000 · CIP-2001 chemical-service approach",
         "point": [
           80.75,
-          -5
+          -3.25
         ],
         "elevationM": 0,
         "material": "Acid / alkaline CIP chemicals",
@@ -1204,8 +1204,8 @@
           "tag": "ES-2000",
           "checkedDistanceM": 0,
           "originGapM": 0,
-          "finalGapM": 0.6999999999999993,
-          "completeDistanceM": 0.6999999999999993
+          "finalGapM": 0.6999999999999997,
+          "completeDistanceM": 0.6999999999999997
         },
         "status": "verification-pending",
         "distanceLimitM": 6,
@@ -1217,8 +1217,8 @@
         "area": "A-2000",
         "label": "A-2000 · Spent-CIP transfer",
         "point": [
-          84.75,
-          -13.5
+          86.5,
+          -11.75
         ],
         "elevationM": 0,
         "material": "Spent acid / alkaline cleaning liquor",
@@ -1230,10 +1230,10 @@
         "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
         "nearest": {
           "tag": "ES-2001",
-          "checkedDistanceM": 1,
+          "checkedDistanceM": 0.75,
           "originGapM": 0,
           "finalGapM": 0.6082762530298206,
-          "completeDistanceM": 1.6082762530298207
+          "completeDistanceM": 1.3582762530298207
         },
         "status": "verification-pending",
         "distanceLimitM": 6,
@@ -1246,7 +1246,7 @@
         "label": "A-2000 · Antiscalant dosing service",
         "point": [
           78.5,
-          -9.5
+          -7.75
         ],
         "elevationM": 0,
         "material": "Antiscalant",
@@ -1274,7 +1274,7 @@
         "label": "A-2000 · RO cleaning / membrane service",
         "point": [
           78.5,
-          -12
+          -10.25
         ],
         "elevationM": 0,
         "material": "Residual CIP liquor",
@@ -2312,11 +2312,11 @@
         "area": "A-2000",
         "point": [
           80.75,
-          -5
+          -3.25
         ],
         "walkPoint": [
           80.75,
-          -5
+          -3.25
         ],
         "linkLengthM": 0
       },
@@ -2325,12 +2325,12 @@
         "label": "A-2000 · Spent-CIP transfer",
         "area": "A-2000",
         "point": [
-          84.75,
-          -13.5
+          86.5,
+          -11.75
         ],
         "walkPoint": [
-          84.75,
-          -13.5
+          86.5,
+          -11.75
         ],
         "linkLengthM": 0
       },
@@ -2340,11 +2340,11 @@
         "area": "A-2000",
         "point": [
           78.5,
-          -9.5
+          -7.75
         ],
         "walkPoint": [
           78.5,
-          -9.5
+          -7.75
         ],
         "linkLengthM": 0
       },
@@ -2354,11 +2354,11 @@
         "area": "A-2000",
         "point": [
           78.5,
-          -12
+          -10.25
         ],
         "walkPoint": [
           78.5,
-          -12
+          -10.25
         ],
         "linkLengthM": 0
       },
