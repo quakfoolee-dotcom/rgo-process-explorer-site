@@ -46,6 +46,7 @@ import {inspectStructuralConnections} from './structural-kit.js';
 import {A160_DESIGNS,A160_TAG_RESERVATIONS,ACID_ROUTES,readDesignSelection,scenarioStages} from './design-scenarios.js';
 import {FLOW_SCHEMES,DEFAULT_FLOW_SCHEME,FLOW_CATEGORIES,flowColor,categoryLabel,matchesFlowFocus,partFlowRegister} from './flow-palette.js';
 import {ASME_CLASSES,ASME_BASIS,ASME_REVIEW,asmeServices,asmeLabel} from './pipe-identification.js';
+import {buildPipeMarkers} from './pipe-markers.js';
 import {AREAS,PROCESS_AREAS,MAIN_ROUTE,SOURCE,DESIGN_STATUSES,UTILITY_LINKS,areaById,areaTitle,formatAreaText,equipmentRegister,routeRecord,operationTitle,registerSnapshot} from './engineering-register.js';
 import {VIEW_MODES,APPEARANCE_HELP,REVIEW_COLOR,viewAppearance,createAreaVisibility} from './view-modes.js';
 import {inspectDrain} from './drainage.js';
@@ -223,7 +224,7 @@ document.querySelectorAll('[data-group-key]').forEach(input=>input.checked=!hidd
 for(const m of meshes){m.instanceMatrix.needsUpdate=true;m.instanceColor.needsUpdate=true;m.computeBoundingSphere();}
 if(selected&&selected.visible){proxy.geometry=selected.geometry;proxy.position.copy(selected.position).addScaledVector(selected.offset,amount);proxy.quaternion.copy(selected.quaternion);proxy.scale.copy(selected.scale);proxy.updateMatrixWorld();selectionBox.setFromObject(proxy);selectionBox.visible=true}else selectionBox.visible=false;
 clashBox.visible=!!activeClash;if(activeClash){clashBox.box.makeEmpty();for(const id of[activeClash.b,...activeClash.relatedB]){const p=partMap.get(id);if(p?.visible)clashBox.box.union(p.bounds)}if(clashBox.box.isEmpty())clashBox.visible=false;}
-$('filter-status').textContent=(areaScope==='all'?'All areas':areaTitle(areaScope))+(showProposed&&['A-700','A-800','A-6000'].includes(areaScope)?' · connected Ar services included':'')+(showProposed?'':' · proposed additions hidden')+(visibleParts.length?'':' · no visible equipment in this scope');updateInspectorControls();updateExploreDrawing();updateMarkers();focusBanner();updatePipeArrows();renderColorLegend();renderer.shadowMap.needsUpdate=true;scene.userData.measuring?.invalidate();dirty=false;}
+$('filter-status').textContent=(areaScope==='all'?'All areas':areaTitle(areaScope))+(showProposed&&['A-700','A-800','A-6000'].includes(areaScope)?' · connected Ar services included':'')+(showProposed?'':' · proposed additions hidden')+(visibleParts.length?'':' · no visible equipment in this scope');updateInspectorControls();updateExploreDrawing();updateMarkers();focusBanner();updatePipeBands();renderColorLegend();renderer.shadowMap.needsUpdate=true;scene.userData.measuring?.invalidate();dirty=false;}
 function createControls(){scene.userData.engineerWalk?.navigation();const targetBefore=controls?controls.target.clone():new T.Vector3(0,2.85,0);if(controls)controls.dispose();controls=new InspectionControls(camera,renderer.domElement);controls.target.copy(targetBefore);controls.setPrecision(precisionNavigation);controls.minDistance=.4;controls.maxDistance=220;controls.minZoom=.08;controls.maxZoom=100;controls.autoRotateSpeed=.5;controls.listenToKeyEvents(viewport);updatePivotStatus();controls.addEventListener('start',()=>{productJourney?.navigation();cameraGoal=null;targetGoal=null;scene.userData.areaOverlay?.navigation();scene.userData.engineerWalk?.navigation();});controls.addEventListener('change',()=>{if(view!=='custom'&&camera.position.clone().sub(controls.target).normalize().angleTo(VIEW_DIRECTIONS[view])>1e-5){view='custom';projectionLabel();document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed','false'))}});}
 function updatePivotStatus(){const p=partMap.get(controls?.pivotPartId),e=controls?.inspectionPivot&&EQUIPMENT[controls.pivotEquipmentId];$('pivot-status').textContent=p?'Rotation centre: '+p.name:e?'Rotation centre: '+e.tag:exploration?'Rotation centre: '+EQUIPMENT[exploration.plan.equipmentId].tag:'Rotation centre: framed view';$('clear-pivot').disabled=!controls?.inspectionPivot;$('pivot-status').title=$('pivot-status').textContent;}
 function projectionLabel(){const names={iso:'ISOMETRIC',front:'FRONT',side:'SIDE',top:'TOP',perspective:'3/4',custom:'CUSTOM'};$('projection-label').textContent=`${camera.isOrthographicCamera?'ORTHOGRAPHIC':'PERSPECTIVE'} · ${view==='iso'&&!camera.isOrthographicCamera?'ISO ANGLE':names[view]}`;}
@@ -394,35 +395,49 @@ function selectStage(id,{keepState=false}={}){const wasContainment=stageId?.star
 function renderStages(){$('train-description').textContent=processTrain==='feed'?'Main route: '+MAIN_ROUTE+'. A-700 T-702 feeds A-800 receiving, dosing, mixing, pyrolysis and cooling. A-900 compact pelletization and finishing is the downstream interface.':'Archived design reference: independent filtration → contained cake transfer → drying → product.';processBrowser?.render();}
 function routeHex(record){return flowColor(record,flowScheme,serviceColors);}
 // ASME pipe identification overlay: flow arrows on every fluid line and a legend label under the pointer (display only).
-let pipeArrows=null,hoverLabel=null,hoverTime=0,arrowSig='';
+let hoverLabel=null,hoverTime=0;
 const asmeActive=()=>colorMode==='flow'&&flowScheme==='asme'&&!(productJourney?.active||thermalTrace?.active);
-// Pipe segments for arrows and painted legends. Flow direction comes from the route's A → B definition and is propagated along the connected edges from end A; routes without a defined direction get legends only, no arrows.
-let pipeItems=null,arrowItems=[],arrowStats={routes:0,directed:0};
-function buildPipeItems(){
- const items=[],key=p=>Math.round(p[0]*40)+','+Math.round(p[1]*40)+','+Math.round(p[2]*40),near=(p,q)=>Math.hypot(p[0]-q[0],p[1]-q[1],p[2]-q[2])<.06;
- arrowStats={routes:0,directed:0};
- for(const r of model.routes){const rec=routeRecords.get(r.id);if(!rec?.asmeClass)continue;arrowStats.routes++;
-  const edges=(r.edgeIndices||[]).map(i=>model.edges[i]).filter(e=>e?.path?.length>1),oriented=new Map();let directed=false;
-  if(r.direction==='A → B'&&r.endpoints?.[0]&&edges.length){const A=r.endpoints[0],nodes=new Map();
-   edges.forEach((e,k)=>{for(const end of [e.path[0],e.path.at(-1)]){for(const dx of [-1,0,1])for(const dz of [-1,0,1]){const kk=Math.round(end[0]*40+dx)+','+Math.round(end[1]*40)+','+Math.round(end[2]*40+dz);if(!nodes.has(kk))nodes.set(kk,new Set());nodes.get(kk).add(k);}}});
-   const queue=[];edges.forEach((e,k)=>{if(near(e.path[0],A))queue.push([k,false]);else if(near(e.path.at(-1),A))queue.push([k,true]);});
-   const seen=new Set();while(queue.length){const [k,rev]=queue.shift();if(seen.has(k))continue;seen.add(k);oriented.set(k,rev);const e=edges[k],exit=rev?e.path[0]:e.path.at(-1);
-    for(const n of nodes.get(key(exit))||[]){if(seen.has(n))continue;const f=edges[n];if(near(f.path[0],exit))queue.push([n,false]);else if(near(f.path.at(-1),exit))queue.push([n,true]);}}
-   directed=oriented.size>0;}
-  if(directed)arrowStats.directed++;
-  const segs=[];edges.forEach((e,k)=>{let path=e.path;const known=oriented.has(k);if(known&&oriented.get(k))path=[...path].reverse();
-   for(let i=1;i<path.length;i++){const p=path[i-1],q=path[i],len=Math.hypot(q[0]-p[0],q[1]-p[1],q[2]-p[2]);if(len>=1.2)segs.push({p,q,len,part:e.part,radius:e.radius||.05,rec,routeId:r.id,directed:known,primary:false});}});
-  if(!segs.length)continue;let best=segs[0];for(const s of segs)if(s.len>best.len)best=s;best.primary=true;
-  segs.sort((a,b)=>b.len-a.len);items.push(...segs.slice(0,14));}
- return items;
+// ASME pipe markers (A13.1 summary): real bands on the pipes, sized from the pipe diameter, plus screen-size tags for the overview.
+let pipeMarkers=null,pipeBands=null,pipeTags=[],pipeStats={routes:0,directedRoutes:0,unmarked:0,total:0,byReason:{}},bandSig='';const tagState={seen:'',seenAt:0,applied:''},markerTextures=new Map();
+function markerTexture(rec,variant,size){
+ const key=rec.asmeClass+'|'+rec.asmeLegend+'|'+variant+'|'+size.index;let tex=markerTextures.get(key);if(tex)return tex;
+ const cls=ASME_CLASSES[rec.asmeClass],W=512,H=Math.max(48,Math.round(W*size.heightMm/size.lengthMm)),c=document.createElement('canvas');c.width=W;c.height=H;const x=c.getContext('2d');
+ x.fillStyle=cls.field;x.fillRect(0,0,W,H);x.lineWidth=cls.border?H*.07:H*.03;x.strokeStyle=cls.border||'rgba(0,0,0,.35)';x.strokeRect(x.lineWidth/2,x.lineWidth/2,W-x.lineWidth,H-x.lineWidth);
+ const cap=H*size.textMm/size.heightMm,font=Math.max(8,Math.round(cap/.72)),arrowW=variant==='none'?0:H*1.4,pad=H*.22;
+ x.font='700 '+font+'px system-ui,Arial,sans-serif';x.textBaseline='middle';x.fillStyle=cls.letters;
+ const avail=W-arrowW-pad*(variant==='none'?2:3),tw=x.measureText(rec.asmeLegend).width,sx=Math.min(1,avail/tw),x0=variant==='rev'?arrowW+pad*2:pad;
+ x.save();x.translate(x0+(avail-tw*sx)/2,H/2+font*.04);x.scale(sx,1);x.fillText(rec.asmeLegend,0,0);x.restore();
+ if(variant!=='none'){const ah=Math.min(H*.8,cap*1.2),cy=H/2,tail=arrowW*.55,xa=variant==='fwd'?W-pad-arrowW:pad,xe=xa+arrowW;x.beginPath();
+  if(variant==='fwd'){x.moveTo(xa,cy-ah*.2);x.lineTo(xa+tail,cy-ah*.2);x.lineTo(xa+tail,cy-ah*.5);x.lineTo(xe,cy);x.lineTo(xa+tail,cy+ah*.5);x.lineTo(xa+tail,cy+ah*.2);x.lineTo(xa,cy+ah*.2);}
+  else{x.moveTo(xe,cy-ah*.2);x.lineTo(xe-tail,cy-ah*.2);x.lineTo(xe-tail,cy-ah*.5);x.lineTo(xa,cy);x.lineTo(xe-tail,cy+ah*.5);x.lineTo(xe-tail,cy+ah*.2);x.lineTo(xe,cy+ah*.2);}
+  x.closePath();x.fill();}
+ tex=new T.CanvasTexture(c);tex.colorSpace=T.SRGBColorSpace;tex.anisotropy=4;markerTextures.set(key,tex);return tex;
 }
-function buildPipeArrows(){
- pipeItems=buildPipeItems();arrowItems=pipeItems.filter(s=>s.directed);
- const cone=new T.ConeGeometry(1,2.4,10),material=new T.MeshBasicMaterial({toneMapped:false}),mesh=new T.InstancedMesh(cone,material,arrowItems.length),color=new T.Color();
- mesh.frustumCulled=false;mesh.renderOrder=3;arrowItems.forEach((it,k)=>{mesh.setColorAt(k,color.set(ASME_CLASSES[it.rec.asmeClass].letters));});mesh.instanceColor.needsUpdate=true;
- scene.add(mesh);return mesh;
+// One flat marker per side of the pipe (two sides; four on a vertical pipe), text reading along the pipe, upright on horizontal runs, arrow toward the flow.
+const markerPoint=new T.Vector3(),routeById=new Map(model.routes.map(r=>[r.id,r]));
+function markerPart(m){if(m.partId!==undefined)return m.partId;markerPoint.set(...m.pos);let best=m.part,bd=Infinity;for(const id of routeById.get(m.routeId)?.partIds||[]){const p=partMap.get(id);if(!p?.bounds)continue;const d=p.bounds.distanceToPoint(markerPoint);if(d<bd){bd=d;best=id;}}m.partId=best;return best;}
+function buildPipeBands(){
+ const built=buildPipeMarkers(model,routeRecords);pipeMarkers=built.markers;pipeStats=built.stats;for(const m of pipeMarkers)markerPart(m);
+ const groups=new Map(),up=new T.Vector3(0,1,0),plane=new T.PlaneGeometry(1,1);
+ for(const m of pipeMarkers){const axis=new T.Vector3(...m.dir),vertical=Math.abs(axis.y)>.85;let sides;
+  if(vertical)sides=[[new T.Vector3(1,0,0),new T.Vector3(0,1,0)],[new T.Vector3(-1,0,0),new T.Vector3(0,1,0)],[new T.Vector3(0,0,1),new T.Vector3(0,1,0)],[new T.Vector3(0,0,-1),new T.Vector3(0,1,0)]];
+  else{const n=new T.Vector3().crossVectors(axis,up).normalize();sides=[[n,axis.clone()],[n.clone().negate(),axis.clone().negate()]];}
+  for(const [Z,X] of sides){const Y=new T.Vector3().crossVectors(Z,X),variant=m.directed?(X.dot(axis)>0?'fwd':'rev'):'none',L=m.size.lengthMm/1000,H=m.size.heightMm/1000,key=m.rec.asmeClass+'|'+m.rec.asmeLegend+'|'+variant+'|'+m.size.index;
+   let g=groups.get(key);if(!g){g={rec:m.rec,variant,size:m.size,quads:[]};groups.set(key,g);}
+   g.quads.push({part:m.partId,cls:m.rec.asmeClass,base:new T.Vector3(...m.pos).addScaledVector(Z,m.radius+.004),XL:X.clone().multiplyScalar(L),YH:Y.multiplyScalar(H),Z:Z.clone()});}}
+ const list=[];for(const g of groups.values()){const mat=new T.MeshBasicMaterial({map:markerTexture(g.rec,g.variant,g.size),toneMapped:false,polygonOffset:true,polygonOffsetFactor:-2,polygonOffsetUnits:-2}),mesh=new T.InstancedMesh(plane,mat,g.quads.length);
+  mesh.frustumCulled=false;mesh.visible=false;scene.add(mesh);g.mesh=mesh;list.push(g);}
+ return list;
 }
-const arrowMatrix=new T.Matrix4(),arrowQ=new T.Quaternion(),arrowUp=new T.Vector3(0,1,0),arrowPos=new T.Vector3(),arrowScale=new T.Vector3(),arrowDir=new T.Vector3(),arrowLift=new T.Vector3();
+const bandMatrix=new T.Matrix4(),bandPos=new T.Vector3();
+function updatePipeBands(){
+ if(!asmeActive()){if(pipeBands)for(const g of pipeBands)g.mesh.visible=false;bandSig='';return;}
+ if(!pipeBands)pipeBands=buildPipeBands();
+ const sig=[amount.toFixed(3),flowFocus,labelRevision].join();if(sig===bandSig)return;bandSig=sig;
+ for(const g of pipeBands){g.mesh.visible=true;g.quads.forEach((q,k)=>{const part=partMap.get(q.part),shown=part?.visible&&(!flowFocus||q.cls===flowFocus);
+   if(!shown)bandMatrix.makeScale(0,0,0);else{bandMatrix.makeBasis(q.XL,q.YH,q.Z);bandPos.copy(q.base).addScaledVector(part.offset,amount);bandMatrix.setPosition(bandPos);}
+   g.mesh.setMatrixAt(k,bandMatrix);});g.mesh.instanceMatrix.needsUpdate=true;}
+}
 function buildHazardReview(){
  const box=document.createElement('details');box.className='hazard-review';const head=document.createElement('summary');head.textContent='Hazard review · '+Object.values(ASME_REVIEW).filter(v=>v.status==='approved').length+' of '+Object.keys(ASME_REVIEW).length+' classes signed off';box.append(head);
  const services=asmeServices(),counts={};for(const r of model.routes){const k=routeRecords.get(r.id)?.asmeClass;if(k)counts[k]=(counts[k]||0)+1;}
@@ -432,33 +447,45 @@ function buildHazardReview(){
  const f=document.createElement('small');f.textContent='Full sheet: docs/pipe-hazard-review.md in the project repository. Classes stay proposed until a reviewer is recorded in the register.';box.append(f);return box;
 }
 const pxWorld=()=>camera.isOrthographicCamera?(camera.top-camera.bottom)/camera.zoom/renderer.domElement.clientHeight:2*Math.tan(T.MathUtils.degToRad(camera.fov/2))*camera.position.distanceTo(controls.target)/renderer.domElement.clientHeight;
-let pipeLabelSig='',pipeLabels=[];const labelTextures=new Map();
-function legendTexture(rec){const key=rec.asmeClass+'|'+rec.asmeLegend;let tex=labelTextures.get(key);if(tex)return tex;const cls=ASME_CLASSES[rec.asmeClass],c=document.createElement('canvas'),x=c.getContext('2d');x.font='600 30px system-ui,sans-serif';const w=Math.ceil(x.measureText(rec.asmeLegend).width)+28;c.width=w;c.height=48;x.font='600 30px system-ui,sans-serif';x.fillStyle=cls.color;x.fillRect(0,0,w,48);x.strokeStyle='#0b1118';x.lineWidth=3;x.strokeRect(1.5,1.5,w-3,45);x.fillStyle=cls.letters;x.textBaseline='middle';x.fillText(rec.asmeLegend,14,25);tex=new T.CanvasTexture(c);tex.userData={ratio:w/48};labelTextures.set(key,tex);return tex;}
-function updatePipeLabels(){
- const on=asmeActive()&&pipeArrows?.visible;if(!on){for(const l of pipeLabels)l.visible=false;pipeLabelSig='';return;}
- const wpp=pxWorld(),sig=[camera.position.x,camera.position.y,camera.position.z,camera.zoom,controls.target.x,controls.target.z,flowFocus,labelRevision].map(v=>typeof v==='number'?v.toFixed(2):v).join();if(sig===pipeLabelSig)return;pipeLabelSig=sig;
- for(const l of pipeLabels)l.visible=false;if(wpp>.2)return;
- const rect=renderer.domElement,view=new T.Vector3(),best=new Map();
- for(const s of pipeItems){if(s.len<2.5)continue;const part=partMap.get(s.part);if(!part?.visible||(flowFocus&&s.rec.asmeClass!==flowFocus))continue;const t=s.directed?.35:.5;
-  view.set(s.p[0]+(s.q[0]-s.p[0])*t,s.p[1]+(s.q[1]-s.p[1])*t,s.p[2]+(s.q[2]-s.p[2])*t).add(part.offset).project(camera);if(Math.abs(view.x)>.95||Math.abs(view.y)>.95||view.z>1)continue;
-  const d=view.x*view.x+view.y*view.y,cur=best.get(s.routeId);if(!cur||d<cur.d)best.set(s.routeId,{s,part,d,t});}
- const cand=[...best.values()].sort((a,b)=>a.d-b.d),taken=[],pxH=15;let n=0;
- for(const c of cand){if(n>=45)break;const s=c.s,mid=new T.Vector3(s.p[0]+(s.q[0]-s.p[0])*c.t,s.p[1]+(s.q[1]-s.p[1])*c.t,s.p[2]+(s.q[2]-s.p[2])*c.t).add(c.part.offset);view.copy(mid).project(camera);
-  const sx=(view.x*.5+.5)*rect.clientWidth,sy=(.5-view.y*.5)*rect.clientHeight,tex=legendTexture(s.rec),w=pxH*tex.userData.ratio;
-  if(taken.some(t=>Math.abs(t[0]-sx)<(t[2]+w)/2+4&&Math.abs(t[1]-sy)<pxH+4))continue;taken.push([sx,sy,w]);
-  let sp=pipeLabels[n];if(!sp){sp=new T.Sprite(new T.SpriteMaterial({depthTest:false,depthWrite:false,toneMapped:false}));sp.renderOrder=6;scene.add(sp);pipeLabels[n]=sp;}
-  if(sp.material.map!==tex){sp.material.map=tex;sp.material.needsUpdate=true;}sp.position.copy(mid);sp.scale.set(w*wpp,pxH*wpp,1);sp.visible=true;n++;}
+const labelTextures=new Map();
+function legendTexture(rec){const key=rec.asmeClass+'|'+rec.asmeLegend;let tex=labelTextures.get(key);if(tex)return tex;const cls=ASME_CLASSES[rec.asmeClass],c=document.createElement('canvas'),x=c.getContext('2d');x.font='600 30px system-ui,sans-serif';const w=Math.ceil(x.measureText(rec.asmeLegend).width)+28;c.width=w;c.height=48;x.font='600 30px system-ui,sans-serif';x.fillStyle=cls.field;x.fillRect(0,0,w,48);x.strokeStyle=cls.border||'#0b1118';x.lineWidth=3;x.strokeRect(1.5,1.5,w-3,45);x.fillStyle=cls.letters;x.textBaseline='middle';x.fillText(rec.asmeLegend,14,25);tex=new T.CanvasTexture(c);tex.colorSpace=T.SRGBColorSpace;tex.userData={ratio:w/48};labelTextures.set(key,tex);return tex;}
+// Overview tags: one screen-size tag per line where the real markers are too small to read, only on pipes that can be seen from the camera.
+const tagWorld=new T.Vector3(),tagView=new T.Vector3(),tagDir=new T.Vector3(),tagNdc=new T.Vector2();
+function updatePipeTags(now){
+ const on=asmeActive()&&pipeMarkers;if(!on){for(const l of pipeTags)l.visible=false;tagState.applied='';return;}
+ const wpp=pxWorld();if(wpp<.012||wpp>.2){for(const l of pipeTags)l.visible=false;tagState.applied='';return;}
+ const sig=[camera.position.x,camera.position.y,camera.position.z,camera.zoom,controls.target.x,controls.target.z,amount,flowFocus,labelRevision].map(v=>typeof v==='number'?v.toFixed(2):v).join();
+ if(sig!==tagState.seen){tagState.seen=sig;tagState.seenAt=now;return;}
+ if(sig===tagState.applied||now-tagState.seenAt<250)return;tagState.applied=sig;
+ for(const l of pipeTags)l.visible=false;
+ const rect=renderer.domElement,best=new Map(),shown=meshes.filter(m=>m.visible);
+ for(const m of pipeMarkers){const part=partMap.get(markerPart(m));if(!part?.visible||(flowFocus&&m.rec.asmeClass!==flowFocus))continue;
+  tagWorld.set(...m.pos).addScaledVector(part.offset,amount);tagView.copy(tagWorld).project(camera);if(Math.abs(tagView.x)>.95||Math.abs(tagView.y)>.95||tagView.z>1)continue;
+  const d=tagView.x*tagView.x+tagView.y*tagView.y,cur=best.get(m.routeId);if(!cur||d<cur.d)best.set(m.routeId,{m,part,d});}
+ const cand=[...best.values()].sort((a,b)=>a.d-b.d).slice(0,160),taken=[],pxH=15;let n=0;
+ for(const c of cand){if(n>=45)break;const m=c.m;tagWorld.set(...m.pos).addScaledVector(c.part.offset,amount);tagView.copy(tagWorld).project(camera);
+  const sx=(tagView.x*.5+.5)*rect.clientWidth,sy=(.5-tagView.y*.5)*rect.clientHeight,tex=legendTexture(m.rec),w=pxH*tex.userData.ratio;
+  if(taken.some(t=>Math.abs(t[0]-sx)<(t[2]+w)/2+4&&Math.abs(t[1]-sy)<pxH+4))continue;
+  tagNdc.set(tagView.x,tagView.y);raycaster.setFromCamera(tagNdc,camera);const first=raycaster.intersectObjects(shown,false).find(h=>h.object.userData.parts?.[h.instanceId]?.visible);
+  if(first){const dP=tagWorld.clone().sub(raycaster.ray.origin).dot(raycaster.ray.direction);if(first.distance<dP-(m.radius*2+.12))continue;}// something is in front of this pipe
+  taken.push([sx,sy,w]);
+  if(camera.isOrthographicCamera)camera.getWorldDirection(tagDir).negate();else tagDir.copy(camera.position).sub(tagWorld).normalize();
+  let sp=pipeTags[n];if(!sp){sp=new T.Sprite(new T.SpriteMaterial({depthTest:true,depthWrite:false,toneMapped:false}));sp.renderOrder=6;scene.add(sp);pipeTags[n]=sp;}
+  if(sp.material.map!==tex){sp.material.map=tex;sp.material.needsUpdate=true;}sp.position.copy(tagWorld).addScaledVector(tagDir,m.radius*1.5+wpp*3);sp.scale.set(w*wpp,pxH*wpp,1);sp.visible=true;n++;}
 }
-function updatePipeArrows(){
- if(!asmeActive()){if(pipeArrows)pipeArrows.visible=false;return;}const wpp=pxWorld();arrowSig=wpp.toFixed(3);
- if(!pipeArrows)pipeArrows=buildPipeArrows();pipeArrows.visible=true;const close=wpp<.25;
- arrowItems.forEach((s,k)=>{const part=partMap.get(s.part),shown=part?.visible&&(close||s.primary)&&(!flowFocus||s.rec.asmeClass===flowFocus);
-  if(!shown){arrowMatrix.makeScale(0,0,0);pipeArrows.setMatrixAt(k,arrowMatrix);return;}
-  arrowDir.set(s.q[0]-s.p[0],s.q[1]-s.p[1],s.q[2]-s.p[2]).normalize();arrowQ.setFromUnitVectors(arrowUp,arrowDir);
-  const radius=Math.min(.5,Math.max(.1,s.radius*1.7,wpp*5)),vertical=Math.abs(arrowDir.y)>.9;arrowLift.set(vertical?1:0,vertical?0:1,0);
-  arrowPos.set(s.p[0]+(s.q[0]-s.p[0])*.75,s.p[1]+(s.q[1]-s.p[1])*.75,s.p[2]+(s.q[2]-s.p[2])*.75).addScaledVector(arrowLift,s.radius+radius*.6).add(part.offset);arrowScale.set(radius,radius,radius);
-  arrowMatrix.compose(arrowPos,arrowQ,arrowScale);pipeArrows.setMatrixAt(k,arrowMatrix);});
- pipeArrows.instanceMatrix.needsUpdate=true;
+// Check for the browser: every marker sits on its own pipe part (also for an exploded view), and a sample is found by a ray fired at the pipe.
+function pipeMarkerCheck(explode=amount){
+ if(!pipeMarkers)pipeBands=pipeBands||buildPipeBands();
+ const bad=[];let onPart=0;const point=new T.Vector3();
+ for(const m of pipeMarkers){const part=partMap.get(markerPart(m));if(!part){bad.push({legend:m.rec.asmeLegend,why:'no part'});continue;}
+  const box=part.bounds.clone().expandByScalar(m.radius+.3).translate(new T.Vector3().copy(part.offset).multiplyScalar(explode));point.set(...m.pos).addScaledVector(part.offset,explode);
+  if(box.containsPoint(point))onPart++;else bad.push({legend:m.rec.asmeLegend,route:m.routeId,why:'outside its part',pos:m.pos.map(v=>+v.toFixed(2))});}
+ const ray={sampled:0,onPipe:0,sameLine:0,missed:[]},up=new T.Vector3(0,1,0),shown=meshes.filter(x=>x.visible),step=Math.max(1,Math.floor(pipeMarkers.length/150));
+ if(explode===amount)for(let i=0;i<pipeMarkers.length;i+=step){const m=pipeMarkers[i],part=partMap.get(markerPart(m));if(!part?.visible)continue;
+  const axis=new T.Vector3(...m.dir),n=Math.abs(axis.y)>.85?new T.Vector3(1,0,0):new T.Vector3().crossVectors(axis,up).normalize();point.set(...m.pos).addScaledVector(part.offset,amount);
+  raycaster.set(point.clone().addScaledVector(n,.5),n.clone().negate());const hit=raycaster.intersectObjects(shown,false).find(h=>h.object.userData.parts?.[h.instanceId]?.visible);ray.sampled++;
+  if(hit&&hit.distance<=.5+m.radius+.08){ray.onPipe++;if(partFlows.get(hit.object.userData.parts[hit.instanceId].id)?.id===m.routeId)ray.sameLine++;}else if(ray.missed.length<5)ray.missed.push({legend:m.rec.asmeLegend,route:m.routeId,hit:hit?+hit.distance.toFixed(2):null});}
+ return {markers:pipeMarkers.length,explode,onPart,outside:bad.length,examples:bad.slice(0,5),ray,stats:pipeStats};
 }
 function showHoverLabel(event){
  if(!hoverLabel){hoverLabel=document.createElement('div');hoverLabel.id='pipe-hover-label';hoverLabel.hidden=true;hoverLabel.style.cssText='position:fixed;z-index:20;pointer-events:none;max-width:320px;padding:6px 9px;border-radius:6px;font:600 12px/1.35 system-ui,sans-serif;box-shadow:0 2px 8px rgba(0,0,0,.45)';document.body.append(hoverLabel);}
@@ -467,8 +494,8 @@ function showHoverLabel(event){
  const rect=renderer.domElement.getBoundingClientRect();pointer.set((event.clientX-rect.left)/rect.width*2-1,1-(event.clientY-rect.top)/rect.height*2);raycaster.setFromCamera(pointer,camera);
  const hit=raycaster.intersectObjects(meshes.filter(m=>m.visible),false).find(h=>h.object.userData.parts?.[h.instanceId]?.visible),record=hit&&partFlows.get(hit.object.userData.parts[hit.instanceId].id);
  if(!record?.asmeClass){hoverLabel.hidden=true;return;}
- const cls=ASME_CLASSES[record.asmeClass];hoverLabel.style.background=cls.color;hoverLabel.style.color=cls.letters;hoverLabel.replaceChildren();
- const title=document.createElement('div');title.textContent=record.asmeLegend+' →';const sub=document.createElement('div');sub.style.cssText='font-weight:500;font-size:11px;opacity:.9';sub.textContent=cls.label+(record.asmeStatus==='proposed'?' · proposed':'');hoverLabel.append(title,sub);
+ const cls=ASME_CLASSES[record.asmeClass];hoverLabel.style.background=cls.field;hoverLabel.style.color=cls.letters;hoverLabel.replaceChildren();
+ const title=document.createElement('div');title.textContent=record.asmeLegend+' →';const sub=document.createElement('div');sub.style.cssText='font-weight:500;font-size:11px;opacity:.9';sub.textContent=cls.label+(record.asmeConfirm?' · class to confirm':record.asmeStatus==='proposed'?' · proposed':'');hoverLabel.append(title,sub);
  hoverLabel.style.left=Math.min(event.clientX+14,innerWidth-340)+'px';hoverLabel.style.top=(event.clientY+16)+'px';hoverLabel.hidden=false;
 }
 renderer.domElement.addEventListener('pointermove',showHoverLabel);renderer.domElement.addEventListener('pointerleave',()=>{if(hoverLabel)hoverLabel.hidden=true;});
@@ -482,7 +509,7 @@ function renderColorLegend(){if(productJourney?.active||thermalTrace?.active){le
  if(colorMode==='status'){for(const value of Object.values(DESIGN_STATUSES))entry(value.label,value.color);entry('Review open · label outline',REVIEW_COLOR);}
  if(colorMode==='flow'&&flowScheme==='pfd'){for(const [key,value] of Object.entries(FLOW_CATEGORIES))entry(value.label,value.color,key,routes.filter(r=>r.flowCategory===key).length);const unresolved=routes.filter(r=>r.flowCategoryStatus==='review').length;if(unresolved){entry('Category review · '+unresolved+' routes',null);const note=document.createElement('small');note.className='legend-note';note.textContent='Unclassified routes remain dim. Their medium or duty needs confirmation.';root.append(note);}}
  if(colorMode==='flow'&&flowScheme==='detailed'){for(const service of [...new Set(routes.filter(r=>r.flowCategoryStatus!=='non-flow').map(r=>r.service))].sort())entry(service,flowColor({service},'detailed',serviceColors),service,routes.filter(r=>r.service===service).length);}
- if(colorMode==='flow'&&flowScheme==='asme'){for(const [key,value] of Object.entries(ASME_CLASSES))entry(value.label,value.color,key,routes.filter(r=>r.asmeClass===key).length);const note=document.createElement('small');note.className='legend-note';note.textContent=ASME_BASIS.status+' ('+Object.values(ASME_REVIEW).filter(v=>v.status==='approved').length+' of '+Object.keys(ASME_REVIEW).length+' classes signed off). '+ASME_BASIS.note+' Arrows show flow direction on '+arrowStats.directed+' of '+arrowStats.routes+' lines whose direction is defined; the rest have legends only. Zoom in to read the painted legends, or point at a pipe.';root.append(note);root.append(buildHazardReview());}
+ if(colorMode==='flow'&&flowScheme==='asme'){for(const [key,value] of Object.entries(ASME_CLASSES))entry(value.label,value.color,key,routes.filter(r=>r.asmeClass===key).length);const note=document.createElement('small');note.className='legend-note';note.textContent=ASME_BASIS.status+' ('+Object.values(ASME_REVIEW).filter(v=>v.status==='approved').length+' of '+Object.keys(ASME_REVIEW).length+' classes signed off). '+ASME_BASIS.note+' Markers follow the A13.1 summary: next to valves, at bends, both sides of wall penetrations and every 12 m on straight runs, sized from the pipe diameter. The arrow shows flow on '+pipeStats.directedRoutes+' of '+pipeStats.routes+' lines whose direction is defined; '+pipeStats.unmarked+' lines carry no marker (very short, or paths inside equipment). Zoom in to read the markers, or point at a pipe.';root.append(note);root.append(buildHazardReview());}
  if(colorMode==='flow'&&model.fireSafety)entry('Fire points · FE tags','#e62f47');
  if(colorMode==='flow'&&model.containment)entry('Emergency shower / eyewash · ES tags','#ffd000');
  updateFlowFocusStatus();}
@@ -504,7 +531,7 @@ for(const id of ['reactor','inspection-scope'])$(id).options[0].textContent=desi
 $('download-configuration').onclick=()=>{const snapshot=registerSnapshot(model,STAGES),data={floorAllocation:{...model.floorAllocation,areas:model.floorAllocation.areas.map(({button,...a})=>a)},viewSelection:{areaId:areaScope,showProposed,colorMode,flowScheme,structureVisibility:structureVisibility.getState()},connectedAreaViews:areaVisibility.memberships,areaConnectivityReview:areaVisibility.localReviews,selection:designSelection,description:designSelection.scope==='future'?'Independent retained concept':A160_DESIGNS[designSelection.a160],argonPipingTakeoff:argonTakeoff(model),tagReservations:designSelection.scope==='future'?null:{a160:designSelection.a160==='baseline'?null:A160_TAG_RESERVATIONS,a800:model.doping.tagReservations},containmentReview,fireSafety:model.fireSafety,supportAttachments:supportResult,supportAccess:model.structure.access,counts:{equipment:Object.keys(model.equipment).length,components:model.parts.length,conduits:model.edges.length},...snapshot,accessReview:accessResult,remoteIndications:model.accessIndications,controlLoops:designSelection.scope==='future'?[]:[...model.preg.alternative?.controlLoops||[],...model.doping.controlLinks,...model.wastewater.controlLinks,...model.reclaimedWater.controlLinks,...model.ventGas.controlLinks],inspectionStates:designSelection.scope==='future'?{}:{a160:model.preg.alternative?.states||{},a800:UNITS.doping.states,a6000:unitDefinition(model,'argon').states,a2000:UNITS.reclaimed.states,a3000:UNITS.ventgas.states},utilityBoundaries:designSelection.scope==='future'?[...model.filtration.boundaries,...model.drying.boundaries]:[...model.preg.boundaries,...model.separations.boundaries,...model.sonication.boundaries,...model.sprayDrying.boundaries,...model.furnace.boundaries,...model.doping.boundaries,...model.argonDistribution.boundaries,...model.wastewater.boundaries,...model.reclaimedWater.boundaries,...model.ventGas.boundaries]};const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download=designSelection.scope==='future'?'Archived-filtration-drying-register.json':'FEED-'+designSelection.a160+'-register.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
 $('color-mode').onchange=()=>setColorMode($('color-mode').value);
 $('flow-scheme').replaceChildren(...Object.entries(FLOW_SCHEMES).map(([value,label])=>new Option(label,value)));$('flow-scheme').value=flowScheme;
-$('flow-scheme').onchange=()=>{flowScheme=$('flow-scheme').value;flowFocus=null;updatePipeArrows();renderColorLegend();if(selected)updatePartFlowDetails(selected);dirty=true;};
+$('flow-scheme').onchange=()=>{flowScheme=$('flow-scheme').value;flowFocus=null;updatePipeBands();renderColorLegend();if(selected)updatePartFlowDetails(selected);dirty=true;};
 const pipeIdButton=$('pipe-id-toggle'),syncPipeIdButton=()=>pipeIdButton?.setAttribute('aria-pressed',String(colorMode==='flow'&&flowScheme==='asme'));
 if(pipeIdButton){pipeIdButton.onclick=()=>{const on=colorMode==='flow'&&flowScheme==='asme',mode=$('color-mode'),scheme=$('flow-scheme');if(on){mode.value='material';mode.onchange();}else{mode.value='flow';mode.onchange();scheme.value='asme';scheme.onchange();}syncPipeIdButton();};$('color-mode').addEventListener('change',syncPipeIdButton);$('flow-scheme').addEventListener('change',syncPipeIdButton);}
 $('clear-flow-focus').onclick=()=>{flowFocus=null;renderColorLegend();dirty=true;};
@@ -635,8 +662,8 @@ sectionInspector=mountSectionInspector({scene,viewport,trigger:$('cutaway'),getC
  label:section.scope==='equipment'?('Equipment · '+(EQUIPMENT[section.equipmentId]?.tag||'selection')):'Currently visible plant geometry'
 })});
 createControls();document.body.classList.add('inspection-mode');refreshRoutes();renderTree();applyBatchState('transfer');selectStage(null);resize();new ResizeObserver(resize).observe(viewport);
-let last=performance.now();function frame(now){requestAnimationFrame(frame);const dt=Math.min((now-last)/1000,.05);last=now;if(photoRendering)return;if(Math.abs(amount-target)>.0001){amount=T.MathUtils.lerp(amount,target,1-Math.exp(-dt*7));dirty=true}else if(amount!==target){amount=target;dirty=true}if(dirty)updateParts();if(!plantBrowse?.active){transportReview?.update(dt);scene.userData.engineerWalk?.update(dt);}productJourney?.update(dt,now);thermalTrace?.update(dt,now);plantBrowse?.update(dt);if(!plantBrowse?.active)controls.update();if(asmeActive()&&pipeArrows&&arrowSig!==pxWorld().toFixed(3))updatePipeArrows();updatePipeLabels();sectionInspector?.draw();fireSafetyUI?.draw();emergencyStationsUI?.draw();walkwayUI?.draw();updateEquipmentLabels();measuring.draw();areaOverlay.draw();if(renderDetail.update(camera,controls.target,renderer.domElement.clientHeight,system==='fastener'||!!exploration||amount>0||selected?.system==='fastener'))renderer.shadowMap.needsUpdate=true;renderer.render(scene,camera);window.rgoStartup?.ready()}requestAnimationFrame(frame);
-window.reactorExplorer={parts,model,get plantBrowse(){return plantBrowse;},get walkways(){return walkwayUI;},get fireSafety(){return fireSafetyUI;},get emergencyStations(){return emergencyStationsUI;},setStructureVisibility,setSection,get productJourney(){return productJourney;},beginExplore,endExplore,startExploreView,setExplorePresentation,setExploreAmount,setExploreSection,selectPart,selectEquipment,measuring,areaOverlay,get engineerWalk(){return scene.userData.engineerWalk;},getState:()=>({plantBrowse:plantBrowse?.getState(),startup:window.rgoStartup?.timing,fastenerDetail:renderDetail.shown,emergencyStations:emergencyStationsUI?.getState(),walkways:walkwayUI?.getState(),structureVisibility:{...structureVisibility.getState(),counts:structureVisibility.counts},transport:transportReview?.getState(),thermalTrace:thermalTrace?.getState(),productJourney:productJourney?.getState(),exploration:exploration?{equipmentId:exploration.plan.equipmentId,tag:EQUIPMENT[exploration.plan.equipmentId].tag,presentation:target>0?'exploded':'assembled',separation:target,context:exploration.context,members:exploration.plan.ids.size,boundaries:exploration.plan.boundaries.length}:null,navigation:{precision:controls.precision,rotateSpeed:controls.rotateSpeed,pivotPartId:controls.pivotPartId,pivot:controls.inspectionPivot?.toArray()||null},areaScope,showProposed,exploreOptions:[...$('explore-equipment').options].map(o=>o.value).filter(Boolean),mode,projection:camera.isOrthographicCamera?'orthographic':'perspective',view,amount,target,system,reactor,designSelection,section:{...section},routeId,routeParts:routeTrace?.partIds.size||0,clashes:clashResult?.candidates.length??null,workspaceMode,processTrain,stageId,batchState,unitState,feedKey,feedState,materialTraceParts:materialHighlight?.partIds.size||0,visible:visibleParts.length,selected:selected?.code,selection:selectedEquipmentId==null?null:{level:selected?'component':'equipment',equipmentId:selectedEquipmentId,tag:EQUIPMENT[selectedEquipmentId].tag,componentId:selected?.id??null},drawCalls:renderer.info.render.calls})};
+let last=performance.now();function frame(now){requestAnimationFrame(frame);const dt=Math.min((now-last)/1000,.05);last=now;if(photoRendering)return;if(Math.abs(amount-target)>.0001){amount=T.MathUtils.lerp(amount,target,1-Math.exp(-dt*7));dirty=true}else if(amount!==target){amount=target;dirty=true}if(dirty)updateParts();if(!plantBrowse?.active){transportReview?.update(dt);scene.userData.engineerWalk?.update(dt);}productJourney?.update(dt,now);thermalTrace?.update(dt,now);plantBrowse?.update(dt);if(!plantBrowse?.active)controls.update();updatePipeTags(now);sectionInspector?.draw();fireSafetyUI?.draw();emergencyStationsUI?.draw();walkwayUI?.draw();updateEquipmentLabels();measuring.draw();areaOverlay.draw();if(renderDetail.update(camera,controls.target,renderer.domElement.clientHeight,system==='fastener'||!!exploration||amount>0||selected?.system==='fastener'))renderer.shadowMap.needsUpdate=true;renderer.render(scene,camera);window.rgoStartup?.ready()}requestAnimationFrame(frame);
+window.reactorExplorer={parts,model,pipeMarkerCheck,get plantBrowse(){return plantBrowse;},get walkways(){return walkwayUI;},get fireSafety(){return fireSafetyUI;},get emergencyStations(){return emergencyStationsUI;},setStructureVisibility,setSection,get productJourney(){return productJourney;},beginExplore,endExplore,startExploreView,setExplorePresentation,setExploreAmount,setExploreSection,selectPart,selectEquipment,measuring,areaOverlay,get engineerWalk(){return scene.userData.engineerWalk;},getState:()=>({plantBrowse:plantBrowse?.getState(),startup:window.rgoStartup?.timing,fastenerDetail:renderDetail.shown,emergencyStations:emergencyStationsUI?.getState(),walkways:walkwayUI?.getState(),structureVisibility:{...structureVisibility.getState(),counts:structureVisibility.counts},transport:transportReview?.getState(),thermalTrace:thermalTrace?.getState(),productJourney:productJourney?.getState(),exploration:exploration?{equipmentId:exploration.plan.equipmentId,tag:EQUIPMENT[exploration.plan.equipmentId].tag,presentation:target>0?'exploded':'assembled',separation:target,context:exploration.context,members:exploration.plan.ids.size,boundaries:exploration.plan.boundaries.length}:null,navigation:{precision:controls.precision,rotateSpeed:controls.rotateSpeed,pivotPartId:controls.pivotPartId,pivot:controls.inspectionPivot?.toArray()||null},areaScope,showProposed,exploreOptions:[...$('explore-equipment').options].map(o=>o.value).filter(Boolean),mode,projection:camera.isOrthographicCamera?'orthographic':'perspective',view,amount,target,system,reactor,designSelection,section:{...section},routeId,routeParts:routeTrace?.partIds.size||0,clashes:clashResult?.candidates.length??null,workspaceMode,processTrain,stageId,batchState,unitState,feedKey,feedState,materialTraceParts:materialHighlight?.partIds.size||0,visible:visibleParts.length,selected:selected?.code,selection:selectedEquipmentId==null?null:{level:selected?'component':'equipment',equipmentId:selectedEquipmentId,tag:EQUIPMENT[selectedEquipmentId].tag,componentId:selected?.id??null},drawCalls:renderer.info.render.calls})};
 
 // Access overlays are independent of material/status/flow coloring and never become process parts.
 const accessGroup=new T.Group();scene.add(accessGroup);scene.userData.accessGroup=accessGroup;let accessResult=null;
