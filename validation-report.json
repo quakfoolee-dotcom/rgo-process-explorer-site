@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-06T23:04:23.899Z",
+  "checkedAt": "2026-10-06T23:31:19.680Z",
   "method": "Node model, geometry, process-state and static interface tests",
   "browserQA": false,
   "passed": false,
@@ -155,11 +155,11 @@
       "details": {
         "passed": true,
         "route0": {
-          "parts": 145951,
+          "parts": 145889,
           "equipment": 351
         },
         "route26": {
-          "parts": 147955,
+          "parts": 147890,
           "equipment": 365
         }
       }
@@ -613,7 +613,7 @@
     {
       "name": "validate-browse-levels-model.mjs",
       "passed": true,
-      "details": "{\"ms\":573.1760999999997,\"summary\":{\"flights\":8,\"availableFlights\":8,\"decks\":24,\"availableDecks\":24},\"findings\":[],\"edges\":1542}\nUnregistered tread names: []\nPASS: 24 complete ground-to-deck return journeys, all 8 flights, stacked surface picking, and missing/moved tread rejection."
+      "details": "{\"ms\":614.4157000000005,\"summary\":{\"flights\":8,\"availableFlights\":8,\"decks\":24,\"availableDecks\":24},\"findings\":[],\"edges\":1542}\nUnregistered tread names: []\nPASS: 24 complete ground-to-deck return journeys, all 8 flights, stacked surface picking, and missing/moved tread rejection."
     },
     {
       "name": "validate-browse-levels-surfaces.mjs",
@@ -623,7 +623,7 @@
     {
       "name": "validate-building-shell.mjs",
       "passed": true,
-      "details": "PASS: building walls 96 panels, 70 columns, 67 openings, 7 walkway doors; A-6000 outside; toggle hides 166 parts only"
+      "details": "PASS: building walls 26 panels, 78 columns, 10 openings, 7 walkway doors; A-6000 outside; toggle hides 104 parts only"
     },
     {
       "name": "validate-cake-transfer.mjs",
@@ -641,7 +641,7 @@
     {
       "name": "validate-click-equipment.mjs",
       "passed": true,
-      "details": "PASS: 77,806 member parts open their equipment, 58,046 parts outside a plan stay parts, and the exploring, double-click and open-component exceptions hold."
+      "details": "PASS: 77,744 member parts open their equipment, 58,046 parts outside a plan stay parts, and the exploring, double-click and open-component exceptions hold."
     },
     {
       "name": "validate-compressed-air.mjs",
@@ -664,7 +664,7 @@
       "details": {
         "design": "baseline",
         "scope": "feed",
-        "parts": 145951,
+        "parts": 145889,
         "conduits": 9100,
         "equipment": 369,
         "scopeIsolation": "PASS",
@@ -679,7 +679,7 @@
       "details": {
         "design": "dryer",
         "scope": "feed",
-        "parts": 148364,
+        "parts": 148300,
         "conduits": 9176,
         "equipment": 373,
         "scopeIsolation": "PASS",
@@ -702,7 +702,7 @@
       "details": {
         "design": "elevated",
         "scope": "feed",
-        "parts": 148499,
+        "parts": 148435,
         "conduits": 9201,
         "equipment": 370,
         "scopeIsolation": "PASS",
@@ -726,7 +726,7 @@
       "details": {
         "design": "enclosed",
         "scope": "feed",
-        "parts": 149295,
+        "parts": 149231,
         "conduits": 9191,
         "equipment": 374,
         "scopeIsolation": "PASS",
@@ -764,7 +764,7 @@
       "details": {
         "design": "integrated",
         "scope": "feed",
-        "parts": 147132,
+        "parts": 147070,
         "conduits": 9162,
         "equipment": 371,
         "scopeIsolation": "PASS",
@@ -790,7 +790,7 @@
       "name": "validate-drying.mjs",
       "passed": true,
       "details": {
-        "elements": 155469,
+        "elements": 155407,
         "conduits": 9455,
         "checkedEndpointFaces": 18910,
         "verifiedDryingNetworks": 12,
@@ -818,7 +818,7 @@
     {
       "name": "validate-emergency-performance.mjs",
       "passed": true,
-      "details": "{\"buildMs\":20243.8299,\"directStationMs\":1200.441899999998,\"geometryAndSupportSignature\":{\"parts\":145951,\"partsDigest\":\"6a73a7192755794cc17c8f56498aa5bf78d70955fa8cb4e6acd1cdc3d215e8a2\",\"supportDigest\":\"8736a62154fdc24812098709bc9728e4485bcc516e5c812b7cb7705c38b5a9bb\"}}\n{\n  \"result\": \"PASS\",\n  \"configuration\": \"baseline\",\n  \"buildMs\": 20243.8299,\n  \"phases\": [\n    {\n      \"phase\": \"base\",\n      \"ms\": 45.99340000000001\n    },\n    {\n      \"phase\": \"upstream\",\n      \"ms\": 74.05439999999999\n    },\n    {\n      \"phase\": \"separations\",\n      \"ms\": 172.56340000000003\n    },\n    {\n      \"phase\": \"sonication\",\n      \"ms\": 13.969499999999982\n    },\n    {\n      \"phase\": \"sprayDrying\",\n      \"ms\": 42.300700000000006\n    },\n    {\n      \"phase\": \"furnace\",\n      \"ms\": 18.25619999999998\n    },\n    {\n      \"phase\": \"doping\",\n      \"ms\": 41.77859999999998\n    },\n    {\n      \"phase\": \"a900\",\n      \"ms\": 7.359800000000064\n    },\n    {\n      \"phase\": \"argonDistribution\",\n      \"ms\": 39.66859999999997\n    },\n    {\n      \"phase\": \"preg\",\n      \"ms\": 52.80510000000004\n    },\n    {\n      \"phase\": \"filtration\",\n      \"ms\": 8.448599999999942\n    },\n    {\n      \"phase\": \"drying\",\n      \"ms\": 23.716000000000008\n    },\n    {\n      \"phase\": \"cakeTransfer\",\n      \"ms\": 20.33789999999999\n    },\n    {\n      \"phase\": \"accessSystem\",\n      \"ms\": 104.21799999999996\n    },\n    {\n      \"phase\": \"accessIndications\",\n      \"ms\": 52.70790000000011\n    },\n    {\n      \"phase\": \"wastewater\",\n      \"ms\": 78.23599999999999\n    },\n    {\n      \"phase\": \"ventGas\",\n      \"ms\": 785.2319999999999\n    },\n    {\n      \"phase\": \"exhaustGroups\",\n      \"ms\": 20.945000000000164\n    },\n    {\n      \"phase\": \"reclaimedWater\",\n      \"ms\": 150.34860000000003\n    },\n    {\n      \"phase\": \"compressedAir\",\n      \"ms\": 1503.5332\n    },\n    {\n      \"phase\": \"pipeSupportSystem\",\n      \"ms\": 6810.1119\n    },\n    {\n      \"phase\": \"containment\",\n      \"ms\": 4325.525600000001\n    }\n  ],\n  \"directStationMs\": 1200.441899999998,\n  \"worker\": {\n    \"stationMs\": 641.9428999999982,\n    \"routeMs\": 120.55309999999736\n  },\n  \"asyncMs\": 1092.5887000000002,\n  \"cachedMs\": 197.4478999999992,\n  \"mainThreadHeartbeatTicks\": 70,\n  \"maxTickGapMs\": 44.02280000000246,\n  \"signature\": {\n    \"parts\": 145951,\n    \"partsDigest\": \"6a73a7192755794cc17c8f56498aa5bf78d70955fa8cb4e6acd1cdc3d215e8a2\",\n    \"supportDigest\": \"8736a62154fdc24812098709bc9728e4485bcc516e5c812b7cb7705c38b5a9bb\"\n  },\n  \"fullReviewAndRouteEquivalence\": true,\n  \"cacheInvalidation\": true,\n  \"cancellation\": true,\n  \"hiddenObstructionChecked\": true,\n  \"complianceVerified\": false,\n  \"browserRenderingMeasured\": false\n}"
+      "details": "{\"buildMs\":23783.2753,\"directStationMs\":1434.5292999999983,\"geometryAndSupportSignature\":{\"parts\":145889,\"partsDigest\":\"0be20e87697581285b76ce454ebb485605beb911a2acb6141b79392db1b614f9\",\"supportDigest\":\"8736a62154fdc24812098709bc9728e4485bcc516e5c812b7cb7705c38b5a9bb\"}}\n{\n  \"result\": \"PASS\",\n  \"configuration\": \"baseline\",\n  \"buildMs\": 23783.2753,\n  \"phases\": [\n    {\n      \"phase\": \"base\",\n      \"ms\": 50.4619\n    },\n    {\n      \"phase\": \"upstream\",\n      \"ms\": 83.16890000000001\n    },\n    {\n      \"phase\": \"separations\",\n      \"ms\": 220.3195\n    },\n    {\n      \"phase\": \"sonication\",\n      \"ms\": 18.39639999999997\n    },\n    {\n      \"phase\": \"sprayDrying\",\n      \"ms\": 22.61220000000003\n    },\n    {\n      \"phase\": \"furnace\",\n      \"ms\": 25.352700000000027\n    },\n    {\n      \"phase\": \"doping\",\n      \"ms\": 46.90109999999993\n    },\n    {\n      \"phase\": \"a900\",\n      \"ms\": 1.788499999999999\n    },\n    {\n      \"phase\": \"argonDistribution\",\n      \"ms\": 53.92920000000004\n    },\n    {\n      \"phase\": \"preg\",\n      \"ms\": 57.031799999999976\n    },\n    {\n      \"phase\": \"filtration\",\n      \"ms\": 8.83159999999998\n    },\n    {\n      \"phase\": \"drying\",\n      \"ms\": 25.44990000000007\n    },\n    {\n      \"phase\": \"cakeTransfer\",\n      \"ms\": 15.745199999999954\n    },\n    {\n      \"phase\": \"accessSystem\",\n      \"ms\": 228.58590000000004\n    },\n    {\n      \"phase\": \"accessIndications\",\n      \"ms\": 88.56100000000004\n    },\n    {\n      \"phase\": \"wastewater\",\n      \"ms\": 137.71910000000003\n    },\n    {\n      \"phase\": \"ventGas\",\n      \"ms\": 1209.7699\n    },\n    {\n      \"phase\": \"exhaustGroups\",\n      \"ms\": 27.09389999999985\n    },\n    {\n      \"phase\": \"reclaimedWater\",\n      \"ms\": 234.90059999999994\n    },\n    {\n      \"phase\": \"compressedAir\",\n      \"ms\": 1928.3883\n    },\n    {\n      \"phase\": \"pipeSupportSystem\",\n      \"ms\": 7385.540900000001\n    },\n    {\n      \"phase\": \"containment\",\n      \"ms\": 4918.777199999999\n    }\n  ],\n  \"directStationMs\": 1434.5292999999983,\n  \"worker\": {\n    \"stationMs\": 907.9281999999985,\n    \"routeMs\": 143.7468000000008\n  },\n  \"asyncMs\": 1473.1638999999996,\n  \"cachedMs\": 338.68940000000293,\n  \"mainThreadHeartbeatTicks\": 86,\n  \"maxTickGapMs\": 55.222899999997026,\n  \"signature\": {\n    \"parts\": 145889,\n    \"partsDigest\": \"0be20e87697581285b76ce454ebb485605beb911a2acb6141b79392db1b614f9\",\n    \"supportDigest\": \"8736a62154fdc24812098709bc9728e4485bcc516e5c812b7cb7705c38b5a9bb\"\n  },\n  \"fullReviewAndRouteEquivalence\": true,\n  \"cacheInvalidation\": true,\n  \"cancellation\": true,\n  \"hiddenObstructionChecked\": true,\n  \"complianceVerified\": false,\n  \"browserRenderingMeasured\": false\n}"
     },
     {
       "name": "validate-emergency-stations.mjs",
@@ -879,7 +879,7 @@
         "configuration": "baseline",
         "argon": "bulk",
         "equipment": 351,
-        "parts": 145951,
+        "parts": 145889,
         "assemblies": 1718,
         "explorable": 311,
         "registeredPumps": [
@@ -1071,7 +1071,7 @@
         "orthographicViews": 4,
         "viewports": 3,
         "sectionAxes": 3,
-        "treeElements": 155469,
+        "treeElements": 155407,
         "routes": 2752,
         "networkBoundaries": "PASS",
         "screeningFixtures": "PASS",
@@ -1158,7 +1158,7 @@
     {
       "name": "validate-lean-review-data.mjs",
       "passed": true,
-      "details": "PASS: lean review — baseline 145,951 parts (7c63429b 2026-10-06); 12 register items linked to 37 findings and 15 decisions; page hooks present."
+      "details": "PASS: lean review — baseline 145,889 parts (d7cf148a 2026-10-06); 12 register items linked to 37 findings and 15 decisions; page hooks present."
     },
     {
       "name": "validate-lean115.mjs",
@@ -1198,7 +1198,7 @@
     {
       "name": "validate-overview-coverage.mjs",
       "passed": true,
-      "details": "PASS: overview — 350 envelopes (7c63429b 2026-10-06); coverage approved 112, held 4, documented 33, record 92, none 109; page hooks present."
+      "details": "PASS: overview — 350 envelopes (d7cf148a 2026-10-06); coverage approved 112, held 4, documented 33, record 92, none 109; page hooks present."
     },
     {
       "name": "validate-panel-window-order.mjs",
@@ -1257,12 +1257,12 @@
       "passed": true,
       "details": {
         "result": "PASS",
-        "parts": 145951,
+        "parts": 145889,
         "eligibleEdges": 283,
         "blockedSegments": 0,
         "keyMs": 144,
-        "reviewMs": 330,
-        "occlusionIndexMs": 691,
+        "reviewMs": 279,
+        "occlusionIndexMs": 952,
         "cooperativeYields": 58
       }
     },
@@ -1289,7 +1289,7 @@
     {
       "name": "validate-prepared-startup.mjs",
       "passed": true,
-      "details": "{\"phase\":\"Loaded\",\"source\":\"prepared\",\"downloadMs\":53.996399999999994,\"inflateMs\":608.7895,\"reconstructMs\":3218.1976999999997,\"decodeMs\":3827.1779,\"totalMs\":3883.5369,\"ticks\":199,\"maxGap\":99.28309999999999}\n{\"result\":\"PASS\",\"load\":{\"source\":\"prepared\",\"downloadMs\":53.996399999999994,\"inflateMs\":608.7895,\"reconstructMs\":3218.1976999999997,\"decodeMs\":3827.1779,\"totalMs\":3883.5369},\"heartbeatTicks\":199,\"maxHeartbeatGapMs\":99.28309999999999,\"parts\":145951,\"emergencyReviewIdentical\":true,\"emergencyRoutesIdentical\":true,\"structuralReviewIdentical\":true,\"walkwayReviewIdentical\":true,\"pipeDiametersIdentical\":true,\"geometryVersionChecked\":true,\"invalidDownloadRejected\":true,\"lodPreservesEngineeringModel\":true,\"browserRenderingMeasured\":false}"
+      "details": "{\"phase\":\"Loaded\",\"source\":\"prepared\",\"downloadMs\":61.513099999999994,\"inflateMs\":594.7481,\"reconstructMs\":3148.0374,\"decodeMs\":3742.8893,\"totalMs\":3806.8574,\"ticks\":190,\"maxGap\":102.46190000000001}\n{\"result\":\"PASS\",\"load\":{\"source\":\"prepared\",\"downloadMs\":61.513099999999994,\"inflateMs\":594.7481,\"reconstructMs\":3148.0374,\"decodeMs\":3742.8893,\"totalMs\":3806.8574},\"heartbeatTicks\":190,\"maxHeartbeatGapMs\":102.46190000000001,\"parts\":145889,\"emergencyReviewIdentical\":true,\"emergencyRoutesIdentical\":true,\"structuralReviewIdentical\":true,\"walkwayReviewIdentical\":true,\"pipeDiametersIdentical\":true,\"geometryVersionChecked\":true,\"invalidDownloadRejected\":true,\"lodPreservesEngineeringModel\":true,\"browserRenderingMeasured\":false}"
     },
     {
       "name": "validate-prepared-worker.mjs",
@@ -1305,7 +1305,7 @@
         },
         "parts": 156863,
         "progressMessages": 25,
-        "elapsedMs": 37162.4495
+        "elapsedMs": 36170.846
       }
     },
     {
@@ -2496,7 +2496,7 @@
     {
       "name": "validate-startup-model.mjs",
       "passed": false,
-      "error": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\r\n+ actual - expected\r\n\r\n  {\r\n+   access: '0379b6d54d83af7518240bb23f5077f6a7ff480148421c2031d0e5ac7f80e67c',\r\n+   connections: '67a05420616327cc3dd834849a03ee642ba7612dead9d047400947793ab551d8',\r\n+   containment: '46f1f7b5160a5f247a5f8f4f33393829d9d86c89fbcaafe7a80d4ae2f9d78d5d',\r\n+   context: '3ca28b0c06098314dffc938fe869f989c852aa8cb7427f8a53b59bfc4c41db7b',\r\n+   edges: 'd3f39d64715c5c0823778c27cf8031957fdbe10fb70ecc4e3b40568cde4fc37f',\r\n+   graph: 'bd1eb840ea59e6afdb1c316c2388499543e081cbe1be5df091b83b632e8a9a07',\r\n+   parts: 'e8e903d81267eeb1641c8136ddbc64109d6ff9377ce25b99b16d05e91ef32d01',\r\n+   routes: 'cbac2199a5490dce7f06cedf341c4182fd1a495b45707e828ce4191a6b924b5e',\r\n+   structure: '6c9d575cc57317fb0216d9b77e97eaa47f3f8351cb2ad1018dfc44aa9ce4c33d',\r\n+   supports: '8736a62154fdc24812098709bc9728e4485bcc516e5c812b7cb7705c38b5a9bb'\r\n-   access: '6794f36104b5f2ad9637a1a0cf8f4ea92bbf0374d570bab1d1888d8428af80d2',\r\n-   connections: '5b7ea135f4dd8d917298b266252511ff8632ef3437f8ac838095a3f39d17b713',\r\n-   containment: '00810f32be140c030db4f56ea847ca98f65ce638c657c1708580febe827906a0',\r\n-   context: '7fed0a292aac722c28fdd42cfeb50a0cb3dea763dec2f6e488470cde0a66fe66',\r\n-   edges: 'e4d061afc6ee5421c35fcab49d29bdfe147fd7e24c1d7ccf05d7e6d5ffd95e04',\r\n-   graph: 'b7fb7a4afe0d2acfdd5d6384f2a0a87f5ecf6f4aa49fb7317e1e983ddca484c9',\r\n-   parts: 'cde6abde4831ac42051aee7c8eae055608d1b5bc883ee6cff714bdfac32fe0c9',\r\n-   routes: '93da18208e41c05d6073ed4a8c1bd00930b906af6269dbb2ef65775bf520132c',\r\n-   structure: '961aa70bb6daa547adff7e3f1037eaaf4e2cb826e40bd11e395db3ab10c1e9b6',\r\n-   supports: '00cac41b7c22b437683b347a86cb4b7f1f35b25ca43e0b0a25fcdddab39dafba'\r\n  }\r\n\r\n    at file:///C:/Users/quakf/AppData/Local/Temp/claude/C--Users-quakf-Documents-rGO-3D-Plant-Model-main/9120e0cb-4053-45e1-a518-76a79a35fd5a/scratchpad/inspector/tests/validate-startup-model.mjs:11:8 {\r\n  generatedMessage: true,\r\n  code: 'ERR_ASSERTION',\r\n  actual: {\r\n    parts: 'e8e903d81267eeb1641c8136ddbc64109d6ff9377ce25b99b16d05e91ef32d01',\r\n    edges: 'd3f39d64715c5c0823778c27cf8031957fdbe10fb70ecc4e3b40568cde4fc37f',\r\n    routes: 'cbac2199a5490dce7f06cedf341c4182fd1a495b45707e828ce4191a6b924b5e',\r\n    structure: '6c9d575cc57317fb0216d9b77e97eaa47f3f8351cb2ad1018dfc44aa9ce4c33d',\r\n    supports: '8736a62154fdc24812098709bc9728e4485bcc516e5c812b7cb7705c38b5a9bb',\r\n    containment: '46f1f7b5160a5f247a5f8f4f33393829d9d86c89fbcaafe7a80d4ae2f9d78d5d',\r\n    access: '0379b6d54d83af7518240bb23f5077f6a7ff480148421c2031d0e5ac7f80e67c',\r\n    connections: '67a05420616327cc3dd834849a03ee642ba7612dead9d047400947793ab551d8',\r\n    graph: 'bd1eb840ea59e6afdb1c316c2388499543e081cbe1be5df091b83b632e8a9a07',\r\n    context: '3ca28b0c06098314dffc938fe869f989c852aa8cb7427f8a53b59bfc4c41db7b'\r\n  },\r\n  expected: {\r\n    parts: 'cde6abde4831ac42051aee7c8eae055608d1b5bc883ee6cff714bdfac32fe0c9',\r\n    edges: 'e4d061afc6ee5421c35fcab49d29bdfe147fd7e24c1d7ccf05d7e6d5ffd95e04',\r\n    routes: '93da18208e41c05d6073ed4a8c1bd00930b906af6269dbb2ef65775bf520132c',\r\n    structure: '961aa70bb6daa547adff7e3f1037eaaf4e2cb826e40bd11e395db3ab10c1e9b6',\r\n    supports: '00cac41b7c22b437683b347a86cb4b7f1f35b25ca43e0b0a25fcdddab39dafba',\r\n    containment: '00810f32be140c030db4f56ea847ca98f65ce638c657c1708580febe827906a0',\r\n    access: '6794f36104b5f2ad9637a1a0cf8f4ea92bbf0374d570bab1d1888d8428af80d2',\r\n    connections: '5b7ea135f4dd8d917298b266252511ff8632ef3437f8ac838095a3f39d17b713',\r\n    graph: 'b7fb7a4afe0d2acfdd5d6384f2a0a87f5ecf6f4aa49fb7317e1e983ddca484c9',\r\n    context: '7fed0a292aac722c28fdd42cfeb50a0cb3dea763dec2f6e488470cde0a66fe66'\r\n  },\r\n  operator: 'deepStrictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.19.0\r\n"
+      "error": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\r\n+ actual - expected\r\n\r\n  {\r\n+   access: '0379b6d54d83af7518240bb23f5077f6a7ff480148421c2031d0e5ac7f80e67c',\r\n+   connections: '67a05420616327cc3dd834849a03ee642ba7612dead9d047400947793ab551d8',\r\n+   containment: '46f1f7b5160a5f247a5f8f4f33393829d9d86c89fbcaafe7a80d4ae2f9d78d5d',\r\n+   context: '3ca28b0c06098314dffc938fe869f989c852aa8cb7427f8a53b59bfc4c41db7b',\r\n+   edges: 'd3f39d64715c5c0823778c27cf8031957fdbe10fb70ecc4e3b40568cde4fc37f',\r\n+   graph: 'bd1eb840ea59e6afdb1c316c2388499543e081cbe1be5df091b83b632e8a9a07',\r\n+   parts: '60151e007a6a5c2ef7ede2f1fdd96ddd94412fcc27db8bfe2f6ae8236253c2da',\r\n+   routes: 'cbac2199a5490dce7f06cedf341c4182fd1a495b45707e828ce4191a6b924b5e',\r\n+   structure: '39c91da9cf4c254193c060e8a9670c8a24b10540d654fe586f54cdaf39fd4186',\r\n+   supports: '8736a62154fdc24812098709bc9728e4485bcc516e5c812b7cb7705c38b5a9bb'\r\n-   access: '6794f36104b5f2ad9637a1a0cf8f4ea92bbf0374d570bab1d1888d8428af80d2',\r\n-   connections: '5b7ea135f4dd8d917298b266252511ff8632ef3437f8ac838095a3f39d17b713',\r\n-   containment: '00810f32be140c030db4f56ea847ca98f65ce638c657c1708580febe827906a0',\r\n-   context: '7fed0a292aac722c28fdd42cfeb50a0cb3dea763dec2f6e488470cde0a66fe66',\r\n-   edges: 'e4d061afc6ee5421c35fcab49d29bdfe147fd7e24c1d7ccf05d7e6d5ffd95e04',\r\n-   graph: 'b7fb7a4afe0d2acfdd5d6384f2a0a87f5ecf6f4aa49fb7317e1e983ddca484c9',\r\n-   parts: 'cde6abde4831ac42051aee7c8eae055608d1b5bc883ee6cff714bdfac32fe0c9',\r\n-   routes: '93da18208e41c05d6073ed4a8c1bd00930b906af6269dbb2ef65775bf520132c',\r\n-   structure: '961aa70bb6daa547adff7e3f1037eaaf4e2cb826e40bd11e395db3ab10c1e9b6',\r\n-   supports: '00cac41b7c22b437683b347a86cb4b7f1f35b25ca43e0b0a25fcdddab39dafba'\r\n  }\r\n\r\n    at file:///C:/Users/quakf/AppData/Local/Temp/claude/C--Users-quakf-Documents-rGO-3D-Plant-Model-main/9120e0cb-4053-45e1-a518-76a79a35fd5a/scratchpad/inspector/tests/validate-startup-model.mjs:11:8 {\r\n  generatedMessage: true,\r\n  code: 'ERR_ASSERTION',\r\n  actual: {\r\n    parts: '60151e007a6a5c2ef7ede2f1fdd96ddd94412fcc27db8bfe2f6ae8236253c2da',\r\n    edges: 'd3f39d64715c5c0823778c27cf8031957fdbe10fb70ecc4e3b40568cde4fc37f',\r\n    routes: 'cbac2199a5490dce7f06cedf341c4182fd1a495b45707e828ce4191a6b924b5e',\r\n    structure: '39c91da9cf4c254193c060e8a9670c8a24b10540d654fe586f54cdaf39fd4186',\r\n    supports: '8736a62154fdc24812098709bc9728e4485bcc516e5c812b7cb7705c38b5a9bb',\r\n    containment: '46f1f7b5160a5f247a5f8f4f33393829d9d86c89fbcaafe7a80d4ae2f9d78d5d',\r\n    access: '0379b6d54d83af7518240bb23f5077f6a7ff480148421c2031d0e5ac7f80e67c',\r\n    connections: '67a05420616327cc3dd834849a03ee642ba7612dead9d047400947793ab551d8',\r\n    graph: 'bd1eb840ea59e6afdb1c316c2388499543e081cbe1be5df091b83b632e8a9a07',\r\n    context: '3ca28b0c06098314dffc938fe869f989c852aa8cb7427f8a53b59bfc4c41db7b'\r\n  },\r\n  expected: {\r\n    parts: 'cde6abde4831ac42051aee7c8eae055608d1b5bc883ee6cff714bdfac32fe0c9',\r\n    edges: 'e4d061afc6ee5421c35fcab49d29bdfe147fd7e24c1d7ccf05d7e6d5ffd95e04',\r\n    routes: '93da18208e41c05d6073ed4a8c1bd00930b906af6269dbb2ef65775bf520132c',\r\n    structure: '961aa70bb6daa547adff7e3f1037eaaf4e2cb826e40bd11e395db3ab10c1e9b6',\r\n    supports: '00cac41b7c22b437683b347a86cb4b7f1f35b25ca43e0b0a25fcdddab39dafba',\r\n    containment: '00810f32be140c030db4f56ea847ca98f65ce638c657c1708580febe827906a0',\r\n    access: '6794f36104b5f2ad9637a1a0cf8f4ea92bbf0374d570bab1d1888d8428af80d2',\r\n    connections: '5b7ea135f4dd8d917298b266252511ff8632ef3437f8ac838095a3f39d17b713',\r\n    graph: 'b7fb7a4afe0d2acfdd5d6384f2a0a87f5ecf6f4aa49fb7317e1e983ddca484c9',\r\n    context: '7fed0a292aac722c28fdd42cfeb50a0cb3dea763dec2f6e488470cde0a66fe66'\r\n  },\r\n  operator: 'deepStrictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.19.0\r\n"
     },
     {
       "name": "validate-startup-recovery.mjs",
@@ -2522,10 +2522,10 @@
         "design": "baseline",
         "scope": "feed",
         "fullRacks": false,
-        "parts": 130560,
+        "parts": 130498,
         "supports": 861,
         "access": 2112,
-        "building": 166,
+        "building": 104,
         "protectedConduits": 9100,
         "checkedEquipmentAssemblies": 6,
         "retainedIntegralParts": 1066,

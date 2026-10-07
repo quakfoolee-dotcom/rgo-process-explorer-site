@@ -9,7 +9,7 @@ export const BUILDING_SHELL={revision:'bldg-2',rect:[-42.25,-32,117.5,45],runs:[
  {id:'S1',axis:'z',c:41.7,lo:-42.25,hi:89},{id:'J',axis:'x',c:89,lo:41.7,hi:45},{id:'S2',axis:'z',c:45,lo:89,hi:117.5}],height:12,thickness:.15,doorHeight:3,doorExtra:.8,vehicleDoor:{width:6,height:4.5},columnPitch:6,
  // Lines and fire points that stand outside the wall on purpose. Insulation, heat trace and containment are open design items (V293).
  outdoorService:{
-  firePoints:['FE-6001','FE-901'],
+  firePoints:['FE-6001'],
   groups:[
    {id:'north-rack',label:'North outdoor rack',routes:['HD-3100 sloped wet collection trunk','P-3111 qualified return to T-1006','P-3183 qualified return to T-1006'],open:['insulation and heat trace (frost, wet condensate in the vent trunk)','drip tray or containment under the acid-condensate and scrubber-blowdown lines','slope and drain verification of the vent trunk']},
    {id:'argon',label:'Argon header and takeoffs',routes:['A-6200 common Ar header','AR-6001 regulated supply to A-6200'],open:['supplier confirmation of the outdoor header route and wall penetrations']},

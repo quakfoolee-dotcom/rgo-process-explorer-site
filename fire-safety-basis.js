@@ -41,7 +41,7 @@ export const FIRE_POINTS=[
  point('FE-702','A-700','Pyrolysis east approach',83,35.8,Math.PI,'powder'),
  point('FE-801','A-800','Dry reagent stair approach',86,9,0,'reactive'),
  point('FE-802','A-800','Doping service frontage',107.4,43.4,Math.PI,'reactive'),
- point('FE-901','A-900','Future filling / dispatch approach',121,27, -Math.PI/2,'general'),
+ point('FE-901','A-900','Future filling / dispatch approach',116,34.2,Math.PI,'general'),
  point('FE-1001','A-1000','Under-rack aisle west side bay',28,6.8,Math.PI,'chemical'),
  point('FE-1002','A-1000','Wastewater central aisle',35,-13,Math.PI,'chemical'),
  point('FE-1003','A-1000','Wastewater east approach',55,-26,Math.PI/2,'chemical'),
