@@ -1,8 +1,8 @@
 {
   "summary": {
     "revision": "emergency-access-91",
-    "pedestrianSegments": 182,
-    "centrelineLengthM": 1298.0499999999993,
+    "pedestrianSegments": 171,
+    "centrelineLengthM": 1275.0500000000002,
     "clearWidthM": 1.2,
     "headroomM": 2.3,
     "protectionAssemblies": 68,
@@ -165,48 +165,6 @@
         "crossings": []
       },
       {
-        "id": "PW-029",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-031",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-033",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-034",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-035",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-036",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-037",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
         "id": "PW-038",
         "clear": true,
         "findings": [],
@@ -232,24 +190,6 @@
       },
       {
         "id": "PW-042",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-043",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-044",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-045",
         "clear": true,
         "findings": [],
         "crossings": []
@@ -552,18 +492,6 @@
       },
       {
         "id": "PW-105",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-109",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-110",
         "clear": true,
         "findings": [],
         "crossings": []
@@ -978,6 +906,12 @@
       },
       {
         "id": "LINK-FE-7002-1",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-153",
         "clear": true,
         "findings": [],
         "crossings": []

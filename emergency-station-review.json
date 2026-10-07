@@ -6,7 +6,7 @@
   "clearStationReservations": 41,
   "sampledPositions": 85,
   "checkedRoutes": 2808,
-  "footprintsChecked": 1017,
+  "footprintsChecked": 1014,
   "exposureCoverage": {
     "exposures": [
       {
@@ -223,10 +223,10 @@
         "material": "Confirm SDS and concentration",
         "nearest": {
           "tag": "ES-160-12",
-          "checkedDistanceM": 1.5,
-          "originGapM": 0.25,
+          "checkedDistanceM": 0.75,
+          "originGapM": 0,
           "finalGapM": 0.7000000000000028,
-          "completeDistanceM": 2.450000000000003
+          "completeDistanceM": 1.4500000000000028
         },
         "status": "verification-pending",
         "distanceLimitM": 6,
@@ -363,10 +363,10 @@
         "material": "Confirm SDS and concentration",
         "nearest": {
           "tag": "ES-200-04",
-          "checkedDistanceM": 3,
-          "originGapM": 0.5,
+          "checkedDistanceM": 2,
+          "originGapM": 0,
           "finalGapM": 0.6999999999999993,
-          "completeDistanceM": 4.199999999999999
+          "completeDistanceM": 2.6999999999999993
         },
         "status": "verification-pending",
         "distanceLimitM": 6,
