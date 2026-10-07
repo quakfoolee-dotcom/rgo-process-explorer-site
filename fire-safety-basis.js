@@ -27,7 +27,7 @@ export const FIRE_AGENT_BASIS={
 const point=(tag,areaId,label,x,z,yaw,agent)=>({tag,areaId,label,position:[x,0,z],yaw,agent,agentApproved:false,rating:null,listedUnit:null,installationApproved:false,inspection:{last:null,next:null,status:'Not commissioned'},modelId:120000+Number(tag.replace(/\D/g,''))});
 export const FIRE_POINTS=[
  point('FE-101','A-100','Premix pedestrian approach',-42,-11.6,Math.PI/2,'chemical'),
- point('FE-141','A-140','Pre-G synthesis approach',-30,-27,Math.PI,'chemical'),
+ point('FE-141','A-140','Pre-G synthesis approach',-31.1,-27,Math.PI/2,'chemical'),
  point('FE-161','A-160','Washing / dryer approach',-20,-29,Math.PI,'powder'),
  point('FE-201','A-200','Oxidation south approach',-6,-26,Math.PI,'chemical'),
  point('FE-202','A-200','Oxidation north approach',-4.8,4.2,0,'chemical'),

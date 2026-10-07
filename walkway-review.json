@@ -1,8 +1,8 @@
 {
   "summary": {
     "revision": "emergency-access-91",
-    "pedestrianSegments": 186,
-    "centrelineLengthM": 1298.499999999999,
+    "pedestrianSegments": 179,
+    "centrelineLengthM": 1289.8499999999992,
     "clearWidthM": 1.2,
     "headroomM": 2.3,
     "protectionAssemblies": 68,
@@ -75,12 +75,6 @@
         "crossings": []
       },
       {
-        "id": "PW-008",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
         "id": "PW-011",
         "clear": true,
         "findings": [],
@@ -106,12 +100,6 @@
       },
       {
         "id": "PW-015",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-016",
         "clear": true,
         "findings": [],
         "crossings": []
@@ -159,18 +147,6 @@
         "crossings": []
       },
       {
-        "id": "PW-024",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-025",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
         "id": "PW-026",
         "clear": true,
         "findings": [],
@@ -190,12 +166,6 @@
       },
       {
         "id": "PW-029",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-030",
         "clear": true,
         "findings": [],
         "crossings": []
@@ -387,12 +357,6 @@
         "crossings": []
       },
       {
-        "id": "PW-065",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
         "id": "PW-066",
         "clear": true,
         "findings": [],
@@ -454,18 +418,6 @@
       },
       {
         "id": "PW-076",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-077",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-078",
         "clear": true,
         "findings": [],
         "crossings": []
@@ -611,24 +563,6 @@
         "crossings": []
       },
       {
-        "id": "PW-106",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-107",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-108",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
         "id": "PW-109",
         "clear": true,
         "findings": [],
@@ -720,12 +654,6 @@
       },
       {
         "id": "PW-124",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-125",
         "clear": true,
         "findings": [],
         "crossings": []
@@ -1002,6 +930,36 @@
       },
       {
         "id": "PW-146",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-147",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-148",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-149",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-150",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-016",
         "clear": true,
         "findings": [],
         "crossings": []

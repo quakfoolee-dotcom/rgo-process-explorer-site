@@ -34,8 +34,8 @@ export const A2000_RETIRED=[];
 export const A2000_IDS=Object.keys(A2000_EQUIPMENT).map(Number);
 const zone=(id,kind,min,max,note)=>({id,kind,areaIds:['A-2000'],min,max,note,designStatus:'proposed'});
 export const A2000_ACCESS_ZONES=[
- zone('WALK-RO-MID','pedestrian',[60,.02,-11.5],[69.5,2.32,-10],'Condensate receiver / permeate tank / carbon filter access, connected to the west link'),
- zone('WALK-RO-WEST','pedestrian',[58.5,.02,-12],[60,2.32,2],'Connect water-area link to RO front approach'),
+ zone('WALK-RO-MID','pedestrian',[58.35,.02,-11.5],[69.5,2.32,-10],'Condensate receiver / permeate tank / carbon filter access, connected to the west link'),
+ zone('WALK-RO-WEST','pedestrian',[57.15,.02,-12],[58.35,2.32,2],'Connect water-area link to RO front approach'),
  zone('WALK-RO-FRONT','pedestrian',[61,.02,.25],[88.25,2.32,2],'Continuous RO service frontage; joins the water-area front aisle'),
  zone('WALK-RO-EAST','pedestrian',[77.9,.02,-17.05],[79.1,2.32,.25],'North-south aisle between the RO and the chemical block; connects the dosing, CIP, pump and RO services to the front aisle'),
  ...[71.25,75.75].map((x,i)=>zone('REMOVE-RO2001-'+String.fromCharCode(65+i),'removal',[x-1.55,.02,-5.95],[x+1.55,4,-3.35],'2 m end withdrawal allowance; six 40-inch elements removed sequentially; vendor tooling / access HOLD')),
