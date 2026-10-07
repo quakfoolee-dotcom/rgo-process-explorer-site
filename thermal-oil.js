@@ -126,14 +126,15 @@ export function buildThermalOil(k,s,base,{acidRoute='r0'}={}){
  // ---- Mains to HX-601 (both acid routes): supply from the coil outlet, return to the air separator.
  setContext(663,'A-5400 thermal-oil mains to HX-601');from=parts.length;
  const pin=k.ports.find(p=>p.id==='BL-HT601-IN'),pret=k.ports.find(p=>p.id==='BL-HT601-RET');if(!pin||!pret)throw Error('D-MDL-05: HX-601 battery limits BL-HT601-IN / -RET not found');
- const corner=[105,SY,ap.z+7],cornerR=[105,RY,ap.z+7],ZM=5.45,XN=78.3;
+ // V315: the package stands outside the east building wall and the perimeter road (x 125); the mains leave its north end on the z 5.45 line and run straight west, over the road and through the wall.
+ const ZM=ap.z+7,XN=78.3,BL=121,BLV=119;
  const sIn=[pin.point[0]+.84,pin.point[1],pin.point[2]],rIn=[pret.point[0]+.84,pret.point[1],pret.point[2]];
- const sPts=[coilOut,[HX,SY,front-.2],[HX,SY,corner[2]],corner,[105,SY,ZM],[XN,SY,ZM],[XN,SY,19.4],[sIn[0]+.4,SY,19.4],[sIn[0]+.4,sIn[1],19.4],[sIn[0]+.4,sIn[1],sIn[2]],sIn];
+ const sPts=[coilOut,[HX,SY,front-.2],[HX,SY,ZM],[BL,SY,ZM],[BLV,SY,ZM],[XN,SY,ZM],[XN,SY,19.4],[sIn[0]+.4,SY,19.4],[sIn[0]+.4,sIn[1],19.4],[sIn[0]+.4,sIn[1],sIn[2]],sIn];
  // Split at the package corner so the Route 2 + 6 branch can tee off a route vertex.
  hot(sPts.slice(0,4),R,'A-5400 supply main (package)',SUPPLY,'H-5400 coil outlet','A-5400 battery limit');
  hot(sPts.slice(3),R,'A-5400 thermal-oil supply main to HX-601',SUPPLY,'A-5400 battery limit','HX-601 (BL-HT601-IN)',{0:{type:'wheel',label:'A-5400 supply battery-limit isolation'},3:{type:'wheel',label:'HX-601 supply isolation'}});
  k.reducer(sIn,pin.point,R,pin.radius,'A-5400 supply DN300 × DN100 at HX-601 (HX-601 nozzle placeholder)');
- const rPts=[rIn,[rIn[0],rIn[1],20.6],[rIn[0],RY,20.6],[XN,RY,20.6],[XN,RY,ZM],[105,RY,ZM],cornerR,[asIn[0],RY,cornerR[2]],[asIn[0],asIn[1],cornerR[2]],asIn];
+ const rPts=[rIn,[rIn[0],rIn[1],20.6],[rIn[0],RY,20.6],[XN,RY,20.6],[XN,RY,ZM],[BLV,RY,ZM],[BL,RY,ZM],[asIn[0],RY,ZM],[asIn[0],asIn[1],ZM],asIn];
  k.reducer(pret.point,rIn,pret.radius,R,'A-5400 return DN100 × DN300 at HX-601 (HX-601 nozzle placeholder)');
  hot(rPts.slice(0,7),R,'A-5400 thermal-oil return main from HX-601',RETURN,'HX-601 (BL-HT601-RET)','A-5400 battery limit',{2:{type:'wheel',label:'HX-601 return isolation'},5:{type:'wheel',label:'A-5400 return battery-limit isolation'}});
  hot(rPts.slice(6),R,'A-5400 return main (package)',RETURN,'A-5400 battery limit','V-5401 air separator');
@@ -146,8 +147,8 @@ export function buildThermalOil(k,s,base,{acidRoute='r0'}={}){
  if(acidRoute==='r26'&&EQUIPMENT[662]&&k.ports.some(p=>p.id.endsWith('PK-1101 thermal oil supply (stage 2)'))){
   setContext(662,'A-5400 thermal-oil branch to PK-1101 (Route 2 + 6)');from=parts.length;
   const pkS=k.ports.find(p=>p.id.endsWith('PK-1101 thermal oil supply (stage 2)')).point,pkR=k.ports.find(p=>p.id.endsWith('PK-1101 thermal oil return (stage 2)')).point;
-  hot([corner,[104.4,SY,corner[2]],[104.4,SY,pkS[2]],[104.4,pkS[1],pkS[2]],pkS],RB,'A-5400 supply branch to PK-1101 stage 2',SUPPLY,'A-5400 supply main','PK-1101',{0:{type:'wheel',label:'PK-1101 supply branch isolation'}});
-  hot([pkR,[103.8,pkR[1],pkR[2]],[103.8,RY,pkR[2]],[103.8,RY,cornerR[2]],cornerR],RB,'A-5400 return branch from PK-1101 stage 2',RETURN,'PK-1101','A-5400 return main',{3:{type:'wheel',label:'PK-1101 return branch isolation'}});
+  hot([[104.4,SY,ZM],[104.4,SY,ZM-1.5],[104.4,SY,pkS[2]],[104.4,pkS[1],pkS[2]],pkS],RB,'A-5400 supply branch to PK-1101 stage 2',SUPPLY,'A-5400 supply main','PK-1101',{0:{type:'wheel',label:'PK-1101 supply branch isolation'}});
+  hot([pkR,[103.8,pkR[1],pkR[2]],[103.8,RY,pkR[2]],[103.8,RY,ZM-1.5],[103.8,RY,ZM]],RB,'A-5400 return branch from PK-1101 stage 2',RETURN,'PK-1101','A-5400 return main',{3:{type:'wheel',label:'PK-1101 return branch isolation'}});
   mark(from,{thermalOil:true,acidRoute:'r26'});branch={supply:'PK-1101',radius:RB};
  }
  // ---- Dedicated rack: T-posts with cantilever arms under the stacked pair (arms just below each insulated pipe).
@@ -156,14 +157,13 @@ export function buildThermalOil(k,s,base,{acidRoute='r0'}={}){
  function tpost(x,z,dir,len,label,ground=0){const top=armY(SY)+.12,col=b(label+' column','frame',[.2,top-ground-.05,.2],[x,ground+.05+(top-ground-.05)/2,z],'steel');const plate=b(label+' baseplate','frame',[.4,.05,.4],[x,ground+.025,z],'steel');if(ground>0)s.join(apad,plate,[x,ground,z],label+' baseplate / pad');else base(plate,[x,ground,z]);s.join(plate,col,[x,ground+.05,z],label+' column / baseplate');
   for(const y of [armY(RY),armY(SY)]){const c0=[x,y,z],c1=[x+dir[0]*len,y,z+dir[2]*len],mid=[(c0[0]+c1[0])/2,y,(c0[2]+c1[2])/2];const arm=b(label+' cantilever arm','frame',[Math.abs(dir[0])*len+.12,.12,Math.abs(dir[2])*len+.12],mid,'steel');s.join(col,arm,c0,label+' arm / column');s.load(arm,label+' pipe shoe');}
   posts2.push(label);return col;}
- tpost(104.35,ap.z+9.9,[1,0,0],.95,'TO-RACK post 1',0);tpost(104.35,4.95,[1,0,0],.95,'TO-RACK post 2',0);
- for(const [i,x] of [98,92,86,80].entries())tpost(x,4.95,[0,0,1],.85,'TO-RACK post '+(3+i),0);
- for(const [i,z] of [9.5,14.5,18.6].entries())tpost(XN+.95,z,[-1,0,0],1.25,'TO-RACK post '+(7+i),0);
- {const x=75.4,z=20.0,top=armY(SY)+.12,col=b('TO-RACK post 10 column','frame',[.2,top-.05,.2],[x,.05+(top-.05)/2,z],'steel');const plate=b('TO-RACK post 10 baseplate','frame',[.4,.05,.4],[x,.025,z],'steel');base(plate,[x,0,z]);s.join(plate,col,[x,.05,z],'TO-RACK post 10 column / baseplate');
-  for(const [y,z0,z1] of [[armY(RY),20.0,20.95],[armY(SY),19.05,20.0]]){const arm=b('TO-RACK post 10 cantilever arm','frame',[.12,.12,z1-z0+.12],[x,y,(z0+z1)/2],'steel');s.join(col,arm,[x,y,z],'TO-RACK post 10 arm / column');s.load(arm,'TO-RACK post 10 pipe shoe');}posts2.push('TO-RACK post 10');}
+ for(const [i,x] of [129.5,121.2,116,111,101,98,92,86,80].entries())tpost(x,4.95,[0,0,1],.85,'TO-RACK post '+(1+i),0);// x offset from the A-5000 T003 rack columns (x = 42 + 6 n, z 4.6); 121.2 and 129.5 straddle the vehicle barrier (x 120.2) and the perimeter road (x 125); the east walkway PW-002 (x 119) stays clear
+ for(const [i,z] of [9.5,14.5,18.6].entries())tpost(XN+.95,z,[-1,0,0],1.25,'TO-RACK post '+(10+i),0);
+ {const x=75.4,z=20.0,top=armY(SY)+.12,col=b('TO-RACK post 13 column','frame',[.2,top-.05,.2],[x,.05+(top-.05)/2,z],'steel');const plate=b('TO-RACK post 13 baseplate','frame',[.4,.05,.4],[x,.025,z],'steel');base(plate,[x,0,z]);s.join(plate,col,[x,.05,z],'TO-RACK post 13 column / baseplate');
+  for(const [y,z0,z1] of [[armY(RY),20.0,20.95],[armY(SY),19.05,20.0]]){const arm=b('TO-RACK post 13 cantilever arm','frame',[.12,.12,z1-z0+.12],[x,y,(z0+z1)/2],'steel');s.join(col,arm,[x,y,z],'TO-RACK post 13 arm / column');s.load(arm,'TO-RACK post 13 pipe shoe');}posts2.push('TO-RACK post 13');}
  tpost(HX+.8,front+2.0,[-1,0,0],.95,'TO-RACK package post (supply riser)',.2);
- tpost(107.0,corner[2]+.65,[0,0,-1],.95,'TO-RACK package post (mains)',.2);
- if(branch)for(const [i,z] of [-8,-14,-20,-26,-32,-36.5].entries())tpost(105.1,z,[-1,0,0],1.6,'TO-RACK branch post '+(i+1),0);
+ tpost(HX-1.6,ZM+.65,[0,0,-1],.95,'TO-RACK package post (mains)',.2);
+ if(branch)for(const [i,z] of [1.5,-3,-8,-14,-20,-26,-32,-36.5].entries())tpost(105.1,z,[-1,0,0],1.6,'TO-RACK branch post '+(i+1),0);
  mark(from,{});
  return {basis:THERMAL_OIL_BASIS,routes,branch,rackPosts:posts2.length,partIds:parts.slice(first).map(p=>p.id),consumer:{id:'HX-601',supply:'BL-HT601-IN',return:'BL-HT601-RET',medium:'thermal oil 280 / 250 °C (D-A5000-04)'}};
 }

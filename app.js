@@ -72,7 +72,7 @@ window.rgoStartup?.setProgress({phase:'Preparing the 3D view',progress:0});
 await new Promise(resolve=>setTimeout(resolve,0));
 let renderer;try{renderer=new T.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});}catch(e){$('loading').hidden=true;$('error').hidden=false;throw e;}
 renderer.setPixelRatio(Math.min(devicePixelRatio,1.8));renderer.localClippingEnabled=true;renderer.shadowMap.enabled=true;renderer.shadowMap.type=T.PCFSoftShadowMap;renderer.shadowMap.autoUpdate=false;const THEME_SCENE={dark:{bg:0x111d2b,ground:0x152435,grid:0x3c5368},light:{bg:0xdde6ee,ground:0xc3cfda,grid:0x8396a8}},sceneTheme=()=>THEME_SCENE[document.documentElement.dataset.theme==='light'?'light':'dark'];renderer.setClearColor(sceneTheme().bg);renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.04;renderer.outputColorSpace=T.SRGBColorSpace;viewport.appendChild(renderer.domElement);
-const scene=new T.Scene();scene.background=new T.Color(sceneTheme().bg);const perspectiveCamera=new T.PerspectiveCamera(36,1,.05,300),orthographicCamera=new T.OrthographicCamera(-6,6,6,-6,.05,300);let camera=orthographicCamera,controls;camera.position.set(8,7,10);
+const scene=new T.Scene();scene.background=new T.Color(sceneTheme().bg);const perspectiveCamera=new T.PerspectiveCamera(36,1,.05,400),orthographicCamera=new T.OrthographicCamera(-6,6,6,-6,.05,400);let camera=orthographicCamera,controls;camera.position.set(8,7,10);
 scene.add(new T.HemisphereLight(0xdbedff,0x354658,1.7));
 const keyLight=new T.DirectionalLight(0xfff4e5,3.8);keyLight.position.set(2,17,11);keyLight.target.position.set(10,0,0);scene.add(keyLight.target);keyLight.castShadow=true;keyLight.shadow.mapSize.set(2048,2048);Object.assign(keyLight.shadow.camera,{left:-32,right:32,top:32,bottom:-32,near:.1,far:90});keyLight.shadow.bias=-.0002;keyLight.shadow.normalBias=.015;keyLight.shadow.radius=3;scene.add(keyLight);
 for(const[p,power,color]of[[[6,7,-4],5.2,0xcce4ff],[[-6,4,-3],2.8,0xeaf4ff],[[1,7,6],1.0,0xffffff]]){const l=new T.DirectionalLight(color,power);l.position.set(...p);scene.add(l)}
@@ -398,7 +398,7 @@ function routeHex(record){return flowColor(record,flowScheme,serviceColors);}
 let hoverLabel=null,hoverTime=0;
 const asmeActive=()=>colorMode==='flow'&&flowScheme==='asme'&&!(productJourney?.active||thermalTrace?.active);
 // ASME pipe markers (A13.1 summary): real bands on the pipes, sized from the pipe diameter, plus screen-size tags for the overview.
-let pipeMarkers=null,pipeBands=null,pipeTags=[],pipeStats={routes:0,directedRoutes:0,unmarked:0,total:0,byReason:{}},bandSig='';const tagState={seen:'',seenAt:0,applied:''},markerTextures=new Map();
+let pipeNames=true,pipeMarkers=null,pipeBands=null,pipeTags=[],pipeStats={routes:0,directedRoutes:0,unmarked:0,total:0,byReason:{}},bandSig='';const tagState={seen:'',seenAt:0,applied:''},markerTextures=new Map();
 function markerTexture(rec,variant,size){
  const key=rec.asmeClass+'|'+rec.asmeLegend+'|'+variant+'|'+size.index;let tex=markerTextures.get(key);if(tex)return tex;
  const cls=ASME_CLASSES[rec.asmeClass],W=512,H=Math.max(48,Math.round(W*size.heightMm/size.lengthMm)),c=document.createElement('canvas');c.width=W;c.height=H;const x=c.getContext('2d');
@@ -430,9 +430,13 @@ function buildPipeBands(){
  return list;
 }
 const bandMatrix=new T.Matrix4(),bandPos=new T.Vector3();
+// The Pipe names button works only in the Pipe ID view.
+function syncPipeNamesButton(){const b=$('pipe-label-toggle');if(!b)return;const on=asmeActive();if(b.disabled===on){b.disabled=!on;b.title=on?'Show or hide the pipe names and markers':'Pipe names are shown in the Pipe ID view (Flow routes, ASME A13.1 scheme)';}}
 function updatePipeBands(){
+ syncPipeNamesButton();
  if(!asmeActive()){if(pipeBands)for(const g of pipeBands)g.mesh.visible=false;bandSig='';return;}
  if(!pipeBands)pipeBands=buildPipeBands();
+ if(!pipeNames){for(const g of pipeBands)g.mesh.visible=false;bandSig='';return;}
  const sig=[amount.toFixed(3),flowFocus,labelRevision].join();if(sig===bandSig)return;bandSig=sig;
  for(const g of pipeBands){g.mesh.visible=true;g.quads.forEach((q,k)=>{const part=partMap.get(q.part),shown=part?.visible&&(!flowFocus||q.cls===flowFocus);
    if(!shown)bandMatrix.makeScale(0,0,0);else{bandMatrix.makeBasis(q.XL,q.YH,q.Z);bandPos.copy(q.base).addScaledVector(part.offset,amount);bandMatrix.setPosition(bandPos);}
@@ -449,10 +453,11 @@ function buildHazardReview(){
 const pxWorld=()=>camera.isOrthographicCamera?(camera.top-camera.bottom)/camera.zoom/renderer.domElement.clientHeight:2*Math.tan(T.MathUtils.degToRad(camera.fov/2))*camera.position.distanceTo(controls.target)/renderer.domElement.clientHeight;
 const labelTextures=new Map();
 function legendTexture(rec){const key=rec.asmeClass+'|'+rec.asmeLegend;let tex=labelTextures.get(key);if(tex)return tex;const cls=ASME_CLASSES[rec.asmeClass],c=document.createElement('canvas'),x=c.getContext('2d');x.font='600 30px system-ui,sans-serif';const w=Math.ceil(x.measureText(rec.asmeLegend).width)+28;c.width=w;c.height=48;x.font='600 30px system-ui,sans-serif';x.fillStyle=cls.field;x.fillRect(0,0,w,48);x.strokeStyle=cls.border||'#0b1118';x.lineWidth=3;x.strokeRect(1.5,1.5,w-3,45);x.fillStyle=cls.letters;x.textBaseline='middle';x.fillText(rec.asmeLegend,14,25);tex=new T.CanvasTexture(c);tex.colorSpace=T.SRGBColorSpace;tex.userData={ratio:w/48};labelTextures.set(key,tex);return tex;}
-// Overview tags: one screen-size tag per line where the real markers are too small to read, only on pipes that can be seen from the camera.
+// Overview tags: one screen-size tag per line where the real markers are too small to read, only on pipes that can be seen from the camera (the ray test
+// decides), then drawn on top so a pipe in front never cuts a tag (V316).
 const tagWorld=new T.Vector3(),tagView=new T.Vector3(),tagDir=new T.Vector3(),tagNdc=new T.Vector2();
 function updatePipeTags(now){
- const on=asmeActive()&&pipeMarkers;if(!on){for(const l of pipeTags)l.visible=false;tagState.applied='';return;}
+ const on=asmeActive()&&pipeNames&&pipeMarkers;if(!on){for(const l of pipeTags)l.visible=false;tagState.applied='';return;}
  const wpp=pxWorld();if(wpp<.012||wpp>.2){for(const l of pipeTags)l.visible=false;tagState.applied='';return;}
  const sig=[camera.position.x,camera.position.y,camera.position.z,camera.zoom,controls.target.x,controls.target.z,amount,flowFocus,labelRevision].map(v=>typeof v==='number'?v.toFixed(2):v).join();
  if(sig!==tagState.seen){tagState.seen=sig;tagState.seenAt=now;return;}
@@ -470,7 +475,7 @@ function updatePipeTags(now){
   if(first){const dP=tagWorld.clone().sub(raycaster.ray.origin).dot(raycaster.ray.direction);if(first.distance<dP-(m.outer*2+.12+wpp*14))continue;}// something is in front of this pipe (pipes within the tag's forward shift do not count)
   taken.push([sx,sy,w]);
   if(camera.isOrthographicCamera)camera.getWorldDirection(tagDir).negate();else tagDir.copy(camera.position).sub(tagWorld).normalize();
-  let sp=pipeTags[n];if(!sp){sp=new T.Sprite(new T.SpriteMaterial({depthTest:true,depthWrite:false,toneMapped:false}));sp.renderOrder=6;scene.add(sp);pipeTags[n]=sp;}
+  let sp=pipeTags[n];if(!sp){sp=new T.Sprite(new T.SpriteMaterial({depthTest:false,depthWrite:false,toneMapped:false}));sp.renderOrder=6;scene.add(sp);pipeTags[n]=sp;}
   if(sp.material.map!==tex){sp.material.map=tex;sp.material.needsUpdate=true;}sp.position.copy(tagWorld).addScaledVector(tagDir,m.outer*2+wpp*14);sp.scale.set(w*wpp,pxH*wpp,1);sp.visible=true;n++;}
 }
 // Check for the browser: every marker sits on its own pipe part (also for an exploded view), and a sample is found by a ray fired at the pipe.
@@ -532,7 +537,8 @@ $('download-configuration').onclick=()=>{const snapshot=registerSnapshot(model,S
 $('color-mode').onchange=()=>setColorMode($('color-mode').value);
 $('flow-scheme').replaceChildren(...Object.entries(FLOW_SCHEMES).map(([value,label])=>new Option(label,value)));$('flow-scheme').value=flowScheme;
 $('flow-scheme').onchange=()=>{flowScheme=$('flow-scheme').value;flowFocus=null;updatePipeBands();renderColorLegend();if(selected)updatePartFlowDetails(selected);dirty=true;};
-const pipeIdButton=$('pipe-id-toggle'),syncPipeIdButton=()=>pipeIdButton?.setAttribute('aria-pressed',String(colorMode==='flow'&&flowScheme==='asme'));
+const pipeIdButton=$('pipe-id-toggle'),syncPipeIdButton=()=>{pipeIdButton?.setAttribute('aria-pressed',String(colorMode==='flow'&&flowScheme==='asme'));syncPipeNamesButton();};
+if($('pipe-label-toggle'))$('pipe-label-toggle').onclick=()=>{pipeNames=!pipeNames;const b=$('pipe-label-toggle');b.setAttribute('aria-pressed',String(pipeNames));b.textContent=pipeNames?'Pipe names on':'Pipe names off';bandSig='';tagState.applied='';tagState.seen='';updatePipeBands();dirty=true;};
 if(pipeIdButton){pipeIdButton.onclick=()=>{const on=colorMode==='flow'&&flowScheme==='asme',mode=$('color-mode'),scheme=$('flow-scheme');if(on){mode.value='material';mode.onchange();}else{mode.value='flow';mode.onchange();scheme.value='asme';scheme.onchange();}syncPipeIdButton();};$('color-mode').addEventListener('change',syncPipeIdButton);$('flow-scheme').addEventListener('change',syncPipeIdButton);}
 $('clear-flow-focus').onclick=()=>{flowFocus=null;renderColorLegend();dirty=true;};
 for(const a of AREAS){if(Object.values(engineering).some(e=>e.areaId===a.id)||model.floorAllocation?.areas.some(area=>area.id===a.id))$('area-filter').append(new Option(areaTitle(a.id),a.id));}

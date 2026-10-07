@@ -40,10 +40,10 @@ export const EQUIPMENT_NOTES={
    {label:"Basis",text:"Real-world geometry and the thermal-oil mains to HX-601 (and PK-1101 under Route 2 + 6) on a dedicated rack: D-MDL-05 (QFL 2026-10-01), dist/thermal-oil.js; dimensions are model choices pending vendor data (U8)."}
   ]},
  "A-5400":
-  {summary:"Thermal-oil heater package, 14 MW, on a 10 × 18 m pad in the future-expansion block, connected to HX-601 by DN300 thermal-oil mains.",notes:[
+  {summary:"Thermal-oil heater package, 14 MW, on a 10 × 18 m pad outside the east building wall, connected to HX-601 by DN300 thermal-oil mains.",notes:[
    {label:"Basis",text:"Envelope from FEED-PE-DAT-140 (D-MDL-01 release 3, LAY-10 ruling L1)."},
    {label:"Connections",text:"Connected: DN300 thermal-oil mains to HX-601 (and DN150 to PK-1101 under Route 2 + 6) on a dedicated rack, D-MDL-05 (QFL 2026-10-01)."},
-   {label:"Position and spacing",text:"Future-expansion block; ≈ 27 m from the A-600 edge (DR-601), ≈ 14 m from the A-800 block edge and ≈ 17 m from the A-1100 bund — HAZOP inputs (U8, FEED-PS-HOP-001), not a spacing ruling."}
+   {label:"Position and spacing",text:"Outside the east building wall (V315); ≈ 53 m from the A-600 edge (DR-601), ≈ 15 m from the A-800 block edge, ≈ 37 m from the PY-801 hydrogen off-gas point and ≈ 17 m from the A-900 block; east of the perimeter logistics road (x 125) — HAZOP inputs (U8, FEED-PS-HOP-001), not a spacing ruling."}
   ]},
  "T-5401":
   {summary:"Thermal-oil drain / storage tank: a horizontal drum Ø 2.6 × 6 m (≈ 30 m³) on saddles at grade inside the curbed pad.",notes:[
