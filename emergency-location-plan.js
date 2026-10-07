@@ -589,5 +589,21 @@ export const EMERGENCY_LOCATION_PLAN=[
     "servesTaskIds": [
       "LOCAL-R201D"
     ]
+  },
+  {
+    "id": 122033,
+    "tag": "ES-7001",
+    "areaId": "SHARED",
+    "x": -10.4,
+    "z": 37.7,
+    "yaw": 3.141592653589793,
+    "walkPoint": [
+      -10.4,
+      36.2
+    ],
+    "reason": "Local coverage for Annex laboratory bench and fume-hood work",
+    "servesTaskIds": [
+      "EXP-7001-LAB"
+    ]
   }
 ];

@@ -400,6 +400,16 @@
       "streamId": "S-6000-EW-ES202",
       "evidenceStatus": "model-derived",
       "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-SOURCE-S-6000-EW-ES7001",
+      "type": "feeds",
+      "target": "ES-7001",
+      "role": "ES-7001 emergency-water obligation",
+      "status": "Capacity, pressure, temperature, duration and routing require approval",
+      "streamId": "S-6000-EW-ES7001",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
     }
   ]
 }

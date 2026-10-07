@@ -400,6 +400,16 @@
       "streamId": "S-6000-RUNOFF-ES202",
       "evidenceStatus": "model-derived",
       "reviewStatus": "open"
+    },
+    {
+      "id": "REL-IF-A6000-EW-RUNOFF-S-6000-RUNOFF-ES7001",
+      "type": "receivesFrom",
+      "target": "ES-7001",
+      "role": "ES-7001 segregated runoff obligation",
+      "status": "Destination, compatibility, capacity and drainage unresolved",
+      "streamId": "S-6000-RUNOFF-ES7001",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open"
     }
   ]
 }

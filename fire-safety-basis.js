@@ -50,7 +50,9 @@ export const FIRE_POINTS=[
  point('FE-3001','A-3000','Vent-treatment approach',-35,11.7,Math.PI,'chemical'),
  point('FE-4001','A-4000','Compressed-air approach',-25,11.7,Math.PI,'utility'),
  point('FE-5001','A-5000','Heating / cooling approach',-24,30.5,Math.PI,'utility'),
- point('FE-6001','A-6000','Argon source approach',40,49.6,0,'utility')
+ point('FE-6001','A-6000','Argon source approach',40,49.6,0,'utility'),
+ point('FE-7001','SHARED','Annex laboratory approach',-9,35.2,0,'general'),
+ point('FE-7002','SHARED','Annex entrance hall',-34.7,39.6,-Math.PI/2,'general')
 ];
 export const FIRE_REVIEW_HOLDS=[
  {id:'FP-PL601',areaId:'A-600',label:'Dryer elevated operating decks',reason:'Separate elevated stations and their brackets/service bays require platform layout and load review. Grade coverage is not credited upstairs.'},

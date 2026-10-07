@@ -331,7 +331,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
   "connections": [
     {
       "id": "EXP-101-TRANSFER",
-      "label": "A-100 · Acid transfer / disconnection",
+      "label": "A-100 \u00b7 Acid transfer / disconnection",
       "area": "A-100",
       "point": [
         -41,
@@ -345,7 +345,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
     },
     {
       "id": "EXP-501-SAMPLE",
-      "label": "A-500 · T-501 sampling approach",
+      "label": "A-500 \u00b7 T-501 sampling approach",
       "area": "A-500",
       "point": [
         31,
@@ -355,7 +355,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
     },
     {
       "id": "EXP-501-SERVICE",
-      "label": "A-500 · US-501 cleaning / service",
+      "label": "A-500 \u00b7 US-501 cleaning / service",
       "area": "A-500",
       "point": [
         38,
@@ -365,7 +365,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
     },
     {
       "id": "EXP-601-FEED",
-      "label": "A-600 · T-601 feed-side work",
+      "label": "A-600 \u00b7 T-601 feed-side work",
       "area": "A-600",
       "point": [
         47,
@@ -379,7 +379,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
     },
     {
       "id": "EXP-601-PUMP",
-      "label": "A-600 · P-601 feed / recycle service",
+      "label": "A-600 \u00b7 P-601 feed / recycle service",
       "area": "A-600",
       "point": [
         53.75,
@@ -393,7 +393,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
     },
     {
       "id": "EXP-602-TRANSFER",
-      "label": "A-600 · T-602 powder-transfer service",
+      "label": "A-600 \u00b7 T-602 powder-transfer service",
       "area": "A-600",
       "point": [
         62,
@@ -403,7 +403,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
     },
     {
       "id": "EXP-600-WASH",
-      "label": "A-600 · Wash return / collection",
+      "label": "A-600 \u00b7 Wash return / collection",
       "area": "A-600",
       "point": [
         74.25,
@@ -417,7 +417,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
     },
     {
       "id": "EXP-701-FEED",
-      "label": "A-700 · Feed equipment grade service",
+      "label": "A-700 \u00b7 Feed equipment grade service",
       "area": "A-700",
       "point": [
         62,
@@ -431,7 +431,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
     },
     {
       "id": "EXP-702-TRANSFER",
-      "label": "A-700 · T-702 product-transfer service",
+      "label": "A-700 \u00b7 T-702 product-transfer service",
       "area": "A-700",
       "point": [
         86.5,
@@ -441,7 +441,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
     },
     {
       "id": "EXP-701-OFFGAS",
-      "label": "A-700 · Off-gas equipment service",
+      "label": "A-700 \u00b7 Off-gas equipment service",
       "area": "A-700",
       "point": [
         83,
@@ -451,7 +451,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
     },
     {
       "id": "EXP-801-FEED",
-      "label": "A-800 · RV-801 lower feed service",
+      "label": "A-800 \u00b7 RV-801 lower feed service",
       "area": "A-800",
       "point": [
         93.75,
@@ -465,7 +465,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
     },
     {
       "id": "EXP-801-PRODUCT",
-      "label": "A-800 · PY-801 discharge service",
+      "label": "A-800 \u00b7 PY-801 discharge service",
       "area": "A-800",
       "point": [
         111.5,
@@ -479,7 +479,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
     },
     {
       "id": "EXP-801-OFFGAS",
-      "label": "A-800 · Off-gas maintenance approach",
+      "label": "A-800 \u00b7 Off-gas maintenance approach",
       "area": "A-800",
       "point": [
         107.75,
@@ -493,7 +493,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
     },
     {
       "id": "EXP-2001-CIP",
-      "label": "A-2000 · CIP-2001 chemical-service approach",
+      "label": "A-2000 \u00b7 CIP-2001 chemical-service approach",
       "area": "A-2000",
       "point": [
         80.75,
@@ -507,7 +507,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
     },
     {
       "id": "EXP-2001-WASTE",
-      "label": "A-2000 · Spent-CIP transfer",
+      "label": "A-2000 \u00b7 Spent-CIP transfer",
       "area": "A-2000",
       "point": [
         86.5,
@@ -521,7 +521,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
     },
     {
       "id": "EXP-2001-DOSE",
-      "label": "A-2000 · Antiscalant dosing service",
+      "label": "A-2000 \u00b7 Antiscalant dosing service",
       "area": "A-2000",
       "point": [
         78.5,
@@ -535,7 +535,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
     },
     {
       "id": "EXP-2001-RO",
-      "label": "A-2000 · RO cleaning / membrane service",
+      "label": "A-2000 \u00b7 RO cleaning / membrane service",
       "area": "A-2000",
       "point": [
         78.5,
@@ -549,7 +549,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
     },
     {
       "id": "EXP-1001-NAOH",
-      "label": "A-1000 · NaOH dosing service",
+      "label": "A-1000 \u00b7 NaOH dosing service",
       "area": "A-1000",
       "point": [
         20.25,
@@ -563,7 +563,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
     },
     {
       "id": "EXP-1002-LIME",
-      "label": "A-1000 · Lime-slurry dosing service",
+      "label": "A-1000 \u00b7 Lime-slurry dosing service",
       "area": "A-1000",
       "point": [
         28.75,
@@ -577,7 +577,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
     },
     {
       "id": "EXP-1003-BARIUM",
-      "label": "A-1000 · Conditional BaCl2 dosing",
+      "label": "A-1000 \u00b7 Conditional BaCl2 dosing",
       "area": "A-1000",
       "point": [
         36.5,
@@ -591,7 +591,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
     },
     {
       "id": "EXP-1004-HCL",
-      "label": "A-1000 · HCl dosing service",
+      "label": "A-1000 \u00b7 HCl dosing service",
       "area": "A-1000",
       "point": [
         42.5,
@@ -601,7 +601,7 @@ export const EMERGENCY_ACCESS_LAYOUT={
     },
     {
       "id": "EXP-1005-FLOC",
-      "label": "A-1000 · Flocculant preparation service",
+      "label": "A-1000 \u00b7 Flocculant preparation service",
       "area": "A-1000",
       "point": [
         49.25,
@@ -612,60 +612,74 @@ export const EMERGENCY_ACCESS_LAYOUT={
         -24
       ],
       "linkLengthM": 8.75
+    },
+    {
+      "id": "EXP-7001-LAB",
+      "label": "SHARED \u00b7 Annex laboratory bench and fume-hood work",
+      "area": "SHARED",
+      "point": [
+        -11,
+        36.2
+      ],
+      "walkPoint": [
+        -11,
+        36.2
+      ],
+      "linkLengthM": 0
     }
   ],
   "holds": [
     {
       "id": "EXP-501-SAMPLE",
-      "label": "A-500 · T-501 sampling approach: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+      "label": "A-500 \u00b7 T-501 sampling approach: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
     },
     {
       "id": "EXP-501-SERVICE",
-      "label": "A-500 · US-501 cleaning / service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+      "label": "A-500 \u00b7 US-501 cleaning / service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
     },
     {
       "id": "EXP-602-TRANSFER",
-      "label": "A-600 · T-602 powder-transfer service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+      "label": "A-600 \u00b7 T-602 powder-transfer service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
     },
     {
       "id": "EXP-702-TRANSFER",
-      "label": "A-700 · T-702 product-transfer service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+      "label": "A-700 \u00b7 T-702 product-transfer service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
     },
     {
       "id": "EXP-701-OFFGAS",
-      "label": "A-700 · Off-gas equipment service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+      "label": "A-700 \u00b7 Off-gas equipment service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
     },
     {
       "id": "EXP-1004-HCL",
-      "label": "A-1000 · HCl dosing service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
+      "label": "A-1000 \u00b7 HCl dosing service: no conservative full-width grade connection; revise local equipment/access before claiming coverage."
     },
     {
       "id": "EXP-201-UPPER",
-      "label": "A-200 · Upper reactor work: Confirm actual platform work position and same-level emergency washing provision; grade route not credited."
+      "label": "A-200 \u00b7 Upper reactor work: Confirm actual platform work position and same-level emergency washing provision; grade route not credited."
     },
     {
       "id": "EXP-166-PLATFORM",
-      "label": "A-160 · Filter upper work: Platform and task elevation require survey; grade station provides no elevated coverage credit."
+      "label": "A-160 \u00b7 Filter upper work: Platform and task elevation require survey; grade station provides no elevated coverage credit."
     },
     {
       "id": "EXP-601-ATOMIZER",
-      "label": "A-600 · DR-601 atomizer work: Equipment service elevation shown; standing platform and same-level washing provision require design."
+      "label": "A-600 \u00b7 DR-601 atomizer work: Equipment service elevation shown; standing platform and same-level washing provision require design."
     },
     {
       "id": "EXP-601-FILTER",
-      "label": "A-600 · F-601 filter opening: Equipment service elevation shown; confirm standing deck and same-level emergency access."
+      "label": "A-600 \u00b7 F-601 filter opening: Equipment service elevation shown; confirm standing deck and same-level emergency access."
     },
     {
       "id": "EXP-701-UPPER",
-      "label": "A-700 · LK-701 / H-701 upper feed work: Elevated work position and local washing provision unresolved; do not project onto grade."
+      "label": "A-700 \u00b7 LK-701 / H-701 upper feed work: Elevated work position and local washing provision unresolved; do not project onto grade."
     },
     {
       "id": "EXP-802-DOCK",
-      "label": "A-800 · LK-802 reagent docking: Docking interface elevation shown; operator position, platform and local combination station require coordinated design."
+      "label": "A-800 \u00b7 LK-802 reagent docking: Docking interface elevation shown; operator position, platform and local combination station require coordinated design."
     },
     {
       "id": "EXP-802-FEEDER",
-      "label": "A-800 · PL-801 feeder service: Same-level station space, water and runoff design required; ground station is not credited."
+      "label": "A-800 \u00b7 PL-801 feeder service: Same-level station space, water and runoff design required; ground station is not credited."
     }
   ]
 };

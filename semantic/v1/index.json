@@ -5878,6 +5878,22 @@
       }
     },
     {
+      "assetId": "ES-7001",
+      "area": "SHARED",
+      "equipmentId": 122033,
+      "recordScope": "asset",
+      "endpoints": {
+        "assets": "./assets/ES-7001.json",
+        "relationships": "./relationships/ES-7001.json",
+        "streams": "./streams/ES-7001.json",
+        "documents": "./documents/ES-7001.json",
+        "state": "./state/ES-7001.json",
+        "geometry": "./geometry/ES-7001.json",
+        "provenance": "./provenance/ES-7001.json",
+        "instruments": "./instruments/ES-7001.json"
+      }
+    },
+    {
       "assetId": "R-101",
       "area": "A-100",
       "equipmentId": 36,
@@ -9354,6 +9370,14 @@
       "type": "GeometryBinding"
     },
     {
+      "id": "ES-7001",
+      "type": "Asset"
+    },
+    {
+      "id": "GEOMETRY-ES-7001",
+      "type": "GeometryBinding"
+    },
+    {
       "id": "R-101",
       "type": "Asset"
     },
@@ -9647,6 +9671,10 @@
     },
     {
       "id": "A-100",
+      "type": "Area"
+    },
+    {
+      "id": "SHARED",
       "type": "Area"
     }
   ],
@@ -10373,6 +10401,9 @@
     ],
     "122032": [
       "ES-202"
+    ],
+    "122033": [
+      "ES-7001"
     ],
     "126117225": [
       "P-SC601"

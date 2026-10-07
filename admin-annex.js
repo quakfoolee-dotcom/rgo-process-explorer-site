@@ -1,7 +1,7 @@
 import {wallPanels} from './building-shell.js';
 // Proposed administration annex (office, laboratory, control room) in the south-west corner of the process building.
 // Stage 1 (V299): shell, floors, walls with doors and windows, blast wall on the plant side, roof layer. Furniture and equipment follow.
-export const ANNEX={revision:'annex-3',x0:-41.9,x1:5.5,z0:31.7,z1:41.4,height:3.4,roof:{y0:3.4,y1:3.6},
+export const ANNEX={revision:'annex-4',x0:-41.9,x1:5.5,z0:31.7,z1:41.4,height:3.4,roof:{y0:3.4,y1:3.6},
  note:'Proposed concept layout only: no structural, fire-rating, blast, ventilation or egress design. The north and east walls (plant side) are drawn as 0.4 m reinforced concrete for a control room that needs a blast study; ratings are unqualified.',
  corridor:{z0:31.9,z1:33.5,walkZ:32.7},
  owners:{shell:123000,lobby:123001,wc:123002,office:123003,lab:123004,control:123005,server:123006,corridor:123007}};
@@ -134,8 +134,6 @@ export function annexFurniturePlan(){
  g=grp(LAB,'fridge','Sample fridge');add(LAB,g,'Annex sample fridge',-17.6,.9,36.8,.6,1.8,.6,'dial');
  g=bench(LAB,-13.5,40.9,6,.7,'South wall bench');onBench(LAB,g,'Annex spectrophotometer',-16.2,40.9,.5,.25,.4,'dial');onBench(LAB,g,'Annex pH meter',-14.6,40.9,.2,.3,.2,'dial');onBench(LAB,g,'Annex microscope',-13.2,40.9,.25,.4,.25,'dark');onBench(LAB,g,'Annex stirrer hotplate',-11.8,40.9,.3,.12,.3,'dark');onBench(LAB,g,'Annex lab computer',-10.9,40.9,.4,.3,.15,'blue');
  g=grp(LAB,'waste','Waste container 1');add(LAB,g,'Annex waste container',-9.3,.3,40.8,.4,.6,.4,'safetyYellow');g=grp(LAB,'waste','Waste container 2');add(LAB,g,'Annex waste container',-8.7,.3,40.8,.4,.6,.4,'safetyYellow');
- g=grp(LAB,'eyewash','Eyewash and safety shower');add(LAB,g,'Annex eyewash pedestal',-12.0,.45,35.4,.1,.9,.1,'steel');add(LAB,g,'Annex eyewash bowl',-12.0,.95,35.4,.4,.1,.4,'green');add(LAB,g,'Annex shower pipe',-12.0,1.65,35.7,.04,3.3,.04,'steel');add(LAB,g,'Annex shower head',-12.0,3.1,35.55,.3,.05,.3,'green');add(LAB,g,'Annex eyewash sign',-12.0,2.0,35.0,.3,.3,.02,'green');
- g=grp(LAB,'extinguisher','Lab fire extinguisher');add(LAB,g,'Annex lab fire extinguisher',-8.4,.45,35.2,.18,.9,.18,'red');add(LAB,g,'Annex fire extinguisher sign',-8.1,1.7,35.2,.02,.3,.3,'red');
  // balance and instrument room
  g=grp(LAB,'table','Balance table');add(LAB,g,'Annex balance table top',-5.0,.76,36.0,1.2,.05,.7,'steel');for(const s of[-1,1])add(LAB,g,'Annex balance table leg',-5.0+s*.5,.37,36.0,.06,.74,.6,'steel');add(LAB,g,'Annex analytical balance',-5.0,.9,36.0,.3,.2,.3,'dial');
  g=grp(LAB,'cabinet','Instrument cabinet');add(LAB,g,'Annex instrument cabinet',-4.45,.9,34.5,.5,1.8,.9,'inner');

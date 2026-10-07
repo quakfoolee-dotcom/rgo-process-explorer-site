@@ -1,8 +1,8 @@
 {
   "summary": {
     "revision": "emergency-access-91",
-    "pedestrianSegments": 178,
-    "centrelineLengthM": 1289.8499999999992,
+    "pedestrianSegments": 182,
+    "centrelineLengthM": 1298.0499999999993,
     "clearWidthM": 1.2,
     "headroomM": 2.3,
     "protectionAssemblies": 68,
@@ -11,7 +11,7 @@
     "operatingCheckpointsConnected": 56,
     "localEquipmentApproachesConnected": 24,
     "gradeStairApproaches": 2,
-    "eyewashGradeApproaches": 40,
+    "eyewashGradeApproaches": 41,
     "unresolvedEyewashApproaches": [],
     "crossings": 1,
     "walkingTours": 9,
@@ -25,7 +25,7 @@
     ],
     "exposedDrainRunM": 0.7,
     "qualified": false,
-    "additionalEmergencyTaskApproaches": 16,
+    "additionalEmergencyTaskApproaches": 17,
     "unresolvedEmergencyTaskApproaches": [
       "EXP-501-SAMPLE",
       "EXP-501-SERVICE",
@@ -954,6 +954,30 @@
       },
       {
         "id": "PW-016",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-151",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-152",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-7001-1",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "LINK-FE-7002-1",
         "clear": true,
         "findings": [],
         "crossings": []

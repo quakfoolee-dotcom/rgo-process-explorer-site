@@ -1,12 +1,12 @@
 {
   "revision": "emergency-stations-91",
   "configuration": "baseline",
-  "stations": 40,
-  "connectedApproaches": 40,
-  "clearStationReservations": 40,
-  "sampledPositions": 84,
-  "checkedRoutes": 2698,
-  "footprintsChecked": 1016,
+  "stations": 41,
+  "connectedApproaches": 41,
+  "clearStationReservations": 41,
+  "sampledPositions": 85,
+  "checkedRoutes": 2808,
+  "footprintsChecked": 1017,
   "exposureCoverage": {
     "exposures": [
       {
@@ -1269,6 +1269,34 @@
         "complianceVerified": false
       },
       {
+        "id": "EXP-7001-LAB",
+        "area": "SHARED",
+        "label": "SHARED · Annex laboratory bench and fume-hood work",
+        "point": [
+          -11,
+          36.2
+        ],
+        "elevationM": 0,
+        "material": "Laboratory acids, alkalis and reagents",
+        "work": "Sample preparation, reagent handling and fume-hood work; chemical inventory and quantities pending",
+        "eyeRisk": "unassigned",
+        "skinRisk": "unassigned",
+        "riskAssumption": "high",
+        "exposureVerified": false,
+        "basis": "Proposed task position from current equipment geometry; confirm working reach, task, SDS and concentration",
+        "nearest": {
+          "tag": "ES-7001",
+          "checkedDistanceM": 0.5999999999999996,
+          "originGapM": 0,
+          "finalGapM": 0.6000000000000014,
+          "completeDistanceM": 1.200000000000001
+        },
+        "status": "verification-pending",
+        "distanceLimitM": 6,
+        "timeLimitS": 5,
+        "complianceVerified": false
+      },
+      {
         "id": "EXP-2001-RO",
         "area": "A-2000",
         "label": "A-2000 · RO cleaning / membrane service",
@@ -1593,8 +1621,8 @@
         "complianceVerified": false
       }
     ],
-    "total": 59,
-    "withinDistanceScreen": 42,
+    "total": 60,
+    "withinDistanceScreen": 43,
     "areas": [
       {
         "area": "A-100",
@@ -1805,7 +1833,7 @@
         "status": "assessment-incomplete"
       }
     ],
-    "gradeTotal": 52,
+    "gradeTotal": 53,
     "elevatedGaps": 7,
     "accessGaps": 6,
     "distanceGaps": 4,
@@ -2427,6 +2455,20 @@
           -24
         ],
         "linkLengthM": 8.75
+      },
+      {
+        "id": "EXP-7001-LAB",
+        "label": "SHARED · Annex laboratory bench and fume-hood work",
+        "area": "SHARED",
+        "point": [
+          -11,
+          36.2
+        ],
+        "walkPoint": [
+          -11,
+          36.2
+        ],
+        "linkLengthM": 0
       }
     ],
     "holds": [
@@ -2760,6 +2802,13 @@
     },
     {
       "tag": "ES-202",
+      "geometryClear": true,
+      "approachConnected": true,
+      "findings": [],
+      "legacyConflicts": []
+    },
+    {
+      "tag": "ES-7001",
       "geometryClear": true,
       "approachConnected": true,
       "findings": [],
