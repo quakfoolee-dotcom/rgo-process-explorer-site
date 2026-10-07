@@ -1,8 +1,8 @@
 {
   "summary": {
     "revision": "emergency-access-91",
-    "pedestrianSegments": 185,
-    "centrelineLengthM": 1244.599999999999,
+    "pedestrianSegments": 183,
+    "centrelineLengthM": 1244.099999999999,
     "clearWidthM": 1.2,
     "headroomM": 2.3,
     "protectionAssemblies": 68,
@@ -363,12 +363,6 @@
         "crossings": []
       },
       {
-        "id": "PW-058",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
         "id": "PW-059",
         "clear": true,
         "findings": [],
@@ -376,18 +370,6 @@
       },
       {
         "id": "PW-060",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-061",
-        "clear": true,
-        "findings": [],
-        "crossings": []
-      },
-      {
-        "id": "PW-062",
         "clear": true,
         "findings": [],
         "crossings": []
@@ -996,6 +978,12 @@
       },
       {
         "id": "LINK-FE-2002-1",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-143",
         "clear": true,
         "findings": [],
         "crossings": []
