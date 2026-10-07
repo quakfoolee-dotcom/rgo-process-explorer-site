@@ -1,7 +1,7 @@
 import {wallPanels} from './building-shell.js';
 // Proposed administration annex (office, laboratory, control room) in the south-west corner of the process building.
 // Stage 1 (V299): shell, floors, walls with doors and windows, blast wall on the plant side, roof layer. Furniture and equipment follow.
-export const ANNEX={revision:'annex-1',x0:-41.9,x1:5.5,z0:31.7,z1:41.4,height:3.4,roof:{y0:3.4,y1:3.6},
+export const ANNEX={revision:'annex-2',x0:-41.9,x1:5.5,z0:31.7,z1:41.4,height:3.4,roof:{y0:3.4,y1:3.6},
  note:'Proposed concept layout only: no structural, fire-rating, blast, ventilation or egress design. The north and east walls (plant side) are drawn as 0.4 m reinforced concrete for a control room that needs a blast study; ratings are unqualified.',
  corridor:{z0:31.9,z1:33.5,walkZ:32.7},
  owners:{shell:123000,lobby:123001,wc:123002,office:123003,lab:123004,control:123005,server:123006,corridor:123007}};
@@ -17,7 +17,7 @@ export const ANNEX_WALLS=[
  {id:'C',axis:'z',c:33.6,lo:IX0,hi:IX1,t:.15,color:'dial',openings:[door(-36.9,-35.1,1),door(-29.9,-28.1,1),door(-23.7,-22.7,1),door(-20.7,-19.7,1),door(-14,-12.4,1),door(-7,-6,1),door(-1.5,.5,1,'blast door')]},
  {id:'P1',axis:'x',c:-37.5,lo:RZ0,hi:RZ1,t:.15,color:'dial',openings:[door(39.2,40.2,-1)]},
  {id:'P1b',axis:'x',c:-34,lo:RZ0,hi:RZ1,t:.15,color:'dial',openings:[door(37.3,38.3,1)]},
- {id:'WC',axis:'z',c:36.9,lo:IX0,hi:-37.5,t:.1,color:'dial',openings:[door(-41.2,-40.4,1),door(-39.8,-39,1),door(-38.4,-37.8,1)]},
+ {id:'WC',axis:'z',c:36.9,lo:IX0,hi:-37.5,t:.1,color:'dial',openings:[door(-41.2,-40.4,1),door(-39.8,-39,1),door(-38.5,-37.6,1)]},
  {id:'WC1',axis:'x',c:-40.4,lo:RZ0,hi:36.9,t:.1,color:'dial',openings:[]},
  {id:'WC2',axis:'x',c:-39,lo:RZ0,hi:36.9,t:.1,color:'dial',openings:[]},
  {id:'P2',axis:'x',c:-24,lo:RZ0,hi:RZ1,t:.15,color:'dial',openings:[door(39.2,40.2,-1)]},
@@ -65,6 +65,61 @@ export function buildAdminAnex(h){
  // roof: one slab, own display layer
  const rs=parts.length;b('Annex roof slab','frame',[ANNEX.x1-ANNEX.x0+.6,ANNEX.roof.y1-ANNEX.roof.y0,ANNEX.z1-ANNEX.z0+.4],[(ANNEX.x0+ANNEX.x1)/2,(ANNEX.roof.y0+ANNEX.roof.y1)/2,(ANNEX.z0+ANNEX.z1)/2],'glass');
  const roofIds=parts.slice(rs).map(p=>{Object.assign(p,{structureVisibility:'annexRoof'});return p.id;});
- const ids=parts.slice(first).map(p=>{Object.assign(p,{annex:true,designStatus:'proposed',screenBody:null});p.offset.set(0,0,0);return p.id;});
- return {revision:ANNEX.revision,note:ANNEX.note,partIds:ids,roofIds,stats,rooms:ANNEX_ROOMS.map(r=>({...r,areaM2:roomArea(r)})),walls:ANNEX_WALLS.map(w=>({id:w.id,axis:w.axis,c:w.c,t:w.t,openings:w.openings.length})),owners:ANNEX.owners};
+ const shellIds=parts.slice(first).map(p=>{Object.assign(p,{annex:true,designStatus:'proposed',screenBody:null});p.offset.set(0,0,0);return p.id;});
+ const furniture=buildAnnexFurniture(h),ids=[...shellIds,...furniture.partIds];
+ return {revision:ANNEX.revision,furniture:{...furniture,partIds:undefined,partCount:furniture.partIds.length},shellPartIds:shellIds,note:ANNEX.note,partIds:ids,roofIds,stats,rooms:ANNEX_ROOMS.map(r=>({...r,areaM2:roomArea(r)})),walls:ANNEX_WALLS.map(w=>({id:w.id,axis:w.axis,c:w.c,t:w.t,openings:w.openings.length})),owners:ANNEX.owners};
+}
+
+// ---- Stage 2 (V300): furniture, computers and fittings for the office, entrance, reception and restrooms ----
+// Boxes only, in metres; every item belongs to a named group so a test can prove nothing overlaps.
+export function annexFurniturePlan(){
+ const items=[],groups=[];let gid=0;
+ const add=(owner,group,name,x,y,z,w,hgt,d,color)=>items.push({owner,group,name,x,y,z,w,h:hgt,d,color});
+ const grp=(owner,kind,label)=>{const g={id:++gid,owner,kind,label};groups.push(g);return g.id;};
+ // dir = +1: the person sits on the south side of the desk and faces north (-z); dir = -1 the reverse
+ function workstation(owner,x,z,dir,label,w=1.4){const g=grp(owner,'workstation',label),d=.7;
+  add(owner,g,'Annex desk top',x,.74,z,w,.04,d,'inner');for(const s of[-1,1])add(owner,g,'Annex desk panel',x+s*(w/2-.03),.36,z,.04,.72,d-.1,'inner');
+  for(const s of[-1,1]){add(owner,g,'Annex monitor screen',x+s*.3,1.02,z-dir*.2,.55,.32,.03,'blue');add(owner,g,'Annex monitor stand',x+s*.3,.86,z-dir*.2,.08,.2,.08,'dark');}
+  add(owner,g,'Annex keyboard',x,.77,z+dir*.12,.42,.02,.14,'dark');add(owner,g,'Annex PC tower',x+w/2-.3,.22,z-dir*.1,.2,.4,.45,'dark');
+  chair(owner,x,z+dir*.85,dir,label);return g;}
+ function chair(owner,x,z,dir,label){const g=grp(owner,'chair',label+' chair');
+  add(owner,g,'Annex chair seat',x,.46,z,.45,.06,.45,'dark');add(owner,g,'Annex chair back',x,.78,z+dir*.2,.45,.5,.05,'dark');add(owner,g,'Annex chair post',x,.23,z,.06,.4,.06,'steel');add(owner,g,'Annex chair base',x,.04,z,.5,.04,.5,'steel');return g;}
+ const O=ANNEX.owners;
+ // open office: 8 workstations in two rows, occupants face north
+ let n=0;for(const z of[35.4,38.9])for(const x of[-32.9,-30.7,-28.5,-26.3])workstation(O.office,x,z,1,'Open office workstation '+(++n));
+ // equipment along the east wall of the open office and the whiteboard on its west wall
+ let g=grp(O.office,'printer','Office printer');add(O.office,g,'Annex printer stand',-24.7,.4,35.2,.8,.8,.6,'inner');add(O.office,g,'Annex printer',-24.7,.92,35.2,.55,.25,.45,'dial');
+ for(const z of[36.5,37.2]){g=grp(O.office,'filing','Filing cabinet');add(O.office,g,'Annex filing cabinet',-24.6,.7,z,.45,1.4,.6,'steel');}
+ g=grp(O.office,'whiteboard','Whiteboard');add(O.office,g,'Annex whiteboard',-33.9,1.5,36.3,.03,1,1.6,'dial');
+ // private offices: desk against the south partition, occupant faces south
+ for(const [x,label] of[[-22.5,'Private office A'],[-19.5,'Private office B']])workstation(O.office,x,37.0,-1,label,1.4);
+ g=grp(O.office,'bookshelf','Bookshelf A');add(O.office,g,'Annex bookshelf',-21.23,.9,34.9,.3,1.8,1,'inner');
+ g=grp(O.office,'bookshelf','Bookshelf B');add(O.office,g,'Annex bookshelf',-18.23,.9,34.9,.3,1.8,1,'inner');
+ // meeting room: table, 8 chairs, wall display
+ g=grp(O.office,'table','Meeting table');add(O.office,g,'Annex meeting table top',-21,.74,39.4,3,.05,1.1,'inner');for(const s of[-1,1])add(O.office,g,'Annex meeting table leg',-21+s*1.3,.36,39.4,.08,.72,.9,'steel');
+ let c=0;for(const [z,dir] of[[38.35,-1],[40.45,1]])for(const x of[-22.1,-21.35,-20.6,-19.85])chair(O.office,x,z,-dir,'Meeting chair '+(++c));
+ g=grp(O.office,'display','Meeting display');add(O.office,g,'Annex wall display',-18.12,1.5,39.4,.05,.7,1.2,'blue');
+ // reception: desk and chair, 12 lockers, kitchenette
+ g=grp(O.lobby,'desk','Reception desk');add(O.lobby,g,'Annex reception desk body',-39.8,.5,38.9,1.6,1,.55,'inner');add(O.lobby,g,'Annex reception desk top',-39.8,1.025,38.9,1.7,.05,.65,'dial');
+ chair(O.lobby,-39.8,39.75,-1,'Reception');
+ for(let i=0;i<12;i++){g=grp(O.lobby,'locker','Locker '+(i+1));add(O.lobby,g,'Annex locker',-41.575,.9,37.35+i*.3,.4,1.8,.3,'steel');}
+ g=grp(O.lobby,'kitchenette','Kitchenette');add(O.lobby,g,'Annex kitchenette counter',-39.5,.44,40.95,2,.88,.6,'inner');add(O.lobby,g,'Annex kitchenette worktop',-39.5,.9,40.95,2.05,.04,.65,'dial');add(O.lobby,g,'Annex sink basin',-39.6,.93,40.95,.5,.04,.4,'bright');add(O.lobby,g,'Annex sink tap',-39.6,1.05,41.15,.03,.2,.03,'bright');add(O.lobby,g,'Annex microwave',-40.2,1.07,40.95,.5,.3,.4,'dark');
+ g=grp(O.lobby,'fridge','Kitchenette fridge');add(O.lobby,g,'Annex fridge',-38.1,.9,40.95,.6,1.8,.6,'dial');
+ // restrooms: three cubicles, each with a toilet and a basin
+ for(const [xa,xb,label] of[[IX0,-40.4,'Restroom 1'],[-40.4,-39,'Restroom 2'],[-39,-37.5,'Restroom 3 (accessible)']]){const cx=(xa+xb)/2;g=grp(O.wc,'fixture',label+' toilet');add(O.wc,g,'Annex toilet bowl',cx,.2,34.2,.4,.4,.55,'dial');add(O.wc,g,'Annex toilet cistern',cx,.6,33.8,.4,.4,.2,'dial');
+  g=grp(O.wc,'fixture',label+' basin');add(O.wc,g,'Annex basin',xa+.3,.85,35.9,.4,.15,.4,'dial');add(O.wc,g,'Annex basin pedestal',xa+.3,.4,35.9,.12,.8,.12,'dial');}
+ // ceiling lights (flat panels under the roof)
+ const light=(owner,x,z)=>{const gg=grp(owner,'light','Ceiling light');add(owner,gg,'Annex ceiling light',x,3.37,z,.6,.04,.6,'dial');};
+ for(const z of[36.2,39.6])for(const x of[-32,-29,-26])light(O.office,x,z);for(const x of[-22.5,-19.5])light(O.office,x,35.6);for(const x of[-22,-20])light(O.office,x,39.4);
+ for(const z of[35,38,40.5])light(O.lobby,-35.7,z);light(O.lobby,-39.6,39.2);for(const x of[-40.9,-39.6,-38.3])light(O.wc,x,35);
+ for(const x of[-38,-30,-22,-14,-6,0])light(O.corridor,x,32.7);
+ return {items,groups};
+}
+export function buildAnnexFurniture(h){
+ const {parts,setContext,b}=h,{items,groups}=annexFurniturePlan(),first=parts.length,byOwner=new Map();
+ for(const it of items){if(!byOwner.has(it.owner))byOwner.set(it.owner,[]);byOwner.get(it.owner).push(it);}
+ for(const [owner,list] of byOwner){const info=Object.entries(ANNEX.owners).find(([,v])=>v===owner)[0];setContext(owner,OWNER_INFO[info][1]);for(const it of list){const p=b(it.name,'frame',[it.w,it.h,it.d],[it.x,it.y,it.z],it.color);p.annexGroup=it.group;}}
+ const ids=parts.slice(first).map(p=>{Object.assign(p,{annex:true,annexFurniture:true,designStatus:'proposed',screenBody:null});p.offset.set(0,0,0);return p.id;});
+ const count=k=>groups.filter(g=>g.kind===k).length;
+ return {partIds:ids,groups:groups.length,workstations:count('workstation'),chairs:count('chair'),lockers:count('locker'),lights:count('light'),fixtures:count('fixture')};
 }
