@@ -467,11 +467,11 @@ function updatePipeTags(now){
   const sx=(tagView.x*.5+.5)*rect.clientWidth,sy=(.5-tagView.y*.5)*rect.clientHeight,tex=legendTexture(m.rec),w=pxH*tex.userData.ratio;
   if(taken.some(t=>Math.abs(t[0]-sx)<(t[2]+w)/2+4&&Math.abs(t[1]-sy)<pxH+4))continue;
   tagNdc.set(tagView.x,tagView.y);raycaster.setFromCamera(tagNdc,camera);const first=raycaster.intersectObjects(shown,false).find(h=>h.object.userData.parts?.[h.instanceId]?.visible);
-  if(first){const dP=tagWorld.clone().sub(raycaster.ray.origin).dot(raycaster.ray.direction);if(first.distance<dP-(m.radius*2+.12))continue;}// something is in front of this pipe
+  if(first){const dP=tagWorld.clone().sub(raycaster.ray.origin).dot(raycaster.ray.direction);if(first.distance<dP-(m.radius*2+.12+wpp*14))continue;}// something is in front of this pipe (pipes within the tag's forward shift do not count)
   taken.push([sx,sy,w]);
   if(camera.isOrthographicCamera)camera.getWorldDirection(tagDir).negate();else tagDir.copy(camera.position).sub(tagWorld).normalize();
   let sp=pipeTags[n];if(!sp){sp=new T.Sprite(new T.SpriteMaterial({depthTest:true,depthWrite:false,toneMapped:false}));sp.renderOrder=6;scene.add(sp);pipeTags[n]=sp;}
-  if(sp.material.map!==tex){sp.material.map=tex;sp.material.needsUpdate=true;}sp.position.copy(tagWorld).addScaledVector(tagDir,m.radius*1.5+wpp*3);sp.scale.set(w*wpp,pxH*wpp,1);sp.visible=true;n++;}
+  if(sp.material.map!==tex){sp.material.map=tex;sp.material.needsUpdate=true;}sp.position.copy(tagWorld).addScaledVector(tagDir,m.radius*2+wpp*14);sp.scale.set(w*wpp,pxH*wpp,1);sp.visible=true;n++;}
 }
 // Check for the browser: every marker sits on its own pipe part (also for an exploded view), and a sample is found by a ray fired at the pipe.
 function pipeMarkerCheck(explode=amount){
