@@ -424,7 +424,7 @@ function buildPipeBands(){
   else{const n=new T.Vector3().crossVectors(axis,up).normalize();sides=[[n,axis.clone()],[n.clone().negate(),axis.clone().negate()]];}
   for(const [Z,X] of sides){const Y=new T.Vector3().crossVectors(Z,X),variant=m.directed?(X.dot(axis)>0?'fwd':'rev'):'none',L=m.size.lengthMm/1000,H=m.size.heightMm/1000,key=m.rec.asmeClass+'|'+m.rec.asmeLegend+'|'+variant+'|'+m.size.index;
    let g=groups.get(key);if(!g){g={rec:m.rec,variant,size:m.size,quads:[]};groups.set(key,g);}
-   g.quads.push({part:m.partId,cls:m.rec.asmeClass,base:new T.Vector3(...m.pos).addScaledVector(Z,m.radius+.004),XL:X.clone().multiplyScalar(L),YH:Y.multiplyScalar(H),Z:Z.clone()});}}
+   g.quads.push({part:m.partId,cls:m.rec.asmeClass,base:new T.Vector3(...m.pos).addScaledVector(Z,m.outer+.004),XL:X.clone().multiplyScalar(L),YH:Y.multiplyScalar(H),Z:Z.clone()});}}
  const list=[];for(const g of groups.values()){const mat=new T.MeshBasicMaterial({map:markerTexture(g.rec,g.variant,g.size),toneMapped:false,polygonOffset:true,polygonOffsetFactor:-2,polygonOffsetUnits:-2}),mesh=new T.InstancedMesh(plane,mat,g.quads.length);
   mesh.frustumCulled=false;mesh.visible=false;scene.add(mesh);g.mesh=mesh;list.push(g);}
  return list;
@@ -467,11 +467,11 @@ function updatePipeTags(now){
   const sx=(tagView.x*.5+.5)*rect.clientWidth,sy=(.5-tagView.y*.5)*rect.clientHeight,tex=legendTexture(m.rec),w=pxH*tex.userData.ratio;
   if(taken.some(t=>Math.abs(t[0]-sx)<(t[2]+w)/2+4&&Math.abs(t[1]-sy)<pxH+4))continue;
   tagNdc.set(tagView.x,tagView.y);raycaster.setFromCamera(tagNdc,camera);const first=raycaster.intersectObjects(shown,false).find(h=>h.object.userData.parts?.[h.instanceId]?.visible);
-  if(first){const dP=tagWorld.clone().sub(raycaster.ray.origin).dot(raycaster.ray.direction);if(first.distance<dP-(m.radius*2+.12+wpp*14))continue;}// something is in front of this pipe (pipes within the tag's forward shift do not count)
+  if(first){const dP=tagWorld.clone().sub(raycaster.ray.origin).dot(raycaster.ray.direction);if(first.distance<dP-(m.outer*2+.12+wpp*14))continue;}// something is in front of this pipe (pipes within the tag's forward shift do not count)
   taken.push([sx,sy,w]);
   if(camera.isOrthographicCamera)camera.getWorldDirection(tagDir).negate();else tagDir.copy(camera.position).sub(tagWorld).normalize();
   let sp=pipeTags[n];if(!sp){sp=new T.Sprite(new T.SpriteMaterial({depthTest:true,depthWrite:false,toneMapped:false}));sp.renderOrder=6;scene.add(sp);pipeTags[n]=sp;}
-  if(sp.material.map!==tex){sp.material.map=tex;sp.material.needsUpdate=true;}sp.position.copy(tagWorld).addScaledVector(tagDir,m.radius*2+wpp*14);sp.scale.set(w*wpp,pxH*wpp,1);sp.visible=true;n++;}
+  if(sp.material.map!==tex){sp.material.map=tex;sp.material.needsUpdate=true;}sp.position.copy(tagWorld).addScaledVector(tagDir,m.outer*2+wpp*14);sp.scale.set(w*wpp,pxH*wpp,1);sp.visible=true;n++;}
 }
 // Check for the browser: every marker sits on its own pipe part (also for an exploded view), and a sample is found by a ray fired at the pipe.
 function pipeMarkerCheck(explode=amount){
@@ -484,8 +484,8 @@ function pipeMarkerCheck(explode=amount){
  if(explode===amount)for(let i=0;i<pipeMarkers.length;i+=step){const m=pipeMarkers[i],part=partMap.get(markerPart(m));if(!part?.visible)continue;
   const axis=new T.Vector3(...m.dir),n=Math.abs(axis.y)>.85?new T.Vector3(1,0,0):new T.Vector3().crossVectors(axis,up).normalize();point.set(...m.pos).addScaledVector(part.offset,amount);
   raycaster.set(point.clone().addScaledVector(n,.5),n.clone().negate());const hit=raycaster.intersectObjects(shown,false).find(h=>h.object.userData.parts?.[h.instanceId]?.visible);ray.sampled++;
-  if(hit&&hit.distance<=.5+m.radius+.08){ray.onPipe++;if(partFlows.get(hit.object.userData.parts[hit.instanceId].id)?.id===m.routeId)ray.sameLine++;}else if(ray.missed.length<5)ray.missed.push({legend:m.rec.asmeLegend,route:m.routeId,hit:hit?+hit.distance.toFixed(2):null});}
- return {markers:pipeMarkers.length,explode,onPart,outside:bad.length,examples:bad.slice(0,5),ray,stats:pipeStats};
+  if(hit&&hit.distance<=.5+m.outer+.08){ray.onPipe++;if(partFlows.get(hit.object.userData.parts[hit.instanceId].id)?.id===m.routeId)ray.sameLine++;}else if(ray.missed.length<5)ray.missed.push({legend:m.rec.asmeLegend,route:m.routeId,hit:hit?+hit.distance.toFixed(2):null});}
+ return {markers:pipeMarkers.length,onInsulation:pipeMarkers.filter(m=>m.covered).length,explode,onPart,outside:bad.length,examples:bad.slice(0,5),ray,stats:pipeStats};
 }
 function showHoverLabel(event){
  if(!hoverLabel){hoverLabel=document.createElement('div');hoverLabel.id='pipe-hover-label';hoverLabel.hidden=true;hoverLabel.style.cssText='position:fixed;z-index:20;pointer-events:none;max-width:320px;padding:6px 9px;border-radius:6px;font:600 12px/1.35 system-ui,sans-serif;box-shadow:0 2px 8px rgba(0,0,0,.45)';document.body.append(hoverLabel);}

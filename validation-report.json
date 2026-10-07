@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-07T19:47:22.973Z",
+  "checkedAt": "2026-10-07T20:37:13.883Z",
   "method": "Node model, geometry, process-state and static interface tests",
   "browserQA": false,
   "passed": false,
@@ -618,7 +618,7 @@
     {
       "name": "validate-browse-levels-model.mjs",
       "passed": true,
-      "details": "{\"ms\":444.2388000000001,\"summary\":{\"flights\":8,\"availableFlights\":8,\"decks\":24,\"availableDecks\":24},\"findings\":[],\"edges\":1524}\nUnregistered tread names: []\nPASS: 24 complete ground-to-deck return journeys, all 8 flights, stacked surface picking, and missing/moved tread rejection."
+      "details": "{\"ms\":422.19799999999987,\"summary\":{\"flights\":8,\"availableFlights\":8,\"decks\":24,\"availableDecks\":24},\"findings\":[],\"edges\":1524}\nUnregistered tread names: []\nPASS: 24 complete ground-to-deck return journeys, all 8 flights, stacked surface picking, and missing/moved tread rejection."
     },
     {
       "name": "validate-browse-levels-surfaces.mjs",
@@ -823,7 +823,7 @@
     {
       "name": "validate-emergency-performance.mjs",
       "passed": true,
-      "details": "{\"buildMs\":17087.1384,\"directStationMs\":1306.8478000000032,\"geometryAndSupportSignature\":{\"parts\":146780,\"partsDigest\":\"6ba454cccf9d99d21e795553de0b05873dbdac3961b6556906382ce7141d5efb\",\"supportDigest\":\"6f4709796754b180ec2021115ac81ee7e60dc97c4872e6cad9d6f9e22f3e801d\"}}\n{\n  \"result\": \"PASS\",\n  \"configuration\": \"baseline\",\n  \"buildMs\": 17087.1384,\n  \"phases\": [\n    {\n      \"phase\": \"base\",\n      \"ms\": 45.5967\n    },\n    {\n      \"phase\": \"upstream\",\n      \"ms\": 78.26649999999998\n    },\n    {\n      \"phase\": \"separations\",\n      \"ms\": 194.72659999999996\n    },\n    {\n      \"phase\": \"sonication\",\n      \"ms\": 13.264400000000023\n    },\n    {\n      \"phase\": \"sprayDrying\",\n      \"ms\": 24.530700000000024\n    },\n    {\n      \"phase\": \"furnace\",\n      \"ms\": 19.30849999999998\n    },\n    {\n      \"phase\": \"doping\",\n      \"ms\": 40.315200000000004\n    },\n    {\n      \"phase\": \"a900\",\n      \"ms\": 7.0534000000000106\n    },\n    {\n      \"phase\": \"argonDistribution\",\n      \"ms\": 32.87829999999997\n    },\n    {\n      \"phase\": \"preg\",\n      \"ms\": 47.26840000000004\n    },\n    {\n      \"phase\": \"filtration\",\n      \"ms\": 8.718399999999974\n    },\n    {\n      \"phase\": \"drying\",\n      \"ms\": 21.595800000000054\n    },\n    {\n      \"phase\": \"cakeTransfer\",\n      \"ms\": 16.447099999999978\n    },\n    {\n      \"phase\": \"accessSystem\",\n      \"ms\": 80.36760000000004\n    },\n    {\n      \"phase\": \"accessIndications\",\n      \"ms\": 45.2364\n    },\n    {\n      \"phase\": \"wastewater\",\n      \"ms\": 71.7731\n    },\n    {\n      \"phase\": \"ventGas\",\n      \"ms\": 701.1812\n    },\n    {\n      \"phase\": \"exhaustGroups\",\n      \"ms\": 18.87760000000003\n    },\n    {\n      \"phase\": \"reclaimedWater\",\n      \"ms\": 145.44190000000003\n    },\n    {\n      \"phase\": \"compressedAir\",\n      \"ms\": 1480.7987\n    },\n    {\n      \"phase\": \"pipeSupportSystem\",\n      \"ms\": 6436.5839\n    },\n    {\n      \"phase\": \"containment\",\n      \"ms\": 1633.4650000000001\n    }\n  ],\n  \"directStationMs\": 1306.8478000000032,\n  \"worker\": {\n    \"stationMs\": 676.3675000000003,\n    \"routeMs\": 115.26729999999952\n  },\n  \"asyncMs\": 1088.732100000001,\n  \"cachedMs\": 257.5688000000009,\n  \"mainThreadHeartbeatTicks\": 76,\n  \"maxTickGapMs\": 43.81109999999899,\n  \"signature\": {\n    \"parts\": 146780,\n    \"partsDigest\": \"6ba454cccf9d99d21e795553de0b05873dbdac3961b6556906382ce7141d5efb\",\n    \"supportDigest\": \"6f4709796754b180ec2021115ac81ee7e60dc97c4872e6cad9d6f9e22f3e801d\"\n  },\n  \"fullReviewAndRouteEquivalence\": true,\n  \"cacheInvalidation\": true,\n  \"cancellation\": true,\n  \"hiddenObstructionChecked\": true,\n  \"complianceVerified\": false,\n  \"browserRenderingMeasured\": false\n}"
+      "details": "{\"buildMs\":16685.234099999998,\"directStationMs\":1179.1929999999993,\"geometryAndSupportSignature\":{\"parts\":146780,\"partsDigest\":\"6ba454cccf9d99d21e795553de0b05873dbdac3961b6556906382ce7141d5efb\",\"supportDigest\":\"6f4709796754b180ec2021115ac81ee7e60dc97c4872e6cad9d6f9e22f3e801d\"}}\n{\n  \"result\": \"PASS\",\n  \"configuration\": \"baseline\",\n  \"buildMs\": 16685.234099999998,\n  \"phases\": [\n    {\n      \"phase\": \"base\",\n      \"ms\": 51.531400000000005\n    },\n    {\n      \"phase\": \"upstream\",\n      \"ms\": 76.38659999999999\n    },\n    {\n      \"phase\": \"separations\",\n      \"ms\": 178.4949\n    },\n    {\n      \"phase\": \"sonication\",\n      \"ms\": 14.427400000000034\n    },\n    {\n      \"phase\": \"sprayDrying\",\n      \"ms\": 41.29239999999999\n    },\n    {\n      \"phase\": \"furnace\",\n      \"ms\": 21.534699999999987\n    },\n    {\n      \"phase\": \"doping\",\n      \"ms\": 40.35060000000004\n    },\n    {\n      \"phase\": \"a900\",\n      \"ms\": 2.478999999999928\n    },\n    {\n      \"phase\": \"argonDistribution\",\n      \"ms\": 57.78870000000006\n    },\n    {\n      \"phase\": \"preg\",\n      \"ms\": 51.78329999999994\n    },\n    {\n      \"phase\": \"filtration\",\n      \"ms\": 8.63639999999998\n    },\n    {\n      \"phase\": \"drying\",\n      \"ms\": 22.94220000000007\n    },\n    {\n      \"phase\": \"cakeTransfer\",\n      \"ms\": 15.022899999999936\n    },\n    {\n      \"phase\": \"accessSystem\",\n      \"ms\": 166.6839\n    },\n    {\n      \"phase\": \"accessIndications\",\n      \"ms\": 59.07310000000007\n    },\n    {\n      \"phase\": \"wastewater\",\n      \"ms\": 96.41779999999994\n    },\n    {\n      \"phase\": \"ventGas\",\n      \"ms\": 819.2343000000001\n    },\n    {\n      \"phase\": \"exhaustGroups\",\n      \"ms\": 20.967899999999872\n    },\n    {\n      \"phase\": \"reclaimedWater\",\n      \"ms\": 160.55970000000002\n    },\n    {\n      \"phase\": \"compressedAir\",\n      \"ms\": 1501.2574\n    },\n    {\n      \"phase\": \"pipeSupportSystem\",\n      \"ms\": 5805.294400000001\n    },\n    {\n      \"phase\": \"containment\",\n      \"ms\": 1720.1131000000005\n    }\n  ],\n  \"directStationMs\": 1179.1929999999993,\n  \"worker\": {\n    \"stationMs\": 653.8539999999994,\n    \"routeMs\": 121.29889999999796\n  },\n  \"asyncMs\": 1125.9894999999997,\n  \"cachedMs\": 260.83750000000146,\n  \"mainThreadHeartbeatTicks\": 73,\n  \"maxTickGapMs\": 51.42960000000312,\n  \"signature\": {\n    \"parts\": 146780,\n    \"partsDigest\": \"6ba454cccf9d99d21e795553de0b05873dbdac3961b6556906382ce7141d5efb\",\n    \"supportDigest\": \"6f4709796754b180ec2021115ac81ee7e60dc97c4872e6cad9d6f9e22f3e801d\"\n  },\n  \"fullReviewAndRouteEquivalence\": true,\n  \"cacheInvalidation\": true,\n  \"cancellation\": true,\n  \"hiddenObstructionChecked\": true,\n  \"complianceVerified\": false,\n  \"browserRenderingMeasured\": false\n}"
     },
     {
       "name": "validate-emergency-stations.mjs",
@@ -1163,7 +1163,7 @@
     {
       "name": "validate-lean-review-data.mjs",
       "passed": true,
-      "details": "PASS: lean review — baseline 146,780 parts (c17e3e5 2026-10-07); 12 register items linked to 37 findings and 15 decisions; page hooks present."
+      "details": "PASS: lean review — baseline 146,780 parts (a64d4da 2026-10-07); 12 register items linked to 37 findings and 15 decisions; page hooks present."
     },
     {
       "name": "validate-lean115.mjs",
@@ -1203,7 +1203,7 @@
     {
       "name": "validate-overview-coverage.mjs",
       "passed": true,
-      "details": "PASS: overview — 360 envelopes (c17e3e5 2026-10-07); coverage approved 112, held 4, documented 33, record 93, none 118; page hooks present."
+      "details": "PASS: overview — 360 envelopes (a64d4da 2026-10-07); coverage approved 112, held 4, documented 33, record 93, none 118; page hooks present."
     },
     {
       "name": "validate-panel-window-order.mjs",
@@ -1255,7 +1255,7 @@
     {
       "name": "validate-pipe-markers.mjs",
       "passed": true,
-      "details": "PASS: pipe markers 3144 on 1038 of 2705 lines (penetration 135, valve 466, corner 1844, run 417, line 282); penetrations 64/75, valves 471/610, arrows toward B 2476/3039; unmarked 1667 short lines (2.2 % of length)"
+      "details": "PASS: pipe markers 3093 on 1019 of 2705 lines (penetration 135, valve 464, corner 1803, run 417, line 274); penetrations 64/75, valves 470/610, arrows toward B 2457/2994; unmarked 1686 short lines (2.4 % of length)"
     },
     {
       "name": "validate-pipe-racks.mjs",
@@ -1269,8 +1269,17 @@
     },
     {
       "name": "validate-plant-browse-model.mjs",
-      "passed": false,
-      "error": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\r\n\r\n146780 !== 146652\r\n\r\n    at file:///C:/Users/quakf/AppData/Local/Temp/claude/C--Users-quakf-Documents-rGO-3D-Plant-Model-main/9120e0cb-4053-45e1-a518-76a79a35fd5a/scratchpad/repo3/tests/validate-plant-browse-model.mjs:12:8 {\r\n  generatedMessage: true,\r\n  code: 'ERR_ASSERTION',\r\n  actual: 146780,\r\n  expected: 146652,\r\n  operator: 'strictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.19.0\r\n"
+      "passed": true,
+      "details": {
+        "result": "PASS",
+        "parts": 146780,
+        "eligibleEdges": 265,
+        "blockedSegments": 0,
+        "keyMs": 137,
+        "reviewMs": 264,
+        "occlusionIndexMs": 602,
+        "cooperativeYields": 58
+      }
     },
     {
       "name": "validate-plant-browse-route.mjs",
@@ -1295,7 +1304,7 @@
     {
       "name": "validate-prepared-startup.mjs",
       "passed": true,
-      "details": "{\"phase\":\"Loaded\",\"source\":\"prepared\",\"downloadMs\":47.65940000000002,\"inflateMs\":534.5087,\"reconstructMs\":2658.4880999999996,\"decodeMs\":3193.0915,\"totalMs\":3243.0622,\"ticks\":183,\"maxGap\":117.58229999999992}\n{\"result\":\"PASS\",\"load\":{\"source\":\"prepared\",\"downloadMs\":47.65940000000002,\"inflateMs\":534.5087,\"reconstructMs\":2658.4880999999996,\"decodeMs\":3193.0915,\"totalMs\":3243.0622},\"heartbeatTicks\":183,\"maxHeartbeatGapMs\":117.58229999999992,\"parts\":146780,\"emergencyReviewIdentical\":true,\"emergencyRoutesIdentical\":true,\"structuralReviewIdentical\":true,\"walkwayReviewIdentical\":true,\"pipeDiametersIdentical\":true,\"geometryVersionChecked\":true,\"invalidDownloadRejected\":true,\"lodPreservesEngineeringModel\":true,\"browserRenderingMeasured\":false}"
+      "details": "{\"phase\":\"Loaded\",\"source\":\"prepared\",\"downloadMs\":50.58369999999999,\"inflateMs\":609.9819,\"reconstructMs\":2646.899,\"decodeMs\":3256.9883,\"totalMs\":3310.0123,\"ticks\":193,\"maxGap\":120.68960000000004}\n{\"result\":\"PASS\",\"load\":{\"source\":\"prepared\",\"downloadMs\":50.58369999999999,\"inflateMs\":609.9819,\"reconstructMs\":2646.899,\"decodeMs\":3256.9883,\"totalMs\":3310.0123},\"heartbeatTicks\":193,\"maxHeartbeatGapMs\":120.68960000000004,\"parts\":146780,\"emergencyReviewIdentical\":true,\"emergencyRoutesIdentical\":true,\"structuralReviewIdentical\":true,\"walkwayReviewIdentical\":true,\"pipeDiametersIdentical\":true,\"geometryVersionChecked\":true,\"invalidDownloadRejected\":true,\"lodPreservesEngineeringModel\":true,\"browserRenderingMeasured\":false}"
     },
     {
       "name": "validate-prepared-worker.mjs",
@@ -1311,7 +1320,7 @@
         },
         "parts": 156863,
         "progressMessages": 25,
-        "elapsedMs": 36883.3112
+        "elapsedMs": 33880.2415
       }
     },
     {
