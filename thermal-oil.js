@@ -13,8 +13,16 @@ export function buildThermalOil(k,s,base,{acidRoute='r0'}={}){
  const {mainRadius:R,branchRadius:RB,insulationM:INS,supplyY:SY,returnY:RY}=THERMAL_OIL_BASIS,routes=[];
  const mark=(from,extra)=>{for(const p of parts.slice(from))Object.assign(p,{geometryBasis:'D-MDL-05',designStatus:'proposed',...extra});};
  // Insulation jackets on straight runs of hot lines (planning thickness only); flagged so support and access audits treat them as cladding.
- function insulate(points,r,label,spec={},route=null){const byName=new Map((route?.partIds||[]).map(id=>parts.find(p=>p.id===id)).filter(Boolean).map(p=>[p.name,p]));for(let i=0;i<points.length-1;i++){if(spec[i])continue;const host=byName.get(label+' spool '+(i+1));if(!host)continue;const a=V(points[i]),z=V(points[i+1]),d=z.clone().sub(a),len=d.length()-.5;if(len<.25)continue;const mid=a.clone().add(z).multiplyScalar(.5);const j=band(label+' · insulation cladding '+(i+1),'pipe',r+INS,r+.002,len,mid.toArray(),'jacket',d.normalize().toArray());Object.assign(j,{insulationFor:host.id,routeId:route.id,thermalInsulation:true,insulationThickness:0,cut:true,exploreRole:'context',geometryBasis:'D-MDL-05 planning insulation 100 mm (280 °C)'});host.insulationThickness=INS;route.partIds.push(j.id);}}
- function hot(points,r,label,service,from,to,spec={}){const route=line(points,r,label,service,from,to,spec);routes.push(route.id);insulate(points,r,label,spec,route);return route;}
+ // V313: the cladding follows the route's real edges (the old spool-name lookup missed spools split at a valve, and skipped elbows and reducers):
+// straight spools with 100 mm bare at each end, every segment of a formed elbow, and a stepped sleeve on a reducer. Valves stay bare.
+ function insulate(route){const clad=(host,seg,i,len,a,z,radius)=>{const mid=a.clone().add(z).multiplyScalar(.5),d=z.clone().sub(a).normalize(),j=band(route.label+' · insulation cladding '+i,'pipe',radius+INS,radius+.002,len,mid.toArray(),'jacket',d.toArray());Object.assign(j,{insulationFor:host.id,routeId:route.id,thermalInsulation:true,insulationThickness:0,cut:true,exploreRole:'context',geometryBasis:'D-MDL-05 planning insulation 100 mm (280 °C)'});host.insulationThickness=INS;route.partIds.push(j.id);};
+  let n=0;for(const ei of route.edgeIndices){const e=k.edges[ei],host=parts.find(p=>p.id===e.part);if(!host||host.system!=='pipe'||!e.path?.length)continue;let P=e.path;const r=e.radius;if(P.length===3&&/elbow/.test(e.name)){const q=P.map(V),pts=[];for(let t=0;t<=1.0001;t+=.1)pts.push(q[0].clone().multiplyScalar((1-t)*(1-t)).addScaledVector(q[1],2*t*(1-t)).addScaledVector(q[2],t*t).toArray());P=pts;}// a formed elbow is a quadratic curve through its corner
+   if(host.portRadii){const [rA,rB]=host.portRadii,a=V(P[0]),z=V(P.at(-1)),h=a.distanceTo(z);for(let s=0;s<5;s++){const t0=s/5,t1=(s+1)/5,p0=a.clone().lerp(z,t0),p1=a.clone().lerp(z,t1);clad(host,e,++n,h/5*1.05,p0,p1,rA+(rB-rA)*(t0+t1)/2);}continue;}
+   if(P.length===2){const a=V(P[0]),z=V(P[1]),seg=a.distanceTo(z),len=Math.max(seg-.2,seg*.6);if(len>=.1)clad(host,e,++n,len,a,z,r);continue;}
+   // a bend: sleeves along the curve, each chord at least 0.1 m long so the small segments of a tight elbow merge
+   let from=V(P[0]),acc=0;for(let i=1;i<P.length;i++){const to=V(P[i]);acc+=V(P[i-1]).distanceTo(to);if(acc>=.1||i===P.length-1){const chord=from.distanceTo(to);if(chord>.02)clad(host,e,++n,Math.max(chord,acc*.9)*1.04,from,to,r);from=to;acc=0;}}}
+  return n;}
+ function hot(points,r,label,service,from,to,spec={}){const route=line(points,r,label,service,from,to,spec);routes.push(route.id);insulate(route);return route;}
  function cold(points,r,label,service,from,to,spec={}){const route=line(points,r,label,service,from,to,spec);routes.push(route.id);return route;}
  // ---- Package pad (unchanged plot) and curbs.
  const ap=EQUIPMENT[663];setContext(663,ap.label);
@@ -129,6 +137,9 @@ export function buildThermalOil(k,s,base,{acidRoute='r0'}={}){
  k.reducer(pret.point,rIn,pret.radius,R,'A-5400 return DN100 × DN300 at HX-601 (HX-601 nozzle placeholder)');
  hot(rPts.slice(0,7),R,'A-5400 thermal-oil return main from HX-601',RETURN,'HX-601 (BL-HT601-RET)','A-5400 battery limit',{2:{type:'wheel',label:'HX-601 return isolation'},5:{type:'wheel',label:'A-5400 return battery-limit isolation'}});
  hot(rPts.slice(6),R,'A-5400 return main (package)',RETURN,'A-5400 battery limit','V-5401 air separator');
+ // The reducers at the battery limits and the HX-601 heating lines in A-600 (drawn before the heating medium was chosen, as 'Thermal utility') carry the oil.
+ for(const label of ['A-5400 supply DN300 × DN100 at HX-601 (HX-601 nozzle placeholder)','A-5400 return DN100 × DN300 at HX-601 (HX-601 nozzle placeholder)']){const rt=k.routes.find(x=>x.label===label);if(!rt)throw Error('D-MDL-05: reducer '+label+' not found');rt.service=label.includes('supply')?SUPPLY:RETURN;insulate(rt);}
+ for(const [label,service] of [['HX-601 heating supply route',SUPPLY],['A600 heating supply interface',SUPPLY],['HX-601 heating return route',RETURN]]){const rt=k.routes.find(x=>x.label===label&&x.service==='Thermal utility');if(!rt)throw Error('D-MDL-05: HX-601 heating line '+label+' not found');rt.service=service;const st=k.streams?.find?.(q=>q.id===rt.id);if(st)st.service=service;routes.push(rt.id);insulate(rt);}
  mark(from,{thermalOil:true});
  // ---- Route 2 + 6 only: DN150 branch to PK-1101 stage 2 (D-MDL-02 option).
  let branch=null;
