@@ -16,6 +16,9 @@ export const ASME_CLASSES={
  vent:{label:'Vents, off-gas and dust · user-defined',color:'#9aa6b2',letters:'#101820',rank:10,userDefined:true,example:'Vents, exhaust, dust collection, thermal off-gas'},
  review:{label:'Not classified · hazard review',color:'#5a6b82',letters:'#ffffff',rank:11,userDefined:true,example:'Service or medium needs a hazard assessment'}
 };
+// Hazard review register: one line per class. Set status to 'approved' with reviewer and date once the SDS review is signed off.
+export const ASME_REVIEW=Object.fromEntries(Object.keys(ASME_CLASSES).map(k=>[k,{status:'proposed',reviewer:'',date:'',sds:'Check against the safety data sheets of every service listed for this class'}]));
+ASME_REVIEW.fire.sds='No fire-water line is modelled yet; add the class lines with the fire-protection design';
 const set=(cls,names)=>names.map(n=>[n,cls]);
 const SERVICE_CLASS=new Map([
  ...set('toxic',['Acid vent','Acid wash vent','Acid condensate','Acidic waste','Acidic decant','Scrubber liquor','Scrubber blowdown','Scrubber waste','Phosphoric acid','Sulfuric acid','HCl','NaOH','NaOH feed','Lime feed','BaCl2 feed','Antiscalant','CIP chemical','CIP','CIP return','CIP circulation','Segregated CIP waste','Flocculant feed','P2O5','Wash waste','Drain']),
@@ -41,7 +44,8 @@ export function classifyPipe(route,flow={}){
  if(!cls&&flow.flowCategory&&FLOW_TO_ASME[flow.flowCategory]){cls=FLOW_TO_ASME[flow.flowCategory];basis='Follows the PFD category '+flow.flowCategory+' for service '+(service||'unspecified');legend=legend||upper(flow.flowCategory);}
  if(!cls)return {asmeClass:'review',asmeLegend:upper(service)||'UNSPECIFIED',asmeStatus:'review',asmeBasis:'Service needs a hazard classification: '+(service||'unspecified')};
  if(!legend)legend=upper(label).slice(0,28);
- return {asmeClass:cls,asmeLegend:legend.length>30?legend.slice(0,30).trim():legend,asmeStatus:'proposed',asmeBasis:basis||'Proposed default'};
+ return {asmeClass:cls,asmeLegend:legend.length>30?legend.slice(0,30).trim():legend,asmeStatus:ASME_REVIEW[cls].status,asmeBasis:basis||'Proposed default'};
 }
+export const asmeServices=()=>{const out={};for(const [service,cls] of SERVICE_CLASS)(out[cls]??=[]).push(service);return out;};
 export const asmeColor=route=>ASME_CLASSES[route?.asmeClass]?.color||'#43546b';
 export const asmeLabel=route=>route?.asmeClass?route.asmeLegend+' · '+ASME_CLASSES[route.asmeClass].label+(route.asmeStatus==='proposed'?' (proposed)':''):'';

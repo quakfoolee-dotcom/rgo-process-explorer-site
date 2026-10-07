@@ -45,7 +45,7 @@ import {inspectAccess} from './access-review.js';
 import {inspectStructuralConnections} from './structural-kit.js';
 import {A160_DESIGNS,A160_TAG_RESERVATIONS,ACID_ROUTES,readDesignSelection,scenarioStages} from './design-scenarios.js';
 import {FLOW_SCHEMES,DEFAULT_FLOW_SCHEME,FLOW_CATEGORIES,flowColor,categoryLabel,matchesFlowFocus,partFlowRegister} from './flow-palette.js';
-import {ASME_CLASSES,ASME_BASIS,asmeLabel} from './pipe-identification.js';
+import {ASME_CLASSES,ASME_BASIS,ASME_REVIEW,asmeLabel} from './pipe-identification.js';
 import {AREAS,PROCESS_AREAS,MAIN_ROUTE,SOURCE,DESIGN_STATUSES,UTILITY_LINKS,areaById,areaTitle,formatAreaText,equipmentRegister,routeRecord,operationTitle,registerSnapshot} from './engineering-register.js';
 import {VIEW_MODES,APPEARANCE_HELP,REVIEW_COLOR,viewAppearance,createAreaVisibility} from './view-modes.js';
 import {inspectDrain} from './drainage.js';
@@ -394,7 +394,7 @@ function selectStage(id,{keepState=false}={}){const wasContainment=stageId?.star
 function renderStages(){$('train-description').textContent=processTrain==='feed'?'Main route: '+MAIN_ROUTE+'. A-700 T-702 feeds A-800 receiving, dosing, mixing, pyrolysis and cooling. A-900 compact pelletization and finishing is the downstream interface.':'Archived design reference: independent filtration → contained cake transfer → drying → product.';processBrowser?.render();}
 function routeHex(record){return flowColor(record,flowScheme,serviceColors);}
 // ASME pipe identification overlay: flow arrows on every fluid line and a legend label under the pointer (display only).
-let pipeArrows=null,hoverLabel=null,hoverTime=0;
+let pipeArrows=null,hoverLabel=null,hoverTime=0,arrowSig='';
 const asmeActive=()=>colorMode==='flow'&&flowScheme==='asme'&&!(productJourney?.active||thermalTrace?.active);
 function buildPipeArrows(){
  const items=[];
@@ -406,13 +406,28 @@ function buildPipeArrows(){
  scene.add(mesh);return mesh;
 }
 const arrowMatrix=new T.Matrix4(),arrowQ=new T.Quaternion(),arrowUp=new T.Vector3(0,1,0),arrowPos=new T.Vector3(),arrowScale=new T.Vector3(),arrowDir=new T.Vector3(),arrowLift=new T.Vector3();
+const pxWorld=()=>camera.isOrthographicCamera?(camera.top-camera.bottom)/camera.zoom/renderer.domElement.clientHeight:2*Math.tan(T.MathUtils.degToRad(camera.fov/2))*camera.position.distanceTo(controls.target)/renderer.domElement.clientHeight;
+let pipeLabelSig='',pipeLabels=[];const labelTextures=new Map();
+function legendTexture(rec){const key=rec.asmeClass+'|'+rec.asmeLegend;let tex=labelTextures.get(key);if(tex)return tex;const cls=ASME_CLASSES[rec.asmeClass],c=document.createElement('canvas'),x=c.getContext('2d');x.font='600 30px system-ui,sans-serif';const w=Math.ceil(x.measureText(rec.asmeLegend).width)+28;c.width=w;c.height=48;x.font='600 30px system-ui,sans-serif';x.fillStyle=cls.color;x.fillRect(0,0,w,48);x.strokeStyle='#0b1118';x.lineWidth=3;x.strokeRect(1.5,1.5,w-3,45);x.fillStyle=cls.letters;x.textBaseline='middle';x.fillText(rec.asmeLegend,14,25);tex=new T.CanvasTexture(c);tex.userData={ratio:w/48};labelTextures.set(key,tex);return tex;}
+function updatePipeLabels(){
+ const on=asmeActive()&&pipeArrows?.visible;if(!on){for(const l of pipeLabels)l.visible=false;pipeLabelSig='';return;}
+ const wpp=pxWorld(),sig=[camera.position.x,camera.position.y,camera.position.z,camera.zoom,controls.target.x,controls.target.z,flowFocus,labelRevision].map(v=>typeof v==='number'?v.toFixed(2):v).join();if(sig===pipeLabelSig)return;pipeLabelSig=sig;
+ for(const l of pipeLabels)l.visible=false;if(wpp>.2)return;
+ const rect=renderer.domElement,items=pipeArrows.userData.items,view=new T.Vector3(),cand=[];
+ items.forEach((it,k)=>{const e=it.edge,part=partMap.get(e.part);if(!part?.visible||(flowFocus&&it.rec.asmeClass!==flowFocus))return;const len=Math.hypot(e.b[0]-e.a[0],e.b[1]-e.a[1],e.b[2]-e.a[2]);if(len<3)return;view.set((e.a[0]+e.b[0])/2,(e.a[1]+e.b[1])/2,(e.a[2]+e.b[2])/2).add(part.offset).project(camera);if(Math.abs(view.x)>.95||Math.abs(view.y)>.95||view.z>1)return;cand.push({it,e,part,d:view.x*view.x+view.y*view.y});});
+ cand.sort((a,b)=>a.d-b.d);const taken=[],pxH=15;let n=0;
+ for(const c of cand){if(n>=45)break;const e=c.e,mid=new T.Vector3((e.a[0]+e.b[0])/2,(e.a[1]+e.b[1])/2+(e.radius||.05)+wpp*14,(e.a[2]+e.b[2])/2).add(c.part.offset);view.copy(mid).project(camera);const sx=(view.x*.5+.5)*rect.clientWidth,sy=(.5-view.y*.5)*rect.clientHeight,tex=legendTexture(c.it.rec),w=pxH*tex.userData.ratio;
+ if(taken.some(t=>Math.abs(t[0]-sx)<(t[2]+w)/2+4&&Math.abs(t[1]-sy)<pxH+4))continue;taken.push([sx,sy,w]);
+ let sp=pipeLabels[n];if(!sp){sp=new T.Sprite(new T.SpriteMaterial({depthTest:false,depthWrite:false,toneMapped:false}));sp.renderOrder=6;scene.add(sp);pipeLabels[n]=sp;}
+ if(sp.material.map!==tex){sp.material.map=tex;sp.material.needsUpdate=true;}sp.position.copy(mid);sp.scale.set(pxH*tex.userData.ratio*wpp,pxH*wpp,1);sp.visible=true;n++;}
+}
 function updatePipeArrows(){
- if(!asmeActive()){if(pipeArrows)pipeArrows.visible=false;return;}
+ if(!asmeActive()){if(pipeArrows)pipeArrows.visible=false;return;}const wpp=pxWorld();arrowSig=wpp.toFixed(3);
  if(!pipeArrows)pipeArrows=buildPipeArrows();pipeArrows.visible=true;
  pipeArrows.userData.items.forEach((it,k)=>{const e=it.edge,part=partMap.get(e.part),shown=part?.visible&&(!flowFocus||it.rec.asmeClass===flowFocus);
   if(!shown){arrowMatrix.makeScale(0,0,0);pipeArrows.setMatrixAt(k,arrowMatrix);return;}
   arrowDir.set(e.b[0]-e.a[0],e.b[1]-e.a[1],e.b[2]-e.a[2]).normalize();arrowQ.setFromUnitVectors(arrowUp,arrowDir);
-  const radius=Math.min(.2,Math.max(.07,(e.radius||.05)*1.7));arrowLift.set(Math.abs(arrowDir.y)>.9?1:0,Math.abs(arrowDir.y)>.9?0:1,0);
+  const radius=Math.min(.5,Math.max(.1,(e.radius||.05)*1.7,wpp*5));arrowLift.set(Math.abs(arrowDir.y)>.9?1:0,Math.abs(arrowDir.y)>.9?0:1,0);
   arrowPos.set((e.a[0]+e.b[0])/2,(e.a[1]+e.b[1])/2,(e.a[2]+e.b[2])/2).addScaledVector(arrowLift,(e.radius||.05)+radius*.9).add(part.offset);arrowScale.set(radius,radius,radius);
   arrowMatrix.compose(arrowPos,arrowQ,arrowScale);pipeArrows.setMatrixAt(k,arrowMatrix);});
  pipeArrows.instanceMatrix.needsUpdate=true;
@@ -439,7 +454,7 @@ function renderColorLegend(){if(productJourney?.active||thermalTrace?.active){le
  if(colorMode==='status'){for(const value of Object.values(DESIGN_STATUSES))entry(value.label,value.color);entry('Review open · label outline',REVIEW_COLOR);}
  if(colorMode==='flow'&&flowScheme==='pfd'){for(const [key,value] of Object.entries(FLOW_CATEGORIES))entry(value.label,value.color,key,routes.filter(r=>r.flowCategory===key).length);const unresolved=routes.filter(r=>r.flowCategoryStatus==='review').length;if(unresolved){entry('Category review · '+unresolved+' routes',null);const note=document.createElement('small');note.className='legend-note';note.textContent='Unclassified routes remain dim. Their medium or duty needs confirmation.';root.append(note);}}
  if(colorMode==='flow'&&flowScheme==='detailed'){for(const service of [...new Set(routes.filter(r=>r.flowCategoryStatus!=='non-flow').map(r=>r.service))].sort())entry(service,flowColor({service},'detailed',serviceColors),service,routes.filter(r=>r.service===service).length);}
- if(colorMode==='flow'&&flowScheme==='asme'){for(const [key,value] of Object.entries(ASME_CLASSES))entry(value.label,value.color,key,routes.filter(r=>r.asmeClass===key).length);const note=document.createElement('small');note.className='legend-note';note.textContent=ASME_BASIS.status+'. '+ASME_BASIS.note+' Arrows show flow direction; point at a pipe for its legend.';root.append(note);}
+ if(colorMode==='flow'&&flowScheme==='asme'){for(const [key,value] of Object.entries(ASME_CLASSES))entry(value.label,value.color,key,routes.filter(r=>r.asmeClass===key).length);const note=document.createElement('small');note.className='legend-note';note.textContent=ASME_BASIS.status+' ('+Object.values(ASME_REVIEW).filter(v=>v.status==='approved').length+' of '+Object.keys(ASME_REVIEW).length+' classes signed off). '+ASME_BASIS.note+' Arrows show flow direction; zoom in to read the painted legends, or point at a pipe.';root.append(note);}
  if(colorMode==='flow'&&model.fireSafety)entry('Fire points · FE tags','#e62f47');
  if(colorMode==='flow'&&model.containment)entry('Emergency shower / eyewash · ES tags','#ffd000');
  updateFlowFocusStatus();}
@@ -590,7 +605,7 @@ sectionInspector=mountSectionInspector({scene,viewport,trigger:$('cutaway'),getC
  label:section.scope==='equipment'?('Equipment · '+(EQUIPMENT[section.equipmentId]?.tag||'selection')):'Currently visible plant geometry'
 })});
 createControls();document.body.classList.add('inspection-mode');refreshRoutes();renderTree();applyBatchState('transfer');selectStage(null);resize();new ResizeObserver(resize).observe(viewport);
-let last=performance.now();function frame(now){requestAnimationFrame(frame);const dt=Math.min((now-last)/1000,.05);last=now;if(photoRendering)return;if(Math.abs(amount-target)>.0001){amount=T.MathUtils.lerp(amount,target,1-Math.exp(-dt*7));dirty=true}else if(amount!==target){amount=target;dirty=true}if(dirty)updateParts();if(!plantBrowse?.active){transportReview?.update(dt);scene.userData.engineerWalk?.update(dt);}productJourney?.update(dt,now);thermalTrace?.update(dt,now);plantBrowse?.update(dt);if(!plantBrowse?.active)controls.update();sectionInspector?.draw();fireSafetyUI?.draw();emergencyStationsUI?.draw();walkwayUI?.draw();updateEquipmentLabels();measuring.draw();areaOverlay.draw();if(renderDetail.update(camera,controls.target,renderer.domElement.clientHeight,system==='fastener'||!!exploration||amount>0||selected?.system==='fastener'))renderer.shadowMap.needsUpdate=true;renderer.render(scene,camera);window.rgoStartup?.ready()}requestAnimationFrame(frame);
+let last=performance.now();function frame(now){requestAnimationFrame(frame);const dt=Math.min((now-last)/1000,.05);last=now;if(photoRendering)return;if(Math.abs(amount-target)>.0001){amount=T.MathUtils.lerp(amount,target,1-Math.exp(-dt*7));dirty=true}else if(amount!==target){amount=target;dirty=true}if(dirty)updateParts();if(!plantBrowse?.active){transportReview?.update(dt);scene.userData.engineerWalk?.update(dt);}productJourney?.update(dt,now);thermalTrace?.update(dt,now);plantBrowse?.update(dt);if(!plantBrowse?.active)controls.update();if(asmeActive()&&pipeArrows&&arrowSig!==pxWorld().toFixed(3))updatePipeArrows();updatePipeLabels();sectionInspector?.draw();fireSafetyUI?.draw();emergencyStationsUI?.draw();walkwayUI?.draw();updateEquipmentLabels();measuring.draw();areaOverlay.draw();if(renderDetail.update(camera,controls.target,renderer.domElement.clientHeight,system==='fastener'||!!exploration||amount>0||selected?.system==='fastener'))renderer.shadowMap.needsUpdate=true;renderer.render(scene,camera);window.rgoStartup?.ready()}requestAnimationFrame(frame);
 window.reactorExplorer={parts,model,get plantBrowse(){return plantBrowse;},get walkways(){return walkwayUI;},get fireSafety(){return fireSafetyUI;},get emergencyStations(){return emergencyStationsUI;},setStructureVisibility,setSection,get productJourney(){return productJourney;},beginExplore,endExplore,startExploreView,setExplorePresentation,setExploreAmount,setExploreSection,selectPart,selectEquipment,measuring,areaOverlay,get engineerWalk(){return scene.userData.engineerWalk;},getState:()=>({plantBrowse:plantBrowse?.getState(),startup:window.rgoStartup?.timing,fastenerDetail:renderDetail.shown,emergencyStations:emergencyStationsUI?.getState(),walkways:walkwayUI?.getState(),structureVisibility:{...structureVisibility.getState(),counts:structureVisibility.counts},transport:transportReview?.getState(),thermalTrace:thermalTrace?.getState(),productJourney:productJourney?.getState(),exploration:exploration?{equipmentId:exploration.plan.equipmentId,tag:EQUIPMENT[exploration.plan.equipmentId].tag,presentation:target>0?'exploded':'assembled',separation:target,context:exploration.context,members:exploration.plan.ids.size,boundaries:exploration.plan.boundaries.length}:null,navigation:{precision:controls.precision,rotateSpeed:controls.rotateSpeed,pivotPartId:controls.pivotPartId,pivot:controls.inspectionPivot?.toArray()||null},areaScope,showProposed,exploreOptions:[...$('explore-equipment').options].map(o=>o.value).filter(Boolean),mode,projection:camera.isOrthographicCamera?'orthographic':'perspective',view,amount,target,system,reactor,designSelection,section:{...section},routeId,routeParts:routeTrace?.partIds.size||0,clashes:clashResult?.candidates.length??null,workspaceMode,processTrain,stageId,batchState,unitState,feedKey,feedState,materialTraceParts:materialHighlight?.partIds.size||0,visible:visibleParts.length,selected:selected?.code,selection:selectedEquipmentId==null?null:{level:selected?'component':'equipment',equipmentId:selectedEquipmentId,tag:EQUIPMENT[selectedEquipmentId].tag,componentId:selected?.id??null},drawCalls:renderer.info.render.calls})};
 
 // Access overlays are independent of material/status/flow coloring and never become process parts.
