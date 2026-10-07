@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-07T15:04:16.486Z",
+  "checkedAt": "2026-10-07T16:23:04.702Z",
   "method": "Node model, geometry, process-state and static interface tests",
   "browserQA": false,
   "passed": false,
@@ -618,7 +618,7 @@
     {
       "name": "validate-browse-levels-model.mjs",
       "passed": true,
-      "details": "{\"ms\":451.0088999999998,\"summary\":{\"flights\":8,\"availableFlights\":8,\"decks\":24,\"availableDecks\":24},\"findings\":[],\"edges\":1524}\nUnregistered tread names: []\nPASS: 24 complete ground-to-deck return journeys, all 8 flights, stacked surface picking, and missing/moved tread rejection."
+      "details": "{\"ms\":574.9120000000003,\"summary\":{\"flights\":8,\"availableFlights\":8,\"decks\":24,\"availableDecks\":24},\"findings\":[],\"edges\":1524}\nUnregistered tread names: []\nPASS: 24 complete ground-to-deck return journeys, all 8 flights, stacked surface picking, and missing/moved tread rejection."
     },
     {
       "name": "validate-browse-levels-surfaces.mjs",
@@ -823,7 +823,7 @@
     {
       "name": "validate-emergency-performance.mjs",
       "passed": true,
-      "details": "{\"buildMs\":17999.2432,\"directStationMs\":1415.9616999999998,\"geometryAndSupportSignature\":{\"parts\":146652,\"partsDigest\":\"c925493bcf573cd7d1e5b66c8744404cc173249ee23231f0f84a277803ac48d1\",\"supportDigest\":\"6f4709796754b180ec2021115ac81ee7e60dc97c4872e6cad9d6f9e22f3e801d\"}}\n{\n  \"result\": \"PASS\",\n  \"configuration\": \"baseline\",\n  \"buildMs\": 17999.2432,\n  \"phases\": [\n    {\n      \"phase\": \"base\",\n      \"ms\": 46.48490000000001\n    },\n    {\n      \"phase\": \"upstream\",\n      \"ms\": 74.3031\n    },\n    {\n      \"phase\": \"separations\",\n      \"ms\": 171.9537\n    },\n    {\n      \"phase\": \"sonication\",\n      \"ms\": 20.751599999999996\n    },\n    {\n      \"phase\": \"sprayDrying\",\n      \"ms\": 20.79449999999997\n    },\n    {\n      \"phase\": \"furnace\",\n      \"ms\": 20.670800000000042\n    },\n    {\n      \"phase\": \"doping\",\n      \"ms\": 42.69540000000001\n    },\n    {\n      \"phase\": \"a900\",\n      \"ms\": 1.5249000000000024\n    },\n    {\n      \"phase\": \"argonDistribution\",\n      \"ms\": 41.456500000000005\n    },\n    {\n      \"phase\": \"preg\",\n      \"ms\": 48.875999999999976\n    },\n    {\n      \"phase\": \"filtration\",\n      \"ms\": 8.223799999999983\n    },\n    {\n      \"phase\": \"drying\",\n      \"ms\": 24.081699999999955\n    },\n    {\n      \"phase\": \"cakeTransfer\",\n      \"ms\": 14.07280000000003\n    },\n    {\n      \"phase\": \"accessSystem\",\n      \"ms\": 109.68780000000004\n    },\n    {\n      \"phase\": \"accessIndications\",\n      \"ms\": 47.9547\n    },\n    {\n      \"phase\": \"wastewater\",\n      \"ms\": 89.66309999999999\n    },\n    {\n      \"phase\": \"ventGas\",\n      \"ms\": 710.1261000000001\n    },\n    {\n      \"phase\": \"exhaustGroups\",\n      \"ms\": 20.122299999999996\n    },\n    {\n      \"phase\": \"reclaimedWater\",\n      \"ms\": 146.04150000000004\n    },\n    {\n      \"phase\": \"compressedAir\",\n      \"ms\": 1294.6089999999997\n    },\n    {\n      \"phase\": \"pipeSupportSystem\",\n      \"ms\": 6703.658599999999\n    },\n    {\n      \"phase\": \"containment\",\n      \"ms\": 2804.2364000000016\n    }\n  ],\n  \"directStationMs\": 1415.9616999999998,\n  \"worker\": {\n    \"stationMs\": 700.0421000000024,\n    \"routeMs\": 109.2365000000027\n  },\n  \"asyncMs\": 1138.9511999999995,\n  \"cachedMs\": 227.68179999999847,\n  \"mainThreadHeartbeatTicks\": 70,\n  \"maxTickGapMs\": 50.093299999996816,\n  \"signature\": {\n    \"parts\": 146652,\n    \"partsDigest\": \"c925493bcf573cd7d1e5b66c8744404cc173249ee23231f0f84a277803ac48d1\",\n    \"supportDigest\": \"6f4709796754b180ec2021115ac81ee7e60dc97c4872e6cad9d6f9e22f3e801d\"\n  },\n  \"fullReviewAndRouteEquivalence\": true,\n  \"cacheInvalidation\": true,\n  \"cancellation\": true,\n  \"hiddenObstructionChecked\": true,\n  \"complianceVerified\": false,\n  \"browserRenderingMeasured\": false\n}"
+      "details": "{\"buildMs\":18095.3892,\"directStationMs\":1356.0493000000024,\"geometryAndSupportSignature\":{\"parts\":146652,\"partsDigest\":\"c925493bcf573cd7d1e5b66c8744404cc173249ee23231f0f84a277803ac48d1\",\"supportDigest\":\"6f4709796754b180ec2021115ac81ee7e60dc97c4872e6cad9d6f9e22f3e801d\"}}\n{\n  \"result\": \"PASS\",\n  \"configuration\": \"baseline\",\n  \"buildMs\": 18095.3892,\n  \"phases\": [\n    {\n      \"phase\": \"base\",\n      \"ms\": 45.068100000000015\n    },\n    {\n      \"phase\": \"upstream\",\n      \"ms\": 73.83699999999999\n    },\n    {\n      \"phase\": \"separations\",\n      \"ms\": 173.4332\n    },\n    {\n      \"phase\": \"sonication\",\n      \"ms\": 13.250099999999975\n    },\n    {\n      \"phase\": \"sprayDrying\",\n      \"ms\": 24.187700000000007\n    },\n    {\n      \"phase\": \"furnace\",\n      \"ms\": 17.893700000000024\n    },\n    {\n      \"phase\": \"doping\",\n      \"ms\": 40.95330000000001\n    },\n    {\n      \"phase\": \"a900\",\n      \"ms\": 1.8213999999999828\n    },\n    {\n      \"phase\": \"argonDistribution\",\n      \"ms\": 29.41719999999998\n    },\n    {\n      \"phase\": \"preg\",\n      \"ms\": 48.64930000000004\n    },\n    {\n      \"phase\": \"filtration\",\n      \"ms\": 7.818499999999972\n    },\n    {\n      \"phase\": \"drying\",\n      \"ms\": 20.191400000000044\n    },\n    {\n      \"phase\": \"cakeTransfer\",\n      \"ms\": 16.407299999999964\n    },\n    {\n      \"phase\": \"accessSystem\",\n      \"ms\": 71.23850000000004\n    },\n    {\n      \"phase\": \"accessIndications\",\n      \"ms\": 40.01490000000001\n    },\n    {\n      \"phase\": \"wastewater\",\n      \"ms\": 59.7050999999999\n    },\n    {\n      \"phase\": \"ventGas\",\n      \"ms\": 708.0385000000001\n    },\n    {\n      \"phase\": \"exhaustGroups\",\n      \"ms\": 22.018100000000004\n    },\n    {\n      \"phase\": \"reclaimedWater\",\n      \"ms\": 141.61899999999991\n    },\n    {\n      \"phase\": \"compressedAir\",\n      \"ms\": 1272.4243\n    },\n    {\n      \"phase\": \"pipeSupportSystem\",\n      \"ms\": 6314.1913\n    },\n    {\n      \"phase\": \"containment\",\n      \"ms\": 3360.4197999999997\n    }\n  ],\n  \"directStationMs\": 1356.0493000000024,\n  \"worker\": {\n    \"stationMs\": 732.8367999999973,\n    \"routeMs\": 108.33669999999984\n  },\n  \"asyncMs\": 1191.9809999999998,\n  \"cachedMs\": 298.0103999999992,\n  \"mainThreadHeartbeatTicks\": 71,\n  \"maxTickGapMs\": 49.699000000000524,\n  \"signature\": {\n    \"parts\": 146652,\n    \"partsDigest\": \"c925493bcf573cd7d1e5b66c8744404cc173249ee23231f0f84a277803ac48d1\",\n    \"supportDigest\": \"6f4709796754b180ec2021115ac81ee7e60dc97c4872e6cad9d6f9e22f3e801d\"\n  },\n  \"fullReviewAndRouteEquivalence\": true,\n  \"cacheInvalidation\": true,\n  \"cancellation\": true,\n  \"hiddenObstructionChecked\": true,\n  \"complianceVerified\": false,\n  \"browserRenderingMeasured\": false\n}"
     },
     {
       "name": "validate-emergency-stations.mjs",
@@ -1163,7 +1163,7 @@
     {
       "name": "validate-lean-review-data.mjs",
       "passed": true,
-      "details": "PASS: lean review — baseline 146,652 parts (0707759 2026-10-07); 12 register items linked to 37 findings and 15 decisions; page hooks present."
+      "details": "PASS: lean review — baseline 146,652 parts (2b4e904 2026-10-07); 12 register items linked to 37 findings and 15 decisions; page hooks present."
     },
     {
       "name": "validate-lean115.mjs",
@@ -1203,7 +1203,7 @@
     {
       "name": "validate-overview-coverage.mjs",
       "passed": true,
-      "details": "PASS: overview — 360 envelopes (0707759 2026-10-07); coverage approved 112, held 4, documented 33, record 93, none 118; page hooks present."
+      "details": "PASS: overview — 360 envelopes (2b4e904 2026-10-07); coverage approved 112, held 4, documented 33, record 93, none 118; page hooks present."
     },
     {
       "name": "validate-panel-window-order.mjs",
@@ -1270,9 +1270,9 @@
         "parts": 146652,
         "eligibleEdges": 265,
         "blockedSegments": 0,
-        "keyMs": 143,
-        "reviewMs": 276,
-        "occlusionIndexMs": 528,
+        "keyMs": 140,
+        "reviewMs": 269,
+        "occlusionIndexMs": 412,
         "cooperativeYields": 58
       }
     },
@@ -1299,7 +1299,7 @@
     {
       "name": "validate-prepared-startup.mjs",
       "passed": true,
-      "details": "{\"phase\":\"Loaded\",\"source\":\"prepared\",\"downloadMs\":54.203599999999994,\"inflateMs\":611.8214,\"reconstructMs\":2606.4313,\"decodeMs\":3218.3158000000003,\"totalMs\":3274.8222,\"ticks\":186,\"maxGap\":109.13810000000012}\n{\"result\":\"PASS\",\"load\":{\"source\":\"prepared\",\"downloadMs\":54.203599999999994,\"inflateMs\":611.8214,\"reconstructMs\":2606.4313,\"decodeMs\":3218.3158000000003,\"totalMs\":3274.8222},\"heartbeatTicks\":186,\"maxHeartbeatGapMs\":109.13810000000012,\"parts\":146652,\"emergencyReviewIdentical\":true,\"emergencyRoutesIdentical\":true,\"structuralReviewIdentical\":true,\"walkwayReviewIdentical\":true,\"pipeDiametersIdentical\":true,\"geometryVersionChecked\":true,\"invalidDownloadRejected\":true,\"lodPreservesEngineeringModel\":true,\"browserRenderingMeasured\":false}"
+      "details": "{\"phase\":\"Loaded\",\"source\":\"prepared\",\"downloadMs\":49.29900000000001,\"inflateMs\":572.0602,\"reconstructMs\":2679.2163,\"decodeMs\":3251.3675,\"totalMs\":3303.024,\"ticks\":184,\"maxGap\":105.8039}\n{\"result\":\"PASS\",\"load\":{\"source\":\"prepared\",\"downloadMs\":49.29900000000001,\"inflateMs\":572.0602,\"reconstructMs\":2679.2163,\"decodeMs\":3251.3675,\"totalMs\":3303.024},\"heartbeatTicks\":184,\"maxHeartbeatGapMs\":105.8039,\"parts\":146652,\"emergencyReviewIdentical\":true,\"emergencyRoutesIdentical\":true,\"structuralReviewIdentical\":true,\"walkwayReviewIdentical\":true,\"pipeDiametersIdentical\":true,\"geometryVersionChecked\":true,\"invalidDownloadRejected\":true,\"lodPreservesEngineeringModel\":true,\"browserRenderingMeasured\":false}"
     },
     {
       "name": "validate-prepared-worker.mjs",
@@ -1315,7 +1315,7 @@
         },
         "parts": 156863,
         "progressMessages": 25,
-        "elapsedMs": 29551.0086
+        "elapsedMs": 31047.0117
       }
     },
     {

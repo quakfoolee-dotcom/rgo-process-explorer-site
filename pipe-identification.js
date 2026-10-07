@@ -5,7 +5,7 @@ export const ASME_BASIS={title:'Pipe identification · ASME A13.1 class structur
  note:'Colour field, upper-case legend and flow arrow. Classes by fluid hazard, not by service name. Project convention: confirm the A13.1 edition, owner requirements and CAN/CGSB-24.3 before issue.'};
 export const ASME_CLASSES={
  fire:{label:'Fire-quenching fluids',color:'#e5242b',letters:'#ffffff',rank:1,userDefined:false,example:'Fire water'},
- toxic:{label:'Toxic and corrosive fluids',color:'#f5832b',letters:'#101820',rank:2,userDefined:false,example:'Acids, alkalis, cleaning chemicals, acid vents, chemical drains'},
+ toxic:{label:'Toxic and corrosive fluids (liquids and gases)',color:'#f5832b',letters:'#101820',rank:2,userDefined:false,example:'Acids, alkalis, cleaning chemicals, chemical drains; acid vent gas is in this class, tagged GAS'},
  flammable:{label:'Flammable fluids',color:'#dba400',letters:'#101820',rank:3,userDefined:false,example:'Natural gas, borohydride streams'},
  combustible:{label:'Combustible fluids',color:'#a06a3c',letters:'#ffffff',rank:4,userDefined:false,example:'Thermal oil'},
  water:{label:'Water: potable, cooling, boiler feed, other',color:'#2fa65a',letters:'#ffffff',rank:5,userDefined:false,example:'RO, city, cooling, chilled and hot water; wastewater; process drains'},
@@ -33,6 +33,9 @@ const SERVICE_CLASS=new Map([
 ]);
 const FLOW_TO_ASME={chemical:'toxic',water:'water',offgas:'vent',wastewater:'water',drain:'water',product:'product',gas:'inert'};
 const THERMAL=[[/CHWS|chilled water supply/i,'CHILLED WATER SUPPLY'],[/CHWR|chilled water return/i,'CHILLED WATER RETURN'],[/CWS|cooling water supply/i,'COOLING WATER SUPPLY'],[/CWR|cooling water return/i,'COOLING WATER RETURN'],[/hot water return|heating return/i,'HOT WATER RETURN'],[/hot water|heating supply/i,'HOT WATER SUPPLY']];
+// Phase tag shown on the legend for gases and solids; liquids are untagged.
+const GAS=/vent|off-gas|offgas|exhaust|\bair\b|argon|nitrogen|natural gas|vapou?r|relief|purge|\bgas\b/i,SOLID=/pellet|graphite|dry go|wet cake|solids|powder|packaged|dust|fines|sludge/i;
+export const asmePhase=(service,label)=>{const t=service+' '+label;return GAS.test(t)?'gas':SOLID.test(t)?'solids':'liquid';};
 const upper=s=>String(s||'').toUpperCase().replace(/\s+/g,' ').trim();
 // route: a model route; flow: the PFD classification already attached to the route record (optional fallback)
 export function classifyPipe(route,flow={}){
@@ -44,7 +47,9 @@ export function classifyPipe(route,flow={}){
  if(!cls&&flow.flowCategory&&FLOW_TO_ASME[flow.flowCategory]){cls=FLOW_TO_ASME[flow.flowCategory];basis='Follows the PFD category '+flow.flowCategory+' for service '+(service||'unspecified');legend=legend||upper(flow.flowCategory);}
  if(!cls)return {asmeClass:'review',asmeLegend:upper(service)||'UNSPECIFIED',asmeStatus:'review',asmeBasis:'Service needs a hazard classification: '+(service||'unspecified')};
  if(!legend)legend=upper(label).slice(0,28);
- return {asmeClass:cls,asmeLegend:legend.length>30?legend.slice(0,30).trim():legend,asmeStatus:ASME_REVIEW[cls].status,asmeBasis:basis||'Proposed default'};
+ const phase=asmePhase(service,label),tag=phase==='gas'?' · GAS':phase==='solids'?' · SOLIDS':'';
+ if(tag&&['toxic','flammable','combustible','oxidiser','product','review'].includes(cls)&&!new RegExp(phase==='gas'?'GAS':'SOLIDS').test(legend))legend=legend.slice(0,30-tag.length).trim()+tag;
+ return {asmeClass:cls,asmePhase:phase,asmeLegend:legend.length>30?legend.slice(0,30).trim():legend,asmeStatus:ASME_REVIEW[cls].status,asmeBasis:basis||'Proposed default'};
 }
 export const asmeServices=()=>{const out={};for(const [service,cls] of SERVICE_CLASS)(out[cls]??=[]).push(service);return out;};
 export const asmeColor=route=>ASME_CLASSES[route?.asmeClass]?.color||'#43546b';

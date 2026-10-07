@@ -45,7 +45,7 @@ import {inspectAccess} from './access-review.js';
 import {inspectStructuralConnections} from './structural-kit.js';
 import {A160_DESIGNS,A160_TAG_RESERVATIONS,ACID_ROUTES,readDesignSelection,scenarioStages} from './design-scenarios.js';
 import {FLOW_SCHEMES,DEFAULT_FLOW_SCHEME,FLOW_CATEGORIES,flowColor,categoryLabel,matchesFlowFocus,partFlowRegister} from './flow-palette.js';
-import {ASME_CLASSES,ASME_BASIS,ASME_REVIEW,asmeLabel} from './pipe-identification.js';
+import {ASME_CLASSES,ASME_BASIS,ASME_REVIEW,asmeServices,asmeLabel} from './pipe-identification.js';
 import {AREAS,PROCESS_AREAS,MAIN_ROUTE,SOURCE,DESIGN_STATUSES,UTILITY_LINKS,areaById,areaTitle,formatAreaText,equipmentRegister,routeRecord,operationTitle,registerSnapshot} from './engineering-register.js';
 import {VIEW_MODES,APPEARANCE_HELP,REVIEW_COLOR,viewAppearance,createAreaVisibility} from './view-modes.js';
 import {inspectDrain} from './drainage.js';
@@ -396,16 +396,41 @@ function routeHex(record){return flowColor(record,flowScheme,serviceColors);}
 // ASME pipe identification overlay: flow arrows on every fluid line and a legend label under the pointer (display only).
 let pipeArrows=null,hoverLabel=null,hoverTime=0,arrowSig='';
 const asmeActive=()=>colorMode==='flow'&&flowScheme==='asme'&&!(productJourney?.active||thermalTrace?.active);
+// Pipe segments for arrows and painted legends. Flow direction comes from the route's A → B definition and is propagated along the connected edges from end A; routes without a defined direction get legends only, no arrows.
+let pipeItems=null,arrowItems=[],arrowStats={routes:0,directed:0};
+function buildPipeItems(){
+ const items=[],key=p=>Math.round(p[0]*40)+','+Math.round(p[1]*40)+','+Math.round(p[2]*40),near=(p,q)=>Math.hypot(p[0]-q[0],p[1]-q[1],p[2]-q[2])<.06;
+ arrowStats={routes:0,directed:0};
+ for(const r of model.routes){const rec=routeRecords.get(r.id);if(!rec?.asmeClass)continue;arrowStats.routes++;
+  const edges=(r.edgeIndices||[]).map(i=>model.edges[i]).filter(e=>e?.path?.length>1),oriented=new Map();let directed=false;
+  if(r.direction==='A → B'&&r.endpoints?.[0]&&edges.length){const A=r.endpoints[0],nodes=new Map();
+   edges.forEach((e,k)=>{for(const end of [e.path[0],e.path.at(-1)]){for(const dx of [-1,0,1])for(const dz of [-1,0,1]){const kk=Math.round(end[0]*40+dx)+','+Math.round(end[1]*40)+','+Math.round(end[2]*40+dz);if(!nodes.has(kk))nodes.set(kk,new Set());nodes.get(kk).add(k);}}});
+   const queue=[];edges.forEach((e,k)=>{if(near(e.path[0],A))queue.push([k,false]);else if(near(e.path.at(-1),A))queue.push([k,true]);});
+   const seen=new Set();while(queue.length){const [k,rev]=queue.shift();if(seen.has(k))continue;seen.add(k);oriented.set(k,rev);const e=edges[k],exit=rev?e.path[0]:e.path.at(-1);
+    for(const n of nodes.get(key(exit))||[]){if(seen.has(n))continue;const f=edges[n];if(near(f.path[0],exit))queue.push([n,false]);else if(near(f.path.at(-1),exit))queue.push([n,true]);}}
+   directed=oriented.size>0;}
+  if(directed)arrowStats.directed++;
+  const segs=[];edges.forEach((e,k)=>{let path=e.path;const known=oriented.has(k);if(known&&oriented.get(k))path=[...path].reverse();
+   for(let i=1;i<path.length;i++){const p=path[i-1],q=path[i],len=Math.hypot(q[0]-p[0],q[1]-p[1],q[2]-p[2]);if(len>=1.2)segs.push({p,q,len,part:e.part,radius:e.radius||.05,rec,routeId:r.id,directed:known,primary:false});}});
+  if(!segs.length)continue;let best=segs[0];for(const s of segs)if(s.len>best.len)best=s;best.primary=true;
+  segs.sort((a,b)=>b.len-a.len);items.push(...segs.slice(0,14));}
+ return items;
+}
 function buildPipeArrows(){
- const items=[];
- for(const r of model.routes){const rec=routeRecords.get(r.id);if(!rec?.asmeClass)continue;let best=null,bestLength=0;
-  for(const i of r.edgeIndices||[]){const e=model.edges[i];if(!e?.a||!e?.b)continue;const length=Math.hypot(e.b[0]-e.a[0],e.b[1]-e.a[1],e.b[2]-e.a[2]);if(length>bestLength){bestLength=length;best=e;}}
-  if(best&&bestLength>=1)items.push({edge:best,rec});}
- const cone=new T.ConeGeometry(1,2.4,10),material=new T.MeshBasicMaterial({toneMapped:false}),mesh=new T.InstancedMesh(cone,material,items.length),color=new T.Color();
- mesh.frustumCulled=false;mesh.renderOrder=3;mesh.userData.items=items;items.forEach((it,k)=>{mesh.setColorAt(k,color.set(ASME_CLASSES[it.rec.asmeClass].letters));});mesh.instanceColor.needsUpdate=true;
+ pipeItems=buildPipeItems();arrowItems=pipeItems.filter(s=>s.directed);
+ const cone=new T.ConeGeometry(1,2.4,10),material=new T.MeshBasicMaterial({toneMapped:false}),mesh=new T.InstancedMesh(cone,material,arrowItems.length),color=new T.Color();
+ mesh.frustumCulled=false;mesh.renderOrder=3;arrowItems.forEach((it,k)=>{mesh.setColorAt(k,color.set(ASME_CLASSES[it.rec.asmeClass].letters));});mesh.instanceColor.needsUpdate=true;
  scene.add(mesh);return mesh;
 }
 const arrowMatrix=new T.Matrix4(),arrowQ=new T.Quaternion(),arrowUp=new T.Vector3(0,1,0),arrowPos=new T.Vector3(),arrowScale=new T.Vector3(),arrowDir=new T.Vector3(),arrowLift=new T.Vector3();
+function buildHazardReview(){
+ const box=document.createElement('details');box.className='hazard-review';const head=document.createElement('summary');head.textContent='Hazard review · '+Object.values(ASME_REVIEW).filter(v=>v.status==='approved').length+' of '+Object.keys(ASME_REVIEW).length+' classes signed off';box.append(head);
+ const services=asmeServices(),counts={};for(const r of model.routes){const k=routeRecords.get(r.id)?.asmeClass;if(k)counts[k]=(counts[k]||0)+1;}
+ for(const [key,cls] of Object.entries(ASME_CLASSES)){const rv=ASME_REVIEW[key],row=document.createElement('div');row.className='hazard-row';row.style.borderLeft='6px solid '+cls.color;
+  const t=document.createElement('strong');t.textContent=cls.label;const st=document.createElement('span');st.textContent=' · '+rv.status.toUpperCase()+(rv.reviewer?' by '+rv.reviewer+(rv.date?' '+rv.date:''):' · reviewer not assigned')+' · '+(counts[key]||0)+' routes';
+  const need=document.createElement('div');need.textContent='To check: '+rv.sds;const svc=document.createElement('div');svc.textContent='Services: '+((services[key]||[]).join(', ')||'none modelled');row.append(t,st,need,svc);box.append(row);}
+ const f=document.createElement('small');f.textContent='Full sheet: docs/pipe-hazard-review.md in the project repository. Classes stay proposed until a reviewer is recorded in the register.';box.append(f);return box;
+}
 const pxWorld=()=>camera.isOrthographicCamera?(camera.top-camera.bottom)/camera.zoom/renderer.domElement.clientHeight:2*Math.tan(T.MathUtils.degToRad(camera.fov/2))*camera.position.distanceTo(controls.target)/renderer.domElement.clientHeight;
 let pipeLabelSig='',pipeLabels=[];const labelTextures=new Map();
 function legendTexture(rec){const key=rec.asmeClass+'|'+rec.asmeLegend;let tex=labelTextures.get(key);if(tex)return tex;const cls=ASME_CLASSES[rec.asmeClass],c=document.createElement('canvas'),x=c.getContext('2d');x.font='600 30px system-ui,sans-serif';const w=Math.ceil(x.measureText(rec.asmeLegend).width)+28;c.width=w;c.height=48;x.font='600 30px system-ui,sans-serif';x.fillStyle=cls.color;x.fillRect(0,0,w,48);x.strokeStyle='#0b1118';x.lineWidth=3;x.strokeRect(1.5,1.5,w-3,45);x.fillStyle=cls.letters;x.textBaseline='middle';x.fillText(rec.asmeLegend,14,25);tex=new T.CanvasTexture(c);tex.userData={ratio:w/48};labelTextures.set(key,tex);return tex;}
@@ -413,22 +438,25 @@ function updatePipeLabels(){
  const on=asmeActive()&&pipeArrows?.visible;if(!on){for(const l of pipeLabels)l.visible=false;pipeLabelSig='';return;}
  const wpp=pxWorld(),sig=[camera.position.x,camera.position.y,camera.position.z,camera.zoom,controls.target.x,controls.target.z,flowFocus,labelRevision].map(v=>typeof v==='number'?v.toFixed(2):v).join();if(sig===pipeLabelSig)return;pipeLabelSig=sig;
  for(const l of pipeLabels)l.visible=false;if(wpp>.2)return;
- const rect=renderer.domElement,items=pipeArrows.userData.items,view=new T.Vector3(),cand=[];
- items.forEach((it,k)=>{const e=it.edge,part=partMap.get(e.part);if(!part?.visible||(flowFocus&&it.rec.asmeClass!==flowFocus))return;const len=Math.hypot(e.b[0]-e.a[0],e.b[1]-e.a[1],e.b[2]-e.a[2]);if(len<3)return;view.set((e.a[0]+e.b[0])/2,(e.a[1]+e.b[1])/2,(e.a[2]+e.b[2])/2).add(part.offset).project(camera);if(Math.abs(view.x)>.95||Math.abs(view.y)>.95||view.z>1)return;cand.push({it,e,part,d:view.x*view.x+view.y*view.y});});
- cand.sort((a,b)=>a.d-b.d);const taken=[],pxH=15;let n=0;
- for(const c of cand){if(n>=45)break;const e=c.e,mid=new T.Vector3((e.a[0]+e.b[0])/2,(e.a[1]+e.b[1])/2+(e.radius||.05)+wpp*14,(e.a[2]+e.b[2])/2).add(c.part.offset);view.copy(mid).project(camera);const sx=(view.x*.5+.5)*rect.clientWidth,sy=(.5-view.y*.5)*rect.clientHeight,tex=legendTexture(c.it.rec),w=pxH*tex.userData.ratio;
- if(taken.some(t=>Math.abs(t[0]-sx)<(t[2]+w)/2+4&&Math.abs(t[1]-sy)<pxH+4))continue;taken.push([sx,sy,w]);
- let sp=pipeLabels[n];if(!sp){sp=new T.Sprite(new T.SpriteMaterial({depthTest:false,depthWrite:false,toneMapped:false}));sp.renderOrder=6;scene.add(sp);pipeLabels[n]=sp;}
- if(sp.material.map!==tex){sp.material.map=tex;sp.material.needsUpdate=true;}sp.position.copy(mid);sp.scale.set(pxH*tex.userData.ratio*wpp,pxH*wpp,1);sp.visible=true;n++;}
+ const rect=renderer.domElement,view=new T.Vector3(),best=new Map();
+ for(const s of pipeItems){if(s.len<2.5)continue;const part=partMap.get(s.part);if(!part?.visible||(flowFocus&&s.rec.asmeClass!==flowFocus))continue;const t=s.directed?.35:.5;
+  view.set(s.p[0]+(s.q[0]-s.p[0])*t,s.p[1]+(s.q[1]-s.p[1])*t,s.p[2]+(s.q[2]-s.p[2])*t).add(part.offset).project(camera);if(Math.abs(view.x)>.95||Math.abs(view.y)>.95||view.z>1)continue;
+  const d=view.x*view.x+view.y*view.y,cur=best.get(s.routeId);if(!cur||d<cur.d)best.set(s.routeId,{s,part,d,t});}
+ const cand=[...best.values()].sort((a,b)=>a.d-b.d),taken=[],pxH=15;let n=0;
+ for(const c of cand){if(n>=45)break;const s=c.s,mid=new T.Vector3(s.p[0]+(s.q[0]-s.p[0])*c.t,s.p[1]+(s.q[1]-s.p[1])*c.t,s.p[2]+(s.q[2]-s.p[2])*c.t).add(c.part.offset);view.copy(mid).project(camera);
+  const sx=(view.x*.5+.5)*rect.clientWidth,sy=(.5-view.y*.5)*rect.clientHeight,tex=legendTexture(s.rec),w=pxH*tex.userData.ratio;
+  if(taken.some(t=>Math.abs(t[0]-sx)<(t[2]+w)/2+4&&Math.abs(t[1]-sy)<pxH+4))continue;taken.push([sx,sy,w]);
+  let sp=pipeLabels[n];if(!sp){sp=new T.Sprite(new T.SpriteMaterial({depthTest:false,depthWrite:false,toneMapped:false}));sp.renderOrder=6;scene.add(sp);pipeLabels[n]=sp;}
+  if(sp.material.map!==tex){sp.material.map=tex;sp.material.needsUpdate=true;}sp.position.copy(mid);sp.scale.set(w*wpp,pxH*wpp,1);sp.visible=true;n++;}
 }
 function updatePipeArrows(){
  if(!asmeActive()){if(pipeArrows)pipeArrows.visible=false;return;}const wpp=pxWorld();arrowSig=wpp.toFixed(3);
- if(!pipeArrows)pipeArrows=buildPipeArrows();pipeArrows.visible=true;
- pipeArrows.userData.items.forEach((it,k)=>{const e=it.edge,part=partMap.get(e.part),shown=part?.visible&&(!flowFocus||it.rec.asmeClass===flowFocus);
+ if(!pipeArrows)pipeArrows=buildPipeArrows();pipeArrows.visible=true;const close=wpp<.25;
+ arrowItems.forEach((s,k)=>{const part=partMap.get(s.part),shown=part?.visible&&(close||s.primary)&&(!flowFocus||s.rec.asmeClass===flowFocus);
   if(!shown){arrowMatrix.makeScale(0,0,0);pipeArrows.setMatrixAt(k,arrowMatrix);return;}
-  arrowDir.set(e.b[0]-e.a[0],e.b[1]-e.a[1],e.b[2]-e.a[2]).normalize();arrowQ.setFromUnitVectors(arrowUp,arrowDir);
-  const radius=Math.min(.5,Math.max(.1,(e.radius||.05)*1.7,wpp*5));arrowLift.set(Math.abs(arrowDir.y)>.9?1:0,Math.abs(arrowDir.y)>.9?0:1,0);
-  arrowPos.set((e.a[0]+e.b[0])/2,(e.a[1]+e.b[1])/2,(e.a[2]+e.b[2])/2).addScaledVector(arrowLift,(e.radius||.05)+radius*.9).add(part.offset);arrowScale.set(radius,radius,radius);
+  arrowDir.set(s.q[0]-s.p[0],s.q[1]-s.p[1],s.q[2]-s.p[2]).normalize();arrowQ.setFromUnitVectors(arrowUp,arrowDir);
+  const radius=Math.min(.5,Math.max(.1,s.radius*1.7,wpp*5)),vertical=Math.abs(arrowDir.y)>.9;arrowLift.set(vertical?1:0,vertical?0:1,0);
+  arrowPos.set(s.p[0]+(s.q[0]-s.p[0])*.75,s.p[1]+(s.q[1]-s.p[1])*.75,s.p[2]+(s.q[2]-s.p[2])*.75).addScaledVector(arrowLift,s.radius+radius*.6).add(part.offset);arrowScale.set(radius,radius,radius);
   arrowMatrix.compose(arrowPos,arrowQ,arrowScale);pipeArrows.setMatrixAt(k,arrowMatrix);});
  pipeArrows.instanceMatrix.needsUpdate=true;
 }
@@ -454,7 +482,7 @@ function renderColorLegend(){if(productJourney?.active||thermalTrace?.active){le
  if(colorMode==='status'){for(const value of Object.values(DESIGN_STATUSES))entry(value.label,value.color);entry('Review open · label outline',REVIEW_COLOR);}
  if(colorMode==='flow'&&flowScheme==='pfd'){for(const [key,value] of Object.entries(FLOW_CATEGORIES))entry(value.label,value.color,key,routes.filter(r=>r.flowCategory===key).length);const unresolved=routes.filter(r=>r.flowCategoryStatus==='review').length;if(unresolved){entry('Category review · '+unresolved+' routes',null);const note=document.createElement('small');note.className='legend-note';note.textContent='Unclassified routes remain dim. Their medium or duty needs confirmation.';root.append(note);}}
  if(colorMode==='flow'&&flowScheme==='detailed'){for(const service of [...new Set(routes.filter(r=>r.flowCategoryStatus!=='non-flow').map(r=>r.service))].sort())entry(service,flowColor({service},'detailed',serviceColors),service,routes.filter(r=>r.service===service).length);}
- if(colorMode==='flow'&&flowScheme==='asme'){for(const [key,value] of Object.entries(ASME_CLASSES))entry(value.label,value.color,key,routes.filter(r=>r.asmeClass===key).length);const note=document.createElement('small');note.className='legend-note';note.textContent=ASME_BASIS.status+' ('+Object.values(ASME_REVIEW).filter(v=>v.status==='approved').length+' of '+Object.keys(ASME_REVIEW).length+' classes signed off). '+ASME_BASIS.note+' Arrows show flow direction; zoom in to read the painted legends, or point at a pipe.';root.append(note);}
+ if(colorMode==='flow'&&flowScheme==='asme'){for(const [key,value] of Object.entries(ASME_CLASSES))entry(value.label,value.color,key,routes.filter(r=>r.asmeClass===key).length);const note=document.createElement('small');note.className='legend-note';note.textContent=ASME_BASIS.status+' ('+Object.values(ASME_REVIEW).filter(v=>v.status==='approved').length+' of '+Object.keys(ASME_REVIEW).length+' classes signed off). '+ASME_BASIS.note+' Arrows show flow direction on '+arrowStats.directed+' of '+arrowStats.routes+' lines whose direction is defined; the rest have legends only. Zoom in to read the painted legends, or point at a pipe.';root.append(note);root.append(buildHazardReview());}
  if(colorMode==='flow'&&model.fireSafety)entry('Fire points · FE tags','#e62f47');
  if(colorMode==='flow'&&model.containment)entry('Emergency shower / eyewash · ES tags','#ffd000');
  updateFlowFocusStatus();}
@@ -477,6 +505,8 @@ $('download-configuration').onclick=()=>{const snapshot=registerSnapshot(model,S
 $('color-mode').onchange=()=>setColorMode($('color-mode').value);
 $('flow-scheme').replaceChildren(...Object.entries(FLOW_SCHEMES).map(([value,label])=>new Option(label,value)));$('flow-scheme').value=flowScheme;
 $('flow-scheme').onchange=()=>{flowScheme=$('flow-scheme').value;flowFocus=null;updatePipeArrows();renderColorLegend();if(selected)updatePartFlowDetails(selected);dirty=true;};
+const pipeIdButton=$('pipe-id-toggle'),syncPipeIdButton=()=>pipeIdButton?.setAttribute('aria-pressed',String(colorMode==='flow'&&flowScheme==='asme'));
+if(pipeIdButton){pipeIdButton.onclick=()=>{const on=colorMode==='flow'&&flowScheme==='asme',mode=$('color-mode'),scheme=$('flow-scheme');if(on){mode.value='material';mode.onchange();}else{mode.value='flow';mode.onchange();scheme.value='asme';scheme.onchange();}syncPipeIdButton();};$('color-mode').addEventListener('change',syncPipeIdButton);$('flow-scheme').addEventListener('change',syncPipeIdButton);}
 $('clear-flow-focus').onclick=()=>{flowFocus=null;renderColorLegend();dirty=true;};
 for(const a of AREAS){if(Object.values(engineering).some(e=>e.areaId===a.id)||model.floorAllocation?.areas.some(area=>area.id===a.id))$('area-filter').append(new Option(areaTitle(a.id),a.id));}
 $('area-filter').onchange=()=>{const wanted=$('area-filter').value;showAll();$('area-connected').checked=false;areaVisibility.setConnected(false);areaScope=wanted;$('area-filter').value=wanted;stageId=null;$('process-overview').hidden=false;$('process-stage').hidden=true;renderStages();renderTree();refreshRoutes();renderColorLegend();$('stage-context').textContent=wanted==='all'?'Complete process overview':areaTitle(wanted);updateParts();fitView();};

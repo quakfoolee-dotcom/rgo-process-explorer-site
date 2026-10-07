@@ -136,3 +136,6 @@
 
 /* v115 · 2026-09-14 */
 .equipment-label.tag-only span{display:none}
+
+/* v309 · 2026-10-07 · ASME hazard review panel */
+.hazard-review{margin:10px 0;font-size:12.5px;line-height:1.4}.hazard-review summary{cursor:pointer;font-weight:600}.hazard-review .hazard-row{margin:8px 0;padding:4px 0 4px 8px;background:rgba(128,128,128,.12)}.hazard-review .hazard-row div{opacity:.85;margin-top:2px}.hazard-review small{display:block;opacity:.75;margin-top:6px}
