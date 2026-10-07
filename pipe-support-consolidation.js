@@ -49,7 +49,7 @@ export function consolidatePipeSupports(ctx, policy) {
           for(const path of pathsToTry){
             let at=attach,length=0,valid=true;const segments=[];
             for(const to of path){const span=V(at).distanceTo(V(to));if(span<.02)continue;length+=span;
-              if(length>policy.maximumBracketLengthM||!clear(at,to,.045,ignore)){valid=false;break;}
+              if(length>policy.maximumBracketLengthM||!clear(at,to,.049,ignore)){valid=false;break;}
               if(planned.some(e=>segmentDistance(at,to,e.a,e.b)<.045&&!(V(to).distanceTo(V(e.b))<.06&&host.p.id===e.host))){valid=false;break;}
               segments.push({a:[...at],b:[...to],host:host.p.id});at=to;
             }

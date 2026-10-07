@@ -1,5 +1,6 @@
 // Swatches sampled from the user's supplied PFD legend. Classification is independent of service detail.
-export const FLOW_SCHEMES={pfd:'PFD categories',detailed:'Detailed services'};
+import {ASME_CLASSES} from './pipe-identification.js';
+export const FLOW_SCHEMES={pfd:'PFD categories',detailed:'Detailed services',asme:'ASME A13.1 pipe identification'};
 export const DEFAULT_FLOW_SCHEME='pfd';
 export const FLOW_CATEGORIES={
  chemical:{label:'Chemical feeds',color:'#ffd966',colorName:'Orange / amber',example:'Acid, peroxide and reagent feeds'},
@@ -55,9 +56,10 @@ export function classifyFlow(route){
 export const categoryLabel=route=>FLOW_CATEGORIES[route?.flowCategory]?.label||(route?.flowCategoryStatus==='non-flow'?'Non-process geometry':'Category review');
 export function flowColor(route,scheme='pfd',detailedColors={}){
  if(scheme==='pfd')return FLOW_CATEGORIES[route?.flowCategory]?.color||'#43546b';
+ if(scheme==='asme')return ASME_CLASSES[route?.asmeClass]?.color||'#43546b';
  const color=detailedColors[route?.service];return typeof color==='number'?'#'+color.toString(16).padStart(6,'0'):color||'#52e2ee';
 }
-export function matchesFlowFocus(route,scheme,focus){if(!focus)return true;if(!route)return false;return scheme==='pfd'?(focus==='review'?route.flowCategoryStatus==='review':route.flowCategory===focus):route.service===focus;}
+export function matchesFlowFocus(route,scheme,focus){if(!focus)return true;if(!route)return false;return scheme==='pfd'?(focus==='review'?route.flowCategoryStatus==='review':route.flowCategory===focus):scheme==='asme'?route.asmeClass===focus:route.service===focus;}
 export function partFlowRegister(model,records,graph){
  const result=new Map(),edgeRecords=new Map();
  for(const r of model.routes){const record=records.get(r.id);for(const id of r.partIds)result.set(id,record);for(const i of r.edgeIndices)edgeRecords.set(i,record);}
