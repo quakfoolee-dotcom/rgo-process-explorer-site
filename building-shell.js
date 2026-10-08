@@ -1,12 +1,13 @@
 import {WALKWAY_LAYOUT} from './walkway-layout.js';
 import {EMERGENCY_ACCESS_LAYOUT} from './emergency-access-layout.js';
 import {TRANSPORT_ROUTES} from './transport-layout.js';
+import {CEILING_BASIS} from './ceiling-basis.js';
 // Proposed outside walls of the process building, as a display layer: the building-footprint envelope of every area except A-6000
 // (x -42...117, z -31.5...41.6) with the wall just outside it; the argon yard stays outside (V291). The south wall steps 1.1 m south
 // 2.6 m at x 89 so the A-800 service aisle and its fire point FE-802 stay inside, and the west wall stays inside the plant walkway at x -43.
 export const BUILDING_SHELL={revision:'bldg-2',rect:[-42.25,-32,117.5,45],runs:[
  {id:'W',axis:'x',c:-42.25,lo:-32,hi:41.7},{id:'N',axis:'z',c:-32,lo:-42.25,hi:117.5},{id:'E',axis:'x',c:117.5,lo:-32,hi:45},
- {id:'S1',axis:'z',c:41.7,lo:-42.25,hi:89},{id:'J',axis:'x',c:89,lo:41.7,hi:45},{id:'S2',axis:'z',c:45,lo:89,hi:117.5}],height:12,thickness:.15,doorHeight:3,doorExtra:.8,vehicleDoor:{width:6,height:4.5},columnPitch:6,
+ {id:'S1',axis:'z',c:41.7,lo:-42.25,hi:89},{id:'J',axis:'x',c:89,lo:41.7,hi:45},{id:'S2',axis:'z',c:45,lo:89,hi:117.5}],height:CEILING_BASIS.ceilingM,thickness:.15,doorHeight:3,doorExtra:.8,vehicleDoor:{width:6,height:4.5},columnPitch:6,
  // Lines and fire points that stand outside the wall on purpose. Insulation, heat trace and containment are open design items (V293).
  outdoorService:{
   firePoints:['FE-6001'],
