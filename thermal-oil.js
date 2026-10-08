@@ -163,7 +163,7 @@ export function buildThermalOil(k,s,base,{acidRoute='r0'}={}){
  {const x=75.4,z=20.0,top=armY(SY)+.12,col=b('TO-RACK post 13 column','frame',[.2,top-.05,.2],[x,.05+(top-.05)/2,z],'steel');const plate=b('TO-RACK post 13 baseplate','frame',[.4,.05,.4],[x,.025,z],'steel');base(plate,[x,0,z]);s.join(plate,col,[x,.05,z],'TO-RACK post 13 column / baseplate');
   for(const [y,z0,z1] of [[armY(RY),20.0,20.95],[armY(SY),19.05,20.0]]){const arm=b('TO-RACK post 13 cantilever arm','frame',[.12,.12,z1-z0+.12],[x,y,(z0+z1)/2],'steel');s.join(col,arm,[x,y,z],'TO-RACK post 13 arm / column');s.load(arm,'TO-RACK post 13 pipe shoe');}posts2.push('TO-RACK post 13');}
  tpost(HX+.8,front+2.0,[-1,0,0],.95,'TO-RACK package post (supply riser)',.2);
- tpost(130,-7.2,[-1,0,0],4.0,'TO-RACK package post (north)',.2);tpost(130,4.0,[-1,0,0],4.0,'TO-RACK package post (mains)',0);// the north legs cross the rerouted perimeter road (z 0, and x 125 north of it) on an 11 m span; the posts stand outside the lane
+ tpost(130,-7.2,[-1,0,0],4.0,'TO-RACK package post (north)',.2);tpost(130,5.3,[-1,0,0],4.0,'TO-RACK package post (mains)',0);// the north legs cross the rerouted perimeter road (z 1.5, and x 125 north of it) on an 11 m span; the posts stand outside the lane
  if(branch)for(const [i,z] of [1.5,-3,-8,-14,-20,-26,-32,-36.5].entries())tpost(105.1,z,[-1,0,0],1.6,'TO-RACK branch post '+(i+1),0);
  mark(from,{});
  return {basis:THERMAL_OIL_BASIS,routes,branch,rackPosts:posts2.length,partIds:parts.slice(first).map(p=>p.id),consumer:{id:'HX-601',supply:'BL-HT601-IN',return:'BL-HT601-RET',medium:'thermal oil 280 / 250 °C (D-A5000-04)'}};

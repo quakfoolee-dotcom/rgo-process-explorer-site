@@ -1,6 +1,6 @@
 {
   "revision": "V317",
-  "generated": "2026-10-08T02:32:39.982Z",
+  "generated": "2026-10-08T03:14:53.113Z",
   "basis": {
     "revision": "V317",
     "date": "2026-10-08",
@@ -36,19 +36,19 @@
       ],
       [
         125,
-        -29
+        -30
       ],
       [
-        140,
-        -29
+        142,
+        -30
       ],
       [
-        140,
-        0
+        142,
+        1.5
       ],
       [
         125,
-        0
+        1.5
       ],
       [
         125,
@@ -72,7 +72,7 @@
     "wallOuterFace": 6.4,
     "walkway": 4.4,
     "barrier": 3.8,
-    "roadLane": 1.4,
+    "roadLane": 2.9,
     "A800": 15.6,
     "A900": 22.3,
     "A600": 47,
@@ -477,7 +477,7 @@
       "limitM": 60,
       "evidence": "roadToTank",
       "status": "met in the model, to confirm",
-      "modelEvidence": "Perimeter road centre line to T-5401: 8 m; the loop is rerouted around the pad.",
+      "modelEvidence": "Perimeter road centre line to T-5401: 10 m; the loop is rerouted around the pad.",
       "open": null,
       "reviewer": "",
       "reviewedOn": ""
@@ -548,6 +548,11 @@
       "id": "V318",
       "date": "2026-10-08",
       "text": "Pad widened to x 124–135.2, z −24 to −4.5 so the curb is 1.5 m or more from the T-5401 and V-5401 shells (CR-4). Road north segment moved to z 0."
+    },
+    {
+      "id": "V319",
+      "date": "2026-10-08",
+      "text": "Road detour widened to (125, −30) → (142, −30) → (142, 1.5) → (125, 1.5) so every lane edge is about 3 m from the pad curb (was 1.4 m); the north-leg rack post moved to z 5.3, outside the lane."
     }
   ],
   "open": [
