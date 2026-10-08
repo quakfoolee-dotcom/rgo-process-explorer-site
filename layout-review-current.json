@@ -1,11 +1,11 @@
 {
- "version": "2dde1fa",
+ "version": "2626c1e",
  "date": "2026-10-08",
- "generated": "2026-10-08T05:11:38.296Z",
+ "generated": "2026-10-08T05:44:17.941Z",
  "revision": "r9",
  "reviewer": {
-  "initials": "",
-  "date": ""
+  "initials": "QFL",
+  "date": "2026-10-08"
  },
  "lead": "The published gate report (bc-corridors-85, 2026-09-12) is retained below as the coordinated baseline; the sections above it are measured on the current model on every refresh. Nothing here qualifies structure, slabs, vehicles or traffic.",
  "basis": {
