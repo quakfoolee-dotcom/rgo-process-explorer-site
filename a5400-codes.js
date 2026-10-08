@@ -37,6 +37,6 @@ export const A5400_CODES=[
 ];
 // The IDs that bear on each tagged record, quoted in the equipment descriptions.
 const USE={'A-5400':['CR-1','CR-2','CR-3','CR-4','CR-5','CR-6','CR-7','CR-8','CR-9'],'H-5400':['CR-1','CR-2','CR-6','CR-7','CR-9'],'V-5401':['CR-1','CR-3','CR-4','CR-5','CR-8'],'T-5401':['CR-1','CR-3','CR-4','CR-5','CR-8']};
-export const A5400_POSITION_SENTENCE=' Outside the east building wall, 6.4 m from its outer face (V317, option C); ≈ 47 m from the A-600 edge (DR-601), ≈ 17 m from the A-800 block edge, ≈ 43 m from the PY-801 hydrogen off-gas point and ≈ 24 m from the A-900 block; the perimeter logistics road is rerouted around the pad — HAZOP inputs (U8, FEED-PS-HOP-001), not a spacing ruling.';
+export const A5400_POSITION_SENTENCE=' Outside the east building wall, 6.4 m from its outer face (V317, option C; pad widened in V318); ≈ 47 m from the A-600 edge (DR-601), ≈ 16 m from the A-800 block edge, ≈ 41 m from the PY-801 hydrogen off-gas point and ≈ 22 m from the A-900 block; the perimeter logistics road is rerouted around the pad — HAZOP inputs (U8, FEED-PS-HOP-001), not a spacing ruling.';
 export function a5400CodesSentence(tag){const ids=USE[tag];if(!ids)return '';const rows=A5400_CODES.filter(c=>ids.includes(c.id));
  return ' Codes and regulations, tracked in the A-5400 assembly & design review (a5400-review.html), all to confirm: '+rows.map(c=>c.id+' '+c.reference.replace(/ \(.*$/,'')+' ('+c.source.replace(/, Division B$/,'').replace(/ Natural gas and propane installation code$/,'')+')').join('; ')+'.';}

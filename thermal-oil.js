@@ -26,8 +26,9 @@ export function buildThermalOil(k,s,base,{acidRoute='r0'}={}){
  function cold(points,r,label,service,from,to,spec={}){const route=line(points,r,label,service,from,to,spec);routes.push(route.id);return route;}
  // ---- Package pad (unchanged plot) and curbs.
  const ap=EQUIPMENT[663];setContext(663,ap.label);
- const apad=base(b('A-5400 package pad','frame',[10,.2,18],[ap.x,.1,ap.z],'dark'),[ap.x,0,ap.z]);
- for(const [lab,size,pos] of [['north',[10,.3,.2],[ap.x,.35,ap.z+8.9]],['south',[10,.3,.2],[ap.x,.35,ap.z-8.9]],['west',[.2,.3,18],[ap.x-4.9,.35,ap.z]],['east',[.2,.3,18],[ap.x+4.9,.35,ap.z]]]){const w=b('A-5400 spill curb '+lab,'frame',size,pos,'dark');s.join(apad,w,[pos[0],.2,pos[2]],'A-5400 curb '+lab+' / pad');}
+ // V318: the pad is 11.1 x 19.4 m (was 10 x 18) so the curb stands 1.5 m or more from the T-5401 and V-5401 shells (BC Fire Code, CR-4); the west curb stays put.
+ const PW=5.55,PL=9.7,apad=base(b('A-5400 package pad','frame',[2*PW+.1,.2,2*PL+.1],[ap.x,.1,ap.z],'dark'),[ap.x,0,ap.z]);
+ for(const [lab,size,pos] of [['north',[2*PW,.3,.2],[ap.x,.35,ap.z+PL]],['south',[2*PW,.3,.2],[ap.x,.35,ap.z-PL]],['west',[.2,.3,2*PL],[ap.x-PW,.35,ap.z]],['east',[.2,.3,2*PL],[ap.x+PW,.35,ap.z]]]){const w=b('A-5400 spill curb '+lab,'frame',size,pos,'dark');s.join(apad,w,[pos[0],.2,pos[2]],'A-5400 curb '+lab+' / pad');}
  // ---- H-5400: horizontal cylindrical coil heater, burner end north, flue box and stack at the rear.
  const he=EQUIPMENT[664],HX=he.x,HZ=he.z,HR=1.8,HY=2.55,HL=10,front=HZ+HL/2,rear=HZ-HL/2;setContext(664,he.label);let from=parts.length;
  const saddles=[rear+1.5,HZ,front-1.5].map((z,i)=>{const sd=b('H-5400 saddle '+(i+1),'frame',[3.0,.95,.45],[HX,.2+.475,z],'steel');s.join(apad,sd,[HX,.2,z],'H-5400 saddle '+(i+1)+' / pad');return sd;});
@@ -63,8 +64,8 @@ export function buildThermalOil(k,s,base,{acidRoute='r0'}={}){
  const coilIn=nozzle([HX+HR,1.7,front-2.0],[1,0,0],.32,'H-5400 coil inlet 250 °C',R);
  const coilOut=nozzle([HX,HY+HR,front-.2],[0,1,0],.3,'H-5400 coil outlet 280 °C',R);
  const coilDrain=nozzle([HX,HY-HR,rear+3.3],[0,-1,0],.3,'H-5400 coil low-point drain',.03);
- k.boundary('BL-NG-5400',[ap.x-5.4,HY+.3,front+1.5],[-1,0,0],.055,'Natural gas','Site natural-gas supply (not modelled)');
- cold([[ap.x-5.4,HY+.3,front+1.5],[ap.x-4.8,HY+.3,front+1.5],[ap.x-4.1,HY+.3,front+1.5],[HX-1.0,HY+.3,front+1.5],[HX-1.0,HY,front+1.5],[HX-.45,HY,front+1.5]],.055,'H-5400 natural-gas train','Natural gas','BL-NG-5400','H-5400 burner',{0:{type:'wheel',label:'H-5400 gas train manual isolation'},1:{type:'regulator',label:'H-5400 gas pressure regulator'}});
+ k.boundary('BL-NG-5400',[ap.x-PW-.5,HY+.3,front+1.5],[-1,0,0],.055,'Natural gas','Site natural-gas supply (not modelled)');
+ cold([[ap.x-PW-.5,HY+.3,front+1.5],[ap.x-PW+.1,HY+.3,front+1.5],[ap.x-PW+.8,HY+.3,front+1.5],[HX-1.0,HY+.3,front+1.5],[HX-1.0,HY,front+1.5],[HX-.45,HY,front+1.5]],.055,'H-5400 natural-gas train','Natural gas','BL-NG-5400','H-5400 burner',{0:{type:'wheel',label:'H-5400 gas train manual isolation'},1:{type:'regulator',label:'H-5400 gas pressure regulator'}});
  mark(from,{});
  // ---- P-5401A/B: horizontal end-suction hot-oil pumps with motors on baseplates (1 + 1, ≈ 715 m³/h each).
  const pp=EQUIPMENT[665],PX=pp.x,pumps=[];setContext(665,pp.label);from=parts.length;
@@ -162,7 +163,7 @@ export function buildThermalOil(k,s,base,{acidRoute='r0'}={}){
  {const x=75.4,z=20.0,top=armY(SY)+.12,col=b('TO-RACK post 13 column','frame',[.2,top-.05,.2],[x,.05+(top-.05)/2,z],'steel');const plate=b('TO-RACK post 13 baseplate','frame',[.4,.05,.4],[x,.025,z],'steel');base(plate,[x,0,z]);s.join(plate,col,[x,.05,z],'TO-RACK post 13 column / baseplate');
   for(const [y,z0,z1] of [[armY(RY),20.0,20.95],[armY(SY),19.05,20.0]]){const arm=b('TO-RACK post 13 cantilever arm','frame',[.12,.12,z1-z0+.12],[x,y,(z0+z1)/2],'steel');s.join(col,arm,[x,y,z],'TO-RACK post 13 arm / column');s.load(arm,'TO-RACK post 13 pipe shoe');}posts2.push('TO-RACK post 13');}
  tpost(HX+.8,front+2.0,[-1,0,0],.95,'TO-RACK package post (supply riser)',.2);
- tpost(130,-7.2,[-1,0,0],4.0,'TO-RACK package post (north)',.2);tpost(130,4.0,[-1,0,0],4.0,'TO-RACK package post (mains)',0);// the north legs cross the rerouted perimeter road (z -1, and x 125 north of it) on an 11 m span; the posts stand outside the lane
+ tpost(130,-7.2,[-1,0,0],4.0,'TO-RACK package post (north)',.2);tpost(130,4.0,[-1,0,0],4.0,'TO-RACK package post (mains)',0);// the north legs cross the rerouted perimeter road (z 0, and x 125 north of it) on an 11 m span; the posts stand outside the lane
  if(branch)for(const [i,z] of [1.5,-3,-8,-14,-20,-26,-32,-36.5].entries())tpost(105.1,z,[-1,0,0],1.6,'TO-RACK branch post '+(i+1),0);
  mark(from,{});
  return {basis:THERMAL_OIL_BASIS,routes,branch,rackPosts:posts2.length,partIds:parts.slice(first).map(p=>p.id),consumer:{id:'HX-601',supply:'BL-HT601-IN',return:'BL-HT601-RET',medium:'thermal oil 280 / 250 °C (D-A5000-04)'}};

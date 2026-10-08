@@ -1,6 +1,6 @@
 {
   "revision": "V317",
-  "generated": "2026-10-08T00:40:49.298Z",
+  "generated": "2026-10-08T02:32:39.982Z",
   "basis": {
     "revision": "V317",
     "date": "2026-10-08",
@@ -14,13 +14,13 @@
   "location": {
     "pad": {
       "west": 124,
-      "east": 134,
+      "east": 135.3,
       "south": -24,
-      "north": -6
+      "north": -4.4
     },
     "centre": [
-      129,
-      -15
+      129.65,
+      -14.2
     ],
     "wallOuterFace": 117.6,
     "barrierPostX": 120.2,
@@ -44,11 +44,11 @@
       ],
       [
         140,
-        -1
+        0
       ],
       [
         125,
-        -1
+        0
       ],
       [
         125,
@@ -72,19 +72,19 @@
     "wallOuterFace": 6.4,
     "walkway": 4.4,
     "barrier": 3.8,
-    "roadLane": 2,
-    "A800": 17,
-    "A900": 23.8,
-    "A600": 47.3,
-    "PY801": 42.7,
+    "roadLane": 1.4,
+    "A800": 15.6,
+    "A900": 22.3,
+    "A600": 47,
+    "PY801": 41.4,
     "HX601": 77
   },
   "assembly": [
     {
       "tag": "A-5400",
       "label": "High-Temperature Thermal-Oil Package",
-      "x": 129,
-      "z": -15,
+      "x": 129.65,
+      "z": -14.2,
       "parts": 357,
       "size": "10 × 18 m curbed pad"
     },
@@ -372,7 +372,7 @@
       "limitM": 3,
       "evidence": "tankToWall",
       "status": "met in the model, to confirm",
-      "modelEvidence": "Nearest tank shell (T-5401 / V-5401) to the outer face of the east wall (x 117.6): 11.2 m.",
+      "modelEvidence": "Nearest tank shell (T-5401 / V-5401) to the outer face of the east wall (x 117.6): 10.9 m.",
       "open": null,
       "reviewer": "",
       "reviewedOn": ""
@@ -392,9 +392,9 @@
       ],
       "limitM": 1.5,
       "evidence": "curbToTank",
-      "status": "open",
-      "modelEvidence": "Containment curb to the tank shell: T-5401 0.5 m, V-5401 0.8 m (the curb is the pad curb; V-5401 stands on a frame).",
-      "open": "The pad curb is 0.5 m from the nearest tank shell (T-5401 north end, before its heads): widen the pad, move the tank, or use a double-wall / ULC-S655 tank (vendor).",
+      "status": "met in the model, to confirm",
+      "modelEvidence": "Inner curb face to the tank shell including heads: T-5401 1.6 m, V-5401 1.6 m (the curb is the pad curb; V-5401 stands on a frame). The pad was widened in V318 to meet 1.5 m.",
+      "open": null,
       "reviewer": "",
       "reviewedOn": ""
     },
@@ -414,7 +414,7 @@
       "limitM": 3.5,
       "evidence": "ventHeight",
       "status": "met in the model, to confirm",
-      "modelEvidence": "Lowest tank vent or relief connection: 3.5 m above grade (need 3.5 m for a normal vent); the nearest building opening is more than 11.2 m away.",
+      "modelEvidence": "Lowest tank vent or relief connection: 3.5 m above grade (need 3.5 m for a normal vent); the nearest building opening is more than 10.9 m away.",
       "open": null,
       "reviewer": "",
       "reviewedOn": ""
@@ -498,7 +498,7 @@
       "limitM": 15,
       "evidence": "toA800",
       "status": "met in the model, to confirm",
-      "modelEvidence": "Pad curb to the A-800 block (equipment extent): 17 m; to PY-801 hydrogen off-gas point 42.7 m; to the A-900 block 23.8 m.",
+      "modelEvidence": "Pad curb to the A-800 block (equipment extent): 15.6 m; to PY-801 hydrogen off-gas point 41.4 m; to the A-900 block 22.3 m.",
       "open": null,
       "reviewer": "",
       "reviewedOn": ""
@@ -543,13 +543,18 @@
       "id": "V317",
       "date": "2026-10-08",
       "text": "Pad moved closer to the wall and south (option C): x 124–134, z −24 to −6. Perimeter road rerouted around the pad. Code and regulation register added."
+    },
+    {
+      "id": "V318",
+      "date": "2026-10-08",
+      "text": "Pad widened to x 124–135.2, z −24 to −4.5 so the curb is 1.5 m or more from the T-5401 and V-5401 shells (CR-4). Road north segment moved to z 0."
     }
   ],
   "open": [
     "Prevailing wind and the site boundary east of x 140 (stack and burner end orientation).",
     "HX-601 duty and nozzle sizing: the DN300 main reduces to DN100 at the HX-601 battery limit; the 715 m³/h package flow would be about 25 m/s in DN100 unless HX-601 takes a small fraction.",
     "Oil product, flash point and autoignition temperature (vendor, U8); they fix the Class I treatment (CR-1).",
-    "CR-4: the pad curb is closer than 1.5 m to the T-5401 and V-5401 shells (see the register for the distances). Widen the pad or move the tanks, unless the tank is double-walled or ULC-S655.",
+    "CR-4 is met in the model after the V318 pad widening (1.5 m or more from the shells); the vendor tank construction and the final containment volume (largest tank) are still to confirm.",
     "Rack span of about 11 m over the rerouted perimeter road for the 0.52 m insulated mains: structural and pipe-stress check.",
     "Perimeter road reroute (x 125 → 140 around the pad) is a proposal, not an approved roadway.",
     "HAZOP (U8, FEED-PS-HOP-001): burner management, hot-oil release, separation from A-800 and A-900 (CR-9 is practice, not a BC code).",
