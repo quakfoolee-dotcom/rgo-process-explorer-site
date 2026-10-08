@@ -1,4 +1,5 @@
 import {isContainmentPart,createInspectionPresentation} from './inspection-presentation.js';
+import {OPEN_END_KINDS,resolveOpenEnds} from './open-ends.js';
 import {mountPlantBrowse} from './plant-browse.js';
 import {mountControlledSelects} from './controlled-select.js';
 import {mountProcessWorkspace,adjacentProcessOperation} from './process-workspace.js';
@@ -442,6 +443,25 @@ function updatePipeBands(){
    if(!shown)bandMatrix.makeScale(0,0,0);else{bandMatrix.makeBasis(q.XL,q.YH,q.Z);bandPos.copy(q.base).addScaledVector(part.offset,amount);bandMatrix.setPosition(bandPos);}
    g.mesh.setMatrixAt(k,bandMatrix);});g.mesh.instanceMatrix.needsUpdate=true;}
 }
+// Open ends (V324): a blind cap and a destination tag on every vent, relief, dust and exhaust line that stops at a battery limit, in the Pipe ID view.
+// The caps are not model parts: they hide while the model is exploded and with the Pipe names switch.
+let openEnds=null;
+function buildOpenEnds(){
+ const list=resolveOpenEnds(model).filter(e=>e.found),out=[],up=new T.Vector3(0,1,0);
+ for(const e of list){const k=OPEN_END_KINDS[e.kind],axis=new T.Vector3(...e.axis).normalize(),r=Math.max(e.radius*1.25,.05);
+  const cap=new T.Mesh(new T.CylinderGeometry(r,r,.035,24),new T.MeshBasicMaterial({color:k.color,toneMapped:false}));cap.quaternion.setFromUnitVectors(up,axis);cap.position.set(...e.point).addScaledVector(axis,.03);cap.visible=false;cap.renderOrder=5;scene.add(cap);
+  const c=document.createElement('canvas'),x=c.getContext('2d'),f='600 26px system-ui,sans-serif';x.font=f;const head=(e.title||e.id)+' · '+k.label,body=e.destination,w=Math.ceil(Math.max(x.measureText(head).width,x.measureText(body).width))+24;c.width=w;c.height=72;x.font=f;
+  x.fillStyle='rgba(20,24,30,.92)';x.fillRect(0,0,w,72);x.fillStyle='#'+k.color.toString(16).padStart(6,'0');x.fillRect(0,0,8,72);x.fillText(head,16,30);x.fillStyle='#e8edf2';x.font='500 24px system-ui,sans-serif';x.fillText(body,16,60);
+  const tex=new T.CanvasTexture(c);tex.colorSpace=T.SRGBColorSpace;const sp=new T.Sprite(new T.SpriteMaterial({map:tex,depthTest:false,depthWrite:false,toneMapped:false}));sp.renderOrder=7;sp.visible=false;scene.add(sp);
+  out.push({e,cap,sp,ratio:w/72,at:new T.Vector3(...e.point).addScaledVector(Math.abs(axis.y)>.85?axis:up,.45)});}
+ return out;
+}
+function updateOpenEnds(){
+ const on=asmeActive()&&pipeNames&&amount<.001;if(!on&&!openEnds)return;
+ if(on&&!openEnds)openEnds=buildOpenEnds();
+ const wpp=on?pxWorld():0,tags=on&&wpp>=.008&&wpp<=.12;
+ for(const o of openEnds){o.cap.visible=on;o.sp.visible=tags;if(tags){o.sp.position.copy(o.at);o.sp.scale.set(o.ratio*26*wpp,26*wpp,1);}}
+}
 function buildHazardReview(){
  const box=document.createElement('details');box.className='hazard-review';const head=document.createElement('summary');head.textContent='Hazard review · '+Object.values(ASME_REVIEW).filter(v=>v.status==='approved').length+' of '+Object.keys(ASME_REVIEW).length+' classes signed off';box.append(head);
  const services=asmeServices(),counts={};for(const r of model.routes){const k=routeRecords.get(r.id)?.asmeClass;if(k)counts[k]=(counts[k]||0)+1;}
@@ -668,7 +688,7 @@ sectionInspector=mountSectionInspector({scene,viewport,trigger:$('cutaway'),getC
  label:section.scope==='equipment'?('Equipment · '+(EQUIPMENT[section.equipmentId]?.tag||'selection')):'Currently visible plant geometry'
 })});
 createControls();document.body.classList.add('inspection-mode');refreshRoutes();renderTree();applyBatchState('transfer');selectStage(null);resize();new ResizeObserver(resize).observe(viewport);
-let last=performance.now();function frame(now){requestAnimationFrame(frame);const dt=Math.min((now-last)/1000,.05);last=now;if(photoRendering)return;if(Math.abs(amount-target)>.0001){amount=T.MathUtils.lerp(amount,target,1-Math.exp(-dt*7));dirty=true}else if(amount!==target){amount=target;dirty=true}if(dirty)updateParts();if(!plantBrowse?.active){transportReview?.update(dt);scene.userData.engineerWalk?.update(dt);}productJourney?.update(dt,now);thermalTrace?.update(dt,now);plantBrowse?.update(dt);if(!plantBrowse?.active)controls.update();updatePipeTags(now);sectionInspector?.draw();fireSafetyUI?.draw();emergencyStationsUI?.draw();walkwayUI?.draw();updateEquipmentLabels();measuring.draw();areaOverlay.draw();if(renderDetail.update(camera,controls.target,renderer.domElement.clientHeight,system==='fastener'||!!exploration||amount>0||selected?.system==='fastener'))renderer.shadowMap.needsUpdate=true;renderer.render(scene,camera);window.rgoStartup?.ready()}requestAnimationFrame(frame);
+let last=performance.now();function frame(now){requestAnimationFrame(frame);const dt=Math.min((now-last)/1000,.05);last=now;if(photoRendering)return;if(Math.abs(amount-target)>.0001){amount=T.MathUtils.lerp(amount,target,1-Math.exp(-dt*7));dirty=true}else if(amount!==target){amount=target;dirty=true}if(dirty)updateParts();if(!plantBrowse?.active){transportReview?.update(dt);scene.userData.engineerWalk?.update(dt);}productJourney?.update(dt,now);thermalTrace?.update(dt,now);plantBrowse?.update(dt);if(!plantBrowse?.active)controls.update();updatePipeTags(now);updateOpenEnds();sectionInspector?.draw();fireSafetyUI?.draw();emergencyStationsUI?.draw();walkwayUI?.draw();updateEquipmentLabels();measuring.draw();areaOverlay.draw();if(renderDetail.update(camera,controls.target,renderer.domElement.clientHeight,system==='fastener'||!!exploration||amount>0||selected?.system==='fastener'))renderer.shadowMap.needsUpdate=true;renderer.render(scene,camera);window.rgoStartup?.ready()}requestAnimationFrame(frame);
 window.reactorExplorer={parts,model,pipeMarkerCheck,get plantBrowse(){return plantBrowse;},get walkways(){return walkwayUI;},get fireSafety(){return fireSafetyUI;},get emergencyStations(){return emergencyStationsUI;},setStructureVisibility,setSection,get productJourney(){return productJourney;},beginExplore,endExplore,startExploreView,setExplorePresentation,setExploreAmount,setExploreSection,selectPart,selectEquipment,measuring,areaOverlay,get engineerWalk(){return scene.userData.engineerWalk;},getState:()=>({plantBrowse:plantBrowse?.getState(),startup:window.rgoStartup?.timing,fastenerDetail:renderDetail.shown,emergencyStations:emergencyStationsUI?.getState(),walkways:walkwayUI?.getState(),structureVisibility:{...structureVisibility.getState(),counts:structureVisibility.counts},transport:transportReview?.getState(),thermalTrace:thermalTrace?.getState(),productJourney:productJourney?.getState(),exploration:exploration?{equipmentId:exploration.plan.equipmentId,tag:EQUIPMENT[exploration.plan.equipmentId].tag,presentation:target>0?'exploded':'assembled',separation:target,context:exploration.context,members:exploration.plan.ids.size,boundaries:exploration.plan.boundaries.length}:null,navigation:{precision:controls.precision,rotateSpeed:controls.rotateSpeed,pivotPartId:controls.pivotPartId,pivot:controls.inspectionPivot?.toArray()||null},areaScope,showProposed,exploreOptions:[...$('explore-equipment').options].map(o=>o.value).filter(Boolean),mode,projection:camera.isOrthographicCamera?'orthographic':'perspective',view,amount,target,system,reactor,designSelection,section:{...section},routeId,routeParts:routeTrace?.partIds.size||0,clashes:clashResult?.candidates.length??null,workspaceMode,processTrain,stageId,batchState,unitState,feedKey,feedState,materialTraceParts:materialHighlight?.partIds.size||0,visible:visibleParts.length,selected:selected?.code,selection:selectedEquipmentId==null?null:{level:selected?'component':'equipment',equipmentId:selectedEquipmentId,tag:EQUIPMENT[selectedEquipmentId].tag,componentId:selected?.id??null},drawCalls:renderer.info.render.calls})};
 
 // Access overlays are independent of material/status/flow coloring and never become process parts.

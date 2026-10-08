@@ -1,6 +1,7 @@
 import {processKit} from './process-kit.js';
 import {structuralKit} from './structural-kit.js';
 import {buildThermalOil,THERMAL_OIL_BASIS} from './thermal-oil.js';
+import {buildA600VentHeader} from './a600-vent-header.js';
 import {A5400_POSITION_SENTENCE,a5400CodesSentence} from './a5400-codes.js';
 
 // D-MDL-01 release 2 (bases R2-1…R2-8, approved by QFL 2026-09-28): equipment issued in the V219–V227 datasheets that the model did not
@@ -128,6 +129,7 @@ export function buildCatchup(h,acidRoute='r0'){
  }
  // A-5400 — real-world package, thermal-oil mains to HX-601 and (Route 2 + 6) the PK-1101 branch on a dedicated rack (D-MDL-05).
  const thermalOil=buildThermalOil(k,s,base,{acidRoute});
+ buildA600VentHeader(k); // V324: DR-601 / F-601 isolated vents to the SC-601 gas inlet
  // SL-1001 — silo on six legs with a 60° conical hopper (D-MDL-06, back at its A-1000 position by D-MDL-07). y0 is the hopper outlet, 3 m above grade for the rotary valve and screw.
  const sl=(()=>{const e=EQUIPMENT[668],{x,z,radius:r,bottom:y0,top:y1,tag}=e,yc=y0+SL1001_BASIS.coneHeight,hopper=inner=>k.geo(`SL-1001 hopper:${inner}`,()=>new T.CylinderGeometry(inner?r-.04:r,inner?SL1001_BASIS.outletRadius-.04:SL1001_BASIS.outletRadius,SL1001_BASIS.coneHeight,48,1,true));
   setContext(668,e.label);
