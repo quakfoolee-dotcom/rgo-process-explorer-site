@@ -10,13 +10,13 @@ export const NOTE_LABELS=['Basis','Basis and connections','Position','Position a
 import {A5400_POSITION_SENTENCE,a5400CodesSentence} from './a5400-codes.js';
 export const EQUIPMENT_NOTES={
  "SL-1001":
-  {summary:"Hydrated lime silo in A-1000: Ø 4.5 m with a 60° conical hopper, 135 m³ (two days of storage at the bounding dose; provisional). Piped for tanker fill, a filtered vent and discharge to T-1002; all provisional.",notes:[
+  {summary:"Hydrated lime silo in A-1000: Ø 6.5 m flat-bottom with a live-bottom discharger, 135 m³ (two days of storage at the bounding dose; provisional). Piped for tanker fill, a filtered vent and discharge to T-1002; all provisional.",notes:[
    {label:"Basis",text:"Envelope from FEED-PE-DAT-127 (D-MDL-01 release 3, LAY-10 ruling L1). Standalone — tie-ins deferred to the model engineer. Screening size; vendor geometry unqualified."},
-   {label:"Position",text:"Back at its A-1000 position (18, −24.5), ≈ 9 m from T-1002 (D-MDL-07, QFL 2026-10-04; D-MDL-06 had moved it east of x 70)."},
-   {label:"Geometry and sizing",text:"Ø 4.5 m with a 60° conical hopper (0.5 m outlet at 3 m), cylinder to ≈ 13.7 m. The volume is 2 days at the 40.5 t/d bounding dose (CAL-034) at a settled bulk density of 0.6 t/m³ = 135 m³; DAT-127 implies 200 m³ (0.405 t/m³ loose), so the density and the storage days are provisional until the datasheet owner and a lime supplier confirm them."},
-   {label:"Constraints",text:"Only Ø 4.5 m fits here without moving the overhead lines at y 8.7–11.8 m (0.31 m clearance). Cone angle and outlet size are model choices pending the vendor flow test. Tanker access from the WATER-DELIVERY frontage (z −31.5…−28.5)."},
+   {label:"Position",text:"At its A-1000 position (18, −24.5), ≈ 9 m from T-1002 (D-MDL-07, QFL 2026-10-04; D-MDL-06 had moved it east of x 70)."},
+   {label:"Geometry and sizing",text:"D-MDL-09 (QFL 2026-10-08, for a 30 ft building ceiling): Ø 6.5 m flat-bottom silo with a live-bottom discharger (bin activator and aeration pads; vendor to confirm for hydrated lime) on a floor at 3 m, cylinder to ≈ 7.1 m (≈ 8.0 m with the roof dust filter); it was Ø 4.5 m with a 60° cone to ≈ 13.7 m. The volume is 2 days at the 40.5 t/d bounding dose (CAL-034) at a settled bulk density of 0.6 t/m³ = 135 m³; DAT-127 implies 200 m³ (0.405 t/m³ loose), so the density and the storage days are provisional until the datasheet owner and a lime supplier confirm them."},
+   {label:"Constraints",text:"The silo now stands below the overhead lines at y 8.7–11.8 m. The floor stays at 3 m so the rotary valve and the screw to T-1002 keep their incline; a lower floor would need a horizontal screw and a vertical lift. Outlet size and the live-bottom type are model choices pending the vendor flow test. Tanker access from the WATER-DELIVERY frontage (z −31.5…−28.5)."},
    {label:"Connections",text:"Piping (D-MDL-08, QFL 2026-10-04): closed pneumatic tanker fill (coupling BL-FILLSL1001, isolation valve XV-SL1001-FILL, riser on the north side), roof dust filter with a vent to atmosphere, and a rotary valve plus inclined enclosed screw conveyor (≈ 34°, above the usual ≈ 30° limit; vendor to confirm) to a new roof nozzle on T-1002 — provisional until the powder-versus-slurry report."},
-   {label:"Not modelled",text:"Make-up water to T-1002 and hopper aeration air are not modelled."}
+   {label:"Not modelled",text:"Make-up water to T-1002 and the aeration air for the live-bottom are not modelled."}
   ]},
  "CL-1001":
   {summary:"HDS thickener, Ø 6.5 m, inside A-1000 beside DC-1001 and T-1008. Its gravity feed from R-1004 is not connected yet.",notes:[
