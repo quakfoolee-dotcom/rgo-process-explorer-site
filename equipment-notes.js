@@ -6,7 +6,8 @@
 // that holds for the text the panel is showing (apart from the two known acid-route additions), so a record whose status was edited falls back to
 // the plain (folded) description instead of showing stale notes. tests/validate-equipment-notes.mjs reports which entries drifted.
 // To change a record: edit its status where it is defined, then update its entry here (or delete the entry).
-export const NOTE_LABELS=['Basis','Basis and connections','Position','Position and spacing','Position and open items','Geometry','Geometry and sizing','Constraints','Connections','Bypass','Limits','Not modelled','Open items','Route option','Route note'];
+export const NOTE_LABELS=['Basis','Basis and connections','Position','Position and spacing','Position and open items','Geometry','Geometry and sizing','Constraints','Connections','Bypass','Limits','Not modelled','Open items','Route option','Route note','Codes and regulations'];
+import {A5400_POSITION_SENTENCE,a5400CodesSentence} from './a5400-codes.js';
 export const EQUIPMENT_NOTES={
  "SL-1001":
   {summary:"Hydrated lime silo in A-1000: Ø 4.5 m with a 60° conical hopper, 135 m³ (two days of storage at the bounding dose; provisional). Piped for tanker fill, a filtered vent and discharge to T-1002; all provisional.",notes:[
@@ -32,23 +33,27 @@ export const EQUIPMENT_NOTES={
  "V-5401":
   {summary:"Thermal-oil expansion vessel: a horizontal N₂-blanketed drum, Ø 1.8 × 4.5 m (≈ 11 m³), on a frame above the loop high point.",notes:[
    {label:"Geometry",text:"Horizontal N₂-blanketed expansion drum Ø 1.8 × 4.5 m (≈ 11 m³) on a frame above the loop high point, with deck, handrail and ladder; the air separator on the pump suction belongs to this assembly until LST-001 allocates a tag."},
-   {label:"Basis",text:"Real-world geometry and the thermal-oil mains to HX-601 (and PK-1101 under Route 2 + 6) on a dedicated rack: D-MDL-05 (QFL 2026-10-01), dist/thermal-oil.js; dimensions are model choices pending vendor data (U8)."}
+   {label:"Basis",text:"Real-world geometry and the thermal-oil mains to HX-601 (and PK-1101 under Route 2 + 6) on a dedicated rack: D-MDL-05 (QFL 2026-10-01), dist/thermal-oil.js; dimensions are model choices pending vendor data (U8)."},
+   {label:"Codes and regulations",text:a5400CodesSentence("V-5401").trim()}
   ]},
  "H-5400":
   {summary:"Gas-fired thermal-oil heater, 14 MW rated: a horizontal coil heater Ø 3.6 × 10 m on saddles with a Ø 1.4 m stack to about 20 m (stack height provisional).",notes:[
    {label:"Geometry",text:"Horizontal cylindrical coil heater Ø 3.6 × 10 m on saddles, burner and FD fan at the north end, flue box and Ø 1.4 m stack to ≈ 20 m (provisional, dispersion study) at the rear (FEED-PE-DAT-140)."},
-   {label:"Basis",text:"Real-world geometry and the thermal-oil mains to HX-601 (and PK-1101 under Route 2 + 6) on a dedicated rack: D-MDL-05 (QFL 2026-10-01), dist/thermal-oil.js; dimensions are model choices pending vendor data (U8)."}
+   {label:"Basis",text:"Real-world geometry and the thermal-oil mains to HX-601 (and PK-1101 under Route 2 + 6) on a dedicated rack: D-MDL-05 (QFL 2026-10-01), dist/thermal-oil.js; dimensions are model choices pending vendor data (U8)."},
+   {label:"Codes and regulations",text:a5400CodesSentence("H-5400").trim()}
   ]},
  "A-5400":
   {summary:"Thermal-oil heater package, 14 MW, on a 10 × 18 m pad outside the east building wall, connected to HX-601 by DN300 thermal-oil mains.",notes:[
    {label:"Basis",text:"Envelope from FEED-PE-DAT-140 (D-MDL-01 release 3, LAY-10 ruling L1)."},
    {label:"Connections",text:"Connected: DN300 thermal-oil mains to HX-601 (and DN150 to PK-1101 under Route 2 + 6) on a dedicated rack, D-MDL-05 (QFL 2026-10-01)."},
-   {label:"Position and spacing",text:"Outside the east building wall (V315); ≈ 53 m from the A-600 edge (DR-601), ≈ 15 m from the A-800 block edge, ≈ 37 m from the PY-801 hydrogen off-gas point and ≈ 17 m from the A-900 block; east of the perimeter logistics road (x 125) — HAZOP inputs (U8, FEED-PS-HOP-001), not a spacing ruling."}
+   {label:"Position and spacing",text:A5400_POSITION_SENTENCE.trim()},
+   {label:"Codes and regulations",text:a5400CodesSentence("A-5400").trim()}
   ]},
  "T-5401":
   {summary:"Thermal-oil drain / storage tank: a horizontal drum Ø 2.6 × 6 m (≈ 30 m³) on saddles at grade inside the curbed pad.",notes:[
    {label:"Geometry",text:"Horizontal drain / storage drum Ø 2.6 × 6 m (≈ 30 m³) on saddles at grade inside the curbed pad; drain-down by N₂ push (a gravity drain would need a pit — vendor, U8)."},
-   {label:"Basis",text:"Real-world geometry and the thermal-oil mains to HX-601 (and PK-1101 under Route 2 + 6) on a dedicated rack: D-MDL-05 (QFL 2026-10-01), dist/thermal-oil.js; dimensions are model choices pending vendor data (U8)."}
+   {label:"Basis",text:"Real-world geometry and the thermal-oil mains to HX-601 (and PK-1101 under Route 2 + 6) on a dedicated rack: D-MDL-05 (QFL 2026-10-01), dist/thermal-oil.js; dimensions are model choices pending vendor data (U8)."},
+   {label:"Codes and regulations",text:a5400CodesSentence("T-5401").trim()}
   ]},
  "P-5401":
   {summary:"Thermal-oil circulation pumps, 900 m³/h: 1 + 1 horizontal end-suction hot-oil pumps with suction from the air separator and discharge to the heater coil.",notes:[

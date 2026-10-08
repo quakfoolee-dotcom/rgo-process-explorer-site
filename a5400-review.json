@@ -1,0 +1,559 @@
+{
+  "revision": "V317",
+  "generated": "2026-10-08T00:40:49.298Z",
+  "basis": {
+    "revision": "V317",
+    "date": "2026-10-08",
+    "edition": "BC Fire Code 2018 (Division B, Part 4) as published at free.bcpublications.ca; confirm the edition in force.",
+    "note": "Researched for the pad position (QFL 2026-10-08). The BC codes found set no minimum distance between a fired heater and a building wall; the position is limited by the tank, containment and vent rules below, by the road and walkway beside the wall, and by separation from A-800 and A-900 (industry practice)."
+  },
+  "oilBasis": {
+    "revision": "D-MDL-05",
+    "note": "Layout and routing for FEED review: no pipe stress, thermal-expansion or hydraulic calculation; DN300 from ≈ 715 m³/h at ≈ 2.8 m/s. Heater, drum and tank dimensions are model choices pending vendor data (U8). HX-601 heating nozzles are DN100 placeholders in the A-600 model (reducers at the battery limit) — HX-601 sizing follow-up."
+  },
+  "location": {
+    "pad": {
+      "west": 124,
+      "east": 134,
+      "south": -24,
+      "north": -6
+    },
+    "centre": [
+      129,
+      -15
+    ],
+    "wallOuterFace": 117.6,
+    "barrierPostX": 120.2,
+    "walkwayX": 119,
+    "perimeterRoad": [
+      [
+        38,
+        -51
+      ],
+      [
+        125,
+        -51
+      ],
+      [
+        125,
+        -29
+      ],
+      [
+        140,
+        -29
+      ],
+      [
+        140,
+        -1
+      ],
+      [
+        125,
+        -1
+      ],
+      [
+        125,
+        55
+      ],
+      [
+        -49,
+        55
+      ],
+      [
+        -49,
+        -51
+      ],
+      [
+        38,
+        -51
+      ]
+    ]
+  },
+  "distances": {
+    "wallOuterFace": 6.4,
+    "walkway": 4.4,
+    "barrier": 3.8,
+    "roadLane": 2,
+    "A800": 17,
+    "A900": 23.8,
+    "A600": 47.3,
+    "PY801": 42.7,
+    "HX601": 77
+  },
+  "assembly": [
+    {
+      "tag": "A-5400",
+      "label": "High-Temperature Thermal-Oil Package",
+      "x": 129,
+      "z": -15,
+      "parts": 357,
+      "size": "10 × 18 m curbed pad"
+    },
+    {
+      "tag": "H-5400",
+      "label": "Thermal-oil heater (gas-fired) · 14 MW rated (FEED-PE-DAT-140)",
+      "x": 126.6,
+      "z": -16,
+      "parts": 375,
+      "size": "Ø 3.6 × 10 m coil heater, stack to 20 m"
+    },
+    {
+      "tag": "P-5401",
+      "label": "Thermal-oil circulation pumps A/B · 900 m³/h (FEED-PE-DAT-140)",
+      "x": 131.2,
+      "z": -15.5,
+      "parts": 447,
+      "size": "1 + 1 end-suction pumps, 900 m³/h"
+    },
+    {
+      "tag": "V-5401",
+      "label": "Thermal-oil expansion vessel (FEED-PE-DAT-140)",
+      "x": 131,
+      "z": -20.5,
+      "parts": 178,
+      "size": "Ø 1.8 × 4.5 m expansion drum, ≈ 11 m³"
+    },
+    {
+      "tag": "T-5401",
+      "label": "Thermal-oil drain / storage tank (FEED-PE-DAT-140)",
+      "x": 132,
+      "z": -9.5,
+      "parts": 155,
+      "size": "Ø 2.6 × 6 m drain tank, ≈ 30 m³"
+    }
+  ],
+  "routes": [
+    {
+      "id": "LINE-517",
+      "label": "HX-601 heating supply route",
+      "service": "Thermal oil 280 °C supply",
+      "length": 30.7,
+      "elbows": 4,
+      "cladding": 17
+    },
+    {
+      "id": "LINE-518",
+      "label": "A600 heating supply interface",
+      "service": "Thermal oil 280 °C supply",
+      "length": 0.7,
+      "elbows": 0,
+      "cladding": 1
+    },
+    {
+      "id": "LINE-519",
+      "label": "HX-601 heating return route",
+      "service": "Thermal oil 250 °C return",
+      "length": 31.5,
+      "elbows": 4,
+      "cladding": 17
+    },
+    {
+      "id": "LINE-2641",
+      "label": "P-5401A pumped thermal-oil passage",
+      "service": "Thermal oil",
+      "length": 0.5,
+      "elbows": 0,
+      "cladding": 0
+    },
+    {
+      "id": "LINE-2642",
+      "label": "P-5401B pumped thermal-oil passage",
+      "service": "Thermal oil",
+      "length": 0.5,
+      "elbows": 0,
+      "cladding": 0
+    },
+    {
+      "id": "LINE-2643",
+      "label": "A-5400 air separator outlet",
+      "service": "Thermal oil 250 °C return",
+      "length": 0.3,
+      "elbows": 0,
+      "cladding": 1
+    },
+    {
+      "id": "LINE-2644",
+      "label": "A-5400 pump suction header",
+      "service": "Thermal oil 250 °C return",
+      "length": 2.4,
+      "elbows": 0,
+      "cladding": 1
+    },
+    {
+      "id": "LINE-2645",
+      "label": "P-5401A suction",
+      "service": "Thermal oil 250 °C return",
+      "length": 2.7,
+      "elbows": 2,
+      "cladding": 5
+    },
+    {
+      "id": "LINE-2646",
+      "label": "P-5401B suction",
+      "service": "Thermal oil 250 °C return",
+      "length": 0.8,
+      "elbows": 1,
+      "cladding": 3
+    },
+    {
+      "id": "LINE-2647",
+      "label": "P-5401A discharge",
+      "service": "Thermal oil to heater",
+      "length": 3.1,
+      "elbows": 1,
+      "cladding": 7
+    },
+    {
+      "id": "LINE-2648",
+      "label": "P-5401B discharge",
+      "service": "Thermal oil to heater",
+      "length": 1.2,
+      "elbows": 0,
+      "cladding": 2
+    },
+    {
+      "id": "LINE-2649",
+      "label": "A-5400 heater inlet header",
+      "service": "Thermal oil to heater",
+      "length": 3,
+      "elbows": 3,
+      "cladding": 13
+    },
+    {
+      "id": "LINE-2650",
+      "label": "A-5400 expansion line",
+      "service": "Thermal oil expansion",
+      "length": 11.2,
+      "elbows": 3,
+      "cladding": 0
+    },
+    {
+      "id": "LINE-2651",
+      "label": "V-5401 overflow to T-5401",
+      "service": "Thermal oil overflow",
+      "length": 16,
+      "elbows": 4,
+      "cladding": 0
+    },
+    {
+      "id": "LINE-2652",
+      "label": "A-5400 drain-down header (N₂ push)",
+      "service": "Thermal oil drain-down",
+      "length": 12.3,
+      "elbows": 4,
+      "cladding": 0
+    },
+    {
+      "id": "LINE-2653",
+      "label": "T-5401 refill to pump suction",
+      "service": "Thermal oil refill",
+      "length": 4.8,
+      "elbows": 4,
+      "cladding": 0
+    },
+    {
+      "id": "LINE-2654",
+      "label": "A-5400 supply main (package)",
+      "service": "Thermal oil 280 °C supply",
+      "length": 24.4,
+      "elbows": 2,
+      "cladding": 9
+    },
+    {
+      "id": "LINE-2655",
+      "label": "A-5400 thermal-oil supply main to HX-601",
+      "service": "Thermal oil 280 °C supply",
+      "length": 62.7,
+      "elbows": 5,
+      "cladding": 23
+    },
+    {
+      "id": "LINE-2656",
+      "label": "A-5400 supply DN300 × DN100 at HX-601 (HX-601 nozzle placeholder)",
+      "service": "Thermal oil 280 °C supply",
+      "length": 0.8,
+      "elbows": 0,
+      "cladding": 5
+    },
+    {
+      "id": "LINE-2657",
+      "label": "A-5400 return DN100 × DN300 at HX-601 (HX-601 nozzle placeholder)",
+      "service": "Thermal oil 250 °C return",
+      "length": 0.8,
+      "elbows": 0,
+      "cladding": 5
+    },
+    {
+      "id": "LINE-2658",
+      "label": "A-5400 thermal-oil return main from HX-601",
+      "service": "Thermal oil 250 °C return",
+      "length": 62.8,
+      "elbows": 4,
+      "cladding": 20
+    },
+    {
+      "id": "LINE-2659",
+      "label": "A-5400 return main (package)",
+      "service": "Thermal oil 250 °C return",
+      "length": 28.5,
+      "elbows": 2,
+      "cladding": 9
+    }
+  ],
+  "penetrations": [
+    {
+      "label": "A-5400 thermal-oil supply main to HX-601",
+      "side": "E",
+      "z": 5.45,
+      "y": 7.4
+    },
+    {
+      "label": "A-5400 thermal-oil return main from HX-601",
+      "side": "E",
+      "z": 5.45,
+      "y": 6.6
+    }
+  ],
+  "codes": [
+    {
+      "id": "CR-1",
+      "kind": "BC Fire Code",
+      "source": "BC Fire Code 2018, Division B",
+      "reference": "Art. 4.1.2.2(1) Heated liquids",
+      "referenceConfirmed": true,
+      "url": "https://free.bcpublications.ca/civix/document/id/public/bcfc2018/bcfc_2018dbp4s41",
+      "subject": "Heated oil is a Class I liquid",
+      "requirement": "A liquid with a flash point at or above 37.8 °C that is processed, stored, handled or used at or above its flash point is treated as a Class I liquid.",
+      "applies": [
+        "A-5400",
+        "H-5400",
+        "V-5401",
+        "T-5401"
+      ],
+      "check": "The oil runs at 250–280 °C, above any thermal-oil flash point, so the Class I rules apply to the hot system. The oil product and its flash point are not selected (vendor, U8).",
+      "status": "to confirm",
+      "modelEvidence": null,
+      "open": null,
+      "reviewer": "",
+      "reviewedOn": ""
+    },
+    {
+      "id": "CR-2",
+      "kind": "BC Fire Code",
+      "source": "BC Fire Code 2018, Division B",
+      "reference": "Art. 4.1.5.2(1) Ignition sources",
+      "referenceConfirmed": true,
+      "url": "https://free.bcpublications.ca/civix/document/id/public/bcfc2018/bcfc_2018dbp4s41",
+      "subject": "Open flame and sparks near Class I liquids",
+      "requirement": "A device, operation or activity that produces open flames, sparks or heat is not permitted in an area where Class I liquids are handled unless controlled so that it does not create a fire or explosion hazard.",
+      "applies": [
+        "A-5400",
+        "H-5400"
+      ],
+      "check": "The burner is the controlled ignition source of the system. Burner management and the hot-oil leak scenarios belong to the HAZOP (U8, FEED-PS-HOP-001).",
+      "status": "to confirm",
+      "modelEvidence": null,
+      "open": null,
+      "reviewer": "",
+      "reviewedOn": ""
+    },
+    {
+      "id": "CR-3",
+      "kind": "BC Fire Code",
+      "source": "BC Fire Code 2018, Division B",
+      "reference": "Art. 4.3.2.1(2) and Table 4.3.2.1; (6) not relied on",
+      "referenceConfirmed": true,
+      "url": "https://free.bcpublications.ca/civix/document/id/public/bcfc2018/bcfc_2018dbp4s43",
+      "subject": "Tank to a building on the same property",
+      "requirement": "An outside aboveground tank for stable liquids at up to 17 kPa gauge stands at least 3 m from a building on the same property (tanks up to 250 000 L); half that where fire or explosion protection in the tank conforms to Sentence 4.3.2.5.(2). The reduction for Class II and IIIA liquids (1.5 m, tanks up to 50 000 L) is not relied on because the heated oil is treated as Class I.",
+      "applies": [
+        "V-5401",
+        "T-5401"
+      ],
+      "limitM": 3,
+      "evidence": "tankToWall",
+      "status": "met in the model, to confirm",
+      "modelEvidence": "Nearest tank shell (T-5401 / V-5401) to the outer face of the east wall (x 117.6): 11.2 m.",
+      "open": null,
+      "reviewer": "",
+      "reviewedOn": ""
+    },
+    {
+      "id": "CR-4",
+      "kind": "BC Fire Code",
+      "source": "BC Fire Code 2018, Division B",
+      "reference": "Subsection 4.3.7 Secondary containment, Clearances (article number unconfirmed)",
+      "referenceConfirmed": false,
+      "url": "https://free.bcpublications.ca/civix/document/id/public/bcfc2018/bcfc_2018dbp4s43",
+      "subject": "Containment wall clear of the tank shell",
+      "requirement": "No part of a secondary containment wall is less than 1.5 m from a storage tank shell. The distance can be waived for a tank of up to 80 000 L that is double-walled or built to incorporate secondary containment, or that conforms to ULC-S655.",
+      "applies": [
+        "T-5401",
+        "V-5401"
+      ],
+      "limitM": 1.5,
+      "evidence": "curbToTank",
+      "status": "open",
+      "modelEvidence": "Containment curb to the tank shell: T-5401 0.5 m, V-5401 0.8 m (the curb is the pad curb; V-5401 stands on a frame).",
+      "open": "The pad curb is 0.5 m from the nearest tank shell (T-5401 north end, before its heads): widen the pad, move the tank, or use a double-wall / ULC-S655 tank (vendor).",
+      "reviewer": "",
+      "reviewedOn": ""
+    },
+    {
+      "id": "CR-5",
+      "kind": "BC Fire Code",
+      "source": "BC Fire Code 2018, Division B",
+      "reference": "Section 4.3 Vent piping, Location of vent pipe outlets (article number unconfirmed)",
+      "referenceConfirmed": false,
+      "url": "https://free.bcpublications.ca/civix/document/id/public/bcfc2018/bcfc_2018dbp4s43",
+      "subject": "Tank vent outlets",
+      "requirement": "Normal vent outlets for tanks of Class I liquids are outside buildings at least 3.5 m above the adjacent ground and 1.5 m from any building opening, and discharge so vapours cannot enter or be trapped near the building. Emergency vent outlets are at least 1.5 m from building openings and from combustible parts of an exterior wall.",
+      "applies": [
+        "V-5401",
+        "T-5401"
+      ],
+      "limitM": 3.5,
+      "evidence": "ventHeight",
+      "status": "met in the model, to confirm",
+      "modelEvidence": "Lowest tank vent or relief connection: 3.5 m above grade (need 3.5 m for a normal vent); the nearest building opening is more than 11.2 m away.",
+      "open": null,
+      "reviewer": "",
+      "reviewedOn": ""
+    },
+    {
+      "id": "CR-6",
+      "kind": "Standard (BC Gas Safety Regulation adopts CSA B149)",
+      "source": "CSA B149.1 Natural gas and propane installation code",
+      "reference": "Gas train and vent terminal clearances (clause numbers and edition unconfirmed)",
+      "referenceConfirmed": false,
+      "url": "https://www.technicalsafetybc.ca/regulatory-resources/regulatory-notices/directive-special-venting-system-and-type-bh-venting-system-termination-clearances",
+      "subject": "Gas-fired appliance clearances",
+      "requirement": "Manufacturer tables for Canadian installations show vent terminals 0.9 m or more from an openable window or door and 1.2–1.8 m from air inlets. The heater certification and installation instructions set the clearance to combustible walls.",
+      "applies": [
+        "A-5400",
+        "H-5400"
+      ],
+      "limitM": 1.8,
+      "evidence": "stackToWall",
+      "check": "Heater vendor data and the gas-appliance evaluation set the real clearances (U8).",
+      "status": "met in the model, to confirm",
+      "modelEvidence": "Stack (Ø 1.4 m) to the wall outer face: 8.3 m. No door or window is modelled within 5 m of the pad; the manufacturer's burner and stack clearances apply.",
+      "open": null,
+      "reviewer": "",
+      "reviewedOn": ""
+    },
+    {
+      "id": "CR-7",
+      "kind": "BC regulation",
+      "source": "Power Engineers, Boiler, Pressure Vessel and Refrigeration Safety Regulation, B.C. Reg. 104/2004",
+      "reference": "s. 6 and s. 84.1 (low pressure thermal fluid plants)",
+      "referenceConfirmed": true,
+      "url": "https://www.technicalsafetybc.ca/thermal-pressure-fluid-plants",
+      "subject": "Low-pressure thermal fluid plant",
+      "requirement": "A plant protected so it cannot keep operating at the vapour point of the fluid is exempt from certified operator staffing if it has an automated control system whose design is registered with the provincial safety manager, with approval by a professional engineer, before installation starts. The owner designates and notifies a competent responsible person.",
+      "applies": [
+        "A-5400",
+        "H-5400"
+      ],
+      "check": "No distance rule found. Registration of the control system design and the responsible-person notice are open (owner).",
+      "status": "to confirm",
+      "modelEvidence": null,
+      "open": null,
+      "reviewer": "",
+      "reviewedOn": ""
+    },
+    {
+      "id": "CR-8",
+      "kind": "BC Fire Code",
+      "source": "BC Fire Code 2018, Division B",
+      "reference": "Section 4.3, Fire department access (article number unconfirmed)",
+      "referenceConfirmed": false,
+      "url": "https://free.bcpublications.ca/civix/document/id/public/bcfc2018/bcfc_2018dbp4s43",
+      "subject": "Fire department access to tanks",
+      "requirement": "Outdoor storage areas allow fire department vehicles to approach within 60 m travelling distance of any storage tank.",
+      "applies": [
+        "T-5401",
+        "V-5401"
+      ],
+      "limitM": 60,
+      "evidence": "roadToTank",
+      "status": "met in the model, to confirm",
+      "modelEvidence": "Perimeter road centre line to T-5401: 8 m; the loop is rerouted around the pad.",
+      "open": null,
+      "reviewer": "",
+      "reviewedOn": ""
+    },
+    {
+      "id": "CR-9",
+      "kind": "Industry practice (not a BC code)",
+      "source": "General fired-heater siting practice; HAZOP (U8, FEED-PS-HOP-001)",
+      "reference": "About 15 m from flammable process areas (not verified against a named standard)",
+      "referenceConfirmed": false,
+      "url": null,
+      "subject": "Separation from hydrogen and flammable areas",
+      "requirement": "Fired heaters are commonly kept about 15 m from areas that can release flammable gas or vapour. The distance is measured to the release source or the classified area, not to a block outline.",
+      "applies": [
+        "A-5400",
+        "H-5400"
+      ],
+      "limitM": 15,
+      "evidence": "toA800",
+      "status": "met in the model, to confirm",
+      "modelEvidence": "Pad curb to the A-800 block (equipment extent): 17 m; to PY-801 hydrogen off-gas point 42.7 m; to the A-900 block 23.8 m.",
+      "open": null,
+      "reviewer": "",
+      "reviewedOn": ""
+    },
+    {
+      "id": "CR-10",
+      "kind": "Not yet researched",
+      "source": "BC Gas Safety Regulation and CSA B149.3 (field evaluation of fuel-related equipment); BC Building Code spatial separation if the wall becomes a rated exposure; stack emission permitting",
+      "reference": "—",
+      "referenceConfirmed": false,
+      "url": null,
+      "subject": "Open research",
+      "requirement": "Not read for V317. Needed before the position is treated as final.",
+      "applies": [
+        "A-5400"
+      ],
+      "researched": false,
+      "status": "not researched",
+      "modelEvidence": null,
+      "open": null,
+      "reviewer": "",
+      "reviewedOn": ""
+    }
+  ],
+  "decisions": [
+    {
+      "id": "D-MDL-05",
+      "date": "2026-10-01",
+      "text": "A-5400 package with real-world geometry and DN300 thermal-oil mains to HX-601 on a dedicated rack (QFL)."
+    },
+    {
+      "id": "V313",
+      "date": "2026-10-07",
+      "text": "Reducers take the service of their line; the HX-601 heating lines carry the oil; cladding on every spool, bend and reducer."
+    },
+    {
+      "id": "V315",
+      "date": "2026-10-07",
+      "text": "Package moved outside the east building wall (variant V1, x 131–141) with straight mains through the wall; camera far plane 400."
+    },
+    {
+      "id": "V317",
+      "date": "2026-10-08",
+      "text": "Pad moved closer to the wall and south (option C): x 124–134, z −24 to −6. Perimeter road rerouted around the pad. Code and regulation register added."
+    }
+  ],
+  "open": [
+    "Prevailing wind and the site boundary east of x 140 (stack and burner end orientation).",
+    "HX-601 duty and nozzle sizing: the DN300 main reduces to DN100 at the HX-601 battery limit; the 715 m³/h package flow would be about 25 m/s in DN100 unless HX-601 takes a small fraction.",
+    "Oil product, flash point and autoignition temperature (vendor, U8); they fix the Class I treatment (CR-1).",
+    "CR-4: the pad curb is closer than 1.5 m to the T-5401 and V-5401 shells (see the register for the distances). Widen the pad or move the tanks, unless the tank is double-walled or ULC-S655.",
+    "Rack span of about 11 m over the rerouted perimeter road for the 0.52 m insulated mains: structural and pipe-stress check.",
+    "Perimeter road reroute (x 125 → 140 around the pad) is a proposal, not an approved roadway.",
+    "HAZOP (U8, FEED-PS-HOP-001): burner management, hot-oil release, separation from A-800 and A-900 (CR-9 is practice, not a BC code).",
+    "Registration of the automated control system design and responsible-person notice (CR-7, owner).",
+    "Research not done: Gas Safety Regulation and CSA B149.3 field evaluation, rated-wall spatial separation, stack emission permitting (CR-10)."
+  ]
+}
