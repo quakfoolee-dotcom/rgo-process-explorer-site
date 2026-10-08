@@ -80,13 +80,28 @@ export function buildForkliftGeometry(){
  for(const z of [-.46,.46])box(.408,.79,z,.065,1.06,.045,dark);
  for(const y of [.29,.74,1.31])box(.408,y,0,.065,.045,.96,dark);
  for(const z of [-.30,-.15,0,.15,.30])box(.408,.81,z,.042,1.0,.025,dark);
- for(const z of [-.34,.34])profile([[.397,.108],[1.575,.108],[1.585,.119],[1.51,.139],[.458,.139],[.449,.185],[.449,.69],[.397,.69]],.105,steel,z,'Shaped fork heel and blade',.005);
+ const carriage=new T.Group();carriage.name='Fork carriage and load';root.add(carriage);
+ for(const z of [-.34,.34])carriage.add(profile([[.397,.108],[1.575,.108],[1.585,.119],[1.51,.139],[.458,.139],[.449,.185],[.449,.69],[.397,.69]],.105,steel,z,'Shaped fork heel and blade',.005));
+ const load=buildDrumPallet();carriage.add(load);
+ return {group:root,wheels,rearSteering,carriage,load};
+}
+
+// Pallet and four 205 L chemical drums in the truck frame: pallet centre 1.0 m ahead of the front axle, pallet underside 0.14 m above the floor while carried.
+// The chemical, its hazard class, the drum mass and the pallet pattern are not selected (white label band only); QFL asked for chemical drums, V321.
+export const DRUM_PALLET=Object.freeze({palletLength:1.2,palletWidth:1.2,drums:4,drumDiameter:.54,drumHeight:.83,underside:.14,loadCentre:1});
+export function buildDrumPallet(){
+ const g=new T.Group();g.name='Pallet with four drums';
+ const plain=(color,metalness=.1,roughness=.58)=>new T.MeshStandardMaterial({color,metalness,roughness});
+ const wood=plain(0x986b42,0,.86),blue=new T.MeshPhysicalMaterial({color:0x247f9b,metalness:.28,roughness:.36,clearcoat:.32}),steel=plain(0xa7b4bf,.72,.27),label=plain(0xe9eef3,0,.7);
+ const box=(x,y,z,sx,sy,sz,m)=>{const o=new T.Mesh(new T.BoxGeometry(sx,sy,sz),m);o.position.set(x,y,z);g.add(o);return o;};
+ const mesh=(geo,m,x,y,z)=>{const o=new T.Mesh(geo,m);o.position.set(x,y,z);g.add(o);return o;};
  for(const x of [.51,1,1.49])box(x,.18,0,.12,.08,1.2,wood);
  for(const z of [-.48,-.24,0,.24,.48])box(1,.24,z,1.2,.06,.18,wood);
- for(const z of [-.3,.3]){
-  mesh(new T.CylinderGeometry(.27,.27,.83,40),blue,1,.685,z);
-  for(const y of [.285,.48,.87,1.092])mesh(new T.TorusGeometry(.272,.008,8,40),blue,1,y,z).rotation.x=Math.PI/2;
-  const lid=mesh(new T.CylinderGeometry(.262,.262,.012,40),blue,1,1.102,z);mesh(new T.CylinderGeometry(.024,.024,.014,16),steel,1.14,1.116,z);
+ for(const x of [.7,1.3])for(const z of [-.3,.3]){
+  mesh(new T.CylinderGeometry(.27,.27,.83,40),blue,x,.685,z);
+  for(const y of [.285,.48,.87,1.092])mesh(new T.TorusGeometry(.272,.008,8,40),blue,x,y,z).rotation.x=Math.PI/2;
+  mesh(new T.CylinderGeometry(.262,.262,.012,40),blue,x,1.102,z);mesh(new T.CylinderGeometry(.024,.024,.014,16),steel,x+.14,1.116,z);
+  mesh(new T.CylinderGeometry(.274,.274,.14,40),label,x,.68,z);
  }
- return {group:root,wheels,rearSteering};
+ return g;
 }

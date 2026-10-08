@@ -4,6 +4,8 @@ import * as T from './vendor/three.module.js';
 import {TRANSPORT_ROUTES,transportFootprint,validateTransportProfile} from './transport-layout.js';
 import {inspectTransport,supportMetrics} from './transport-review.js';
 import {FORKLIFT_PROFILE,FORKLIFT_REFERENCE,validateForkliftEnvelope,createForklift,createForkliftPlayback} from './forklift.js';
+import {buildDrumPallet,DRUM_PALLET} from './forklift-geometry.js';
+import {createStagingBay,STAGING_BAY} from './drum-staging-bay.js';
 
 export function mountTransportReview({model,scene,host,onEnter,onLeave,onFit,onFollow=()=>{},onPart,isAssembled,onStateChange=()=>{},onPanelChange=()=>{},onDismiss=()=>{},onBeforePlay=()=>{}}){
  const root=document.createElement('aside');root.id='transport-review';root.className='movement-panel';root.hidden=true;root.setAttribute('aria-labelledby','transport-heading');host.append(root);
@@ -19,7 +21,7 @@ export function mountTransportReview({model,scene,host,onEnter,onLeave,onFit,onF
  <details><summary>Dimensions and clearance</summary>
  <p><strong>Design basis: B.C., Canada.</strong> Clearances below are planning assumptions. Pedestrian separation, the selected truck/load and structural capacity require site-specific review.</p>
  <p>CLARK ECX25 reference: 1.114 m truck width, 2.235 m overhead guard, 1.845 m outside turning radius. Reference model; truck selection is unconfirmed.</p>
- <p>Assumed: 1.2 × 1.2 m pallet, 1.6 m front axle to load front, 2.0 m to rear, 1.5 m wheelbase and 2.1 m lowered mast. Drums are illustrative; load mass is unspecified.</p>
+ <p>Assumed: 1.2 × 1.2 m pallet, 1.6 m front axle to load front, 2.0 m to rear, 1.5 m wheelbase and 2.1 m lowered mast. Drums are illustrative; load mass is unspecified. The unloading route carries one pallet of four 205 L chemical drums (electric truck only): the chemical, its hazard class, drum mass, pallet pattern, containment volume, delivery dock and charging are not selected.</p>
  <p>Edit the screening envelope below. It must contain the illustrated truck and load. Checks include hidden equipment, insulation and support bases.</p>
  <div class="transport-inputs"></div>
  <button id="transport-check">Recheck route</button>
@@ -31,23 +33,24 @@ export function mountTransportReview({model,scene,host,onEnter,onLeave,onFit,onF
  <a href="./layout-review.html" target="_blank" rel="noopener">Route and support review ↗</a>
  <p class="small-note">Pink outlines identify modeled obstructions. Playback is unavailable when the route check finds an obstruction. This is a proposed access study; loading, traffic controls and slab capacity still need confirmation.</p></details>`;
  const $=id=>root.querySelector('#'+id),select=$('transport-route'),profile={...FORKLIFT_PROFILE};
- for(const r of TRANSPORT_ROUTES)select.add(new Option(r.label,r.id));select.value='west-delivery';
+ for(const r of TRANSPORT_ROUTES.filter(r=>!r.hidden))select.add(new Option(r.label,r.id));select.value='west-delivery';
  const fields=[['width','Maximum truck/load width'],['front','Front axle to load front'],['rear','Front axle to rear'],['height','Maximum travel height'],['margin','Side/end allowance'],['headMargin','Overhead allowance'],['turnRadius','Front-axle path radius']];
  for(const [k,label]of fields){const wrap=document.createElement('label');wrap.textContent=label+' (m)';const input=document.createElement('input');input.type='number';input.min=k==='margin'||k==='headMargin'?'.1':'.01';input.max='20';input.step='.001';input.value=profile[k];input.dataset.profile=k;input.oninput=()=>{resetRoute();$('transport-status').textContent='Dimensions changed. Run the route check again.';};wrap.append(input);root.querySelector('.transport-inputs').append(wrap);}
  const group=new T.Group();group.name='Transport clearance review';group.visible=false;scene.add(group);
- let snapshot=null,result=null,active=false,vehicle=null,player=null,current=0,request=0,lastPose=null,bookmark=null,crossingEngineer=null;
+ let snapshot=null,result=null,active=false,vehicle=null,placed=null,bayRoute=null,player=null,current=0,request=0,lastPose=null,bookmark=null,crossingEngineer=null;
  const controls=['transport-position','transport-fit','transport-fit-vehicle','transport-follow','transport-reset'];
- function dispose(){for(const c of [...group.children]){group.remove(c);c.traverse(o=>{o.geometry?.dispose();if(Array.isArray(o.material))o.material.forEach(m=>m.dispose());else o.material?.dispose();});}vehicle=null;crossingEngineer=null;lastPose=null;}
+ function dispose(){for(const c of [...group.children]){group.remove(c);c.traverse(o=>{o.geometry?.dispose();if(Array.isArray(o.material))o.material.forEach(m=>m.dispose());else o.material?.dispose();});}vehicle=null;placed=null;bayRoute=null;crossingEngineer=null;lastPose=null;}
  function renderPose(p){
   if(!vehicle)return;current=p.index;
   if(crossingEngineer){const actor=p.traffic?.engineer;crossingEngineer.group.visible=!!actor;if(actor){crossingEngineer.group.position.set(actor.x,-.015,actor.z);crossingEngineer.group.rotation.y=actor.heading;crossingEngineer.pose(actor.distance,actor.moving);}}
   if(!p.traffic&&player?.stops.length){$('transport-traffic').hidden=false;$('transport-traffic').textContent='Crossing preview: forklift yields to the pedestrian; traffic plan unapproved.';}
   if(p.traffic){$('transport-traffic').hidden=false;$('transport-traffic').textContent=p.traffic.blocked||p.traffic.phase+' · forklift stopped; example engineer has exclusive crossing access. Illustrative control sequence; the site traffic plan is unapproved.';}
-vehicle.group.position.set(p.x,0,p.z);vehicle.group.rotation.y=-p.yaw;vehicle.animate(p.distance,p.curvature);
+vehicle.group.position.set(p.x,0,p.z);vehicle.group.rotation.y=-p.yaw;vehicle.setLift(p.lift||0);vehicle.load.visible=p.loaded!==false;vehicle.animate(p.roll??p.distance,p.curvature);
+  if(placed)placed.visible=p.loaded===false;
   if($('transport-follow').checked&&lastPose)onFollow(p.x-lastPose.x,p.z-lastPose.z);lastPose=p;
   $('transport-position').value=Math.round(p.fraction*1000);
   $('transport-position').setAttribute('aria-valuetext',`${p.distance.toFixed(1)} of ${p.total.toFixed(1)} metres, ${p.complete?'arrived':p.playing?'moving':'paused'}`);
-  $('transport-pose').textContent=`${Math.round(p.fraction*100)}% · ${p.distance.toFixed(1)} / ${p.total.toFixed(1)} m · ${p.complete?'Arrived':p.playing?'Moving':'Paused'}${result.blockedPoses.includes(current)?' · obstruction envelope':''}`;
+  $('transport-pose').textContent=`${Math.round(p.fraction*100)}% · ${p.distance.toFixed(1)} / ${p.total.toFixed(1)} m · ${p.phase?p.phase+' · ':''}${p.complete?(p.phase?'Done':'Arrived'):p.playing?(p.dwelling?'Working':p.reverse?'Reversing':'Moving'):'Paused'}${result.blockedPoses.includes(current)?' · obstruction envelope':''}`;
   $('transport-play').textContent=p.playing?'Pause forklift':p.complete?'Replay forklift':'Play forklift';
   $('transport-play').disabled=!active||result.findings.length>0||!!p.traffic?.blocked;
  }
@@ -56,6 +59,8 @@ vehicle.group.position.set(p.x,0,p.z);vehicle.group.rotation.y=-p.yaw;vehicle.an
   dispose();const poses=result.poses;
   // Clearance uses the swept envelope numerically; playback shows the truck only.
   vehicle=createForklift();group.add(vehicle.group);
+  bayRoute=TRANSPORT_ROUTES.find(r=>r.id===select.value);
+  if(bayRoute?.unload){const u=bayRoute.unload,end=poses.slice(0,poses.findIndex(q=>q.phase&&q.phase!==poses[0].phase)).at(-1)||poses[0];group.add(createStagingBay(u.bay));placed=new T.Group();placed.name='Placed pallet';const load=buildDrumPallet();load.position.set(-u.loadCentre,STAGING_BAY.trayTop-DRUM_PALLET.underside,0);placed.add(load);placed.position.set(u.bay.x,0,u.bay.z);placed.rotation.y=-end.yaw;placed.visible=false;group.add(placed);}
   for(const f of result.findings.slice(0,150)){const p=model.parts.find(p=>p.id===f.partId);if(!p)continue;if(!p.geometry.boundingBox)p.geometry.computeBoundingBox();const bb=p.geometry.boundingBox.clone().applyMatrix4(new T.Matrix4().compose(p.position,p.quaternion,p.scale)),helper=new T.Box3Helper(bb,0xff6fa8);helper.material.depthTest=false;group.add(helper);}
   player=createCrossingPlayback(createForkliftPlayback(poses),{poses,profile,crossings:model.walkways?.crossings||[],routeClear:model.walkways?.review?.clear!==false});
   if(player.stops.length){crossingEngineer=createEngineer();crossingEngineer.group.visible=false;group.add(crossingEngineer.group);}group.visible=true;renderPose(player.sample());
