@@ -49,7 +49,7 @@
 .workspace-dialog .primary{background:#f1c078;color:#172633;border-color:#f1c078}
 .workspace-dialog button:disabled{opacity:.45;cursor:default}
 .dialog-apply{border-top:1px solid #40596e;margin-top:18px;padding-top:8px}
-.resource-links{display:grid;gap:14px;margin:22px 0}
+.resource-links{display:grid;gap:14px;margin:12px 0 22px}.resource-group{font-size:.8125rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin:22px 0 8px;opacity:.78}
 .stage .panel-minimized{max-height:76px!important;overflow:hidden!important}
 .stage .panel-minimized>:not(:first-child){display:none!important}
 .stage .panel-minimize{font-size:20px;min-width:36px;min-height:36px;padding:2px 7px;margin-left:6px}
