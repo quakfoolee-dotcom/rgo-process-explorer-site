@@ -2,7 +2,7 @@
   "summary": {
     "revision": "emergency-access-91",
     "pedestrianSegments": 172,
-    "centrelineLengthM": 1302.749999999999,
+    "centrelineLengthM": 1292.7500000000005,
     "clearWidthM": 1.2,
     "headroomM": 2.3,
     "protectionAssemblies": 68,
@@ -54,10 +54,7 @@
         "id": "PW-003",
         "clear": true,
         "findings": [],
-        "crossings": [
-          "X-ARGON",
-          "X-DOOR"
-        ]
+        "crossings": []
       },
       {
         "id": "PW-004",
@@ -411,7 +408,9 @@
         "id": "PW-174",
         "clear": true,
         "findings": [],
-        "crossings": []
+        "crossings": [
+          "X-SPUR"
+        ]
       },
       {
         "id": "PW-087",
