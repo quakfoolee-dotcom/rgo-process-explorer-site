@@ -76,17 +76,28 @@ export function mountPlantBrowse({model,scene,viewport,canvas,button,onEnter,onL
  }
  function restoreCamera(){if(mode==='walking')updateCamera();else if(mode==='placing'&&placementCamera)onCamera(placementCamera,placementAim,true);}
  function close(){if(mode==='closed')return;++generation;operator?.hide();clearMovement();pendingPoint=null;drag=null;ghost.hidden=true;marker.visible=group.visible=false;const saved=snapshot;snapshot=null;showMode('closed');root.hidden=true;canvas.style.cursor='';canvas.title='';onLeave(saved);button.focus({preventScroll:true});}
- function pick(event){
+ function pick(event,snap=false){
   if(!ready)return null;const r=canvas.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)return null;
   const top=document.elementFromPoint(event.clientX,event.clientY);if(top!==canvas)return null;
   pointer.set((event.clientX-r.left)/r.width*2-1,1-(event.clientY-r.top)/r.height*2);const view=getCamera();view.updateMatrixWorld();ray.setFromCamera(pointer,view);
   const level=network.pickLevel?.(ray.ray);const ground=ray.ray.intersectPlane(plane,floorPoint);if(level&&(!ground||level.distance<ray.ray.origin.distanceTo(floorPoint))){if(!level.hit||cache.occlusion.blocked(ray,level.point,level.exclude))return null;return level.hit;}if(!ground)return null;
-  const hit=network.nearest([floorPoint.x,floorPoint.z]);if(!hit)return null;
-  if(cache.occlusion.blocked(ray,floorPoint))return null;
-  // A snap stays inside the same checked surface and never crosses a barrier.
-  return hit;
+  const exact=network.nearest([floorPoint.x,floorPoint.z]);if(exact&&!cache.occlusion.blocked(ray,floorPoint))return exact;
+  // V335: a placement drop that misses the 1.2 m walkway, or lands where a pipe or rack hides it, snaps to the nearest visible spot on a walkway within 5 m.
+  return snap?snapDrop(ray.ray.origin):null;
  }
- function placeAt(event){const hit=pick(event);if(!hit){marker.visible=false;message('Place the person on an unobstructed highlighted walkway.');return false;}enter(hit);return true;}
+ // Candidate walkway points on rings around the dropped ground point, nearest first; the first one the camera can see wins.
+ const snapRay=new T.Raycaster();
+ function snapDrop(origin){
+  const found=new Map();
+  for(const r of [0,1,2,3.5,5])for(let k=0;k<(r?8:1);k++){const a=k*Math.PI/4,hit=network.nearest([floorPoint.x+r*Math.cos(a),floorPoint.z+r*Math.sin(a)],.6);if(!hit)continue;
+   const key=hit.edge.segment+'|'+Math.round(hit.t*20),distance=Math.hypot(hit.point[0]-floorPoint.x,hit.point[1]-floorPoint.z);if(distance>5.5||found.has(key))continue;found.set(key,{hit,distance});}
+  for(const {hit} of [...found.values()].sort((p,q)=>p.distance-q.distance)){
+   const point=new T.Vector3(hit.point[0],edgeElevation(hit.edge,hit.t)+.05,hit.point[1]);snapRay.ray.origin.copy(origin);snapRay.ray.direction.copy(point).sub(origin).normalize();
+   if(!cache.occlusion.blocked(snapRay,point,hit.edge.visualExclude))return hit;
+  }
+  return null;
+ }
+ function placeAt(event){const hit=pick(event,true);if(!hit){marker.visible=false;message('No visible walkway within 5 m of the drop; pipes or racks may hide it. Try another view or click a highlighted walkway.');return false;}enter(hit);return true;}
  function enter(hit){if(!ready)return;operator?.setView('own',{restore:false});clearMovement();walker=createBrowseWalker(network,hit);yaw=hit.edge.heading;pitch=-.18;marker.visible=group.visible=false;showMode('walking');message('Walkway view · model inspection');choiceKey='';updateCamera();drawMap();renderChoices();refreshArrows();viewport.focus({preventScroll:true});}
  function updateCamera(){if(operator?.viewing)return;const p=walker.state.point;camera.aspect=Math.max(1,viewport.clientWidth)/Math.max(1,viewport.clientHeight);camera.updateProjectionMatrix();camera.position.set(p[0],(walker.state.y??0)+.035+BROWSE_PERSON.eyeHeight,p[1]);camera.up.set(0,1,0);const aim=camera.position.clone().add(new T.Vector3(Math.sin(yaw)*Math.cos(pitch),Math.sin(pitch),Math.cos(yaw)*Math.cos(pitch)));camera.lookAt(aim);camera.updateMatrixWorld();onCamera(camera,aim);}
  function location(){const p=walker.state.point;const area=model.floorAllocation?.areas?.find(a=>p[0]>=a.bounds[0]&&p[0]<=a.bounds[2]&&p[1]>=a.bounds[1]&&p[1]<=a.bounds[3]);return (area?.id||'Shared walkway')+' · elevation '+(walker.state.y??0).toFixed(1)+' m';}
@@ -131,7 +142,7 @@ export function mountPlantBrowse({model,scene,viewport,canvas,button,onEnter,onL
  button.addEventListener('pointerdown',e=>{if(e.button!==0)return;drag={id:e.pointerId,x:e.clientX,y:e.clientY,moved:false};if(mode==='closed')open();else if(mode==='walking')$('browse-reposition').click();button.setPointerCapture?.(e.pointerId);});
  button.onclick=()=>{if(suppressClick){suppressClick=false;return;}if(mode==='closed')open();else if(mode==='walking')$('browse-reposition').click();else root.querySelector('select')?.focus();};
  window.addEventListener('pointermove',e=>{
-  if(drag&&e.pointerId===drag.id){drag.moved ||= Math.hypot(e.clientX-drag.x,e.clientY-drag.y)>5;if(!drag.moved)return;ghost.hidden=false;ghost.style.transform=`translate(${e.clientX-16}px,${e.clientY-36}px)`;e.preventDefault();if(performance.now()-lastPick>70){lastPick=performance.now();const hit=pick(e);marker.visible=!!hit;if(hit)marker.position.set(hit.point[0],edgeElevation(hit.edge,hit.t)+.08,hit.point[1]);ghost.classList.toggle('invalid',!hit);}return;}
+  if(drag&&e.pointerId===drag.id){drag.moved ||= Math.hypot(e.clientX-drag.x,e.clientY-drag.y)>5;if(!drag.moved)return;ghost.hidden=false;ghost.style.transform=`translate(${e.clientX-16}px,${e.clientY-36}px)`;e.preventDefault();if(performance.now()-lastPick>70){lastPick=performance.now();const hit=pick(e,true);marker.visible=!!hit;if(hit)marker.position.set(hit.point[0],edgeElevation(hit.edge,hit.t)+.08,hit.point[1]);ghost.classList.toggle('invalid',!hit);}return;}
   if(look&&e.pointerId===look.id&&mode==='walking'){const dx=e.clientX-look.x,dy=e.clientY-look.y;look.moved ||= Math.hypot(e.clientX-look.startX,e.clientY-look.startY)>4;look.x=e.clientX;look.y=e.clientY;yaw-=dx*.004;pitch=Math.max(-1.25,Math.min(1.25,pitch-dy*.004));e.preventDefault();}
  },{passive:false,capture:true});
  window.addEventListener('pointerup',e=>{if(!drag||e.pointerId!==drag.id)return;const moved=drag.moved;drag=null;ghost.hidden=true;marker.visible=false;suppressClick=moved;if(moved){if(ready)placeAt(e);else pendingPoint={clientX:e.clientX,clientY:e.clientY};}},true);

@@ -1,8 +1,8 @@
 {
   "summary": {
     "revision": "emergency-access-91",
-    "pedestrianSegments": 171,
-    "centrelineLengthM": 1275.0500000000002,
+    "pedestrianSegments": 172,
+    "centrelineLengthM": 1292.7500000000005,
     "clearWidthM": 1.2,
     "headroomM": 2.3,
     "protectionAssemblies": 68,
@@ -402,6 +402,12 @@
       },
       {
         "id": "PW-086",
+        "clear": true,
+        "findings": [],
+        "crossings": []
+      },
+      {
+        "id": "PW-174",
         "clear": true,
         "findings": [],
         "crossings": []
