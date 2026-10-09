@@ -2,7 +2,7 @@
   "summary": {
     "revision": "emergency-access-91",
     "pedestrianSegments": 172,
-    "centrelineLengthM": 1292.7500000000005,
+    "centrelineLengthM": 1302.749999999999,
     "clearWidthM": 1.2,
     "headroomM": 2.3,
     "protectionAssemblies": 68,
@@ -55,7 +55,8 @@
         "clear": true,
         "findings": [],
         "crossings": [
-          "X-ARGON"
+          "X-ARGON",
+          "X-DOOR"
         ]
       },
       {
