@@ -28,7 +28,7 @@
           "availability": "available model source reviewed",
           "files": {
             "furnace.js": "e7130d34c3ddad04c379dc80e598df0474abe035d73752ebb080c29987520974",
-            "argon-distribution.js": "6186e693bbeeff93b11bd8af1ba654f5da7417ec193ef631ce67ae1cd929cd50",
+            "argon-distribution.js": "752540d569d7cdb0d9a9b8e562687559343baef516124e52260c9b764a17a0bb",
             "exhaust-groups.js": "7391bec8b81d779e0f60370698ef09d1ce5ef540dc69800c42686e9926a6eb53"
           },
           "hashNormalization": "UTF-8 text with LF line endings"

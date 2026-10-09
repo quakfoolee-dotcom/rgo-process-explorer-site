@@ -6,7 +6,7 @@ import {structuralKit} from './structural-kit.js';
 // AR6001 / AR701 / AR702 / AR801 are PFD stream identifiers, not equipment tags.
 export const ARGON_EQUIPMENT={...AR_SOURCE_EQUIPMENT,117:{tag:'HD-6201',label:'Common Ar distribution header',areaId:'A-6000',designStatus:'proposed',x:84,z:46,labelY:7.2,reviewNote:'Proposed A-6200 header arrangement. A-6100 source, pressure regulation and reserve bank are connected proposed equipment. Header diameter, pressure, peak simultaneous purge demand, reserve capacity and support spacing require detailed engineering.'}};
 export const ARGON_SUPPLY={source:'BL-AR6000',seed:AR_SOURCE_CONTROL.primarySeed,main:'XV-AR6201-MAIN',branches:[
- {areaId:'A-700',unit:'furnace',owner:89,boundary:'BL-AR701',localMain:'XV-AR701-MAIN',localSeed:'A700 argon supply',isolation:'XV-AR6201-700',check:'NRV-AR6201-700',x:54.8},
+ {areaId:'A-700',unit:'furnace',owner:89,boundary:'BL-AR701',localMain:'XV-AR701-MAIN',localSeed:'A700 argon supply',isolation:'XV-AR6201-700',check:'NRV-AR6201-700',x:82,xe:54.8,viaZ:40.3},
  {areaId:'A-800',unit:'doping',owner:112,boundary:'BL-AR801',localMain:'XV-AR801-MAIN',localSeed:'A800 argon supply',isolation:'XV-AR6201-800',check:'NRV-AR6201-800',x:94}
 ]};
 export function buildArgonDistribution(h,choice='bulk'){
@@ -15,12 +15,12 @@ export function buildArgonDistribution(h,choice='bulk'){
  const L=(points,label,r=.055)=>k.line(points,r,label,'Argon','HD-6201','Local Ar supply');
  const G=(a,z,tag,r=.055)=>k.bulkValve(a,z,r,tag,tag+' supply isolation');
  setContext(117,'HD-6201 connected A-6100 supply');
- k.boundary(ARGON_SUPPLY.source,[52.8,1.8,46],[-1,0,0],.075,'Argon','Connected A-6100 regulated source outlet. Source capacity, protection ratings and distribution pressure require qualification.');
- L([[52.8,1.8,46],[53.3,1.8,46]],'A-6200 regulated inlet',.075);
- G([53.3,1.8,46],[53.6,1.8,46],ARGON_SUPPLY.main,.075);
- const header=L([[53.6,1.8,46],[54,1.8,46],[54,6,46],[115,6,46]],'A-6200 common Ar header',.075);
+ k.boundary(ARGON_SUPPLY.source,[77.8,1.8,46],[-1,0,0],.075,'Argon','Connected A-6100 regulated source outlet. Source capacity, protection ratings and distribution pressure require qualification.');
+ L([[77.8,1.8,46],[78.3,1.8,46]],'A-6200 regulated inlet',.075);
+ G([78.3,1.8,46],[78.6,1.8,46],ARGON_SUPPLY.main,.075);
+ const header=L([[78.6,1.8,46],[79,1.8,46],[79,6,46],[115,6,46]],'A-6200 common Ar header',.075);
  h.capped([115,6,46],[1,0,0],.075,'HD-6201 header end blind');
- k.instrument('PT-6201',[54,2.8,46],'header supply pressure');
+ k.instrument('PT-6201',[79,2.8,46],'header supply pressure');
  const sourceTie=k.boundaries.find(b=>b.tag===ARGON_SUPPLY.source);Object.assign(sourceTie,{kind:'interunit',fromArea:'A-6100',toArea:'A-6200'});for(const t of h.terminals)if(t.label===ARGON_SUPPLY.source+' external battery limit')t.label=ARGON_SUPPLY.source+' connected source flange';
  const connections=[];
  for(const branch of ARGON_SUPPLY.branches){
@@ -32,7 +32,7 @@ export function buildArgonDistribution(h,choice='bulk'){
   const at=parts.length;h.valve([x,1.5,45.2],[x,1.5,44.9],.055,'blue','check',branch.check+' non-return');
   Object.assign(h.valves.at(-1),{tag:branch.check,partIds:parts.slice(at).map(p=>p.id)});Object.assign(edges.at(-1),{oneWay:true,checkTag:branch.check});
   // Straight leads preserve tangent continuity through valve faces and existing tie-in flanges.
-  const p=tie.point;const delivery=L([[x,1.5,44.9],[x,1.5,44.5],[x,6,44.5],[x,6,p[2]],[x,p[1],p[2]],[p[0],p[1],p[2]]],branch.areaId+' Ar supply from A-6200');
+  const p=tie.point;const xe=branch.xe??x,delivery=L(branch.viaZ?[[x,1.5,44.9],[x,1.5,44.5],[x,6,44.5],[x,6,branch.viaZ],[xe,6,branch.viaZ],[xe,6,p[2]],[xe,p[1],p[2]],[p[0],p[1],p[2]]]:[[x,1.5,44.9],[x,1.5,44.5],[x,6,44.5],[x,6,p[2]],[x,p[1],p[2]],[p[0],p[1],p[2]]],branch.areaId+' Ar supply from A-6200');
   Object.assign(delivery,{from:'HD-6201',fromArea:'A-6000',to:h.EQUIPMENT[branch.owner].tag,toArea:branch.areaId,designStatus:'proposed'});
   Object.assign(tie,{kind:'interunit',fromArea:'A-6000',toArea:branch.areaId,destination:'Connected HD-6201 branch → '+h.EQUIPMENT[branch.owner].tag+' local regulation; purity, pressure and demand qualification remain open.'});
   const port=h.ports.find(p=>p.id===tie.tag);if(port)port.role='interunit Ar supply';
@@ -52,14 +52,16 @@ export function buildArgonDistribution(h,choice='bulk'){
   const e=route.edgeIndices.map(i=>edges[i]).find(e=>e.path.every(p=>Math.abs(p[1]-y)<1e-6)&&e.path.every(p=>Math.abs(p[2]-z)<1e-6)&&Math.min(e.a[0],e.b[0])<=x&&Math.max(e.a[0],e.b[0])>=x);
   if(e){const pipe=parts.find(p=>p.id===e.part);s.load(pipe,'HD-6201 header span');s.join(pipe,clamp,[x,y,z+r],'Header pipe / saddle');}
  };
- for(const x of[55.8,66,78,90,102,114])support(x,6,46,[1,0,0],.075,header);
- for(const branch of connections){const r=routes.find(r=>r.id===branch.routeId),x=branch.x,y=AR_ACCESS.commonHeaderY;
+ for(const x of[84,90,102,114])support(x,6,46,[1,0,0],.075,header);
+  // V332: the A-700 branch leaves the header at x 82, crosses the south wall at z 41.7 and runs inside along z 40.3 to x 54.8, then south to the A-700 panel.
+ const legSupports=branch=>branch.areaId==='A-700'?[[82,43,'z'],[76,40.3,'x'],[68,40.3,'x'],[60,40.3,'x'],[54.8,38,'z'],[54.8,31.9,'z']]:[[94,40.3,'z'],[94,43.3,'z']];
+ for(const branch of connections){const r=routes.find(r=>r.id===branch.routeId),y=AR_ACCESS.commonHeaderY;
   // Overhead approach crosses the aisle; descent stays at the local service panel.
-  for(const z of branch.areaId==='A-700'?[31.9,38,43]:[40.3,43.3]){
-   const side=branch.areaId==='A-800'?-1:1,col=s.column(x+side*.35,z,y,'HD-6201 branch support',.10),arm=s.beam([x+side*.35,y,z],[x,y,z],.065,'Pipe support HD-6201 branch shoe');s.join(col.post,arm,[x+side*.35,y,z],'Branch post / shoe');
-   const clamp=ring('HD-6201 branch pipe clamp','frame',.065,.01,[x,y,z],'bright',[0,0,1]);s.join(arm,clamp,[x+side*.065,y,z],'Branch shoe / clamp');
-   const e=r.edgeIndices.map(i=>edges[i]).find(e=>e.path.every(p=>Math.abs(p[0]-x)<1e-6&&Math.abs(p[1]-y)<1e-6)&&Math.min(e.a[2],e.b[2])<=z&&Math.max(e.a[2],e.b[2])>=z);
-   if(e){const pipe=parts.find(p=>p.id===e.part);s.load(pipe,'HD-6201 '+branch.areaId+' supply leg');s.join(pipe,clamp,[x+side*.055,y,z],'Branch pipe / clamp');}
+  for(const [x,z,dir] of legSupports(branch)){
+   const side=branch.areaId==='A-800'?-1:1,along=dir==='z',cx=along?x+side*.35:x,cz=along?z:z-.35,col=s.column(cx,cz,y,'HD-6201 branch support',.10),arm=s.beam([cx,y,cz],[x,y,z],.065,'Pipe support HD-6201 branch shoe');s.join(col.post,arm,[cx,y,cz],'Branch post / shoe');
+   const clamp=ring('HD-6201 branch pipe clamp','frame',.065,.01,[x,y,z],'bright',along?[0,0,1]:[1,0,0]);s.join(arm,clamp,[along?x+side*.065:x,y,along?z:z-.065],'Branch shoe / clamp');
+   const e=r.edgeIndices.map(i=>edges[i]).find(e=>along?e.path.every(p=>Math.abs(p[0]-x)<1e-6&&Math.abs(p[1]-y)<1e-6)&&Math.min(e.a[2],e.b[2])<=z&&Math.max(e.a[2],e.b[2])>=z:e.path.every(p=>Math.abs(p[2]-z)<1e-6&&Math.abs(p[1]-y)<1e-6)&&Math.min(e.a[0],e.b[0])<=x&&Math.max(e.a[0],e.b[0])>=x);
+   if(e){const pipe=parts.find(p=>p.id===e.part);s.load(pipe,'HD-6201 '+branch.areaId+' supply leg');s.join(pipe,clamp,[along?x+side*.055:x,y,along?z:z-.055],'Branch pipe / clamp');}
   }
  }
  return {areaId:'A-6000',equipment:[...Object.keys(AR_SOURCE_EQUIPMENT).map(Number).filter(id=>parts.some(p=>p.reactor===id)),117],sourceSystem:source,pipingReview:{basis:'Modeled routed centerline length, including bends; standalone valve lengths excluded consistently. Geometry comparison only; pressure drop and cost are not calculated.',local:argonTakeoff({parts,edges,routes}).map(t=>({...t,previous:AR_LAYOUT.previousTakeoff[t.owner],reductionPercent:100*(1-t.lengthM/AR_LAYOUT.previousTakeoff[t.owner].lengthM)}))},layout:AR_LAYOUT,localManifolds:AR_LAYOUT.banks,reservedInterfaces:reservations,source:ARGON_SUPPLY.source,sourceRoute:ARGON_SUPPLY.seed,mainIsolation:ARGON_SUPPLY.main,connections,streams:k.streams,boundaries:[...source.boundaries,...k.boundaries],partIds:[...source.partIds,...parts.slice(first).map(p=>p.id)],approvedSetpoints:null,designStatus:'proposed',basis:'PFD V5.1, PDF page 20: A-6100 common supply / regulation → AR6001 → A-6200 distribution → area consumers. Local A-700 and A-800 supplies connect in parallel. A-6100 connects to the header. A-900 and other future users are positively blinded reserved interfaces.',viewPolicy:'Area ownership is unchanged. A-700 and A-800 include their local Ar systems. A-6000 includes both local manifolds, receiving nozzles, equipment context and supports.'};

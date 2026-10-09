@@ -12,7 +12,7 @@ const rects={
  'A-900':[[109.7,14.2,117,31.1]],
  'A-1000':[waterRect(WATER_AREA_LAYOUT.wastewater)],'A-2000':[waterRect(WATER_AREA_LAYOUT.reclaimed)],
  'A-3000':[[-42,0,-32,10]],'A-4000':[[-29,0,-21,10]],'A-5000':[[-31.3,12.4,-13,28.5]],
- 'A-6000':[[37,41.8,48.9,50.2]]
+ 'A-6000':[[62,41.8,73.9,50.2]]
 };
 const allocationCache=new WeakMap();
 export function buildAreaAllocations(model){if(!allocationCache.has(model))allocationCache.set(model,createAreaAllocations(model));return allocationCache.get(model);}
