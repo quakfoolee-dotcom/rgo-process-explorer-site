@@ -1,7 +1,7 @@
 {
   "revision": "V328",
   "decision": "D-MDL-10",
-  "generated": "2026-10-08T20:12:46.813Z",
+  "generated": "2026-10-09T00:21:24.255Z",
   "basis": {
     "ceilingFt": 30,
     "ceilingM": 9.14,
@@ -13,8 +13,81 @@
   },
   "scanned": 78415,
   "insideGroups": 408,
-  "aboveCeilingGroups": 309,
+  "aboveCeilingGroups": 308,
   "steelZoneGroups": 99,
+  "roofPenetrations": [
+    "ST-3170"
+  ],
+  "roofBays": [
+    {
+      "x0": 54.7,
+      "x1": 78.8,
+      "z0": 6.9,
+      "z1": 20.3,
+      "maxTop": 15.81,
+      "bayHeightM": 16.66,
+      "areas": [
+        "plant-wide",
+        "A-600"
+      ],
+      "items": [
+        "DR-601",
+        "F-601",
+        "FN-601",
+        "PL-601",
+        "TR-701"
+      ],
+      "floorAreaM2": 321
+    },
+    {
+      "x0": 88.5,
+      "x1": 93.5,
+      "z0": 23.1,
+      "z1": 32.8,
+      "maxTop": 13.4,
+      "bayHeightM": 14.25,
+      "areas": [
+        "A-800"
+      ],
+      "items": [
+        "H-801",
+        "H-802",
+        "LK-802",
+        "TR-801"
+      ],
+      "floorAreaM2": 49
+    },
+    {
+      "x0": -12.3,
+      "x1": 8.2,
+      "z0": -23.4,
+      "z1": -3.8,
+      "maxTop": 11.45,
+      "bayHeightM": 12.3,
+      "areas": [
+        "plant-wide"
+      ],
+      "items": [
+        "EL-164 / SC-164"
+      ],
+      "floorAreaM2": 402
+    },
+    {
+      "x0": 58.9,
+      "x1": 62.1,
+      "z0": 22.6,
+      "z1": 27.1,
+      "maxTop": 10.13,
+      "bayHeightM": 10.98,
+      "areas": [
+        "plant-wide"
+      ],
+      "items": [
+        "TR-701"
+      ],
+      "floorAreaM2": 14
+    }
+  ],
   "byType": {
     "rack": {
       "groups": 23,
@@ -38,7 +111,7 @@
     },
     "equipment": {
       "groups": 13,
-      "aboveCeiling": 10,
+      "aboveCeiling": 9,
       "max": 13.4
     }
   },
@@ -185,6 +258,7 @@
       "overCeilingM": 9.93,
       "overClearM": 10.78,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
@@ -202,6 +276,7 @@
       "overCeilingM": 9.59,
       "overClearM": 10.44,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -219,6 +294,7 @@
       "overCeilingM": 9.02,
       "overClearM": 9.87,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -235,6 +311,7 @@
       "overCeilingM": 8.76,
       "overClearM": 9.61,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
@@ -251,6 +328,7 @@
       "overCeilingM": 8.5,
       "overClearM": 9.35,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -267,6 +345,7 @@
       "overCeilingM": 8.46,
       "overClearM": 9.31,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the platform and stair tower with the equipment it serves; check the headroom check afterwards."
     },
     {
@@ -284,6 +363,7 @@
       "overCeilingM": 8.42,
       "overClearM": 9.27,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -301,6 +381,7 @@
       "overCeilingM": 8.36,
       "overClearM": 9.21,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -318,6 +399,7 @@
       "overCeilingM": 8.36,
       "overClearM": 9.21,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -335,6 +417,7 @@
       "overCeilingM": 8.36,
       "overClearM": 9.21,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -352,6 +435,7 @@
       "overCeilingM": 8.36,
       "overClearM": 9.21,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -369,6 +453,7 @@
       "overCeilingM": 8.36,
       "overClearM": 9.21,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -386,6 +471,7 @@
       "overCeilingM": 8.36,
       "overClearM": 9.21,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -403,6 +489,7 @@
       "overCeilingM": 8.36,
       "overClearM": 9.21,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -419,6 +506,7 @@
       "overCeilingM": 7.35,
       "overClearM": 8.2,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -436,6 +524,7 @@
       "overCeilingM": 7.31,
       "overClearM": 8.16,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -452,6 +541,7 @@
       "overCeilingM": 6.66,
       "overClearM": 7.51,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the platform and stair tower with the equipment it serves; check the headroom check afterwards."
     },
     {
@@ -468,6 +558,7 @@
       "overCeilingM": 6.08,
       "overClearM": 6.93,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
@@ -485,6 +576,7 @@
       "overCeilingM": 5.74,
       "overClearM": 6.59,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -501,6 +593,7 @@
       "overCeilingM": 5.28,
       "overClearM": 6.13,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -518,6 +611,7 @@
       "overCeilingM": 5.21,
       "overClearM": 6.06,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -535,6 +629,7 @@
       "overCeilingM": 5.21,
       "overClearM": 6.06,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -551,6 +646,7 @@
       "overCeilingM": 5.17,
       "overClearM": 6.02,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
@@ -567,6 +663,7 @@
       "overCeilingM": 4.96,
       "overClearM": 5.81,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -584,6 +681,7 @@
       "overCeilingM": 4.93,
       "overClearM": 5.78,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -601,6 +699,7 @@
       "overCeilingM": 4.91,
       "overClearM": 5.76,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -618,6 +717,7 @@
       "overCeilingM": 4.91,
       "overClearM": 5.76,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -635,6 +735,7 @@
       "overCeilingM": 4.91,
       "overClearM": 5.76,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -652,6 +753,7 @@
       "overCeilingM": 4.81,
       "overClearM": 5.66,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -668,6 +770,7 @@
       "overCeilingM": 4.6,
       "overClearM": 5.45,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -685,6 +788,7 @@
       "overCeilingM": 4.56,
       "overClearM": 5.41,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -701,6 +805,7 @@
       "overCeilingM": 4.51,
       "overClearM": 5.36,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
@@ -718,6 +823,7 @@
       "overCeilingM": 4.48,
       "overClearM": 5.33,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -735,6 +841,7 @@
       "overCeilingM": 4.48,
       "overClearM": 5.33,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -752,6 +859,7 @@
       "overCeilingM": 4.48,
       "overClearM": 5.33,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -768,6 +876,7 @@
       "overCeilingM": 4.46,
       "overClearM": 5.31,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -784,6 +893,7 @@
       "overCeilingM": 4.3,
       "overClearM": 5.15,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -800,6 +910,7 @@
       "overCeilingM": 4.26,
       "overClearM": 5.11,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Elevator: split the lift, use inclined or screw conveying, or sink the foot into a pit."
     },
     {
@@ -817,6 +928,7 @@
       "overCeilingM": 4.26,
       "overClearM": 5.11,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -834,6 +946,7 @@
       "overCeilingM": 4.24,
       "overClearM": 5.09,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -851,6 +964,7 @@
       "overCeilingM": 4.21,
       "overClearM": 5.06,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -868,6 +982,7 @@
       "overCeilingM": 4.16,
       "overClearM": 5.01,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -885,6 +1000,7 @@
       "overCeilingM": 4.16,
       "overClearM": 5.01,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -902,6 +1018,7 @@
       "overCeilingM": 4.16,
       "overClearM": 5.01,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -919,6 +1036,7 @@
       "overCeilingM": 3.99,
       "overClearM": 4.84,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -935,6 +1053,7 @@
       "overCeilingM": 3.96,
       "overClearM": 4.81,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -951,6 +1070,7 @@
       "overCeilingM": 3.96,
       "overClearM": 4.81,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
@@ -968,6 +1088,7 @@
       "overCeilingM": 3.96,
       "overClearM": 4.81,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -985,6 +1106,7 @@
       "overCeilingM": 3.87,
       "overClearM": 4.72,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1002,6 +1124,7 @@
       "overCeilingM": 3.84,
       "overClearM": 4.69,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1019,6 +1142,7 @@
       "overCeilingM": 3.79,
       "overClearM": 4.64,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1036,6 +1160,7 @@
       "overCeilingM": 3.76,
       "overClearM": 4.61,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1053,6 +1178,7 @@
       "overCeilingM": 3.68,
       "overClearM": 4.53,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1070,6 +1196,7 @@
       "overCeilingM": 3.67,
       "overClearM": 4.52,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Charge lock: lower with the hoppers or place the lock at the top of a roof bay."
     },
     {
@@ -1087,6 +1214,7 @@
       "overCeilingM": 3.67,
       "overClearM": 4.52,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1104,6 +1232,7 @@
       "overCeilingM": 3.67,
       "overClearM": 4.52,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1121,6 +1250,7 @@
       "overCeilingM": 3.67,
       "overClearM": 4.52,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1138,6 +1268,7 @@
       "overCeilingM": 3.67,
       "overClearM": 4.52,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1155,6 +1286,7 @@
       "overCeilingM": 3.67,
       "overClearM": 4.52,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1171,6 +1303,7 @@
       "overCeilingM": 3.66,
       "overClearM": 4.51,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -1188,6 +1321,7 @@
       "overCeilingM": 3.66,
       "overClearM": 4.51,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1205,6 +1339,7 @@
       "overCeilingM": 3.61,
       "overClearM": 4.46,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1222,6 +1357,7 @@
       "overCeilingM": 3.61,
       "overClearM": 4.46,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1239,6 +1375,7 @@
       "overCeilingM": 3.34,
       "overClearM": 4.19,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1256,6 +1393,7 @@
       "overCeilingM": 3.35,
       "overClearM": 4.2,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1273,6 +1411,7 @@
       "overCeilingM": 3.35,
       "overClearM": 4.2,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1290,6 +1429,7 @@
       "overCeilingM": 3.35,
       "overClearM": 4.2,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1307,6 +1447,7 @@
       "overCeilingM": 3.35,
       "overClearM": 4.2,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1324,6 +1465,7 @@
       "overCeilingM": 3.35,
       "overClearM": 4.2,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1340,6 +1482,7 @@
       "overCeilingM": 3.33,
       "overClearM": 4.18,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
@@ -1357,6 +1500,7 @@
       "overCeilingM": 3.31,
       "overClearM": 4.16,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1374,6 +1518,7 @@
       "overCeilingM": 3.31,
       "overClearM": 4.16,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1391,6 +1536,7 @@
       "overCeilingM": 3.31,
       "overClearM": 4.16,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1408,6 +1554,7 @@
       "overCeilingM": 3.31,
       "overClearM": 4.16,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1425,6 +1572,7 @@
       "overCeilingM": 3.26,
       "overClearM": 4.11,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Spray dryer: roof bay or penthouse for the chamber and atomizer lift, a wider and lower chamber (vendor and process sign-off), or locate outside the building."
     },
     {
@@ -1442,6 +1590,7 @@
       "overCeilingM": 3.22,
       "overClearM": 4.07,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1459,6 +1608,7 @@
       "overCeilingM": 3.21,
       "overClearM": 4.06,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1476,6 +1626,7 @@
       "overCeilingM": 3.21,
       "overClearM": 4.06,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1493,6 +1644,7 @@
       "overCeilingM": 3.21,
       "overClearM": 4.06,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1510,6 +1662,7 @@
       "overCeilingM": 3.21,
       "overClearM": 4.06,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1527,6 +1680,7 @@
       "overCeilingM": 3.21,
       "overClearM": 4.06,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1543,6 +1697,7 @@
       "overCeilingM": 3.12,
       "overClearM": 3.97,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -1560,6 +1715,7 @@
       "overCeilingM": 3.08,
       "overClearM": 3.93,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1577,6 +1733,7 @@
       "overCeilingM": 3.08,
       "overClearM": 3.93,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1594,6 +1751,7 @@
       "overCeilingM": 3.08,
       "overClearM": 3.93,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1611,6 +1769,7 @@
       "overCeilingM": 3.08,
       "overClearM": 3.93,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1628,6 +1787,7 @@
       "overCeilingM": 3.06,
       "overClearM": 3.91,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1645,6 +1805,7 @@
       "overCeilingM": 3.06,
       "overClearM": 3.91,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1662,6 +1823,7 @@
       "overCeilingM": 3.06,
       "overClearM": 3.91,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1679,6 +1841,7 @@
       "overCeilingM": 3.06,
       "overClearM": 3.91,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1695,6 +1858,7 @@
       "overCeilingM": 3.05,
       "overClearM": 3.9,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
@@ -1712,6 +1876,7 @@
       "overCeilingM": 3.05,
       "overClearM": 3.9,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1729,6 +1894,7 @@
       "overCeilingM": 3.05,
       "overClearM": 3.9,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1746,6 +1912,7 @@
       "overCeilingM": 3.05,
       "overClearM": 3.9,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1763,6 +1930,7 @@
       "overCeilingM": 3.05,
       "overClearM": 3.9,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1780,6 +1948,7 @@
       "overCeilingM": 3.03,
       "overClearM": 3.88,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1797,6 +1966,7 @@
       "overCeilingM": 3.03,
       "overClearM": 3.88,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1814,6 +1984,7 @@
       "overCeilingM": 3.03,
       "overClearM": 3.88,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1831,6 +2002,7 @@
       "overCeilingM": 3.03,
       "overClearM": 3.88,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1847,6 +2019,7 @@
       "overCeilingM": 2.95,
       "overClearM": 3.8,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
@@ -1864,6 +2037,7 @@
       "overCeilingM": 2.88,
       "overClearM": 3.73,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1881,6 +2055,7 @@
       "overCeilingM": 2.88,
       "overClearM": 3.73,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1898,6 +2073,7 @@
       "overCeilingM": 2.88,
       "overClearM": 3.73,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1914,8 +2090,10 @@
       "z": 7.4,
       "overCeilingM": 2.86,
       "overClearM": 3.71,
-      "zone": "above ceiling",
-      "options": "Vent stack: pass it through the roof or move it outside (stack height on hold)."
+      "zone": "through the roof (by design)",
+      "exempt": true,
+      "exemptReason": "Acid vent stack passes through the roof: roof opening, flashing and curb; stack height is on hold (it could instead move outside the west wall).",
+      "options": "Acid vent stack passes through the roof: roof opening, flashing and curb; stack height is on hold (it could instead move outside the west wall)."
     },
     {
       "type": "fitting",
@@ -1931,6 +2109,7 @@
       "overCeilingM": 2.86,
       "overClearM": 3.71,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -1948,6 +2127,7 @@
       "overCeilingM": 2.86,
       "overClearM": 3.71,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1965,6 +2145,7 @@
       "overCeilingM": 2.73,
       "overClearM": 3.58,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1982,6 +2163,7 @@
       "overCeilingM": 2.73,
       "overClearM": 3.58,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -1999,6 +2181,7 @@
       "overCeilingM": 2.73,
       "overClearM": 3.58,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2016,6 +2199,7 @@
       "overCeilingM": 2.73,
       "overClearM": 3.58,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2033,6 +2217,7 @@
       "overCeilingM": 2.73,
       "overClearM": 3.58,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2050,6 +2235,7 @@
       "overCeilingM": 2.71,
       "overClearM": 3.56,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2067,6 +2253,7 @@
       "overCeilingM": 2.71,
       "overClearM": 3.56,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2084,6 +2271,7 @@
       "overCeilingM": 2.71,
       "overClearM": 3.56,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2101,6 +2289,7 @@
       "overCeilingM": 2.71,
       "overClearM": 3.56,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2118,6 +2307,7 @@
       "overCeilingM": 2.71,
       "overClearM": 3.56,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2135,6 +2325,7 @@
       "overCeilingM": 2.7,
       "overClearM": 3.55,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2152,6 +2343,7 @@
       "overCeilingM": 2.7,
       "overClearM": 3.55,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2169,6 +2361,7 @@
       "overCeilingM": 2.7,
       "overClearM": 3.55,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2186,6 +2379,7 @@
       "overCeilingM": 2.7,
       "overClearM": 3.55,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2203,6 +2397,7 @@
       "overCeilingM": 2.7,
       "overClearM": 3.55,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2220,6 +2415,7 @@
       "overCeilingM": 2.7,
       "overClearM": 3.55,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2237,6 +2433,7 @@
       "overCeilingM": 2.56,
       "overClearM": 3.41,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2254,6 +2451,7 @@
       "overCeilingM": 2.56,
       "overClearM": 3.41,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2271,6 +2469,7 @@
       "overCeilingM": 2.56,
       "overClearM": 3.41,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2287,6 +2486,7 @@
       "overCeilingM": 2.5,
       "overClearM": 3.35,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
@@ -2303,6 +2503,7 @@
       "overCeilingM": 2.5,
       "overClearM": 3.35,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
@@ -2320,6 +2521,7 @@
       "overCeilingM": 2.46,
       "overClearM": 3.31,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2337,6 +2539,7 @@
       "overCeilingM": 2.44,
       "overClearM": 3.29,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2354,6 +2557,7 @@
       "overCeilingM": 2.42,
       "overClearM": 3.27,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2370,6 +2574,7 @@
       "overCeilingM": 2.31,
       "overClearM": 3.16,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Elevator: split the lift or use an inclined conveyor."
     },
     {
@@ -2387,6 +2592,7 @@
       "overCeilingM": 2.15,
       "overClearM": 3,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2404,6 +2610,7 @@
       "overCeilingM": 2.14,
       "overClearM": 2.99,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2421,6 +2628,7 @@
       "overCeilingM": 2.09,
       "overClearM": 2.94,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -2438,6 +2646,7 @@
       "overCeilingM": 2.06,
       "overClearM": 2.91,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2455,6 +2664,7 @@
       "overCeilingM": 2.05,
       "overClearM": 2.9,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2472,6 +2682,7 @@
       "overCeilingM": 2.05,
       "overClearM": 2.9,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2488,6 +2699,7 @@
       "overCeilingM": 2.06,
       "overClearM": 2.91,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -2505,6 +2717,7 @@
       "overCeilingM": 2.05,
       "overClearM": 2.9,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2522,6 +2735,7 @@
       "overCeilingM": 2.05,
       "overClearM": 2.9,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2539,6 +2753,7 @@
       "overCeilingM": 2.05,
       "overClearM": 2.9,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2556,6 +2771,7 @@
       "overCeilingM": 2.05,
       "overClearM": 2.9,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2573,6 +2789,7 @@
       "overCeilingM": 2.05,
       "overClearM": 2.9,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2590,6 +2807,7 @@
       "overCeilingM": 2.05,
       "overClearM": 2.9,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2606,6 +2824,7 @@
       "overCeilingM": 1.88,
       "overClearM": 2.73,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -2622,6 +2841,7 @@
       "overCeilingM": 1.86,
       "overClearM": 2.71,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -2638,6 +2858,7 @@
       "overCeilingM": 1.86,
       "overClearM": 2.71,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -2655,6 +2876,7 @@
       "overCeilingM": 1.76,
       "overClearM": 2.61,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2672,6 +2894,7 @@
       "overCeilingM": 1.75,
       "overClearM": 2.6,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2689,6 +2912,7 @@
       "overCeilingM": 1.73,
       "overClearM": 2.58,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2706,6 +2930,7 @@
       "overCeilingM": 1.73,
       "overClearM": 2.58,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2723,6 +2948,7 @@
       "overCeilingM": 1.73,
       "overClearM": 2.58,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2740,6 +2966,7 @@
       "overCeilingM": 1.73,
       "overClearM": 2.58,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2757,6 +2984,7 @@
       "overCeilingM": 1.73,
       "overClearM": 2.58,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2774,6 +3002,7 @@
       "overCeilingM": 1.73,
       "overClearM": 2.58,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2791,6 +3020,7 @@
       "overCeilingM": 1.73,
       "overClearM": 2.58,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2808,6 +3038,7 @@
       "overCeilingM": 1.73,
       "overClearM": 2.58,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2825,6 +3056,7 @@
       "overCeilingM": 1.69,
       "overClearM": 2.54,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2842,6 +3074,7 @@
       "overCeilingM": 1.69,
       "overClearM": 2.54,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2859,6 +3092,7 @@
       "overCeilingM": 1.69,
       "overClearM": 2.54,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -2876,6 +3110,7 @@
       "overCeilingM": 1.67,
       "overClearM": 2.52,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Hopper: lower the support level or sink into a pit."
     },
     {
@@ -2893,6 +3128,7 @@
       "overCeilingM": 1.67,
       "overClearM": 2.52,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Hopper: lower the support level or sink into a pit."
     },
     {
@@ -2909,6 +3145,7 @@
       "overCeilingM": 1.62,
       "overClearM": 2.47,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
@@ -2926,6 +3163,7 @@
       "overCeilingM": 1.61,
       "overClearM": 2.46,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2943,6 +3181,7 @@
       "overCeilingM": 1.61,
       "overClearM": 2.46,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2960,6 +3199,7 @@
       "overCeilingM": 1.61,
       "overClearM": 2.46,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2977,6 +3217,7 @@
       "overCeilingM": 1.61,
       "overClearM": 2.46,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -2993,6 +3234,7 @@
       "overCeilingM": 1.57,
       "overClearM": 2.42,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -3010,6 +3252,7 @@
       "overCeilingM": 1.56,
       "overClearM": 2.41,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3027,6 +3270,7 @@
       "overCeilingM": 1.56,
       "overClearM": 2.41,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3044,6 +3288,7 @@
       "overCeilingM": 1.56,
       "overClearM": 2.41,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3061,6 +3306,7 @@
       "overCeilingM": 1.56,
       "overClearM": 2.41,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3077,6 +3323,7 @@
       "overCeilingM": 1.55,
       "overClearM": 2.4,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
@@ -3094,6 +3341,7 @@
       "overCeilingM": 1.51,
       "overClearM": 2.36,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3111,6 +3359,7 @@
       "overCeilingM": 1.49,
       "overClearM": 2.34,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3128,6 +3377,7 @@
       "overCeilingM": 1.49,
       "overClearM": 2.34,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3145,6 +3395,7 @@
       "overCeilingM": 1.46,
       "overClearM": 2.31,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3162,6 +3413,7 @@
       "overCeilingM": 1.44,
       "overClearM": 2.29,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3179,6 +3431,7 @@
       "overCeilingM": 1.32,
       "overClearM": 2.17,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3196,6 +3449,7 @@
       "overCeilingM": 1.31,
       "overClearM": 2.16,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3213,6 +3467,7 @@
       "overCeilingM": 1.32,
       "overClearM": 2.17,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3230,6 +3485,7 @@
       "overCeilingM": 1.3,
       "overClearM": 2.15,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3247,6 +3503,7 @@
       "overCeilingM": 1.28,
       "overClearM": 2.13,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3264,6 +3521,7 @@
       "overCeilingM": 1.28,
       "overClearM": 2.13,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3281,6 +3539,7 @@
       "overCeilingM": 1.28,
       "overClearM": 2.13,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3298,6 +3557,7 @@
       "overCeilingM": 1.28,
       "overClearM": 2.13,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3315,6 +3575,7 @@
       "overCeilingM": 1.28,
       "overClearM": 2.13,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3332,6 +3593,7 @@
       "overCeilingM": 1.28,
       "overClearM": 2.13,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3349,6 +3611,7 @@
       "overCeilingM": 1.28,
       "overClearM": 2.13,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3366,6 +3629,7 @@
       "overCeilingM": 1.28,
       "overClearM": 2.13,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3383,6 +3647,7 @@
       "overCeilingM": 1.28,
       "overClearM": 2.13,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3400,6 +3665,7 @@
       "overCeilingM": 1.28,
       "overClearM": 2.13,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3417,6 +3683,7 @@
       "overCeilingM": 1.27,
       "overClearM": 2.12,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3434,6 +3701,7 @@
       "overCeilingM": 1.25,
       "overClearM": 2.1,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3450,6 +3718,7 @@
       "overCeilingM": 1.26,
       "overClearM": 2.11,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -3467,6 +3736,7 @@
       "overCeilingM": 1.21,
       "overClearM": 2.06,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3483,6 +3753,7 @@
       "overCeilingM": 1.18,
       "overClearM": 2.03,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
@@ -3500,6 +3771,7 @@
       "overCeilingM": 1.17,
       "overClearM": 2.02,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3517,6 +3789,7 @@
       "overCeilingM": 1.17,
       "overClearM": 2.02,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3534,6 +3807,7 @@
       "overCeilingM": 1.14,
       "overClearM": 1.99,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3551,6 +3825,7 @@
       "overCeilingM": 1.14,
       "overClearM": 1.99,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3568,6 +3843,7 @@
       "overCeilingM": 1.14,
       "overClearM": 1.99,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3585,6 +3861,7 @@
       "overCeilingM": 1.12,
       "overClearM": 1.97,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3602,6 +3879,7 @@
       "overCeilingM": 1.11,
       "overClearM": 1.96,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3619,6 +3897,7 @@
       "overCeilingM": 1.11,
       "overClearM": 1.96,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3636,6 +3915,7 @@
       "overCeilingM": 1.11,
       "overClearM": 1.96,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3653,6 +3933,7 @@
       "overCeilingM": 1.11,
       "overClearM": 1.96,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3670,6 +3951,7 @@
       "overCeilingM": 1.11,
       "overClearM": 1.96,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3687,6 +3969,7 @@
       "overCeilingM": 1.11,
       "overClearM": 1.96,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3704,6 +3987,7 @@
       "overCeilingM": 1.11,
       "overClearM": 1.96,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3721,6 +4005,7 @@
       "overCeilingM": 1.11,
       "overClearM": 1.96,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3738,6 +4023,7 @@
       "overCeilingM": 1.09,
       "overClearM": 1.94,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Powder lift: lower the drive or split the lift."
     },
     {
@@ -3755,6 +4041,7 @@
       "overCeilingM": 1.08,
       "overClearM": 1.93,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3771,6 +4058,7 @@
       "overCeilingM": 1.08,
       "overClearM": 1.93,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
@@ -3787,6 +4075,7 @@
       "overCeilingM": 1.07,
       "overClearM": 1.92,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -3804,6 +4093,7 @@
       "overCeilingM": 1.06,
       "overClearM": 1.91,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3821,6 +4111,7 @@
       "overCeilingM": 1.06,
       "overClearM": 1.91,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3838,6 +4129,7 @@
       "overCeilingM": 1.04,
       "overClearM": 1.89,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3855,6 +4147,7 @@
       "overCeilingM": 1.04,
       "overClearM": 1.89,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3872,6 +4165,7 @@
       "overCeilingM": 1.01,
       "overClearM": 1.86,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3889,6 +4183,7 @@
       "overCeilingM": 1.01,
       "overClearM": 1.86,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3906,6 +4201,7 @@
       "overCeilingM": 1,
       "overClearM": 1.85,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3923,6 +4219,7 @@
       "overCeilingM": 0.99,
       "overClearM": 1.84,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3940,6 +4237,7 @@
       "overCeilingM": 0.99,
       "overClearM": 1.84,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3957,6 +4255,7 @@
       "overCeilingM": 0.96,
       "overClearM": 1.81,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3974,6 +4273,7 @@
       "overCeilingM": 0.96,
       "overClearM": 1.81,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -3991,6 +4291,7 @@
       "overCeilingM": 0.96,
       "overClearM": 1.81,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4008,6 +4309,7 @@
       "overCeilingM": 0.96,
       "overClearM": 1.81,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4025,6 +4327,7 @@
       "overCeilingM": 0.96,
       "overClearM": 1.81,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4042,6 +4345,7 @@
       "overCeilingM": 0.96,
       "overClearM": 1.81,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4059,6 +4363,7 @@
       "overCeilingM": 0.96,
       "overClearM": 1.81,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4076,6 +4381,7 @@
       "overCeilingM": 0.96,
       "overClearM": 1.81,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4093,6 +4399,7 @@
       "overCeilingM": 0.96,
       "overClearM": 1.81,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4110,6 +4417,7 @@
       "overCeilingM": 0.96,
       "overClearM": 1.81,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4127,6 +4435,7 @@
       "overCeilingM": 0.96,
       "overClearM": 1.81,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4143,6 +4452,7 @@
       "overCeilingM": 0.93,
       "overClearM": 1.78,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
@@ -4159,6 +4469,7 @@
       "overCeilingM": 0.93,
       "overClearM": 1.78,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
@@ -4176,6 +4487,7 @@
       "overCeilingM": 0.92,
       "overClearM": 1.77,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4193,6 +4505,7 @@
       "overCeilingM": 0.91,
       "overClearM": 1.76,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4210,6 +4523,7 @@
       "overCeilingM": 0.91,
       "overClearM": 1.76,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4227,6 +4541,7 @@
       "overCeilingM": 0.88,
       "overClearM": 1.73,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4244,6 +4559,7 @@
       "overCeilingM": 0.88,
       "overClearM": 1.73,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4261,6 +4577,7 @@
       "overCeilingM": 0.88,
       "overClearM": 1.73,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4278,6 +4595,7 @@
       "overCeilingM": 0.86,
       "overClearM": 1.71,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4295,6 +4613,7 @@
       "overCeilingM": 0.84,
       "overClearM": 1.69,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4312,6 +4631,7 @@
       "overCeilingM": 0.84,
       "overClearM": 1.69,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4329,6 +4649,7 @@
       "overCeilingM": 0.83,
       "overClearM": 1.68,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4346,6 +4667,7 @@
       "overCeilingM": 0.84,
       "overClearM": 1.69,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4363,6 +4685,7 @@
       "overCeilingM": 0.82,
       "overClearM": 1.67,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4380,6 +4703,7 @@
       "overCeilingM": 0.82,
       "overClearM": 1.67,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4397,6 +4721,7 @@
       "overCeilingM": 0.79,
       "overClearM": 1.64,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4414,6 +4739,7 @@
       "overCeilingM": 0.76,
       "overClearM": 1.61,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4430,6 +4756,7 @@
       "overCeilingM": 0.66,
       "overClearM": 1.51,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
@@ -4447,6 +4774,7 @@
       "overCeilingM": 0.66,
       "overClearM": 1.51,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4463,6 +4791,7 @@
       "overCeilingM": 0.61,
       "overClearM": 1.46,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -4480,6 +4809,7 @@
       "overCeilingM": 0.59,
       "overClearM": 1.44,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4497,6 +4827,7 @@
       "overCeilingM": 0.58,
       "overClearM": 1.43,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4514,6 +4845,7 @@
       "overCeilingM": 0.55,
       "overClearM": 1.4,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4531,6 +4863,7 @@
       "overCeilingM": 0.55,
       "overClearM": 1.4,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4548,6 +4881,7 @@
       "overCeilingM": 0.55,
       "overClearM": 1.4,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4565,6 +4899,7 @@
       "overCeilingM": 0.55,
       "overClearM": 1.4,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4582,6 +4917,7 @@
       "overCeilingM": 0.55,
       "overClearM": 1.4,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4599,6 +4935,7 @@
       "overCeilingM": 0.55,
       "overClearM": 1.4,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4616,6 +4953,7 @@
       "overCeilingM": 0.55,
       "overClearM": 1.4,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4633,6 +4971,7 @@
       "overCeilingM": 0.55,
       "overClearM": 1.4,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4650,6 +4989,7 @@
       "overCeilingM": 0.54,
       "overClearM": 1.39,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4667,6 +5007,7 @@
       "overCeilingM": 0.55,
       "overClearM": 1.4,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4684,6 +5025,7 @@
       "overCeilingM": 0.55,
       "overClearM": 1.4,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4701,6 +5043,7 @@
       "overCeilingM": 0.54,
       "overClearM": 1.39,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4718,6 +5061,7 @@
       "overCeilingM": 0.52,
       "overClearM": 1.37,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4734,6 +5078,7 @@
       "overCeilingM": 0.39,
       "overClearM": 1.24,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
@@ -4751,6 +5096,7 @@
       "overCeilingM": 0.37,
       "overClearM": 1.22,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4767,6 +5113,7 @@
       "overCeilingM": 0.36,
       "overClearM": 1.21,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -4783,6 +5130,7 @@
       "overCeilingM": 0.32,
       "overClearM": 1.17,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
@@ -4800,6 +5148,7 @@
       "overCeilingM": 0.31,
       "overClearM": 1.16,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Within 1 m of the limit: lower the plenum cover or the filter support."
     },
     {
@@ -4817,6 +5166,7 @@
       "overCeilingM": 0.31,
       "overClearM": 1.16,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4834,6 +5184,7 @@
       "overCeilingM": 0.31,
       "overClearM": 1.16,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4851,6 +5202,7 @@
       "overCeilingM": 0.31,
       "overClearM": 1.16,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -4868,6 +5220,7 @@
       "overCeilingM": 0.3,
       "overClearM": 1.15,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4885,6 +5238,7 @@
       "overCeilingM": 0.3,
       "overClearM": 1.15,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -4902,6 +5256,7 @@
       "overCeilingM": 0.26,
       "overClearM": 1.11,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4919,6 +5274,7 @@
       "overCeilingM": 0.26,
       "overClearM": 1.11,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4936,6 +5292,7 @@
       "overCeilingM": 0.23,
       "overClearM": 1.08,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4953,6 +5310,7 @@
       "overCeilingM": 0.24,
       "overClearM": 1.09,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4970,6 +5328,7 @@
       "overCeilingM": 0.21,
       "overClearM": 1.06,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -4987,6 +5346,7 @@
       "overCeilingM": 0.21,
       "overClearM": 1.06,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5003,6 +5363,7 @@
       "overCeilingM": 0.19,
       "overClearM": 1.04,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -5020,6 +5381,7 @@
       "overCeilingM": 0.16,
       "overClearM": 1.01,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5037,6 +5399,7 @@
       "overCeilingM": 0.13,
       "overClearM": 0.98,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5054,6 +5417,7 @@
       "overCeilingM": 0.13,
       "overClearM": 0.98,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5071,6 +5435,7 @@
       "overCeilingM": 0.13,
       "overClearM": 0.98,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5088,6 +5453,7 @@
       "overCeilingM": 0.13,
       "overClearM": 0.98,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5105,6 +5471,7 @@
       "overCeilingM": 0.13,
       "overClearM": 0.98,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5122,6 +5489,7 @@
       "overCeilingM": 0.13,
       "overClearM": 0.98,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5139,6 +5507,7 @@
       "overCeilingM": 0.14,
       "overClearM": 0.99,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5156,6 +5525,7 @@
       "overCeilingM": 0.14,
       "overClearM": 0.99,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5173,6 +5543,7 @@
       "overCeilingM": 0.11,
       "overClearM": 0.96,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5189,6 +5560,7 @@
       "overCeilingM": 0.08,
       "overClearM": 0.93,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -5206,6 +5578,7 @@
       "overCeilingM": 0.08,
       "overClearM": 0.93,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5223,6 +5596,7 @@
       "overCeilingM": 0.08,
       "overClearM": 0.93,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5240,6 +5614,7 @@
       "overCeilingM": 0.04,
       "overClearM": 0.89,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5257,6 +5632,7 @@
       "overCeilingM": 0.04,
       "overClearM": 0.89,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5274,6 +5650,7 @@
       "overCeilingM": 0.04,
       "overClearM": 0.89,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5291,6 +5668,7 @@
       "overCeilingM": 0.04,
       "overClearM": 0.89,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5308,6 +5686,7 @@
       "overCeilingM": 0.04,
       "overClearM": 0.89,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5324,6 +5703,7 @@
       "overCeilingM": 0.02,
       "overClearM": 0.87,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Within 1 m of the limit: lower the fan or its casing."
     },
     {
@@ -5340,6 +5720,7 @@
       "overCeilingM": 0.02,
       "overClearM": 0.87,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
@@ -5357,6 +5738,7 @@
       "overCeilingM": 0.01,
       "overClearM": 0.86,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5374,6 +5756,7 @@
       "overCeilingM": 0.01,
       "overClearM": 0.86,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5391,6 +5774,7 @@
       "overCeilingM": 0,
       "overClearM": 0.79,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5408,6 +5792,7 @@
       "overCeilingM": 0,
       "overClearM": 0.79,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5425,6 +5810,7 @@
       "overCeilingM": 0,
       "overClearM": 0.78,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5441,6 +5827,7 @@
       "overCeilingM": 0,
       "overClearM": 0.7,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -5458,6 +5845,7 @@
       "overCeilingM": 0,
       "overClearM": 0.69,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5475,6 +5863,7 @@
       "overCeilingM": 0,
       "overClearM": 0.69,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5492,6 +5881,7 @@
       "overCeilingM": 0,
       "overClearM": 0.69,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5509,6 +5899,7 @@
       "overCeilingM": 0,
       "overClearM": 0.69,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5526,6 +5917,7 @@
       "overCeilingM": 0,
       "overClearM": 0.69,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5543,6 +5935,7 @@
       "overCeilingM": 0,
       "overClearM": 0.69,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5560,6 +5953,7 @@
       "overCeilingM": 0,
       "overClearM": 0.65,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5576,6 +5970,7 @@
       "overCeilingM": 0,
       "overClearM": 0.63,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -5593,6 +5988,7 @@
       "overCeilingM": 0,
       "overClearM": 0.62,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the item or decide a roof bay, a pit or a move outside."
     },
     {
@@ -5610,6 +6006,7 @@
       "overCeilingM": 0,
       "overClearM": 0.62,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5627,6 +6024,7 @@
       "overCeilingM": 0,
       "overClearM": 0.61,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5644,6 +6042,7 @@
       "overCeilingM": 0,
       "overClearM": 0.61,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5661,6 +6060,7 @@
       "overCeilingM": 0,
       "overClearM": 0.61,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5678,6 +6078,7 @@
       "overCeilingM": 0,
       "overClearM": 0.61,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5695,6 +6096,7 @@
       "overCeilingM": 0,
       "overClearM": 0.61,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5712,6 +6114,7 @@
       "overCeilingM": 0,
       "overClearM": 0.6,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5728,6 +6131,7 @@
       "overCeilingM": 0,
       "overClearM": 0.6,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -5744,6 +6148,7 @@
       "overCeilingM": 0,
       "overClearM": 0.59,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
@@ -5761,6 +6166,7 @@
       "overCeilingM": 0,
       "overClearM": 0.58,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5778,6 +6184,7 @@
       "overCeilingM": 0,
       "overClearM": 0.58,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5795,6 +6202,7 @@
       "overCeilingM": 0,
       "overClearM": 0.58,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5812,6 +6220,7 @@
       "overCeilingM": 0,
       "overClearM": 0.58,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5829,6 +6238,7 @@
       "overCeilingM": 0,
       "overClearM": 0.58,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5846,6 +6256,7 @@
       "overCeilingM": 0,
       "overClearM": 0.58,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5863,6 +6274,7 @@
       "overCeilingM": 0,
       "overClearM": 0.59,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5880,6 +6292,7 @@
       "overCeilingM": 0,
       "overClearM": 0.56,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5897,6 +6310,7 @@
       "overCeilingM": 0,
       "overClearM": 0.56,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5914,6 +6328,7 @@
       "overCeilingM": 0,
       "overClearM": 0.56,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5931,6 +6346,7 @@
       "overCeilingM": 0,
       "overClearM": 0.53,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5948,6 +6364,7 @@
       "overCeilingM": 0,
       "overClearM": 0.53,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5965,6 +6382,7 @@
       "overCeilingM": 0,
       "overClearM": 0.53,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -5981,6 +6399,7 @@
       "overCeilingM": 0,
       "overClearM": 0.51,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -5998,6 +6417,7 @@
       "overCeilingM": 0,
       "overClearM": 0.49,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6015,6 +6435,7 @@
       "overCeilingM": 0,
       "overClearM": 0.47,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6032,6 +6453,7 @@
       "overCeilingM": 0,
       "overClearM": 0.47,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6049,6 +6471,7 @@
       "overCeilingM": 0,
       "overClearM": 0.47,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6066,6 +6489,7 @@
       "overCeilingM": 0,
       "overClearM": 0.47,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6083,6 +6507,7 @@
       "overCeilingM": 0,
       "overClearM": 0.47,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6100,6 +6525,7 @@
       "overCeilingM": 0,
       "overClearM": 0.47,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6117,6 +6543,7 @@
       "overCeilingM": 0,
       "overClearM": 0.47,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6134,6 +6561,7 @@
       "overCeilingM": 0,
       "overClearM": 0.47,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6151,6 +6579,7 @@
       "overCeilingM": 0,
       "overClearM": 0.47,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6168,6 +6597,7 @@
       "overCeilingM": 0,
       "overClearM": 0.47,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6185,6 +6615,7 @@
       "overCeilingM": 0,
       "overClearM": 0.35,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6202,6 +6633,7 @@
       "overCeilingM": 0,
       "overClearM": 0.35,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6219,6 +6651,7 @@
       "overCeilingM": 0,
       "overClearM": 0.35,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6236,6 +6669,7 @@
       "overCeilingM": 0,
       "overClearM": 0.33,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -6253,6 +6687,7 @@
       "overCeilingM": 0,
       "overClearM": 0.33,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -6270,6 +6705,7 @@
       "overCeilingM": 0,
       "overClearM": 0.33,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -6287,6 +6723,7 @@
       "overCeilingM": 0,
       "overClearM": 0.33,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -6304,6 +6741,7 @@
       "overCeilingM": 0,
       "overClearM": 0.34,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6321,6 +6759,7 @@
       "overCeilingM": 0,
       "overClearM": 0.34,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6338,6 +6777,7 @@
       "overCeilingM": 0,
       "overClearM": 0.34,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6355,6 +6795,7 @@
       "overCeilingM": 0,
       "overClearM": 0.34,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6372,6 +6813,7 @@
       "overCeilingM": 0,
       "overClearM": 0.34,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6388,6 +6830,7 @@
       "overCeilingM": 0,
       "overClearM": 0.31,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -6404,6 +6847,7 @@
       "overCeilingM": 0,
       "overClearM": 0.31,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -6420,6 +6864,7 @@
       "overCeilingM": 0,
       "overClearM": 0.31,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -6436,6 +6881,7 @@
       "overCeilingM": 0,
       "overClearM": 0.31,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -6452,6 +6898,7 @@
       "overCeilingM": 0,
       "overClearM": 0.31,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -6468,6 +6915,7 @@
       "overCeilingM": 0,
       "overClearM": 0.31,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -6484,6 +6932,7 @@
       "overCeilingM": 0,
       "overClearM": 0.31,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -6500,6 +6949,7 @@
       "overCeilingM": 0,
       "overClearM": 0.31,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -6516,6 +6966,7 @@
       "overCeilingM": 0,
       "overClearM": 0.31,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -6533,6 +6984,7 @@
       "overCeilingM": 0,
       "overClearM": 0.31,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6550,6 +7002,7 @@
       "overCeilingM": 0,
       "overClearM": 0.31,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6567,6 +7020,7 @@
       "overCeilingM": 0,
       "overClearM": 0.3,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6583,6 +7037,7 @@
       "overCeilingM": 0,
       "overClearM": 0.27,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
@@ -6600,6 +7055,7 @@
       "overCeilingM": 0,
       "overClearM": 0.23,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -6617,6 +7073,7 @@
       "overCeilingM": 0,
       "overClearM": 0.23,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -6634,6 +7091,7 @@
       "overCeilingM": 0,
       "overClearM": 0.23,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -6651,6 +7109,7 @@
       "overCeilingM": 0,
       "overClearM": 0.23,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -6668,6 +7127,7 @@
       "overCeilingM": 0,
       "overClearM": 0.22,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6685,6 +7145,7 @@
       "overCeilingM": 0,
       "overClearM": 0.22,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6702,6 +7163,7 @@
       "overCeilingM": 0,
       "overClearM": 0.22,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6719,6 +7181,7 @@
       "overCeilingM": 0,
       "overClearM": 0.22,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6736,6 +7199,7 @@
       "overCeilingM": 0,
       "overClearM": 0.22,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6753,6 +7217,7 @@
       "overCeilingM": 0,
       "overClearM": 0.21,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6770,6 +7235,7 @@
       "overCeilingM": 0,
       "overClearM": 0.21,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6787,6 +7253,7 @@
       "overCeilingM": 0,
       "overClearM": 0.21,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6804,6 +7271,7 @@
       "overCeilingM": 0,
       "overClearM": 0.18,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6821,6 +7289,7 @@
       "overCeilingM": 0,
       "overClearM": 0.18,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6837,6 +7306,7 @@
       "overCeilingM": 0,
       "overClearM": 0.16,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the item or decide a roof bay, a pit or a move outside."
     },
     {
@@ -6853,6 +7323,7 @@
       "overCeilingM": 0,
       "overClearM": 0.15,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -6870,6 +7341,7 @@
       "overCeilingM": 0,
       "overClearM": 0.12,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6887,6 +7359,7 @@
       "overCeilingM": 0,
       "overClearM": 0.11,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6904,6 +7377,7 @@
       "overCeilingM": 0,
       "overClearM": 0.11,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6921,6 +7395,7 @@
       "overCeilingM": 0,
       "overClearM": 0.11,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6938,6 +7413,7 @@
       "overCeilingM": 0,
       "overClearM": 0.11,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6955,6 +7431,7 @@
       "overCeilingM": 0,
       "overClearM": 0.07,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the item or decide a roof bay, a pit or a move outside."
     },
     {
@@ -6972,6 +7449,7 @@
       "overCeilingM": 0,
       "overClearM": 0.06,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -6989,6 +7467,7 @@
       "overCeilingM": 0,
       "overClearM": 0.06,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -7006,6 +7485,7 @@
       "overCeilingM": 0,
       "overClearM": 0.06,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -7023,6 +7503,7 @@
       "overCeilingM": 0,
       "overClearM": 0.06,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -7040,6 +7521,7 @@
       "overCeilingM": 0,
       "overClearM": 0.02,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     }
   ],
@@ -7058,6 +7540,7 @@
       "overCeilingM": 11.48,
       "overClearM": 12.33,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the item or decide a roof bay, a pit or a move outside."
     },
     {
@@ -7074,6 +7557,7 @@
       "overCeilingM": 9.87,
       "overClearM": 10.72,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
@@ -7091,6 +7575,7 @@
       "overCeilingM": 9.59,
       "overClearM": 10.44,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -7108,6 +7593,7 @@
       "overCeilingM": 9.02,
       "overClearM": 9.87,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -7124,6 +7610,7 @@
       "overCeilingM": 3.93,
       "overClearM": 4.78,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the platform and stair tower with the equipment it serves; check the headroom check afterwards."
     },
     {
@@ -7140,6 +7627,7 @@
       "overCeilingM": 3.55,
       "overClearM": 4.4,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -7156,6 +7644,7 @@
       "overCeilingM": 2.38,
       "overClearM": 3.23,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
@@ -7173,6 +7662,7 @@
       "overCeilingM": 2.1,
       "overClearM": 2.95,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -7189,6 +7679,7 @@
       "overCeilingM": 2.06,
       "overClearM": 2.91,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -7206,6 +7697,7 @@
       "overCeilingM": 1.98,
       "overClearM": 2.83,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -7223,6 +7715,7 @@
       "overCeilingM": 1.73,
       "overClearM": 2.58,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -7240,6 +7733,7 @@
       "overCeilingM": 1.73,
       "overClearM": 2.58,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -7257,6 +7751,7 @@
       "overCeilingM": 1.7,
       "overClearM": 2.55,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -7273,6 +7768,7 @@
       "overCeilingM": 1.51,
       "overClearM": 2.36,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Follows the line it sits on: lower the line or the tier it hangs from."
     },
     {
@@ -7290,6 +7786,7 @@
       "overCeilingM": 1.22,
       "overClearM": 2.07,
       "zone": "above ceiling",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -7307,6 +7804,7 @@
       "overCeilingM": 0,
       "overClearM": 0.41,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the item or decide a roof bay, a pit or a move outside."
     },
     {
@@ -7324,6 +7822,7 @@
       "overCeilingM": 0,
       "overClearM": 0.41,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the item or decide a roof bay, a pit or a move outside."
     },
     {
@@ -7341,6 +7840,7 @@
       "overCeilingM": 0,
       "overClearM": 0.41,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
@@ -7358,6 +7858,7 @@
       "overCeilingM": 0,
       "overClearM": 0.41,
       "zone": "in the steel zone",
+      "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     }
   ],
