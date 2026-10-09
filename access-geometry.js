@@ -3,7 +3,7 @@ import {structuralKit} from './structural-kit.js';
 // Remote indication does not alter a sensing tap, impulse line, relief path or valve.
 export function buildAccessIndications(h,scenario){
  const {parts,b,setContext}=h,s=structuralKit(h),links=[],first=parts.length;
- const panels=[{tag:'A6000 supply indication panel',owner:117,owners:[117,118,119,120,121,122],x:52,z:45.2},{tag:'A600 local indication panel',owner:78,owners:[70,71,72,73,74,75,76,77,78],x:74.8,z:22.4},{tag:'A700 atmosphere indication panel',owner:90,owners:[79,80,81,82,83,84,85,86,87,88,89,90,91],x:89,z:30.5},{tag:'A800 atmosphere indication panel',owner:113,owners:[101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116],x:116.3,z:39.5}];
+ const panels=[{tag:'A6000 supply indication panel',owner:117,owners:[117,118,119,120,121,122],x:76.2,z:45.2},{tag:'A600 local indication panel',owner:78,owners:[70,71,72,73,74,75,76,77,78],x:74.8,z:22.4},{tag:'A700 atmosphere indication panel',owner:90,owners:[79,80,81,82,83,84,85,86,87,88,89,90,91],x:89,z:30.5},{tag:'A800 atmosphere indication panel',owner:113,owners:[101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116],x:116.3,z:39.5}];
  if(scenario!=='baseline')panels.push({tag:'A160 local indication panel',owner:99,owners:[46,47,92,93,94,95,96,97,98,99,100],x:-6.5,z:-16});
  for(const panel of panels){
   const originals=parts.filter(p=>panel.owners.includes(p.reactor)&&/ display$/.test(p.name)&&p.position.y>1.7&&!Object.values(AR_LAYOUT.banks).some(bank=>bank.floor&&bank.owner===p.reactor&&Math.abs(p.position.z-bank.z-.249)<.02&&p.position.y-bank.floor>=1&&p.position.y-bank.floor<=1.7));if(!originals.length)continue;

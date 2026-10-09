@@ -54,7 +54,9 @@
         "id": "PW-003",
         "clear": true,
         "findings": [],
-        "crossings": []
+        "crossings": [
+          "X-ARGON"
+        ]
       },
       {
         "id": "PW-004",

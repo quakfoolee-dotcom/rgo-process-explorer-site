@@ -6,7 +6,7 @@ import {structuralKit} from './structural-kit.js';
 // AR6001 / AR701 / AR702 / AR801 are PFD stream identifiers, not equipment tags.
 export const ARGON_EQUIPMENT={...AR_SOURCE_EQUIPMENT,117:{tag:'HD-6201',label:'Common Ar distribution header',areaId:'A-6000',designStatus:'proposed',x:84,z:46,labelY:7.2,reviewNote:'Proposed A-6200 header arrangement. A-6100 source, pressure regulation and reserve bank are connected proposed equipment. Header diameter, pressure, peak simultaneous purge demand, reserve capacity and support spacing require detailed engineering.'}};
 export const ARGON_SUPPLY={source:'BL-AR6000',seed:AR_SOURCE_CONTROL.primarySeed,main:'XV-AR6201-MAIN',branches:[
- {areaId:'A-700',unit:'furnace',owner:89,boundary:'BL-AR701',localMain:'XV-AR701-MAIN',localSeed:'A700 argon supply',isolation:'XV-AR6201-700',check:'NRV-AR6201-700',x:82,xe:54.8,viaZ:40.3},
+ {areaId:'A-700',unit:'furnace',owner:89,boundary:'BL-AR701',localMain:'XV-AR701-MAIN',localSeed:'A700 argon supply',isolation:'XV-AR6201-700',check:'NRV-AR6201-700',x:76,arm:79},
  {areaId:'A-800',unit:'doping',owner:112,boundary:'BL-AR801',localMain:'XV-AR801-MAIN',localSeed:'A800 argon supply',isolation:'XV-AR6201-800',check:'NRV-AR6201-800',x:94}
 ]};
 export function buildArgonDistribution(h,choice='bulk'){
@@ -22,12 +22,12 @@ export function buildArgonDistribution(h,choice='bulk'){
  h.capped([115,6,46],[1,0,0],.075,'HD-6201 header end blind');
  k.instrument('PT-6201',[79,2.8,46],'header supply pressure');
  const sourceTie=k.boundaries.find(b=>b.tag===ARGON_SUPPLY.source);Object.assign(sourceTie,{kind:'interunit',fromArea:'A-6100',toArea:'A-6200'});for(const t of h.terminals)if(t.label===ARGON_SUPPLY.source+' external battery limit')t.label=ARGON_SUPPLY.source+' connected source flange';
- const connections=[];
+ const connections=[];let armRoute=null;
  for(const branch of ARGON_SUPPLY.branches){
   const local=h[branch.unit],tie=local.boundaries.find(b=>b.tag===branch.boundary),x=branch.x;
   if(!tie)throw Error('Missing local Ar interface '+branch.boundary);
   setContext(117,'HD-6201 supply to '+branch.areaId);
-  L([[x,6,46],[x,1.5,46],[x,1.5,45.5]],branch.areaId+' Ar header takeoff');
+  const arm=branch.arm?L([[branch.arm,6,46],[x,6,46],[x,1.5,46],[x,1.5,45.5]],branch.areaId+' Ar header takeoff'):L([[x,6,46],[x,1.5,46],[x,1.5,45.5]],branch.areaId+' Ar header takeoff');if(branch.arm)armRoute=arm;
   G([x,1.5,45.5],[x,1.5,45.2],branch.isolation);
   const at=parts.length;h.valve([x,1.5,45.2],[x,1.5,44.9],.055,'blue','check',branch.check+' non-return');
   Object.assign(h.valves.at(-1),{tag:branch.check,partIds:parts.slice(at).map(p=>p.id)});Object.assign(edges.at(-1),{oneWay:true,checkTag:branch.check});
@@ -53,8 +53,9 @@ export function buildArgonDistribution(h,choice='bulk'){
   if(e){const pipe=parts.find(p=>p.id===e.part);s.load(pipe,'HD-6201 header span');s.join(pipe,clamp,[x,y,z+r],'Header pipe / saddle');}
  };
  for(const x of[84,90,102,114])support(x,6,46,[1,0,0],.075,header);
-  // V332: the A-700 branch leaves the header at x 82, crosses the south wall at z 41.7 and runs inside along z 40.3 to x 54.8, then south to the A-700 panel.
- const legSupports=branch=>branch.areaId==='A-700'?[[82,43,'z'],[76,40.3,'x'],[68,40.3,'x'],[60,40.3,'x'],[54.8,38,'z'],[54.8,31.9,'z']]:[[94,40.3,'z'],[94,43.3,'z']];
+  // V333: the A-700 branch leaves a 3 m arm of the header at x 76 and runs straight south to the A-700 regulation station mid-panel (it ran 27 m along the wall in V332).
+ if(armRoute)support(77.5,6,46,[1,0,0],.055,armRoute);
+ const legSupports=branch=>branch.areaId==='A-700'?[[76,43,'z'],[76,38.5,'z'],[76,35,'z']]:[[94,40.3,'z'],[94,43.3,'z']];
  for(const branch of connections){const r=routes.find(r=>r.id===branch.routeId),y=AR_ACCESS.commonHeaderY;
   // Overhead approach crosses the aisle; descent stays at the local service panel.
   for(const [x,z,dir] of legSupports(branch)){
