@@ -5,7 +5,7 @@ export const AR_LAYOUT={revision:'argon-28',previousTakeoff:{revision:'Published
   'AR701-INLET':{owner:89,areaId:'A-700',floor:0,z:30,headerY:2.4,posts:[58.5,69],branches:[59,61,64,66,68],purpose:'Charging, feeder seal and furnace inlet'},
   'AR701-PRODUCT':{owner:89,areaId:'A-700',floor:0,z:30,headerY:2.4,posts:[81,87.5],branches:[82,84,86],purpose:'Furnace end seal, cooling and product collection'},
   'AR801-GRADE':{owner:112,areaId:'A-800',floor:0,z:40,headerY:2.4,posts:[97.5,101.6,111.5],branches:[98,99,100,101,110],purpose:'Mixer, intermediate holding, transfer, furnace and end seal'},
-  'AR801-UPPER':{owner:112,areaId:'A-800',floor:7.08,z:20.5,headerY:10.1,posts:[94,96.3],branches:[93.7,94.15,94.6,95.05,95.5],platform:'PL-801',purpose:'Elevated charge lock, hoppers and gravimetric feeders'}
+  'AR801-UPPER':{owner:112,areaId:'A-800',floor:7.08-5,z:20.5,headerY:10.1-5,posts:[94,96.3],branches:[93.7,94.15,94.6,95.05,95.5],platform:'PL-801',purpose:'Elevated charge lock, hoppers and gravimetric feeders'}
  },
  upperTargets:['H-801','H-802','F-801','F-802','LK-802'],gradeTargets:['H-803','MX-801','PY-801','TR-801'],
  sourceBasis:{pfd:'FEED-PFD-6000 · PDF page 20 · V5.1 draft',pfdDistributionPressure:'Typical 2–4 bar(g); not an approved operating setpoint',sourceCapacity:null,peakFlow:null,minimumSupplyPressure:null,oxygenLimit:null,moistureLimit:null,reserveDuration:null,pressureDrop:null,qualification:'Source pressure reduction, regulator failure protection, reserve endurance, simultaneous purges, vaporizer cold-weather performance, trapped-liquid thermal relief, tank inventory indication and safe vent locations require supplier/FEED confirmation.'}

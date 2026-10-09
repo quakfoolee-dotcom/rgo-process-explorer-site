@@ -4,8 +4,8 @@ import {componentEnvelope} from './access-review.js';
 import {segmentEntersRect,segmentDistance} from './containment-routing.js';
 
 // Render the real local recesses instead of drawing collection floors through an opaque ground plane.
-export function containmentGroundGeometry(width,depth,center,containment){
- const holes=containment.cells.flatMap(c=>[...c.patches,[c.storage.min[0]-.21,c.storage.min[2]-.21,c.storage.max[0]+.21,c.storage.max[2]+.21]]);
+export function containmentGroundGeometry(width,depth,center,containment,extraHoles=[]){
+ const holes=[...containment.cells.flatMap(c=>[...c.patches,[c.storage.min[0]-.21,c.storage.min[2]-.21,c.storage.max[0]+.21,c.storage.max[2]+.21]]),...extraHoles];
  const xmin=center.x-width/2,xmax=center.x+width/2,zmin=center.z-depth/2,zmax=center.z+depth/2;
  const xs=[...new Set([xmin,xmax,...holes.flatMap(r=>[r[0],r[2]])])].sort((a,b)=>a-b),zs=[...new Set([zmin,zmax,...holes.flatMap(r=>[r[1],r[3]])])].sort((a,b)=>a-b),p=[];
  for(let i=0;i<xs.length-1;i++)for(let j=0;j<zs.length-1;j++){const a=xs[i],b=xs[i+1],d=zs[j],e=zs[j+1],x=(a+b)/2,z=(d+e)/2;if(x<xmin||x>xmax||z<zmin||z>zmax||holes.some(r=>x>r[0]&&x<r[2]&&z>r[1]&&z<r[3]))continue;p.push(a,0,d,a,0,e,b,0,e,a,0,d,b,0,e,b,0,d);}

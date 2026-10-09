@@ -3,7 +3,7 @@ import {structuralKit} from './structural-kit.js';
 import {ACCESS_ZONES,ACCESS_BASIS} from './access-layout.js';
 import {ACCESS_DESIGN} from './access-design.js';
 import {componentEnvelope,buildAccessRegister} from './access-review.js';
-import {PIPE_RACK_LAYOUT} from './pipe-rack-layout.js';import {WALKWAY_LAYOUT} from './walkway-layout.js';import {EMERGENCY_ACCESS_LAYOUT} from './emergency-access-layout.js';import {walkwayVolume} from './walkway-system.js';
+import {PIPE_RACK_LAYOUT} from './pipe-rack-layout.js';import {WALKWAY_LAYOUT} from './walkway-layout.js';import {EMERGENCY_ACCESS_LAYOUT} from './emergency-access-layout.js';import {walkwayVolume} from './walkway-system.js';import {EMERGENCY_LOCATION_PLAN} from './emergency-location-plan.js';
 import {consolidatePipeSupports} from './pipe-support-consolidation.js';import {CONTAINMENT_CELLS} from './containment-basis.js';
 import {buildCoordinatedThermalRacks} from './thermal-racks.js';
 
@@ -37,6 +37,8 @@ export function buildPipeSupportSystem(h,model){
  const protectedIndex=grid();for(const z of protectedZones)protectedIndex.add(z);
  // D-MDL-03 (QFL 2026-09-30): with the south-strip racks re-routed, keep new support columns out of the planned pedestrian / emergency walkways (plant-wide: the generator is global, so a re-flow in A-1000 moved a column into PW-069 at A-3000). Collision index only, so the exported reservations and the prepared model stay as they were.
  for(const w of [...WALKWAY_LAYOUT.segments,...EMERGENCY_ACCESS_LAYOUT.segments]){const v=walkwayVolume(w);protectedIndex.add({id:'WALK-'+w.id,kind:'pedestrian',box:box(v.min,v.max)});}
+ // V330: keep new support columns out of the emergency stations' body and operating volumes too (the stations are built after this generator; a re-flow around the A-800 pit put a column in ES-801). Collision index only; nothing changes where no column lands inside a station.
+ for(const st of EMERGENCY_LOCATION_PLAN){const c=Math.cos(st.yaw||0),sn=Math.sin(st.yaw||0);for(const [id,lo,hi] of[['body',[-.55,.035,-.25],[.3,2.335,.89]],['operating',[-.6,.035,.65],[.6,2.335,1.85]]]){const xs=[],zs=[];for(const px of[lo[0],hi[0]])for(const pz of[lo[2],hi[2]]){xs.push(st.x+px*c+pz*sn);zs.push(st.z-px*sn+pz*c);}protectedIndex.add({id:'STATION-'+st.tag+'-'+id,kind:'emergency-station',box:box([Math.min(...xs),lo[1],Math.min(...zs)],[Math.max(...xs),hi[1],Math.max(...zs)])});}}
  // D-MDL-03 (QFL 2026-09-30): after the south-strip re-route, keep new columns off the A-1000 and A-160 bund floors (each cell's containment patch for the current design scenario), where the re-flow split BND-1012 and added upstand clashes in BND-164; elsewhere supports keep their lined pedestal upstands. Collision index only; not a reported reservation.
  for(const c of CONTAINMENT_CELLS){if(c.areaId!=='A-1000'&&c.areaId!=='A-160')continue;let rects;if(c.automaticPatch){const e=model.equipment[c.owners[0]];if(!e||e.radius==null)continue;const r=e.radius+.85;rects=[[e.x-r,e.z-r-.4,e.x+r,c.owners[0]===153?-16.1:e.z+r]];}else rects=c.scenarioPatches?.[model.designScenario||'baseline']||c.patches||[];for(const [i,q] of rects.entries())protectedIndex.add({id:'BUND-'+c.key+'-'+i,kind:'containment',box:box([q[0],0,q[1]],[q[2],.35,q[3]])});}
  const sharedRails=[],assigned=new Set();

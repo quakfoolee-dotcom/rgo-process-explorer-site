@@ -2,14 +2,15 @@
 // Connections describe modeled attachment, not structural capacity or fabrication approval.
 export function structuralKit(h){
  const {T,parts,structure,b,band,bolt,boltCircle,setContext}=h,V=p=>new T.Vector3(...p),Y=new T.Vector3(0,1,0);
+ let floorY=0,floorFn=null; const baseAt=(x,z)=>floorFn?floorFn(x,z):floorY; // elevation of the floor columns stand on: 0 at grade, the pit floor inside a pit (V330)
  const point=(p,v)=>V(v).sub(p.position).applyQuaternion(p.quaternion.clone().invert()).divide(p.scale).toArray();
  function join(a,b,p,label){structure.contacts.push({a:a.id,b:b.id,localA:point(a,p),localB:point(b,p),label});return b;}
  function load(p,tag){if(!structure.loads.some(l=>l.part===p.id))structure.loads.push({part:p.id,reactor:p.reactor,tag});return p;}
  function beam(a,z,w,name,d=w){const delta=V(z).sub(V(a)),p=b(name,'frame',[w,delta.length(),d],V(a).add(V(z)).multiplyScalar(.5).toArray(),'steel',new T.Quaternion().setFromUnitVectors(Y,delta.normalize()));return p;}
  function column(x,z,top,tag,w=.12){
-  const foot=b(tag+' anchored baseplate','frame',[.42,.12,.42],[x,.06,z]);structure.roots.push({part:foot.id,local:point(foot,[x,0,z]),elevation:0});
-  const post=beam([x,.12,z],[x,top,z],w,tag+' column');join(foot,post,[x,.12,z],tag+' base connection');
-  for(const dx of[-.13,.13])for(const dz of[-.13,.13])bolt([x+dx,.12,z+dz],[0,1,0],.8,tag+' foundation anchor');
+  const fy=baseAt(x,z),foot=b(tag+' anchored baseplate','frame',[.42,.12,.42],[x,fy+.06,z]);structure.roots.push({part:foot.id,local:point(foot,[x,fy,z]),elevation:fy});
+  const post=beam([x,fy+.12,z],[x,top,z],w,tag+' column');join(foot,post,[x,fy+.12,z],tag+' base connection');
+  for(const dx of[-.13,.13])for(const dz of[-.13,.13])bolt([x+dx,fy+.12,z+dz],[0,1,0],.8,tag+' foundation anchor');
   return {foot,post,x,z,top};
  }
  function conveyor(cv,tag,{stations=[.16,.84],side=1,offset=.62,drive=true,driveShift=0}={}){
@@ -21,7 +22,7 @@ export function structuralKit(h){
    const at=V(center).addScaledVector(normal,offset);if(number==='drive'&&driveShift)at.addScaledVector(new T.Vector3(axis.x,0,axis.z).normalize(),driveShift);const post=column(at.x,at.z,at.y+.065,tag+' support '+number);
    const inner=V(center).addScaledVector(normal,r+.016),arm=beam(inner.toArray(),at.toArray(),.12,tag+' saddle crossarm '+number);
    join(collar,arm,inner.toArray(),tag+' saddle / crossarm '+number);join(arm,post.post,at.toArray(),tag+' crossarm / column '+number);
-   const kneeStart=at.clone().addScaledVector(Y,-Math.min(.42,at.y*.5)),kneeEnd=inner.clone().lerp(at,.25),knee=beam(kneeStart.toArray(),kneeEnd.toArray(),.065,tag+' knee brace '+number);
+   const kneeStart=at.clone().addScaledVector(Y,-Math.min(.42,Math.max(.1,(at.y-baseAt(at.x,at.z))*.5))),kneeEnd=inner.clone().lerp(at,.25),knee=beam(kneeStart.toArray(),kneeEnd.toArray(),.065,tag+' knee brace '+number);
    join(post.post,knee,kneeStart.toArray(),tag+' brace / post '+number);join(knee,arm,kneeEnd.toArray(),tag+' brace / arm '+number);
    supports.push(post);return collar;
   }
@@ -35,7 +36,7 @@ export function structuralKit(h){
    const collar=band(tag+' housing support collar','frame',r+.03,r-.003,.12,[x,yy,z]);join(body,collar,[x,yy,z+side*r],tag+' housing / collar');
    const edge=z+Math.sign(back-z)*(r+.012),arm=beam([x,yy,back],[x,yy,edge],.12,tag+' housing bracket');join(rail,arm,[x,yy,back],tag+' rail / bracket');join(arm,collar,[x,yy,edge],tag+' bracket / collar');
   }
-  const y0=.35,y1=Math.max(...levels)-.25;if(y1>y0){const brace=beam([posts[0].x,y0,back],[posts[1].x,y1,back],.07,tag+' rack brace');join(posts[0].post,brace,[posts[0].x,y0,back],tag+' brace lower');join(posts[1].post,brace,[posts[1].x,y1,back],tag+' brace upper');}
+  const y0=baseAt(x,back)+.35,y1=Math.max(...levels)-.25;if(y1>y0){const brace=beam([posts[0].x,y0,back],[posts[1].x,y1,back],.07,tag+' rack brace');join(posts[0].post,brace,[posts[0].x,y0,back],tag+' brace lower');join(posts[1].post,brace,[posts[1].x,y1,back],tag+' brace upper');}
   return posts;
  }
  function auxiliaryRack(filter,condenser){
@@ -76,7 +77,7 @@ export function structuralKit(h){
   }
   structure.access.push({tag:'PL-166',equipment:46,deckElevation:level,stairs:true,guardrails:true,filtratePenetration:true,limits:'Illustrative access geometry. Load capacity, headroom, lifting plan and code dimensions require detailed design.'});
  }
- return {beam,column,join,load,conveyor,verticalSupport,auxiliaryRack,filterPlatform,boxFrame};
+ return {beam,column,join,load,conveyor,verticalSupport,auxiliaryRack,filterPlatform,boxFrame,setFloor:v=>{floorY=v;},setFloorFn:f=>{floorFn=f;}};
 }
 
 export function inspectStructuralConnections(model){

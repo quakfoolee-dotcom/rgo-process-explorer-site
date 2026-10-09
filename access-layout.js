@@ -27,7 +27,7 @@ export const ACCESS_ZONES=[...TRANSPORT_ZONES,...REACTOR_WITHDRAWAL_ZONES,...EXH
  zone('APPROACH-PL601','platform-access',['A-600'],[74.45,.02,8.0],[75.75,2.32,8.7],'Clear grade approach to PL-601 stairs'),
  zone('WALK-6100','pedestrian',['A-6000'],[37,.02,50.35],[50.5,2.32,51.55],'Source-service approach connected to north pedestrian spine'),
  zone('SOURCE-6100','utility',['A-6000'],[37,0,41.8],[48.9,8,49.3],'Proposed source yard; delivery access, protection distances and ventilation require supplier/site review'),
- zone('AR801-UPPER-STAND','standing',['A-800','A-6000'],[93.2,7.1,21.1],[96,9.2,22.05],'Permanent PL-801 positions for elevated Ar manifold; preserve deck passage'),
+ zone('AR801-UPPER-STAND','standing',['A-800','A-6000'],[93.2,2.1,21.1],[96,4.2,22.05],'Permanent PL-801 positions for elevated Ar manifold; preserve deck passage'),
  zone('WALK-SOUTH','pedestrian',['all'],[-40,.02,-34],[120,2.32,-32],'Continuous south pedestrian spine'),
  zone('WALK-EAST','pedestrian',['all'],[118,.02,-34],[120,2.32,51.55],'East pedestrian connection'),
  zone('WALK-NORTH','pedestrian',['all'],[50.5,.02,50.35],[120,2.32,51.55],'North utility-side pedestrian spine'),
