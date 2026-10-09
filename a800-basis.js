@@ -3,7 +3,7 @@ export const A800_SOURCE={document:'FEED-PE-PFD-001',revision:'V5.1',drawing:'FE
 // D-MDL-11 (QFL 2026-10-08, 30 ft building ceiling): the feed stack (lock, hoppers, feeders, mixer, surge hopper and rotary valve), its access platform and the
 // upper argon bank stand 5 m lower, and the elevator discharges 5.3 m lower. The pit under the lower end of the stack is 4.5 m deep; the furnace feed
 // climbs out of it on an enclosed lift. Levels follow from lowerBy; nothing else in A-800 moves.
-export const A800_PIT={revision:'V330',decision:'D-MDL-11',date:'2026-10-08',lowerBy:5,elevatorLowerBy:5.3,depth:4.5,floorY:-4.5,rect:[88.6,28.4,95.8,30.9],upperFloor:7.08-5,
+export const A800_PIT={revision:'V330',decision:'D-MDL-11',date:'2026-10-08',lowerBy:5,elevatorLowerBy:5.3,ventHeaderY:8.1,ventBranchY:6.5,depth:4.5,floorY:-4.5,rect:[88.6,28.4,95.8,30.9],upperFloor:7.08-5,
  note:'Pit and lowered stack for a 30 ft building ceiling. The pit is a confined space (argon is heavier than air): forced ventilation, oxygen monitoring and rescue provisions are required and are not designed. Slab cut, sump, drainage and the water table are not assessed.'};
 export const A800_BASIS={source:A800_SOURCE,carrierGas:'Ar',approvedSetpoints:null,
  draftValues:{reagentRatio:{value:1,unit:'kg KBH₄ / kg rGO'},temperature:{value:750,unit:'°C'},ramp:{value:5,unit:'°C/min'},residence:{value:2,unit:'h'},pressure:{value:2,unit:'psig'},oxygen:{value:10,unit:'ppm maximum stated in draft'},fanInlet:{value:[60,90],unit:'°C'}},
