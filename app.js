@@ -120,6 +120,8 @@ const partFlows=partFlowRegister(model,routeRecords,graph),partValveTags=new Map
 let illustratedValveStates={};let flowScheme=DEFAULT_FLOW_SCHEME,flowFocus=null;
 let colorMode='material',areaScope='all',browseArea='all',showProposed=true;let navigation=null,processBrowser=null;let photoRendering=false;
 const materialColors=Object.fromEntries(Object.entries(mats).map(([k,m])=>[k,m.color.clone()]));
+// A near-fully metallic surface mirrors the dark scene, so a grey tint barely shows. The Pipe ID (flow) view reads colour, not finish: lower the metalness of the bright metals there and restore it elsewhere.
+const FLOW_METALNESS=.3,metalFinish=Object.fromEntries(['steel','bright','inner','weld'].map(k=>[k,mats[k].metalness]));
 let exploration=null;const explorePlans=new Map();
 let amount=0,target=0,system='all',reactor='all',cut=false,selected=null,selectedEquipmentId=null,isolated=false,dirty=true,view='iso',visibleParts=[],mode='engineering';
 const exploreCatalog=createExploreCatalog(model,engineering,EQUIPMENT_ORDER),explorePicker=createExplorePicker({select:$('explore-equipment'),assembled:$('start-explore'),exploded:$('start-explore-exploded'),status:$('explore-list-status'),catalog:exploreCatalog,getState:()=>({areaId:browseArea,showProposed}),option:(label,value)=>new Option(label,value)});
@@ -545,7 +547,7 @@ function renderColorLegend(){if(productJourney?.active||thermalTrace?.active){le
  if(colorMode==='flow'&&model.fireSafety)entry('Fire points · FE tags','#e62f47');
  if(colorMode==='flow'&&model.containment)entry('Emergency shower / eyewash · ES tags','#ffd000');
  updateFlowFocusStatus();}
-function setColorMode(value){if(!VIEW_MODES[value])return;colorMode=value;$('color-mode').value=value;document.body.dataset.colorMode=value;for(const [key,mat] of Object.entries(mats))mat.color.copy(value==='material'?materialColors[key]:white);renderColorLegend();updateClosedMarkers();dirty=true;}
+function setColorMode(value){if(!VIEW_MODES[value])return;colorMode=value;$('color-mode').value=value;document.body.dataset.colorMode=value;for(const [key,mat] of Object.entries(mats))mat.color.copy(value==='material'?materialColors[key]:white);for(const [key,metalness] of Object.entries(metalFinish))mats[key].metalness=value==='flow'?Math.min(metalness,FLOW_METALNESS):metalness;renderColorLegend();updateClosedMarkers();dirty=true;}
 $('archive-banner').hidden=designSelection.scope!=='future';$('design-archive').hidden=designSelection.scope==='future';const supportResult=inspectStructuralConnections(model);$('support-note').hidden=designSelection.scope==='future';$('support-result').textContent=supportResult.passes?`${supportResult.loads} supported loads checked through ${supportResult.contacts} modeled attachments to foundations.`:'Support attachments require review; download the configuration register for details.';
 const pipeSupports=model.pipeSupportSystem;
 $('pipe-rack-summary').textContent=pipeSupports?`${pipeSupports.summary.rackFrames} shared structures and local supports · ${pipeSupports.summary.supports} pipe bearings. ${pipeSupports.summary.existingSteelAttachmentGroups} groups supported by existing steel. ${pipeSupports.summary.placementHolds} mounting position(s) require review; structural capacities are unverified.`:'';
