@@ -16,7 +16,7 @@
 #plant-browse-panel #browse-map-toggle{padding:8px;min-height:44px}
 
 /* v109: sibling overlays also belong to the clean-preview state. */
-.browse-clean-stage>.stage-title,.browse-clean-stage>.views,.browse-clean-stage>#focus-banner,.browse-clean-stage>#inspector,.browse-clean-stage>.view-dock{visibility:hidden!important;pointer-events:none!important}
+.browse-clean-stage>.stage-title,.browse-clean-stage>.views,.browse-clean-stage>#display-panel,.browse-clean-stage>#focus-banner,.browse-clean-stage>#inspector,.browse-clean-stage>.view-dock{visibility:hidden!important;pointer-events:none!important}
 .browse-clean-preview #browse-photo-tools{display:flex;flex-wrap:wrap;gap:8px;max-width:100%;padding:8px;background:#10212f;border:1px solid #526674;border-radius:6px}
 .browse-clean-preview #browse-photo-tools button{flex:0 1 auto;width:auto;min-height:44px;padding:8px 14px;font-size:.875rem;white-space:normal}
 .browse-clean-preview #browse-photo-status{margin:0;padding:4px;max-width:100%;overflow-wrap:anywhere}
