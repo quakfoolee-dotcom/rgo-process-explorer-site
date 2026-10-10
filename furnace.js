@@ -92,7 +92,8 @@ export function buildFurnace(h){
  arBranch(61,'XV-AR701-BUF',bufAr,[[61,9.2,23.0],[61,5.6,23.0],[60.5,5.6,23.0]],'H-701');
  arBranch(64,'XV-AR701-SEAL',feedSeal,[[64,9.2,23.2],[64.9,9.2,23.2],[64.9,4,23.2]],'C-701');
  arBranch(66,'FCV-AR701-RUN',pyAr,[[66,9.2,22.8],[66.3,9.2,22.8],[66.3,4,22.8]],'PY-701');
- arBranch(68,'XV-AR701-PURGE',[66.3,4,23.1],[[68,9.2,22.4],[68,4,22.4],[66.3,4,22.4],[66.3,4,22.8]],'PY-701');
+ // V345: the PURGE delivery no longer runs its own 19 m line to the PY-701 argon inlet beside the RUN delivery; it joins the RUN delivery (after the check valves of both branches) 0.75 m beyond the header takeoff, and the one RUN line carries both to the inlet.
+ arBranch(68,'XV-AR701-PURGE',[66,6.9,28.6],[[68,6.9,28.6]],'PY-701');
  arBranch(82,'XV-AR701-END',endAr,[[82,9.2,23.5],[78.8,9.2,23.5],[78.8,4,23.5]],'PY-701');
  arBranch(84,'XV-AR701-COOL',coolAr,[[84,9.2,23.2],[85,9.2,23.2],[85,2.7,23.2]],'E-702');
  arBranch(86,'XV-AR701-PROD',prodAr,[[86,9.2,23.6],[86,1.55,23.6],[85.2,1.55,23.6]],'T-702');
