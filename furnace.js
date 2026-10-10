@@ -83,17 +83,17 @@ export function buildFurnace(h){
  const feedSeal=arTap(feeder.body,[64.9,4,24.8],[0,0,-1],.20,'C-701 Ar seal inlet');P(feeder.body,[[64.9,4,24.845],[64.9,4,25]],'C-701 seal gas passage','Argon',{internalTo:82});
  const coolAr=arTap(cooler.body,[85.0,2.7,24.78],[0,0,-1],.20,'E-702 Ar discharge seal');P(cooler.body,[[85,2.7,24.825],[85,2.7,25]],'E-702 seal gas passage','Argon',{internalTo:84});
  const endAr=arTap(furnace.body,[78.8,4,24.44],[0,0,-1],.25,'PY-701 drive-end Ar seal');P(furnace.body,[[78.8,4,24.485],[78.8,4,25]],'PY-701 drive-end seal gas passage','Argon',{internalTo:83});
- function arBranch(x,tag,dest,route,target){setContext(89,'Argon branch '+tag);const a=AR_ACCESS,z=30,deliveryY=target==='LK-701'?8.8:6.9,bank=x<80?'AR701-INLET':'AR701-PRODUCT';
+ function arBranch(x,tag,dest,route,target,lowJoin=null){setContext(89,'Argon branch '+tag);const a=AR_ACCESS,z=30,deliveryY=target==='LK-701'?8.8:6.9,bank=x<80?'AR701-INLET':'AR701-PRODUCT';
  L([[x,AR_LAYOUT.gradeHeaderY,z],[x,a.branchTopY,z]],tag+' header takeoff');G([x,a.branchTopY,z],[x,a.branchValveBottomY,z],tag);
  L([[x,a.branchValveBottomY,z],[x,a.meterBottomY,z]],tag+' metered flow');instrument('FT-'+tag,[x,a.branchDisplayY,z],'Ar branch flow');check([x,a.meterBottomY,z],[x,a.checkBottomY,z],'NRV-'+tag);
- L([[x,a.checkBottomY,z],[x,.8,z],[x,.8,z+a.deliveryRiseZOffset],[x,deliveryY,z+a.deliveryRiseZOffset],...route.map(p=>[p[0],p[1]===9.2?deliveryY:p[1],p[2]]),dest],tag+' delivery');argonBranches.push({tag,target,destination:dest,check:'NRV-'+tag,flowSetpoint:null,bank,accessMethod:'Grade service bank; common low supply and destination-specific overhead delivery',pfdStream:target==='T-702'?'AR-702':target==='C-701'?'AR-701':null});}
+ L(lowJoin?[[x,a.checkBottomY,z],[x,.8,z],[x,.8,lowJoin],dest]:[[x,a.checkBottomY,z],[x,.8,z],[x,.8,z+a.deliveryRiseZOffset],[x,deliveryY,z+a.deliveryRiseZOffset],...route.map(p=>[p[0],p[1]===9.2?deliveryY:p[1],p[2]]),dest],tag+' delivery');argonBranches.push({tag,target,destination:dest,check:'NRV-'+tag,flowSetpoint:null,bank,accessMethod:'Grade service bank; common low supply and destination-specific overhead delivery',pfdStream:target==='T-702'?'AR-702':target==='C-701'?'AR-701':null});}
 
  arBranch(59,'XV-AR701-LOCK',lockAr,[[59,9.2,24],[59,7.7,24],[60.5,7.7,24]],'LK-701');
  arBranch(61,'XV-AR701-BUF',bufAr,[[61,9.2,23.0],[61,5.6,23.0],[60.5,5.6,23.0]],'H-701');
  arBranch(64,'XV-AR701-SEAL',feedSeal,[[64,9.2,23.2],[64.9,9.2,23.2],[64.9,4,23.2]],'C-701');
  arBranch(66,'FCV-AR701-RUN',pyAr,[[66,9.2,22.8],[66.3,9.2,22.8],[66.3,4,22.8]],'PY-701');
- // V345: the PURGE delivery no longer runs its own 19 m line to the PY-701 argon inlet beside the RUN delivery; it joins the RUN delivery (after the check valves of both branches) 0.75 m beyond the header takeoff, and the one RUN line carries both to the inlet.
- arBranch(68,'XV-AR701-PURGE',[66,6.9,28.6],[[68,6.9,28.6]],'PY-701');
+ // V346: the PURGE delivery no longer climbs to the 6.9 m rack and crosses over (V345, a 5.8 m riser and a 2 m cross); it turns west at grade (0.8 m), right after its check valve, and joins the RUN delivery at (66, 0.8, 29.7), a tee onto the RUN line downstream of both check valves. The RUN riser carries both flows to the PY-701 inlet.
+ arBranch(68,'XV-AR701-PURGE',[66,.8,29.7],[],'PY-701',29.7);
  arBranch(82,'XV-AR701-END',endAr,[[82,9.2,23.5],[78.8,9.2,23.5],[78.8,4,23.5]],'PY-701');
  arBranch(84,'XV-AR701-COOL',coolAr,[[84,9.2,23.2],[85,9.2,23.2],[85,2.7,23.2]],'E-702');
  arBranch(86,'XV-AR701-PROD',prodAr,[[86,9.2,23.6],[86,1.55,23.6],[85.2,1.55,23.6]],'T-702');
