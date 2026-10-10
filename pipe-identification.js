@@ -14,7 +14,7 @@ export const ASME_CLASSES={
  water:{label:'Cold and tepid water (cooling, chilled, RO, waste)',color:'#2fa65a',field:'#2fa65a',letters:'#ffffff',rank:5,userDefined:false,example:'RO, city, cooling, chilled water; wastewater; process drains. Hot water: class to confirm'},
  air:{label:'Compressed air',color:'#2f78e0',field:'#2f78e0',letters:'#ffffff',rank:6,userDefined:false,example:'Instrument, process and service air'},
  abandoned:{label:'Abandoned piping',color:'#e9eef3',field:'#ffffff',letters:'#101820',border:'#101820',rank:7,userDefined:false,reserved:true,example:'Abandoned piping (none modelled yet)'},
- inert:{label:'Non-hazardous gases · argon, nitrogen (asphyxiation risk in enclosed spaces)',color:'#1ea3cf',field:'#2f78e0',letters:'#ffffff',rank:8,userDefined:false,example:'Argon, nitrogen (white on safety blue; the legend text tells them from compressed air)'},
+ inert:{label:'Non-hazardous gases · argon, nitrogen (asphyxiation risk in enclosed spaces)',color:'#0780c0',field:'#2f78e0',letters:'#ffffff',rank:8,userDefined:false,example:'Argon, nitrogen (white on safety blue; the legend text tells them from compressed air)'},
  product:{label:'Process product and slurry · user-defined',color:'#7b4fc4',field:'#7b4fc4',letters:'#ffffff',rank:9,userDefined:true,example:'Pre-G, GO suspension, rGO, pellets (white on purple)'},
  vent:{label:'Vents, off-gas and dust · user-defined',color:'#8a5a2b',field:'#8a5a2b',letters:'#ffffff',rank:10,userDefined:true,example:'Vents, exhaust, dust collection, thermal off-gas (white on brown)'},
  review:{label:'Not classified · hazard review',color:'#c9b88a',field:'#ffffff',letters:'#101820',rank:11,userDefined:true,example:'Service or medium needs a hazard assessment (black on white)'}
