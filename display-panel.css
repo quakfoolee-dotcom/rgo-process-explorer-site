@@ -4,7 +4,7 @@
 .display-open svg{display:block}
 #display-panel{position:absolute;top:66px;right:24px;z-index:31;width:340px;max-width:calc(100% - 28px);max-height:calc(100% - var(--stage-toolbar-space) - 84px);overflow:auto;padding:10px 12px 12px;background:#132636f5;border:1px solid #648697;border-radius:9px;box-shadow:0 8px 28px #0005;color:#dfedf5;line-height:1.4}
 #display-panel[hidden]{display:none!important}
-#display-panel,#display-panel :is(h2,p,summary,button,select,input,output,span,label){font-size:var(--t-body)}
+#display-panel,#display-panel :is(h2,p,summary,button,select,input,output,label),#display-panel span:not(.select-chevron){font-size:var(--t-body)}
 .display-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
 .display-heading h2{margin:0;font-weight:600}
 .display-heading span{display:flex;gap:4px}
@@ -28,3 +28,10 @@
 .display-colour-row{display:grid;grid-template-columns:36px 1fr;gap:8px;margin:0 0 8px}
 .display-colour-row input[type=color]{width:36px;height:36px;padding:2px;background:#203a4c;border:1px solid #557386;border-radius:6px}
 .display-colour-row input[type=text]{min-height:36px;padding:0 8px;background:#203a4c;color:#e8f2f9;border:1px solid #557386;border-radius:6px;text-transform:uppercase}
+/* The page turns every dropdown into a styled control (controlled-select.css); the leading icons sit above it and the control leaves room for them (V343). */
+.display-select svg{z-index:2}
+#display-panel .display-select .controlled-select{flex:1;min-width:0}
+#display-panel .display-select .select-trigger{min-height:36px;padding:0 8px}
+#display-panel .display-select.has-icon .select-trigger{padding-left:34px}
+/* The page draws the dropdown arrow with a border and keeps the text arrow at size 0; a text size on it would show a second arrow (V343). */
+#display-panel .select-chevron{font-size:0}
