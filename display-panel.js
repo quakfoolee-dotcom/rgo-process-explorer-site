@@ -58,50 +58,84 @@ export function applyDisplay(raw,ctx){
  ground.material.color.set(s.floorAuto?theme.ground:s.floor);
  const f=FLOOR_FINISH[s.finish];ground.material.roughness=s.finish==='matte'?base.groundRoughness:f.roughness;ground.material.metalness=s.finish==='matte'?base.groundMetalness:f.metalness;
  applySolid(ctx.meshes,s.mode==='solid',ctx.saved);
+ ctx.onBackground?.(stageBackground(bg));
  renderer.shadowMap.needsUpdate=true;ctx.requestRender();
  return s;
 }
+// 'light' or 'dark': used so the title text over the 3D view stays readable on any background colour.
+export function stageBackground(color){return new T.Color(color).getHSL({}).l>.55?'light':'dark';}
 export function loadDisplay(storage){try{return normalizeDisplay(JSON.parse(storage.getItem(DISPLAY_KEY)||'{}'));}catch(e){return normalizeDisplay({});}}
 export function saveDisplay(storage,state){try{storage.setItem(DISPLAY_KEY,JSON.stringify(normalizeDisplay(state)));}catch(e){}}
 
-const CUBE='<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></svg>';
+const svg=d=>`<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+const ICON={
+ cube:'<path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/>',
+ sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/>',
+ mode:'<circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17" fill="currentColor"/>',
+ palette:'<path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-1 1.5-2.2-.6-1.3.2-2.8 1.7-2.8H17a4 4 0 0 0 4-4A9 9 0 0 0 12 3Z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10.5" cy="7.5" r="1"/><circle cx="15" cy="8" r="1"/>',
+ exposure:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22"/>',
+ angle:'<path d="M20 12a8 8 0 1 1-2.5-5.8M20 4v4h-4"/>',
+ scale:'<path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/>',
+ shadow:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/>'
+};
+export const hexOf=c=>'#'+new T.Color(c).getHexString();
 export function panelMarkup(state){
- const s=normalizeDisplay(state),opt=(v,l,cur)=>`<option value="${v}"${v===cur?' selected':''}>${l}</option>`,slider=(id,label,min,max,step,val,unit)=>`<label class="display-slider" for="${id}"><span>${label}</span><output id="${id}-out">${unit(val)}</output><input id="${id}" type="range" min="${min}" max="${max}" step="${step}" value="${val}"></label>`;
+ const s=normalizeDisplay(state),opt=(v,l,cur)=>`<option value="${v}"${v===cur?' selected':''}>${l}</option>`,
+  select=(id,icon,options,label)=>`<label class="display-select${icon?' has-icon':''}">${icon?svg(ICON[icon]):''}<select id="${id}" aria-label="${label}">${options}</select></label>`,
+  num=(id,icon,label,min,max,step,unit)=>`<label class="display-num" title="${label}">${svg(ICON[icon])}<input id="${id}" type="number" min="${min}" max="${max}" step="${step}" aria-label="${label}"><span>${unit}</span></label>`,
+  section=(title,body,open=true)=>`<details class="display-section"${open?' open':''}><summary>${title}</summary><div class="display-body">${body}</div></details>`;
  return `<div class="display-heading"><h2 id="display-heading">Display</h2><span><button id="display-reset" type="button" aria-label="Reset display settings" title="Reset display settings">↺</button><button id="display-close" type="button" aria-label="Close display settings">×</button></span></div>
-<div class="display-block"><label class="display-field"><span>Display mode</span><select id="display-mode">${DISPLAY_MODES.map(m=>opt(m.id,m.label,s.mode)).join('')}</select></label><p id="display-mode-help" class="display-note"></p>
-<div class="display-pair"><label class="display-field"><span>Theme</span><select id="display-theme">${opt('system','System','')}${opt('light','Light','')}${opt('dark','Dark','')}</select></label><label class="display-field"><span>Projection</span><select id="display-projection">${opt('engineering','Orthographic','')}${opt('studio','Perspective','')}</select></label></div></div>
-<details class="display-block" id="display-grid-block"><summary>Grid</summary><label class="display-check"><input id="display-grid" type="checkbox"> Show ground grid</label></details>
-<details class="display-block" open><summary>Lighting</summary><label class="display-field"><span>Preset</span><select id="display-preset">${Object.entries(DISPLAY_PRESETS).map(([k,p])=>opt(k,p.label,'')).join('')}${opt('custom','Custom','')}</select></label>
-${slider('display-exposure','Exposure',-3,3,.1,s.exposure,v=>(v>0?'+':'')+(+v).toFixed(1)+' EV')}${slider('display-angle','Light angle',-180,180,5,s.angle,v=>v+'°')}${slider('display-intensity','Light intensity',.25,2,.05,s.intensity,v=>(+v).toFixed(2)+'×')}${slider('display-shadow','Shadow strength',0,1,.05,s.shadow,v=>Math.round(v*100)+'%')}</details>
-<details class="display-block" open><summary>Background</summary><label class="display-check"><input id="display-bg-auto" type="checkbox"${s.bgAuto?' checked':''}> Auto (follows the theme)</label><label class="display-colour"><span>Colour</span><input id="display-bg" type="color" value="${s.background}"></label></details>
-<details class="display-block" open><summary>Floor</summary><label class="display-check"><input id="display-floor-auto" type="checkbox"${s.floorAuto?' checked':''}> Auto (follows the theme)</label><label class="display-colour"><span>Colour</span><input id="display-floor" type="color" value="${s.floor}"></label><label class="display-field"><span>Finish</span><select id="display-finish">${opt('matte','Matte',s.finish)}${opt('satin','Satin',s.finish)}${opt('gloss','Gloss',s.finish)}</select></label></details>`;
+${select('display-mode','mode',DISPLAY_MODES.map(m=>opt(m.id,m.label,s.mode)).join(''),'Display mode')}<p id="display-mode-help" class="display-note"></p>
+<div class="display-row2">${select('display-theme','sun',opt('system','System','')+opt('light','Light','')+opt('dark','Dark',''),'Theme')}${select('display-projection','cube',opt('engineering','Orthographic','')+opt('studio','Perspective',''),'Projection')}</div>
+${section('Surfaces',select('display-colour','palette',opt('material','Physical appearance','')+opt('status','Design status','')+opt('flow','Flow routes',''),'Colour viewing mode')+'<div id="display-scheme-row" hidden>'+select('display-scheme','palette',opt('pfd','PFD categories','')+opt('detailed','Detailed services','')+opt('asme','ASME A13.1 pipe identification',''),'Pipe colour scheme')+'</div>')}
+${section('Grid','<label class="display-check"><input id="display-grid" type="checkbox"> Show ground grid</label>',false)}
+${section('Lighting',select('display-preset','',Object.entries(DISPLAY_PRESETS).map(([k,p])=>opt(k,p.label,'')).join('')+opt('custom','Custom',''),'Lighting preset')+'<div class="display-row2">'+num('display-exposure','exposure','Exposure',-3,3,.1,'EV')+num('display-angle','angle','Light angle',-180,180,5,'°')+num('display-intensity','scale','Light intensity',.25,2,.05,'×')+num('display-shadow','shadow','Shadow strength',0,100,5,'%')+'</div>')}
+${section('Background',`<div class="display-colour-row"><input id="display-bg" type="color" value="${s.background}" aria-label="Background colour"><input id="display-bg-text" type="text" maxlength="7" spellcheck="false" placeholder="Auto" aria-label="Background colour code (empty for Auto, which follows the theme)"></div>`)}
+${section('Floor',`<div class="display-colour-row"><input id="display-floor" type="color" value="${s.floor}" aria-label="Floor colour"><input id="display-floor-text" type="text" maxlength="7" spellcheck="false" placeholder="Auto" aria-label="Floor colour code (empty for Auto, which follows the theme)"></div>`+select('display-finish','',opt('matte','Matte',s.finish)+opt('satin','Satin',s.finish)+opt('gloss','Gloss',s.finish),'Floor finish'))}`;
 }
 
 export function mountDisplayPanel({doc=document,storage=localStorage,theme=window.rgoTheme,sceneCtx,getMode,setMode,gridToggle,onChange}={}){
  const views=doc.querySelector('.stage .views');if(!views)return null;
  let state=loadDisplay(storage);
- const open=doc.createElement('button');open.id='display-open';open.type='button';open.className='display-open';open.setAttribute('aria-haspopup','dialog');open.setAttribute('aria-controls','display-panel');open.setAttribute('aria-expanded','false');open.title='Display settings';open.setAttribute('aria-label','Display settings');open.innerHTML=CUBE;views.append(open);
+ sceneCtx.onBackground=b=>{doc.documentElement.dataset.stageBg=b;};
+ const open=doc.createElement('button');open.id='display-open';open.type='button';open.className='display-open';open.setAttribute('aria-haspopup','dialog');open.setAttribute('aria-controls','display-panel');open.setAttribute('aria-expanded','false');open.title='Display settings';open.innerHTML=svg(ICON.cube)+'<span>Display</span>';views.append(open);
  const panel=doc.createElement('aside');panel.id='display-panel';panel.hidden=true;panel.setAttribute('role','dialog');panel.setAttribute('aria-labelledby','display-heading');panel.innerHTML=panelMarkup(state);views.parentElement.append(panel);
- const $=id=>panel.querySelector('#'+id),show=v=>{panel.hidden=!v;open.setAttribute('aria-expanded',String(v));};
+ const $=id=>panel.querySelector('#'+id),show=v=>{panel.hidden=!v;open.setAttribute('aria-expanded',String(v));if(v)sync();};
  const apply=(next,save=true)=>{state=applyDisplay(next,sceneCtx);if(save)saveDisplay(storage,state);sync();onChange?.(state);};
+ const existing=id=>doc.getElementById(id),HEX=/^#?[0-9a-fA-F]{6}$/;
  const sync=()=>{
-  $('display-mode').value=state.mode;$('display-mode-help').textContent=DISPLAY_MODES.find(m=>m.id===state.mode).help;
-  $('display-preset').value=matchPreset(state);$('display-exposure').value=state.exposure;$('display-angle').value=state.angle;$('display-intensity').value=state.intensity;$('display-shadow').value=state.shadow;
-  $('display-exposure-out').textContent=(state.exposure>0?'+':'')+state.exposure.toFixed(1)+' EV';$('display-angle-out').textContent=state.angle+'°';$('display-intensity-out').textContent=state.intensity.toFixed(2)+'×';$('display-shadow-out').textContent=Math.round(state.shadow*100)+'%';
-  $('display-bg-auto').checked=state.bgAuto;$('display-bg').value=state.background;$('display-bg').disabled=state.bgAuto;$('display-floor-auto').checked=state.floorAuto;$('display-floor').value=state.floor;$('display-floor').disabled=state.floorAuto;$('display-finish').value=state.finish;
+  const set=(id,v)=>{const e=$(id);if(e&&doc.activeElement!==e)e.value=v;};
+  $('display-mode').value=state.mode;$('display-mode-help').textContent=DISPLAY_MODES.find(m=>m.id===state.mode).help;$('display-preset').value=matchPreset(state);
+  set('display-exposure',state.exposure.toFixed(1));set('display-angle',String(state.angle));set('display-intensity',state.intensity.toFixed(2));set('display-shadow',String(Math.round(state.shadow*100)));
+  const colours=sceneCtx.themeColors();
+  $('display-bg').value=state.bgAuto?hexOf(colours.bg):state.background;set('display-bg-text',state.bgAuto?'':state.background.toUpperCase());
+  $('display-floor').value=state.floorAuto?hexOf(colours.ground):state.floor;set('display-floor-text',state.floorAuto?'':state.floor.toUpperCase());$('display-finish').value=state.finish;
   $('display-theme').value=theme?.get?.()||'system';$('display-projection').value=getMode?.()==='studio'?'studio':'engineering';if(gridToggle)$('display-grid').checked=gridToggle.checked;
+  const mode=existing('color-mode'),scheme=existing('flow-scheme');if(mode)$('display-colour').value=mode.value;$('display-scheme-row').hidden=!(mode&&mode.value==='flow'&&scheme);if(scheme)$('display-scheme').value=scheme.value;
  };
  open.onclick=()=>show(panel.hidden);$('display-close').onclick=()=>{show(false);open.focus();};
  panel.addEventListener('keydown',e=>{if(e.key==='Escape'){show(false);open.focus();e.stopPropagation();}});
  $('display-reset').onclick=()=>{theme?.set?.('system');apply(DISPLAY_DEFAULTS);};
  $('display-mode').onchange=e=>apply({...state,mode:e.target.value});
  $('display-preset').onchange=e=>apply(applyPreset(state,e.target.value));
- for(const [id,key] of [['display-exposure','exposure'],['display-angle','angle'],['display-intensity','intensity'],['display-shadow','shadow']])$(id).oninput=e=>apply({...state,[key]:+e.target.value});
- $('display-bg-auto').onchange=e=>apply({...state,bgAuto:e.target.checked});$('display-bg').oninput=e=>apply({...state,background:e.target.value,bgAuto:false});
- $('display-floor-auto').onchange=e=>apply({...state,floorAuto:e.target.checked});$('display-floor').oninput=e=>apply({...state,floor:e.target.value,floorAuto:false});$('display-finish').onchange=e=>apply({...state,finish:e.target.value});
+ for(const [id,key,scale] of [['display-exposure','exposure',1],['display-angle','angle',1],['display-intensity','intensity',1],['display-shadow','shadow',.01]]){
+  $(id).oninput=e=>{if(e.target.value!==''&&Number.isFinite(+e.target.value))apply({...state,[key]:+e.target.value*scale});};
+  $(id).onchange=()=>sync();
+ }
+ const colourField=(swatch,text,key,autoKey)=>{
+  $(swatch).oninput=e=>apply({...state,[key]:e.target.value,[autoKey]:false});
+  $(text).onchange=e=>{const v=e.target.value.trim();if(v===''||/^auto$/i.test(v))apply({...state,[autoKey]:true});else if(HEX.test(v))apply({...state,[key]:v.startsWith('#')?v:'#'+v,[autoKey]:false});else sync();};
+ };
+ colourField('display-bg','display-bg-text','background','bgAuto');colourField('display-floor','display-floor-text','floor','floorAuto');
+ $('display-finish').onchange=e=>apply({...state,finish:e.target.value});
  $('display-theme').onchange=e=>{theme?.set?.(e.target.value);};
  $('display-projection').onchange=e=>setMode?.(e.target.value);
+ $('display-colour').onchange=e=>{const m=existing('color-mode');if(m){m.value=e.target.value;m.dispatchEvent(new Event('change',{bubbles:true}));}sync();};
+ $('display-scheme').onchange=e=>{const m=existing('flow-scheme');if(m){m.value=e.target.value;m.dispatchEvent(new Event('change',{bubbles:true}));}};
+ for(const id of ['color-mode','flow-scheme'])existing(id)?.addEventListener('change',sync);
  if(gridToggle){$('display-grid').onchange=e=>{if(gridToggle.checked!==e.target.checked)gridToggle.click();};gridToggle.addEventListener('change',sync);}
+ const host=doc.querySelector('#view-settings-dialog .view-settings');
+ if(host){const link=doc.createElement('button');link.type='button';link.id='display-from-settings';link.className='wide';link.textContent='Display settings: lighting, background, floor';link.onclick=()=>{const dlg=doc.getElementById('view-settings-dialog');if(dlg?.open)dlg.close();show(true);};host.prepend(link);}
  doc.defaultView?.addEventListener('themechange',()=>apply(state,false));
  if(typeof MutationObserver!=='undefined')for(const id of ['engineering-mode','studio-mode']){const el=doc.getElementById(id);if(el)new MutationObserver(sync).observe(el,{attributes:true,attributeFilter:['aria-pressed']});}
  apply(state,false);

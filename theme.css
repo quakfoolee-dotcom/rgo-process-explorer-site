@@ -5,3 +5,8 @@ html[data-theme="light"]{color-scheme:light}
 #theme-toggle{min-width:84px}
 /* "Take photo" had no toolbar icon defined, so the shared icon style drew a solid square. Camera icon, same style as toolbar-icons.css. */
 #stage-toolbar #take-photo{--tool-icon:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%207h3l2-3h6l2%203h3v12H4V7Z%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2213%22%20r%3D%223.5%22%2F%3E%3C%2Fsvg%3E")}
+/* Title over the 3D view stays readable on any Display background colour (V342): set by display-panel.js from the background's lightness, whatever the theme. */
+html[data-stage-bg="light"] .stage-title .eyebrow{color:#3a4f63}
+html[data-stage-bg="light"] .stage-title>span:last-child{color:#5a6c7a}
+html[data-stage-bg="dark"] .stage-title .eyebrow{color:#c4d4e5}
+html[data-stage-bg="dark"] .stage-title>span:last-child{color:#9db3c4}
