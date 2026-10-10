@@ -1,7 +1,7 @@
 // Pipe identification by fluid hazard, following the class structure of ANSI/ASME A13.1-2023 as summarised in a vendor guide
 // (colour field, upper-case legend, flow arrow, size chart, placement). Project convention only: the standard text, owner
 // requirements and CAN/CGSB-24.3 are still to be confirmed, and every class is a proposed default pending a hazard review against
-// the safety data sheets. The last four classes are the standard's user-defined colours.
+// the safety data sheets. The last three classes are the standard's user-defined colours. Argon and nitrogen are shown as non-hazardous gases: safety-blue marker with white letters (V348, from vendor and Wikipedia summaries; confirm against the A13.1-2023 table). The line colour is a cyan-leaning blue so argon lines read apart from compressed air (`#2f78e0`) in 3D; the marker blue is the same as air, as the standard has it.
 export const ASME_BASIS={title:'Pipe identification · ANSI/ASME A13.1-2023 class structure',status:'Proposed defaults, hazard review pending',
  note:'Colour field, upper-case legend, flow arrow, size chart and placement follow a vendor summary of ANSI/ASME A13.1-2023. Classes by fluid hazard, not by service name. Project convention: confirm against the standard text, owner requirements and CAN/CGSB-24.3 before issue.'};
 // color: display colour of the piping in the model; field and letters: the marker colours (border: marker outline, abandoned piping only).
@@ -14,7 +14,7 @@ export const ASME_CLASSES={
  water:{label:'Cold and tepid water (cooling, chilled, RO, waste)',color:'#2fa65a',field:'#2fa65a',letters:'#ffffff',rank:5,userDefined:false,example:'RO, city, cooling, chilled water; wastewater; process drains. Hot water: class to confirm'},
  air:{label:'Compressed air',color:'#2f78e0',field:'#2f78e0',letters:'#ffffff',rank:6,userDefined:false,example:'Instrument, process and service air'},
  abandoned:{label:'Abandoned piping',color:'#e9eef3',field:'#ffffff',letters:'#101820',border:'#101820',rank:7,userDefined:false,reserved:true,example:'Abandoned piping (none modelled yet)'},
- inert:{label:'Inert and asphyxiant gases · user-defined',color:'#4d5b6b',field:'#1a1f26',letters:'#ffffff',rank:8,userDefined:true,example:'Argon, nitrogen (white on black)'},
+ inert:{label:'Non-hazardous gases · argon, nitrogen (asphyxiation risk in enclosed spaces)',color:'#1ea3cf',field:'#2f78e0',letters:'#ffffff',rank:8,userDefined:false,example:'Argon, nitrogen (white on safety blue; the legend text tells them from compressed air)'},
  product:{label:'Process product and slurry · user-defined',color:'#7b4fc4',field:'#7b4fc4',letters:'#ffffff',rank:9,userDefined:true,example:'Pre-G, GO suspension, rGO, pellets (white on purple)'},
  vent:{label:'Vents, off-gas and dust · user-defined',color:'#8a5a2b',field:'#8a5a2b',letters:'#ffffff',rank:10,userDefined:true,example:'Vents, exhaust, dust collection, thermal off-gas (white on brown)'},
  review:{label:'Not classified · hazard review',color:'#c9b88a',field:'#ffffff',letters:'#101820',rank:11,userDefined:true,example:'Service or medium needs a hazard assessment (black on white)'}
@@ -27,6 +27,7 @@ export const markerSize=odMm=>{const index=MARKER_SIZES.findIndex(x=>odMm<=x.max
 // Hazard review register: one line per class. Set status to 'approved' with reviewer and date once the SDS review is signed off.
 export const ASME_REVIEW=Object.fromEntries(Object.keys(ASME_CLASSES).map(k=>[k,{status:'proposed',reviewer:'',date:'',sds:'Check against the safety data sheets of every service listed for this class'}]));
 ASME_REVIEW.steam.sds='No steam line is modelled yet; add the class lines when steam is part of the design';
+ASME_REVIEW.inert.sds='Argon and nitrogen follow the summaries that put non-hazardous gases in safety blue with white letters; some vendors list argon in another colour for older editions. Confirm the colour table in ANSI/ASME A13.1-2023 and the owner requirements, and keep the asphyxiation warning for enclosed spaces (argon doors and pit safety basis)';
 ASME_REVIEW.abandoned.sds='No abandoned piping is modelled; the class is reserved for future use';
 ASME_REVIEW.water.sds='Hot-water lines (thermal utility) are not cold or tepid water: confirm their class against the standard text';
 ASME_REVIEW.fire.sds='No fire-water line is modelled yet; add the class lines with the fire-protection design';
