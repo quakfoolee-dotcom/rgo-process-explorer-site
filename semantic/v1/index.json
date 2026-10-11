@@ -4054,6 +4054,38 @@
       }
     },
     {
+      "assetId": "IF-A2000-CF-WASTE",
+      "area": "A-2000",
+      "equipmentId": null,
+      "recordScope": "external-interface",
+      "endpoints": {
+        "assets": "./assets/IF-A2000-CF-WASTE.json",
+        "relationships": "./relationships/IF-A2000-CF-WASTE.json",
+        "streams": "./streams/IF-A2000-CF-WASTE.json",
+        "documents": "./documents/IF-A2000-CF-WASTE.json",
+        "state": "./state/IF-A2000-CF-WASTE.json",
+        "geometry": "./geometry/IF-A2000-CF-WASTE.json",
+        "provenance": "./provenance/IF-A2000-CF-WASTE.json",
+        "instruments": "./instruments/IF-A2000-CF-WASTE.json"
+      }
+    },
+    {
+      "assetId": "IF-A2000-RO-DRAIN",
+      "area": "A-2000",
+      "equipmentId": null,
+      "recordScope": "external-interface",
+      "endpoints": {
+        "assets": "./assets/IF-A2000-RO-DRAIN.json",
+        "relationships": "./relationships/IF-A2000-RO-DRAIN.json",
+        "streams": "./streams/IF-A2000-RO-DRAIN.json",
+        "documents": "./documents/IF-A2000-RO-DRAIN.json",
+        "state": "./state/IF-A2000-RO-DRAIN.json",
+        "geometry": "./geometry/IF-A2000-RO-DRAIN.json",
+        "provenance": "./provenance/IF-A2000-RO-DRAIN.json",
+        "instruments": "./instruments/IF-A2000-RO-DRAIN.json"
+      }
+    },
+    {
       "assetId": "V-3110",
       "area": "A-3000",
       "equipmentId": 600,
@@ -8359,6 +8391,22 @@
     },
     {
       "id": "GEOMETRY-IF-A2000-CITY",
+      "type": "GeometryBinding"
+    },
+    {
+      "id": "IF-A2000-CF-WASTE",
+      "type": "ExternalInterface"
+    },
+    {
+      "id": "GEOMETRY-IF-A2000-CF-WASTE",
+      "type": "GeometryBinding"
+    },
+    {
+      "id": "IF-A2000-RO-DRAIN",
+      "type": "ExternalInterface"
+    },
+    {
+      "id": "GEOMETRY-IF-A2000-RO-DRAIN",
       "type": "GeometryBinding"
     },
     {

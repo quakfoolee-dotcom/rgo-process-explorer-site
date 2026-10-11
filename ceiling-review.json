@@ -1,7 +1,7 @@
 {
   "revision": "V328",
   "decision": "D-MDL-10",
-  "generated": "2026-10-11T07:53:08.356Z",
+  "generated": "2026-10-11T19:02:42.123Z",
   "basis": {
     "ceilingFt": 30,
     "ceilingM": 9.14,
@@ -11,7 +11,7 @@
     "note": "30 ft ceiling from QFL (2026-10-08). The 0.85 m clearance for roof steel, lights and sprinklers, the single ceiling height for the whole footprint, and the absence of a high bay are assumptions pending the as-built building drawings.",
     "wallHeightM": 9.14
   },
-  "scanned": 77793,
+  "scanned": 77901,
   "insideGroups": 323,
   "aboveCeilingGroups": 228,
   "steelZoneGroups": 94,
@@ -168,7 +168,7 @@
       "platform": 0,
       "pipe": 12,
       "fitting": 10,
-      "max": 10.69
+      "max": 10.86
     },
     {
       "area": "A-800",
@@ -251,7 +251,7 @@
       "partsAbove": 140,
       "partsAboveCeiling": 120,
       "maxTop": 15.22,
-      "highestPart": "PR-A600-S149 shared longitudinal rail",
+      "highestPart": "PR-A600-S146 shared longitudinal rail",
       "x": 55.8,
       "z": 14.4,
       "overCeilingM": 6.08,
@@ -350,7 +350,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2606",
+      "key": "LINE-2618",
       "label": "DR-601 wash vent to SC-601 header",
       "area": "plant-wide",
       "service": "Vent",
@@ -386,7 +386,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2607",
+      "key": "LINE-2619",
       "label": "F-601 service vent to vent header",
       "area": "plant-wide",
       "service": "Vent",
@@ -474,7 +474,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2438",
+      "key": "LINE-2450",
       "label": "TCU-303 single secondary return riser",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -492,7 +492,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2439",
+      "key": "LINE-2451",
       "label": "TCU-303 single secondary return header",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -510,7 +510,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2524",
+      "key": "LINE-2536",
       "label": "T-303 return branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -580,7 +580,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2436",
+      "key": "LINE-2448",
       "label": "TCU-303 single secondary supply riser",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -598,7 +598,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2437",
+      "key": "LINE-2449",
       "label": "TCU-303 single secondary supply header",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -616,7 +616,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2520",
+      "key": "LINE-2532",
       "label": "T-303 supply branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -637,10 +637,10 @@
       "key": "rack A-3000",
       "label": "Pipe rack and supports A-3000",
       "area": "A-3000",
-      "partsAbove": 1154,
-      "partsAboveCeiling": 1106,
+      "partsAbove": 1153,
+      "partsAboveCeiling": 1105,
       "maxTop": 13.27,
-      "highestPart": "PR-A3000-S157 shared longitudinal rail",
+      "highestPart": "PR-A3000-S155 shared longitudinal rail",
       "x": 115.5,
       "z": 39.6,
       "overCeilingM": 4.13,
@@ -687,7 +687,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2369",
+      "key": "LINE-2381",
       "label": "Chilled water return riser",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -705,7 +705,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2371",
+      "key": "LINE-2383",
       "label": "CHWR distribution header",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -723,7 +723,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2452",
+      "key": "LINE-2464",
       "label": "TCU-201 return branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -741,7 +741,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2468",
+      "key": "LINE-2480",
       "label": "TCU-303 return branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -759,7 +759,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2476",
+      "key": "LINE-2488",
       "label": "TCU-141 cooldown return branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -794,7 +794,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2368",
+      "key": "LINE-2380",
       "label": "Chilled water supply riser",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -812,7 +812,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2370",
+      "key": "LINE-2382",
       "label": "CHWS distribution header",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -830,7 +830,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2448",
+      "key": "LINE-2460",
       "label": "TCU-201 supply branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -848,7 +848,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2464",
+      "key": "LINE-2476",
       "label": "TCU-303 supply branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -866,7 +866,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2472",
+      "key": "LINE-2484",
       "label": "TCU-141 cooldown supply branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -1027,7 +1027,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1703",
+      "key": "LINE-1715",
       "label": "XV-IA201-A passage",
       "area": "A-4000",
       "service": "Compressed air",
@@ -1045,7 +1045,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1707",
+      "key": "LINE-1719",
       "label": "XV-IA201-B passage",
       "area": "A-4000",
       "service": "Compressed air",
@@ -1063,7 +1063,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1711",
+      "key": "LINE-1723",
       "label": "XV-IA201-C passage",
       "area": "A-4000",
       "service": "Compressed air",
@@ -1081,7 +1081,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1715",
+      "key": "LINE-1727",
       "label": "XV-IA201-D passage",
       "area": "A-4000",
       "service": "Compressed air",
@@ -1099,7 +1099,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1704",
+      "key": "LINE-1716",
       "label": "BL-IA201-A branch reducer",
       "area": "A-4000",
       "service": "Instrument air",
@@ -1117,7 +1117,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1708",
+      "key": "LINE-1720",
       "label": "BL-IA201-B branch reducer",
       "area": "A-4000",
       "service": "Instrument air",
@@ -1135,7 +1135,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1712",
+      "key": "LINE-1724",
       "label": "BL-IA201-C branch reducer",
       "area": "A-4000",
       "service": "Instrument air",
@@ -1153,7 +1153,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1716",
+      "key": "LINE-1728",
       "label": "BL-IA201-D branch reducer",
       "area": "A-4000",
       "service": "Instrument air",
@@ -1177,7 +1177,7 @@
       "partsAbove": 231,
       "partsAboveCeiling": 229,
       "maxTop": 12.2,
-      "highestPart": "PS-A4000-1095 bearing collar",
+      "highestPart": "PS-A4000-1087 bearing collar",
       "x": -0.1,
       "z": -5.4,
       "overCeilingM": 3.05,
@@ -1188,7 +1188,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1702",
+      "key": "LINE-1714",
       "label": "BL-IA201-A top takeoff",
       "area": "A-4000",
       "service": "Instrument air",
@@ -1206,7 +1206,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1706",
+      "key": "LINE-1718",
       "label": "BL-IA201-B top takeoff",
       "area": "A-4000",
       "service": "Instrument air",
@@ -1224,7 +1224,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1710",
+      "key": "LINE-1722",
       "label": "BL-IA201-C top takeoff",
       "area": "A-4000",
       "service": "Instrument air",
@@ -1242,7 +1242,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1714",
+      "key": "LINE-1726",
       "label": "BL-IA201-D top takeoff",
       "area": "A-4000",
       "service": "Instrument air",
@@ -1260,7 +1260,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1705",
+      "key": "LINE-1717",
       "label": "A-4000 to BL-IA201-A",
       "area": "A-4000",
       "service": "Instrument air",
@@ -1278,7 +1278,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1709",
+      "key": "LINE-1721",
       "label": "A-4000 to BL-IA201-B",
       "area": "A-4000",
       "service": "Instrument air",
@@ -1296,7 +1296,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1713",
+      "key": "LINE-1725",
       "label": "A-4000 to BL-IA201-C",
       "area": "A-4000",
       "service": "Instrument air",
@@ -1314,7 +1314,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1717",
+      "key": "LINE-1729",
       "label": "A-4000 to BL-IA201-D",
       "area": "A-4000",
       "service": "Instrument air",
@@ -1332,7 +1332,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2434",
+      "key": "LINE-2446",
       "label": "TCU-1001 single secondary return riser",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -1350,7 +1350,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2435",
+      "key": "LINE-2447",
       "label": "TCU-1001 single secondary return header",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -1368,7 +1368,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2572",
+      "key": "LINE-2584",
       "label": "R-1001 return branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -1440,7 +1440,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1691",
+      "key": "LINE-1703",
       "label": "XV-IA-SEC0 passage",
       "area": "A-4000",
       "service": "Compressed air",
@@ -1458,7 +1458,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1694",
+      "key": "LINE-1706",
       "label": "XV-IA-SEC1 passage",
       "area": "A-4000",
       "service": "Compressed air",
@@ -1476,7 +1476,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1697",
+      "key": "LINE-1709",
       "label": "XV-IA-SEC2 passage",
       "area": "A-4000",
       "service": "Compressed air",
@@ -1494,7 +1494,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1700",
+      "key": "LINE-1712",
       "label": "XV-IA-SEC3 passage",
       "area": "A-4000",
       "service": "Compressed air",
@@ -1512,7 +1512,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1690",
+      "key": "LINE-1702",
       "label": "HD-4001 loop lead 0",
       "area": "A-4000",
       "service": "Instrument air",
@@ -1530,7 +1530,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1693",
+      "key": "LINE-1705",
       "label": "HD-4001 loop lead 1",
       "area": "A-4000",
       "service": "Instrument air",
@@ -1548,7 +1548,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1696",
+      "key": "LINE-1708",
       "label": "HD-4001 loop lead 2",
       "area": "A-4000",
       "service": "Instrument air",
@@ -1566,7 +1566,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1699",
+      "key": "LINE-1711",
       "label": "HD-4001 loop lead 3",
       "area": "A-4000",
       "service": "Instrument air",
@@ -1584,7 +1584,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1689",
+      "key": "LINE-1701",
       "label": "A-4000 overhead air supply",
       "area": "A-4000",
       "service": "Instrument air",
@@ -1602,7 +1602,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1692",
+      "key": "LINE-1704",
       "label": "HD-4001 loop section 0",
       "area": "A-4000",
       "service": "Instrument air",
@@ -1620,7 +1620,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1695",
+      "key": "LINE-1707",
       "label": "HD-4001 loop section 1",
       "area": "A-4000",
       "service": "Instrument air",
@@ -1638,7 +1638,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1698",
+      "key": "LINE-1710",
       "label": "HD-4001 loop section 2",
       "area": "A-4000",
       "service": "Instrument air",
@@ -1656,7 +1656,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1701",
+      "key": "LINE-1713",
       "label": "HD-4001 loop section 3",
       "area": "A-4000",
       "service": "Instrument air",
@@ -1674,7 +1674,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2432",
+      "key": "LINE-2444",
       "label": "TCU-1001 single secondary supply riser",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -1692,7 +1692,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2433",
+      "key": "LINE-2445",
       "label": "TCU-1001 single secondary supply header",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -1710,7 +1710,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2568",
+      "key": "LINE-2580",
       "label": "R-1001 supply branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -1784,10 +1784,10 @@
       "key": "rack A-2000",
       "label": "Pipe rack and supports A-2000",
       "area": "A-2000",
-      "partsAbove": 660,
-      "partsAboveCeiling": 650,
+      "partsAbove": 646,
+      "partsAboveCeiling": 637,
       "maxTop": 11.45,
-      "highestPart": "PS-A2000-2956 consolidated bracket",
+      "highestPart": "PS-A2000-2947 consolidated bracket",
       "x": 1.9,
       "z": -3.4,
       "overCeilingM": 2.3,
@@ -1804,7 +1804,7 @@
       "partsAbove": 345,
       "partsAboveCeiling": 223,
       "maxTop": 11.45,
-      "highestPart": "PS-A200-0851 secondary bracket",
+      "highestPart": "PS-A200-0836 secondary bracket",
       "x": 0.7,
       "z": -9,
       "overCeilingM": 2.3,
@@ -1851,7 +1851,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2307",
+      "key": "LINE-2319",
       "label": "Cooling water return riser",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -1869,7 +1869,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2309",
+      "key": "LINE-2321",
       "label": "CWR distribution header",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -1904,7 +1904,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2460",
+      "key": "LINE-2472",
       "label": "TCU-1001 return branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -1922,7 +1922,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2532",
+      "key": "LINE-2544",
       "label": "E-501 return branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -1940,7 +1940,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2540",
+      "key": "LINE-2552",
       "label": "E-701 return branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -1958,7 +1958,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2548",
+      "key": "LINE-2560",
       "label": "E-702 return branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -1976,7 +1976,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2556",
+      "key": "LINE-2568",
       "label": "PY-801 return branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -1994,7 +1994,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2564",
+      "key": "LINE-2576",
       "label": "E-801 return branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -2065,7 +2065,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2306",
+      "key": "LINE-2318",
       "label": "Cooling water supply riser",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -2083,7 +2083,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2308",
+      "key": "LINE-2320",
       "label": "CWS distribution header",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -2101,7 +2101,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2456",
+      "key": "LINE-2468",
       "label": "TCU-1001 supply branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -2119,7 +2119,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2528",
+      "key": "LINE-2540",
       "label": "E-501 supply branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -2137,7 +2137,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2536",
+      "key": "LINE-2548",
       "label": "E-701 supply branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -2155,7 +2155,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2544",
+      "key": "LINE-2556",
       "label": "E-702 supply branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -2173,7 +2173,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2552",
+      "key": "LINE-2564",
       "label": "PY-801 supply branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -2191,7 +2191,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2560",
+      "key": "LINE-2572",
       "label": "E-801 supply branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -2206,6 +2206,23 @@
       "zone": "above ceiling",
       "exempt": false,
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
+    },
+    {
+      "type": "rack",
+      "key": "rack A-1000",
+      "label": "Pipe rack and supports A-1000",
+      "area": "A-1000",
+      "partsAbove": 322,
+      "partsAboveCeiling": 133,
+      "maxTop": 10.86,
+      "highestPart": "PS-A1000-3148 secondary bracket",
+      "x": 52.9,
+      "z": -1.6,
+      "overCeilingM": 1.72,
+      "overClearM": 2.57,
+      "zone": "above ceiling",
+      "exempt": false,
+      "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
     },
     {
       "type": "fitting",
@@ -2332,23 +2349,6 @@
       "options": "Lower the line with its rack tier or take it out of the building at a lower level; sloped vents keep their fall."
     },
     {
-      "type": "rack",
-      "key": "rack A-1000",
-      "label": "Pipe rack and supports A-1000",
-      "area": "A-1000",
-      "partsAbove": 327,
-      "partsAboveCeiling": 133,
-      "maxTop": 10.69,
-      "highestPart": "PR-A1000-S034 shared longitudinal rail",
-      "x": 33.6,
-      "z": -0.4,
-      "overCeilingM": 1.55,
-      "overClearM": 2.4,
-      "zone": "above ceiling",
-      "exempt": false,
-      "options": "Re-stack tiers at a tighter spacing, fewer tiers or wider single-level racks; run vent headers outside at a lower level."
-    },
-    {
       "type": "pipe",
       "key": "LINE-574",
       "label": "F-601 service wash interface",
@@ -2386,7 +2386,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1581",
+      "key": "LINE-1593",
       "label": "A-2000 water to BL-RO-F161",
       "area": "A-2000",
       "service": "RO water",
@@ -2410,7 +2410,7 @@
       "partsAbove": 46,
       "partsAboveCeiling": 1,
       "maxTop": 10.5,
-      "highestPart": "PS-A800-0978 secondary bracket",
+      "highestPart": "PS-A800-0963 secondary bracket",
       "x": 103.2,
       "z": 38,
       "overCeilingM": 1.36,
@@ -2565,7 +2565,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2426",
+      "key": "LINE-2438",
       "label": "TCU-141 single secondary return riser",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -2583,7 +2583,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2427",
+      "key": "LINE-2439",
       "label": "TCU-141 single secondary return header",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -2601,7 +2601,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2484",
+      "key": "LINE-2496",
       "label": "R-141A return branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -2619,7 +2619,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2492",
+      "key": "LINE-2504",
       "label": "R-141B return branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -2637,7 +2637,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2500",
+      "key": "LINE-2512",
       "label": "R-141C return branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -2655,7 +2655,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2508",
+      "key": "LINE-2520",
       "label": "R-141D return branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -2750,7 +2750,7 @@
       "partsAbove": 80,
       "partsAboveCeiling": 20,
       "maxTop": 10.32,
-      "highestPart": "PS-A700-0763 consolidated bracket",
+      "highestPart": "PS-A700-0739 consolidated bracket",
       "x": 60.2,
       "z": 22.1,
       "overCeilingM": 1.18,
@@ -2797,7 +2797,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1580",
+      "key": "LINE-1592",
       "label": "A-2000 water to BL-RO162",
       "area": "A-2000",
       "service": "RO water",
@@ -3013,7 +3013,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2424",
+      "key": "LINE-2436",
       "label": "TCU-141 single secondary supply riser",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -3031,7 +3031,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2425",
+      "key": "LINE-2437",
       "label": "TCU-141 single secondary supply header",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -3049,7 +3049,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2480",
+      "key": "LINE-2492",
       "label": "R-141A supply branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -3067,7 +3067,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2488",
+      "key": "LINE-2500",
       "label": "R-141B supply branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -3085,7 +3085,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2496",
+      "key": "LINE-2508",
       "label": "R-141C supply branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -3103,7 +3103,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2504",
+      "key": "LINE-2516",
       "label": "R-141D supply branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -3301,7 +3301,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1582",
+      "key": "LINE-1594",
       "label": "A-2000 water to BL-RO-201",
       "area": "A-2000",
       "service": "RO water",
@@ -3485,7 +3485,7 @@
       "partsAbove": 17,
       "partsAboveCeiling": 12,
       "maxTop": 9.72,
-      "highestPart": "PS-A300-2422 bearing collar",
+      "highestPart": "PS-A300-2421 bearing collar",
       "x": 6.5,
       "z": -4.8,
       "overCeilingM": 0.58,
@@ -3694,7 +3694,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1579",
+      "key": "LINE-1591",
       "label": "A-2000 water to BL-RO161",
       "area": "A-2000",
       "service": "RO water",
@@ -3736,7 +3736,7 @@
       "partsAbove": 2,
       "partsAboveCeiling": 2,
       "maxTop": 9.53,
-      "highestPart": "PS-A500-0916 secondary bracket",
+      "highestPart": "PS-A500-0901 secondary bracket",
       "x": 35,
       "z": 10.5,
       "overCeilingM": 0.39,
@@ -3770,7 +3770,7 @@
       "partsAbove": 6,
       "partsAboveCeiling": 6,
       "maxTop": 9.46,
-      "highestPart": "PS-A400-2480 secondary bracket",
+      "highestPart": "PS-A400-2479 secondary bracket",
       "x": 11.3,
       "z": 19,
       "overCeilingM": 0.32,
@@ -3853,7 +3853,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1578",
+      "key": "LINE-1590",
       "label": "A-2000 water to BL-RO400",
       "area": "A-2000",
       "service": "RO water",
@@ -4513,7 +4513,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2573",
+      "key": "LINE-2585",
       "label": "XV-5000-BL-CWR1000 passage",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -4566,7 +4566,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2575",
+      "key": "LINE-2587",
       "label": "R-1001 return mating reducer",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -4638,7 +4638,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2574",
+      "key": "LINE-2586",
       "label": "R-1001 return service station outlet",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -4715,7 +4715,7 @@
       "partsAbove": 18,
       "partsAboveCeiling": 0,
       "maxTop": 8.89,
-      "highestPart": "PS-A6000-3116 bearing collar",
+      "highestPart": "PS-A6000-3106 bearing collar",
       "x": 59,
       "z": 28.8,
       "overCeilingM": 0,
@@ -4906,7 +4906,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2430",
+      "key": "LINE-2442",
       "label": "TCU-201 single secondary return riser",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -4924,7 +4924,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2431",
+      "key": "LINE-2443",
       "label": "TCU-201 single secondary return header",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -4942,7 +4942,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2516",
+      "key": "LINE-2528",
       "label": "R-201A return branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -5193,7 +5193,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2569",
+      "key": "LINE-2581",
       "label": "XV-5000-BL-CWS1000 passage",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -5436,7 +5436,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2570",
+      "key": "LINE-2582",
       "label": "R-1001 supply service station outlet",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -5454,7 +5454,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2571",
+      "key": "LINE-2583",
       "label": "R-1001 supply mating reducer",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -5669,7 +5669,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2428",
+      "key": "LINE-2440",
       "label": "TCU-201 single secondary supply riser",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -5687,7 +5687,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2429",
+      "key": "LINE-2441",
       "label": "TCU-201 single secondary supply header",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -5705,7 +5705,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2512",
+      "key": "LINE-2524",
       "label": "R-201A supply branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -5830,7 +5830,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-1577",
+      "key": "LINE-1589",
       "label": "P-2011 to distribution header",
       "area": "A-2000",
       "service": "RO water",
@@ -6114,7 +6114,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2309",
+      "key": "LINE-2321",
       "label": "CWR distribution header",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -6132,7 +6132,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2552",
+      "key": "LINE-2564",
       "label": "PY-801 supply branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",
@@ -6150,7 +6150,7 @@
     },
     {
       "type": "pipe",
-      "key": "LINE-2560",
+      "key": "LINE-2572",
       "label": "E-801 supply branch to service station",
       "area": "A-5000",
       "service": "Thermal utility",

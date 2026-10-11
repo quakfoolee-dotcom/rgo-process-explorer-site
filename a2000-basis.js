@@ -11,13 +11,13 @@ const calc=calculateA2000();
 export const A2000_QUALITY=[['TDS','< 250 mg/L'],['Chloride','< 50 mg/L'],['Sulfate','< 30 mg/L'],['Hardness as CaCO₃','< 10 mg/L'],['Iron','< 0.05 mg/L'],['Manganese','< 0.02 mg/L'],['Turbidity','< 0.2 NTU'],['Product pH','5.5–6.5'],['H₂O₂ / free chlorine','Non-detect; analytical detection limits to be agreed']];
 // RO-2011 skid: one rack, five 8-inch vessels of six 40-inch elements (3 + 2), vessels along z. Shared with reclaimed-water.js and the access zones.
 export const RO2011={x:73,zf:-14.8,zb:-8,elementsPerVessel:6};
-const common={areaId:'A-2000',designStatus:'listed',geometryBasis:'A2000-41',geometryStatus:'Proposed arrangement from PFD Rev F and the MDL-008 V25 flowsheet; vendor dimensions, capacities and materials unqualified',reviewNote:'Draft basis. City water quality, demand balance, membrane projection, pressure ratings and waste acceptance remain open.'};
+const common={areaId:'A-2000',designStatus:'listed',geometryBasis:'A2000-42',geometryStatus:'Proposed arrangement from PFD Rev G and the MDL-008 V25 flowsheet; vendor dimensions, capacities and materials unqualified',reviewNote:'Draft basis. City water quality, demand balance, membrane projection, pressure ratings and waste acceptance remain open.'};
 const eq=(tag,label,x,z,op,extra={})=>({...common,tag,label,x,z,primaryOperation:op,labelY:3.7,...extra});
 const tank=(tag,label,x,z,r,capacityM3,op,extra={})=>eq(tag,label,x,z,op,{radius:r,bottom:.26,top:.26+capacityM3/(Math.PI*(r-.04)**2),capacityM3,...extra});
 export const A2000_EQUIPMENT={
  501:tank('T-2011','PW-4 RO water tank · about 50 m³ (MDL-008 provisional)',63.5,-14.3,1.75,50,'rodistribute',{designStatus:'proposed',geometryStatus:'About 2 h of the 19.6 m³/h PW-4 draw; provisional tag from the MDL-008 V25 flowsheet (ruling A20-03). Diameter and height are model choices.'}),
  502:eq('P-2011','PW-4 RO water pump · A/B (provisional)',66.2,-12.17,'rodistribute',{designStatus:'proposed'}),
- 506:eq('P-2012','RO-2011 feed pump · vertical multistage VFD (provisional)',71.5,-16.3,'rorecover',{designStatus:'proposed'}),
+ 506:eq('P-2012','RO-2011 feed pump · vertical multistage VFD (provisional)',70.85,-13.6,'rorecover',{designStatus:'proposed'}),
  507:eq('RO-2011','City-water RO · 75 % recovery, five 8-inch vessels (provisional)',73,-11.4,'rorecover',{designStatus:'proposed'}),
  508:tank('T-2002','Process water tank · 100 m³ (FEED-PE-DAT-136)',63.5,-6.5,2.25,100,'rodistribute',{geometryStatus:'100 m³ nominal from FEED-PE-DAT-136 (D-A2000-03); Ø 4.5 m and about 6.5 m tall to save plot area (model choice, D-MDL-01 MC-2). PW-6 process water: RO-2011 reject plus carbon-filtered city make-up'}),
  509:eq('P-2005','PW-6 process-water pump',63.5,-2.2,'rodistribute'),
@@ -27,7 +27,7 @@ export const A2000_EQUIPMENT={
  515:eq('CIP-2001','RO cleaning skid · sequential acid / alkaline service',83.95,-3.75,'roclean'),
  516:eq('CP-2000','Reclaimed-water control and quality station',69,-2.4,'rorecover',{designStatus:'proposed',labelY:2.3}),
  521:tank('TK-CIP2001-W','Segregated spent CIP hold · 5 m³ allowance',84.85,-8.85,.95,5,'roclean',{designStatus:'proposed'}),
- 522:eq('CF-2003','RO-2011 guard cartridge filter housing',70.6,-17,'ropretreat',{radius:.23,labelY:2.1,designStatus:'proposed',packageParentId:506,processAssociation:'P-2012',reviewNote:'Conceptual cartridge, seals, closure and supports; vendor selection, pressure rating, filtration duty and removal clearance require confirmation.'}),
+ 522:eq('CF-2003','RO-2011 guard cartridge filter housing',70.7,-10.2,'ropretreat',{radius:.23,labelY:2.1,designStatus:'proposed',packageParentId:506,processAssociation:'P-2012',reviewNote:'Conceptual cartridge, seals, closure and supports; vendor selection, pressure rating, filtration duty and removal clearance require confirmation.'}),
 };
 // D-A2000-03 (QFL 2026-09-27) put A-2000 on clean sources only; V280 removed the media / UF train, the backwash and brine handling and the third RO train: MMF-2001, GF-2001, UF-2001, P-2001, TK-UF2001, P-UF2001, TK-BW2001, P-BW2001, T-2003, P-2003, GF-RO2001C, RO-2001C, P-2002C.
 // QFL 2026-10-10: Route 0 is the baseline, so there is no A-1100 condensate. The condensate train is removed: T-2001, CF-2001, P-2002 A/B, RO-2001 A/B, GF-RO2001A/B, the NaOH pH-trim pump P-2004B and the blinded condensate inlet BL-A2000-COND. RO-2011, T-2011, P-2011, P-2012 and CF-2003 reuse their equipment ids.
@@ -67,4 +67,4 @@ export const A2000_HOLDS=[
  'Apply BC pressure-equipment/piping registration, applicable codes, electrical approval, safe access and isolation requirements to the selected package. Determine TSBC applicability from the final pressure, volume, materials and piping design; supplier marketing marks do not establish BC acceptance.',
  'Waste discharge requires the applicable Environmental Management Act authorization and receiving-system acceptance. A proposed yellow ES-2000 shower/eyewash serves the chemical-service frontage; verify exposure-based placement, unobstructed access, potable supply, flow and freeze protection under WorkSafeBC Part 5. Keep process-water and potable/emergency-water systems segregated; qualify backflow protection. This model is a FEED review arrangement, not a construction issue or an operating control system.'
 ];
-export const A2000_BASIS={revision:'A2000-41',source:{title:'FEED-PFD-2000',parent:'FEED-PE-PFD-001 V5.1',page:16,status:'Draft – Not for Use'},inputs:A2000_INPUTS,calculated:calc,qualityTargets:A2000_QUALITY,holds:A2000_HOLDS,sources:A2000_SOURCES,approvedSetpoints:null,feedAnalysis:null,regulatoryQualified:false};
+export const A2000_BASIS={revision:'A2000-42',source:{title:'FEED-PFD-2000',parent:'FEED-PE-PFD-001 V5.1',page:16,status:'Draft – Not for Use'},inputs:A2000_INPUTS,calculated:calc,qualityTargets:A2000_QUALITY,holds:A2000_HOLDS,sources:A2000_SOURCES,approvedSetpoints:null,feedAnalysis:null,regulatoryQualified:false};
