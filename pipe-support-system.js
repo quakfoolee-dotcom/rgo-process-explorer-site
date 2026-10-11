@@ -18,6 +18,10 @@ export function buildPipeSupportSystem(h,model){
  const protectedZones=[...ACCESS_ZONES,...model.thermalUtilities?.accessZones||[],...model.compressedAir?.accessZones||[],...model.reactorAir?.accessZones||[]].filter(z=>z.kind!=='utility').map(z=>({...z,box:box(z.min,z.max)}));
  // HR-601 (model-catchup.js) is built after this generator: reserve its slab and casing (7.4 x 3.4 m, 5.6 m high) so no rack or column lands inside it.
  {const hr=model.equipment?.[655];if(hr&&hr.x!=null&&hr.z!=null)protectedZones.push({id:'HR601-RESERVED',kind:'equipment',box:box([hr.x-3.7,0,hr.z-1.7],[hr.x+3.7,5.62,hr.z+1.7])});}
+ // SC-164 (built after this generator) runs along x at z -14.5 from x -10.1 to 7.8 up to 11.1 m with five support columns: keep racks, rails and columns out of its envelope (V354: a rack rail passed its drive column at x 7.5 once the reactor air tubes changed the supported pipe set).
+ protectedZones.push({id:'SC164-RESERVED',kind:'equipment',box:box([-10.2,0,-14.9],[7.9,11.1,-13.5])});
+ // ES-200-04 eyewash station (x -0.5, z -12.6): keep re-planned racks off its reservation.
+ protectedZones.push({id:'ES20004-RESERVED',kind:'equipment',box:box([-1.7,0,-13.9],[0.7,2.6,-11.3])});
  for(const x of[-2.45,2.45])for(const z of[0,-16])protectedZones.push({id:'SF201-WITHDRAW-'+x+'-'+z,kind:'maintenance',box:box([x-.75,5.58,z-9.05],[x+1.35,6.56,z+1.05])});
  // Protect actual existing equipment, piping, hardware and platforms. Fastener-sized
  // details are included in the parent assembly envelope by the access audit.
