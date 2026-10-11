@@ -409,6 +409,7 @@ function routeHex(record){return flowColor(record,flowScheme,serviceColors);}
 let hoverLabel=null,hoverTime=0;
 const asmeActive=()=>colorMode==='flow'&&flowScheme==='asme'&&!(productJourney?.active||thermalTrace?.active);
 // ASME pipe markers (A13.1 summary): real bands on the pipes, sized from the pipe diameter, plus screen-size tags for the overview.
+let openEndsOn=false;try{openEndsOn=localStorage.getItem('rgo-open-ends')==='on'}catch(e){} // V350: open-end tags and caps have their own toggle, off by default
 let pipeNames=true,pipeMarkers=null,pipeBands=null,pipeTags=[],pipeStats={routes:0,directedRoutes:0,unmarked:0,total:0,byReason:{}},bandSig='';const tagState={seen:'',seenAt:0,applied:''},markerTextures=new Map();
 function markerTexture(rec,variant,size){
  const key=rec.asmeClass+'|'+rec.asmeLegend+'|'+variant+'|'+size.index;let tex=markerTextures.get(key);if(tex)return tex;
@@ -442,7 +443,8 @@ function buildPipeBands(){
 }
 const bandMatrix=new T.Matrix4(),bandPos=new T.Vector3();
 // The Pipe names button works only in the Pipe ID view.
-function syncPipeNamesButton(){const b=$('pipe-label-toggle');if(!b)return;const on=asmeActive();if(b.disabled===on){b.disabled=!on;b.title=on?'Show or hide the pipe names and markers':'Pipe names are shown in the Pipe ID view (Flow routes, ASME A13.1 scheme)';}}
+function syncPipeNamesButton(){syncOpenEndsButton();const b=$('pipe-label-toggle');if(!b)return;const on=asmeActive();if(b.disabled===on){b.disabled=!on;b.title=on?'Show or hide the pipe names and markers':'Pipe names are shown in the Pipe ID view (Flow routes, ASME A13.1 scheme)';}}
+function syncOpenEndsButton(){const b=$('open-ends-toggle');if(!b)return;const on=asmeActive();b.disabled=!on;b.title=on?'Show or hide the open-end tags and blind caps on vent, relief, dust and exhaust lines':'Open ends are shown in the Pipe ID view (Flow routes, ASME A13.1 scheme)';b.setAttribute('aria-pressed',String(openEndsOn));b.textContent=openEndsOn?'Open ends on':'Open ends off';}
 function updatePipeBands(){
  syncPipeNamesButton();
  if(!asmeActive()){if(pipeBands)for(const g of pipeBands)g.mesh.visible=false;bandSig='';return;}
@@ -467,7 +469,7 @@ function buildOpenEnds(){
  return out;
 }
 function updateOpenEnds(){
- const on=asmeActive()&&pipeNames&&amount<.001;if(!on&&!openEnds)return;
+ const on=asmeActive()&&openEndsOn&&amount<.001;if(!on&&!openEnds)return;
  if(on&&!openEnds)openEnds=buildOpenEnds();
  const wpp=on?pxWorld():0,tags=on&&wpp>=.008&&wpp<=.12;
  for(const o of openEnds){o.cap.visible=on;o.sp.visible=tags;if(tags){o.sp.position.copy(o.at);o.sp.scale.set(o.ratio*15*wpp,15*wpp,1);}}
@@ -570,6 +572,7 @@ $('color-mode').onchange=()=>setColorMode($('color-mode').value);
 $('flow-scheme').replaceChildren(...Object.entries(FLOW_SCHEMES).map(([value,label])=>new Option(label,value)));$('flow-scheme').value=flowScheme;
 $('flow-scheme').onchange=()=>{flowScheme=$('flow-scheme').value;flowFocus=null;updatePipeBands();renderColorLegend();if(selected)updatePartFlowDetails(selected);dirty=true;};
 const pipeIdButton=$('pipe-id-toggle'),syncPipeIdButton=()=>{pipeIdButton?.setAttribute('aria-pressed',String(colorMode==='flow'&&flowScheme==='asme'));syncPipeNamesButton();};
+if($('open-ends-toggle'))$('open-ends-toggle').onclick=()=>{openEndsOn=!openEndsOn;try{localStorage.setItem('rgo-open-ends',openEndsOn?'on':'off')}catch(e){}syncOpenEndsButton();dirty=true;};
 if($('pipe-label-toggle'))$('pipe-label-toggle').onclick=()=>{pipeNames=!pipeNames;const b=$('pipe-label-toggle');b.setAttribute('aria-pressed',String(pipeNames));b.textContent=pipeNames?'Pipe names on':'Pipe names off';bandSig='';tagState.applied='';tagState.seen='';updatePipeBands();dirty=true;};
 if(pipeIdButton){pipeIdButton.onclick=()=>{const on=colorMode==='flow'&&flowScheme==='asme',mode=$('color-mode'),scheme=$('flow-scheme');if(on){mode.value='material';mode.onchange();}else{mode.value='flow';mode.onchange();scheme.value='asme';scheme.onchange();}syncPipeIdButton();};$('color-mode').addEventListener('change',syncPipeIdButton);$('flow-scheme').addEventListener('change',syncPipeIdButton);}
 $('clear-flow-focus').onclick=()=>{flowFocus=null;renderColorLegend();dirty=true;};
