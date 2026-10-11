@@ -30,7 +30,10 @@ export function inspectContainment(model){
    if(floor.curbPartIds.some(id=>!ids.has(id)))findings.push({kind:'capture-curb',cell:cell.tag,reason:'Missing raised boundary component'});
   }
   const trunk=cell.gravityPaths.filter(r=>r.remote);if(trunk.length!==1||cell.gravityPaths.filter(r=>!r.remote).length!==cell.intakes.length)findings.push({kind:'collection-network',cell:cell.tag,reason:'Capture sources or single trunk missing'});
-  for(const branch of cell.gravityPaths.filter(r=>!r.remote))if(!trunk.some(t=>branch.path.at(-1).every((v,i)=>Math.abs(v-t.path[0][i])<1e-7)))findings.push({kind:'collection-junction',cell:cell.tag,reason:'Local capture branch disconnected from trunk'});
+  // V352: a local branch reaches the trunk either at the collection junction or by tee-ing into another local branch that does (a tree, so converging branches no longer lie on top of each other).
+  {const branches=cell.gravityPaths.filter(r=>!r.remote),onPath=(pt,path)=>{for(let i=1;i<path.length;i++){const a=path[i-1],b=path[i],d=b.map((v,k)=>v-a[k]),L2=d.reduce((n,v)=>n+v*v,0);if(L2<1e-18)continue;const u=Math.max(0,Math.min(1,pt.reduce((n,v,k)=>n+(v-a[k])*d[k],0)/L2));if(Math.hypot(...pt.map((v,k)=>v-(a[k]+d[k]*u)))<1e-6)return true;}return false;},joined=new Set();
+   for(let pass=0;pass<=branches.length;pass++)for(const branch of branches){if(joined.has(branch))continue;const end=branch.path.at(-1);if(trunk.some(t=>end.every((v,i)=>Math.abs(v-t.path[0][i])<1e-7))||branches.some(o=>o!==branch&&joined.has(o)&&onPath(end,o.path)))joined.add(branch);}
+   for(const branch of branches)if(!joined.has(branch))findings.push({kind:'collection-junction',cell:cell.tag,reason:'Local capture branch disconnected from trunk'});}
   for(const pos of cell.servicePositions.filter(p=>p.category==='routine'))if(pos.point[1]-pos.standing[1]>1.7||pos.horizontalReachM>.65)findings.push({kind:'reach',cell:cell.tag,reason:'Routine indication beyond target reach'});
  }
  for(let i=0;i<c.cells.length;i++)for(let j=i+1;j<c.cells.length;j++){
