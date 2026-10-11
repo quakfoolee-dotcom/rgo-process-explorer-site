@@ -1,11 +1,7 @@
-const train=(s,services)=>services.map(t=>'XV-RO-'+s+'-'+t);
-const duty=s=>train(s,['FEED','BRINE','PERM']);
-export const A2000_UNIT={title:'A-2000 reclaimed-water operations',requires:['level','flow','pressure','capacity','membrane','drive','design'],states:{
- hold:{label:'Isolated hold',open:[],seed:'T-2001 to CF-2001',requires:[],drives:[]},
- start:{label:'Startup / off-spec · recycle to T-2001',open:[...duty('A'),'XV-RO-RECYCLE'],seed:'T-2001 to CF-2001',drives:['P-2002A']},
- produce:{label:'Qualified production · A duty, B standby',open:[...duty('A'),'XV-RO-PRODUCT','XV-RO-DISTRIBUTE'],seed:'T-2001 to CF-2001',extra:['T-2002 to P-2005'],requires:['level','flow','pressure','capacity','membrane','drive','design','endpoint'],drives:['P-2002A','P-2005']},
- standby:{label:'A isolated · B duty',open:[...duty('B'),'XV-RO-PRODUCT','XV-RO-DISTRIBUTE'],seed:'T-2001 to CF-2001',extra:['T-2002 to P-2005'],requires:['level','flow','pressure','capacity','membrane','drive','design','endpoint'],drives:['P-2002B','P-2005']},
- backwash:{label:'CF-2001 backwash with RO permeate · RO feed isolated',open:['XV-CF2001-BW','XV-BW-CF-2001'],seed:'CF-2001 backwash supply from T-2002',extra:['T-2002 to P-2005'],requires:['level','capacity','drive','pressure'],drives:['P-2005']},
- cip:{label:'CIP train A · process outlets isolated',open:train('A',['CIP','CIPRET','CIPPERM']),seed:'CIP-2001 pump suction',requires:['level','capacity','drive','pressure','design'],drives:['P-CIP2001']},
- offspec:{label:'Stored product off-spec · recycle, users isolated',open:['XV-RO-STORED-RECYCLE'],seed:'T-2002 to P-2005',requires:['level','capacity','drive','pressure'],drives:['P-2005']}
-},note:'Illustrative hydraulic states only. No live measurements or PLC/SIS control. Quality targets and the condensate and city water acceptance must be qualified. The reject return and the CIP waste boundary stay closed or blinded where noted; receiver capacity limits production. Common carbon-filter and distribution equipment are not redundant.'};
+export const A2000_UNIT={title:'A-2000 process-water operations',requires:['level','flow','pressure','capacity','membrane','drive','design'],states:{
+ hold:{label:'Isolated hold',open:[],seed:'CF-2002 outlet to HDR-2002',requires:[],drives:[]},
+ topup:{label:'City top-up only · RO-2011 isolated',open:['LV-2002','XV-PW6-SUPPLY'],seed:'City make-up to CF-2002',extra:['T-2002 to P-2005'],requires:['level','capacity','drive','pressure','endpoint'],drives:['P-2005']},
+ start:{label:'RO-2011 start-up · permeate not accepted, reject to T-2002',open:['XV-RO-FEED','XV-RO-BRINE'],seed:'City make-up to CF-2002',drives:['P-2012']},
+ produce:{label:'Qualified production · PW-4 from RO-2011, PW-6 topped up with city water',open:['XV-RO-FEED','XV-RO-BRINE','XV-RO-PERM','XV-RO-PRODUCT','XV-RO-DISTRIBUTE','LV-2002','XV-PW6-SUPPLY'],seed:'City make-up to CF-2002',extra:['T-2011 to P-2011','T-2002 to P-2005'],requires:['level','flow','pressure','capacity','membrane','drive','design','endpoint'],drives:['P-2012','P-2011','P-2005']},
+ cip:{label:'CIP RO-2011 · process outlets isolated',open:['XV-RO-CIP','XV-RO-CIPRET','XV-RO-CIPPERM'],seed:'CIP-2001 pump suction',requires:['level','capacity','drive','pressure','design'],drives:['P-CIP2001']}
+},note:'Illustrative hydraulic states only. No live measurements or PLC/SIS control. Quality targets and the city water acceptance must be qualified. The RO-2011 reject return, the PW-6 boundary and the CIP waste boundary stay closed or blinded where noted; RO-2011 has no standby train, and the carbon filter and distribution equipment are not redundant.'};

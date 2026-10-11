@@ -1,7 +1,0 @@
-{
-  "assetId": "PSV-RO-B",
-  "bindingId": "GEOMETRY-PSV-RO-B",
-  "modelEquipmentId": 507,
-  "bindingScope": "assembly-context",
-  "bindingRule": "Containing model assembly; dimensions and ratings remain unqualified."
-}

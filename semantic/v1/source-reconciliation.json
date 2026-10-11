@@ -176,7 +176,7 @@
       "files": {
         "wastewater.js": "fd451d36b0f1276c31dbc8e7d6eed4a5885a721d65fa259f62b299fa47eb8e6a",
         "a1000-basis.js": "3e867dac5277bc58ac12d82a32524c9daffcbdeabe86efeb055c4afca9b034c5",
-        "reclaimed-water.js": "52a9e555d533264a78cb5ec7dfdba8b92711ac4f1ae876eeb15e898f3e393c6e",
+        "reclaimed-water.js": "cb9e5379b45645bdc0acf76a4e041e7a534cb2f8c4ed549055ae139f1c1b2abc",
         "vent-gas.js": "6bcb8c5041f39c2e6b0114296fae2fd8103ae7b7f2ec72afcf89e1be0ebc8146",
         "thermal-utilities.js": "489fa837080943fb9a4a36f2d0af8796ca99c090063dc457ca7e902c532ccfbb"
       },
@@ -197,14 +197,14 @@
     },
     {
       "documentId": "MODEL-A2000",
-      "title": "Condensate receiving, carbon filtration, RO polishing, city make-up, reuse and the reject return",
+      "title": "City-water carbon filtration, RO-2011 polishing for the PW-4 users, process-water storage for PW-6, make-up top-up and the reject reuse",
       "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
       "page": null,
       "status": "model-derived; not an approved process design",
       "availability": "available model source reviewed",
       "files": {
-        "reclaimed-water.js": "52a9e555d533264a78cb5ec7dfdba8b92711ac4f1ae876eeb15e898f3e393c6e",
-        "a2000-basis.js": "15fb3f035e7fffd2143c7499e78f3c4e9e4c422147f71c2771e6320e70630b2e"
+        "reclaimed-water.js": "cb9e5379b45645bdc0acf76a4e041e7a534cb2f8c4ed549055ae139f1c1b2abc",
+        "a2000-basis.js": "533aca7ad9ec4fd0d7ad6778854887d3eb45dac03173e4b3dba29475cce27cf3"
       },
       "hashNormalization": "UTF-8 text with LF line endings"
     },
@@ -703,7 +703,7 @@
       "id": "REC-A2000-001",
       "status": "open",
       "subject": "Draft source and qualification",
-      "observed": "The sheet is Draft - Not for Use, revision XXX. Functional monitoring has no approved instrument tags, ranges or trip setpoints. Draft permeate quality targets are not measured performance or discharge permission. Conductivity alone does not verify all reuse criteria.",
+      "observed": "The sheet is Draft - Not for Use, revision XXX. Functional monitoring has no approved instrument tags, ranges or trip setpoints. Draft permeate quality targets are not measured performance or discharge permission. Conductivity alone does not verify all reuse criteria. The QFL 2026-10-10 city-water basis (Route 0, no A-1100 condensate) is a chat decision: PFD-2000, LST-001, CAL-036 and the datasheets are not yet revised.",
       "gapIds": [
         "A2000-001"
       ]
@@ -712,7 +712,7 @@
       "id": "REC-A2000-002",
       "status": "open",
       "subject": "Model sizing and water balance",
-      "observed": "A-2000 is on clean sources only (D-A2000-03, FEED-PE-CAL-036): the RO polishes A-1100 concentrator condensate (2.62 m3/h normal, 2.97 m3/h rated; 3 m3/h feed per train at 85% recovery gives 2.22-2.55 m3/h permeate) and about 15.8 m3/h of city make-up is filtered by CF-2002 into T-2002 for an 18 m3/h demand. The datasheets are candidate and preliminary. The condensate exists only under the Route 2 + 6 option and its tie-in is not modelled; city water quality (hardness below 10 mg/L), demand and condensate acidity (HOLD R1 to R3) are open.",
+      "observed": "A-2000 treats the city supply only (QFL 2026-10-10; MDL-008 V25 city-water side). The modelled users draw 32.0 m3/h (PW-4 RO water 19.6, PW-6 process water 12.4) against the 18 m3/h CAL-036 design demand (ruling A20-02). RO-2011 makes the PW-4 water at 75% recovery (about 26 m3/h feed, 19.6 m3/h permeate, 6.5 m3/h reject reused in T-2002); CF-2002 dechlorinates about 32 m3/h of city water and the city supplies about 32 m3/h in total. City water quality (hardness below 10 mg/L), demand and the reject reuse limit (city TDS below about 62 mg/L) are open (HOLD R1 to R3). The datasheets DAT-132 to 135, 138 and 139 describe the earlier basis.",
       "gapIds": [
         "A2000-002"
       ]
@@ -721,7 +721,7 @@
       "id": "REC-A2000-003",
       "status": "open",
       "subject": "Membrane and chemistry basis",
-      "observed": "The model carries two RO trains, A duty and B standby (FEED-PE-DAT-134 / 135); the third train was removed (D-A2000-03). The membrane array is a model choice pending the vendor; the datasheet basis is 10 bar on low-TDS condensate with brackish elements. Antiscalant dose, the NaOH pH trim of the acidic condensate (about 100 mg/L H2SO4) and carry-over of volatile organics past the carbon filter remain unqualified.",
+      "observed": "The model carries one RO-2011 rack of five 8-inch vessels (30 elements, about 18 L/m2h) with no standby train; the array is a model choice pending the vendor. Antiscalant dose, the oxidant limit (an ORP high-high interlock on P-2012 is proposed) and the carbon-filter dechlorination remain unqualified.",
       "gapIds": [
         "A2000-003"
       ]
@@ -730,7 +730,7 @@
       "id": "REC-A2000-004",
       "status": "open",
       "subject": "Segregated waste and cleaning",
-      "observed": "RO reject, the two relief lines and the carbon-filter backwash waste share one return to A-1000 T-1006 (receiving acceptance unqualified). The carbon filter is backwashed with RO permeate from T-2002 (DAT-133). Spent CIP has a separate positively blinded boundary with the destination unassigned. Sequential acid/alkaline CIP isolates one train from product and reject. Low CIP drain needs contained pump-out.",
+      "observed": "The RO-2011 reject and the P-2012 relief line return to T-2002 for the PW-6 users; nothing returns to A-1000 and the A-1000 effluent goes to sewer (A10-10). The PW-6 boundary is positively blinded because the scrubber and lime-slurry users are not modelled. Spent CIP has a separate positively blinded boundary with the destination unassigned. CIP isolates RO-2011 from product and reject. Low CIP drain needs contained pump-out. The CF-2002 backwash is not drawn.",
       "gapIds": [
         "A2000-004"
       ]
@@ -739,7 +739,7 @@
       "id": "REC-A2000-005",
       "status": "open",
       "subject": "Quality diversion and protection",
-      "observed": "Model off-spec permeate and stored water recycle to T-2001; no active off-spec drain is added from draft wording. Train B is the standby train, not a live state. There is no pump between T-2001 and the RO feed pumps: P-2002 draws through CF-2001 and the guard filters, which needs an NPSH and pressure-drop check. Relief capacity/backpressure, tank vent qualification, pressure ratings and hygienic turnover remain open. Reclaimed water is not a potable emergency supply.",
+      "observed": "No off-spec diversion is modelled: the permeate quality station only accepts or isolates. P-2012 draws through CF-2003 and an ORP high-high interlock stops it (proposed). RO-2011 has no standby train, so availability is open. Relief capacity/backpressure, tank vent qualification, pressure ratings and hygienic turnover remain open. Reclaimed water is not a potable emergency supply.",
       "gapIds": [
         "A2000-005"
       ]

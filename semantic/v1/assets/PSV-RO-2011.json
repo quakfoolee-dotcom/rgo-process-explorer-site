@@ -1,0 +1,32 @@
+{
+  "assetId": "PSV-RO-2011",
+  "name": "RO-2011 relief provision; sizing unqualified",
+  "assetClassId": "Valve",
+  "status": "proposed",
+  "identityStatus": "model-derived; tag qualification open",
+  "recordScope": "asset",
+  "hierarchy": {
+    "plant": "rGO Commercial Plant",
+    "area": "A-2000",
+    "system": "A-2000 reclaimed-water treatment context",
+    "parentAsset": "RO-2011"
+  },
+  "processFunction": "RO-2011 relief provision; sizing unqualified",
+  "handledMaterials": [],
+  "design": {
+    "capacityM3": null,
+    "designPressure": null,
+    "designTemperature": null,
+    "materialOfConstruction": null
+  },
+  "operatingEnvelope": null,
+  "processBasis": [],
+  "reviewStatus": "open",
+  "reviewFindings": [
+    "The sheet is Draft - Not for Use, revision XXX. Functional monitoring has no approved instrument tags, ranges or trip setpoints. Draft permeate quality targets are not measured performance or discharge permission. Conductivity alone does not verify all reuse criteria. The QFL 2026-10-10 city-water basis (Route 0, no A-1100 condensate) is a chat decision: PFD-2000, LST-001, CAL-036 and the datasheets are not yet revised.",
+    "A-2000 treats the city supply only (QFL 2026-10-10; MDL-008 V25 city-water side). The modelled users draw 32.0 m3/h (PW-4 RO water 19.6, PW-6 process water 12.4) against the 18 m3/h CAL-036 design demand (ruling A20-02). RO-2011 makes the PW-4 water at 75% recovery (about 26 m3/h feed, 19.6 m3/h permeate, 6.5 m3/h reject reused in T-2002); CF-2002 dechlorinates about 32 m3/h of city water and the city supplies about 32 m3/h in total. City water quality (hardness below 10 mg/L), demand and the reject reuse limit (city TDS below about 62 mg/L) are open (HOLD R1 to R3). The datasheets DAT-132 to 135, 138 and 139 describe the earlier basis.",
+    "The model carries one RO-2011 rack of five 8-inch vessels (30 elements, about 18 L/m2h) with no standby train; the array is a model choice pending the vendor. Antiscalant dose, the oxidant limit (an ORP high-high interlock on P-2012 is proposed) and the carbon-filter dechlorination remain unqualified.",
+    "The RO-2011 reject and the P-2012 relief line return to T-2002 for the PW-6 users; nothing returns to A-1000 and the A-1000 effluent goes to sewer (A10-10). The PW-6 boundary is positively blinded because the scrubber and lime-slurry users are not modelled. Spent CIP has a separate positively blinded boundary with the destination unassigned. CIP isolates RO-2011 from product and reject. Low CIP drain needs contained pump-out. The CF-2002 backwash is not drawn.",
+    "No off-spec diversion is modelled: the permeate quality station only accepts or isolates. P-2012 draws through CF-2003 and an ORP high-high interlock stops it (proposed). RO-2011 has no standby train, so availability is open. Relief capacity/backpressure, tank vent qualification, pressure ratings and hygienic turnover remain open. Reclaimed water is not a potable emergency supply."
+  ]
+}

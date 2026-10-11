@@ -1,0 +1,393 @@
+{
+  "assetId": "RO-2011",
+  "streams": [
+    {
+      "streamId": "S-2000-FEED",
+      "name": "feed",
+      "source": "CF-2002",
+      "via": [
+        "CF-2003",
+        "P-2012"
+      ],
+      "destination": "RO-2011",
+      "material": "Dechlorinated city water with antiscalant",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "model process context; operating sequence and receiving acceptance unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A2000",
+          "title": "City-water carbon filtration, RO-2011 polishing for the PW-4 users, process-water storage for PW-6, make-up top-up and the reject reuse",
+          "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "reclaimed-water.js": "cb9e5379b45645bdc0acf76a4e041e7a534cb2f8c4ed549055ae139f1c1b2abc",
+            "a2000-basis.js": "533aca7ad9ec4fd0d7ad6778854887d3eb45dac03173e4b3dba29475cce27cf3"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-2000",
+          "sheetId": "FEED-PFD-2000",
+          "title": "Commercial Scale Reclaimed Water RO System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-2000.pdf",
+          "sha256": "c7ff684a1dd010cfd5399ae997aad339c31fd1c8c4bff543347d247561c4be0c",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-2000.pdf#page=1"
+        }
+      ],
+      "routeLabels": [
+        "CF-2002 outlet to HDR-2002",
+        "HDR-2002 to RO-2011 feed",
+        "RO-2011 guard filter feed",
+        "RO-2011 guarded suction",
+        "P-2012 discharge",
+        "P-2012 discharge riser",
+        "P-2012 to RO-2011"
+      ],
+      "contextAssetIds": [
+        "P-2012",
+        "CP-2000"
+      ]
+    },
+    {
+      "streamId": "S-2000-PRODUCT",
+      "name": "product",
+      "source": "RO-2011",
+      "via": [],
+      "destination": "T-2011",
+      "material": "RO permeate; quality and acceptance unqualified",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "qualified reuse only; quality criteria and release logic unapproved; no off-spec diversion is modelled",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A2000",
+          "title": "City-water carbon filtration, RO-2011 polishing for the PW-4 users, process-water storage for PW-6, make-up top-up and the reject reuse",
+          "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "reclaimed-water.js": "cb9e5379b45645bdc0acf76a4e041e7a534cb2f8c4ed549055ae139f1c1b2abc",
+            "a2000-basis.js": "533aca7ad9ec4fd0d7ad6778854887d3eb45dac03173e4b3dba29475cce27cf3"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-2000",
+          "sheetId": "FEED-PFD-2000",
+          "title": "Commercial Scale Reclaimed Water RO System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-2000.pdf",
+          "sha256": "c7ff684a1dd010cfd5399ae997aad339c31fd1c8c4bff543347d247561c4be0c",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-2000.pdf#page=1"
+        }
+      ],
+      "routeLabels": [
+        "RO-2011 permeate outlet",
+        "RO-2011 permeate quality inlet",
+        "Accepted RO permeate to T-2011"
+      ],
+      "contextAssetIds": [
+        "CP-2000"
+      ]
+    },
+    {
+      "streamId": "S-2000-REJECT",
+      "name": "reject",
+      "source": "RO-2011",
+      "via": [],
+      "destination": "T-2002",
+      "material": "RO reject reused in T-2002 for the PW-6 users; about four times the city TDS",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "reject reused in T-2002 for PW-6; reuse limit (city TDS below about 62 mg/L) and acceptance unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A2000",
+          "title": "City-water carbon filtration, RO-2011 polishing for the PW-4 users, process-water storage for PW-6, make-up top-up and the reject reuse",
+          "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "reclaimed-water.js": "cb9e5379b45645bdc0acf76a4e041e7a534cb2f8c4ed549055ae139f1c1b2abc",
+            "a2000-basis.js": "533aca7ad9ec4fd0d7ad6778854887d3eb45dac03173e4b3dba29475cce27cf3"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-2000",
+          "sheetId": "FEED-PFD-2000",
+          "title": "Commercial Scale Reclaimed Water RO System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-2000.pdf",
+          "sha256": "c7ff684a1dd010cfd5399ae997aad339c31fd1c8c4bff543347d247561c4be0c",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-2000.pdf#page=1"
+        }
+      ],
+      "routeLabels": [
+        "RO-2011 concentrate outlet",
+        "RO-2011 concentrate collection",
+        "RO-2011 reject to T-2002"
+      ],
+      "contextAssetIds": [
+        "CP-2000"
+      ]
+    },
+    {
+      "streamId": "S-2000-RELIEF",
+      "name": "relief",
+      "source": "P-2012",
+      "via": [
+        "PSV-RO-2011"
+      ],
+      "destination": "T-2002",
+      "material": "Relief to the T-2002 reject return; capacity and backpressure unqualified",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "protective provision only; relief capacity and backpressure unqualified",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A2000",
+          "title": "City-water carbon filtration, RO-2011 polishing for the PW-4 users, process-water storage for PW-6, make-up top-up and the reject reuse",
+          "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "reclaimed-water.js": "cb9e5379b45645bdc0acf76a4e041e7a534cb2f8c4ed549055ae139f1c1b2abc",
+            "a2000-basis.js": "533aca7ad9ec4fd0d7ad6778854887d3eb45dac03173e4b3dba29475cce27cf3"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-2000",
+          "sheetId": "FEED-PFD-2000",
+          "title": "Commercial Scale Reclaimed Water RO System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-2000.pdf",
+          "sha256": "c7ff684a1dd010cfd5399ae997aad339c31fd1c8c4bff543347d247561c4be0c",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-2000.pdf#page=1"
+        }
+      ],
+      "routeLabels": [
+        "RO-2011 relief takeoff",
+        "RO-2011 relief to T-2002 reject return",
+        "RO-2011 reject to T-2002"
+      ],
+      "contextAssetIds": [
+        "RO-2011"
+      ]
+    },
+    {
+      "streamId": "S-2000-CIP-FEED",
+      "name": "cip feed",
+      "source": "CIP-2001",
+      "via": [],
+      "destination": "RO-2011",
+      "material": "Sequential cleaning solution",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "offline sequential acid/alkaline cleaning; RO-2011 isolated from product and reject; waste and low-drain boundaries positively blinded pending receiving approval",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A2000",
+          "title": "City-water carbon filtration, RO-2011 polishing for the PW-4 users, process-water storage for PW-6, make-up top-up and the reject reuse",
+          "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "reclaimed-water.js": "cb9e5379b45645bdc0acf76a4e041e7a534cb2f8c4ed549055ae139f1c1b2abc",
+            "a2000-basis.js": "533aca7ad9ec4fd0d7ad6778854887d3eb45dac03173e4b3dba29475cce27cf3"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-2000",
+          "sheetId": "FEED-PFD-2000",
+          "title": "Commercial Scale Reclaimed Water RO System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-2000.pdf",
+          "sha256": "c7ff684a1dd010cfd5399ae997aad339c31fd1c8c4bff543347d247561c4be0c",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-2000.pdf#page=1"
+        }
+      ],
+      "routeLabels": [
+        "CIP-2001 pump suction",
+        "CIP-2001 cleaning supply",
+        "RO-2011 CIP feed to membrane"
+      ],
+      "contextAssetIds": [
+        "CP-2000"
+      ]
+    },
+    {
+      "streamId": "S-2000-CIP-CONCENTRATE",
+      "name": "cip concentrate",
+      "source": "RO-2011",
+      "via": [],
+      "destination": "CIP-2001",
+      "material": "Cleaning return",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "offline sequential acid/alkaline cleaning; RO-2011 isolated from product and reject; waste and low-drain boundaries positively blinded pending receiving approval",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A2000",
+          "title": "City-water carbon filtration, RO-2011 polishing for the PW-4 users, process-water storage for PW-6, make-up top-up and the reject reuse",
+          "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "reclaimed-water.js": "cb9e5379b45645bdc0acf76a4e041e7a534cb2f8c4ed549055ae139f1c1b2abc",
+            "a2000-basis.js": "533aca7ad9ec4fd0d7ad6778854887d3eb45dac03173e4b3dba29475cce27cf3"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-2000",
+          "sheetId": "FEED-PFD-2000",
+          "title": "Commercial Scale Reclaimed Water RO System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-2000.pdf",
+          "sha256": "c7ff684a1dd010cfd5399ae997aad339c31fd1c8c4bff543347d247561c4be0c",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-2000.pdf#page=1"
+        }
+      ],
+      "routeLabels": [
+        "RO-2011 CIP concentrate return",
+        "RO-2011 CIP return header",
+        "RO cleaning return to CIP-2001"
+      ],
+      "contextAssetIds": [
+        "CP-2000"
+      ]
+    },
+    {
+      "streamId": "S-2000-CIP-PERMEATE",
+      "name": "cip permeate",
+      "source": "RO-2011",
+      "via": [],
+      "destination": "CIP-2001",
+      "material": "Cleaning return",
+      "phase": "Liquid",
+      "massFlow": null,
+      "feedRatio": null,
+      "temperature": null,
+      "pressure": null,
+      "directionality": "forward",
+      "operatingMode": "offline sequential acid/alkaline cleaning; RO-2011 isolated from product and reject; waste and low-drain boundaries positively blinded pending receiving approval",
+      "status": "Model route only; line identities, operating sequence and compatibility require source reconciliation",
+      "evidenceStatus": "model-derived",
+      "reviewStatus": "open",
+      "sourceReferences": [
+        {
+          "documentId": "MODEL-A2000",
+          "title": "City-water carbon filtration, RO-2011 polishing for the PW-4 users, process-water storage for PW-6, make-up top-up and the reject reuse",
+          "revision": "V151 / c193ff88f8a60063d87cfeb9704f011464ac07b7",
+          "page": null,
+          "status": "model-derived; not an approved process design",
+          "availability": "available model source reviewed",
+          "files": {
+            "reclaimed-water.js": "cb9e5379b45645bdc0acf76a4e041e7a534cb2f8c4ed549055ae139f1c1b2abc",
+            "a2000-basis.js": "533aca7ad9ec4fd0d7ad6778854887d3eb45dac03173e4b3dba29475cce27cf3"
+          },
+          "hashNormalization": "UTF-8 text with LF line endings"
+        },
+        {
+          "documentId": "FEED-PFD-2000",
+          "sheetId": "FEED-PFD-2000",
+          "title": "Commercial Scale Reclaimed Water RO System",
+          "revision": null,
+          "revisionNote": "Placeholder XXX revision field; X01 creation row dated 15-Feb-2026. No approved controlling revision established.",
+          "page": 1,
+          "file": "feed-pfd-2000.pdf",
+          "sha256": "c7ff684a1dd010cfd5399ae997aad339c31fd1c8c4bff543347d247561c4be0c",
+          "status": "Draft - Not for Use; not approved",
+          "availability": "available and reviewed",
+          "href": "./feed-pfd-2000.pdf#page=1"
+        }
+      ],
+      "routeLabels": [
+        "RO-2011 CIP permeate return",
+        "RO-2011 CIP permeate header",
+        "RO cleaning return to CIP-2001"
+      ],
+      "contextAssetIds": [
+        "CP-2000"
+      ]
+    }
+  ]
+}
