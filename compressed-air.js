@@ -52,7 +52,7 @@ export function buildCompressedAir(h){
  relief(711,wr,'PSV-4001',.8);relief(719,dr,'PSV-4002',7);
  setContext(714,'HD-4001 priority distribution');const hd=band('HD-4001 distribution manifold','pipe',.075,.031,.4,[-22.1,2,8.8],'bright');hd.exploreRole='equipment';hd.componentAssembly='air-header-4001';const iaA=[-22.1,1.3,7.9],iaB=[-22.1,1.3,8.15],hub=[-22.1,5.3,8.8];L([dout,iaA],'Dry reserve outlet','Instrument air');valve(iaA,iaB,'XV-IA4001');L([iaB,[-22.1,1.3,8.8],hub],'HD-4001 riser','Instrument air');k.instrument('FIT-4001',iaB,'instrument-air demand');
  // A loop has explicit sectional isolations. Every takeoff is a top takeoff.
- const ring=[[-30.4,11.8,-9.8],[6.8,11.8,-9.8],[6.8,11.8,-26.5],[-9.4,11.8,-26.5],[-9.4,11.8,-9.8],[-30.4,11.8,-9.8]];
+ const ring=[[-30.4,11.8,-9.8],[6.8,11.8,-9.8],[6.8,11.8,-26.5],[-30.4,11.8,-26.5],[-30.4,11.8,-9.8]]; // V351: a closed rectangle; the return leg ran back along the first leg for 21 m (two pipes in the same place)
  L([hub,[-30.4,5.3,8.8],[-30.4,11.8,8.8],ring[0]],'A-4000 overhead air supply','Instrument air');
  for(let j=0;j<ring.length-1;j++){const a=ring[j],z=ring[j+1],dir=V(z).sub(V(a)).normalize(),v1=V(a).addScaledVector(dir,.4).toArray(),v2=V(a).addScaledVector(dir,.65).toArray();L([a,v1],'HD-4001 loop lead '+j,'Instrument air');valve(v1,v2,'XV-IA-SEC'+j);L([v2,z],'HD-4001 loop section '+j,'Instrument air');}
  for(const [s,owner]of[['A',1],['B',2],['C',54],['D',55]]){const tag='BL-IA201-'+s,p=ports.find(p=>p.id===tag);if(!p)throw Error('Missing existing instrument-air interface '+tag);p.role='interunit';for(let j=terminals.length-1;j>=0;j--)if(terminals[j].label===tag+' external battery limit')terminals.splice(j,1);
