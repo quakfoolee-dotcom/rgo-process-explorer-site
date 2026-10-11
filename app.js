@@ -460,17 +460,17 @@ function buildOpenEnds(){
  const list=resolveOpenEnds(model).filter(e=>e.found),out=[],up=new T.Vector3(0,1,0);
  for(const e of list){const k=OPEN_END_KINDS[e.kind],axis=new T.Vector3(...e.axis).normalize(),r=Math.max(e.radius*1.25,.05);
   const cap=new T.Mesh(new T.CylinderGeometry(r,r,.035,24),new T.MeshBasicMaterial({color:k.color,toneMapped:false}));cap.quaternion.setFromUnitVectors(up,axis);cap.position.set(...e.point).addScaledVector(axis,.03);cap.visible=false;cap.renderOrder=5;scene.add(cap);
-  const c=document.createElement('canvas'),x=c.getContext('2d'),f='600 26px system-ui,sans-serif';x.font=f;const head=(e.title||e.id)+' · '+k.label,body=e.destination,w=Math.ceil(Math.max(x.measureText(head).width,x.measureText(body).width))+24;c.width=w;c.height=72;x.font=f;
-  x.fillStyle='rgba(20,24,30,.92)';x.fillRect(0,0,w,72);x.fillStyle='#'+k.color.toString(16).padStart(6,'0');x.fillRect(0,0,8,72);x.fillText(head,16,30);x.fillStyle='#e8edf2';x.font='500 24px system-ui,sans-serif';x.fillText(body,16,60);
+  const c=document.createElement('canvas'),x=c.getContext('2d'),f='600 26px system-ui,sans-serif';x.font=f;const head=(e.title||e.id)+' · '+k.label,w=Math.ceil(x.measureText(head).width)+28;c.width=w;c.height=44;x.font=f;
+  x.fillStyle='rgba(20,24,30,.92)';x.fillRect(0,0,w,44);x.fillStyle='#'+k.color.toString(16).padStart(6,'0');x.fillRect(0,0,8,44);x.fillText(head,18,31);
   const tex=new T.CanvasTexture(c);tex.colorSpace=T.SRGBColorSpace;const sp=new T.Sprite(new T.SpriteMaterial({map:tex,depthTest:false,depthWrite:false,toneMapped:false}));sp.renderOrder=7;sp.visible=false;scene.add(sp);
-  out.push({e,cap,sp,ratio:w/72,at:new T.Vector3(...e.point).addScaledVector(Math.abs(axis.y)>.85?axis:up,.45)});}
+  out.push({e,cap,sp,head,destination:k.destination,color:k.color,ratio:w/44,at:new T.Vector3(...e.point).addScaledVector(Math.abs(axis.y)>.85?axis:up,.45)});}
  return out;
 }
 function updateOpenEnds(){
  const on=asmeActive()&&pipeNames&&amount<.001;if(!on&&!openEnds)return;
  if(on&&!openEnds)openEnds=buildOpenEnds();
  const wpp=on?pxWorld():0,tags=on&&wpp>=.008&&wpp<=.12;
- for(const o of openEnds){o.cap.visible=on;o.sp.visible=tags;if(tags){o.sp.position.copy(o.at);o.sp.scale.set(o.ratio*26*wpp,26*wpp,1);}}
+ for(const o of openEnds){o.cap.visible=on;o.sp.visible=tags;if(tags){o.sp.position.copy(o.at);o.sp.scale.set(o.ratio*15*wpp,15*wpp,1);}}
 }
 function buildHazardReview(){
  const box=document.createElement('details');box.className='hazard-review';const head=document.createElement('summary');head.textContent='Hazard review · '+Object.values(ASME_REVIEW).filter(v=>v.status==='approved').length+' of '+Object.keys(ASME_REVIEW).length+' classes signed off';box.append(head);
@@ -527,6 +527,8 @@ function showHoverLabel(event){
  if(!asmeActive()||event.buttons){hoverLabel.hidden=true;return;}
  const now=performance.now();if(now-hoverTime<180)return;hoverTime=now;
  const rect=renderer.domElement.getBoundingClientRect();pointer.set((event.clientX-rect.left)/rect.width*2-1,1-(event.clientY-rect.top)/rect.height*2);raycaster.setFromCamera(pointer,camera);
+ const endHit=openEnds?raycaster.intersectObjects(openEnds.filter(o=>o.sp.visible).flatMap(o=>[o.sp,o.cap]),false)[0]:null,openEnd=endHit&&openEnds.find(o=>o.sp===endHit.object||o.cap===endHit.object);
+ if(openEnd){hoverLabel.style.background='#14181e';hoverLabel.style.color='#e8edf2';hoverLabel.replaceChildren();const title=document.createElement('div');title.textContent=openEnd.head;title.style.color='#'+openEnd.color.toString(16).padStart(6,'0');const sub=document.createElement('div');sub.style.cssText='font-weight:500;font-size:11px';sub.textContent=openEnd.destination;hoverLabel.append(title,sub);hoverLabel.style.left=Math.min(event.clientX+14,innerWidth-340)+'px';hoverLabel.style.top=(event.clientY+16)+'px';hoverLabel.hidden=false;return;}
  const hit=raycaster.intersectObjects(meshes.filter(m=>m.visible),false).find(h=>h.object.userData.parts?.[h.instanceId]?.visible),record=hit&&partFlows.get(hit.object.userData.parts[hit.instanceId].id);
  if(!record?.asmeClass){hoverLabel.hidden=true;return;}
  const cls=ASME_CLASSES[record.asmeClass];hoverLabel.style.background=cls.field;hoverLabel.style.color=cls.letters;hoverLabel.replaceChildren();
