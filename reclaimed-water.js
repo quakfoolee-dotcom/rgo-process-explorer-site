@@ -148,10 +148,12 @@ export function buildReclaimedWater(h){
  for(const p of posts){const m=crossMembers.find(mm=>Math.abs(mm.position.z-p.z)<.2);if(m)s.join(p.post,m,[p.x,.1,p.z],tag+' rack post / skid frame');}
  const tw=SX1-SX0,tl=SZ1-SZ0;
  root(b(tag+' drip tray floor pan','frame',[tw,.02,tl],[(SX0+SX1)/2,.01,(SZ0+SZ1)/2],'dark'),[(SX0+SX1)/2,0,(SZ0+SZ1)/2]);
- for(const x of[SX0+.06,SX1-.06])b(tag+' drip tray curb','frame',[.12,.25,tl],[x,.125,(SZ0+SZ1)/2]);
+ b(tag+' drip tray curb','frame',[.12,.25,tl],[SX1-.06,.125,(SZ0+SZ1)/2]);
+ // West curb with a 0.24 m sleeved opening at z -9.2 for the sump drain (V360): the drain leaves the tray through a sealing sleeve, a closed manual valve and a closed boundary stub outside the tray.
+ const DZ=-9.2,GAP=.12,wA=DZ-GAP-SZ0,wB=SZ1-(DZ+GAP);b(tag+' drip tray curb','frame',[.12,.25,wA],[SX0+.06,.125,SZ0+wA/2]);b(tag+' drip tray curb','frame',[.12,.25,wB],[SX0+.06,.125,SZ1-wB/2]);band(tag+' drip tray drain sleeve','frame',GAP,.06,.12,[SX0+.06,.125,DZ],'dark',[1,0,0]);
  for(const z of[SZ0+.06,SZ1-.06])b(tag+' drip tray curb','frame',[tw-.24,.25,.12],[(SX0+SX1)/2,.125,z]);
  b(tag+' drip tray sump','frame',[.3,.04,.3],[70.3,.02,-9.2],'dark');
- const sumpN=nozzle([70.3,.1,-9.2],[1,0,0],.3,tag+' tray sump drain nozzle',.05);L([sumpN,[70.95,.1,-9.2]],tag+' skid tray drain','Drain water',null,.05,{from:'RO-2011',to:'BL-RO2011-DRAIN'});endBoundary('BL-RO2011-DRAIN',[70.95,.1,-9.2],'Drain water','Closed tray sump drain to sewer; connection and approval open',true,.05);
+ const sumpN=nozzle([70.15,.1,DZ],[-1,0,0],.2,tag+' tray sump drain nozzle',.05);L([sumpN,[69.75,.1,DZ]],tag+' skid tray drain','Drain water',null,.05,{from:'RO-2011',to:'BL-RO2011-DRAIN'});G([69.75,.1,DZ],[69.4,.1,DZ],'XV-RO-DRAIN',true,.05);L([[69.4,.1,DZ],[69.2,.1,DZ]],tag+' skid tray drain outside the tray','Drain water',null,.05,{from:'RO-2011',to:'BL-RO2011-DRAIN'});endBoundary('BL-RO2011-DRAIN',[69.2,.1,DZ],'Drain water','Closed tray sump drain to sewer through a sleeved wall opening; connection and approval open',true,.05,[-1,0,0]);
  const MZ=[-15.2,-8.5],mcols=[[SXL,MZ[0]],[SXR,MZ[0]],[SXL,MZ[1]],[SXR,MZ[1]]].map(([x,z])=>{const col=s.column(x,z,4.6,tag+' monorail column');const rail=rails[x===SXL?0:1];s.join(rail,col.post,[x,.2,z],tag+' monorail column base');return col;});
  const portal=MZ.map((z,i)=>{const bm=s.beam([SXL,4.55,z],[SXR,4.55,z],.1,tag+' monorail portal beam');s.join(mcols[i*2].post,bm,[SXL,4.52,z],tag+' monorail portal joint');s.join(mcols[i*2+1].post,bm,[SXR,4.52,z],tag+' monorail portal joint');return bm;});
  const runway=s.beam([RX,4.45,MZ[0]],[RX,4.45,MZ[1]],.12,tag+' monorail runway beam');for(const bm of portal)s.join(bm,runway,[RX,4.51,bm===portal[0]?MZ[0]:MZ[1]],tag+' monorail runway joint');s.load(runway,tag+' monorail');
