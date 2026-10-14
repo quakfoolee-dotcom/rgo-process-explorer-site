@@ -3,11 +3,11 @@ export function buildA900(h){
  const k=processKit(h),{T,EQUIPMENT,setContext,b,c,band,ring,line,passage,boundary,tank,boxShell,instrument}=k,service='Doped rGO';
  const source=h.doping.boundaries.find(x=>x.tag==='BL-A900');if(!source)throw Error('A-900 requires BL-A900');
  // Keep the A-800 handoff local. The sealed lift function is deliberately technology-neutral.
- setContext(200,'TR-901 short contained transfer function');const transferEnd=[111.55,4.45,29.2];
- line([source.point,[109.25,1.05,31.05],[109.7,3.9,29.2],transferEnd],.10,'A-900 short contained product transfer',service,'BL-A900','H-901',{transport:'powered bulk solids',technology:'HOLD'});
- const hopper=tank(201,{topPorts:false});setContext(201,'H-901 receipt and inerted surge');const inlet=hopper.port('contained product inlet',-.45,0,.10);
- line([transferEnd,inlet],.10,'TR-901 to H-901 receipt',service,'TR-901','H-901',{transport:'bulk solids'});instrument('WIT-901',[112.72,3.3,29.2],'inventory / weight indication',[1,0,0]);
- boundary('BL-A900-AR',[111.3,4.15,29.85],[-1,0,0],.035,'Argon','Reserved inerting supply; branch selection and demand unresolved');
+ setContext(200,'TR-901 short contained transfer function');const transferEnd=[111.55,4.85,29.2];
+ line([source.point,[109.25,1.05,31.05],[109.7,4.3,29.2],transferEnd],.10,'A-900 short contained product transfer',service,'BL-A900','H-901',{transport:'powered bulk solids',technology:'HOLD'});
+ const hopper=tank(201,{topPorts:false});setContext(201,'H-901 receipt and inerted surge');const inlet=hopper.port('contained product inlet',-.45,0,.10);c('H-901 vent blind','valve',.095,.03,hopper.vent,'dark',[0,1,0]);k.terminal(hopper.vent,'H-901 vent positively blinded; inerting and vent route unresolved');
+ line([transferEnd,inlet],.10,'TR-901 to H-901 receipt',service,'TR-901','H-901',{transport:'bulk solids'});instrument('WIT-901',[112.72,3.7,29.2],'inventory / weight indication',[1,0,0]);
+ boundary('BL-A900-AR',[111.3,4.55,29.85],[-1,0,0],.035,'Argon','Reserved inerting supply; branch selection and demand unresolved');
 
  // Controlled solids metering runs south, directly into the reserved formation module.
  setContext(202,'F-901 controlled feeder');const feeder=band('F-901 sealed feeder casing','shell',.22,.16,2,[112,2.1,26.6],'steel',[0,0,1]);feeder.cut=true;c('F-901 metering screw','internal',.055,2,[112,2.1,26.6],'inner',[0,0,1]);c('F-901 drive motor','pump',.18,.48,[112,2.1,25.35],'blue',[0,0,1]);

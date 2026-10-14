@@ -10,7 +10,7 @@ export const A900_BASIS={source:A900_SOURCE,status:'Proposed pelletization funct
 const eq=(tag,label,x,z,labelY,operation='a900pelletize',extra={})=>({tag,label,x,z,labelY,areaId:'A-900',designStatus:'proposed',primaryOperation:operation,reviewNote:'Proposed A-900 pelletization envelope; tag, technology, capacity, ratings, materials and operating criteria require an approved source and representative-material trials.',...extra});
 export const A900_EQUIPMENT={
  200:eq('TR-901','Short contained product transfer · proposed',109.7,30.5,4.6,'a900receive'),
- 201:eq('H-901','Inerted surge / weigh hopper · proposed',112,29.2,5.8,'a900receive',{radius:.65,bottom:2.7,top:4.0}),
+ 201:eq('H-901','Inerted surge / weigh hopper · proposed',112,29.2,5.8,'a900receive',{radius:.65,bottom:3.1,top:4.4}),
  202:eq('F-901','Controlled metering feeder · proposed',112,26.6,3.5),
  203:eq('PG-901','Contained pellet-formation module · technology HOLD',112,23.4,4.8),
  204:eq('SC-901','Cooling and classification module · proposed',112,19.9,3.5,'a900finish'),
