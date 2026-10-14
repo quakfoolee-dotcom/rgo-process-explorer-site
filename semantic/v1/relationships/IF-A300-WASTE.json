@@ -105,7 +105,7 @@
           "status": "model-derived; not an approved process design",
           "availability": "available model source reviewed",
           "files": {
-            "wastewater.js": "fd451d36b0f1276c31dbc8e7d6eed4a5885a721d65fa259f62b299fa47eb8e6a",
+            "wastewater.js": "900194570a8f12d224d7ecedb90080a43ee8e9053aaafdf81c9dd3abada53083",
             "a1000-basis.js": "3e867dac5277bc58ac12d82a32524c9daffcbdeabe86efeb055c4afca9b034c5",
             "reclaimed-water.js": "bcee6a2c4f509c106c92122e7eed7bfedaa3a1a0c2670a3f02c558c093aa748e",
             "vent-gas.js": "6bcb8c5041f39c2e6b0114296fae2fd8103ae7b7f2ec72afcf89e1be0ebc8146",
