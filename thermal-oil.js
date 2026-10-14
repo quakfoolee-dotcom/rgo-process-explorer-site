@@ -10,6 +10,7 @@ export const THERMAL_OIL_BASIS={revision:'D-MDL-05',decision:'D-MDL-05',mainRadi
 const SUPPLY='Thermal oil 280 °C supply',RETURN='Thermal oil 250 °C return';
 export function buildThermalOil(k,s,base,{acidRoute='r0'}={}){
  const {T,parts,EQUIPMENT,setContext,b,c,band,ring,nozzle,line}=k,first=parts.length,V=p=>new T.Vector3(...p);
+ const closed=(p,label)=>{k.terminal(p,label);return p;};
  const {mainRadius:R,branchRadius:RB,insulationM:INS,supplyY:SY,returnY:RY}=THERMAL_OIL_BASIS,routes=[];
  const mark=(from,extra)=>{for(const p of parts.slice(from))Object.assign(p,{geometryBasis:'D-MDL-05',designStatus:'proposed',...extra});};
  // Insulation jackets on straight runs of hot lines (planning thickness only); flagged so support and access audits treat them as cladding.
@@ -50,7 +51,7 @@ export function buildThermalOil(k,s,base,{acidRoute='r0'}={}){
  const sp=band('H-5400 stack sampling platform','frame',1.65,.72,.06,[HX,12,rear+1.2],'steel');s.join(stack,sp,[HX,12,rear+1.2],'H-5400 sampling platform / stack');
  band('H-5400 sampling platform handrail','frame',1.65,1.61,.05,[HX,13.05,rear+1.2],'steel');
  for(let i=0;i<8;i++){const a=i*Math.PI/4;b('H-5400 sampling platform handrail post','frame',[.05,1.05,.05],[HX+Math.cos(a)*1.63,12.55,rear+1.2+Math.sin(a)*1.63],'steel');}
- nozzle([HX+.7,12.6,rear+1.2],[1,0,0],.15,'H-5400 stack emission sampling port',.04);
+ closed(nozzle([HX+.7,12.6,rear+1.2],[1,0,0],.15,'H-5400 stack emission sampling port',.04),'H-5400 stack sampling port capped');
  const lx=HX+.95,lz=rear+1.2;for(const dz of [-.22,.22])b('H-5400 stack ladder rail','frame',[.05,12-(HY+HR+.95),.05],[lx,(HY+HR+.95+12)/2,lz+dz],'steel');
  for(let y=HY+HR+1.25;y<12;y+=.3)b('H-5400 stack ladder rung','frame',[.04,.04,.44],[lx,y,lz],'steel');
  // Top service walkway over the shell front with handrails and a fixed ladder on the west side.
@@ -97,8 +98,8 @@ export function buildThermalOil(k,s,base,{acidRoute='r0'}={}){
  for(const dx of [-1.4,1.4])b('V-5401 drum saddle','frame',[.35,.3,1.4],[VX+dx,ve.bottom+.15,VZ],'steel');
  for(const dx of [-.22,.22])b('V-5401 access ladder rail','frame',[.05,ve.bottom,.05],[VX+1.5+dx,.2+ve.bottom/2,VZ-1.2],'steel');
  for(let y=.5;y<ve.bottom+.9;y+=.3)b('V-5401 access ladder rung','frame',[.44,.04,.04],[VX+1.5,y,VZ-1.2],'steel');
- const vIn=nozzle([VX-VL/2-.23,VY-.5,VZ],[-1,0,0],.25,'V-5401 expansion line inlet',.045),vN2=nozzle([VX,VY+VR,VZ],[0,1,0],.2,'V-5401 N₂ blanket / vent (N₂ supply not modelled)',.03),vOver=nozzle([VX+VL/2+.25,VY,VZ],[1,0,0],.2,'V-5401 overflow to T-5401',.045);
- nozzle([VX+.8,VY+VR,VZ],[0,1,0],.2,'V-5401 relief / vent to safe location',.04);c('V-5401 level gauge','valve',.05,1.2,[VX-.6,VY,VZ+VR+.12],'dial');
+ const vIn=nozzle([VX-VL/2-.23,VY-.5,VZ],[-1,0,0],.25,'V-5401 expansion line inlet',.045),vN2=closed(nozzle([VX,VY+VR,VZ],[0,1,0],.2,'V-5401 N₂ blanket / vent (N₂ supply not modelled)',.03),'V-5401 N₂ blanket connection capped'),vOver=nozzle([VX+VL/2+.25,VY,VZ],[1,0,0],.2,'V-5401 overflow to T-5401',.045);
+ closed(nozzle([VX+.8,VY+VR,VZ],[0,1,0],.2,'V-5401 relief / vent to safe location',.04),'V-5401 relief / vent connection capped');c('V-5401 level gauge','valve',.05,1.2,[VX-.6,VY,VZ+VR+.12],'dial');
  mark(from,{});
  // ---- T-5401: horizontal drain / storage drum on saddles at grade (N₂-push drain-down; gravity drain needs a pit — vendor, U8).
  const te=EQUIPMENT[667],TX=te.x,TZ=te.z,TR=te.radius,TY=te.bottom+TR,TL=6;setContext(667,te.label);from=parts.length;
@@ -106,7 +107,7 @@ export function buildThermalOil(k,s,base,{acidRoute='r0'}={}){
  const tank=c('T-5401 drain / storage drum · Ø 2.6 × 6 m (≈ 30 m³)','shell',TR,TL,[TX,TY,TZ],'steel',[0,0,1]);tank.cut=true;s.join(tsad[0],tank,[TX,te.bottom,TZ-2],'T-5401 drum / saddle');s.load(tank,'T-5401 drum');
  for(const dz of [-TL/2,TL/2]){const hd=c('T-5401 dished head','head',TR,.3,[TX,TY,TZ+dz+Math.sign(dz)*.15],'steel',[0,0,1]);s.join(tank,hd,[TX,TY,TZ+dz],'T-5401 head / drum');}
  const tTop=nozzle([TX,TY+TR,TZ+1.0],[0,1,0],.25,'T-5401 overflow inlet',.045),tDrain=nozzle([TX,te.bottom+.3,TZ-TL/2-.3],[0,0,-1],.25,'T-5401 drain-down inlet',.03),tRefill=nozzle([TX-TR,te.bottom+.3,TZ+1.5],[-1,0,0],.25,'T-5401 refill outlet',.03);
- nozzle([TX,TY+TR,TZ-1.5],[0,1,0],.2,'T-5401 vent / N₂',.03);c('T-5401 level gauge','valve',.05,1.6,[TX+TR+.12,TY,TZ],'dial');
+ closed(nozzle([TX,TY+TR,TZ-1.5],[0,1,0],.2,'T-5401 vent / N₂',.03),'T-5401 vent / N₂ connection capped');c('T-5401 level gauge','valve',.05,1.6,[TX+TR+.12,TY,TZ],'dial');
  mark(from,{});
  // ---- Package piping: return → air separator → pump suction → pumps → heater coil → supply; expansion, overflow, drain-down, refill.
  setContext(663,'A-5400 package piping');from=parts.length;

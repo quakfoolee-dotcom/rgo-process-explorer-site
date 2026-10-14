@@ -1,7 +1,7 @@
 {
   "revision": "V328",
   "decision": "D-MDL-10",
-  "generated": "2026-10-14T03:59:15.946Z",
+  "generated": "2026-10-14T04:50:18.823Z",
   "basis": {
     "ceilingFt": 30,
     "ceilingM": 9.14,
@@ -11,7 +11,7 @@
     "note": "30 ft ceiling from QFL (2026-10-08). The 0.85 m clearance for roof steel, lights and sprinklers, the single ceiling height for the whole footprint, and the absence of a high bay are assumptions pending the as-built building drawings.",
     "wallHeightM": 9.14
   },
-  "scanned": 78154,
+  "scanned": 78184,
   "insideGroups": 316,
   "aboveCeilingGroups": 222,
   "steelZoneGroups": 93,
@@ -251,7 +251,7 @@
       "partsAbove": 137,
       "partsAboveCeiling": 117,
       "maxTop": 14.91,
-      "highestPart": "PS-A600-3388 bearing collar",
+      "highestPart": "PS-A600-3387 bearing collar",
       "x": 57.6,
       "z": 8,
       "overCeilingM": 5.77,
