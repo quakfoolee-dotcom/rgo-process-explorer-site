@@ -67,7 +67,7 @@ export function expandOxidationBank(h){
   // Shared central seat, separate downstream destinations. No second off-centre vessel drain.
   const dr=[e.x,1.29,z+.36],dv=[e.x-.25,1.29,z+.36];
   bulkValve(dr,dv,.035,'XV-DR201-'+suffix,e.tag+' closed drain isolation');
-  line([dv,[e.x-.4,1.29,z+.36],[e.x-.5,1.20,z+.5],[e.x-.5,.35,z+1.6],[e.x-.5,.28,z+2.4],[e.x-.5,.15,z+2.55],[e.x-.5,.15,z+2.7]],.035,e.tag+' central cleaning drain downcomer','Drain');
+  line([dv,[e.x-.5,1.29,z+.36],[e.x-.5,.6,z+.36],[e.x-.5,.6,z+2.5],[e.x-.5,.15,z+2.5],[e.x-.5,.15,z+2.7]],.035,e.tag+' central cleaning drain downcomer','Drain');
   boundary('BL-DR201-'+suffix,[e.x-.5,.15,z+2.7],[0,0,1],.035,'Drain','Closed segregated cleaning drain from central flush-bottom valve; product branch isolated. Vendor valve, cleanability and full drainability qualification required.');
   Object.assign(e,{geometryStatus:REACTOR_MECHANICAL_BASIS.status,geometryBasis:REACTOR_MECHANICAL_BASIS.arrangement,reviewNote:reactorMaintenanceReview(suffix)+' '+REACTOR_MECHANICAL_BASIS.holds.join('; '),labelY:6.8});
   setContext(id,'Local actuator air interface');const air=boundary('BL-IA201-'+suffix,[e.x+1.95,2.7,z-1.9],[1,0,0],.018,'Instrument air','Local instrument-air supply to supported panel and individual actuator packages. Fail actions and duty require qualification.');

@@ -56,7 +56,7 @@ export function buildReactorServices(h){
   const mid=[sx,tip[1]-.16,z];bulkValve(tip,mid,.028,'XV-SMP201-'+s,e.tag+' sample root isolation');
   // A compact downward-sloping branch occupies the former undefined service connection.
   const cx=x-1.8,inlet=[cx,1.23,z+1.18],outlet=[cx,1.23,z+1.36];
-  line([mid,[sx,1.36,z],[sx,1.34,z+.45],[cx,1.30,z+.45],[cx,1.23,z+1.0],inlet],.022,e.tag+' contained sample line','Reaction slurry');
+  line([mid,[sx,1.23,z],[sx,1.23,z+.45],[cx,1.23,z+.45],inlet],.022,e.tag+' contained sample line','Reaction slurry');
   bulkValve(inlet,outlet,.022,'XV-SMR201-'+s,e.tag+' receiver isolation');
   const top=[cx,1.10,z+1.7],bottom=[cx,.79,z+1.7];line([outlet,[cx,1.23,z+1.7],top],.022,e.tag+' sample receiver inlet','Reaction slurry');
   const shell=band(e.tag+' enclosed sample receiver','head',.09,.075,.31,[cx,.945,z+1.7],'bright');shell.cut=true;
