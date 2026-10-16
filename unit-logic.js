@@ -14,6 +14,13 @@ export const UNITS={ventgas:A3000_UNIT,
  argon:ARGON_UNIT,
  furnace:FURNACE_UNIT,
  doping:DOPING_UNIT,
+ pelletizing:{title:'A-900 contained pelletization',states:{
+ receive:{label:'Receive accepted A-800 product into H-901',open:[],seed:'A-900 short contained product transfer',extra:['TR-901 to H-901 receipt'],requires:['endpoint','capacity','design'],drives:[]},
+ pelletize:{label:'Meter H-901 product through F-901 into PG-901',open:[],seed:'H-901 to F-901 feed',extra:['F-901 metered product passage','F-901 to PG-901 contained feed','PG-901 pellet-formation passage'],requires:['capacity','design'],drives:['F-901']},
+ finish:{label:'Cool, classify and collect accepted pellets',open:[],seed:'PG-901 formed product to SC-901',extra:['SC-901 cooling and classification passage','SC-901 accepted pellets to PK-901','PK-901 accepted product passage','PK-901 accepted product release'],requires:['capacity','design'],drives:[]},
+ reject:{label:'Recover off-size reject to RB-901',open:[],seed:'SC-901 reject to RB-901',requires:['capacity','design'],drives:[]},
+ dust:{label:'Local dust capture from PG-901 to DC-901',open:[],seed:'PG-901 local dust capture to DC-901',requires:['exhaust','design'],drives:[]}
+ },requires:[],note:'Inspection of the contained pelletization path. Technology, capacity, ratings and acceptance criteria remain HOLD, and no isolation valves are modelled in A-900, so these states trace the connected path but do not change any valve. Not a startup or trip sequence.'},
  spray:{title:'A600 aqueous spray drying',states:{
  receive:{label:'Receive accepted sonication batch',open:['XV-502-SUC','XV-502-DIS','XV-501-PROD','XV-601-IN'],seed:'T-501 bottom suction',requires:['endpoint','capacity','level','drive'],drives:['P-502','T-601 agitator']},
  hold:{label:'Hold buffer · dryer feed isolated',open:[],seed:'T-601 bottom suction',requires:[],drives:[]},
